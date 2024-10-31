@@ -8,7 +8,7 @@ object fmZFTOScore: TfmZFTOScore
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'Segoe UI'
+  Font.Name = 'MS Sans Serif'
   Font.Style = []
   Position = poDesigned
   OnClose = FormClose
@@ -33,9 +33,6 @@ object fmZFTOScore: TfmZFTOScore
     object cxTabSheet2: TcxTabSheet
       Caption = #1057#1095'-'#1092'. '#1062#1060#1058#1054
       ImageIndex = 40
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 581
       object cxGrid2: TcxGrid
         Left = 0
         Top = 0
@@ -117,6 +114,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1zfto_score_id: TcxGridDBBandedColumn
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'zfto_score_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -126,6 +124,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1fact_num: TcxGridDBBandedColumn
             Caption = #8470' '#1089#1095'-'#1092'.'
             DataBinding.FieldName = 'fact_num'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxLabelProperties'
             Properties.Alignment.Horz = taRightJustify
             HeaderAlignmentVert = vaTop
@@ -137,6 +136,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1fact_date: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1089#1095'-'#1092'.'
             DataBinding.FieldName = 'fact_date'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 61
             Position.BandIndex = 0
@@ -146,6 +146,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1sum_rub: TcxGridDBBandedColumn
             Caption = #1057#1091#1084#1084#1072', RUB'
             DataBinding.FieldName = 'sum_rub'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0.00'
             HeaderAlignmentVert = vaTop
@@ -158,6 +159,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1sum_usd: TcxGridDBBandedColumn
             Caption = #1057#1091#1084#1084#1072', ('#1042#1072#1083'.)'
             DataBinding.FieldName = 'sum_usd'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0.00'
             HeaderAlignmentVert = vaTop
@@ -169,6 +171,7 @@ object fmZFTOScore: TfmZFTOScore
           end
           object cxGrid2DBBandedTableView1global_color: TcxGridDBBandedColumn
             DataBinding.FieldName = 'global_color'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxColorComboBoxProperties'
             Properties.CustomColors = <>
             Visible = False
@@ -181,6 +184,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1date_act: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1072#1082#1090#1072
             DataBinding.FieldName = 'date_act'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
             Width = 66
@@ -191,6 +195,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1deb_name: TcxGridDBBandedColumn
             Caption = #1050#1083#1080#1077#1085#1090
             DataBinding.FieldName = 'deb_name'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
             Width = 66
@@ -201,6 +206,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1inn: TcxGridDBBandedColumn
             Caption = #1048#1053#1053' '#1082#1083#1080#1077#1085#1090#1072
             DataBinding.FieldName = 'inn'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
             Width = 60
@@ -211,6 +217,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1kpp: TcxGridDBBandedColumn
             Caption = #1050#1055#1055' '#1082#1083#1080#1077#1085#1090#1072
             DataBinding.FieldName = 'kpp'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
             Position.BandIndex = 0
@@ -220,6 +227,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1locco: TcxGridDBBandedColumn
             Caption = #1050#1086#1076' '#1045#1051#1057
             DataBinding.FieldName = 'locco'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
             Position.BandIndex = 0
@@ -229,6 +237,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1num_contr: TcxGridDBBandedColumn
             Caption = #8470' '#1076#1086#1075#1086#1074#1086#1088#1072
             DataBinding.FieldName = 'num_contr'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
             Width = 74
@@ -239,6 +248,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1number_act: TcxGridDBBandedColumn
             Caption = #8470' '#1072#1082#1090#1072
             DataBinding.FieldName = 'number_act'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxLabelProperties'
             Properties.Alignment.Horz = taRightJustify
             HeaderAlignmentVert = vaTop
@@ -251,6 +261,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1type_incom: TcxGridDBBandedColumn
             Caption = #1050#1086#1076' '#1076#1086#1093#1086#1076#1086#1074
             DataBinding.FieldName = 'type_incom'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
             Width = 42
@@ -261,6 +272,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1date_load_year: TcxGridDBBandedColumn
             Caption = #1054#1090#1095'.'#1043#1086#1076
             DataBinding.FieldName = 'date_load_year'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -270,6 +282,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1date_load_month: TcxGridDBBandedColumn
             Caption = #1054#1090#1095'.'#1052#1077#1089#1103#1094
             DataBinding.FieldName = 'date_load_month'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -279,6 +292,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1numact_cor: TcxGridDBBandedColumn
             Caption = #8470' '#1082#1086#1088'.'#1072#1082#1090#1072
             DataBinding.FieldName = 'numact_cor'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxLabelProperties'
             Properties.Alignment.Horz = taRightJustify
             HeaderAlignmentVert = vaTop
@@ -291,6 +305,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1datact_cor: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1082#1086#1088'.'#1072#1082#1090#1072
             DataBinding.FieldName = 'datact_cor'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Styles.Content = fmMain.cxStyle_AgreeFactInc_AddProfit
             Width = 66
@@ -301,6 +316,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1fact_num_c: TcxGridDBBandedColumn
             Caption = #8470' '#1082#1086#1088'. '#1089#1095'-'#1092'.'
             DataBinding.FieldName = 'fact_num_c'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxLabelProperties'
             Properties.Alignment.Horz = taRightJustify
             HeaderAlignmentVert = vaTop
@@ -313,6 +329,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1file_load: TcxGridDBBandedColumn
             Caption = #1060#1072#1081#1083' '#1079#1072#1075#1088#1091#1079#1082#1080
             DataBinding.FieldName = 'file_load'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -322,6 +339,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1waers: TcxGridDBBandedColumn
             Caption = #1042#1072#1083#1102#1090#1072
             DataBinding.FieldName = 'waers'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 65
             Position.BandIndex = 0
@@ -331,6 +349,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1set_grant: TcxGridDBBandedColumn
             Caption = #1055#1088#1077#1076#1086#1089#1090#1072#1074#1083#1077#1085#1080#1077
             DataBinding.FieldName = 'set_grant'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCheckBoxProperties'
             Properties.NullStyle = nssUnchecked
             Properties.ReadOnly = False
@@ -342,6 +361,7 @@ object fmZFTOScore: TfmZFTOScore
           end
           object cxGrid2DBBandedTableView1date_load: TcxGridDBBandedColumn
             DataBinding.FieldName = 'date_load'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Position.BandIndex = -1
             Position.ColIndex = -1
@@ -350,6 +370,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1service_kind: TcxGridDBBandedColumn
             Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1091#1089#1083#1091#1075#1080' '#1089'-'#1092
             DataBinding.FieldName = 'service_kind'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 120
             Position.BandIndex = 0
@@ -359,6 +380,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1zfto_score_act_id: TcxGridDBBandedColumn
             Caption = #8470' '#1079#1072#1087#1080#1089#1080' '#1072#1082#1090#1072
             DataBinding.FieldName = 'zfto_score_act_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Position.BandIndex = -1
             Position.ColIndex = -1
@@ -367,6 +389,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1set_auto: TcxGridDBBandedColumn
             Caption = #1055#1088#1080#1079#1085#1072#1082' '#1076#1086#1073#1072#1074#1083#1077#1085#1080#1103
             DataBinding.FieldName = 'set_auto'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCheckBoxProperties'
             HeaderAlignmentVert = vaTop
             Position.BandIndex = -1
@@ -376,6 +399,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid2DBBandedTableView1fact_inc_sum_rub: TcxGridDBBandedColumn
             Caption = #1057#1091#1084#1084#1072', RUB('#1087#1088#1080#1074#1103#1079#1072#1085#1085#1099#1081' '#1092#1072#1082#1090')'
             DataBinding.FieldName = 'fact_inc_sum_rub'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0.00'
             HeaderAlignmentVert = vaTop
@@ -387,6 +411,7 @@ object fmZFTOScore: TfmZFTOScore
           end
           object cxGrid2DBBandedTableView1cnt_global_doc: TcxGridDBBandedColumn
             DataBinding.FieldName = 'cnt_global_doc'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.AssignedValues.DisplayFormat = True
             Properties.DecimalPlaces = 0
@@ -394,7 +419,7 @@ object fmZFTOScore: TfmZFTOScore
             HeaderGlyph.SourceDPI = 96
             HeaderGlyph.Data = {
               424D360400000000000036000000280000001000000010000000010020000000
-              00000000000074120000741200000000000000000000FFFFFF00FFFFFF00FFFF
+              000000000000C40E0000C40E00000000000000000000FFFFFF00FFFFFF00FFFF
               FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
               FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
               FF00FFFFFF00FFFFFF00DAD4CFFF644B37FF634935FF664C38FFC4BAB2FFFFFF
@@ -434,6 +459,7 @@ object fmZFTOScore: TfmZFTOScore
           end
           object cxGrid2DBBandedTableView1service_kind_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'service_kind_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Position.BandIndex = -1
             Position.ColIndex = -1
@@ -454,7 +480,6 @@ object fmZFTOScore: TfmZFTOScore
         BevelOuter = bvLowered
         Constraints.MinHeight = 100
         TabOrder = 2
-        ExplicitTop = 289
         object Splitter2: TSplitter
           Left = 460
           Top = 2
@@ -474,7 +499,6 @@ object fmZFTOScore: TfmZFTOScore
           Align = alClient
           Caption = #1044#1077#1090#1072#1083#1080#1079#1072#1094#1080#1103' '#1087#1086' '#1092#1072#1082#1090#1091#1088#1077
           TabOrder = 0
-          ExplicitWidth = 459
           object cxGrid3: TcxGrid
             Left = 2
             Top = 43
@@ -573,6 +597,7 @@ object fmZFTOScore: TfmZFTOScore
                 end>
               object cxGrid3DBBandedTableView1zfto_score_table_id: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'zfto_score_table_id'
+                DataBinding.IsNullValueType = True
                 Visible = False
                 HeaderAlignmentVert = vaTop
                 Width = 25
@@ -582,6 +607,7 @@ object fmZFTOScore: TfmZFTOScore
               end
               object cxGrid3DBBandedTableView1zfto_score_id: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'zfto_score_id'
+                DataBinding.IsNullValueType = True
                 Visible = False
                 HeaderAlignmentVert = vaTop
                 Width = 40
@@ -592,6 +618,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1number_doc: TcxGridDBBandedColumn
                 Caption = #8470' '#1085#1072#1082#1083'.'
                 DataBinding.FieldName = 'number_doc'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 71
                 Position.BandIndex = 0
@@ -601,6 +628,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1vagon_num: TcxGridDBBandedColumn
                 Caption = #8470' '#1074#1072#1075#1086#1085#1072
                 DataBinding.FieldName = 'vagon_num'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 SortIndex = 0
                 SortOrder = soAscending
@@ -612,6 +640,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1cont_num: TcxGridDBBandedColumn
                 Caption = #8470' '#1082#1086#1085#1090'.'
                 DataBinding.FieldName = 'cont_num'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 60
                 Position.BandIndex = 0
@@ -621,6 +650,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1date_dep: TcxGridDBBandedColumn
                 Caption = #1044#1072#1090#1072' '#1086#1090#1087#1088'.'
                 DataBinding.FieldName = 'date_dep'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxDateEditProperties'
                 Properties.SaveTime = False
                 HeaderAlignmentVert = vaTop
@@ -632,6 +662,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1date_serv: TcxGridDBBandedColumn
                 Caption = #1044#1072#1090#1072' '#1086#1082#1072#1079'. '#1091#1089#1083#1091#1075#1080
                 DataBinding.FieldName = 'date_serv'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxDateEditProperties'
                 Properties.ShowTime = False
                 HeaderAlignmentVert = vaTop
@@ -643,6 +674,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1sum_rub: TcxGridDBBandedColumn
                 Caption = #1057#1091#1084#1084#1072', RUB'
                 DataBinding.FieldName = 'sum_rub'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -655,6 +687,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1nds_rub: TcxGridDBBandedColumn
                 Caption = #1053#1044#1057', RUB'
                 DataBinding.FieldName = 'nds_rub'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -666,6 +699,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1sum_usd: TcxGridDBBandedColumn
                 Caption = #1057#1091#1084#1084#1072', ('#1042#1072#1083'.)'
                 DataBinding.FieldName = 'sum_usd'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -678,6 +712,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1nds_usd: TcxGridDBBandedColumn
                 Caption = #1053#1044#1057', USD'
                 DataBinding.FieldName = 'nds_usd'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -689,6 +724,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1carddoctyp: TcxGridDBBandedColumn
                 Caption = #1058#1080#1087' '#1082#1072#1088#1090#1086#1095#1082#1080
                 DataBinding.FieldName = 'carddoctyp'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 59
                 Position.BandIndex = 0
@@ -698,6 +734,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1fr_weight: TcxGridDBBandedColumn
                 Caption = #1043#1088#1091#1079', '#1074#1077#1089
                 DataBinding.FieldName = 'fr_weight'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 70
                 Position.BandIndex = 0
@@ -707,6 +744,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1fr_code: TcxGridDBBandedColumn
                 Caption = #1043#1088#1091#1079', '#1082#1086#1076
                 DataBinding.FieldName = 'fr_code'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 100
                 Position.BandIndex = 0
@@ -716,6 +754,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1st_src_name: TcxGridDBBandedColumn
                 Caption = #1057#1090'.'#1054#1090#1087#1088'.'
                 DataBinding.FieldName = 'st_src_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 65
                 Position.BandIndex = 0
@@ -725,6 +764,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1st_src: TcxGridDBBandedColumn
                 Caption = #1050#1086#1076' '#1057#1090'.'#1054#1090#1087#1088'.'
                 DataBinding.FieldName = 'st_src'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 40
                 Position.BandIndex = 0
@@ -734,6 +774,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1st_tgt_name: TcxGridDBBandedColumn
                 Caption = #1057#1090'.'#1053#1072#1079#1085'.'
                 DataBinding.FieldName = 'st_tgt_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Position.BandIndex = 0
                 Position.ColIndex = 4
@@ -742,6 +783,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1st_tgt: TcxGridDBBandedColumn
                 Caption = #1050#1086#1076' '#1057#1090'.'#1053#1072#1079#1085
                 DataBinding.FieldName = 'st_tgt'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Position.BandIndex = 0
                 Position.ColIndex = 17
@@ -750,6 +792,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1ktgrm_text: TcxGridDBBandedColumn
                 Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077
                 DataBinding.FieldName = 'ktgrm_text'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 77
                 Position.BandIndex = 0
@@ -759,6 +802,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1date_pr: TcxGridDBBandedColumn
                 Caption = #1044#1072#1090#1072' '#1087#1088#1080#1077#1084#1072' '#1075#1088#1091#1079#1072
                 DataBinding.FieldName = 'date_pr'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxDateEditProperties'
                 Properties.ShowTime = False
                 HeaderAlignmentVert = vaTop
@@ -769,6 +813,7 @@ object fmZFTOScore: TfmZFTOScore
               end
               object cxGrid3DBBandedTableView1global_color: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'global_color'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Position.BandIndex = -1
                 Position.ColIndex = -1
@@ -777,6 +822,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1waers: TcxGridDBBandedColumn
                 Caption = #1042#1072#1083#1102#1090#1072
                 DataBinding.FieldName = 'waers'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 65
                 Position.BandIndex = 0
@@ -786,6 +832,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1serv_code: TcxGridDBBandedColumn
                 Caption = #1050#1086#1076' '#1091#1089#1083#1091#1075#1080
                 DataBinding.FieldName = 'serv_code'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 50
                 Position.BandIndex = 0
@@ -795,6 +842,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1invoiceid: TcxGridDBBandedColumn
                 Caption = 'ID '#1069#1090#1088#1072#1085
                 DataBinding.FieldName = 'invoiceid'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 50
                 Position.BandIndex = 0
@@ -804,6 +852,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1vidsoob: TcxGridDBBandedColumn
                 Caption = #1042#1080#1076' '#1089#1086#1086#1073#1097#1077#1085#1080#1103
                 DataBinding.FieldName = 'vidsoob'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 84
                 Position.BandIndex = 0
@@ -813,6 +862,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid3DBBandedTableView1type_tr: TcxGridDBBandedColumn
                 Caption = #1055#1088#1080#1079#1085#1072#1082' '#1087#1077#1088#1077#1074#1086#1079#1082#1080
                 DataBinding.FieldName = 'type_tr'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 109
                 Position.BandIndex = 0
@@ -839,8 +889,6 @@ object fmZFTOScore: TfmZFTOScore
             ParentShowHint = False
             ShowHint = True
             TabOrder = 0
-            ExplicitTop = 17
-            ExplicitWidth = 456
             object ToolButton6: TToolButton
               Left = 0
               Top = 0
@@ -1084,6 +1132,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1fact_inc_id: TcxGridDBBandedColumn
                 Caption = #8470' '#1079#1072#1087#1080#1089#1080
                 DataBinding.FieldName = 'fact_inc_id'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 60
                 Position.BandIndex = -1
@@ -1092,6 +1141,7 @@ object fmZFTOScore: TfmZFTOScore
               end
               object cxGrid4DBBandedTableView1bargain_id: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'bargain_id'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 60
                 Position.BandIndex = -1
@@ -1101,6 +1151,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1id_uch: TcxGridDBBandedColumn
                 Caption = #1059#1095'.'#1085#1086#1084#1077#1088
                 DataBinding.FieldName = 'id_uch'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 60
                 Position.BandIndex = 0
@@ -1110,6 +1161,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1brief_name: TcxGridDBBandedColumn
                 Caption = #1042#1072#1083#1102#1090#1072
                 DataBinding.FieldName = 'brief_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 60
                 Position.BandIndex = 0
@@ -1119,6 +1171,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1FIO_users_owner: TcxGridDBBandedColumn
                 Caption = #1054#1090#1074#1077#1090#1089#1074#1077#1085#1085#1099#1081
                 DataBinding.FieldName = 'FIO_users_owner'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Styles.Content = fmMain.cxStyle_AgreeFact
                 Width = 64
@@ -1129,6 +1182,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1bargain_cod: TcxGridDBBandedColumn
                 Caption = #8470' '#1087#1077#1088#1077#1074#1086#1079#1082#1080
                 DataBinding.FieldName = 'bargain_cod'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Styles.Content = fmMain.cxStyle_AgreeFact
                 Width = 60
@@ -1139,6 +1193,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1firm_customer_name: TcxGridDBBandedColumn
                 Caption = #1050#1083#1080#1077#1085#1090
                 DataBinding.FieldName = 'firm_customer_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Styles.Content = fmMain.cxStyle_AgreeFact
                 Width = 60
@@ -1149,6 +1204,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1date_period_month: TcxGridDBBandedColumn
                 Caption = #1052#1077#1089#1103#1094' '#1087#1088#1080#1083#1086#1078'.'
                 DataBinding.FieldName = 'date_period_month'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 SortIndex = 0
                 SortOrder = soAscending
@@ -1161,6 +1217,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1date_period_year: TcxGridDBBandedColumn
                 Caption = #1043#1086#1076' '#1087#1088#1080#1083#1086#1078'.'
                 DataBinding.FieldName = 'date_period_year'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Styles.Content = fmMain.cxStyle_AgreeFact
                 Width = 45
@@ -1171,6 +1228,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1ndser: TcxGridDBBandedColumn
                 Caption = #1057#1077#1088#1053#1072#1082#1083
                 DataBinding.FieldName = 'ndser'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 56
                 Position.BandIndex = 0
@@ -1180,6 +1238,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1ndnum: TcxGridDBBandedColumn
                 Caption = #8470' '#1085#1072#1082#1083'.'
                 DataBinding.FieldName = 'ndnum'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 60
                 Position.BandIndex = 0
@@ -1189,6 +1248,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1nvag: TcxGridDBBandedColumn
                 Caption = #8470' '#1074#1072#1075'.'
                 DataBinding.FieldName = 'nvag'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 61
                 Position.BandIndex = 0
@@ -1198,6 +1258,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1fkat: TcxGridDBBandedColumn
                 Caption = #1054#1090#1087#1088#1072#1074#1082#1072
                 DataBinding.FieldName = 'fkat'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Position.BandIndex = 0
                 Position.ColIndex = 27
@@ -1206,6 +1267,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1fkv: TcxGridDBBandedColumn
                 Caption = #1050#1086#1083'-'#1074#1086
                 DataBinding.FieldName = 'fkv'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 60
                 Position.BandIndex = 0
@@ -1215,6 +1277,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1grp: TcxGridDBBandedColumn
                 Caption = #1043'/'#1087
                 DataBinding.FieldName = 'grp'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 50
                 Position.BandIndex = 0
@@ -1224,6 +1287,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1dataot: TcxGridDBBandedColumn
                 Caption = #1044#1072#1090#1072#1054#1090
                 DataBinding.FieldName = 'dataot'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 55
                 Position.BandIndex = 0
@@ -1233,6 +1297,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1datpr: TcxGridDBBandedColumn
                 Caption = #1044#1072#1090#1072#1055#1088#1080#1073
                 DataBinding.FieldName = 'datpr'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 60
                 Position.BandIndex = 0
@@ -1242,6 +1307,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1vg: TcxGridDBBandedColumn
                 Caption = #1060'.'#1074#1077#1089
                 DataBinding.FieldName = 'vg'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 53
                 Position.BandIndex = 0
@@ -1251,6 +1317,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1grves: TcxGridDBBandedColumn
                 Caption = #1056'.'#1074#1077#1089
                 DataBinding.FieldName = 'grves'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 41
                 Position.BandIndex = 0
@@ -1260,6 +1327,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1nkont: TcxGridDBBandedColumn
                 Caption = #8470' '#1082#1086#1085#1090
                 DataBinding.FieldName = 'nkont'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 60
                 Position.BandIndex = 0
@@ -1269,6 +1337,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1free_fact_text: TcxGridDBBandedColumn
                 Caption = #1058#1077#1082#1089#1090' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
                 DataBinding.FieldName = 'free_fact_text'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 60
                 Position.BandIndex = 0
@@ -1278,6 +1347,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1free_fact: TcxGridDBBandedColumn
                 Caption = #1055#1088#1077#1090#1077#1085#1079#1080#1103
                 DataBinding.FieldName = 'free_fact'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCheckBoxProperties'
                 Properties.DisplayGrayed = '0'
                 Properties.NullStyle = nssUnchecked
@@ -1285,7 +1355,7 @@ object fmZFTOScore: TfmZFTOScore
                 HeaderGlyph.SourceDPI = 96
                 HeaderGlyph.Data = {
                   424D360400000000000036000000280000001000000010000000010020000000
-                  00000000000074120000741200000000000000000000FFFFFF00FFFFFF00FFFF
+                  000000000000C40E0000C40E00000000000000000000FFFFFF00FFFFFF00FFFF
                   FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
                   FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
                   FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
@@ -1326,6 +1396,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1FIO_free_fact: TcxGridDBBandedColumn
                 Caption = #1048#1079#1084#1077#1085#1103#1083
                 DataBinding.FieldName = 'FIO_free_fact'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 60
                 Position.BandIndex = 0
@@ -1335,6 +1406,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1sto_name: TcxGridDBBandedColumn
                 Caption = #1057#1090#1054#1090#1087#1088
                 DataBinding.FieldName = 'sto_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 72
                 Position.BandIndex = 0
@@ -1344,6 +1416,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1stn_name: TcxGridDBBandedColumn
                 Caption = #1057#1090#1053#1072#1079#1085
                 DataBinding.FieldName = 'stn_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 66
                 Position.BandIndex = 0
@@ -1353,6 +1426,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1gruz_name: TcxGridDBBandedColumn
                 Caption = #1043#1088#1091#1079#1045#1058#1057#1053#1043
                 DataBinding.FieldName = 'gruz_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 75
                 Position.BandIndex = 0
@@ -1362,6 +1436,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1podkod: TcxGridDBBandedColumn
                 Caption = #1055#1086#1076#1082#1086#1076
                 DataBinding.FieldName = 'podkod'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 51
                 Position.BandIndex = 0
@@ -1371,6 +1446,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1itog: TcxGridDBBandedColumn
                 Caption = #1057#1091#1084#1084#1072
                 DataBinding.FieldName = 'itog'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -1383,6 +1459,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1itogr: TcxGridDBBandedColumn
                 Caption = #1057#1091#1084#1084#1072' RUB'
                 DataBinding.FieldName = 'itogr'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,#0.00'
                 HeaderAlignmentVert = vaTop
@@ -1394,6 +1471,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1rodv: TcxGridDBBandedColumn
                 Caption = #1056#1086#1076#1055'/'#1057
                 DataBinding.FieldName = 'rodv'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 30
                 Position.BandIndex = 0
@@ -1403,6 +1481,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1fsob_name: TcxGridDBBandedColumn
                 Caption = #1052#1055#1057'/'#1057#1055#1057
                 DataBinding.FieldName = 'fsob_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 40
                 Position.BandIndex = 0
@@ -1412,6 +1491,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1max_load_id: TcxGridDBBandedColumn
                 Caption = #1052#1077#1089#1103#1094' '#1079#1072#1075#1088#1091#1079#1082#1080
                 DataBinding.FieldName = 'max_load_id'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 60
                 Position.BandIndex = 0
@@ -1420,6 +1500,7 @@ object fmZFTOScore: TfmZFTOScore
               end
               object cxGrid4DBBandedTableView1users_owner_id: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'users_owner_id'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Position.BandIndex = -1
                 Position.ColIndex = -1
@@ -1427,6 +1508,7 @@ object fmZFTOScore: TfmZFTOScore
               end
               object cxGrid4DBBandedTableView1type_self: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'type_self'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Position.BandIndex = -1
                 Position.ColIndex = -1
@@ -1434,6 +1516,7 @@ object fmZFTOScore: TfmZFTOScore
               end
               object cxGrid4DBBandedTableView1type_info: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'type_info'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 70
                 Position.BandIndex = -1
@@ -1442,6 +1525,7 @@ object fmZFTOScore: TfmZFTOScore
               end
               object cxGrid4DBBandedTableView1fact_inc_color: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'fact_inc_color'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 60
                 Position.BandIndex = -1
@@ -1450,6 +1534,7 @@ object fmZFTOScore: TfmZFTOScore
               end
               object cxGrid4DBBandedTableView1invoice_score_fact_inc_id: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'invoice_score_fact_inc_id'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Position.BandIndex = -1
                 Position.ColIndex = -1
@@ -1458,6 +1543,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1itog_TD: TcxGridDBBandedColumn
                 Caption = #1058'. '#1044'.'
                 DataBinding.FieldName = 'itog_TD'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -1470,6 +1556,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1itog_VOHR: TcxGridDBBandedColumn
                 Caption = #1054#1093#1088#1072#1085#1072
                 DataBinding.FieldName = 'itog_VOHR'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -1482,6 +1569,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid4DBBandedTableView1itog_SHTRAF: TcxGridDBBandedColumn
                 Caption = #1064#1090#1088#1072#1092
                 DataBinding.FieldName = 'itog_SHTRAF'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -1536,18 +1624,21 @@ object fmZFTOScore: TfmZFTOScore
                 end>
               object cxGrid1DBBandedTableView2fact_inc_id: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'fact_inc_id'
+                DataBinding.IsNullValueType = True
                 Position.BandIndex = -1
                 Position.ColIndex = -1
                 Position.RowIndex = -1
               end
               object cxGrid1DBBandedTableView2bargain_id: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'bargain_id'
+                DataBinding.IsNullValueType = True
                 Position.BandIndex = -1
                 Position.ColIndex = -1
                 Position.RowIndex = -1
               end
               object cxGrid1DBBandedTableView2max_load_id: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'max_load_id'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = -1
                 Position.ColIndex = -1
@@ -1555,6 +1646,7 @@ object fmZFTOScore: TfmZFTOScore
               end
               object cxGrid1DBBandedTableView2type_self: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'type_self'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = -1
                 Position.ColIndex = -1
@@ -1563,6 +1655,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2id_uch: TcxGridDBBandedColumn
                 Caption = #1059#1095'.'#1085#1086#1084#1077#1088
                 DataBinding.FieldName = 'id_uch'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 0
@@ -1571,6 +1664,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2brief_name: TcxGridDBBandedColumn
                 Caption = #1042#1072#1083#1102#1090#1072
                 DataBinding.FieldName = 'brief_name'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 18
@@ -1579,6 +1673,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2FIO_users_owner: TcxGridDBBandedColumn
                 Caption = #1054#1090#1074#1077#1090#1089#1090#1074#1077#1085#1085#1099#1081
                 DataBinding.FieldName = 'FIO_users_owner'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 26
@@ -1587,6 +1682,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2ndnum: TcxGridDBBandedColumn
                 Caption = #8470' '#1085#1072#1082#1083'.'
                 DataBinding.FieldName = 'ndnum'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 3
@@ -1595,6 +1691,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2ndser: TcxGridDBBandedColumn
                 Caption = #1057#1077#1088'.'#1085#1072#1082#1083'.'
                 DataBinding.FieldName = 'ndser'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 4
@@ -1603,6 +1700,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2nvag: TcxGridDBBandedColumn
                 Caption = #8470' '#1074#1072#1075#1086#1085#1072
                 DataBinding.FieldName = 'nvag'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 5
@@ -1611,6 +1709,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2nkont: TcxGridDBBandedColumn
                 Caption = #8470' '#1082#1086#1085#1090'.'
                 DataBinding.FieldName = 'nkont'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 20
@@ -1619,6 +1718,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2fkv: TcxGridDBBandedColumn
                 Caption = #1050#1086#1083'-'#1074#1086
                 DataBinding.FieldName = 'fkv'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 6
@@ -1627,6 +1727,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2grp: TcxGridDBBandedColumn
                 Caption = #1043'/'#1087
                 DataBinding.FieldName = 'grp'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 17
@@ -1635,6 +1736,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2dataot: TcxGridDBBandedColumn
                 Caption = #1044#1072#1090#1072#1054#1090#1087#1088
                 DataBinding.FieldName = 'dataot'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 7
@@ -1643,6 +1745,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2datpr: TcxGridDBBandedColumn
                 Caption = #1044#1072#1090#1072#1055#1088#1080#1073
                 DataBinding.FieldName = 'datpr'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 8
@@ -1651,6 +1754,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2vg: TcxGridDBBandedColumn
                 Caption = #1060'.'#1074#1077#1089
                 DataBinding.FieldName = 'vg'
+                DataBinding.IsNullValueType = True
                 Width = 50
                 Position.BandIndex = 0
                 Position.ColIndex = 9
@@ -1659,6 +1763,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2grves: TcxGridDBBandedColumn
                 Caption = #1056'.'#1074#1077#1089
                 DataBinding.FieldName = 'grves'
+                DataBinding.IsNullValueType = True
                 Width = 52
                 Position.BandIndex = 0
                 Position.ColIndex = 10
@@ -1667,6 +1772,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2podkod: TcxGridDBBandedColumn
                 Caption = #1055#1086#1076#1082#1086#1076
                 DataBinding.FieldName = 'podkod'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 21
@@ -1674,6 +1780,7 @@ object fmZFTOScore: TfmZFTOScore
               end
               object cxGrid1DBBandedTableView2free_fact_text: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'free_fact_text'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 24
@@ -1681,6 +1788,7 @@ object fmZFTOScore: TfmZFTOScore
               end
               object cxGrid1DBBandedTableView2free_fact: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'free_fact'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCheckBoxProperties'
                 Width = 66
                 Position.BandIndex = 0
@@ -1689,6 +1797,7 @@ object fmZFTOScore: TfmZFTOScore
               end
               object cxGrid1DBBandedTableView2FIO_free_fact: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'FIO_free_fact'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 25
@@ -1696,6 +1805,7 @@ object fmZFTOScore: TfmZFTOScore
               end
               object cxGrid1DBBandedTableView2fact_inc_color: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'fact_inc_color'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = -1
                 Position.ColIndex = -1
@@ -1704,6 +1814,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2sto_name: TcxGridDBBandedColumn
                 Caption = #1057#1090'.'#1054#1090#1087#1088
                 DataBinding.FieldName = 'sto_name'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 11
@@ -1712,6 +1823,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2stn_name: TcxGridDBBandedColumn
                 Caption = #1057#1090'.'#1053#1072#1079#1085'.'
                 DataBinding.FieldName = 'stn_name'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 12
@@ -1720,6 +1832,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2gruz_name: TcxGridDBBandedColumn
                 Caption = #1043#1088#1091#1079' '#1045#1058#1057#1053#1043
                 DataBinding.FieldName = 'gruz_name'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 13
@@ -1728,6 +1841,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2kursdr: TcxGridDBBandedColumn
                 Caption = #1050#1091#1088#1089
                 DataBinding.FieldName = 'kursdr'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 14
@@ -1736,6 +1850,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2field_report: TcxGridDBBandedColumn
                 Caption = #1044#1086#1087#1086#1083#1085#1077#1085#1080#1077
                 DataBinding.FieldName = 'field_report'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 16
@@ -1744,6 +1859,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2fsob_name: TcxGridDBBandedColumn
                 Caption = #1052#1055#1057'/'#1057#1055#1057
                 DataBinding.FieldName = 'fsob_name'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 19
@@ -1752,6 +1868,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2bargain_cod: TcxGridDBBandedColumn
                 Caption = #1055#1088#1080#1083#1086#1078#1077#1085#1080#1077
                 DataBinding.FieldName = 'bargain_cod'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 1
@@ -1759,6 +1876,7 @@ object fmZFTOScore: TfmZFTOScore
               end
               object cxGrid1DBBandedTableView2date_period: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'date_period'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxDateEditProperties'
                 Properties.ShowTime = False
                 Width = 66
@@ -1769,6 +1887,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2firm_customer_name: TcxGridDBBandedColumn
                 Caption = #1050#1083#1080#1077#1085#1090
                 DataBinding.FieldName = 'firm_customer_name'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 2
@@ -1776,6 +1895,7 @@ object fmZFTOScore: TfmZFTOScore
               end
               object cxGrid1DBBandedTableView2users_owner_id: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'users_owner_id'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = -1
                 Position.ColIndex = -1
@@ -1783,6 +1903,7 @@ object fmZFTOScore: TfmZFTOScore
               end
               object cxGrid1DBBandedTableView2date_period_month: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'date_period_month'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 27
@@ -1790,6 +1911,7 @@ object fmZFTOScore: TfmZFTOScore
               end
               object cxGrid1DBBandedTableView2date_period_year: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'date_period_year'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 28
@@ -1798,6 +1920,7 @@ object fmZFTOScore: TfmZFTOScore
               object cxGrid1DBBandedTableView2itog: TcxGridDBBandedColumn
                 Caption = #1057#1091#1084#1084#1072
                 DataBinding.FieldName = 'itog'
+                DataBinding.IsNullValueType = True
                 Width = 66
                 Position.BandIndex = 0
                 Position.ColIndex = 15
@@ -1824,14 +1947,11 @@ object fmZFTOScore: TfmZFTOScore
     object cxTabSheet3: TcxTabSheet
       Caption = #1055#1077#1088#1077#1095#1085#1080' '#1089#1095'-'#1092'.'
       ImageIndex = 102
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 581
       object cxGrid5: TcxGrid
         Left = 0
         Top = 0
         Width = 887
-        Height = 524
+        Height = 580
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfUltraFlat
@@ -1905,6 +2025,7 @@ object fmZFTOScore: TfmZFTOScore
             end>
           object cxGrid5DBBandedTableView1zfto_score_table_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'zfto_score_table_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = -1
@@ -1914,6 +2035,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1zfto_score_id: TcxGridDBBandedColumn
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'zfto_score_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -1923,6 +2045,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1zfto_score_act_id: TcxGridDBBandedColumn
             Caption = #8470' '#1079#1072#1087#1080#1089#1080' '#1072#1082#1090#1072
             DataBinding.FieldName = 'zfto_score_act_id'
+            DataBinding.IsNullValueType = True
             Visible = False
             HeaderAlignmentVert = vaTop
             Width = 66
@@ -1933,6 +2056,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1number_doc: TcxGridDBBandedColumn
             Caption = #8470' '#1085#1072#1082#1083#1072#1076#1085#1086#1081
             DataBinding.FieldName = 'number_doc'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 71
             Position.BandIndex = 0
@@ -1942,6 +2066,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1vagon_num: TcxGridDBBandedColumn
             Caption = #8470' '#1074#1072#1075#1086#1085#1072
             DataBinding.FieldName = 'vagon_num'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -1951,6 +2076,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1st_src_name: TcxGridDBBandedColumn
             Caption = #1057#1090'.'#1054#1090#1087#1088'.'
             DataBinding.FieldName = 'st_src_name'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -1960,6 +2086,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1st_tgt_name: TcxGridDBBandedColumn
             Caption = #1057#1090'.'#1053#1072#1079#1085'.'
             DataBinding.FieldName = 'st_tgt_name'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -1969,6 +2096,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1ktgrm_text: TcxGridDBBandedColumn
             Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1087#1083#1072#1100#1077#1078#1072
             DataBinding.FieldName = 'ktgrm_text'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -1978,6 +2106,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1date_dep: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1054#1090#1087#1088'.'
             DataBinding.FieldName = 'date_dep'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxDateEditProperties'
             Properties.SaveTime = False
             HeaderAlignmentVert = vaTop
@@ -1989,6 +2118,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1date_serv: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1054#1082#1072#1079'. '#1091#1089#1083#1091#1075#1080
             DataBinding.FieldName = 'date_serv'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxDateEditProperties'
             Properties.SaveTime = False
             HeaderAlignmentVert = vaTop
@@ -2000,6 +2130,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1sum_wnds_rub: TcxGridDBBandedColumn
             Caption = #1057#1091#1084#1084#1072' '#1073#1077#1079' '#1053#1044#1057', RUB'
             DataBinding.FieldName = 'sum_wnds_rub'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0.00'
             HeaderAlignmentVert = vaTop
@@ -2011,6 +2142,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1nds_rub: TcxGridDBBandedColumn
             Caption = #1053#1044#1057', RUB '
             DataBinding.FieldName = 'nds_rub'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0.00'
             HeaderAlignmentVert = vaTop
@@ -2022,6 +2154,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1sum_rub: TcxGridDBBandedColumn
             Caption = #1057#1091#1084#1084#1072', RUB'
             DataBinding.FieldName = 'sum_rub'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0.00'
             HeaderAlignmentVert = vaTop
@@ -2034,6 +2167,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1sum_wnds_usd: TcxGridDBBandedColumn
             Caption = #1057#1091#1084#1084#1072' '#1073#1077#1079' '#1053#1044#1057', ('#1042#1072#1083'.)'
             DataBinding.FieldName = 'sum_wnds_usd'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0.00'
             HeaderAlignmentVert = vaTop
@@ -2045,6 +2179,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1nds_usd: TcxGridDBBandedColumn
             Caption = #1053#1044#1057', ('#1042#1072#1083'.)'
             DataBinding.FieldName = 'nds_usd'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0.00'
             HeaderAlignmentVert = vaTop
@@ -2056,6 +2191,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1sum_usd: TcxGridDBBandedColumn
             Caption = #1057#1091#1084#1084#1072', ('#1042#1072#1083'.)'
             DataBinding.FieldName = 'sum_usd'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0.00'
             HeaderAlignmentVert = vaTop
@@ -2068,6 +2204,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1fact_num: TcxGridDBBandedColumn
             Caption = #8470' '#1089#1095#1105#1090'-'#1092#1072#1082#1090#1091#1088#1099
             DataBinding.FieldName = 'fact_num'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
             Width = 78
@@ -2078,6 +2215,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1fact_date: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1089#1095#1105#1090'-'#1092#1072#1082#1090#1091#1088#1099
             DataBinding.FieldName = 'fact_date'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxDateEditProperties'
             Properties.SaveTime = False
             HeaderAlignmentVert = vaTop
@@ -2090,6 +2228,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1carddoctyp: TcxGridDBBandedColumn
             Caption = #1058#1080#1087' '#1082#1072#1088#1090#1086#1095#1082#1080
             DataBinding.FieldName = 'carddoctyp'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -2099,6 +2238,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1st_src: TcxGridDBBandedColumn
             Caption = #1050#1086#1076' '#1057#1090'.'#1054#1090#1087#1088'.'
             DataBinding.FieldName = 'st_src'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -2108,6 +2248,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1st_tgt: TcxGridDBBandedColumn
             Caption = #1050#1086#1076' '#1057#1090'.'#1053#1072#1079#1085'.'
             DataBinding.FieldName = 'st_tgt'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -2117,6 +2258,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1cont_num: TcxGridDBBandedColumn
             Caption = #8470' '#1082#1086#1085#1090'.'
             DataBinding.FieldName = 'cont_num'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -2126,6 +2268,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1fr_code: TcxGridDBBandedColumn
             Caption = #1050#1086#1076' '#1075#1088#1091#1079#1072
             DataBinding.FieldName = 'fr_code'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -2135,6 +2278,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1fr_weight: TcxGridDBBandedColumn
             Caption = #1042#1077#1089' '#1075#1088#1091#1079#1072
             DataBinding.FieldName = 'fr_weight'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -2144,6 +2288,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1number_act: TcxGridDBBandedColumn
             Caption = #8470' '#1072#1082#1090#1072
             DataBinding.FieldName = 'number_act'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -2153,6 +2298,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1date_act: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1072#1082#1090#1072
             DataBinding.FieldName = 'date_act'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxDateEditProperties'
             Properties.SaveTime = False
             HeaderAlignmentVert = vaTop
@@ -2164,6 +2310,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1num_contr: TcxGridDBBandedColumn
             Caption = #8470' '#1076#1086#1075#1086#1074#1086#1088#1072
             DataBinding.FieldName = 'num_contr'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -2173,6 +2320,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1type_incom: TcxGridDBBandedColumn
             Caption = #1042#1080#1076' '#1076#1086#1093#1086#1076#1086#1074
             DataBinding.FieldName = 'type_incom'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -2182,6 +2330,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1numact_cor: TcxGridDBBandedColumn
             Caption = #8470' '#1082#1086#1088#1088'.'#1072#1082#1090#1072
             DataBinding.FieldName = 'numact_cor'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Styles.Content = fmMain.cxStyle_AgreeFactInc_AddProfit
             Width = 66
@@ -2192,6 +2341,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1datact_cor: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1082#1086#1088#1088'.'#1072#1082#1090#1072
             DataBinding.FieldName = 'datact_cor'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxDateEditProperties'
             Properties.SaveTime = False
             HeaderAlignmentVert = vaTop
@@ -2204,6 +2354,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1date_load_month: TcxGridDBBandedColumn
             Caption = #1054#1090#1095'.'#1052#1077#1089#1103#1094
             DataBinding.FieldName = 'date_load_month'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -2213,6 +2364,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1date_load_year: TcxGridDBBandedColumn
             Caption = #1054#1090#1095'.'#1043#1086#1076
             DataBinding.FieldName = 'date_load_year'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -2221,6 +2373,7 @@ object fmZFTOScore: TfmZFTOScore
           end
           object cxGrid5DBBandedTableView1global_color: TcxGridDBBandedColumn
             DataBinding.FieldName = 'global_color'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = -1
@@ -2230,6 +2383,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1waers: TcxGridDBBandedColumn
             Caption = #1042#1072#1083#1102#1090#1072
             DataBinding.FieldName = 'waers'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 65
             Position.BandIndex = 0
@@ -2239,6 +2393,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1serv_code: TcxGridDBBandedColumn
             Caption = #1050#1086#1076' '#1091#1089#1083#1091#1075#1080
             DataBinding.FieldName = 'serv_code'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 50
             Position.BandIndex = 0
@@ -2248,6 +2403,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1invoiceid: TcxGridDBBandedColumn
             Caption = 'ID '#1069#1090#1088#1072#1085
             DataBinding.FieldName = 'invoiceid'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 60
             Position.BandIndex = 0
@@ -2257,6 +2413,7 @@ object fmZFTOScore: TfmZFTOScore
           object cxGrid5DBBandedTableView1date_pr: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1055#1088#1080#1077#1084#1072' '#1075#1088#1091#1079#1072
             DataBinding.FieldName = 'date_pr'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxDateEditProperties'
             Properties.SaveTime = False
             HeaderAlignmentVert = vaTop
@@ -2284,14 +2441,14 @@ object fmZFTOScore: TfmZFTOScore
     object Label1: TLabel
       Left = 13
       Top = 10
-      Width = 75
+      Width = 70
       Height = 13
       Caption = #1055#1086#1076#1088#1103#1076#1095#1080#1082'.....'
     end
     object Label8: TLabel
       Left = 499
       Top = 10
-      Width = 62
+      Width = 59
       Height = 13
       Caption = #1044#1086#1075#1086#1074#1086#1088'.....'
     end
