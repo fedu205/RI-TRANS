@@ -156,9 +156,9 @@ var    usr_pwd : TUser_pwd;
 begin
   registry := TRegistry.Create;
   registry.RootKey := HKEY_CURRENT_USER;
-  registry.OpenKey('\Software\Lis_GURU\Password', True);
+  registry.OpenKey('\Software\RTR\Password', True);
 
-  registry.OpenKey('\Software\Lis_GURU', True);
+  registry.OpenKey('\Software\RTR', True);
   if server  = '' then server  := registry.ReadString('Data Source');
   if catalog = '' then catalog := registry.ReadString('Initial Catalog');
   registry.Free;
@@ -261,9 +261,9 @@ begin
 
   registry := TRegistry.Create;
   registry.RootKey := HKEY_CURRENT_USER;
-  registry.OpenKey('\Software\Lis_GURU\Password', True);
+  registry.OpenKey('\Software\RTR\Password', True);
 
-  registry.OpenKey('\Software\Lis_GURU', True);
+  registry.OpenKey('\Software\RTR', True);
   if server  = '' then server  := registry.ReadString('Data Source');
   if catalog = '' then catalog := registry.ReadString('Initial Catalog');
   registry.Free;
@@ -372,16 +372,16 @@ begin
 
   Fregistry := TRegistry.Create;
   Fregistry.RootKey := HKEY_CURRENT_USER;
-  Fregistry.OpenKey('\Software\Lis_GURU\Password', True);
+  Fregistry.OpenKey('\Software\RTR\Password', True);
 
-  Fregistry.OpenKey('\Software\Lis_GURU', True);
+  Fregistry.OpenKey('\Software\RTR', True);
 
   if usr_pwd = nil then begin
     cxTextEdit3.Text := Fregistry.ReadString('Data Source');
     cxTextEdit4.Text := Fregistry.ReadString('Initial Catalog');
     cxTextEdit1.Text := Fregistry.ReadString('User ID');
 
-    if cxTextEdit3.Text = '' then cxTextEdit3.Text := '92.53.107.222';
+    if cxTextEdit3.Text = '' then cxTextEdit3.Text := '10.244.252.10';
     if cxTextEdit4.Text = '' then cxTextEdit4.Text := 'LIS1';
   end else begin
     cxTextEdit3.Text := usr_pwd.server;
@@ -390,7 +390,7 @@ begin
     cxTextEdit2.Text := usr_pwd.user_pass;
   end;
 
-  cxTextEdit3.Text := '92.53.107.222';
+  cxTextEdit3.Text := '10.244.252.10';
 
 
   Panel3.Visible := False;
