@@ -1,0 +1,77 @@
+
+DECLARE
+	@xml xml,
+	@param_xml varchar(max),
+	@users_group_id int
+	
+SET @users_group_id	 = :users_group_id
+SET @param_xml = :param_xml
+SET @xml	 = convert(xml, @param_xml)
+
+	
+SET NOCOUNT ON
+
+SELECT * INTO #fact_save 
+FROM 
+(	SELECT	id,
+			num_vagon, 
+			date_operation,			
+			isnull((SELECT top 1 node2_cod	FROM inf_obj_node_node WHERE node1_cod = node_end_cod), node_end_cod) as node_end_cod,
+			isnull((SELECT top 1 node2_cod	FROM inf_obj_node_node WHERE node1_cod = node_begin_cod), node_begin_cod) as node_begin_cod,
+			isnull((SELECT top 1 node2_cod	FROM inf_obj_node_node WHERE node1_cod = node_operation_cod), node_operation_cod) as node_operation_cod
+
+	FROM 
+	(		SELECT	ref.value ('@id',	'int')					as id,
+					ref.value ('@nvag',	'int')					as num_vagon,
+					ref.value ('@nend',	'varchar(max)')			as node_end_cod,
+					ref.value ('@nbegin',	'varchar(max)')		as node_begin_cod,
+					ref.value ('@noper',	'varchar(max)')	as node_operation_cod,				
+					cast(left(replace(ref.value ('@doper',	'varchar(max)'), 'T', ' '), 17) as datetime)   as date_operation
+			FROM	@xml.nodes('/DATAPACKET/ROWDATA/ROW') as node(ref)		
+	) x1
+) x2
+WHERE	(node_end_cod<>node_begin_cod or node_end_cod<>node_operation_cod)
+		AND exists(SELECT 1 FROM inf_obj_NODE WHERE inf_obj_cod = node_end_cod) 
+
+UPDATE #fact_save SET node_end_cod = '000000' WHERE node_end_cod is null
+DELETE #fact_save WHERE node_begin_cod is null or node_operation_cod is null
+
+SELECT		num_vagon, max(date_operation) as date_operation INTO #temp_date_operation
+FROM		fact_track_vagon 
+WHERE		users_group_id = @users_group_id and date_operation > dateadd(month, -1, getdate()) and fact_track_trip_id is not null
+GROUP BY	num_vagon
+
+SELECT	max(fact_track_vagon.fact_track_id) fact_track_id INTO #temp_fact_track_id
+FROM	fact_track_vagon  
+		inner join #temp_date_operation on fact_track_vagon.num_vagon = #temp_date_operation.num_vagon and fact_track_vagon.date_operation = #temp_date_operation.date_operation
+WHERE	users_group_id = @users_group_id and fact_track_trip_id is not null and isnull(set_archive,0) <> 1
+GROUP BY fact_track_vagon.num_vagon
+
+SELECT * INTO #fact_last FROM 
+(	SELECT	fact_track_vagon.num_vagon,
+			fact_track_vagon.date_operation,		
+			isnull(isnull(n1.node2_cod, fact_track_vagon.node_end_cod),'000000') as node_end_cod,
+			isnull(n2.node2_cod, fact_track_vagon.node_begin_cod) as node_begin_cod,
+			isnull(n3.node2_cod, fact_track_vagon.node_operation_cod) as node_operation_cod,
+			fact_track_vagon.fact_track_trip_id
+	FROM	#temp_fact_track_id 
+			inner join fact_track_vagon on #temp_fact_track_id.fact_track_id = fact_track_vagon.fact_track_id
+			left join inf_obj_NODE_NODE n1 on n1.node1_cod = fact_track_vagon.node_end_cod
+			left join inf_obj_NODE_NODE n2 on n2.node1_cod = fact_track_vagon.node_begin_cod
+			left join inf_obj_NODE_NODE n3 on n3.node1_cod = fact_track_vagon.node_operation_cod
+) x1
+WHERE node_end_cod<>node_begin_cod or node_end_cod<>node_operation_cod
+ORDER BY num_vagon 
+
+SELECT	#fact_save.id, #fact_last.fact_track_trip_id	
+FROM	#fact_save 
+		inner join #fact_last 
+			on	#fact_save.num_vagon = #fact_last.num_vagon and 
+				#fact_save.date_operation >= #fact_last.date_operation and
+				#fact_save.node_end_cod = #fact_last.node_end_cod
+ORDER BY 1
+
+DROP TABLE #temp_date_operation
+DROP TABLE #temp_fact_track_id
+DROP TABLE #fact_save
+DROP TABLE #fact_last

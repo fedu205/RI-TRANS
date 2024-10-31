@@ -1,0 +1,264 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{1F1A77C6-AD41-44DD-ACB1-D9CA4C35B02F}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DLL\Password\Pass.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DLL\CTM_Tarif\Ctm_Tarif.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DLL\EDO\EDO.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DLL\Dictoinary\Dictionary.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DLL\LZH\lzh.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DLL\Etran\Etran.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DLL\EtranECP\EtranECP.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Utils\FactFilesLoad\FactFilesLoad.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DLL\Search\Search.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DLL\Reports\Reports.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DLL\LisAdd\LisAdd.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DLL\FormsAdd\FormsAdd.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DLL\Users\User.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DLL\Etran\GetETRAN\GetETRAN3.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DLL\Etran\TestETRAN\TestETRAN.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Binn\Lis.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Utils\Etran\ECPServerEtran\ECPEtranServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Utils\LoaderNew\Update.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DLL\Etran\ServerTCP\Server.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DLL\Etran\ServerTCP Entran\ServerEtran.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Pass">
+        <MSBuild Projects="DLL\Password\Pass.dproj"/>
+    </Target>
+    <Target Name="Pass:Clean">
+        <MSBuild Projects="DLL\Password\Pass.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Pass:Make">
+        <MSBuild Projects="DLL\Password\Pass.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Ctm_Tarif">
+        <MSBuild Projects="DLL\CTM_Tarif\Ctm_Tarif.dproj"/>
+    </Target>
+    <Target Name="Ctm_Tarif:Clean">
+        <MSBuild Projects="DLL\CTM_Tarif\Ctm_Tarif.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Ctm_Tarif:Make">
+        <MSBuild Projects="DLL\CTM_Tarif\Ctm_Tarif.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="EDO">
+        <MSBuild Projects="DLL\EDO\EDO.dproj"/>
+    </Target>
+    <Target Name="EDO:Clean">
+        <MSBuild Projects="DLL\EDO\EDO.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EDO:Make">
+        <MSBuild Projects="DLL\EDO\EDO.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Dictionary">
+        <MSBuild Projects="DLL\Dictoinary\Dictionary.dproj"/>
+    </Target>
+    <Target Name="Dictionary:Clean">
+        <MSBuild Projects="DLL\Dictoinary\Dictionary.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Dictionary:Make">
+        <MSBuild Projects="DLL\Dictoinary\Dictionary.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="lzh">
+        <MSBuild Projects="DLL\LZH\lzh.dproj"/>
+    </Target>
+    <Target Name="lzh:Clean">
+        <MSBuild Projects="DLL\LZH\lzh.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="lzh:Make">
+        <MSBuild Projects="DLL\LZH\lzh.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Etran">
+        <MSBuild Projects="DLL\Etran\Etran.dproj"/>
+    </Target>
+    <Target Name="Etran:Clean">
+        <MSBuild Projects="DLL\Etran\Etran.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Etran:Make">
+        <MSBuild Projects="DLL\Etran\Etran.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="EtranECP">
+        <MSBuild Projects="DLL\EtranECP\EtranECP.dproj"/>
+    </Target>
+    <Target Name="EtranECP:Clean">
+        <MSBuild Projects="DLL\EtranECP\EtranECP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EtranECP:Make">
+        <MSBuild Projects="DLL\EtranECP\EtranECP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FactFilesLoad">
+        <MSBuild Projects="Utils\FactFilesLoad\FactFilesLoad.dproj"/>
+    </Target>
+    <Target Name="FactFilesLoad:Clean">
+        <MSBuild Projects="Utils\FactFilesLoad\FactFilesLoad.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FactFilesLoad:Make">
+        <MSBuild Projects="Utils\FactFilesLoad\FactFilesLoad.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Search">
+        <MSBuild Projects="DLL\Search\Search.dproj"/>
+    </Target>
+    <Target Name="Search:Clean">
+        <MSBuild Projects="DLL\Search\Search.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Search:Make">
+        <MSBuild Projects="DLL\Search\Search.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Reports">
+        <MSBuild Projects="DLL\Reports\Reports.dproj"/>
+    </Target>
+    <Target Name="Reports:Clean">
+        <MSBuild Projects="DLL\Reports\Reports.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Reports:Make">
+        <MSBuild Projects="DLL\Reports\Reports.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LisAdd">
+        <MSBuild Projects="DLL\LisAdd\LisAdd.dproj"/>
+    </Target>
+    <Target Name="LisAdd:Clean">
+        <MSBuild Projects="DLL\LisAdd\LisAdd.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LisAdd:Make">
+        <MSBuild Projects="DLL\LisAdd\LisAdd.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FormsAdd">
+        <MSBuild Projects="DLL\FormsAdd\FormsAdd.dproj"/>
+    </Target>
+    <Target Name="FormsAdd:Clean">
+        <MSBuild Projects="DLL\FormsAdd\FormsAdd.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FormsAdd:Make">
+        <MSBuild Projects="DLL\FormsAdd\FormsAdd.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="User">
+        <MSBuild Projects="DLL\Users\User.dproj"/>
+    </Target>
+    <Target Name="User:Clean">
+        <MSBuild Projects="DLL\Users\User.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="User:Make">
+        <MSBuild Projects="DLL\Users\User.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GetETRAN3">
+        <MSBuild Projects="DLL\Etran\GetETRAN\GetETRAN3.dproj"/>
+    </Target>
+    <Target Name="GetETRAN3:Clean">
+        <MSBuild Projects="DLL\Etran\GetETRAN\GetETRAN3.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GetETRAN3:Make">
+        <MSBuild Projects="DLL\Etran\GetETRAN\GetETRAN3.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TestETRAN">
+        <MSBuild Projects="DLL\Etran\TestETRAN\TestETRAN.dproj"/>
+    </Target>
+    <Target Name="TestETRAN:Clean">
+        <MSBuild Projects="DLL\Etran\TestETRAN\TestETRAN.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TestETRAN:Make">
+        <MSBuild Projects="DLL\Etran\TestETRAN\TestETRAN.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Lis">
+        <MSBuild Projects="Binn\Lis.dproj"/>
+    </Target>
+    <Target Name="Lis:Clean">
+        <MSBuild Projects="Binn\Lis.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Lis:Make">
+        <MSBuild Projects="Binn\Lis.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ECPEtranServer">
+        <MSBuild Projects="Utils\Etran\ECPServerEtran\ECPEtranServer.dproj"/>
+    </Target>
+    <Target Name="ECPEtranServer:Clean">
+        <MSBuild Projects="Utils\Etran\ECPServerEtran\ECPEtranServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ECPEtranServer:Make">
+        <MSBuild Projects="Utils\Etran\ECPServerEtran\ECPEtranServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Update">
+        <MSBuild Projects="Utils\LoaderNew\Update.dproj"/>
+    </Target>
+    <Target Name="Update:Clean">
+        <MSBuild Projects="Utils\LoaderNew\Update.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Update:Make">
+        <MSBuild Projects="Utils\LoaderNew\Update.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Server">
+        <MSBuild Projects="DLL\Etran\ServerTCP\Server.dproj"/>
+    </Target>
+    <Target Name="Server:Clean">
+        <MSBuild Projects="DLL\Etran\ServerTCP\Server.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Server:Make">
+        <MSBuild Projects="DLL\Etran\ServerTCP\Server.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ServerEtran">
+        <MSBuild Projects="DLL\Etran\ServerTCP Entran\ServerEtran.dproj"/>
+    </Target>
+    <Target Name="ServerEtran:Clean">
+        <MSBuild Projects="DLL\Etran\ServerTCP Entran\ServerEtran.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ServerEtran:Make">
+        <MSBuild Projects="DLL\Etran\ServerTCP Entran\ServerEtran.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Pass;Ctm_Tarif;EDO;Dictionary;lzh;Etran;EtranECP;FactFilesLoad;Search;Reports;LisAdd;FormsAdd;User;GetETRAN3;TestETRAN;Lis;ECPEtranServer;Update;Server;ServerEtran"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Pass:Clean;Ctm_Tarif:Clean;EDO:Clean;Dictionary:Clean;lzh:Clean;Etran:Clean;EtranECP:Clean;FactFilesLoad:Clean;Search:Clean;Reports:Clean;LisAdd:Clean;FormsAdd:Clean;User:Clean;GetETRAN3:Clean;TestETRAN:Clean;Lis:Clean;ECPEtranServer:Clean;Update:Clean;Server:Clean;ServerEtran:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Pass:Make;Ctm_Tarif:Make;EDO:Make;Dictionary:Make;lzh:Make;Etran:Make;EtranECP:Make;FactFilesLoad:Make;Search:Make;Reports:Make;LisAdd:Make;FormsAdd:Make;User:Make;GetETRAN3:Make;TestETRAN:Make;Lis:Make;ECPEtranServer:Make;Update:Make;Server:Make;ServerEtran:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

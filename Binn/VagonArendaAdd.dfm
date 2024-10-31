@@ -1,0 +1,1711 @@
+object fmVagonArendaAdd: TfmVagonArendaAdd
+  Left = 0
+  Top = 0
+  Caption = #1040#1090#1088#1080#1073#1091#1090#1099' '#1072#1088#1077#1085#1076#1099' '#1074#1072#1075#1086#1085#1072
+  ClientHeight = 581
+  ClientWidth = 572
+  Color = clBtnFace
+  Constraints.MinHeight = 400
+  Constraints.MinWidth = 405
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OnClose = FormClose
+  OnDestroy = FormDestroy
+  TextHeight = 13
+  object Splitter2: TSplitter
+    Left = 0
+    Top = 337
+    Width = 572
+    Height = 3
+    Cursor = crVSplit
+    Align = alTop
+    Color = 8421631
+    ParentColor = False
+    ExplicitLeft = 394
+    ExplicitTop = 377
+    ExplicitWidth = 116
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 544
+    Width = 572
+    Height = 37
+    Align = alBottom
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    TabOrder = 0
+    DesignSize = (
+      572
+      37)
+    object cxButton1: TcxButton
+      Left = 409
+      Top = 6
+      Width = 76
+      Height = 25
+      Anchors = [akTop, akRight]
+      Caption = #1054#1050
+      LookAndFeel.Kind = lfOffice11
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.SkinName = ''
+      ModalResult = 1
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        424D360800000000000036000000280000002000000010000000010020000000
+        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC0000CC00FF006600FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00B2B2B2FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC0000CC00FF009900FF009900FF006600FFD8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00B2B2B2FF999999FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0000CC
+        00FF009900FF009900FF009900FF009900FF006600FFD8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2
+        B2FF999999FF999999FF999999FF999999FF808080FFD8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0000CC00FF0099
+        00FF009900FF009900FF009900FF009900FF009900FF006600FFD8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2B2FF9999
+        99FF999999FF999999FF999999FF999999FF999999FF808080FFD8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0000CC00FF0099
+        00FF009900FF006600FF00CC00FF009900FF009900FF009900FF006600FFD8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2B2FF9999
+        99FF999999FF808080FFB2B2B2FF999999FF999999FF999999FF808080FFD8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0000CC00FF0099
+        00FF006600FFD8E9EC00D8E9EC0000CC00FF009900FF009900FF009900FF0066
+        00FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2B2FF9999
+        99FF808080FFD8E9EC00D8E9EC00B2B2B2FF999999FF999999FF999999FF8080
+        80FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0000CC00FF0066
+        00FFD8E9EC00D8E9EC00D8E9EC00D8E9EC0000CC00FF009900FF009900FF0099
+        00FF006600FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2B2FF8080
+        80FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2B2FF999999FF999999FF9999
+        99FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0000CC00FF009900FF0099
+        00FF009900FF006600FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2B2FF999999FF9999
+        99FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0000CC00FF0099
+        00FF009900FF009900FF006600FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2B2FF9999
+        99FF999999FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0000CC
+        00FF009900FF009900FF006600FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2
+        B2FF999999FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC0000CC00FF009900FF006600FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00B2B2B2FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC0000CC00FF006600FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00B2B2B2FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00}
+      OptionsImage.NumGlyphs = 2
+      TabOrder = 0
+      OnClick = cxButton1Click
+    end
+    object cxButton3: TcxButton
+      Left = 491
+      Top = 6
+      Width = 76
+      Height = 25
+      Anchors = [akTop, akRight]
+      Cancel = True
+      Caption = 'Cancel'
+      LookAndFeel.Kind = lfOffice11
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.SkinName = ''
+      ModalResult = 2
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        424D360800000000000036000000280000002000000010000000010020000000
+        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC000000FFFF0000
+        99FF000099FF000099FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC000000
+        FFFF000099FF000099FF000099FFD8E9EC00D8E9EC00D8E9EC00B2B2B2FF8080
+        80FF808080FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2
+        B2FF808080FF808080FF808080FFD8E9EC00D8E9EC00D8E9EC000000FFFF0000
+        CCFF0000CCFF0000CCFF000099FFD8E9EC00D8E9EC00D8E9EC000000FFFF0000
+        CCFF0000CCFF0000CCFF000099FFD8E9EC00D8E9EC00D8E9EC00B2B2B2FF9999
+        99FF999999FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00B2B2B2FF9999
+        99FF999999FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC000000
+        FFFF0000CCFF0000CCFF0000CCFF000099FFD8E9EC000000FFFF0000CCFF0000
+        CCFF0000CCFF000099FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2
+        B2FF999999FF999999FF999999FF808080FFD8E9EC00B2B2B2FF999999FF9999
+        99FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC000000FFFF0000CCFF0000CCFF0000CCFF000099FF0000CCFF0000CCFF0000
+        CCFF000099FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00B2B2B2FF999999FF999999FF999999FF808080FF999999FF999999FF9999
+        99FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC000000FFFF0000CCFF0000CCFF0000CCFF0000CCFF0000CCFF0000
+        99FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00B2B2B2FF999999FF999999FF999999FF999999FF999999FF8080
+        80FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC000000FFFF0000CCFF0000CCFF0000CCFF000099FFD8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00B2B2B2FF999999FF999999FF999999FF808080FFD8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC000000FFFF0000CCFF0000CCFF0000CCFF0000CCFF0000CCFF0000
+        99FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00B2B2B2FF999999FF999999FF999999FF999999FF999999FF8080
+        80FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC000000FFFF0000CCFF0000CCFF0000CCFF000099FF0000CCFF0000CCFF0000
+        CCFF000099FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00B2B2B2FF999999FF999999FF999999FF808080FF999999FF999999FF9999
+        99FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC000000
+        FFFF0000CCFF0000CCFF0000CCFF000099FFD8E9EC000000FFFF0000CCFF0000
+        CCFF0000CCFF000099FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2
+        B2FF999999FF999999FF999999FF808080FFD8E9EC00B2B2B2FF999999FF9999
+        99FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC000000FFFF0000
+        CCFF0000CCFF0000CCFF000099FFD8E9EC00D8E9EC00D8E9EC000000FFFF0000
+        CCFF0000CCFF0000CCFF000099FFD8E9EC00D8E9EC00D8E9EC00B2B2B2FF9999
+        99FF999999FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00B2B2B2FF9999
+        99FF999999FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC000000FFFF0000
+        FFFF0000FFFF0000FFFFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC000000
+        FFFF0000FFFF0000FFFF0000FFFFD8E9EC00D8E9EC00D8E9EC00B2B2B2FFB2B2
+        B2FFB2B2B2FFB2B2B2FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2
+        B2FFB2B2B2FFB2B2B2FFB2B2B2FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00}
+      OptionsImage.NumGlyphs = 2
+      TabOrder = 1
+    end
+  end
+  object Panel4: TPanel
+    Left = 0
+    Top = 0
+    Width = 572
+    Height = 337
+    Align = alTop
+    Constraints.MinHeight = 320
+    TabOrder = 1
+    object Splitter1: TSplitter
+      Left = 168
+      Top = 1
+      Height = 335
+      Align = alRight
+      Color = 8421631
+      ParentColor = False
+      ExplicitLeft = 1
+      ExplicitHeight = 395
+    end
+    object GroupBox1: TGroupBox
+      Left = 1
+      Top = 1
+      Width = 167
+      Height = 335
+      Align = alClient
+      Caption = #1053#1086#1084#1077#1088#1072' '#1074#1072#1075#1086#1085#1086#1074
+      TabOrder = 0
+      object cxMemo1: TcxMemo
+        Left = 2
+        Top = 41
+        Align = alClient
+        ParentFont = False
+        PopupMenu = dxBarPopupMenu1
+        Style.Font.Charset = DEFAULT_CHARSET
+        Style.Font.Color = clWindowText
+        Style.Font.Height = -12
+        Style.Font.Name = 'Tahoma'
+        Style.Font.Style = []
+        Style.LookAndFeel.Kind = lfUltraFlat
+        Style.LookAndFeel.NativeStyle = False
+        Style.LookAndFeel.ScrollbarMode = sbmClassic
+        Style.LookAndFeel.SkinName = 'Coffee'
+        Style.Shadow = False
+        Style.IsFontAssigned = True
+        StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+        StyleDisabled.LookAndFeel.NativeStyle = False
+        StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+        StyleFocused.LookAndFeel.Kind = lfUltraFlat
+        StyleFocused.LookAndFeel.NativeStyle = False
+        StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleFocused.LookAndFeel.SkinName = 'Coffee'
+        StyleHot.LookAndFeel.Kind = lfUltraFlat
+        StyleHot.LookAndFeel.NativeStyle = False
+        StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleHot.LookAndFeel.SkinName = 'Coffee'
+        TabOrder = 0
+        Height = 292
+        Width = 163
+      end
+      object dxBarDockControl1: TdxBarDockControl
+        Left = 2
+        Top = 15
+        Width = 163
+        Height = 26
+        Align = dalTop
+        BarManager = dxBarManager1
+      end
+    end
+    object Panel3: TPanel
+      Left = 171
+      Top = 1
+      Width = 400
+      Height = 335
+      Align = alRight
+      BevelOuter = bvNone
+      Constraints.MinWidth = 400
+      TabOrder = 1
+      object GroupBox2: TGroupBox
+        Left = 0
+        Top = 222
+        Width = 400
+        Height = 113
+        Align = alClient
+        Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
+        TabOrder = 0
+        object cxMemo2: TcxMemo
+          Tag = 1014
+          Left = 2
+          Top = 15
+          Align = alClient
+          PopupMenu = dxBarPopupMenu1
+          Style.LookAndFeel.Kind = lfUltraFlat
+          Style.LookAndFeel.NativeStyle = False
+          Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
+          Style.Shadow = False
+          StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+          StyleDisabled.LookAndFeel.NativeStyle = False
+          StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+          StyleFocused.LookAndFeel.Kind = lfUltraFlat
+          StyleFocused.LookAndFeel.NativeStyle = False
+          StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
+          StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleHot.LookAndFeel.NativeStyle = False
+          StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
+          TabOrder = 0
+          ExplicitWidth = 275
+          Height = 96
+          Width = 381
+        end
+        object cxCheckBox7: TcxCheckBox
+          Tag = 1014
+          Left = 383
+          Top = 15
+          Align = alRight
+          Properties.OnChange = cxCheckBox1PropertiesEditValueChanged
+          Style.LookAndFeel.Kind = lfUltraFlat
+          Style.LookAndFeel.NativeStyle = False
+          Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
+          StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+          StyleDisabled.LookAndFeel.NativeStyle = False
+          StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+          StyleFocused.LookAndFeel.Kind = lfUltraFlat
+          StyleFocused.LookAndFeel.NativeStyle = False
+          StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
+          StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleHot.LookAndFeel.NativeStyle = False
+          StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
+          TabOrder = 1
+          Visible = False
+          ExplicitLeft = 277
+        end
+      end
+      object Panel5: TPanel
+        Left = 0
+        Top = 82
+        Width = 400
+        Height = 57
+        Align = alTop
+        BevelInner = bvRaised
+        BevelOuter = bvLowered
+        TabOrder = 1
+        DesignSize = (
+          400
+          57)
+        object Label3: TLabel
+          Left = 7
+          Top = 13
+          Width = 131
+          Height = 13
+          Caption = #1040#1088#1077#1085#1076#1086#1076#1072#1090#1077#1083#1100'..............'
+        end
+        object Label9: TLabel
+          Left = 6
+          Top = 35
+          Width = 137
+          Height = 13
+          Caption = #8470' '#1044#1086#1075#1086#1074#1086#1088#1072'..................'
+        end
+        object cxTextEdit1: TcxTextEdit
+          Left = 104
+          Top = 29
+          Anchors = [akLeft, akTop, akRight]
+          ParentColor = True
+          Properties.ReadOnly = True
+          Style.LookAndFeel.Kind = lfUltraFlat
+          Style.LookAndFeel.NativeStyle = False
+          Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
+          Style.Shadow = False
+          StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+          StyleDisabled.LookAndFeel.NativeStyle = False
+          StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+          StyleFocused.LookAndFeel.Kind = lfUltraFlat
+          StyleFocused.LookAndFeel.NativeStyle = False
+          StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
+          StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleHot.LookAndFeel.NativeStyle = False
+          StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
+          TabOrder = 0
+          Width = 274
+        end
+        object cxButtonEdit1: TcxButtonEdit
+          Left = 104
+          Top = 6
+          Anchors = [akLeft, akTop, akRight]
+          Properties.Buttons = <
+            item
+              Default = True
+              Kind = bkEllipsis
+              Visible = False
+            end
+            item
+              Glyph.SourceDPI = 96
+              Glyph.Data = {
+                424D360400000000000036000000280000001000000010000000010020000000
+                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000808080FF0000
+                00FF000000FF000000FF000000FF000000FF000000FF808080FFC0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FFC0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FF000000FFC0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FFC0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FF808080FF0000
+                00FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000808080FF0000
+                00FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FF808080FF8080
+                80FF000000FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000
+                00FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0C000FFFFFFFF000000FF8080
+                80FF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000000000FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0C000FFFFFFFF0000
+                00FF808080FF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0C000FFFF
+                FFFF000000FF808080FF808080FF808080FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0
+                C000FFFFFFFF000000FF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0C000FFFF
+                FFFFC0C0C000FFFFFFFF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0
+                C000FFFFFFFFC0C0C000C0C0C000000000FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000808080FF000000FF0000
+                00FF000000FF000000FF808080FF808080FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+              Kind = bkGlyph
+              Visible = False
+            end>
+          Properties.ReadOnly = True
+          Style.Color = clBtnFace
+          Style.LookAndFeel.Kind = lfUltraFlat
+          Style.LookAndFeel.NativeStyle = False
+          Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
+          Style.Shadow = False
+          StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+          StyleDisabled.LookAndFeel.NativeStyle = False
+          StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+          StyleFocused.LookAndFeel.Kind = lfUltraFlat
+          StyleFocused.LookAndFeel.NativeStyle = False
+          StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
+          StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleHot.LookAndFeel.NativeStyle = False
+          StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
+          TabOrder = 1
+          Width = 274
+        end
+      end
+      object GroupBox3: TGroupBox
+        Left = 0
+        Top = 0
+        Width = 400
+        Height = 41
+        Align = alTop
+        Caption = #1040#1082#1090' '#1074#1074#1086#1076#1072
+        TabOrder = 2
+        DesignSize = (
+          400
+          41)
+        object cxButtonEdit2: TcxButtonEdit
+          Tag = 1001
+          Left = 6
+          Top = 12
+          Anchors = [akLeft, akTop, akRight]
+          Properties.Buttons = <
+            item
+              Default = True
+              Kind = bkEllipsis
+            end
+            item
+              Glyph.SourceDPI = 96
+              Glyph.Data = {
+                424D360400000000000036000000280000001000000010000000010020000000
+                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000808080FF0000
+                00FF000000FF000000FF000000FF000000FF000000FF808080FFC0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FFC0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FF000000FFC0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FFC0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FF808080FF0000
+                00FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000808080FF0000
+                00FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FF808080FF8080
+                80FF000000FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000
+                00FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0C000FFFFFFFF000000FF8080
+                80FF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000000000FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0C000FFFFFFFF0000
+                00FF808080FF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0C000FFFF
+                FFFF000000FF808080FF808080FF808080FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0
+                C000FFFFFFFF000000FF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0C000FFFF
+                FFFFC0C0C000FFFFFFFF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0
+                C000FFFFFFFFC0C0C000C0C0C000000000FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000808080FF000000FF0000
+                00FF000000FF000000FF808080FF808080FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+              Kind = bkGlyph
+            end>
+          Properties.ReadOnly = True
+          Properties.OnButtonClick = cxButtonEdit2PropertiesButtonClick
+          Style.Color = clWindow
+          Style.LookAndFeel.Kind = lfUltraFlat
+          Style.LookAndFeel.NativeStyle = False
+          Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
+          Style.Shadow = False
+          StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+          StyleDisabled.LookAndFeel.NativeStyle = False
+          StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+          StyleFocused.LookAndFeel.Kind = lfUltraFlat
+          StyleFocused.LookAndFeel.NativeStyle = False
+          StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
+          StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleHot.LookAndFeel.NativeStyle = False
+          StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
+          TabOrder = 0
+          Width = 262
+        end
+        object cxDateEdit5: TcxDateEdit
+          Left = 271
+          Top = 12
+          Hint = #1042#1074#1077#1076#1080#1090#1077' '#1082#1086#1076#1086#1074#1086#1077' '#1089#1083#1086#1074#1086' '#1076#1083#1103' '#1075#1088#1091#1087#1087#1086#1074#1086#1075#1086' '#1080#1079#1084#1077#1085#1077#1085#1080#1103' '#1072#1082#1090#1072' '#1074#1074#1086#1076#1072
+          Anchors = [akTop, akRight]
+          Properties.ReadOnly = True
+          Style.Color = clBtnFace
+          Style.LookAndFeel.Kind = lfUltraFlat
+          Style.LookAndFeel.NativeStyle = False
+          Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
+          Style.Shadow = False
+          StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+          StyleDisabled.LookAndFeel.NativeStyle = False
+          StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+          StyleFocused.LookAndFeel.Kind = lfUltraFlat
+          StyleFocused.LookAndFeel.NativeStyle = False
+          StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
+          StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleHot.LookAndFeel.NativeStyle = False
+          StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
+          TabOrder = 1
+          OnKeyDown = cxDateEdit5KeyDown
+          Width = 106
+        end
+        object cxCheckBox8: TcxCheckBox
+          Tag = 1001
+          Left = 383
+          Top = 15
+          Align = alRight
+          Properties.OnChange = cxCheckBox1PropertiesEditValueChanged
+          Style.LookAndFeel.Kind = lfUltraFlat
+          Style.LookAndFeel.NativeStyle = False
+          Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
+          StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+          StyleDisabled.LookAndFeel.NativeStyle = False
+          StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+          StyleFocused.LookAndFeel.Kind = lfUltraFlat
+          StyleFocused.LookAndFeel.NativeStyle = False
+          StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
+          StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleHot.LookAndFeel.NativeStyle = False
+          StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
+          TabOrder = 2
+          Visible = False
+          ExplicitLeft = 277
+        end
+      end
+      object GroupBox4: TGroupBox
+        Left = 0
+        Top = 41
+        Width = 400
+        Height = 41
+        Align = alTop
+        Caption = #1040#1082#1090' '#1074#1099#1074#1086#1076#1072
+        TabOrder = 3
+        DesignSize = (
+          400
+          41)
+        object cxButtonEdit3: TcxButtonEdit
+          Tag = 1002
+          Left = 6
+          Top = 13
+          Anchors = [akLeft, akTop, akRight]
+          Properties.Buttons = <
+            item
+              Default = True
+              Kind = bkEllipsis
+            end
+            item
+              Glyph.SourceDPI = 96
+              Glyph.Data = {
+                424D360400000000000036000000280000001000000010000000010020000000
+                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000808080FF0000
+                00FF000000FF000000FF000000FF000000FF000000FF808080FFC0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FFC0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FF000000FFC0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FFC0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FF808080FF0000
+                00FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000808080FF0000
+                00FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FF808080FF8080
+                80FF000000FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000
+                00FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0C000FFFFFFFF000000FF8080
+                80FF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000000000FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0C000FFFFFFFF0000
+                00FF808080FF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0C000FFFF
+                FFFF000000FF808080FF808080FF808080FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0
+                C000FFFFFFFF000000FF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0C000FFFF
+                FFFFC0C0C000FFFFFFFF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0
+                C000FFFFFFFFC0C0C000C0C0C000000000FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000808080FF000000FF0000
+                00FF000000FF000000FF808080FF808080FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+              Kind = bkGlyph
+            end>
+          Properties.ReadOnly = True
+          Properties.OnButtonClick = cxButtonEdit3PropertiesButtonClick
+          Style.Color = clWindow
+          Style.LookAndFeel.Kind = lfUltraFlat
+          Style.LookAndFeel.NativeStyle = False
+          Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
+          Style.Shadow = False
+          StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+          StyleDisabled.LookAndFeel.NativeStyle = False
+          StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+          StyleFocused.LookAndFeel.Kind = lfUltraFlat
+          StyleFocused.LookAndFeel.NativeStyle = False
+          StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
+          StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleHot.LookAndFeel.NativeStyle = False
+          StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
+          TabOrder = 0
+          Width = 262
+        end
+        object cxDateEdit6: TcxDateEdit
+          Left = 271
+          Top = 13
+          Anchors = [akTop, akRight]
+          Properties.ReadOnly = True
+          Style.Color = clBtnFace
+          Style.LookAndFeel.Kind = lfUltraFlat
+          Style.LookAndFeel.NativeStyle = False
+          Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
+          Style.Shadow = False
+          StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+          StyleDisabled.LookAndFeel.NativeStyle = False
+          StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+          StyleFocused.LookAndFeel.Kind = lfUltraFlat
+          StyleFocused.LookAndFeel.NativeStyle = False
+          StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
+          StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleHot.LookAndFeel.NativeStyle = False
+          StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
+          TabOrder = 1
+          Width = 106
+        end
+        object cxCheckBox9: TcxCheckBox
+          Tag = 1002
+          Left = 383
+          Top = 15
+          Align = alRight
+          Properties.OnChange = cxCheckBox1PropertiesEditValueChanged
+          Style.LookAndFeel.Kind = lfUltraFlat
+          Style.LookAndFeel.NativeStyle = False
+          Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
+          StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+          StyleDisabled.LookAndFeel.NativeStyle = False
+          StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+          StyleFocused.LookAndFeel.Kind = lfUltraFlat
+          StyleFocused.LookAndFeel.NativeStyle = False
+          StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
+          StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleHot.LookAndFeel.NativeStyle = False
+          StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
+          TabOrder = 2
+          Visible = False
+          ExplicitLeft = 277
+        end
+      end
+      object GroupBox5: TGroupBox
+        Left = 0
+        Top = 139
+        Width = 400
+        Height = 83
+        Align = alTop
+        TabOrder = 4
+        DesignSize = (
+          400
+          83)
+        object Label1: TLabel
+          Left = 7
+          Top = 12
+          Width = 188
+          Height = 13
+          Caption = #1057#1090#1072#1085#1094#1080#1103' '#1074#1074#1086#1076#1072' ...........................'
+        end
+        object Label2: TLabel
+          Left = 7
+          Top = 37
+          Width = 196
+          Height = 13
+          Caption = #1057#1090#1072#1085#1094#1080#1103' '#1074#1099#1074#1086#1076#1072' ...........................'
+        end
+        object Label4: TLabel
+          Left = 6
+          Top = 61
+          Width = 297
+          Height = 13
+          Caption = #1041#1072#1083#1072#1085#1089#1086#1074#1072#1103' '#1089#1090#1086#1080#1084#1086#1089#1090#1100' '#1074#1072#1075#1086#1085#1072' '#1073#1077#1079' '#1053#1044#1057', '#1088#1091#1073' ..................'
+        end
+        object cxButtonEdit4: TcxButtonEdit
+          Tag = 1003
+          Left = 104
+          Top = 7
+          Anchors = [akLeft, akTop, akRight]
+          Properties.Buttons = <
+            item
+              Default = True
+              Kind = bkEllipsis
+            end
+            item
+              Glyph.SourceDPI = 96
+              Glyph.Data = {
+                424D360400000000000036000000280000001000000010000000010020000000
+                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000808080FF0000
+                00FF000000FF000000FF000000FF000000FF000000FF808080FFC0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FFC0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FF000000FFC0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FFC0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FF808080FF0000
+                00FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000808080FF0000
+                00FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FF808080FF8080
+                80FF000000FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000
+                00FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0C000FFFFFFFF000000FF8080
+                80FF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000000000FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0C000FFFFFFFF0000
+                00FF808080FF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0C000FFFF
+                FFFF000000FF808080FF808080FF808080FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0
+                C000FFFFFFFF000000FF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0C000FFFF
+                FFFFC0C0C000FFFFFFFF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0
+                C000FFFFFFFFC0C0C000C0C0C000000000FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000808080FF000000FF0000
+                00FF000000FF000000FF808080FF808080FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+              Kind = bkGlyph
+            end>
+          Properties.ReadOnly = True
+          Properties.OnButtonClick = cxButtonEdit4PropertiesButtonClick
+          Style.Color = clWindow
+          Style.LookAndFeel.Kind = lfUltraFlat
+          Style.LookAndFeel.NativeStyle = False
+          Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
+          Style.Shadow = False
+          StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+          StyleDisabled.LookAndFeel.NativeStyle = False
+          StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+          StyleFocused.LookAndFeel.Kind = lfUltraFlat
+          StyleFocused.LookAndFeel.NativeStyle = False
+          StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
+          StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleHot.LookAndFeel.NativeStyle = False
+          StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
+          TabOrder = 0
+          Width = 274
+        end
+        object cxCheckBox1: TcxCheckBox
+          Tag = 1003
+          Left = 377
+          Top = 8
+          Anchors = [akTop, akRight]
+          Properties.OnChange = cxCheckBox1PropertiesEditValueChanged
+          Style.LookAndFeel.Kind = lfUltraFlat
+          Style.LookAndFeel.NativeStyle = False
+          Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
+          StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+          StyleDisabled.LookAndFeel.NativeStyle = False
+          StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+          StyleFocused.LookAndFeel.Kind = lfUltraFlat
+          StyleFocused.LookAndFeel.NativeStyle = False
+          StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
+          StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleHot.LookAndFeel.NativeStyle = False
+          StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
+          TabOrder = 1
+          Visible = False
+        end
+        object cxButtonEdit5: TcxButtonEdit
+          Tag = 1004
+          Left = 104
+          Top = 31
+          Anchors = [akLeft, akTop, akRight]
+          Properties.Buttons = <
+            item
+              Default = True
+              Kind = bkEllipsis
+            end
+            item
+              Glyph.SourceDPI = 96
+              Glyph.Data = {
+                424D360400000000000036000000280000001000000010000000010020000000
+                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000808080FF0000
+                00FF000000FF000000FF000000FF000000FF000000FF808080FFC0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FFC0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FF000000FFC0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FFC0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FF808080FF0000
+                00FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000808080FF0000
+                00FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000000000FF808080FF8080
+                80FF000000FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000
+                00FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0C000FFFFFFFF000000FF8080
+                80FF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000000000FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0C000FFFFFFFF0000
+                00FF808080FF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0C000FFFF
+                FFFF000000FF808080FF808080FF808080FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0C000FFFFFFFFC0C0
+                C000FFFFFFFF000000FF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0C000FFFF
+                FFFFC0C0C000FFFFFFFF808080FF000000FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000000000FFC0C0C000FFFFFFFFC0C0
+                C000FFFFFFFFC0C0C000C0C0C000000000FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000808080FF000000FF0000
+                00FF000000FF000000FF808080FF808080FFC0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+                C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000}
+              Kind = bkGlyph
+            end>
+          Properties.ReadOnly = True
+          Properties.OnButtonClick = cxButtonEdit4PropertiesButtonClick
+          Style.Color = clWindow
+          Style.LookAndFeel.Kind = lfUltraFlat
+          Style.LookAndFeel.NativeStyle = False
+          Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
+          Style.Shadow = False
+          StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+          StyleDisabled.LookAndFeel.NativeStyle = False
+          StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+          StyleFocused.LookAndFeel.Kind = lfUltraFlat
+          StyleFocused.LookAndFeel.NativeStyle = False
+          StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
+          StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleHot.LookAndFeel.NativeStyle = False
+          StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
+          TabOrder = 2
+          Width = 274
+        end
+        object cxCheckBox2: TcxCheckBox
+          Tag = 1004
+          Left = 377
+          Top = 31
+          Anchors = [akTop, akRight]
+          Properties.OnChange = cxCheckBox1PropertiesEditValueChanged
+          Style.LookAndFeel.Kind = lfUltraFlat
+          Style.LookAndFeel.NativeStyle = False
+          Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
+          StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+          StyleDisabled.LookAndFeel.NativeStyle = False
+          StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+          StyleFocused.LookAndFeel.Kind = lfUltraFlat
+          StyleFocused.LookAndFeel.NativeStyle = False
+          StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
+          StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleHot.LookAndFeel.NativeStyle = False
+          StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
+          TabOrder = 3
+          Visible = False
+        end
+        object cxCheckBox3: TcxCheckBox
+          Tag = 1005
+          Left = 377
+          Top = 55
+          Anchors = [akTop, akRight]
+          Properties.OnChange = cxCheckBox1PropertiesEditValueChanged
+          Style.LookAndFeel.Kind = lfUltraFlat
+          Style.LookAndFeel.NativeStyle = False
+          Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
+          StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+          StyleDisabled.LookAndFeel.NativeStyle = False
+          StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+          StyleFocused.LookAndFeel.Kind = lfUltraFlat
+          StyleFocused.LookAndFeel.NativeStyle = False
+          StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
+          StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleHot.LookAndFeel.NativeStyle = False
+          StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
+          TabOrder = 4
+          Visible = False
+        end
+        object cxCurrencyEdit1: TcxCurrencyEdit
+          Tag = 1005
+          Left = 256
+          Top = 55
+          Anchors = [akLeft, akTop, akRight]
+          Properties.Alignment.Horz = taRightJustify
+          Properties.DisplayFormat = '#,##0.00'
+          Properties.UseDisplayFormatWhenEditing = True
+          Properties.UseLeftAlignmentOnEditing = False
+          Style.LookAndFeel.Kind = lfUltraFlat
+          Style.LookAndFeel.NativeStyle = False
+          Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
+          Style.Shadow = False
+          StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+          StyleDisabled.LookAndFeel.NativeStyle = False
+          StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+          StyleFocused.LookAndFeel.Kind = lfUltraFlat
+          StyleFocused.LookAndFeel.NativeStyle = False
+          StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
+          StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleHot.LookAndFeel.NativeStyle = False
+          StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
+          TabOrder = 5
+          Width = 122
+        end
+      end
+    end
+  end
+  object Panel6: TPanel
+    Left = 0
+    Top = 340
+    Width = 572
+    Height = 204
+    Align = alClient
+    Constraints.MinHeight = 150
+    TabOrder = 2
+    object PageControl1: TPageControl
+      Left = 1
+      Top = 1
+      Width = 570
+      Height = 202
+      ActivePage = TabSheet1
+      Align = alClient
+      TabOrder = 0
+      object TabSheet1: TTabSheet
+        Tag = 215
+        Caption = 'C'#1090#1072#1074#1082#1080' '#1072#1088#1077#1085#1076#1099
+        object cxGrid1: TcxGrid
+          Left = 0
+          Top = 0
+          Width = 562
+          Height = 174
+          Align = alClient
+          TabOrder = 0
+          LookAndFeel.Kind = lfUltraFlat
+          LookAndFeel.NativeStyle = False
+          LookAndFeel.ScrollbarMode = sbmClassic
+          LookAndFeel.SkinName = 'Office2007Black'
+          object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
+            PopupMenu = dxBarPopupMenu2
+            OnDblClick = dxBarButton5Click
+            OnKeyPress = cxGrid1DBBandedTableView1KeyPress
+            Navigator.Buttons.CustomButtons = <>
+            ScrollbarAnnotations.CustomAnnotations = <>
+            OnFocusedItemChanged = cxGrid1DBBandedTableView1FocusedItemChanged
+            DataController.DataSource = DS_Rate
+            DataController.Filter.OnChanged = cxGrid1DBBandedTableView1DataControllerFilterChanged
+            DataController.Summary.DefaultGroupSummaryItems = <>
+            DataController.Summary.FooterSummaryItems = <
+              item
+                Kind = skSum
+                Column = cxGrid1DBBandedTableView1rate_val_nds
+              end>
+            DataController.Summary.SummaryGroups = <>
+            OptionsCustomize.ColumnsQuickCustomization = True
+            OptionsData.Deleting = False
+            OptionsData.DeletingConfirmation = False
+            OptionsData.Editing = False
+            OptionsData.Inserting = False
+            OptionsView.Footer = True
+            OptionsView.GridLineColor = clGray
+            OptionsView.GroupByBox = False
+            OptionsView.HeaderFilterButtonShowMode = fbmButton
+            OptionsView.HeaderHeight = 35
+            OptionsView.BandHeaders = False
+            Styles.Content = fmMain.cxStyle_ColorWhite
+            OnCustomDrawColumnHeader = cxGrid1DBBandedTableView1CustomDrawColumnHeader
+            OnCustomDrawFooterCell = cxGrid1DBBandedTableView1CustomDrawColumnHeader
+            Bands = <
+              item
+              end>
+            object cxGrid1DBBandedTableView1vagon_arenda_rate_id: TcxGridDBBandedColumn
+              DataBinding.FieldName = 'vagon_arenda_rate_id'
+              Visible = False
+              HeaderAlignmentVert = vaTop
+              Width = 70
+              Position.BandIndex = -1
+              Position.ColIndex = -1
+              Position.RowIndex = -1
+            end
+            object cxGrid1DBBandedTableView1vagon_arenda_id: TcxGridDBBandedColumn
+              DataBinding.FieldName = 'vagon_arenda_id'
+              Visible = False
+              HeaderAlignmentVert = vaTop
+              Width = 70
+              Position.BandIndex = -1
+              Position.ColIndex = -1
+              Position.RowIndex = -1
+            end
+            object cxGrid1DBBandedTableView1dt_begin: TcxGridDBBandedColumn
+              Caption = #1044#1072#1090#1072' '#1085#1072#1095#1072#1083#1072
+              DataBinding.FieldName = 'dt_begin'
+              HeaderAlignmentVert = vaTop
+              Width = 70
+              Position.BandIndex = 0
+              Position.ColIndex = 0
+              Position.RowIndex = 0
+            end
+            object cxGrid1DBBandedTableView1dt_end: TcxGridDBBandedColumn
+              Caption = #1044#1072#1090#1072' '#1086#1082#1086#1085#1095#1072#1085#1080#1103
+              DataBinding.FieldName = 'dt_end'
+              HeaderAlignmentVert = vaTop
+              Width = 70
+              Position.BandIndex = 0
+              Position.ColIndex = 1
+              Position.RowIndex = 0
+            end
+            object cxGrid1DBBandedTableView1rate_val: TcxGridDBBandedColumn
+              Caption = #1057#1090#1072#1074#1082#1072' '#1073#1077#1079' '#1053#1044#1057
+              DataBinding.FieldName = 'rate_val'
+              PropertiesClassName = 'TcxCurrencyEditProperties'
+              Properties.DisplayFormat = '0.00;-0.00'
+              HeaderAlignmentVert = vaTop
+              Width = 92
+              Position.BandIndex = 0
+              Position.ColIndex = 2
+              Position.RowIndex = 0
+            end
+            object cxGrid1DBBandedTableView1rate_val_nds: TcxGridDBBandedColumn
+              Caption = #1057#1090#1072#1074#1082#1072' '#1089' '#1053#1044#1057
+              DataBinding.FieldName = 'rate_val_nds'
+              PropertiesClassName = 'TcxCurrencyEditProperties'
+              Properties.DisplayFormat = '0.00;-0.00'
+              HeaderAlignmentVert = vaTop
+              Width = 88
+              Position.BandIndex = 0
+              Position.ColIndex = 3
+              Position.RowIndex = 0
+            end
+            object cxGrid1DBBandedTableView1currency_id: TcxGridDBBandedColumn
+              DataBinding.FieldName = 'currency_id'
+              Visible = False
+              HeaderAlignmentVert = vaTop
+              Width = 70
+              Position.BandIndex = -1
+              Position.ColIndex = -1
+              Position.RowIndex = -1
+            end
+            object cxGrid1DBBandedTableView1currency_nm: TcxGridDBBandedColumn
+              Caption = #1042#1072#1083#1102#1090#1072
+              DataBinding.FieldName = 'currency_nm'
+              HeaderAlignmentVert = vaTop
+              Width = 54
+              Position.BandIndex = 0
+              Position.ColIndex = 4
+              Position.RowIndex = 0
+            end
+            object cxGrid1DBBandedTableView1type_rate_id: TcxGridDBBandedColumn
+              DataBinding.FieldName = 'type_rate_id'
+              Visible = False
+              HeaderAlignmentVert = vaTop
+              Width = 70
+              Position.BandIndex = -1
+              Position.ColIndex = -1
+              Position.RowIndex = -1
+            end
+            object cxGrid1DBBandedTableView1type_rate_nm: TcxGridDBBandedColumn
+              Caption = #1045#1076'. '#1080#1079#1084'.'
+              DataBinding.FieldName = 'type_rate_nm'
+              HeaderAlignmentVert = vaTop
+              Width = 62
+              Position.BandIndex = 0
+              Position.ColIndex = 5
+              Position.RowIndex = 0
+            end
+            object cxGrid1DBBandedTableView1type_nds_id: TcxGridDBBandedColumn
+              DataBinding.FieldName = 'type_nds_id'
+              Visible = False
+              HeaderAlignmentVert = vaTop
+              Width = 70
+              Position.BandIndex = -1
+              Position.ColIndex = -1
+              Position.RowIndex = -1
+            end
+            object cxGrid1DBBandedTableView1type_nds_nm: TcxGridDBBandedColumn
+              Caption = #1053#1044#1057
+              DataBinding.FieldName = 'type_nds_nm'
+              HeaderAlignmentVert = vaTop
+              Width = 49
+              Position.BandIndex = 0
+              Position.ColIndex = 6
+              Position.RowIndex = 0
+            end
+            object cxGrid1DBBandedTableView1vagon_id: TcxGridDBBandedColumn
+              DataBinding.FieldName = 'vagon_id'
+              Visible = False
+              HeaderAlignmentVert = vaTop
+              Width = 70
+              Position.BandIndex = -1
+              Position.ColIndex = -1
+              Position.RowIndex = -1
+            end
+            object cxGrid1DBBandedTableView1dt_diff: TcxGridDBBandedColumn
+              Caption = #1044#1085#1077#1081' '#1072#1088#1077#1085#1076#1099', '#1089#1091#1090'.'
+              DataBinding.FieldName = 'dt_diff'
+              HeaderAlignmentVert = vaTop
+              Width = 70
+              Position.BandIndex = 0
+              Position.ColIndex = 7
+              Position.RowIndex = 0
+            end
+          end
+          object cxGrid1Level1: TcxGridLevel
+            GridView = cxGrid1DBBandedTableView1
+          end
+        end
+      end
+    end
+  end
+  object cxPropertiesStore1: TcxPropertiesStore
+    Components = <
+      item
+        Component = Owner
+        Properties.Strings = (
+          'Height'
+          'Left'
+          'Top'
+          'Width')
+      end>
+    StorageName = '\Software\LIS1\VagonArendaAdd'
+    StorageType = stRegistry
+    Left = 54
+    Top = 53
+  end
+  object dxBarManager1: TdxBarManager
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Categories.Strings = (
+      'Default'
+      'Rate')
+    Categories.ItemsVisibles = (
+      2
+      2)
+    Categories.Visibles = (
+      True
+      True)
+    ImageOptions.Images = cxImageList1
+    PopupMenuLinks = <>
+    Style = bmsOffice11
+    UseSystemFont = True
+    Left = 54
+    Top = 100
+    PixelsPerInch = 96
+    object dxBarManager1Bar1: TdxBar
+      Caption = 'Custom 1'
+      CaptionButtons = <>
+      DockControl = dxBarDockControl1
+      DockedDockControl = dxBarDockControl1
+      DockedLeft = 0
+      DockedTop = 0
+      FloatLeft = 406
+      FloatTop = 8
+      FloatClientWidth = 0
+      FloatClientHeight = 0
+      ItemLinks = <
+        item
+          Visible = True
+          ItemName = 'dxBarButton1'
+        end
+        item
+          BeginGroup = True
+          Visible = True
+          ItemName = 'dxBarButton2'
+        end
+        item
+          BeginGroup = True
+          Visible = True
+          ItemName = 'dxBarButton3'
+        end>
+      OneOnRow = True
+      Row = 0
+      ShowMark = False
+      UseOwnFont = False
+      Visible = True
+      WholeRow = True
+    end
+    object dxBarButton1: TdxBarButton
+      Caption = #1044#1086#1073#1072#1074#1080#1090#1100'...'
+      Category = 0
+      Hint = #1044#1086#1073#1072#1074#1080#1090#1100
+      Visible = ivAlways
+      ImageIndex = 1
+      OnClick = dxBarButton1Click
+    end
+    object dxBarButton2: TdxBarButton
+      Caption = #1059#1076#1072#1083#1080#1090#1100
+      Category = 0
+      Hint = #1059#1076#1072#1083#1080#1090#1100
+      Visible = ivAlways
+      ImageIndex = 2
+      OnClick = dxBarButton2Click
+    end
+    object dxBarButton3: TdxBarButton
+      Caption = #1054#1095#1080#1089#1090#1080#1090#1100' '#1089#1087#1080#1089#1086#1082
+      Category = 0
+      Hint = #1054#1095#1080#1089#1090#1080#1090#1100' '#1089#1087#1080#1089#1086#1082
+      Visible = ivAlways
+      ImageIndex = 0
+      OnClick = dxBarButton3Click
+    end
+    object dxBarButton7: TdxBarButton
+      Caption = 'New Button'
+      Category = 0
+      Hint = 'New Button'
+      Visible = ivAlways
+    end
+    object dxBarButton4: TdxBarButton
+      Caption = #1044#1086#1073#1072#1074#1080#1090#1100'...'
+      Category = 1
+      Hint = #1044#1086#1073#1072#1074#1080#1090#1100
+      Visible = ivAlways
+      ImageIndex = 3
+      OnClick = dxBarButton4Click
+    end
+    object dxBarButton5: TdxBarButton
+      Caption = #1048#1079#1084#1077#1085#1080#1090#1100'...'
+      Category = 1
+      Hint = #1048#1079#1084#1077#1085#1080#1090#1100
+      Visible = ivAlways
+      ImageIndex = 4
+      OnClick = dxBarButton5Click
+    end
+    object dxBarButton6: TdxBarButton
+      Caption = #1059#1076#1072#1083#1080#1090#1100'...'
+      Category = 1
+      Hint = #1059#1076#1072#1083#1080#1090#1100
+      Visible = ivAlways
+      ImageIndex = 5
+      OnClick = dxBarButton6Click
+    end
+  end
+  object dxBarPopupMenu1: TdxBarPopupMenu
+    BarManager = dxBarManager1
+    ItemLinks = <
+      item
+        Visible = True
+        ItemName = 'dxBarButton1'
+      end>
+    UseOwnFont = False
+    Left = 51
+    Top = 225
+    PixelsPerInch = 96
+  end
+  object cxImageList1: TcxImageList
+    SourceDPI = 96
+    FormatVersion = 1
+    DesignInfo = 10813491
+    ImageInfo = <
+      item
+        Image.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000999897A8A6A09CCC6B584ACC735F50CC6E5A4BCC000000CC000000CC0000
+          00CC000000E7000000FF000000FF000000FF000000F00000000000000000C9C2
+          BEE49E7F6AFFA38875FFCBAD9AFFCCAF9BFFC7B3A4FFAA9586FF634935FFB4AD
+          A8E724242427000000000000000000000000000000000000000000000000B08F
+          7BF0D9C3B6FFD5BDADFFDFCCC0FFEEE2DBFFFCF9F7FFAA9586FFA79181FF6349
+          35FFB2ABA6E41F1F1F210000000000000000000000000000000000000000B399
+          87E1F4ECE7FFF1E7E1FFF7F1EEFFFDFAF9FFF9F5F2FFFFFFFFFFAA9586FFA791
+          81FF634935FFB0A9A4E11C1C1C1E00000000000000000000000000000000B196
+          84E1FBFBF9FFFFFFFFFFFDFDFCFFF6EFEBFFF0E5DEFFEFE2DBFFFFFFFFFFAA95
+          86FFA79181FF634935FFADA6A2DE1919191B000000000000000000000000CEC9
+          C7E1C9AA96FFFFFFFFFFFFFFFFFFFCFAF9FFF6EFEBFFF0E5DEFFEFE2DBFFFFFF
+          FFFFAA9586FFA79181FF634935FFA49D99D20000000000000000000000000000
+          0000827E7B90C9AA96FFFFFFFFFFFFFFFFFFFCFAF9FFF6EFEBFFF0E5DEFFEFE2
+          DBFFFFFFFFFFAA9586FFA79181FF604633F60000000000000000000000000000
+          000000000000827E7B90C9AA96FFFFFFFFFFFFFFFFFFFCFAF9FFF6EFEBFFF0E5
+          DEFFEFE2DBFFFFFFFFFFAA9586FF7A5E4AFF0000000000000000000000000000
+          0000000000000000000088848096C9AA96FFFFFFFFFFFFFFFFFFFCFAF9FFF6EF
+          EBFFF0E5DEFFEFE2DBFFFFFFFFFF997C68FF0606060600000000000000000000
+          000000000000000000000000000088848096C9AA96FFFFFFFFFFFFFFFFFFFCFA
+          F9FFF8F2EFFFFDFBFAFFDFCCC1FFB0917DFF0E0E0E0F00000000000000000000
+          0000000000000000000000000000000000008B868399C9AA96FFFFFFFFFFFFFF
+          FFFFFCFBFAFFE1D1C8FFAD8873FF989290AB0000000000000000000000000000
+          000000000000000000000000000000000000000000008D89859CC9AA96FFC09E
+          89FFB28C75FFB89784FFDCD8D5F31919191B0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000}
+      end
+      item
+        Image.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC009933000099330000993300009933
+          0000D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0099330000CC660000CC6600009933
+          0000D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0099330000CC660000CC6600009933
+          0000D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0099330000CC660000CC6600009933
+          0000D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC009933000099330000993300009933000099330000CC660000CC6600009933
+          000099330000993300009933000099330000D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC0099330000CC660000CC660000CC660000CC660000CC660000CC660000CC66
+          0000CC660000CC660000CC66000099330000D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC0099330000CC660000CC660000CC660000CC660000CC660000CC660000CC66
+          0000CC660000CC660000CC66000099330000D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC009933000099330000993300009933000099330000CC660000CC6600009933
+          000099330000993300009933000099330000D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0099330000CC660000CC6600009933
+          0000D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0099330000CC660000CC6600009933
+          0000D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0099330000CC660000CC6600009933
+          0000D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC009933000099330000993300009933
+          0000D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00}
+        MaskColor = 14215660
+      end
+      item
+        Image.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00993300009933000099330000993300009933000099330000993300009933
+          000099330000993300009933000099330000D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC0099330000CC660000CC660000CC660000CC660000CC660000CC660000CC66
+          0000CC660000CC660000CC66000099330000D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC0099330000CC660000CC660000CC660000CC660000CC660000CC660000CC66
+          0000CC660000CC660000CC66000099330000D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00993300009933000099330000993300009933000099330000993300009933
+          000099330000993300009933000099330000D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+          EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00}
+        MaskColor = 14215660
+      end
+      item
+        Image.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000000000000000
+          00000000000000000000B7A293FF634935FF634935FF634935FF634935FF6349
+          35FF634935FF634935FF634935FF634935FF634935FF00000000000000000000
+          00000000000000000000B7A293FFFFFFFFFFB7A293FFB7A293FFB7A293FFB7A2
+          93FFB7A293FFB7A293FFB7A293FFB7A293FF634935FF00000000000000000000
+          00000000000000000000B7A293FFFFFFFFFFFFFFFFFFFCFAF9FFF7F1EEFFF1E7
+          E1FFECDDD5FFE6D3C9FFE1CABDFFB7A293FF634935FF00000000000000000000
+          00000000000000000000B7A293FFFFFFFFFFFFFFFFFFFEFEFEFFFAF7F5FFF5ED
+          E9FFEFE3DCFFEAD9D1FFE4CFC4FFB7A293FF634935FF00000000000000000000
+          00000000000000000000B7A293FFFFFFFFFFFFFFFFFFFFFFFFFFFDFCFBFFF8F3
+          F0FFF2E9E3FFEDDFD8FFE7D5CBFFB7A293FF634935FF00000000000000000000
+          00000000000000000000BAA596FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBF8
+          F7FFF6EFEBFFF0E5DFFFEBDBD3FFB7A293FF634935FF00000000000000000000
+          00000000000000000000BEA99AFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFD
+          FCFFF9F5F2FFF4EBE6FFEEE1DAFFB7A293FF634935FF00000000000000000000
+          00000000000000000000C3AE9EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFCFAF9FFF7F1EEFFF1E7E1FFB7A293FF634935FF00000000000000000000
+          00002CEDFF7C0EDBFF9600AEFFFF1FE4FFFF79EDFFFF9BF4FFFFFFFFFFFFFFFF
+          FFFFFEFEFEFFFAF7F5FFF5EDE9FFB7A293FF634935FF00000000000000003EF4
+          FFC10079FAFF95FFFFFF009DFFFF02DCFFFF95FFFFFF0079FAFF99FFFFFFFFFF
+          FFFFFFFFFFFFFDFCFBFFB7A293FFB7A293FF644A36FF00000000000000004CFC
+          FFCB95FFFFFF0079FAFF00A8FFFF00B4FFFF0079FAFF95FFFFFF7FFFFFFFFFFF
+          FFFFFFFFFFFFB7A293FF644A36FF644A36FF644A36FF000000000000000000D6
+          FFFB13E7FFFE0092FFFF00D3FFFF05DEFFFF00BFFFFF31F8FFFF1CE3FFFFFFFF
+          FFFFFFFFFFFFB9A495FFD4C5BAFF644A36FFC9B3A48C0000000000000000008C
+          FAFF0095FFFF0091FFFFFFFFFFFFA8FFFFFF00B4FFFF009AFFFF00A8FFFFFFFF
+          FFFFFFFFFFFFC0AB9CFF644A36FFC9B3A48B0000000000000000000000000BDB
+          FFCD95FFFFFF0079FAFF00A0FFFF00B1FFFF0079FAFF95FFFFFF3BD9F0FFD4BE
+          AEFFCFB9A9FFC9B3A4FFC9B3A48B000000000000000000000000000000000DD8
+          FFB20079FAFF95FFFFFF00B4FFFF00D6FFFF95FFFFFF0079FAFF3DF5FFAA0000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000067FFFFF854FFFFD8009BFFFF00D3FFFF4FFEFFDF58FFFFFA000000000000
+          0000000000000000000000000000000000000000000000000000}
+      end
+      item
+        Image.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000000000000000
+          0000CE8642F6DA9859FFDFA66FFFDEA56DFFDEA46CFFDDA26BFFDDA169FFDCA0
+          68FFDC9F67FFDB9E65FFD58D4AFFC7782DF60000000000000000000000000000
+          0000DD9E60FFFFFFFFFFFFFFFFFFFFFFFEFFFFFEFDFFFFFEFCFFFFFDFBFFFFFD
+          FBFFFFFCFAFFFFFCF9FFFFFEFDFFD6904EFF0000000000000000000000000000
+          0000E3AF7BFFFFFFFEFFFFFCFAFFFFFBF6FFFFF9F2FFFFF7EEFFFFF5EBFFFFF3
+          E7FFFFF1E3FFFFEFE0FFFFFBF7FFDDA36CFF0000000000000000000000000000
+          0000E5B380FFFFFDFCFFFFF7F0FFFFF6ECFFFFF4E8FFFFF2E5FFFFF0E1FFFFEE
+          DDFFFFECD9FFFFEAD6FFFFFAF4FFDFA770FF0000000000000000000000000000
+          0000E6B684FFFFFCF9FF0083D2FF60ACD8FFDFE1DCFFFFEDDBFFFFEBD7FFFFE9
+          D3FFFFE7CFFFFFE5CCFFFFF8F2FFE1AA75FF0000000000000000000000000000
+          0000E8B989FFFFFBF7FF60ABD6FF127BA7FF0090DFFF60A9D2FFEFE0CDFFFFE4
+          C9FFFFE2C5FFFFE1C2FFFFF7EFFFE2AD79FF0000000000000000000000000000
+          0000EABD8DFFFFFAF4FFDFDBD2FF008BDFFF00C7FFFF00B2F0FF3095CFFFEFD9
+          C0FFFFDDBCFFFFDCB8FFFFF6EDFFE4B17DFF0000000000000000000000000000
+          0000EBC091FFFFF8F2FFFFE4C8FF60A7CDFF00C2F0FF00DFFFFF00B7F0FF3093
+          CDFFEFD3B4FFFFD7AEFFFFF5EAFFE6B482FF0000000000000000000000000000
+          0000EDC496FFFFF7EFFFFFDFBEFFEFD7BCFF3094CDFF00C7F0FF00E6FFFF00BC
+          F0FF3092CAFFEFCDA7FFFFF3E8FFE7B886FF0000000000000000000000000000
+          0000EFC79AFFFFF6EDFFFFDAB4FFFFD8B0FFEFD1AFFF3092CAFF00CBF0FF00EE
+          FFFF00C1F0FF3091C8FFEFEBE5FFE9BB8BFF0000000000000000000000000000
+          0000F0CA9EFFFFF5EAFFFFD5AAFFFFD3A7FFFFD1A3FFEFCAA2FF3091C8FF00D0
+          F0FF00F5FFFF00C5F0FF3098D6FFDCBA93FF0000000000000000000000000000
+          0000F2CDA3FFFFF3E8FFFFD0A0FFFFCE9DFFFFCD9AFFFFCC99FFEFC89DFF30A2
+          E0FF00D6F3FF00FCFFFF00C2E8FF598295FF0A06061000000000000000000000
+          0000F3D1A7FFFFF2E6FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFEFF8
+          FDFF30ABE6FF00D4EFFF88A1A1FFCCA4A4FF7F5C68CF0B080810000000000000
+          0000F5D4ABFFFFF2E6FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFFF
+          FFFFEEF5F6FF6FADBEFFE5CDCDFF3C38B2FF00008FFF000062BF000000000000
+          0000F6D4A9FFFFFFFFFFFFF2E6FFFFF2E6FFFFF2E6FFFFF2E6FFFFF2E6FFFEF8
+          F1FFF1CB9DFFCEA77CE0C0ADBBEF0000BEFF153FF4FF0000A1FF000000000000
+          0000ECC795F6F7D7ACFFF7D9B1FFF7D8B0FFF6D7AFFFF6D6ADFFF5D5ACFFF1C5
+          8EFFCEA778DB000000002A262630121F9DBF0419D1FF0000719F}
+      end
+      item
+        Image.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000736D8EFF777386FF00000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000007259
+          DDFF2805CBFF331CA2FF6F6A81FF000000000000000000000000000000000000
+          00000000000000000000604BC1FF5336CDFF0000000000000000000000007259
+          DDFF2900DEFF2400C3FF41347EFF737277FF0000000000000000000000000000
+          0000000000005135CCFF2A06CCFF5D45C4FF0000000000000000000000000000
+          0000694EDEFF2900E0FF2B0CB9FF544C7AFF939393FF00000000000000000000
+          00005033CCFF2803CDFF5D45C4FF000000000000000000000000000000000000
+          000000000000694EDEFF2D06DDFF391DAEFF615982FF919193FF000000004E33
+          CBFF2601CDFF5D46C3FF00000000000000000000000000000000000000000000
+          00000000000000000000694EDEFF2F0ADAFF371CAEFF45348AFF381ABEFF2704
+          C6FF5C46C3FF0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000694EDEFF2600D6FF2300C0FF2500C7FF5747
+          A0FF000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000003B1AC8FF2500CCFF2E0BC5FF6053
+          9EFF000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000004F33CBFF2700CDFF4629C6FF401ED4FF4224
+          C2FF6E63ABFF0000000000000000000000000000000000000000000000000000
+          000000000000000000004F33CBFF2700CEFF5D45C4FF00000000000000005739
+          DAFF3F1FC8FF6B5DADFF00000000000000000000000000000000000000000000
+          0000000000004F33CBFF2600CDFF5A44C4FF0000000000000000000000000000
+          00006045DDFF3816CAFF6757AEFF000000000000000000000000000000000000
+          00004F33CBFF2600CDFF5A44C4FF000000000000000000000000000000000000
+          0000000000005D3FDDFF5133D2FF000000000000000000000000000000005133
+          D7FF2600D1FF5035CDFF00000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000005133
+          D9FF5435DDFF0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000}
+      end>
+  end
+  object ClientDS_Rate: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 146
+    Top = 386
+    object ClientDS_Ratevagon_arenda_rate_id: TIntegerField
+      FieldName = 'vagon_arenda_rate_id'
+    end
+    object ClientDS_Ratevagon_arenda_id: TIntegerField
+      FieldName = 'vagon_arenda_id'
+    end
+    object ClientDS_Ratedt_begin: TDateField
+      FieldName = 'dt_begin'
+    end
+    object ClientDS_Ratedt_end: TDateField
+      FieldName = 'dt_end'
+    end
+    object ClientDS_Raterate_val: TFloatField
+      FieldName = 'rate_val'
+    end
+    object ClientDS_Raterate_val_nds: TFloatField
+      FieldName = 'rate_val_nds'
+    end
+    object ClientDS_Ratecurrency_id: TIntegerField
+      FieldName = 'currency_id'
+    end
+    object ClientDS_Ratecurrency_nm: TStringField
+      FieldName = 'currency_nm'
+    end
+    object ClientDS_Ratetype_rate_id: TIntegerField
+      FieldName = 'type_rate_id'
+    end
+    object ClientDS_Ratetype_rate_nm: TStringField
+      FieldName = 'type_rate_nm'
+      Size = 128
+    end
+    object ClientDS_Ratetype_nds_id: TIntegerField
+      FieldName = 'type_nds_id'
+    end
+    object ClientDS_Ratetype_nds_nm: TStringField
+      FieldName = 'type_nds_nm'
+      Size = 128
+    end
+    object ClientDS_Ratevagon_id: TIntegerField
+      FieldName = 'vagon_id'
+    end
+    object ClientDS_Ratedt_diff: TIntegerField
+      FieldName = 'dt_diff'
+    end
+  end
+  object DS_Rate: TDataSource
+    DataSet = ClientDS_Rate
+    Left = 148
+    Top = 413
+  end
+  object dxBarPopupMenu2: TdxBarPopupMenu
+    BarManager = dxBarManager1
+    ItemLinks = <
+      item
+        Visible = True
+        ItemName = 'dxBarButton4'
+      end
+      item
+        Visible = True
+        ItemName = 'dxBarButton5'
+      end
+      item
+        BeginGroup = True
+        Visible = True
+        ItemName = 'dxBarButton6'
+      end>
+    UseOwnFont = False
+    OnPopup = dxBarPopupMenu2Popup
+    Left = 150
+    Top = 442
+    PixelsPerInch = 96
+  end
+  object qRates: TADOQuery
+    Connection = fmMain.Lis
+    Parameters = <
+      item
+        Name = 'vagon_arenda_id'
+        Attributes = [paSigned]
+        DataType = ftInteger
+        Precision = 10
+        Size = 4
+        Value = Null
+      end>
+    SQL.Strings = (
+      'select vr.vagon_arenda_rate_id,'
+      'vr.vagon_arenda_id,'
+      'vr.date_begin as dt_begin,'
+      'vr.date_end as dt_end,'
+      'vr.rate_val,'
+      
+        'vr.rate_val * (1.00 + ISNULL(CONVERT(MONEY, ISNULL(nds.inf_obj_c' +
+        'od , 0)), 0)/100) as rate_val_nds,'
+      'c.currency_id,'
+      'c.brief_name as currency_nm,'
+      'vr.type_rate_id,'
+      'rt.inf_obj_name as type_rate_nm,'
+      'vr.type_nds_id,'
+      'nds.inf_obj_name as type_nds_nm'
+      'from VAGON_ARENDA_RATE vr'
+      'left join CURRENCY c on vr.currency_id = c.currency_id'
+      'left join INF_OBJ rt on vr.type_rate_id = rt.inf_obj_id'
+      'left join INF_OBJ nds on vr.type_nds_id = nds.inf_obj_id'
+      'where vr.vagon_arenda_id = :vagon_arenda_id'
+      'order by vr.date_begin ')
+    Left = 239
+    Top = 403
+  end
+end

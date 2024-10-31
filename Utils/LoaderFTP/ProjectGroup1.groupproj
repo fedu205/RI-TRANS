@@ -1,0 +1,36 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{B607FEA5-9135-4F92-AB31-EF2AF8E1CA2C}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="Update.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="Update">
+			<MSBuild Projects="Update.dproj"/>
+		</Target>
+		<Target Name="Update:Clean">
+			<MSBuild Targets="Clean" Projects="Update.dproj"/>
+		</Target>
+		<Target Name="Update:Make">
+			<MSBuild Targets="Make" Projects="Update.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="Update"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="Update:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="Update:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>

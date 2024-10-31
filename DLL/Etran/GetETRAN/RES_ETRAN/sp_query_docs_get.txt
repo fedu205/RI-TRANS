@@ -1,0 +1,80 @@
+UPDATE etran_query_docs_new 
+SET set_load = 0
+WHERE query_docs_id in (
+
+SELECT query_docs_id
+FROM 
+		(	SELECT	etran_query_docs_new.query_docs_id, error_param
+			FROM	etran_query_docs_new 
+					inner join etran_query_error on etran_query_docs_new.query_docs_id = etran_query_error.query_id		
+			WHERE	doc_date_load is null and set_load = 1
+					AND PATINDEX('%<error>%',error_param) <> 0
+		) x1
+GROUP BY query_docs_id
+HAVING sum(case when PATINDEX('%<errorCode value="4"/>%',error_param) <> 0 then 1 else 0 end) >	10
+)
+
+SELECT	query_docs_id,
+		etran_ip,
+		etran_login,
+		etran_password,
+		db_users_name,
+		db_password,
+		db_name,
+		db_server,
+		doc_type_cod,		
+		doc_type_name,
+		users_group_name,
+		doc_id, 
+		case 	
+			--when doc_type_cod =  '-2' then '<getDocOper version="1.0"><docID value="' + cast(doc_id as varchar(20)) + '"/><useECP/></getDocOper>'
+			when doc_type_cod =  '-2' then '<getDocOper version="1.0"><docID value="' + cast(doc_id as varchar(20)) + '"/></getDocOper>'
+			when doc_type_cod =  '-1' then '<getDocLink version="1.0"><docID value="' + cast(doc_id as varchar(20)) + '"/></getDocLink>'
+			when doc_type_cod =   '1' then '<getClaim version="1.0"><claimID value="' + cast(doc_id as varchar(20)) + '"/><useMod11/></getClaim>'
+			when doc_type_cod =   '2' then '<getInvoice version="1.0"><invoiceID value="' + cast(doc_id as varchar(20)) + '"/><useMod11/></getInvoice>'
+			when doc_type_cod =  '27' then '<getCumulativeList version="1.0"><cumId value="' + cast(doc_id as varchar(20)) + '"/></getCumulativeList>'
+			when doc_type_cod =  '29' then '<getRT version="1.0"><rtId value="' + cast(doc_id as varchar(20)) + '"/><useMod11/></getRT>'
+			when doc_type_cod =  '40' then '<getRegCont version="1.0"><rcId value="' + cast(doc_id as varchar(20)) + '"/><useMod11/></getRegCont>'
+			when doc_type_cod =  '41' then '<getVPU version="1.0"><vpuId value="' + cast(doc_id as varchar(20)) + '"/><useMod11/></getVPU>'
+			when doc_type_cod =  '44' then '<getAct version="1.0"><actId value="' + cast(doc_id as varchar(20)) + '"/><useMod11/></getAct>'
+			when doc_type_cod =  '50' then '<getOtstClaim version="1.0"><docID value="' + cast(doc_id as varchar(20)) + '"/><useMod11/></getOtstClaim>'
+			when doc_type_cod =  '88' then '<getActUslug><DocId value="' + cast(doc_id as varchar(20)) + '"/></getActUslug>'
+			when doc_type_cod =  '71' then '<getCSN><CSNID>' + cast(doc_id as varchar(20)) + '</CSNID><useMod11/></getCSN>'			
+			else null 
+		end as send_xml,
+		case 				
+			when doc_type_cod =  '-2' then 9
+			when doc_type_cod =  '-1' then 10
+			when doc_type_cod =   '1' then 2
+			when doc_type_cod =   '2' then 0
+			when doc_type_cod =  '27' then 3
+			when doc_type_cod =  '29' then 4
+			when doc_type_cod =  '40' then 5
+			when doc_type_cod =  '41' then 6
+			when doc_type_cod =  '44' then 7
+			when doc_type_cod =  '50' then 1
+			when doc_type_cod =  '88' then 8
+			when doc_type_cod =  '71' then 11
+			else 100
+		end column_order
+		INTO #query_docs_tmp
+FROM	view_query_docs_new 
+WHERE	doc_date_load is null
+		AND isnull(set_load,1) = 1
+		AND isnull(set_connect_load,1) = 1
+--		AND datediff(dd, query_period_begin, getdate()) < 179
+--		AND datediff(dd, isnull(query_period_begin,getdate()) , getdate()) < 179
+
+
+SELECT	etran_query_error.query_id, datediff(hh, max(error_date), getdate()) as last_error_hour, count(1) cnt_error INTO #query_error
+FROM	etran_query_error 
+		inner join #query_docs_tmp on etran_query_error.query_id = #query_docs_tmp.query_docs_id
+GROUP BY etran_query_error.query_id
+
+SELECT	top 200 #query_docs_tmp.* 
+FROM	#query_docs_tmp left join #query_error on #query_docs_tmp.query_docs_id = #query_error.query_id
+WHERE	(isnull(#query_error.cnt_error,0) <= 5) OR (last_error_hour > 1)
+ORDER BY column_order
+
+DROP TABLE #query_docs_tmp
+DROP TABLE #query_error

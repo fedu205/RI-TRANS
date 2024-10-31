@@ -1,0 +1,1 @@
+brcc32.exe res_disl.rc

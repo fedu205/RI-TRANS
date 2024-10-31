@@ -1,0 +1,64 @@
+SELECT	query_id,
+		etran_ip,
+		etran_login,
+		etran_password,
+		db_users_name,
+		db_password,
+		db_name,
+		db_server,
+		doc_type_cod,
+		connect_name,  
+		period_begin, 
+		period_end, 
+		doc_type_name,
+		users_group_name,
+		case 
+			when doc_type_cod =   '1' then '<claimToAgreementStatus version="1.0"><fromDate value="' + period_begin_etran_format + '"/><toDate value="' + period_end_etran_format + '"/><useRecip/><useSender/><usePayer/><useAll/><useCarrier/><useCarOwner/></claimToAgreementStatus>'
+			
+			when doc_type_cod =   '2' and users_group_cod in     ('0', '35') then '<invoiceStatus version="1.0"><fromDate value="' + period_begin_etran_format + '"/><toDate value="' + period_end_etran_format + '"/><useSender/><usePayer/><useRecip/><useOwnerCar/><useAll/></invoiceStatus>'
+			when doc_type_cod =   '2' and users_group_cod not in ('0', '35') then '<invoiceStatus version="1.0"><fromDate value="' + period_begin_etran_format + '"/><toDate value="' + period_end_etran_format + '"/><useSender/><usePayer/><useRecip/><useAll/></invoiceStatus>'
+
+			when doc_type_cod =  '27' then '<cumulativeStatus version="1.0"><fromDate value="' + period_begin_etran_format + '"/><toDate value="' + period_end_etran_format + '"/></cumulativeStatus>'
+			when doc_type_cod =  '29' then '<rtStatus version="1.0"><fromDate value="' + period_begin_etran_format + '"/><toDate value="' + period_end_etran_format + '"/></rtStatus>'
+			when doc_type_cod =  '40' then '<regContStatus version="1.0"><fromDate value="' + period_begin_etran_format + '"/><toDate value="' + period_end_etran_format + '"/></regContStatus>'
+			when doc_type_cod =  '41' then '<vpuStatus version="1.0"><fromDate value="' + period_begin_etran_format + '"/><toDate value="' + period_end_etran_format + '"/></vpuStatus>'
+			
+			when doc_type_cod =  '71' then '<CSNStatus><fromDate>' + period_begin_etran_format + '</fromDate><toDate>' + period_end_etran_format + '</toDate></CSNStatus>'
+
+
+			when doc_type_cod = '100' then '<GetKkrDocs version="1.0"><StartPeriod value="' + period_begin_etran_format + '"/><FinishPeriod value="' + period_end_etran_format + '"/></GetKkrDocs>'
+			when doc_type_cod = '110' then '<getKkrDebetNew version="1.0"><fromDate value="' + period_begin_etran_date + '"/><toDate value="' + period_begin_etran_date + '"/></getKkrDebetNew>'
+			when doc_type_cod = '120' then '<getKkrCredit version="1.0"><fromDate value="' + period_begin_etran_format + '"/><toDate value="' + period_end_etran_format + '"/></getKkrCredit>'
+			when doc_type_cod = '130' then '<getKkrTransfer version="1.0"><fromDate value="' + period_begin_etran_format + '"/><toDate value="' + period_end_etran_format + '"/></getKkrTransfer>'
+			when doc_type_cod = '140' then '<getKkrSaldo version="1.0"><fromDate value="' + period_begin_etran_date + '"/><toDate value="' + period_end_etran_date + '"/></getKkrSaldo>'
+                        when doc_type_cod = '200' then '<getClientContract></getClientContract>'
+
+			
+			
+			when doc_type_cod = '900' then '<GetKkrDebet version="1.0"><StartPeriod value="' + period_begin_etran_format + '"/><FinishPeriod value="' + period_end_etran_format + '"/><PayPlace value="1"/><useName/></GetKkrDebet>'
+
+			
+
+			when doc_type_cod =  '44' then '<actStatus version="1.0"><fromDate value="' + period_begin_etran_format + '"/><toDate value="' + period_end_etran_format + '"/><useSetoff/><useOverLoad/></actStatus>'
+			when doc_type_cod =  '50' then '<otstClaimStatus  version="1.0"><fromDate value="' + period_begin_etran_format + '"/><toDate value="' + period_end_etran_format + '"/></otstClaimStatus>'
+			when doc_type_cod =  '88' then '<ActUslugStatus><fromDate value="' + period_begin_etran_format + '"/><toDate value="' + period_end_etran_format + '"/></ActUslugStatus>'
+			
+			else null 
+		end as send_xml
+		INTO #query_tmp
+FROM	view_query_new 
+WHERE	query_xml is null 
+		AND set_load = 1
+		AND set_connect_load = 1
+
+SELECT	etran_query_error.query_id, datediff(hh, max(error_date), getdate()) as last_error_hour, count(1) cnt_error INTO #query_error
+FROM	etran_query_error 
+		inner join #query_tmp on etran_query_error.query_id = #query_tmp.query_id
+GROUP BY etran_query_error.query_id
+
+SELECT	#query_tmp.* 
+FROM	#query_tmp left join #query_error on #query_tmp.query_id = #query_error.query_id
+WHERE	((isnull(#query_error.cnt_error,0) <= 5) OR (last_error_hour > 1))
+
+DROP TABLE #query_tmp
+DROP TABLE #query_error

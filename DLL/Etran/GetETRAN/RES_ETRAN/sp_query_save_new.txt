@@ -1,0 +1,436 @@
+﻿DECLARE
+	@query_id	int,
+	@query_xml	varchar(max)
+
+SET @query_id	 = :query_id
+SET @query_xml	 = :query_xml
+
+SET CURSOR_CLOSE_ON_COMMIT ON
+SET XACT_ABORT ON
+SET NOCOUNT ON
+
+DECLARE @doc_type_cod	varchar(10),
+		@doc_type_id	int,
+		@doc_type_history_id	int,
+		@doc_type_link_id	int,
+		@query_docs_id	int,
+		@doc_id			int,
+		@users_owner_id	int,
+		@object_id		int,
+		@oper_date		datetime,
+		@oper_id		bigint
+
+set @oper_id = null
+
+DECLARE @xml xml
+DECLARE @s varchar(4000)
+
+SET @xml = @query_xml
+
+CREATE TABLE #doc_list_id (doc_id int)
+
+BEGIN TRY
+	BEGIN TRANSACTION
+
+	SELECT	@doc_type_cod = doc_type_cod,
+			@doc_type_id  = doc_type_id
+	FROM	dbo.view_query_new
+	WHERE	query_id = @query_id
+
+	-- SELECT * FROM [dbo].[ETRAN_DOC_TYPE] WHERE doc_type_cod = -1
+	-- Связанные документы
+	SELECT @doc_type_history_id	= doc_type_id FROM etran_doc_type WHERE doc_type_cod = '-1'
+	-- SELECT * FROM [dbo].[ETRAN_DOC_TYPE] WHERE doc_type_cod = -2
+	-- Операции над документом
+	SELECT @doc_type_link_id	= doc_type_id FROM etran_doc_type WHERE doc_type_cod = '-2'
+
+
+	-- SELECT * FROM [dbo].[ETRAN_DOC_TYPE] WHERE doc_type_cod in ('1', '2', '27', '29', '900', '44', '40', '41', '100', '110', '120', '130', '140', '200')
+	--1		Заявка
+	--2		Накладная
+	--27	Накопительная ведомость
+	--29	Телеграмма
+	--40	Ведомость учета контейнеров
+	--41	Ведомость учета вагонов
+	--44	Акт
+	--88	Акт оказанных услуг
+	--100	ККР
+	--110	ККР (дебет new)
+	--120	ККР (кредит)
+	--130	ККР (движение)
+	--140	ККР (сальдо)
+	--900	ККР (дебет)
+	IF @doc_type_cod not in ('1', '2', '27', '29', '900', '44', '40', '41', '100', '110', '120', '130', '140', '50', '88', '71', '200') BEGIN
+		SET @s = 'Документ [' + @doc_type_cod + '] не поддерживается.'
+		RAISERROR(@s, 16, 1)
+	END
+
+	-- SELECT * FROM [dbo].[ETRAN_DOC_TYPE] WHERE doc_type_cod = 1
+	-- Заявка
+	IF @doc_type_cod = '1'
+	BEGIN
+
+		IF @xml.exist('claimToAgreementStatusReply') = 0 BEGIN
+			SET @s = 'Ошибка не найден тег claimToAgreementStatusReply.' + cast(@query_xml as varchar(3000))
+			RAISERROR(@s, 16, 1)
+		END
+
+		INSERT INTO #doc_list_id(doc_id)
+		SELECT	ref.value ('@value','bigint')	as doc_id
+		FROM	@xml.nodes('/claimToAgreementStatusReply/claim/claimID') as node(ref)
+
+		SELECT	@oper_date = ref.value('(OperDate/@value)[1]','datetime'),
+				@oper_id   = ref.value('(OperId/@value)[1]','bigint')
+		FROM	@xml.nodes('/claimToAgreementStatusReply') as node(ref)
+	END
+
+	-- SELECT * FROM [dbo].[ETRAN_DOC_TYPE] WHERE doc_type_cod = 2
+	-- Накладная
+	IF @doc_type_cod = '2'
+	BEGIN
+
+		IF @xml.exist('invoiceStatusReply') = 0 BEGIN
+			SET @s = 'Ошибка не найден тег invoiceStatusReply.' + cast(@query_xml as varchar(3000))
+			RAISERROR(@s, 16, 1)
+		END
+
+		INSERT INTO #doc_list_id(doc_id)
+		SELECT	ref.value ('@value','bigint')	as doc_id
+		FROM	@xml.nodes('/invoiceStatusReply/invoice/invoiceID') as node(ref)
+
+		SELECT	@oper_date = ref.value('(OperDate/@value)[1]','datetime'),
+				@oper_id   = ref.value('(OperId/@value)[1]','bigint')
+		FROM	@xml.nodes('/invoiceStatusReply') as node(ref)
+	END
+
+	-- SELECT * FROM [dbo].[ETRAN_DOC_TYPE] WHERE doc_type_cod = 27
+	-- Накопительная ведомость
+	IF @doc_type_cod = '27'
+	BEGIN
+		IF @xml.exist('cumulativeStatusReply') = 0 BEGIN --------------------
+			SET @s = 'Ошибка не найден тег cumulativeStatusReply.' + cast(@query_xml as varchar(3000))
+			RAISERROR(@s, 16, 1)
+		END
+
+		INSERT INTO #doc_list_id(doc_id)
+		SELECT	ref.value ('@value','bigint')	as doc_id
+		FROM	@xml.nodes('/cumulativeStatusReply/cum/cumID') as node(ref)
+
+
+		SELECT	@oper_id   = ref.value('(OperId/@value)[1]','bigint')
+		FROM	@xml.nodes('/cumulativeStatusReply') as node(ref)
+
+		SELECT	@oper_date = period_end
+		FROM	etran_query_new
+		WHERE	query_id = @query_id
+	END
+
+	-- SELECT * FROM [dbo].[ETRAN_DOC_TYPE] WHERE doc_type_cod = 44
+	-- Акт
+	IF @doc_type_cod = '44'
+	BEGIN
+		IF @xml.exist('actStatusReply') = 0 BEGIN ------------------
+			SET @s = 'Ошибка не найден тег actStatusReply.' + cast(@query_xml as varchar(3000))
+			RAISERROR(@s, 16, 1)
+		END
+
+		INSERT INTO #doc_list_id(doc_id)
+		SELECT	ref.value ('@value','bigint')	as doc_id
+		FROM	@xml.nodes('/actStatusReply/act/actID') as node(ref)
+
+		SELECT	@oper_id   = ref.value('(OperId/@value)[1]','bigint')
+		FROM	@xml.nodes('/actStatusReply') as node(ref)
+
+		SELECT	@oper_date = period_end
+		FROM	etran_query_new
+		WHERE	query_id = @query_id
+	END
+
+        IF @doc_type_cod = '200'
+	BEGIN
+		DELETE #doc_list_id
+		EXEC sp_SAVE_Doc @xml_info = @query_xml
+
+		SELECT	@oper_date = period_end
+		FROM	etran_query_new
+		WHERE	query_id = @query_id
+	END
+
+	-- SELECT * FROM [dbo].[ETRAN_DOC_TYPE] WHERE doc_type_cod = 50
+	-- Заявка на отстой
+	IF @doc_type_cod = '50'
+	BEGIN
+		IF @xml.exist('otstClaimStatusReply') = 0 BEGIN ------------------
+			SET @s = 'Ошибка не найден тег otstClaimStatusReply.' + cast(@query_xml as varchar(3000))
+			RAISERROR(@s, 16, 1)
+		END
+
+		INSERT INTO #doc_list_id(doc_id)
+		SELECT	ref.value ('@value','bigint')	as doc_id
+		FROM	@xml.nodes('/otstClaimStatusReply/otstClaim/otstClaimID') as node(ref)
+
+		SELECT	@oper_date = ref.value('(OperDate/@value)[1]','datetime'),
+				@oper_id   = ref.value('(OperId/@value)[1]','bigint')
+		FROM	@xml.nodes('/otstClaimStatusReply') as node(ref)
+
+
+		--SELECT	@oper_date = period_end
+		--FROM	etran_query_new
+		--WHERE	query_id = @query_id
+	END
+
+	-- SELECT * FROM [dbo].[ETRAN_DOC_TYPE] WHERE doc_type_cod = 40
+	-- Ведомость учета контейнеров
+	IF @doc_type_cod = '40'
+	BEGIN
+		IF @xml.exist('regContStatusReply') = 0 BEGIN ------------------
+			SET @s = 'Ошибка не найден тег regContStatusReply.' + cast(@query_xml as varchar(3000))
+			RAISERROR(@s, 16, 1)
+		END
+
+		INSERT INTO #doc_list_id(doc_id)
+		SELECT	ref.value ('@value','bigint')	as doc_id
+		FROM	@xml.nodes('/regContStatusReply/rc/rcID') as node(ref)
+
+
+		SELECT	@oper_id   = ref.value('(OperId/@value)[1]','bigint')
+		FROM	@xml.nodes('/regContStatusReply') as node(ref)
+
+		SELECT	@oper_date = period_end
+		FROM	etran_query_new
+		WHERE	query_id = @query_id
+	END
+
+	-- SELECT * FROM [dbo].[ETRAN_DOC_TYPE] WHERE doc_type_cod = 41
+	-- Ведомость учета вагонов
+	IF @doc_type_cod = '41'
+	BEGIN
+		IF @xml.exist('vpuStatusReply') = 0 BEGIN ------------------
+			SET @s = 'Ошибка не найден тег vpuStatusReply.' + cast(@query_xml as varchar(3000))
+			RAISERROR(@s, 16, 1)
+		END
+
+		INSERT INTO #doc_list_id(doc_id)
+		SELECT	ref.value ('@value','bigint')	as doc_id
+		FROM	@xml.nodes('/vpuStatusReply/vpu/vpuID') as node(ref)
+
+
+		SELECT	@oper_id   = ref.value('(OperId/@value)[1]','bigint')
+		FROM	@xml.nodes('/vpuStatusReply') as node(ref)
+
+		SELECT	@oper_date = period_end
+		FROM	etran_query_new
+		WHERE	query_id = @query_id
+	END
+
+	-- SELECT * FROM [dbo].[ETRAN_DOC_TYPE] WHERE doc_type_cod = 29
+	-- Телеграмма
+	IF @doc_type_cod = '29'
+	BEGIN
+
+		IF @xml.exist('rtStatusReply') = 0 BEGIN
+			SET @s = 'Ошибка не найден тег rtStatusReply.' + cast(@query_xml as varchar(3000))
+			RAISERROR(@s, 16, 1)
+		END
+
+		INSERT INTO #doc_list_id(doc_id)
+		SELECT	ref.value ('@value','bigint')	as doc_id
+		FROM	@xml.nodes('/rtStatusReply/rt/rtID') as node(ref)
+
+
+		SELECT	@oper_date = ref.value('(OperDate/@value)[1]','datetime'),
+				@oper_id   = ref.value('(OperId/@value)[1]','bigint')
+		FROM	@xml.nodes('/rtStatusReply') as node(ref)
+
+
+		SELECT	@oper_date = period_end
+		FROM	etran_query_new
+		WHERE	query_id = @query_id
+	END
+
+
+	-- SELECT * FROM [dbo].[ETRAN_DOC_TYPE] WHERE doc_type_cod = 900
+	-- ККР (дебет)
+	IF @doc_type_cod = '900'
+	BEGIN
+		DELETE #doc_list_id
+		EXEC sp_doc_kkr_save @doc_xml_info = @query_xml
+
+		SELECT	@oper_date = period_end
+		FROM	etran_query_new
+		WHERE	query_id = @query_id
+	END
+
+
+	-- SELECT * FROM [dbo].[ETRAN_DOC_TYPE] WHERE doc_type_cod = 110
+	-- ККР (дебет new)
+	IF @doc_type_cod = '110'
+	BEGIN
+		DELETE #doc_list_id
+		EXEC sp_SAVE_kkr_debet @doc_xml_info = @query_xml, @query_id = @query_id
+
+		SELECT	@oper_date = period_end
+		FROM	etran_query_new
+		WHERE	query_id = @query_id
+	END
+
+	-- SELECT * FROM [dbo].[ETRAN_DOC_TYPE] WHERE doc_type_cod = 120
+	-- ККР (кредит)
+	IF @doc_type_cod = '120'
+	BEGIN
+		DELETE #doc_list_id
+		EXEC sp_SAVE_kkr_credit @doc_xml_info = @query_xml
+
+		SELECT	@oper_date = period_end
+		FROM	etran_query_new
+		WHERE	query_id = @query_id
+	END
+
+	-- SELECT * FROM [dbo].[ETRAN_DOC_TYPE] WHERE doc_type_cod = 130
+	-- ККР (движение)
+	IF @doc_type_cod = '130'
+	BEGIN
+		DELETE #doc_list_id
+		EXEC sp_SAVE_kkr_transfer @doc_xml_info = @query_xml
+
+		SELECT	@oper_date = period_end
+		FROM	etran_query_new
+		WHERE	query_id = @query_id
+	END
+
+	-- SELECT * FROM [dbo].[ETRAN_DOC_TYPE] WHERE doc_type_cod = 140
+	-- ККР (сальдо)
+	IF @doc_type_cod = '140'
+	BEGIN
+		DELETE #doc_list_id
+		EXEC sp_SAVE_kkr_saldo @doc_xml_info = @query_xml
+
+		SELECT	@oper_date = period_end
+		FROM	etran_query_new
+		WHERE	query_id = @query_id
+	END
+
+	-- Акт оказанных услуг
+	IF @doc_type_cod = '88'
+	BEGIN
+		IF @xml.exist('ActUslugStatusReply') = 0 BEGIN --------------------
+			SET @s = 'Ошибка не найден тег ActUslugStatusReply.' + cast(@query_xml as varchar(3000))
+			RAISERROR(@s, 16, 1)
+		END
+
+		INSERT INTO #doc_list_id(doc_id)
+		SELECT	ref.value ('@value','bigint')	as doc_id
+		FROM	@xml.nodes('/ActUslugStatusReply/actuslug/ActUslugID') as node(ref)
+
+		SELECT	@oper_date = ref.value('(OperDate/@value)[1]','datetime'),
+				@oper_id   = ref.value('(OperId/@value)[1]','bigint')
+		FROM	@xml.nodes('/ActUslugStatusReply') as node(ref)
+
+
+		--SELECT	@oper_date = period_end
+		--FROM	etran_query_new
+		--WHERE	query_id = @query_id
+	END
+
+
+	IF @doc_type_cod = '71'
+	BEGIN
+		IF @xml.exist('CSNStatusReply') = 0 BEGIN --------------------
+			SET @s = 'Ошибка не найден тег CSNStatusReply.' + cast(@query_xml as varchar(3000))
+			RAISERROR(@s, 16, 1)
+		END
+
+		INSERT INTO #doc_list_id(doc_id)
+		SELECT	ref.value ('(DocId)[1]','bigint') as doc_id
+		FROM	@xml.nodes('/CSNStatusReply/CSN') as node(ref)
+
+		SELECT	@oper_date = ref.value('(OperDate)[1]','datetime'),
+				@oper_id   = ref.value('(OperId/@value)[1]','bigint')
+		FROM	@xml.nodes('/CSNStatusReply') as node(ref)
+
+	END
+
+
+	UPDATE	etran_query_new
+	SET		query_xml = @query_xml,
+			query_date_load = getdate(),
+			oper_date = isnull(@oper_date, period_begin),
+			oper_id = @oper_id
+	WHERE	query_id = @query_id
+
+
+
+	DECLARE mmpp CURSOR FOR SELECT doc_id FROM #doc_list_id
+	OPEN mmpp
+	FETCH NEXT FROM mmpp INTO @doc_id
+
+	WHILE @@FETCH_STATUS = 0 BEGIN
+
+		IF not exists(SELECT 1 FROM etran_query_docs_new WHERE query_id = @query_id AND doc_id = @doc_id)
+		BEGIN
+
+			SELECT @users_owner_id = users_id	FROM etran_users		WHERE users_name = system_user
+			SELECT @object_id = object_id		FROM etran_object_base	WHERE object_physic_name = 'ETRAN_QUERY_DOCS_NEW'
+
+			-- Документ
+			INSERT INTO etran_global_id ( object_id,  users_owner_id,  date_enter, global_color)
+			VALUES						(@object_id, @users_owner_id,   GetDate(),            0)
+
+			SET @query_docs_id = SCOPE_IDENTITY()
+
+			INSERT INTO etran_query_docs_new ( query_docs_id,  query_id,  doc_type_id,  doc_id,  doc_date_load, xml_reply_id, set_load)
+			VALUES							 (@query_docs_id, @query_id, @doc_type_id, @doc_id,           null,         null,        1)
+
+
+			-- SELECT * FROM [dbo].[ETRAN_DOC_TYPE] WHERE doc_type_cod = 44
+			-- Акт
+			IF @doc_type_cod not in ('44') BEGIN
+				-- История
+				INSERT INTO etran_global_id ( object_id,  users_owner_id,  date_enter, global_color)
+				VALUES						(@object_id, @users_owner_id,   GetDate(),            0)
+
+				SET @query_docs_id = SCOPE_IDENTITY()
+
+				INSERT INTO etran_query_docs_new ( query_docs_id,  query_id,	   doc_type_id,  doc_id,  doc_date_load, xml_reply_id, set_load)
+				VALUES							 (@query_docs_id, @query_id, @doc_type_link_id, @doc_id,           null,         null,        1)
+
+				-- Св. документы
+--				INSERT INTO etran_global_id ( object_id,  users_owner_id,  date_enter, global_color)
+--				VALUES						(@object_id, @users_owner_id,   GetDate(),            0)
+--
+--				SET @query_docs_id = SCOPE_IDENTITY()
+--
+--				INSERT INTO etran_query_docs_new ( query_docs_id,  query_id,          doc_type_id,  doc_id,  doc_date_load, xml_reply_id, set_load)
+--				VALUES							 (@query_docs_id, @query_id, @doc_type_history_id, @doc_id,           null,         null,        1)
+			END
+		END
+
+		FETCH NEXT FROM mmpp INTO @doc_id
+	END
+
+	CLOSE mmpp
+	DEALLOCATE mmpp
+
+	COMMIT TRANSACTION
+END TRY
+
+BEGIN CATCH
+	SET @s = ERROR_MESSAGE()
+	RAISERROR(@s, 16, 1)
+
+	IF XACT_STATE() <> 0
+		ROLLBACK TRANSACTION
+
+	EXEC sp_query_error
+		@query_id    = @query_id,
+		@set_server  = 1,
+		@error_cod   = '105',
+		@error_name  = 'sp_query_save_new',
+		@error_param = @s
+END CATCH
+
+
+DROP TABLE #doc_list_id
+
+
+

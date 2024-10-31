@@ -1,0 +1,547 @@
+object fmInvoiceHeaderAdd: TfmInvoiceHeaderAdd
+  Left = 0
+  Top = 0
+  Caption = #1055#1083#1072#1090#1077#1078#1085#1099#1077' '#1088#1077#1082#1074#1080#1079#1080#1090#1099
+  ClientHeight = 311
+  ClientWidth = 442
+  Color = clBtnFace
+  Constraints.MinHeight = 300
+  Constraints.MinWidth = 450
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Icon.Data = {
+    0000010001001010000001002000680400001600000028000000100000002000
+    0000010020000000000000040000000000000000000000000000000000000000
+    00002A2E333639434F5539434F5539434F5539434F5539434F5539434F553943
+    4F5539434F5539434F5539434F5539434F5539434F5537414D53000000000000
+    00002F77D1FB2F77D1FB2F77D1FB2F77D1FB2F77D1FB2F77D1FB2F77D1FB2F77
+    D1FB2F77D1FB2F77D1FB2F77D1FB2F77D1FB2F77D1FB2F77D1FB000000000000
+    00002F77D1FBD8FDFFFFD8FDFFFFD8FDFFFFD8FDFFFFD8FDFFFFD8FDFFFFD8FD
+    FFFFD8FDFFFFD8FDFFFFD8FDFFFFD8FDFFFFD8FDFFFF2F77D1FB000000000000
+    00002F77D1FBD8FDFFFFC5FCFFFFC4FBFFFFC4FBFFFFC3FBFFFFC1FAFFFFBFF9
+    FFFFBDF8FFFFBCF7FFFFBAF6FFFFB8F5FFFFD8FDFFFF2F77D1FB000000000000
+    00002F77D1FBD7FCFFFFC2FAFFFFC0F9FFFFBEF8FFFFBCF7FFFFBAF6FFFFB9F6
+    FFFFB7F5FFFFB5F4FFFFB3F3FFFFB1F2FFFFD8FDFFFF2F77D1FB000000000000
+    00002F77D1FBD2FAFFFFBBF7FFFFB9F6FFFFAADFE8FFB6F4FFFFB4F3FFFFB2F2
+    FFFFB0F1FFFFAEF0FFFFADF0FFFFABEFFFFFD8FDFFFF2F77D1FB000000000000
+    00002F77D1FBCEF8FFFFB4F3FFFFB3F3FFFF769095FF82A4ABFFACEFFDFFABEF
+    FFFFAAEEFFFFA8EDFFFFA6ECFFFFA4EBFFFFD8FDFFFF2F77D1FB000000000000
+    00002F77D1FBCAF5FFFFAEF0FFFFACEFFFFFA6E8F7FF667174FF7B8D92FF9DDE
+    EFFFA3EBFFFFA1EAFFFF9FE9FFFF9EE8FFFFD8FDFFFF2F77D1FB000000000000
+    00002F77D1FBC5F3FFFFA7EDFFFFA5ECFFFFA4EBFFFF93CEDFFF959797FF8A8F
+    91FF80B3CCFF000098FD000098FD73ADE8FFD8FDFFFF2F77D1FB000000000000
+    00002F77D1FBC1F1FFFFA1EAFFFF9FE9FFFF9DE8FFFF9BE7FFFF7CA9B7FFA2A0
+    B4FF000098FD6074E8FF6680EFFF000098FDD8FDFFFF2F77D1FB000000000000
+    00002F77D1FBC8F2FFFF9AE6FFFF98E5FFFF96E4FFFF95E4FFFF90DEFDFF0B20
+    C8FD3D60EEFF1439E8FF1333E0FF000098FD000098FD1E47C1FF000000000000
+    00002F77D1FB2F77D1FB2F77D1FB2F77D1FB2F77D1FB2F77D1FB0B20C8FD768E
+    EBFF245CFAFF1A44E8FF000098FD2C4CE6FF1134E5FF000098FD000000000000
+    0000000000000000000000000000000000000000000000000000000024660B20
+    C8FD3263EFFF0B20C8FD345DF1FF163FEBFF0B20C8FD00000E33000000000000
+    0000000000000000000000000000000000000000000000000000000000010000
+    08250B20C8FD5077F1FF245DFBFF0B20C8FD0000327500000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    00000B20C8FD0B20C8FD0B20C8FD00002C660000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    00000A0A0B0F3535454F0E0E1115000000000000000000000000000000008001
+    0000800100008001000080010000800100008001000080010000800100008001
+    0000800100008001000080010000FE010000FE030000FF870000FF8F0000}
+  OnClose = FormClose
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 270
+    Width = 442
+    Height = 41
+    Align = alBottom
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    TabOrder = 0
+    DesignSize = (
+      442
+      41)
+    object cxButton1: TcxButton
+      Left = 276
+      Top = 10
+      Width = 75
+      Height = 25
+      Anchors = [akRight, akBottom]
+      Caption = 'OK'
+      LookAndFeel.Kind = lfOffice11
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.ScrollbarMode = sbmClassic
+      LookAndFeel.ScrollMode = scmClassic
+      ModalResult = 1
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        424D360800000000000036000000280000002000000010000000010020000000
+        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC0000CC00FF006600FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00B2B2B2FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC0000CC00FF009900FF009900FF006600FFD8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00B2B2B2FF999999FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0000CC
+        00FF009900FF009900FF009900FF009900FF006600FFD8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2
+        B2FF999999FF999999FF999999FF999999FF808080FFD8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0000CC00FF0099
+        00FF009900FF009900FF009900FF009900FF009900FF006600FFD8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2B2FF9999
+        99FF999999FF999999FF999999FF999999FF999999FF808080FFD8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0000CC00FF0099
+        00FF009900FF006600FF00CC00FF009900FF009900FF009900FF006600FFD8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2B2FF9999
+        99FF999999FF808080FFB2B2B2FF999999FF999999FF999999FF808080FFD8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0000CC00FF0099
+        00FF006600FFD8E9EC00D8E9EC0000CC00FF009900FF009900FF009900FF0066
+        00FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2B2FF9999
+        99FF808080FFD8E9EC00D8E9EC00B2B2B2FF999999FF999999FF999999FF8080
+        80FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0000CC00FF0066
+        00FFD8E9EC00D8E9EC00D8E9EC00D8E9EC0000CC00FF009900FF009900FF0099
+        00FF006600FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2B2FF8080
+        80FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2B2FF999999FF999999FF9999
+        99FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0000CC00FF009900FF0099
+        00FF009900FF006600FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2B2FF999999FF9999
+        99FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0000CC00FF0099
+        00FF009900FF009900FF006600FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2B2FF9999
+        99FF999999FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC0000CC
+        00FF009900FF009900FF006600FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2
+        B2FF999999FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC0000CC00FF009900FF006600FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00B2B2B2FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC0000CC00FF006600FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00B2B2B2FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00}
+      OptionsImage.NumGlyphs = 2
+      TabOrder = 0
+      OnClick = cxButton1Click
+    end
+    object cxButton2: TcxButton
+      Left = 357
+      Top = 10
+      Width = 75
+      Height = 25
+      Anchors = [akRight, akBottom]
+      Cancel = True
+      Caption = 'Cancel'
+      LookAndFeel.Kind = lfOffice11
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.ScrollbarMode = sbmClassic
+      LookAndFeel.ScrollMode = scmClassic
+      ModalResult = 2
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        424D360800000000000036000000280000002000000010000000010020000000
+        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC000000FFFF0000
+        99FF000099FF000099FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC000000
+        FFFF000099FF000099FF000099FFD8E9EC00D8E9EC00D8E9EC00B2B2B2FF8080
+        80FF808080FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2
+        B2FF808080FF808080FF808080FFD8E9EC00D8E9EC00D8E9EC000000FFFF0000
+        CCFF0000CCFF0000CCFF000099FFD8E9EC00D8E9EC00D8E9EC000000FFFF0000
+        CCFF0000CCFF0000CCFF000099FFD8E9EC00D8E9EC00D8E9EC00B2B2B2FF9999
+        99FF999999FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00B2B2B2FF9999
+        99FF999999FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC000000
+        FFFF0000CCFF0000CCFF0000CCFF000099FFD8E9EC000000FFFF0000CCFF0000
+        CCFF0000CCFF000099FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2
+        B2FF999999FF999999FF999999FF808080FFD8E9EC00B2B2B2FF999999FF9999
+        99FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC000000FFFF0000CCFF0000CCFF0000CCFF000099FF0000CCFF0000CCFF0000
+        CCFF000099FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00B2B2B2FF999999FF999999FF999999FF808080FF999999FF999999FF9999
+        99FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC000000FFFF0000CCFF0000CCFF0000CCFF0000CCFF0000CCFF0000
+        99FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00B2B2B2FF999999FF999999FF999999FF999999FF999999FF8080
+        80FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC000000FFFF0000CCFF0000CCFF0000CCFF000099FFD8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00B2B2B2FF999999FF999999FF999999FF808080FFD8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC000000FFFF0000CCFF0000CCFF0000CCFF0000CCFF0000CCFF0000
+        99FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00B2B2B2FF999999FF999999FF999999FF999999FF999999FF8080
+        80FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC000000FFFF0000CCFF0000CCFF0000CCFF000099FF0000CCFF0000CCFF0000
+        CCFF000099FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00B2B2B2FF999999FF999999FF999999FF808080FF999999FF999999FF9999
+        99FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC000000
+        FFFF0000CCFF0000CCFF0000CCFF000099FFD8E9EC000000FFFF0000CCFF0000
+        CCFF0000CCFF000099FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2
+        B2FF999999FF999999FF999999FF808080FFD8E9EC00B2B2B2FF999999FF9999
+        99FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00D8E9EC000000FFFF0000
+        CCFF0000CCFF0000CCFF000099FFD8E9EC00D8E9EC00D8E9EC000000FFFF0000
+        CCFF0000CCFF0000CCFF000099FFD8E9EC00D8E9EC00D8E9EC00B2B2B2FF9999
+        99FF999999FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC00B2B2B2FF9999
+        99FF999999FF999999FF808080FFD8E9EC00D8E9EC00D8E9EC000000FFFF0000
+        FFFF0000FFFF0000FFFFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC000000
+        FFFF0000FFFF0000FFFF0000FFFFD8E9EC00D8E9EC00D8E9EC00B2B2B2FFB2B2
+        B2FFB2B2B2FFB2B2B2FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00B2B2
+        B2FFB2B2B2FFB2B2B2FFB2B2B2FFD8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
+        EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00}
+      OptionsImage.NumGlyphs = 2
+      TabOrder = 1
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 0
+    Width = 442
+    Height = 270
+    Align = alClient
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    TabOrder = 1
+    DesignSize = (
+      442
+      270)
+    object cxLabel1: TcxLabel
+      Left = 8
+      Top = 177
+      Anchors = [akLeft, akBottom]
+      Caption = #1055#1077#1088#1080#1086#1076' '#1076#1077#1081#1089#1090#1074#1080#1103'  ...........................'
+    end
+    object cxDateEdit1: TcxDateEdit
+      Left = 136
+      Top = 173
+      Anchors = [akLeft, akBottom]
+      Properties.DateButtons = [btnToday]
+      Properties.MinDate = 36892.000000000000000000
+      Properties.SaveTime = False
+      Properties.ShowTime = False
+      Style.LookAndFeel.Kind = lfUltraFlat
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.ScrollbarMode = sbmClassic
+      Style.LookAndFeel.ScrollMode = scmClassic
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
+      StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleDisabled.LookAndFeel.ScrollMode = scmClassic
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfUltraFlat
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleFocused.LookAndFeel.ScrollMode = scmClassic
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfUltraFlat
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleHot.LookAndFeel.ScrollMode = scmClassic
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+      TabOrder = 0
+      Width = 129
+    end
+    object cxLabel3: TcxLabel
+      Left = 8
+      Top = 33
+      Caption = #1055#1086#1089#1090#1072#1074#1097#1080#1082' ..................'
+    end
+    object cxLabel5: TcxLabel
+      Left = 8
+      Top = 69
+      Caption = #1040#1076#1088#1077#1089' ....................................'
+    end
+    object cxMemo1: TcxMemo
+      Left = 136
+      Top = 33
+      Anchors = [akLeft, akTop, akRight]
+      Style.LookAndFeel.Kind = lfUltraFlat
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.ScrollbarMode = sbmClassic
+      Style.LookAndFeel.ScrollMode = scmClassic
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
+      StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleDisabled.LookAndFeel.ScrollMode = scmClassic
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfUltraFlat
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleFocused.LookAndFeel.ScrollMode = scmClassic
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfUltraFlat
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleHot.LookAndFeel.ScrollMode = scmClassic
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+      TabOrder = 3
+      Height = 36
+      Width = 296
+    end
+    object cxMemo2: TcxMemo
+      Left = 136
+      Top = 70
+      Anchors = [akLeft, akTop, akRight]
+      Style.LookAndFeel.Kind = lfUltraFlat
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.ScrollbarMode = sbmClassic
+      Style.LookAndFeel.ScrollMode = scmClassic
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
+      StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleDisabled.LookAndFeel.ScrollMode = scmClassic
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfUltraFlat
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleFocused.LookAndFeel.ScrollMode = scmClassic
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfUltraFlat
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleHot.LookAndFeel.ScrollMode = scmClassic
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+      TabOrder = 5
+      Height = 36
+      Width = 296
+    end
+    object cxLabel2: TcxLabel
+      Left = 8
+      Top = 199
+      Anchors = [akLeft, akBottom]
+      Caption = #1071#1079#1099#1082' ................................'
+    end
+    object cxLookupComboBox2: TcxLookupComboBox
+      Left = 136
+      Top = 195
+      Anchors = [akLeft, akRight, akBottom]
+      Properties.DropDownListStyle = lsFixedList
+      Properties.KeyFieldNames = 'inf_obj_id'
+      Properties.ListColumns = <
+        item
+          FieldName = 'inf_obj_name'
+        end>
+      Properties.ListOptions.GridLines = glNone
+      Properties.ListOptions.ShowHeader = False
+      Properties.ListSource = DS_Language
+      Style.LookAndFeel.Kind = lfUltraFlat
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.ScrollbarMode = sbmClassic
+      Style.LookAndFeel.ScrollMode = scmClassic
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
+      StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleDisabled.LookAndFeel.ScrollMode = scmClassic
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfUltraFlat
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleFocused.LookAndFeel.ScrollMode = scmClassic
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfUltraFlat
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleHot.LookAndFeel.ScrollMode = scmClassic
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+      TabOrder = 7
+      Width = 296
+    end
+    object cxLabel4: TcxLabel
+      Left = 8
+      Top = 15
+      Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' ..........................'
+    end
+    object cxTextEdit1: TcxTextEdit
+      Left = 136
+      Top = 10
+      Anchors = [akLeft, akTop, akRight]
+      Style.LookAndFeel.Kind = lfUltraFlat
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.ScrollbarMode = sbmClassic
+      Style.LookAndFeel.ScrollMode = scmClassic
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
+      StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleDisabled.LookAndFeel.ScrollMode = scmClassic
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfUltraFlat
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleFocused.LookAndFeel.ScrollMode = scmClassic
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfUltraFlat
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleHot.LookAndFeel.ScrollMode = scmClassic
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+      TabOrder = 8
+      Width = 296
+    end
+    object cxLabel6: TcxLabel
+      Left = 8
+      Top = 109
+      Caption = #1041#1072#1085#1082#1086#1074#1089#1082#1080#1077' '#1088#1077#1082#1074#1080#1079#1080#1090#1099' ......................'
+    end
+    object cxMemo3: TcxMemo
+      Left = 136
+      Top = 107
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      Style.LookAndFeel.Kind = lfUltraFlat
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.ScrollbarMode = sbmClassic
+      Style.LookAndFeel.ScrollMode = scmClassic
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
+      StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleDisabled.LookAndFeel.ScrollMode = scmClassic
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfUltraFlat
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleFocused.LookAndFeel.ScrollMode = scmClassic
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfUltraFlat
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleHot.LookAndFeel.ScrollMode = scmClassic
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+      TabOrder = 11
+      Height = 65
+      Width = 296
+    end
+    object cxDateEdit2: TcxDateEdit
+      Left = 271
+      Top = 173
+      Anchors = [akLeft, akBottom]
+      Properties.DateButtons = [btnClear, btnToday]
+      Properties.MinDate = 36892.000000000000000000
+      Properties.SaveTime = False
+      Properties.ShowTime = False
+      Style.LookAndFeel.Kind = lfUltraFlat
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.ScrollbarMode = sbmClassic
+      Style.LookAndFeel.ScrollMode = scmClassic
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
+      StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleDisabled.LookAndFeel.ScrollMode = scmClassic
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfUltraFlat
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleFocused.LookAndFeel.ScrollMode = scmClassic
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfUltraFlat
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleHot.LookAndFeel.ScrollMode = scmClassic
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+      TabOrder = 12
+      Width = 129
+    end
+    object cxCheckBox1: TcxCheckBox
+      Left = 8
+      Top = 228
+      Anchors = [akLeft, akBottom]
+      Caption = #1058#1086#1083#1100#1082#1086' '#1076#1083#1103' '#1089#1087#1077#1094#1080#1072#1083#1080#1079#1080#1088#1086#1074#1072#1085#1085#1099#1093' '#1076#1086#1075#1086#1074#1086#1088#1086#1074
+      Style.LookAndFeel.Kind = lfUltraFlat
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.SkinName = 'Coffee'
+      StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfUltraFlat
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfUltraFlat
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+      TabOrder = 13
+    end
+  end
+  object Query_Language: TADOQuery
+    Connection = fmInvoiceHeader.ADOInvoiceHeader
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT *'
+      'FROM inf_obj'
+      'WHERE type_inf_id = -13'
+      'ORDER BY inf_obj_cod')
+    Left = 56
+    Top = 116
+  end
+  object DS_Language: TDataSource
+    DataSet = Query_Language
+    Left = 96
+    Top = 116
+  end
+  object cxPropertiesStore1: TcxPropertiesStore
+    Components = <
+      item
+        Component = Owner
+        Properties.Strings = (
+          'Height'
+          'Left'
+          'Top'
+          'Width'
+          'WindowState')
+      end>
+    StorageName = '\Software\Lis1\InvoiceHeaderAdd'
+    StorageType = stRegistry
+    Left = 24
+    Top = 120
+  end
+end
