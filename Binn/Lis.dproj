@@ -136,7 +136,7 @@
         <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_MinorVer>225</VerInfo_MinorVer>
         <AppEnableRuntimeThemes>false</AppEnableRuntimeThemes>
-        <AppDPIAwarenessMode>system</AppDPIAwarenessMode>
+        <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
         <BT_BuildType>Debug</BT_BuildType>
