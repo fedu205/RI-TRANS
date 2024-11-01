@@ -12,10 +12,8 @@ object fmBargainRate: TfmBargainRate
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   Position = poMainFormCenter
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel4: TPanel
     Left = 0
@@ -163,9 +161,18 @@ object fmBargainRate: TfmBargainRate
     Width = 445
     Height = 253
     Align = alClient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
     Properties.ActivePage = cxTabSheet1
     Properties.CustomButtons.Buttons = <>
+    LookAndFeel.Kind = lfUltraFlat
+    LookAndFeel.NativeStyle = False
+    LookAndFeel.SkinName = ''
     ClientRectBottom = 253
     ClientRectRight = 445
     ClientRectTop = 24
@@ -196,16 +203,16 @@ object fmBargainRate: TfmBargainRate
           object Label1: TLabel
             Left = 4
             Top = 10
-            Width = 141
+            Width = 142
             Height = 13
-            Caption = #1042#1077#1089'...............................'
+            Caption = #1042#1077#1089'.........................................'
           end
           object Label3: TLabel
             Left = 4
             Top = 34
-            Width = 161
+            Width = 147
             Height = 13
-            Caption = #1057#1090#1072#1074#1082#1072'...............................'
+            Caption = #1057#1090#1072#1074#1082#1072'.....................................'
           end
           object cxCurrencyEdit1: TcxCurrencyEdit
             Left = 137
@@ -221,17 +228,21 @@ object fmBargainRate: TfmBargainRate
             Style.LookAndFeel.Kind = lfOffice11
             Style.LookAndFeel.NativeStyle = False
             Style.LookAndFeel.ScrollbarMode = sbmClassic
+            Style.LookAndFeel.SkinName = 'Coffee'
             Style.Shadow = False
             Style.IsFontAssigned = True
             StyleDisabled.LookAndFeel.Kind = lfOffice11
             StyleDisabled.LookAndFeel.NativeStyle = False
             StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleDisabled.LookAndFeel.SkinName = 'Coffee'
             StyleFocused.LookAndFeel.Kind = lfOffice11
             StyleFocused.LookAndFeel.NativeStyle = False
             StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleFocused.LookAndFeel.SkinName = 'Coffee'
             StyleHot.LookAndFeel.Kind = lfOffice11
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleHot.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 0
             Width = 156
           end
@@ -250,17 +261,21 @@ object fmBargainRate: TfmBargainRate
             Style.LookAndFeel.Kind = lfOffice11
             Style.LookAndFeel.NativeStyle = False
             Style.LookAndFeel.ScrollbarMode = sbmClassic
+            Style.LookAndFeel.SkinName = 'Coffee'
             Style.Shadow = False
             Style.IsFontAssigned = True
             StyleDisabled.LookAndFeel.Kind = lfOffice11
             StyleDisabled.LookAndFeel.NativeStyle = False
             StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleDisabled.LookAndFeel.SkinName = 'Coffee'
             StyleFocused.LookAndFeel.Kind = lfOffice11
             StyleFocused.LookAndFeel.NativeStyle = False
             StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleFocused.LookAndFeel.SkinName = 'Coffee'
             StyleHot.LookAndFeel.Kind = lfOffice11
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleHot.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 1
             Width = 156
           end
@@ -273,15 +288,19 @@ object fmBargainRate: TfmBargainRate
             Style.LookAndFeel.Kind = lfOffice11
             Style.LookAndFeel.NativeStyle = False
             Style.LookAndFeel.ScrollbarMode = sbmClassic
+            Style.LookAndFeel.SkinName = 'Coffee'
             StyleDisabled.LookAndFeel.Kind = lfOffice11
             StyleDisabled.LookAndFeel.NativeStyle = False
             StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleDisabled.LookAndFeel.SkinName = 'Coffee'
             StyleFocused.LookAndFeel.Kind = lfOffice11
             StyleFocused.LookAndFeel.NativeStyle = False
             StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleFocused.LookAndFeel.SkinName = 'Coffee'
             StyleHot.LookAndFeel.Kind = lfOffice11
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleHot.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 2
           end
         end
@@ -300,14 +319,14 @@ object fmBargainRate: TfmBargainRate
           object Label16: TLabel
             Left = 4
             Top = 36
-            Width = 180
+            Width = 150
             Height = 13
             Caption = #1058#1080#1087' '#1089#1090#1072#1074#1082#1080'...............................'
           end
           object Label2: TLabel
             Left = 4
             Top = 12
-            Width = 189
+            Width = 163
             Height = 13
             Caption = #1056#1086#1076' '#1087'/'#1089', '#1090#1080#1087' '#1082#1086#1085#1090'.........................'
           end
@@ -327,16 +346,20 @@ object fmBargainRate: TfmBargainRate
             Style.LookAndFeel.Kind = lfOffice11
             Style.LookAndFeel.NativeStyle = False
             Style.LookAndFeel.ScrollbarMode = sbmClassic
+            Style.LookAndFeel.SkinName = 'Coffee'
             Style.Shadow = False
             StyleDisabled.LookAndFeel.Kind = lfOffice11
             StyleDisabled.LookAndFeel.NativeStyle = False
             StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleDisabled.LookAndFeel.SkinName = 'Coffee'
             StyleFocused.LookAndFeel.Kind = lfOffice11
             StyleFocused.LookAndFeel.NativeStyle = False
             StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleFocused.LookAndFeel.SkinName = 'Coffee'
             StyleHot.LookAndFeel.Kind = lfOffice11
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleHot.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 0
             Width = 295
           end
@@ -356,16 +379,20 @@ object fmBargainRate: TfmBargainRate
             Style.LookAndFeel.Kind = lfOffice11
             Style.LookAndFeel.NativeStyle = False
             Style.LookAndFeel.ScrollbarMode = sbmClassic
+            Style.LookAndFeel.SkinName = 'Coffee'
             Style.Shadow = False
             StyleDisabled.LookAndFeel.Kind = lfOffice11
             StyleDisabled.LookAndFeel.NativeStyle = False
             StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleDisabled.LookAndFeel.SkinName = 'Coffee'
             StyleFocused.LookAndFeel.Kind = lfOffice11
             StyleFocused.LookAndFeel.NativeStyle = False
             StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleFocused.LookAndFeel.SkinName = 'Coffee'
             StyleHot.LookAndFeel.Kind = lfOffice11
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleHot.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 1
             Width = 295
           end
@@ -385,30 +412,30 @@ object fmBargainRate: TfmBargainRate
           object Label13: TLabel
             Left = 4
             Top = 11
-            Width = 173
+            Width = 163
             Height = 13
             Caption = #1042#1099#1073#1077#1088#1080#1090#1077' '#1089#1087#1080#1089#1086#1082' '#1089#1090#1072#1074#1086#1082'............'
           end
           object Label4: TLabel
             Left = 4
             Top = 34
-            Width = 234
+            Width = 226
             Height = 13
-            Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1053#1044#1057' '#1082' '#1089#1090#1072#1074#1082#1077'............................'
+            Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1053#1044#1057' '#1082' '#1089#1090#1072#1074#1082#1077'..................................'
           end
           object Label5: TLabel
             Left = 4
             Top = 56
-            Width = 231
+            Width = 229
             Height = 13
-            Caption = #1056#1072#1089#1089#1090#1086#1103#1085#1080#1077' '#1080#1079' '#1092#1072#1082#1090#1072'...............................'
+            Caption = #1056#1072#1089#1089#1090#1086#1103#1085#1080#1077' '#1080#1079' '#1092#1072#1082#1090#1072'........................................'
           end
           object Label6: TLabel
             Left = 4
             Top = 78
-            Width = 261
+            Width = 233
             Height = 13
-            Caption = #1056#1072#1089#1089#1090#1086#1103#1085#1080#1077' '#1080#1079' '#1087#1088#1077#1076'. '#1075#1088#1091#1078#1105#1085#1086#1081' '#1055#1077#1088#1077#1074#1086#1079#1082#1080'............'
+            Caption = #1056#1072#1089#1089#1090#1086#1103#1085#1080#1077' '#1080#1079' '#1087#1088#1077#1076'. '#1075#1088#1091#1078#1105#1085#1086#1081' '#1055#1077#1088#1077#1074#1086#1079#1082#1080'......'
             Visible = False
           end
           object cxComboBox4: TcxComboBox
@@ -420,16 +447,20 @@ object fmBargainRate: TfmBargainRate
             Style.LookAndFeel.Kind = lfOffice11
             Style.LookAndFeel.NativeStyle = False
             Style.LookAndFeel.ScrollbarMode = sbmClassic
+            Style.LookAndFeel.SkinName = 'Coffee'
             Style.Shadow = False
             StyleDisabled.LookAndFeel.Kind = lfOffice11
             StyleDisabled.LookAndFeel.NativeStyle = False
             StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleDisabled.LookAndFeel.SkinName = 'Coffee'
             StyleFocused.LookAndFeel.Kind = lfOffice11
             StyleFocused.LookAndFeel.NativeStyle = False
             StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleFocused.LookAndFeel.SkinName = 'Coffee'
             StyleHot.LookAndFeel.Kind = lfOffice11
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleHot.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 0
             Width = 270
           end
@@ -440,15 +471,19 @@ object fmBargainRate: TfmBargainRate
             Style.LookAndFeel.Kind = lfOffice11
             Style.LookAndFeel.NativeStyle = False
             Style.LookAndFeel.ScrollbarMode = sbmClassic
+            Style.LookAndFeel.SkinName = 'Coffee'
             StyleDisabled.LookAndFeel.Kind = lfOffice11
             StyleDisabled.LookAndFeel.NativeStyle = False
             StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleDisabled.LookAndFeel.SkinName = 'Coffee'
             StyleFocused.LookAndFeel.Kind = lfOffice11
             StyleFocused.LookAndFeel.NativeStyle = False
             StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleFocused.LookAndFeel.SkinName = 'Coffee'
             StyleHot.LookAndFeel.Kind = lfOffice11
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleHot.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 1
           end
           object cxCheckBox3: TcxCheckBox
@@ -458,15 +493,19 @@ object fmBargainRate: TfmBargainRate
             Style.LookAndFeel.Kind = lfOffice11
             Style.LookAndFeel.NativeStyle = False
             Style.LookAndFeel.ScrollbarMode = sbmClassic
+            Style.LookAndFeel.SkinName = 'Coffee'
             StyleDisabled.LookAndFeel.Kind = lfOffice11
             StyleDisabled.LookAndFeel.NativeStyle = False
             StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleDisabled.LookAndFeel.SkinName = 'Coffee'
             StyleFocused.LookAndFeel.Kind = lfOffice11
             StyleFocused.LookAndFeel.NativeStyle = False
             StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleFocused.LookAndFeel.SkinName = 'Coffee'
             StyleHot.LookAndFeel.Kind = lfOffice11
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleHot.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 2
           end
           object cxCheckBox4: TcxCheckBox
@@ -476,15 +515,19 @@ object fmBargainRate: TfmBargainRate
             Style.LookAndFeel.Kind = lfOffice11
             Style.LookAndFeel.NativeStyle = False
             Style.LookAndFeel.ScrollbarMode = sbmClassic
+            Style.LookAndFeel.SkinName = 'Coffee'
             StyleDisabled.LookAndFeel.Kind = lfOffice11
             StyleDisabled.LookAndFeel.NativeStyle = False
             StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleDisabled.LookAndFeel.SkinName = 'Coffee'
             StyleFocused.LookAndFeel.Kind = lfOffice11
             StyleFocused.LookAndFeel.NativeStyle = False
             StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleFocused.LookAndFeel.SkinName = 'Coffee'
             StyleHot.LookAndFeel.Kind = lfOffice11
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleHot.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 3
             Visible = False
           end
@@ -524,56 +567,56 @@ object fmBargainRate: TfmBargainRate
         object Label7: TLabel
           Left = 8
           Top = 12
-          Width = 151
+          Width = 127
           Height = 13
           Caption = #1042#1080#1076' '#1089#1073#1086#1088#1072'.........................'
         end
         object Label8: TLabel
           Left = 8
           Top = 35
-          Width = 155
+          Width = 127
           Height = 13
           Caption = #1057#1091#1084#1084#1072'...............................'
         end
         object Label9: TLabel
           Left = 8
           Top = 59
-          Width = 138
+          Width = 142
           Height = 13
-          Caption = #1058#1080#1087'..............................'
+          Caption = #1058#1080#1087'.........................................'
         end
         object Label10: TLabel
           Left = 8
           Top = 84
-          Width = 162
+          Width = 138
           Height = 13
           Caption = #1057#1090#1072#1074#1082#1072' '#1053#1044#1057'.........................'
         end
         object Label11: TLabel
           Left = 8
           Top = 108
-          Width = 156
+          Width = 130
           Height = 13
           Caption = #1042#1080#1076' '#1091#1089#1083#1091#1075#1080'.........................'
         end
         object Label12: TLabel
           Left = 8
           Top = 132
-          Width = 135
+          Width = 157
           Height = 13
-          Caption = #1058#1080#1087' '#1055#1057'.........................'
+          Caption = #1058#1080#1087' '#1055#1057'........................................'
         end
         object Label14: TLabel
           Left = 8
           Top = 156
-          Width = 171
+          Width = 144
           Height = 13
           Caption = #1052#1055#1057'/'#1057#1055#1057'...............................'
         end
         object Label15: TLabel
           Left = 8
           Top = 179
-          Width = 185
+          Width = 156
           Height = 13
           Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077'...............................'
         end
@@ -593,16 +636,20 @@ object fmBargainRate: TfmBargainRate
           Style.LookAndFeel.Kind = lfOffice11
           Style.LookAndFeel.NativeStyle = False
           Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
           Style.Shadow = False
           StyleDisabled.LookAndFeel.Kind = lfOffice11
           StyleDisabled.LookAndFeel.NativeStyle = False
           StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.Kind = lfOffice11
           StyleFocused.LookAndFeel.NativeStyle = False
           StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Width = 295
         end
@@ -620,17 +667,21 @@ object fmBargainRate: TfmBargainRate
           Style.LookAndFeel.Kind = lfOffice11
           Style.LookAndFeel.NativeStyle = False
           Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
           Style.Shadow = False
           Style.IsFontAssigned = True
           StyleDisabled.LookAndFeel.Kind = lfOffice11
           StyleDisabled.LookAndFeel.NativeStyle = False
           StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.Kind = lfOffice11
           StyleFocused.LookAndFeel.NativeStyle = False
           StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Width = 214
         end
@@ -650,16 +701,20 @@ object fmBargainRate: TfmBargainRate
           Style.LookAndFeel.Kind = lfOffice11
           Style.LookAndFeel.NativeStyle = False
           Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
           Style.Shadow = False
           StyleDisabled.LookAndFeel.Kind = lfOffice11
           StyleDisabled.LookAndFeel.NativeStyle = False
           StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.Kind = lfOffice11
           StyleFocused.LookAndFeel.NativeStyle = False
           StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Width = 80
         end
@@ -679,16 +734,20 @@ object fmBargainRate: TfmBargainRate
           Style.LookAndFeel.Kind = lfOffice11
           Style.LookAndFeel.NativeStyle = False
           Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
           Style.Shadow = False
           StyleDisabled.LookAndFeel.Kind = lfOffice11
           StyleDisabled.LookAndFeel.NativeStyle = False
           StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.Kind = lfOffice11
           StyleFocused.LookAndFeel.NativeStyle = False
           StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Width = 295
         end
@@ -708,16 +767,20 @@ object fmBargainRate: TfmBargainRate
           Style.LookAndFeel.Kind = lfOffice11
           Style.LookAndFeel.NativeStyle = False
           Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
           Style.Shadow = False
           StyleDisabled.LookAndFeel.Kind = lfOffice11
           StyleDisabled.LookAndFeel.NativeStyle = False
           StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.Kind = lfOffice11
           StyleFocused.LookAndFeel.NativeStyle = False
           StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Width = 295
         end
@@ -737,16 +800,20 @@ object fmBargainRate: TfmBargainRate
           Style.LookAndFeel.Kind = lfOffice11
           Style.LookAndFeel.NativeStyle = False
           Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
           Style.Shadow = False
           StyleDisabled.LookAndFeel.Kind = lfOffice11
           StyleDisabled.LookAndFeel.NativeStyle = False
           StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.Kind = lfOffice11
           StyleFocused.LookAndFeel.NativeStyle = False
           StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Width = 295
         end
@@ -766,16 +833,20 @@ object fmBargainRate: TfmBargainRate
           Style.LookAndFeel.Kind = lfOffice11
           Style.LookAndFeel.NativeStyle = False
           Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
           Style.Shadow = False
           StyleDisabled.LookAndFeel.Kind = lfOffice11
           StyleDisabled.LookAndFeel.NativeStyle = False
           StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.Kind = lfOffice11
           StyleFocused.LookAndFeel.NativeStyle = False
           StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 6
           Width = 295
         end
@@ -795,16 +866,20 @@ object fmBargainRate: TfmBargainRate
           Style.LookAndFeel.Kind = lfOffice11
           Style.LookAndFeel.NativeStyle = False
           Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
           Style.Shadow = False
           StyleDisabled.LookAndFeel.Kind = lfOffice11
           StyleDisabled.LookAndFeel.NativeStyle = False
           StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.Kind = lfOffice11
           StyleFocused.LookAndFeel.NativeStyle = False
           StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 7
           Width = 295
         end
@@ -815,16 +890,20 @@ object fmBargainRate: TfmBargainRate
           Style.LookAndFeel.Kind = lfOffice11
           Style.LookAndFeel.NativeStyle = False
           Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
           Style.Shadow = False
           StyleDisabled.LookAndFeel.Kind = lfOffice11
           StyleDisabled.LookAndFeel.NativeStyle = False
           StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.Kind = lfOffice11
           StyleFocused.LookAndFeel.NativeStyle = False
           StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 8
           Height = 51
           Width = 295
