@@ -1417,6 +1417,7 @@ object fmBargainList2: TfmBargainList2
             end
             object cxGridDBBandedTableView2lis_rate_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'lis_rate_id'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -3605,6 +3606,7 @@ object fmBargainList2: TfmBargainList2
               end>
             object cxGridDBBandedTableView1fact_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'fact_id'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = -1
@@ -3614,6 +3616,7 @@ object fmBargainList2: TfmBargainList2
             object cxGridDBBandedTableView1date_from_to: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1086#1090#1087'.'
               DataBinding.FieldName = 'date_from_to'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 70
               Position.BandIndex = 0
@@ -3623,6 +3626,7 @@ object fmBargainList2: TfmBargainList2
             object cxGridDBBandedTableView1datpr: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1087#1088#1080#1073'.'
               DataBinding.FieldName = 'datpr'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 70
               Position.BandIndex = 0
@@ -3632,6 +3636,7 @@ object fmBargainList2: TfmBargainList2
             object cxGridDBBandedTableView1num_vagon: TcxGridDBBandedColumn
               Caption = #8470' '#1074#1072#1075#1086#1085#1072
               DataBinding.FieldName = 'num_vagon'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -3641,6 +3646,7 @@ object fmBargainList2: TfmBargainList2
             object cxGridDBBandedTableView1num_document_pref: TcxGridDBBandedColumn
               Caption = #1057#1077#1088#1080#1103' '#1076#1086#1082'.'
               DataBinding.FieldName = 'num_document_pref'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 64
               Position.BandIndex = 0
@@ -3650,6 +3656,7 @@ object fmBargainList2: TfmBargainList2
             object cxGridDBBandedTableView1num_document: TcxGridDBBandedColumn
               Caption = #8470' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
               DataBinding.FieldName = 'num_document'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -3659,6 +3666,7 @@ object fmBargainList2: TfmBargainList2
             object cxGridDBBandedTableView1fact_weight: TcxGridDBBandedColumn
               Caption = #1042#1077#1089
               DataBinding.FieldName = 'fact_weight'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxCurrencyEditProperties'
               Properties.DisplayFormat = '#,##0.000'
               HeaderAlignmentVert = vaTop
@@ -3669,6 +3677,7 @@ object fmBargainList2: TfmBargainList2
             end
             object cxGridDBBandedTableView1type_kontener: TcxGridDBBandedColumn
               DataBinding.FieldName = 'type_kontener'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = -1
@@ -3678,6 +3687,7 @@ object fmBargainList2: TfmBargainList2
             object cxGridDBBandedTableView1type_kontener_name: TcxGridDBBandedColumn
               Caption = #1056#1086#1076' '#1087'/'#1089', '#1090#1080#1087' '#1082#1086#1085#1090
               DataBinding.FieldName = 'type_kontener_name'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -3686,6 +3696,7 @@ object fmBargainList2: TfmBargainList2
             end
             object cxGridDBBandedTableView1attr_self: TcxGridDBBandedColumn
               DataBinding.FieldName = 'attr_self'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = -1
@@ -3695,6 +3706,7 @@ object fmBargainList2: TfmBargainList2
             object cxGridDBBandedTableView1attr_self_name: TcxGridDBBandedColumn
               Caption = #1058#1080#1087' '#1089#1090#1072#1074#1082#1080
               DataBinding.FieldName = 'attr_self_name'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -3704,6 +3716,7 @@ object fmBargainList2: TfmBargainList2
             object cxGridDBBandedTableView1global_color: TcxGridDBBandedColumn
               Caption = #1062#1074#1077#1090' '#1079#1072#1087#1080#1089#1080
               DataBinding.FieldName = 'global_color'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxColorComboBoxProperties'
               Properties.CustomColors = <>
               HeaderAlignmentVert = vaTop
@@ -4556,120 +4569,12 @@ object fmBargainList2: TfmBargainList2
       ItemLinks = <
         item
           Visible = True
-          ItemName = 'dxBarSubItem20'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem21'
-        end
-        item
-          Visible = True
           ItemName = 'dxBarSubItem19'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem53'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem127'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem123'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem131'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem72'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem121'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem129'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem49'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem52'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem95'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem101'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem22'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem23'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem69'
         end
         item
           BeginGroup = True
           Visible = True
-          ItemName = 'dxBarSubItem48'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem56'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem27'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem29'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem26'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem102'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem47'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem71'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem90'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem42'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem4'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem134'
+          ItemName = 'dxBarSubItem100'
         end>
     end
     object dxBarSubItem17: TdxBarSubItem
@@ -4695,7 +4600,7 @@ object fmBargainList2: TfmBargainList2
     end
     object dxBarSubItem19: TdxBarSubItem
       Tag = 218
-      Caption = #1057#1090#1072#1074#1082#1080' '#1057#1060#1061
+      Caption = #1057#1090#1072#1074#1082#1080' '#1050#1086#1084#1087#1072#1085#1080#1080
       Category = 0
       Visible = ivAlways
       ItemLinks = <>
@@ -4730,38 +4635,6 @@ object fmBargainList2: TfmBargainList2
       Visible = ivAlways
       ImageIndex = 21
       OnClick = dxBarButton23Click
-    end
-    object dxBarSubItem20: TdxBarSubItem
-      Tag = 248
-      Caption = #1057#1090#1072#1074#1082#1080' '#1042#1041#1062#1047
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem21: TdxBarSubItem
-      Tag = 249
-      Caption = #1057#1090#1072#1074#1082#1080' '#1057#1077#1088#1077#1073#1088#1103#1085#1089#1082#1080#1081' '#1062#1047
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem22: TdxBarSubItem
-      Tag = 279
-      Caption = #1057#1090#1072#1074#1082#1080' '#1058#1040#1048#1060
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem23: TdxBarSubItem
-      Tag = 265
-      Caption = #1057#1090#1072#1074#1082#1080' '#1058#1088#1072#1085#1089#1057#1077#1088#1074#1080#1089
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
     end
     object dxBarButton19: TdxBarButton
       Caption = #1048#1085#1092#1086#1088#1084#1072#1094#1080#1103' '#1086' '#1074#1072#1075#1086#1085#1077'...'
@@ -4885,196 +4758,6 @@ object fmBargainList2: TfmBargainList2
       Style = cxStyle_Bold
       Visible = ivAlways
       OnClick = dxBarButton32Click
-    end
-    object dxBarSubItem4: TdxBarSubItem
-      Caption = #1057#1077#1090#1082#1080' '#1064#1091#1074#1072#1077#1074' '#1040'.'#1045'.'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem31'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem32'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem33'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem80'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem81'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem34'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem35'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem36'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem38'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem39'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem40'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem41'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem64'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem67'
-        end>
-    end
-    object dxBarSubItem26: TdxBarSubItem
-      Caption = #1057#1077#1090#1082#1080' '#1052#1072#1082#1089#1080#1084#1086#1074#1072' '#1053'.'#1045'.'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem44'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem45'
-        end>
-    end
-    object dxBarSubItem27: TdxBarSubItem
-      Caption = #1057#1077#1090#1082#1080' '#1046#1077#1083#1077#1079#1085#1103#1082#1086#1074#1072' '#1045'.'#1043'.'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem46'
-        end>
-    end
-    object dxBarSubItem31: TdxBarSubItem
-      Tag = 244
-      Caption = #1057#1077#1090#1082#1080' '#1043#1055#1058' ('#1064#1091#1074#1072#1077#1074' '#1040'.'#1045'.)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem32: TdxBarSubItem
-      Tag = 245
-      Caption = #1057#1077#1090#1082#1080' '#1053#1055#1050' ('#1064#1091#1074#1072#1077#1074' '#1040'.'#1045'.)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem33: TdxBarSubItem
-      Tag = 246
-      Caption = #1057#1077#1090#1082#1080' '#1057#1060#1061' ('#1064#1091#1074#1072#1077#1074' '#1040'.'#1045'.)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem34: TdxBarSubItem
-      Tag = 247
-      Caption = #1057#1077#1090#1082#1080' '#1060#1043#1050' ('#1064#1091#1074#1072#1077#1074' '#1040'.'#1045'.)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem35: TdxBarSubItem
-      Tag = 286
-      Caption = #1057#1077#1090#1082#1080' '#1053#1057'-'#1058#1088#1072#1085#1089' ('#1064#1091#1074#1072#1077#1074' '#1040'.'#1045'.)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem36: TdxBarSubItem
-      Tag = 287
-      Caption = #1057#1077#1090#1082#1080' '#1069#1082#1090#1077#1082#1086' ('#1064#1091#1074#1072#1077#1074' '#1040'.'#1045'.)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem38: TdxBarSubItem
-      Tag = 296
-      Caption = 'C'#1077#1090#1082#1072' '#1057#1069#1058' ('#1064#1091#1074#1072#1077#1074' '#1040'.'#1045'.)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem39: TdxBarSubItem
-      Tag = 297
-      Caption = #1057#1077#1090#1082#1072' '#1048#1057#1056' '#1058#1088#1072#1085#1089' ('#1064#1091#1074#1072#1077#1074' '#1040'.'#1045'.)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem40: TdxBarSubItem
-      Tag = 299
-      Caption = #1057#1077#1090#1082#1072' '#1062#1058#1057' ('#1064#1091#1074#1072#1077#1074' '#1040'.'#1045'.)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem41: TdxBarSubItem
-      Tag = 298
-      Caption = #1057#1077#1090#1082#1072' '#1055#1043#1050' ('#1064#1091#1074#1072#1077#1074' '#1040'.'#1045'.)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem44: TdxBarSubItem
-      Tag = 294
-      Caption = #1057#1090#1072#1074#1082#1080' '#1053#1055#1050' ('#1052#1072#1082#1089#1080#1084#1086#1074#1072' '#1053'.'#1045'.)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem45: TdxBarSubItem
-      Tag = 267
-      Caption = #1057#1077#1090#1082#1072' '#1043#1055#1058' ('#1052#1072#1082#1089#1080#1084#1086#1074#1072' '#1053'.'#1045'.)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem46: TdxBarSubItem
-      Tag = 280
-      Caption = #1057#1090#1072#1074#1082#1080' '#1053#1055#1050' ('#1046#1077#1083#1077#1079#1085#1103#1082#1086#1074#1072')'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
     end
     object dxBarSeparator2: TdxBarSeparator
       Caption = #1050#1086#1085#1090#1088#1072#1075#1077#1085#1090
@@ -5214,14 +4897,6 @@ object fmBargainList2: TfmBargainList2
       PaintStyle = psCaptionGlyph
       OnClick = dxBarButton34Click
     end
-    object dxBarSubItem64: TdxBarSubItem
-      Tag = 313
-      Caption = #1057#1077#1090#1082#1072' '#1040#1053#1055#1047' ('#1064#1091#1074#1072#1077#1074' '#1040'.'#1045'.)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
     object dxBarSubItem65: TdxBarSubItem
       Caption = #1044#1077#1081#1089#1090#1074#1080#1103' '#1089#1086' '#1089#1090#1072#1074#1082#1072#1084#1080
       Category = 0
@@ -5259,22 +4934,6 @@ object fmBargainList2: TfmBargainList2
       ItemLinks = <>
       OnPopup = dxBarSubItem66Popup
     end
-    object dxBarSubItem67: TdxBarSubItem
-      Tag = 318
-      Caption = #1057#1090#1072#1074#1082#1080' '#1053#1058#1057' ('#1064#1091#1074#1072#1077#1074' '#1040'.'#1045'.)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem69: TdxBarSubItem
-      Tag = 320
-      Caption = #1057#1090#1072#1074#1082#1080' '#1059#1088#1072#1083#1058#1088#1072#1085#1079#1080#1090#1058#1088#1072#1085#1089' '
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
     object dxBarButton42: TdxBarButton
       Caption = #1055#1086#1082#1072#1079#1072#1090#1100' '#1082#1086#1084#1080#1089#1089#1080#1102
       Category = 0
@@ -5292,70 +4951,6 @@ object fmBargainList2: TfmBargainList2
       ImageIndex = 18
       ItemLinks = <>
       OnPopup = dxBarSubItem70Popup
-    end
-    object dxBarSubItem53: TdxBarSubItem
-      Tag = 347
-      Caption = #1057#1090#1072#1074#1082#1080' '#1057#1060#1061' (01.04.2016)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem56: TdxBarSubItem
-      Caption = #1057#1077#1090#1082#1080' '#1044#1086#1079#1086#1088#1072' '#1054'.'#1048'.'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem58'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem73'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem74'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem78'
-        end>
-    end
-    object dxBarSubItem58: TdxBarSubItem
-      Tag = 357
-      Caption = #1057#1090#1072#1074#1082#1080' '#1048#1090#1072#1090#1089#1082#1080#1081' '#1053#1055#1047
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem47: TdxBarSubItem
-      Caption = #1057#1077#1090#1082#1080' '#1055#1091#1096#1082#1080#1085' '#1040'.'#1057'.'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem94'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem30'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem113'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem68'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem112'
-        end>
     end
     object dxBarButton44: TdxBarButton
       Caption = #1047#1072#1087#1086#1083#1085#1080#1090#1100' '#1088#1072#1089#1089#1090#1086#1103#1085#1080#1077
@@ -5398,72 +4993,6 @@ object fmBargainList2: TfmBargainList2
       ImageIndex = 142
       OnClick = dxBarButton45Click
     end
-    object dxBarSubItem73: TdxBarSubItem
-      Tag = 385
-      Caption = #1057#1090#1072#1074#1082#1080' '#1048#1053#1055#1047' '#1103#1085#1074#1072#1088#1100' 2017'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem74: TdxBarSubItem
-      Tag = 386
-      Caption = #1057#1090#1072#1074#1082#1080' '#1053#1058#1057' '#1044#1043#1050' 2016'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem78: TdxBarSubItem
-      Tag = 387
-      Caption = #1057#1090#1072#1074#1082#1080' '#1060#1043#1050' '#1044#1043#1050' 2016'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem80: TdxBarSubItem
-      Tag = 391
-      Caption = #1057#1077#1090#1082#1080' '#1057#1060#1061' '#1071#1085#1074#1072#1088#1100' 2017'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem81: TdxBarSubItem
-      Tag = 392
-      Caption = #1057#1077#1090#1082#1080' '#1057#1060#1061' '#1060#1077#1074#1088#1072#1083#1100' 2017'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem90: TdxBarSubItem
-      Caption = #1057#1077#1090#1082#1080' '#1058#1080#1086#1093#1080#1085#1072' '#1043'.'#1070'.'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem140'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem141'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem142'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem143'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem144'
-        end>
-    end
     object dxBarButton47: TdxBarButton
       Caption = 
         #1056#1072#1079#1085#1077#1089#1090#1080' '#1085#1072' '#1090#1080#1087#1099' '#1089#1090#1072#1074#1086#1082' - '#1087#1086' '#1085#1072#1087#1088#1072#1074#1083#1077#1085#1080#1103#1084' '#1080' '#1089#1086#1073#1089#1090#1074#1077#1085#1085#1080#1082#1072#1084' ('#1057#1087#1088#1072#1074 +
@@ -5496,24 +5025,6 @@ object fmBargainList2: TfmBargainList2
       Visible = ivAlways
       ItemLinks = <>
       OnPopup = dxBarSubItem107Popup
-    end
-    object dxBarSubItem71: TdxBarSubItem
-      Caption = #1057#1077#1090#1082#1080' '#1057#1072#1076#1099#1082#1086#1074#1086#1081' '#1045'.'#1040'.'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem122'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem61'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem132'
-        end>
     end
     object dxBarButton51: TdxBarButton
       Caption = #1055#1043#1050' ('#1057#1099#1079#1088#1072#1085#1100')'
@@ -5567,440 +5078,6 @@ object fmBargainList2: TfmBargainList2
       Hint = 'New Button'
       Visible = ivNever
       OnClick = dxBarButton36Click
-    end
-    object dxBarSubItem42: TdxBarSubItem
-      Caption = #1057#1077#1090#1082#1080' '#1062#1099#1075#1072#1085#1086#1074#1072' '#1054'. '#1042'.'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem84'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem92'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem93'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem85'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem128'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem96'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem117'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem119'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem126'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem130'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem133'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem136'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem43'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem97'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem120'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem124'
-        end>
-    end
-    object dxBarSubItem94: TdxBarSubItem
-      Tag = 490
-      Caption = #1053#1058#1057' '#1089' 30.01.2018'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem113: TdxBarSubItem
-      Tag = 492
-      Caption = #1043#1072#1079#1087#1088#1086#1084#1090#1088#1072#1085#1089' '#1089' 30.01.2018'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem122: TdxBarSubItem
-      Tag = 502
-      Caption = #1055#1043#1050' ('#1057#1099#1079#1088#1072#1085#1100') '#1089' 30.01.2018'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem127: TdxBarSubItem
-      Tag = 493
-      Caption = #1057#1090#1072#1074#1082#1080' '#1057#1060#1061' (01.01.2018)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem30: TdxBarSubItem
-      Tag = 516
-      Caption = #1053#1058#1057' '#1057#1072#1088#1072#1090#1086#1074' '#1089' 01.03.2018'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem102: TdxBarSubItem
-      Caption = #1057#1077#1090#1082#1080' '#1050#1072#1085#1072#1082#1086#1074' '#1052'.'#1042'.'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem59'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem60'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem86'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem91'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem106'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem116'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem138'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem139'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton37'
-        end>
-    end
-    object dxBarSubItem61: TdxBarSubItem
-      Tag = 529
-      Caption = #1053#1047#1053#1055' '#1089' 01.06.2018'#1075'.'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem68: TdxBarSubItem
-      Tag = 530
-      Caption = #1043#1072#1079#1087#1088#1086#1084#1090#1088#1072#1085#1089' '#1089' 13.06.2018'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem72: TdxBarSubItem
-      Tag = 521
-      Caption = #1057#1090#1072#1074#1082#1080' '#1057#1060#1061' '#1087#1086#1088#1086#1078' (01.04.2018)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem59: TdxBarSubItem
-      Tag = 524
-      Caption = #1057#1077#1090#1082#1072' '#1058#1053#1058' 01.01.2018'
-      Category = 0
-      Visible = ivAlways
-      OnClick = dxBarSubItem19Popup
-      ItemLinks = <>
-    end
-    object dxBarSubItem60: TdxBarSubItem
-      Tag = 525
-      Caption = #1057#1077#1090#1082#1072' '#1056#1058#1057' 20-01-2018'
-      Category = 0
-      Visible = ivAlways
-      OnClick = dxBarSubItem19Popup
-      ItemLinks = <>
-    end
-    object dxBarSubItem86: TdxBarSubItem
-      Tag = 526
-      Caption = #1057#1077#1090#1082#1072' '#1058#1040#1048#1060' '#1055#1088#1077#1076#1086#1089#1090#1072#1074#1083#1077#1085#1080#1077' 30-01-2018'
-      Category = 0
-      Visible = ivAlways
-      OnClick = dxBarSubItem19Popup
-      ItemLinks = <>
-    end
-    object dxBarSubItem91: TdxBarSubItem
-      Tag = 527
-      Caption = #1057#1077#1090#1082#1072' '#1058#1040#1048#1060' '#1058#1072#1088#1080#1092' 30-01-2018'
-      Category = 0
-      Visible = ivAlways
-      OnClick = dxBarSubItem19Popup
-      ItemLinks = <>
-    end
-    object dxBarSubItem106: TdxBarSubItem
-      Tag = 533
-      Caption = #1057#1077#1090#1082#1072'_'#1058#1040#1048#1060'_'#1055#1088#1077#1076#1086#1089#1090#1072#1074#1083#1077#1085#1080#1077'_'#1056#1058'_30-01-2018'
-      Category = 0
-      Visible = ivAlways
-      OnClick = dxBarSubItem19Popup
-      ItemLinks = <>
-    end
-    object dxBarSubItem112: TdxBarSubItem
-      Tag = 534
-      Caption = #1057#1077#1090#1082#1072' '#1060#1043#1050
-      Category = 0
-      Hint = #1057#1077#1090#1082#1072' '#1060#1043#1050
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem116: TdxBarSubItem
-      Tag = 537
-      Caption = #1057#1077#1090#1082#1072'_'#1058#1053#1058'_'#1055#1088#1077#1076#1086#1089#1090#1072#1074#1083#1077#1085#1080#1077'_'#1056#1058'_'#1087#1088#1080#1083'16'
-      Category = 0
-      Visible = ivAlways
-      OnClick = dxBarSubItem19Popup
-      ItemLinks = <>
-    end
-    object dxBarSubItem121: TdxBarSubItem
-      Tag = 540
-      Caption = #1057#1090#1072#1074#1082#1080' '#1057#1060#1061' '#1087#1086#1088#1086#1078' (01.10.2018)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem123: TdxBarSubItem
-      Tag = 541
-      Caption = #1057#1090#1072#1074#1082#1080' '#1057#1060#1061' (01.10.2018)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem124: TdxBarSubItem
-      Tag = 542
-      Caption = #1048#1057#1056' '#1053#1080#1082#1077#1083#1100
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem129: TdxBarSubItem
-      Tag = 544
-      Caption = #1057#1090#1072#1074#1082#1080' '#1057#1060#1061' '#1087#1086#1088#1086#1078' (01.11.2018)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem131: TdxBarSubItem
-      Tag = 545
-      Caption = #1057#1090#1072#1074#1082#1080' '#1057#1060#1061' (01.11.2018)'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem132: TdxBarSubItem
-      Tag = 546
-      Caption = #1055#1043#1050' ('#1058#1072#1090#1100#1103#1085#1082#1072') '#1089' 01.11.18'
-      Category = 0
-      Hint = #1055#1043#1050' ('#1058#1072#1090#1100#1103#1085#1082#1072') '#1089' 01.11.18'
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem134: TdxBarSubItem
-      Caption = #1057#1077#1090#1082#1080' '#1043#1091#1089#1077#1074#1072' '#1045'.'#1057'.'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem135'
-        end>
-    end
-    object dxBarSubItem135: TdxBarSubItem
-      Tag = 547
-      Caption = #1045#1058#1057' '#1053#1086#1103#1073#1088#1100' 2018'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarButton37: TdxBarButton
-      Caption = 'New Button'
-      Category = 0
-      Hint = 'New Button'
-      Visible = ivNever
-    end
-    object dxBarSubItem137: TdxBarSubItem
-      Tag = 556
-      Caption = #1057#1077#1090#1082#1072' '#1053#1077#1092#1090#1077#1061#1080#1084#1057#1077#1088#1074#1080#1089' c 01 '#1103#1085#1074#1072#1088#1103' 19'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem138: TdxBarSubItem
-      Tag = 561
-      Caption = #1057#1077#1090#1082#1072'_'#1058#1040#1048#1060'_01-01-2019_'#1058#1072#1088#1080#1092'_'#1055#1088#1080#1083'67'
-      Category = 0
-      Visible = ivAlways
-      OnClick = dxBarSubItem19Popup
-      ItemLinks = <>
-    end
-    object dxBarSubItem139: TdxBarSubItem
-      Tag = 562
-      Caption = #1057#1077#1090#1082#1072'_'#1058#1040#1048#1060'_01-01-2019_'#1055#1088#1077#1076#1086#1089#1090#1072#1074#1083#1077#1085#1080#1077'_'#1055#1088#1080#1083'67'
-      Category = 0
-      Visible = ivAlways
-      OnClick = dxBarSubItem19Popup
-      ItemLinks = <>
-    end
-    object dxBarSubItem140: TdxBarSubItem
-      Tag = 564
-      Caption = #1057#1077#1073#1088#1103#1082#1086#1074#1094#1077#1084#1077#1085#1090' 01.01.19-31.03.19'
-      Category = 0
-      Visible = ivAlways
-      OnClick = dxBarSubItem19Popup
-      ItemLinks = <>
-    end
-    object dxBarSubItem141: TdxBarSubItem
-      Tag = 565
-      Caption = #1057#1077#1073#1088#1103#1082#1086#1074#1094#1077#1084#1077#1085#1090' 01.04.19-31.12.19'
-      Category = 0
-      Visible = ivAlways
-      OnClick = dxBarSubItem19Popup
-      ItemLinks = <>
-    end
-    object dxBarSubItem142: TdxBarSubItem
-      Tag = 566
-      Caption = #1057#1091#1093#1086#1083#1086#1078#1089#1082#1094#1077#1084#1077#1085#1090' 01.01.19-31.03.19'
-      Category = 0
-      Visible = ivAlways
-      OnClick = dxBarSubItem19Popup
-      ItemLinks = <>
-    end
-    object dxBarSubItem143: TdxBarSubItem
-      Tag = 567
-      Caption = #1040#1079#1080#1103' '#1094#1077#1084#1077#1085#1090' 01.01.19-31.03.19'
-      Category = 0
-      Visible = ivAlways
-      OnClick = dxBarSubItem19Popup
-      ItemLinks = <>
-    end
-    object dxBarSubItem144: TdxBarSubItem
-      Tag = 568
-      Caption = #1061#1062' '#1042#1086#1083#1075#1072' 01.01.19-31.03.19'
-      Category = 0
-      Visible = ivAlways
-      OnClick = dxBarSubItem19Popup
-      ItemLinks = <>
-    end
-    object dxBarSubItem49: TdxBarSubItem
-      Tag = 572
-      Caption = #1057#1090#1072#1074#1082#1080' '#1057#1060#1061' + '#1087#1086#1088#1086#1078'. 01.01.2019'
-      Category = 0
-      Visible = ivAlways
-      OnClick = dxBarSubItem19Popup
-      ItemLinks = <>
-    end
-    object dxBarSubItem52: TdxBarSubItem
-      Tag = 573
-      Caption = #1057#1090#1072#1074#1082#1080' '#1057#1060#1061'  01.01.2019 '#1073#1077#1079' '#1087#1086#1088#1086#1078
-      Category = 0
-      Visible = ivAlways
-      OnClick = dxBarSubItem19Popup
-      ItemLinks = <>
-    end
-    object dxBarSubItem54: TdxBarSubItem
-      Tag = 576
-      Caption = #1057#1077#1090#1082#1072' '#1050#1058#1050' c 01 '#1103#1085#1074#1072#1088#1103' 2019'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem84: TdxBarSubItem
-      Tag = 581
-      Caption = #1055#1043#1050' '#1057#1091#1093#1086#1074#1089#1082#1072#1103' 2019'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem92: TdxBarSubItem
-      Tag = 580
-      Caption = #1055#1043#1050' '#1057#1090#1077#1085#1100#1082#1080#1085#1086' 2019'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem93: TdxBarSubItem
-      Tag = 579
-      Caption = #1055#1043#1050' '#1057#1072#1084#1072#1088#1072' 2019'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem95: TdxBarSubItem
-      Tag = 584
-      Caption = #1057#1090#1072#1074#1082#1080' '#1057#1060#1061' + '#1087#1086#1088#1086#1078'. 01.02.2019'
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem101: TdxBarSubItem
-      Tag = 585
-      Caption = #1057#1090#1072#1074#1082#1080' '#1057#1060#1061'  01.02.2019 '#1073#1077#1079' '#1087#1086#1088#1086#1078
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
     end
     object dxBarSubItem104: TdxBarSubItem
       Caption = #1042#1099#1073#1088#1072#1090#1100' '#1089#1077#1090#1082#1091' '#1080#1079' '#1089#1087#1088#1072#1074#1086#1095#1085#1080#1082#1072
@@ -6105,376 +5182,15 @@ object fmBargainList2: TfmBargainList2
       ImageIndex = 127
       OnClick = dxBarButton52Click
     end
-    object dxBarSubItem48: TdxBarSubItem
-      Caption = #1057#1077#1090#1082#1080' '#1041#1088#1072#1090#1072#1096#1077#1085#1082#1086' '#1048'.'#1040'.'
-      Category = 1
-      Visible = ivAlways
-      ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem50'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem51'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem57'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem75'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem79'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem76'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem77'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem25'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem82'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem83'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem88'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem89'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem87'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem98'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem99'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem103'
-        end
-        item
-          BeginGroup = True
-          Visible = True
-          ItemName = 'dxBarSubItem100'
-        end>
-    end
-    object dxBarSubItem77: TdxBarSubItem
-      Tag = 351
-      Caption = #1057#1090#1072#1074#1082#1080' '#1056#1053'-'#1058#1088#1085#1072#1089' '#1044#1079#1077#1084#1075#1080
-      Category = 1
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem50: TdxBarSubItem
-      Tag = 238
-      Caption = #1057#1090#1072#1074#1082#1080' '#1058#1088#1072#1085#1089' '#1057#1080#1085#1077#1088#1075#1080#1103
-      Category = 1
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem109: TdxBarSubItem
-      Tag = 416
-      Caption = #1058#1086#1087#1083#1080#1074#1086
-      Category = 1
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem107Popup
-    end
-    object dxBarSubItem108: TdxBarSubItem
-      Tag = 415
-      Caption = #1050#1077#1088#1086#1089#1086#1085
-      Category = 1
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem107Popup
-    end
     object dxBarSubItem100: TdxBarSubItem
-      Caption = #1057#1090#1072#1074#1082#1080' '#1053#1080#1082#1077#1083#1100' '#1040#1079#1080#1103' ('#1087#1086' '#1087#1086#1075#1088#1072#1085#1087#1077#1088#1077#1093#1086#1076#1072#1084')'
+      Caption = #1057#1090#1072#1074#1082#1080'  ('#1087#1086' '#1087#1086#1075#1088#1072#1085#1087#1077#1088#1077#1093#1086#1076#1072#1084')'
       Category = 1
       Visible = ivAlways
       ItemLinks = <
         item
           Visible = True
           ItemName = 'dxBarSubItem107'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem108'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem109'
         end>
-    end
-    object dxBarSubItem103: TdxBarSubItem
-      Tag = 480
-      Caption = #1048#1057#1056' '#1053#1080#1082#1077#1083#1100'  '#1042#1056' 2017'
-      Category = 1
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem99: TdxBarSubItem
-      Tag = 474
-      Caption = #1057#1090#1072#1074#1082#1080' '#1043#1069#1057' '#1050#1086#1083#1086#1076#1077#1079#1085#1072#1103'  '#1089' 01.05.17'
-      Category = 1
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem98: TdxBarSubItem
-      Tag = 475
-      Caption = #1057#1090#1072#1074#1082#1080' '#1043#1069#1057' '#1053#1080#1082#1086#1083#1100#1089#1082#1086#1077' '#1089' 01.05.17'
-      Category = 1
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem87: TdxBarSubItem
-      Tag = 402
-      Caption = #1057#1090#1072#1074#1082#1080' '#1058#1088#1072#1085#1089' '#1057#1080#1085#1077#1088#1075#1080#1103' '#1053#1086#1074#1086#1082#1091#1081#1073#1099#1096#1077#1074#1089#1082#1072#1103' c 01.02.2017'
-      Category = 1
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem89: TdxBarSubItem
-      Tag = 400
-      Caption = #1057#1090#1072#1074#1082#1080' '#1055#1043#1050' '#1057#1090#1077#1085#1100#1082#1080#1085#1086' '#1089' 01.02.17'
-      Category = 1
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem88: TdxBarSubItem
-      Tag = 399
-      Caption = #1057#1090#1072#1074#1082#1080' '#1055#1043#1050' '#1057#1091#1093#1086#1074#1089#1082#1072#1103' '#1089' 01.02.17'
-      Category = 1
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem83: TdxBarSubItem
-      Tag = 394
-      Caption = #1057#1090#1072#1074#1082#1080' '#1048#1090#1077#1082' '#1057#1090#1077#1085#1100#1082#1080#1085#1086
-      Category = 1
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem82: TdxBarSubItem
-      Tag = 393
-      Caption = #1057#1090#1072#1074#1082#1080' '#1048#1090#1077#1082' '#1057#1091#1093#1086#1074#1089#1082#1072#1103
-      Category = 1
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem25: TdxBarSubItem
-      Tag = 362
-      Caption = #1057#1090#1072#1074#1082#1080' '#1055#1043#1050' '#1087#1077#1088#1077#1072#1076#1088#1077#1089#1072#1094#1080#1103
-      Category = 1
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem76: TdxBarSubItem
-      Tag = 350
-      Caption = #1057#1090#1072#1074#1082#1080' '#1056#1053'-'#1058#1088#1072#1085#1089' '#1041#1086#1076#1077#1077#1074#1086
-      Category = 1
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem79: TdxBarSubItem
-      Tag = 390
-      Caption = #1057#1090#1072#1074#1082#1080' '#1055#1043#1050' '#1057#1091#1093#1086#1074#1089#1082#1072#1103' 2017'
-      Category = 1
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem75: TdxBarSubItem
-      Tag = 349
-      Caption = #1057#1090#1072#1074#1082#1080' '#1055#1043#1050' '#1057#1091#1093#1086#1074#1089#1082#1072#1103' 2016'
-      Category = 1
-      Visible = ivNever
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem57: TdxBarSubItem
-      Tag = 348
-      Caption = #1057#1090#1072#1074#1082#1080' '#1055#1043#1050' '#1057#1090#1077#1085#1100#1082#1080#1085#1086
-      Category = 1
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem51: TdxBarSubItem
-      Tag = 346
-      Caption = #1057#1090#1072#1074#1082#1080' '#1056#1053'-'#1058#1088#1072#1085#1089
-      Category = 1
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem29: TdxBarSubItem
-      Caption = #1057#1077#1090#1082#1080' '#1050#1080#1088#1077#1077#1074#1072' '#1053'.'#1042'.'
-      Category = 2
-      Visible = ivAlways
-      ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem55'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem118'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem137'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem54'
-        end>
-    end
-    object dxBarSubItem55: TdxBarSubItem
-      Tag = 520
-      Caption = #1057#1077#1090#1082#1072' '#1053#1077#1092#1090#1077#1061#1080#1084#1057#1077#1088#1074#1080#1089' c 01 '#1085#1086#1103#1073#1088#1103' 18'
-      Category = 2
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem118: TdxBarSubItem
-      Tag = 538
-      Caption = #1057#1077#1090#1082#1072' '#1050#1058#1050
-      Category = 2
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem120: TdxBarSubItem
-      Tag = 539
-      Caption = #1055#1043#1050' '#1057#1072#1084#1072#1088#1072
-      Category = 9
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem85: TdxBarSubItem
-      Tag = 487
-      Caption = #1056#1085'-'#1058#1088#1072#1085#1089' '#1044#1079#1077#1084#1075#1080' '#1089' 30 '#1103#1085#1074#1072#1088#1103
-      Category = 9
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem43: TdxBarSubItem
-      Tag = 528
-      Caption = #1057#1090#1072#1074#1082#1080' '#1060#1043#1050' '#1053#1086#1074#1086#1082#1091#1081#1073#1099#1096#1077#1074#1089#1082#1072#1103
-      Category = 9
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem97: TdxBarSubItem
-      Tag = 531
-      Caption = #1057#1090#1072#1074#1082#1080' '#1060#1043#1050' '#1053#1086#1074#1086#1082#1091#1081#1073#1099#1096#1077#1074#1089#1082#1072#1103' '#1084#1072#1089#1083#1072
-      Category = 9
-      Visible = ivAlways
-      OnClick = dxBarSubItem19Popup
-      ItemLinks = <>
-    end
-    object dxBarSubItem136: TdxBarSubItem
-      Tag = 515
-      Caption = #1057#1090#1072#1074#1082#1080' '#1048#1090#1077#1082' '#1057#1091#1093#1086#1074#1089#1082#1072#1103' '#1089' 30'
-      Category = 9
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem133: TdxBarSubItem
-      Tag = 512
-      Caption = #1055#1043#1050' '#1057#1091#1093#1086#1074#1089#1082#1072#1103' '#1086#1089#1085' '#1089' 30 '#1103#1085#1074
-      Category = 9
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem130: TdxBarSubItem
-      Tag = 509
-      Caption = #1055#1043#1050' '#1057#1091#1093#1086#1074#1089#1082#1072#1103' '#1076#1086#1087'. '#1089' 30 '#1103#1085#1074
-      Category = 9
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem119: TdxBarSubItem
-      Tag = 499
-      Caption = #1057#1090#1072#1074#1082#1080' '#1058#1057#1057' '#1053#1086#1074#1086#1082#1091#1081#1073#1099#1096#1077#1074#1089#1082#1072#1103' '#1089' 30  '#1103#1085#1074#1072#1088#1103
-      Category = 9
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem126: TdxBarSubItem
-      Tag = 506
-      Caption = #1057#1090#1072#1074#1082#1080' '#1048#1090#1077#1082' '#1057#1090#1077#1085#1100#1082#1080#1085#1086' '#1089' 30 '#1103#1085#1074#1072#1088#1103
-      Category = 9
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem117: TdxBarSubItem
-      Tag = 497
-      Caption = #1057#1090#1072#1074#1082#1080' '#1055#1043#1050' '#1057#1090#1077#1085#1100#1082#1080#1085#1086' '#1089' 30 '#1103#1085#1074#1072#1088#1103
-      Category = 9
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem96: TdxBarSubItem
-      Tag = 522
-      Caption = #1056#1053'-'#1058#1088#1072#1085#1089' '#1041#1086#1076#1077#1077#1074#1086
-      Category = 9
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
-    end
-    object dxBarSubItem128: TdxBarSubItem
-      Tag = 494
-      Caption = #1056#1085'-'#1058#1088#1072#1085#1089' '#1044#1079#1077#1084#1075#1080' '#1089' 30 '#1103#1085#1074#1072#1088#1103', '#1087#1086#1076#1088#1103#1076#1095#1080#1082' '#1055#1043#1050
-      Category = 9
-      Visible = ivAlways
-      ItemLinks = <>
-      OnPopup = dxBarSubItem19Popup
     end
   end
   object dxBarPopupMenu1: TdxBarPopupMenu
