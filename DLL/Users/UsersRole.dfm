@@ -55,12 +55,10 @@ object fmUsersRole: TfmUsersRole
     808080800601808080808080808080808080808080808080808080808080F80F
     FFFFF007FFFFF003FFFFF007FFFFF003FFFFF031FFFFE01BFFFFE01FFFFFE01F
     FFFFE01FFFFFE01FFFFFF87FFFFFF87FFFFFF87FFFFFFCFFFFFFFFFFFFFF}
-  OldCreateOrder = False
   Position = poDefault
   OnClose = FormClose
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object cxPageControl2: TcxPageControl
     Left = 0
@@ -77,6 +75,10 @@ object fmUsersRole: TfmUsersRole
     TabOrder = 0
     Properties.ActivePage = cxTabSheet2
     Properties.CustomButtons.Buttons = <>
+    LookAndFeel.Kind = lfUltraFlat
+    LookAndFeel.NativeStyle = False
+    LookAndFeel.ScrollbarMode = sbmClassic
+    LookAndFeel.ScrollMode = scmClassic
     OnChange = cxPageControl2Change
     ClientRectBottom = 574
     ClientRectRight = 1035
@@ -117,11 +119,13 @@ object fmUsersRole: TfmUsersRole
           TabOrder = 0
           LookAndFeel.Kind = lfUltraFlat
           LookAndFeel.ScrollbarMode = sbmClassic
+          LookAndFeel.SkinName = 'Office2007Black'
           object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
             PopupMenu = dxBarPopup_User
             OnDblClick = dxBarButton6Click
             OnKeyPress = cxGrid1DBBandedTableView1KeyPress
             Navigator.Buttons.CustomButtons = <>
+            ScrollbarAnnotations.CustomAnnotations = <>
             OnCustomDrawCell = cxGrid1DBBandedTableView1CustomDrawCell
             OnFocusedItemChanged = cxGrid2DBBandedTableView1FocusedItemChanged
             OnFocusedRecordChanged = cxGrid1DBBandedTableView1FocusedRecordChanged
@@ -142,6 +146,7 @@ object fmUsersRole: TfmUsersRole
             OptionsData.Inserting = False
             OptionsSelection.MultiSelect = True
             OptionsView.Footer = True
+            OptionsView.GridLineColor = clGray
             OptionsView.GroupByBox = False
             OptionsView.HeaderFilterButtonShowMode = fbmButton
             OptionsView.HeaderHeight = 35
@@ -154,6 +159,7 @@ object fmUsersRole: TfmUsersRole
             object cxGrid1DBBandedTableView1users_id: TcxGridDBBandedColumn
               Caption = #8470' '#1079#1072#1087#1080#1089#1080
               DataBinding.FieldName = 'users_id'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 65
               Position.BandIndex = 0
@@ -163,6 +169,7 @@ object fmUsersRole: TfmUsersRole
             object cxGrid1DBBandedTableView1users_name: TcxGridDBBandedColumn
               Caption = #1051#1086#1075#1080#1085
               DataBinding.FieldName = 'users_name'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 65
               Position.BandIndex = 0
@@ -172,6 +179,7 @@ object fmUsersRole: TfmUsersRole
             object cxGrid1DBBandedTableView1FIO_users: TcxGridDBBandedColumn
               Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100
               DataBinding.FieldName = 'FIO_users'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 65
               Position.BandIndex = 0
@@ -181,6 +189,7 @@ object fmUsersRole: TfmUsersRole
             object cxGrid1DBBandedTableView1users_cod: TcxGridDBBandedColumn
               Caption = #1050#1086#1076
               DataBinding.FieldName = 'users_cod'
+              DataBinding.IsNullValueType = True
               Visible = False
               HeaderAlignmentVert = vaTop
               Width = 65
@@ -191,6 +200,7 @@ object fmUsersRole: TfmUsersRole
             object cxGrid1DBBandedTableView1users_group_name: TcxGridDBBandedColumn
               Caption = #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1103
               DataBinding.FieldName = 'users_group_name'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 65
               Position.BandIndex = 0
@@ -199,6 +209,7 @@ object fmUsersRole: TfmUsersRole
             end
             object cxGrid1DBBandedTableView1users_group_cod: TcxGridDBBandedColumn
               DataBinding.FieldName = 'users_group_cod'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 65
               Position.BandIndex = -1
@@ -207,6 +218,7 @@ object fmUsersRole: TfmUsersRole
             end
             object cxGrid1DBBandedTableView1users_group_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'users_group_id'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 65
               Position.BandIndex = -1
@@ -216,6 +228,7 @@ object fmUsersRole: TfmUsersRole
             object cxGrid1DBBandedTableView1set_group_users: TcxGridDBBandedColumn
               Caption = #1040#1076#1084#1080#1085#1080#1089#1090#1088#1072#1090#1086#1088' '#1075#1088#1091#1087#1087#1099
               DataBinding.FieldName = 'set_group_users'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxCheckBoxProperties'
               HeaderAlignmentVert = vaTop
               Width = 65
@@ -226,6 +239,7 @@ object fmUsersRole: TfmUsersRole
             object cxGrid1DBBandedTableView1date_begin: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1085#1072#1095#1072#1083#1072
               DataBinding.FieldName = 'date_begin'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxDateEditProperties'
               Properties.ReadOnly = True
               Properties.ShowTime = False
@@ -238,6 +252,7 @@ object fmUsersRole: TfmUsersRole
             object cxGrid1DBBandedTableView1date_end: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1086#1082#1086#1085#1095#1072#1085#1080#1103
               DataBinding.FieldName = 'date_end'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxDateEditProperties'
               Properties.ReadOnly = True
               Properties.ShowTime = False
@@ -250,6 +265,7 @@ object fmUsersRole: TfmUsersRole
             object cxGrid1DBBandedTableView1users_comment: TcxGridDBBandedColumn
               Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
               DataBinding.FieldName = 'users_comment'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 65
               Position.BandIndex = 0
@@ -259,6 +275,7 @@ object fmUsersRole: TfmUsersRole
             object cxGrid1DBBandedTableView1users_stack_num: TcxGridDBBandedColumn
               Caption = 'Stack '#1085#1086#1084#1077#1088
               DataBinding.FieldName = 'users_stack_num'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 65
               Position.BandIndex = 0
@@ -268,6 +285,7 @@ object fmUsersRole: TfmUsersRole
             object cxGrid1DBBandedTableView1personID: TcxGridDBBandedColumn
               Caption = 'personID ('#1090#1077#1083'.'#1089#1087#1088#1072#1074#1086#1095#1085#1080#1082')'
               DataBinding.FieldName = 'personID'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 65
               Position.BandIndex = 0
@@ -302,9 +320,12 @@ object fmUsersRole: TfmUsersRole
           Font.Style = []
           ParentFont = False
           TabOrder = 0
-          Properties.ActivePage = cxTabSheet1
+          Properties.ActivePage = cxTabSheet6
           Properties.CustomButtons.Buttons = <>
           LookAndFeel.Kind = lfUltraFlat
+          LookAndFeel.NativeStyle = False
+          LookAndFeel.ScrollbarMode = sbmClassic
+          LookAndFeel.ScrollMode = scmClassic
           OnChange = cxPageControl1Change
           ClientRectBottom = 494
           ClientRectRight = 715
@@ -321,10 +342,12 @@ object fmUsersRole: TfmUsersRole
               TabOrder = 0
               LookAndFeel.Kind = lfUltraFlat
               LookAndFeel.ScrollbarMode = sbmClassic
+              LookAndFeel.SkinName = 'Office2007Black'
               object cxGrid2DBBandedTableView1: TcxGridDBBandedTableView
                 PopupMenu = dxBarPopup_page_0
                 OnKeyPress = cxGrid1DBBandedTableView1KeyPress
                 Navigator.Buttons.CustomButtons = <>
+                ScrollbarAnnotations.CustomAnnotations = <>
                 OnCustomDrawCell = cxGrid2DBBandedTableView1CustomDrawCell
                 OnFocusedItemChanged = cxGrid2DBBandedTableView1FocusedItemChanged
                 OnSelectionChanged = cxGrid2DBBandedTableView1SelectionChanged
@@ -346,6 +369,7 @@ object fmUsersRole: TfmUsersRole
                 OptionsSelection.HideFocusRectOnExit = False
                 OptionsSelection.UnselectFocusedRecordOnExit = False
                 OptionsView.Footer = True
+                OptionsView.GridLineColor = clGray
                 OptionsView.GroupByBox = False
                 OptionsView.HeaderFilterButtonShowMode = fbmButton
                 OptionsView.BandHeaders = False
@@ -356,18 +380,21 @@ object fmUsersRole: TfmUsersRole
                   end>
                 object cxGrid2DBBandedTableView1users_master_id: TcxGridDBBandedColumn
                   DataBinding.FieldName = 'users_master_id'
+                  DataBinding.IsNullValueType = True
                   Position.BandIndex = -1
                   Position.ColIndex = -1
                   Position.RowIndex = -1
                 end
                 object cxGrid2DBBandedTableView1users_detail_id: TcxGridDBBandedColumn
                   DataBinding.FieldName = 'users_detail_id'
+                  DataBinding.IsNullValueType = True
                   Position.BandIndex = -1
                   Position.ColIndex = -1
                   Position.RowIndex = -1
                 end
                 object cxGrid2DBBandedTableView1user_master_name: TcxGridDBBandedColumn
                   DataBinding.FieldName = 'user_master_name'
+                  DataBinding.IsNullValueType = True
                   Position.BandIndex = -1
                   Position.ColIndex = -1
                   Position.RowIndex = -1
@@ -375,6 +402,7 @@ object fmUsersRole: TfmUsersRole
                 object cxGrid2DBBandedTableView1user_detail_name: TcxGridDBBandedColumn
                   Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100
                   DataBinding.FieldName = 'user_detail_name'
+                  DataBinding.IsNullValueType = True
                   Width = 171
                   Position.BandIndex = 0
                   Position.ColIndex = 0
@@ -383,6 +411,7 @@ object fmUsersRole: TfmUsersRole
                 object cxGrid2DBBandedTableView1rights: TcxGridDBBandedColumn
                   Caption = #1044#1086#1089#1090#1091#1087
                   DataBinding.FieldName = 'rights'
+                  DataBinding.IsNullValueType = True
                   Width = 115
                   Position.BandIndex = -1
                   Position.ColIndex = -1
@@ -391,6 +420,7 @@ object fmUsersRole: TfmUsersRole
                 object cxGrid2DBBandedTableView1rights_name: TcxGridDBBandedColumn
                   Caption = #1044#1086#1089#1090#1091#1087
                   DataBinding.FieldName = 'rights_name'
+                  DataBinding.IsNullValueType = True
                   Width = 54
                   Position.BandIndex = 0
                   Position.ColIndex = 1
@@ -399,6 +429,7 @@ object fmUsersRole: TfmUsersRole
                 object cxGrid2DBBandedTableView1set_group_users_detail: TcxGridDBBandedColumn
                   Caption = #1040#1076#1084#1080#1085#1080#1089#1090#1088#1072#1090#1086#1088' '#1075#1088#1091#1087#1087#1099
                   DataBinding.FieldName = 'set_group_users_detail'
+                  DataBinding.IsNullValueType = True
                   PropertiesClassName = 'TcxCheckBoxProperties'
                   Width = 73
                   Position.BandIndex = 0
@@ -408,6 +439,7 @@ object fmUsersRole: TfmUsersRole
                 object cxGrid2DBBandedTableView1users_group_name_detail: TcxGridDBBandedColumn
                   Caption = #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1103
                   DataBinding.FieldName = 'users_group_name_detail'
+                  DataBinding.IsNullValueType = True
                   Width = 132
                   Position.BandIndex = 0
                   Position.ColIndex = 3
@@ -416,6 +448,7 @@ object fmUsersRole: TfmUsersRole
                 object cxGrid2DBBandedTableView1users_detail_date_end: TcxGridDBBandedColumn
                   Caption = #1044#1072#1090#1072' '#1086#1082#1086#1085#1095#1072#1085#1080#1103
                   DataBinding.FieldName = 'users_detail_date_end'
+                  DataBinding.IsNullValueType = True
                   PropertiesClassName = 'TcxDateEditProperties'
                   Properties.ReadOnly = True
                   Properties.ShowTime = False
@@ -434,9 +467,6 @@ object fmUsersRole: TfmUsersRole
             Tag = 16
             Caption = #1045#1043#1054' '#1074#1080#1076#1103#1090
             ImageIndex = 3
-            ExplicitTop = 0
-            ExplicitWidth = 0
-            ExplicitHeight = 0
             object cxGrid3: TcxGrid
               Left = 0
               Top = 0
@@ -452,10 +482,12 @@ object fmUsersRole: TfmUsersRole
               TabOrder = 0
               LookAndFeel.Kind = lfUltraFlat
               LookAndFeel.ScrollbarMode = sbmClassic
+              LookAndFeel.SkinName = 'Office2007Black'
               object cxGrid3DBBandedTableView1: TcxGridDBBandedTableView
                 PopupMenu = dxBarPopup_page_1
                 OnKeyPress = cxGrid1DBBandedTableView1KeyPress
                 Navigator.Buttons.CustomButtons = <>
+                ScrollbarAnnotations.CustomAnnotations = <>
                 OnCustomDrawCell = cxGrid3DBBandedTableView1CustomDrawCell
                 OnFocusedItemChanged = cxGrid2DBBandedTableView1FocusedItemChanged
                 OnSelectionChanged = cxGrid3DBBandedTableView1SelectionChanged
@@ -477,6 +509,7 @@ object fmUsersRole: TfmUsersRole
                 OptionsSelection.HideFocusRectOnExit = False
                 OptionsSelection.UnselectFocusedRecordOnExit = False
                 OptionsView.Footer = True
+                OptionsView.GridLineColor = clGray
                 OptionsView.GroupByBox = False
                 OptionsView.HeaderFilterButtonShowMode = fbmButton
                 OptionsView.BandHeaders = False
@@ -487,12 +520,14 @@ object fmUsersRole: TfmUsersRole
                   end>
                 object cxGrid3DBBandedTableView1users_master_id: TcxGridDBBandedColumn
                   DataBinding.FieldName = 'users_master_id'
+                  DataBinding.IsNullValueType = True
                   Position.BandIndex = -1
                   Position.ColIndex = -1
                   Position.RowIndex = -1
                 end
                 object cxGrid3DBBandedTableView1users_detail_id: TcxGridDBBandedColumn
                   DataBinding.FieldName = 'users_detail_id'
+                  DataBinding.IsNullValueType = True
                   Position.BandIndex = -1
                   Position.ColIndex = -1
                   Position.RowIndex = -1
@@ -500,6 +535,7 @@ object fmUsersRole: TfmUsersRole
                 object cxGrid3DBBandedTableView1user_master_name: TcxGridDBBandedColumn
                   Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100
                   DataBinding.FieldName = 'user_master_name'
+                  DataBinding.IsNullValueType = True
                   Width = 171
                   Position.BandIndex = 0
                   Position.ColIndex = 0
@@ -508,6 +544,7 @@ object fmUsersRole: TfmUsersRole
                 object cxGrid3DBBandedTableView1user_detail_name: TcxGridDBBandedColumn
                   Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100
                   DataBinding.FieldName = 'user_detail_name'
+                  DataBinding.IsNullValueType = True
                   Width = 171
                   Position.BandIndex = -1
                   Position.ColIndex = -1
@@ -515,6 +552,7 @@ object fmUsersRole: TfmUsersRole
                 end
                 object cxGrid3DBBandedTableView1rights: TcxGridDBBandedColumn
                   DataBinding.FieldName = 'rights'
+                  DataBinding.IsNullValueType = True
                   Position.BandIndex = -1
                   Position.ColIndex = -1
                   Position.RowIndex = -1
@@ -522,6 +560,7 @@ object fmUsersRole: TfmUsersRole
                 object cxGrid3DBBandedTableView1rights_name: TcxGridDBBandedColumn
                   Caption = #1044#1086#1089#1090#1091#1087
                   DataBinding.FieldName = 'rights_name'
+                  DataBinding.IsNullValueType = True
                   Width = 45
                   Position.BandIndex = 0
                   Position.ColIndex = 1
@@ -530,6 +569,7 @@ object fmUsersRole: TfmUsersRole
                 object cxGrid3DBBandedTableView1set_group_users_master: TcxGridDBBandedColumn
                   Caption = #1040#1076#1084#1080#1085#1080#1089#1090#1088#1072#1090#1086#1088' '#1075#1088#1091#1087#1087#1099
                   DataBinding.FieldName = 'set_group_users_master'
+                  DataBinding.IsNullValueType = True
                   PropertiesClassName = 'TcxCheckBoxProperties'
                   Width = 38
                   Position.BandIndex = 0
@@ -539,6 +579,7 @@ object fmUsersRole: TfmUsersRole
                 object cxGrid3DBBandedTableView1users_group_name_master: TcxGridDBBandedColumn
                   Caption = #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1103
                   DataBinding.FieldName = 'users_group_name_master'
+                  DataBinding.IsNullValueType = True
                   Width = 132
                   Position.BandIndex = 0
                   Position.ColIndex = 3
@@ -547,6 +588,7 @@ object fmUsersRole: TfmUsersRole
                 object cxGrid3DBBandedTableView1users_master_date_end: TcxGridDBBandedColumn
                   Caption = #1044#1072#1090#1072' '#1086#1082#1086#1085#1095#1072#1085#1080#1103
                   DataBinding.FieldName = 'users_master_date_end'
+                  DataBinding.IsNullValueType = True
                   PropertiesClassName = 'TcxDateEditProperties'
                   Properties.ReadOnly = True
                   Properties.ShowTime = False
@@ -564,9 +606,6 @@ object fmUsersRole: TfmUsersRole
           object cxTabSheet5: TcxTabSheet
             Caption = #1044#1086#1089#1090#1091#1087' '#1082' '#1092#1091#1085#1082#1094#1080#1103#1084
             ImageIndex = 4
-            ExplicitTop = 0
-            ExplicitWidth = 0
-            ExplicitHeight = 0
             object cxGrid6: TcxGrid
               Left = 0
               Top = 0
@@ -575,11 +614,14 @@ object fmUsersRole: TfmUsersRole
               Align = alClient
               TabOrder = 0
               LookAndFeel.Kind = lfUltraFlat
+              LookAndFeel.NativeStyle = False
               LookAndFeel.ScrollbarMode = sbmClassic
+              LookAndFeel.SkinName = 'Office2007Black'
               object cxGrid6DBBandedTableView1: TcxGridDBBandedTableView
                 PopupMenu = dxBarPopup_page_4
                 OnKeyPress = cxGrid1DBBandedTableView1KeyPress
                 Navigator.Buttons.CustomButtons = <>
+                ScrollbarAnnotations.CustomAnnotations = <>
                 OnCellDblClick = cxGrid6DBBandedTableView1CellDblClick
                 OnCustomDrawCell = cxGrid6DBBandedTableView1CustomDrawCell
                 OnFocusedItemChanged = cxGrid2DBBandedTableView1FocusedItemChanged
@@ -595,6 +637,7 @@ object fmUsersRole: TfmUsersRole
                 OptionsData.Inserting = False
                 OptionsSelection.MultiSelect = True
                 OptionsView.CellAutoHeight = True
+                OptionsView.GridLineColor = clGray
                 OptionsView.GroupByBox = False
                 OptionsView.HeaderFilterButtonShowMode = fbmButton
                 OptionsView.BandHeaders = False
@@ -606,6 +649,7 @@ object fmUsersRole: TfmUsersRole
                 object cxGrid6DBBandedTableView1functions_id: TcxGridDBBandedColumn
                   Caption = #1053#1086#1084#1077#1088' '#1079#1072#1087#1080#1089#1080
                   DataBinding.FieldName = 'functions_id'
+                  DataBinding.IsNullValueType = True
                   Visible = False
                   Position.BandIndex = 0
                   Position.ColIndex = 2
@@ -614,6 +658,7 @@ object fmUsersRole: TfmUsersRole
                 object cxGrid6DBBandedTableView1functions_name: TcxGridDBBandedColumn
                   Caption = #1048#1084#1103' '#1092#1091#1085#1082#1094#1080#1080
                   DataBinding.FieldName = 'functions_name'
+                  DataBinding.IsNullValueType = True
                   Width = 130
                   Position.BandIndex = 0
                   Position.ColIndex = 0
@@ -622,6 +667,7 @@ object fmUsersRole: TfmUsersRole
                 object cxGrid6DBBandedTableView1functions_descriptions: TcxGridDBBandedColumn
                   Caption = #1054#1087#1080#1089#1072#1085#1080#1077' '#1092#1091#1085#1082#1094#1080#1080
                   DataBinding.FieldName = 'functions_descriptions'
+                  DataBinding.IsNullValueType = True
                   PropertiesClassName = 'TcxRichEditProperties'
                   Width = 252
                   Position.BandIndex = 0
@@ -631,6 +677,7 @@ object fmUsersRole: TfmUsersRole
                 object cxGrid6DBBandedTableView1users_rights: TcxGridDBBandedColumn
                   Caption = #1044#1086#1089#1090#1091#1087
                   DataBinding.FieldName = 'users_rights'
+                  DataBinding.IsNullValueType = True
                   PropertiesClassName = 'TcxCheckBoxProperties'
                   Properties.ReadOnly = False
                   Width = 50
@@ -647,9 +694,6 @@ object fmUsersRole: TfmUsersRole
           object cxTabSheet6: TcxTabSheet
             Caption = #1044#1086#1089#1090#1091#1087' '#1082' '#1080#1085#1090#1077#1088#1092#1077#1081#1089#1091
             ImageIndex = 5
-            ExplicitTop = 0
-            ExplicitWidth = 0
-            ExplicitHeight = 0
             object cxGrid7: TcxGrid
               Left = 0
               Top = 0
@@ -659,9 +703,13 @@ object fmUsersRole: TfmUsersRole
               TabOrder = 0
               LookAndFeel.Kind = lfUltraFlat
               LookAndFeel.NativeStyle = False
+              LookAndFeel.ScrollbarMode = sbmClassic
+              LookAndFeel.ScrollMode = scmClassic
+              LookAndFeel.SkinName = 'Office2007Black'
               object cxGrid7DBBandedTableView1: TcxGridDBBandedTableView
                 PopupMenu = dxBarPopup_page_5
                 Navigator.Buttons.CustomButtons = <>
+                ScrollbarAnnotations.CustomAnnotations = <>
                 OnFocusedItemChanged = cxGrid2DBBandedTableView1FocusedItemChanged
                 DataController.DataSource = DS_UsersModuleRights
                 DataController.KeyFieldNames = 'id'
@@ -673,6 +721,7 @@ object fmUsersRole: TfmUsersRole
                 OptionsData.Appending = True
                 OptionsData.Deleting = False
                 OptionsSelection.MultiSelect = True
+                OptionsView.GridLineColor = clGray
                 OptionsView.GroupByBox = False
                 OptionsView.HeaderFilterButtonShowMode = fbmButton
                 OptionsView.Indicator = True
@@ -918,9 +967,6 @@ object fmUsersRole: TfmUsersRole
     object cxTabSheet7: TcxTabSheet
       Caption = #1060#1091#1085#1082#1094#1080#1080
       ImageIndex = 1
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Splitter2: TSplitter
         Left = 385
         Top = 0
@@ -940,11 +986,15 @@ object fmUsersRole: TfmUsersRole
         Align = alLeft
         TabOrder = 0
         LookAndFeel.Kind = lfUltraFlat
+        LookAndFeel.NativeStyle = False
         LookAndFeel.ScrollbarMode = sbmClassic
+        LookAndFeel.ScrollMode = scmClassic
+        LookAndFeel.SkinName = 'Office2007Black'
         object cxGrid5DBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = dxBarPopup_Func
           OnKeyPress = cxGrid1DBBandedTableView1KeyPress
           Navigator.Buttons.CustomButtons = <>
+          ScrollbarAnnotations.CustomAnnotations = <>
           OnCustomDrawCell = cxGrid1DBBandedTableView1CustomDrawCell
           OnFocusedItemChanged = cxGrid2DBBandedTableView1FocusedItemChanged
           OnFocusedRecordChanged = cxGrid5DBBandedTableView1FocusedRecordChanged
@@ -965,6 +1015,7 @@ object fmUsersRole: TfmUsersRole
           OptionsSelection.MultiSelect = True
           OptionsView.CellAutoHeight = True
           OptionsView.Footer = True
+          OptionsView.GridLineColor = clGray
           OptionsView.GroupByBox = False
           OptionsView.HeaderFilterButtonShowMode = fbmButton
           OptionsView.BandHeaders = False
@@ -976,6 +1027,7 @@ object fmUsersRole: TfmUsersRole
           object cxGrid5DBBandedTableView1functions_id: TcxGridDBBandedColumn
             Caption = #1053#1086#1084#1077#1088' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'functions_id'
+            DataBinding.IsNullValueType = True
             Visible = False
             Position.BandIndex = 0
             Position.ColIndex = 2
@@ -984,6 +1036,7 @@ object fmUsersRole: TfmUsersRole
           object cxGrid5DBBandedTableView1functions_name: TcxGridDBBandedColumn
             Caption = #1048#1084#1103' '#1092#1091#1085#1082#1094#1080#1080
             DataBinding.FieldName = 'functions_name'
+            DataBinding.IsNullValueType = True
             Width = 130
             Position.BandIndex = 0
             Position.ColIndex = 0
@@ -992,6 +1045,7 @@ object fmUsersRole: TfmUsersRole
           object cxGrid5DBBandedTableView1functions_descriptions: TcxGridDBBandedColumn
             Caption = #1054#1087#1080#1089#1072#1085#1080#1077' '#1092#1091#1085#1082#1094#1080#1080
             DataBinding.FieldName = 'functions_descriptions'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxRichEditProperties'
             Width = 231
             Position.BandIndex = 0
@@ -1012,10 +1066,14 @@ object fmUsersRole: TfmUsersRole
         TabOrder = 1
         LookAndFeel.Kind = lfUltraFlat
         LookAndFeel.NativeStyle = False
+        LookAndFeel.ScrollbarMode = sbmClassic
+        LookAndFeel.ScrollMode = scmClassic
+        LookAndFeel.SkinName = 'Office2007Black'
         object cxGrid8DBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = dxBarPopup_Users_Func
           OnKeyPress = cxGrid1DBBandedTableView1KeyPress
           Navigator.Buttons.CustomButtons = <>
+          ScrollbarAnnotations.CustomAnnotations = <>
           OnCellDblClick = cxGrid8DBBandedTableView1CellDblClick
           OnCustomDrawCell = cxGrid1DBBandedTableView1CustomDrawCell
           OnFocusedItemChanged = cxGrid2DBBandedTableView1FocusedItemChanged
@@ -1048,6 +1106,7 @@ object fmUsersRole: TfmUsersRole
           object cxGrid8DBBandedTableView1users_id: TcxGridDBBandedColumn
             Caption = #1053#1086#1084#1077#1088' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'users_id'
+            DataBinding.IsNullValueType = True
             Visible = False
             Position.BandIndex = 0
             Position.ColIndex = 1
@@ -1056,6 +1115,7 @@ object fmUsersRole: TfmUsersRole
           object cxGrid8DBBandedTableView1FIO_users: TcxGridDBBandedColumn
             Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100
             DataBinding.FieldName = 'FIO_users'
+            DataBinding.IsNullValueType = True
             Width = 170
             Position.BandIndex = 0
             Position.ColIndex = 0
@@ -1064,6 +1124,7 @@ object fmUsersRole: TfmUsersRole
           object cxGrid8DBBandedTableView1users_rights: TcxGridDBBandedColumn
             Caption = #1044#1086#1089#1090#1091#1087
             DataBinding.FieldName = 'users_rights'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCheckBoxProperties'
             Properties.ReadOnly = False
             Width = 50
@@ -1074,6 +1135,7 @@ object fmUsersRole: TfmUsersRole
           object cxGrid8DBBandedTableView1date_end: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1086#1082#1086#1085#1095#1072#1085#1080#1103
             DataBinding.FieldName = 'date_end'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxDateEditProperties'
             Properties.ReadOnly = True
             Properties.ShowTime = False
@@ -1085,6 +1147,7 @@ object fmUsersRole: TfmUsersRole
           object cxGrid8DBBandedTableView1users_name: TcxGridDBBandedColumn
             Caption = #1051#1086#1075#1080#1085
             DataBinding.FieldName = 'users_name'
+            DataBinding.IsNullValueType = True
             Width = 97
             Position.BandIndex = 0
             Position.ColIndex = 4
@@ -1099,9 +1162,6 @@ object fmUsersRole: TfmUsersRole
     object cxTabSheet3: TcxTabSheet
       Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1080' OnLine'
       ImageIndex = 2
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object cxGrid4: TcxGrid
         Left = 0
         Top = 0
@@ -1110,11 +1170,15 @@ object fmUsersRole: TfmUsersRole
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfUltraFlat
+        LookAndFeel.NativeStyle = False
         LookAndFeel.ScrollbarMode = sbmClassic
+        LookAndFeel.ScrollMode = scmClassic
+        LookAndFeel.SkinName = 'Office2007Black'
         object cxGrid4DBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = dxBarPopupMenu1
           OnKeyPress = cxGrid4DBBandedTableView1KeyPress
           Navigator.Buttons.CustomButtons = <>
+          ScrollbarAnnotations.CustomAnnotations = <>
           OnCustomDrawCell = cxGrid4DBBandedTableView1CustomDrawCell
           OnFocusedItemChanged = cxGrid4DBBandedTableView1FocusedItemChanged
           OnFocusedRecordChanged = cxGrid4DBBandedTableView1FocusedRecordChanged
@@ -1138,6 +1202,7 @@ object fmUsersRole: TfmUsersRole
           OptionsData.Inserting = False
           OptionsSelection.MultiSelect = True
           OptionsView.Footer = True
+          OptionsView.GridLineColor = clGray
           OptionsView.GroupByBox = False
           OptionsView.HeaderFilterButtonShowMode = fbmButton
           OptionsView.HeaderHeight = 35
@@ -1150,6 +1215,7 @@ object fmUsersRole: TfmUsersRole
           object cxGrid4DBBandedTableView1loginame: TcxGridDBBandedColumn
             Caption = #1051#1086#1075#1080#1085
             DataBinding.FieldName = 'loginame'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 81
             Position.BandIndex = 0
@@ -1159,6 +1225,7 @@ object fmUsersRole: TfmUsersRole
           object cxGrid4DBBandedTableView1hostname: TcxGridDBBandedColumn
             Caption = #1050#1086#1084#1087#1100#1102#1090#1077#1088
             DataBinding.FieldName = 'hostname'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 116
             Position.BandIndex = 0
@@ -1168,6 +1235,7 @@ object fmUsersRole: TfmUsersRole
           object cxGrid4DBBandedTableView1fio_users: TcxGridDBBandedColumn
             Caption = #1060'.'#1048'.'#1054'.'
             DataBinding.FieldName = 'FIO_users'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 100
             Position.BandIndex = 0
@@ -1177,6 +1245,7 @@ object fmUsersRole: TfmUsersRole
           object cxGrid4DBBandedTableView1login_time: TcxGridDBBandedColumn
             Caption = #1042#1093#1086#1076' '#1074' '#1087#1088#1086#1075#1088#1072#1084#1084#1091
             DataBinding.FieldName = 'login_time'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 121
             Position.BandIndex = 0
@@ -1186,6 +1255,7 @@ object fmUsersRole: TfmUsersRole
           object cxGrid4DBBandedTableView1last_batch: TcxGridDBBandedColumn
             Caption = #1055#1086#1089#1083#1077#1076#1085#1103#1103' '#1072#1082#1090#1080#1074#1085#1086#1089#1090#1100
             DataBinding.FieldName = 'last_batch'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 125
             Position.BandIndex = 0
@@ -1195,6 +1265,7 @@ object fmUsersRole: TfmUsersRole
           object cxGrid4DBBandedTableView1spid: TcxGridDBBandedColumn
             Caption = 'SPID'
             DataBinding.FieldName = 'spid'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 46
             Position.BandIndex = 0
@@ -1204,6 +1275,7 @@ object fmUsersRole: TfmUsersRole
           object cxGrid4DBBandedTableView1lis_version: TcxGridDBBandedColumn
             Caption = #1042#1077#1088#1089#1080#1103' '#1051#1048#1057
             DataBinding.FieldName = 'lis_version'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0
@@ -1213,6 +1285,7 @@ object fmUsersRole: TfmUsersRole
           object cxGrid4DBBandedTableView1lis_datetime: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1092#1072#1081#1083#1072' '#1051#1048#1057
             DataBinding.FieldName = 'lis_datetime'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 128
             Position.BandIndex = 0
@@ -1222,6 +1295,7 @@ object fmUsersRole: TfmUsersRole
           object cxGrid4DBBandedTableView1ver_name: TcxGridDBBandedColumn
             Caption = #1042#1077#1088#1089#1080#1103' '#1085#1072' '#1057#1077#1088#1074#1077#1088#1077
             DataBinding.FieldName = 'ver_name'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 73
             Position.BandIndex = 0
@@ -1231,6 +1305,7 @@ object fmUsersRole: TfmUsersRole
           object cxGrid4DBBandedTableView1ver_datetime: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1092#1072#1081#1083#1072' '#1085#1072' '#1089#1077#1088#1074#1077#1088#1077
             DataBinding.FieldName = 'ver_datetime'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 122
             Position.BandIndex = 0
@@ -1240,6 +1315,7 @@ object fmUsersRole: TfmUsersRole
           object cxGrid4DBBandedTableView1personID: TcxGridDBBandedColumn
             Caption = 'PersonID'
             DataBinding.FieldName = 'personID'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0

@@ -164,9 +164,6 @@ object fmFact: TfmFact
     object cxTabSheet1: TcxTabSheet
       Caption = #1054#1090#1075#1088#1091#1079#1086#1095#1085#1072#1103' '#1080#1085#1092#1086#1088#1084#1072#1094#1080#1103
       ImageIndex = 35
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object cxGrid1: TcxGrid
         Left = 0
         Top = 0
@@ -176,7 +173,7 @@ object fmFact: TfmFact
         Font.Charset = RUSSIAN_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'Tahoma'
+        Font.Name = 'MS Sans Serif'
         Font.Style = []
         ParentFont = False
         TabOrder = 0
@@ -1902,9 +1899,6 @@ object fmFact: TfmFact
     object cxTabSheet3: TcxTabSheet
       Caption = #1054#1073#1086#1088#1086#1090' '#1074#1072#1075#1086#1085#1072
       ImageIndex = 91
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object cxGrid3: TcxGrid
         Left = 0
         Top = 0
@@ -1914,7 +1908,7 @@ object fmFact: TfmFact
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'Tahoma'
+        Font.Name = 'MS Sans Serif'
         Font.Style = []
         ParentFont = False
         TabOrder = 0
@@ -2017,6 +2011,7 @@ object fmFact: TfmFact
           OptionsData.Inserting = False
           OptionsSelection.MultiSelect = True
           OptionsView.Footer = True
+          OptionsView.GridLineColor = clGray
           OptionsView.GroupByBox = False
           OptionsView.HeaderFilterButtonShowMode = fbmButton
           OptionsView.HeaderHeight = 37
@@ -3010,7 +3005,7 @@ object fmFact: TfmFact
           OptionsSelection.MultiSelect = True
           OptionsSelection.InvertSelect = False
           OptionsView.Footer = True
-          OptionsView.GridLineColor = clSilver
+          OptionsView.GridLineColor = clGray
           OptionsView.GroupByBox = False
           OptionsView.HeaderFilterButtonShowMode = fbmButton
           OptionsView.HeaderHeight = 35
@@ -4284,9 +4279,6 @@ object fmFact: TfmFact
     object cxTabSheet5: TcxTabSheet
       Caption = #1055#1086#1082#1072#1079#1072#1090#1077#1083#1080' '#1088#1072#1073#1086#1090#1099' '#1087#1072#1088#1082#1072
       ImageIndex = 157
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Splitter2: TSplitter
         Left = 499
         Top = 0
@@ -4331,7 +4323,7 @@ object fmFact: TfmFact
             Font.Charset = RUSSIAN_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
-            Font.Name = 'Tahoma'
+            Font.Name = 'MS Sans Serif'
             Font.Style = []
             ParentFont = False
             TabOrder = 0
@@ -4377,7 +4369,7 @@ object fmFact: TfmFact
               OptionsSelection.MultiSelect = True
               OptionsSelection.InvertSelect = False
               OptionsView.Footer = True
-              OptionsView.GridLineColor = clSilver
+              OptionsView.GridLineColor = clGray
               OptionsView.GroupByBox = False
               OptionsView.HeaderFilterButtonShowMode = fbmButton
               OptionsView.HeaderHeight = 35
@@ -4516,7 +4508,7 @@ object fmFact: TfmFact
             Font.Charset = RUSSIAN_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
-            Font.Name = 'Tahoma'
+            Font.Name = 'MS Sans Serif'
             Font.Style = []
             ParentFont = False
             TabOrder = 1
@@ -4561,7 +4553,7 @@ object fmFact: TfmFact
               OptionsSelection.MultiSelect = True
               OptionsSelection.InvertSelect = False
               OptionsView.Footer = True
-              OptionsView.GridLineColor = clSilver
+              OptionsView.GridLineColor = clGray
               OptionsView.GroupByBox = False
               OptionsView.HeaderFilterButtonShowMode = fbmButton
               OptionsView.HeaderHeight = 35
@@ -4691,7 +4683,7 @@ object fmFact: TfmFact
           Font.Charset = RUSSIAN_CHARSET
           Font.Color = clWindowText
           Font.Height = -12
-          Font.Name = 'Segoe UI'
+          Font.Name = 'MS Sans Serif'
           Font.Style = []
           ParentFont = False
           TabOrder = 1
@@ -4731,7 +4723,7 @@ object fmFact: TfmFact
             OptionsSelection.MultiSelect = True
             OptionsSelection.InvertSelect = False
             OptionsView.Footer = True
-            OptionsView.GridLineColor = clSilver
+            OptionsView.GridLineColor = clGray
             OptionsView.GroupByBox = False
             OptionsView.HeaderFilterButtonShowMode = fbmButton
             OptionsView.HeaderHeight = 35
@@ -4809,7 +4801,7 @@ object fmFact: TfmFact
           Font.Charset = RUSSIAN_CHARSET
           Font.Color = clWindowText
           Font.Height = -12
-          Font.Name = 'Segoe UI'
+          Font.Name = 'MS Sans Serif'
           Font.Style = []
           ParentFont = False
           TabOrder = 2
@@ -4854,7 +4846,7 @@ object fmFact: TfmFact
             OptionsSelection.MultiSelect = True
             OptionsSelection.InvertSelect = False
             OptionsView.Footer = True
-            OptionsView.GridLineColor = clSilver
+            OptionsView.GridLineColor = clGray
             OptionsView.GroupByBox = False
             OptionsView.HeaderFilterButtonShowMode = fbmButton
             OptionsView.HeaderHeight = 35
@@ -4972,7 +4964,7 @@ object fmFact: TfmFact
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
-    Font.Name = 'Segoe UI'
+    Font.Name = 'MS Sans Serif'
     Font.Style = []
     Categories.Strings = (
       'Default'
@@ -4992,7 +4984,7 @@ object fmFact: TfmFact
     ImageOptions.Images = fmMain.cxImageList1
     PopupMenuLinks = <>
     Style = bmsOffice11
-    UseSystemFont = True
+    UseSystemFont = False
     Left = 440
     Top = 88
     PixelsPerInch = 96

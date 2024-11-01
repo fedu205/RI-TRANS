@@ -18,7 +18,7 @@ uses
   dxSkinXmas2008Blue, dxSkinscxPCPainter, dxBarBuiltInMenu, cxNavigator, dxSkinsdxBarPainter, dxGDIPlusClasses, dxSkinOffice2016Colorful,
   dxSkinOffice2016Dark, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, System.ImageList,
   Vcl.Imaging.jpeg, Vcl.ImgList, cxImageList, DateUtils, dxSkinTheBezier, cxDataControllerConditionalFormattingRulesManagerDialog,
-  dxDateRanges, dxSkinOffice2019Colorful;
+  dxDateRanges, dxSkinOffice2019Colorful, dxScrollbarAnnotations, dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI;
 
 type TFuncImage = function (AppHand: THandle; person_id : integer) : variant;
 

@@ -2741,6 +2741,11 @@ object fmZFTOScore: TfmZFTOScore
       FloatTop = 8
       FloatClientWidth = 0
       FloatClientHeight = 0
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
       ItemLinks = <
         item
           Visible = True
@@ -2792,7 +2797,7 @@ object fmZFTOScore: TfmZFTOScore
       OneOnRow = True
       Row = 0
       ShowMark = False
-      UseOwnFont = False
+      UseOwnFont = True
       Visible = True
       WholeRow = True
     end
