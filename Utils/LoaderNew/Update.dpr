@@ -64,7 +64,7 @@ begin
     Exit;
   end;
 
-  str_conn := 'Provider=SQLOLEDB.1;Password=cjnhfkjubcnbrf;Persist Security Info=True;User ID=sa;Initial Catalog=lis1;Data Source=' + sql_ip;
+  str_conn := 'Provider=SQLOLEDB.1;Password=14remTTetran;Persist Security Info=True;User ID=sa;Initial Catalog=lis1;Data Source=' + sql_ip;
 
   {####################################################################################3}
   if ParamStr(1) = '2' then begin
