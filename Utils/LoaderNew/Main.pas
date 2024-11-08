@@ -24,8 +24,7 @@ uses
   dxSkinscxPCPainter, dxRibbonSkins, dxSkinsdxRibbonPainter, dxRibbonCustomizationForm, dxRibbon, cxImageList, dxRibbonForm, cxPC,
   dxTabbedMDI, dxSkinTheBezier, dxBarBuiltInMenu, cxImage, VCL.Imaging.pngimage, VCL.Imaging.jpeg, dxSkinOffice2019Colorful, cxCustomData, cxFilter,
   cxData, cxDataStorage, cxNavigator, dxDateRanges, cxDBData, cxCurrencyEdit, cxGridLevel, cxGridCustomTableView, cxGridTableView, cxGridBandedTableView,
-  cxGridDBBandedTableView, cxGridCustomView, cxGrid, cxEdit, ImgList, dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray,
-  dxSkinOffice2019White, dxScrollbarAnnotations, cxGroupBox, cxTextEdit;
+  cxGridDBBandedTableView, cxGridCustomView, cxGrid, cxEdit, ImgList, dxScrollbarAnnotations, cxGroupBox, cxTextEdit;
 
 type
   TfmMain = class(TdxRibbonForm)
@@ -163,7 +162,7 @@ begin
   Table_Ver.Connection := Lis;
   Table_Ver.Open;
 
-  cxTextEdit1.EditValue := StoreRegistryString(rgLoad, '\Software\GURU\Update_folder', 'folder',  '');
+  cxTextEdit1.EditValue := StoreRegistryString(rgLoad, '\Software\RITRANS\Update_folder', 'folder',  '');
 
   ClientDS_VerBlob.CreateDataSet;
   ClientDS_VerBlob.LogChanges := False;
@@ -424,7 +423,7 @@ end;
 
 procedure TfmMain.FormDestroy(Sender: TObject);
 begin
-  StoreRegistryString(rgSave, '\Software\GURU\Update_folder', 'folder',  cxTextEdit1.Text);
+  StoreRegistryString(rgSave, '\Software\RITRANS\Update_folder', 'folder',  cxTextEdit1.Text);
 end;
 
 end.

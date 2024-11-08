@@ -29917,7 +29917,7 @@ object fmMain: TfmMain
           'Top'
           'Width')
       end>
-    StorageName = '\Software\GURU\VerBlob\MainVer'
+    StorageName = '\Software\RITRANS\VerBlob\MainVer'
     StorageType = stRegistry
     Left = 419
     Top = 31
