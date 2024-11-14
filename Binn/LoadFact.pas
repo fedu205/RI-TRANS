@@ -210,6 +210,7 @@ begin
   FSL.Add('varchar'); // 7
 
   if (Fbargain_id = -9) then begin
+    cxCheckBox1.Checked := False;
     cxCheckBox1.Enabled := False;
   end;
 
