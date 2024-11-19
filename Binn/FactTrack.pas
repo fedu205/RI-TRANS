@@ -56,7 +56,6 @@ type
     cxGrid1DBBandedTableView1node_begin_name: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1node_begin_cod: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1road_begin_name: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1road_end_name: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1date_otpr: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1index_train: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1num_train: TcxGridDBBandedColumn;
@@ -67,11 +66,6 @@ type
     cxGrid1DBBandedTableView1FIO_users: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1fact_track_id: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1global_color: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1cod_operation_vagon_name: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1cod_operation_vagon_name_full: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1cod_operation_vagon_cod: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1firm_name: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1arenda_firm_name: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1date_query: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1date_arrival: TcxGridDBBandedColumn;
     cxGrid1Level1: TcxGridLevel;
@@ -85,7 +79,6 @@ type
     cxGrid1DBBandedTableView1comment5: TcxGridDBBandedColumn;
     dxBarButton10: TdxBarButton;
     cxGrid1DBBandedTableView1comment6: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1next_date_repair: TcxGridDBBandedColumn;
     dxBarButton7: TdxBarButton;
     cxGrid1DBBandedTableView1comment7: TcxGridDBBandedColumn;
     dxBarButton11: TdxBarButton;
@@ -104,12 +97,7 @@ type
     dxBarButton_UpdateInfo: TdxBarButton;
     Query_FactTrack: TADOQuery;
     cxGrid1DBBandedTableView1model_name: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1road_operation_name: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1state_self: TcxGridDBBandedColumn;
     dxBarButton_Edit: TdxBarButton;
-    cxGrid1DBBandedTableView1milage_passed: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1milage_rest: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1uchet_name: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1copper_calibration: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1fact_track_trip_id: TcxGridDBBandedColumn;
     dxBarButton4: TdxBarButton;
@@ -122,15 +110,7 @@ type
     cxGrid1DBBandedTableView1comment9: TcxGridDBBandedColumn;
     dxBarButton18: TdxBarButton;
     dxBarButton19: TdxBarButton;
-    cxGrid1DBBandedTableView1capacity: TcxGridDBBandedColumn;
     dxBarButton20: TdxBarButton;
-    cxGrid1DBBandedTableView1node_begin_name_etr: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1node_end_name_etr: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1num_document_etr: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1claim_num_etr: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1etran_oper_date: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1etran_oper_result: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1payer_cod: TcxGridDBBandedColumn;
     dxBarButton21: TdxBarButton;
     dxBarButton22: TdxBarButton;
     dxBarButton23: TdxBarButton;
@@ -149,7 +129,6 @@ type
     dxBarButton27: TdxBarButton;
     dxBarButton28: TdxBarButton;
     dxBarButton29: TdxBarButton;
-    cxGrid1DBBandedTableView1date_build: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1comment10: TcxGridDBBandedColumn;
     dxBarButton30: TdxBarButton;
     dxBarButton31: TdxBarButton;
@@ -271,7 +250,6 @@ type
     Query_History: TADOQuery;
     dxBarButton43: TdxBarButton;
     dxBarButton54: TdxBarButton;
-    cxGrid1DBBandedTableView1volume: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1comment11: TcxGridDBBandedColumn;
     cxGrid3DBBandedTableView1instruction_cod: TcxGridDBBandedColumn;
     cxGrid3DBBandedTableView1instruction_date: TcxGridDBBandedColumn;
@@ -283,7 +261,6 @@ type
     ClientDataSet1node_begin_name: TStringField;
     dxBarButton62: TdxBarButton;
     cxGrid1DBBandedTableView1comment12: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1type_park_cod: TcxGridDBBandedColumn;
     dxBarButton25: TdxBarButton;
     dxBarSubItem9: TdxBarSubItem;
     dxBarButton26: TdxBarButton;
@@ -293,8 +270,6 @@ type
     cxGridDBBandedTableView1etran_comment: TcxGridDBBandedColumn;
     dxBarButton66: TdxBarButton;
     dxBarButton67: TdxBarButton;
-    cxGrid1DBBandedTableView1etran_ecp_id: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1etran_comment: TcxGridDBBandedColumn;
     dxBarManager1Bar2: TdxBar;
     dxBarManager1Bar3: TdxBar;
     dxBarButton38: TdxBarButton;
@@ -325,7 +300,6 @@ type
     cxGrid1DBBandedTableView1client_firm_customer_name: TcxGridDBBandedColumn;
     dxBarButton74: TdxBarButton;
     dxBarButton75: TdxBarButton;
-    cxGrid1DBBandedTableView1rod_vagon_name: TcxGridDBBandedColumn;
     dxBarButton76: TdxBarButton;
     dxBarButton77: TdxBarButton;
     cxGrid1DBBandedTableView1color: TcxGridDBBandedColumn;
@@ -340,7 +314,6 @@ type
     dxBarButton82: TdxBarButton;
     dxBarButton83: TdxBarButton;
     dxBarButton84: TdxBarButton;
-    cxGrid1DBBandedTableView1milage_rest_calc: TcxGridDBBandedColumn;
     dxBarButton89: TdxBarButton;
     dxBarButton90: TdxBarButton;
     dxBarButton91: TdxBarButton;
@@ -421,34 +394,12 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     dxBarButton48: TdxBarButton;
     cxGrid1DBBandedTableView1last_depot_repair_date: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1last_capital_repair_date: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1last_depot_repair_depo: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1last_capital_repair_depo: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1defect_cod: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1defect_name: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1set_control_repair: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1vid_next_repair: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1milage_passed_date: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1milage_rest_date: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1days_route: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1days_route_end: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1days_free: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1distance_node_end: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1date_arrival_plan: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1set_arrival: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1vagon_status: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1date_otpr_zd: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1transport_pay: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1brief_name: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1tracking_type: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1gu12_cod: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1factory_cod: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1factory_name: TcxGridDBBandedColumn;
     Panel2: TPanel;
     Label20: TLabel;
     Label11: TLabel;
-    cxGrid1DBBandedTableView1vid_next_repair_name: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1operator_rzd_okpo: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1operator_rzd_name: TcxGridDBBandedColumn;
     cxGridDBBandedTableView1etran_date_ready: TcxGridDBBandedColumn;
     cxGridDBBandedTableView1etran_date_delivery: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1OwnerOkpoName: TcxGridDBBandedColumn;
@@ -513,7 +464,6 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     cxGrid2DBBandedTableView1prev_kargoETSNG_cod: TcxGridDBBandedColumn;
     cxGrid2DBBandedTableView1prev_kargoETSNG_name: TcxGridDBBandedColumn;
     dxBarButton116: TdxBarButton;
-    cxGrid1DBBandedTableView1query_id: TcxGridDBBandedColumn;
     dxBarButton103: TdxBarButton;
     dxBarButton117: TdxBarButton;
     SP_StayByNode: TADOStoredProc;
@@ -544,8 +494,25 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1date_otpr_1: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1days_stay_begin: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1days_stay_sum: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1distance_days: TcxGridDBBandedColumn;
     dxBarButton2: TdxBarButton;
+    cxGrid1DBBandedTableView1rod_vagon_cod: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1rod_vagon_name: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1grpol_tgnl: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1grotpr_tgnl: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1kargoGNG_cod: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1kargoGNG_name: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1milage_load: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1milage_empty: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1milage_sum: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1milage_norm: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1cod_operation_vagon_name: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1num_vagon_train: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1broken_num: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1num_way: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1date_norm_delivery: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1distance_node_begin: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1distance: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1days_free_detail: TcxGridDBBandedColumn;
 
     procedure N4Click(Sender: TObject);
     procedure N2Click(Sender: TObject);
@@ -746,11 +713,11 @@ begin
     WindowState := wsMaximized;
   end;
 
-  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid1DBBandedTableView1, 3);
-  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid2DBBandedTableView1);
-  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid3DBBandedTableView1, 3);
-  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGridDBBandedTableView1);
-  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid12DBBandedTableView1);
+//  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid1DBBandedTableView1, 3);
+//  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid2DBBandedTableView1);
+//  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid3DBBandedTableView1, 3);
+//  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGridDBBandedTableView1);
+//  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid12DBBandedTableView1);
 
   Fdate_history1 := IncMonth(Date, -1);
   Fdate_history2 := Date;
@@ -1180,17 +1147,17 @@ begin
       exWks.Range['S'+IntToStr(line_cnt)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1node_begin_name.Index]);
       exWks.Range['T'+IntToStr(line_cnt)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1node_end_name.Index]);
 
-      exWks.Range['E'+IntToStr(line_cnt)].Value := cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1date_build.Index];
-      exWks.Range['N'+IntToStr(line_cnt)].Value := cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1capacity.Index];
-      exWks.Range['F'+IntToStr(line_cnt)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1factory_cod.Index]);
-      exWks.Range['G'+IntToStr(line_cnt)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1factory_name.Index]);
+//      exWks.Range['E'+IntToStr(line_cnt)].Value := cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1date_build.Index];
+//      exWks.Range['N'+IntToStr(line_cnt)].Value := cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1capacity.Index];
+//      exWks.Range['F'+IntToStr(line_cnt)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1factory_cod.Index]);
+//      exWks.Range['G'+IntToStr(line_cnt)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1factory_name.Index]);
       exWks.Range['O'+IntToStr(line_cnt)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1model_name.Index]);
       exWks.Range['H'+IntToStr(line_cnt)].Value := cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1last_depot_repair_date.Index];   //Дата последнего ДР
       exWks.Range['I'+IntToStr(line_cnt)].Value := '';    // (Код) Место Деп.ремонта
-      exWks.Range['J'+IntToStr(line_cnt)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1last_depot_repair_depo.Index]);   // Место деп. ремонта
+//      exWks.Range['J'+IntToStr(line_cnt)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1last_depot_repair_depo.Index]);   // Место деп. ремонта
       exWks.Range['K'+IntToStr(line_cnt)].Value := cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1last_capital_repair_date.Index]; // Дата Кап.ремонта
       exWks.Range['L'+IntToStr(line_cnt)].Value := '';   // (Код) Место Кап.ремонта
-      exWks.Range['M'+IntToStr(line_cnt)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1last_capital_repair_depo.Index]); // (Код) Место Кап.ремонта
+//      exWks.Range['M'+IntToStr(line_cnt)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1last_capital_repair_depo.Index]); // (Код) Место Кап.ремонта
 
       ShowTextMessage('Идет формирование отчета. Обработано '+IntToStr(i)+' из '+IntToStr(cxGrid1DBBandedTableView1.Controller.SelectedRecordCount) + #13#10+ 'Подождите пожалуйста...', False);
       line_cnt := line_cnt + 1;
@@ -1250,120 +1217,120 @@ end;
 procedure TfmFactTrack.cxGrid1DBBandedTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
 var date_query: TDate;
 begin
-  if not dxBarButton14.Down then begin
-    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index]<>NULL) then
-      ACanvas.Brush.Color := AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index];
-  end else begin
-    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1days_free.Index] >= 3) AND
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1days_free.Index] <= 9) then
-          ACanvas.Brush.Color := $00B0FFFB
-      else if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1days_free.Index] >= 10) then
-        ACanvas.Brush.Color := $008080FF;
-    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1cod_operation_vagon_cod.Index] = '92') OR
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1cod_operation_vagon_cod.Index] = '06') then
-       ACanvas.Font.Style := [fsBold];
-  end;
+//  if not dxBarButton14.Down then begin
+//    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index]<>NULL) then
+//      ACanvas.Brush.Color := AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index];
+//  end else begin
+//    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1days_free.Index] >= 3) AND
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1days_free.Index] <= 9) then
+//          ACanvas.Brush.Color := $00B0FFFB
+//      else if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1days_free.Index] >= 10) then
+//        ACanvas.Brush.Color := $008080FF;
+//    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1cod_operation_vagon_cod.Index] = '92') OR
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1cod_operation_vagon_cod.Index] = '06') then
+//       ACanvas.Font.Style := [fsBold];
+//  end;
 
 
 
-  //красим ремонт  //не используется
-  if not dxBarButton22.Down then begin
-    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index] <> NULL) then
-      ACanvas.Brush.Color := AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index];
-    end else begin
-    if AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1milage_rest.Index] <> NULL then
-      if //(AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1milage_rest.Index] <= 10000)
-      (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1milage_rest.Index] <= 5000)  then begin
-        ACanvas.Brush.Color := $00FFD2D2;
-        AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1color.Index] := $00FFD2D2;
-        ACanvas.Font.Style := [fsBold];
-      end;
-
-    if AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1next_date_repair.Index] <> NULL then
-      if  (DaysBetween(date,AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1next_date_repair.Index]) <= 30) then begin
-        ACanvas.Brush.Color := $00FFD2D2;
-        AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1color.Index] := $00FFD2D2;
-        ACanvas.Font.Style := [fsBold];
-      end;
-  end;
-
-
-
-  //1 Порожние, погрузка на экспорт запрещена  светло-фиолетовый
-  if not dxBarButton90.Down then begin
-    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index]<>NULL) then
-      ACanvas.Brush.Color := AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index];
-  end else begin
-    if((AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'хоппер-цементовоз') or
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'полувагон') or
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'цистерна') ) and
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1next_date_repair.Index] <= Date + 30) and
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1next_date_repair.Index] >= Date + 15) and
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1fact_weight.Index] = 0) then begin
-      ACanvas.Brush.Color := $00FFD2D2;
-    end;
-
-    if((AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'полувагон') or
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'цистерна')) and
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1milage_rest.Index] <= 5000) and
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1milage_rest.Index] >= 1500) and
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1milage_rest.Index] <> NULL) and
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1fact_weight.Index] = 0) then begin
-      ACanvas.Brush.Color := $00FFD2D2;
-    end;
-  end;
+//  //красим ремонт  //не используется
+//  if not dxBarButton22.Down then begin
+//    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index] <> NULL) then
+//      ACanvas.Brush.Color := AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index];
+//    end else begin
+//    if AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1milage_rest.Index] <> NULL then
+//      if //(AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1milage_rest.Index] <= 10000)
+//      (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1milage_rest.Index] <= 5000)  then begin
+//        ACanvas.Brush.Color := $00FFD2D2;
+//        AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1color.Index] := $00FFD2D2;
+//        ACanvas.Font.Style := [fsBold];
+//      end;
+//
+//    if AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1next_date_repair.Index] <> NULL then
+//      if  (DaysBetween(date,AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1next_date_repair.Index]) <= 30) then begin
+//        ACanvas.Brush.Color := $00FFD2D2;
+//        AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1color.Index] := $00FFD2D2;
+//        ACanvas.Font.Style := [fsBold];
+//      end;
+//  end;
 
 
 
-  //2 Порожние, погрузка по РФ запрещена светло-фиолетовый
-  if not dxBarButton99.Down then begin
-    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index]<>NULL) then
-      ACanvas.Brush.Color := AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index];
-  end else begin
-    if ((AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'хоппер-цементовоз') or
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'полувагон') or
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'цистерна')  or
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'крытый')) and
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1next_date_repair.Index] < Date + 15) and
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1fact_weight.Index] = 0) then begin
-      ACanvas.Brush.Color := $00FFD2D2;
-    end;
-
-    if ((AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'полувагон') or
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'цистерна')  or
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'крытый')) and
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1milage_rest.Index] < 1500) and
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1milage_rest.Index] <> Null) and
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1fact_weight.Index] = 0) then begin
-      ACanvas.Brush.Color := $00FFD2D2;
-    end;
-  end;
-
-
-
-  //3 Порожние, необходимо срочно погрузить   оранжевый
-  if not dxBarButton89.Down then begin
-    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index]<>NULL) then
-      ACanvas.Brush.Color := AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index];
-    end else begin
-    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1next_date_repair.Index] <= Date + 41) and
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1next_date_repair.Index] >= Date + 31) and
-       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1fact_weight.Index] = 0) then begin
-      ACanvas.Brush.Color := $0053A9FF;
-    end;
-  end;
+//  //1 Порожние, погрузка на экспорт запрещена  светло-фиолетовый
+//  if not dxBarButton90.Down then begin
+//    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index]<>NULL) then
+//      ACanvas.Brush.Color := AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index];
+//  end else begin
+//    if((AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'хоппер-цементовоз') or
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'полувагон') or
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'цистерна') ) and
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1next_date_repair.Index] <= Date + 30) and
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1next_date_repair.Index] >= Date + 15) and
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1fact_weight.Index] = 0) then begin
+//      ACanvas.Brush.Color := $00FFD2D2;
+//    end;
+//
+//    if((AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'полувагон') or
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'цистерна')) and
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1milage_rest.Index] <= 5000) and
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1milage_rest.Index] >= 1500) and
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1milage_rest.Index] <> NULL) and
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1fact_weight.Index] = 0) then begin
+//      ACanvas.Brush.Color := $00FFD2D2;
+//    end;
+//  end;
 
 
 
-  {4 Груженые, необходимо отправить в ремонт синий $00FFC142}
-  if not dxBarButton96.Down then begin
-    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index] <> NULL) then
-      ACanvas.Brush.Color := AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index];
-  end else begin
-    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1milage_rest.Index] <= 5000) then begin
-      ACanvas.Brush.Color := $00FFC142;
-    end;
-  end;
+//  //2 Порожние, погрузка по РФ запрещена светло-фиолетовый
+//  if not dxBarButton99.Down then begin
+//    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index]<>NULL) then
+//      ACanvas.Brush.Color := AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index];
+//  end else begin
+//    if ((AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'хоппер-цементовоз') or
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'полувагон') or
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'цистерна')  or
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'крытый')) and
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1next_date_repair.Index] < Date + 15) and
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1fact_weight.Index] = 0) then begin
+//      ACanvas.Brush.Color := $00FFD2D2;
+//    end;
+//
+//    if ((AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'полувагон') or
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'цистерна')  or
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1rod_vagon_name.Index] = 'крытый')) and
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1milage_rest.Index] < 1500) and
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1milage_rest.Index] <> Null) and
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1fact_weight.Index] = 0) then begin
+//      ACanvas.Brush.Color := $00FFD2D2;
+//    end;
+//  end;
+
+
+
+//  //3 Порожние, необходимо срочно погрузить   оранжевый
+//  if not dxBarButton89.Down then begin
+//    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index]<>NULL) then
+//      ACanvas.Brush.Color := AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index];
+//    end else begin
+//    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1next_date_repair.Index] <= Date + 41) and
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1next_date_repair.Index] >= Date + 31) and
+//       (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1fact_weight.Index] = 0) then begin
+//      ACanvas.Brush.Color := $0053A9FF;
+//    end;
+//  end;
+
+
+
+//  {4 Груженые, необходимо отправить в ремонт синий $00FFC142}
+//  if not dxBarButton96.Down then begin
+//    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index] <> NULL) then
+//      ACanvas.Brush.Color := AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1global_color.Index];
+//  end else begin
+//    if (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView1milage_rest.Index] <= 5000) then begin
+//      ACanvas.Brush.Color := $00FFC142;
+//    end;
+//  end;
 
 
 
@@ -1753,32 +1720,32 @@ var
          ClientDS : TClientDataSet;
                 i : integer;
 begin
-  if cxGrid1DBBandedTableView1etran_ecp_id.DataBinding.Field.IsNull then begin
-    Application.MessageBox(PChar('Заготовка не найдена!'), 'ОШИБКА', MB_ICONSTOP or MB_OK);
-    Exit;
-  end;
-
-  Screen.Cursor := crHourglass;
-
-  Query := TADOQuery.Create(nil);
-  Query.Connection := fmMain.Lis;
-  Query.SQL.Add('SELECT	inf_obj_cod as users_group_cod, FIO_users');
-  Query.SQL.Add('FROM	  users INNER JOIN inf_obj on users.users_group_id = inf_obj.inf_obj_id');
-  Query.SQL.Add('WHERE	users_name = system_user');
-  Query.Open;
-  users_group_cod := Query.FieldByName('users_group_cod').AsString;
-  FIO_users       := Query.FieldByName('FIO_users').AsString;
-  Query.Free;
-
-  Screen.Cursor := crdefault;
-
-  handle := LoadLibrary('etranECP.dll');
-  @FEtran := GetProcAddress(handle, 'CreateWndEtranECPInvoiceToViza');
-  v := FEtran(Application.Handle, users_group_cod, usr_pwd, FIO_users, cxGrid1DBBandedTableView1etran_ecp_id.DataBinding.Field.AsInteger, nil);
-  FreeLibrary(handle);
-
-  if v[0] <> -9 then
-    RefreshQueryGrid(cxGrid1DBBandedTableView1, 'fact_track_id');
+//  if cxGrid1DBBandedTableView1etran_ecp_id.DataBinding.Field.IsNull then begin
+//    Application.MessageBox(PChar('Заготовка не найдена!'), 'ОШИБКА', MB_ICONSTOP or MB_OK);
+//    Exit;
+//  end;
+//
+//  Screen.Cursor := crHourglass;
+//
+//  Query := TADOQuery.Create(nil);
+//  Query.Connection := fmMain.Lis;
+//  Query.SQL.Add('SELECT	inf_obj_cod as users_group_cod, FIO_users');
+//  Query.SQL.Add('FROM	  users INNER JOIN inf_obj on users.users_group_id = inf_obj.inf_obj_id');
+//  Query.SQL.Add('WHERE	users_name = system_user');
+//  Query.Open;
+//  users_group_cod := Query.FieldByName('users_group_cod').AsString;
+//  FIO_users       := Query.FieldByName('FIO_users').AsString;
+//  Query.Free;
+//
+//  Screen.Cursor := crdefault;
+//
+//  handle := LoadLibrary('etranECP.dll');
+//  @FEtran := GetProcAddress(handle, 'CreateWndEtranECPInvoiceToViza');
+//  v := FEtran(Application.Handle, users_group_cod, usr_pwd, FIO_users, cxGrid1DBBandedTableView1etran_ecp_id.DataBinding.Field.AsInteger, nil);
+//  FreeLibrary(handle);
+//
+//  if v[0] <> -9 then
+//    RefreshQueryGrid(cxGrid1DBBandedTableView1, 'fact_track_id');
 end;
 
 
@@ -1858,33 +1825,33 @@ var
          ClientDS : TClientDataSet;
                 i : integer;
 begin
-  if cxGrid1DBBandedTableView1etran_ecp_id.DataBinding.Field.IsNull then begin
-    Application.MessageBox(PChar('Заготовка не найдена!'), 'ОШИБКА', MB_ICONSTOP or MB_OK);
-    Exit;
-  end;
-
-  Screen.Cursor := crHourglass;
-
-  Query := TADOQuery.Create(nil);
-  Query.Connection := fmMain.Lis;
-  Query.SQL.Add('SELECT	inf_obj_cod as users_group_cod, FIO_users');
-  Query.SQL.Add('FROM	  users INNER JOIN inf_obj on users.users_group_id = inf_obj.inf_obj_id');
-  Query.SQL.Add('WHERE	users_name = system_user');
-  Query.Open;
-  users_group_cod := Query.FieldByName('users_group_cod').AsString;
-  FIO_users       := Query.FieldByName('FIO_users').AsString;
-  Query.Free;
-
-  Screen.Cursor := crdefault;
-
-  handle := LoadLibrary('etranECP.dll');
-  @FEtran := GetProcAddress(handle, 'CreateWndEtranECPInvoiceDelete');
-  v := FEtran(users_group_cod, usr_pwd, cxGrid1DBBandedTableView1etran_ecp_id.DataBinding.Field.AsInteger);
-  FreeLibrary(handle);
-
-  if v[0] <> -9 then
-    if Application.MessageBox(PChar('Обновить информацию?'), 'Вниамние!', MB_YESNO + MB_DEFBUTTON2) = IDYES then
-      RefreshQueryGrid(cxGrid1DBBandedTableView1, 'fact_track_id');
+//  if cxGrid1DBBandedTableView1etran_ecp_id.DataBinding.Field.IsNull then begin
+//    Application.MessageBox(PChar('Заготовка не найдена!'), 'ОШИБКА', MB_ICONSTOP or MB_OK);
+//    Exit;
+//  end;
+//
+//  Screen.Cursor := crHourglass;
+//
+//  Query := TADOQuery.Create(nil);
+//  Query.Connection := fmMain.Lis;
+//  Query.SQL.Add('SELECT	inf_obj_cod as users_group_cod, FIO_users');
+//  Query.SQL.Add('FROM	  users INNER JOIN inf_obj on users.users_group_id = inf_obj.inf_obj_id');
+//  Query.SQL.Add('WHERE	users_name = system_user');
+//  Query.Open;
+//  users_group_cod := Query.FieldByName('users_group_cod').AsString;
+//  FIO_users       := Query.FieldByName('FIO_users').AsString;
+//  Query.Free;
+//
+//  Screen.Cursor := crdefault;
+//
+//  handle := LoadLibrary('etranECP.dll');
+//  @FEtran := GetProcAddress(handle, 'CreateWndEtranECPInvoiceDelete');
+//  v := FEtran(users_group_cod, usr_pwd, cxGrid1DBBandedTableView1etran_ecp_id.DataBinding.Field.AsInteger);
+//  FreeLibrary(handle);
+//
+//  if v[0] <> -9 then
+//    if Application.MessageBox(PChar('Обновить информацию?'), 'Вниамние!', MB_YESNO + MB_DEFBUTTON2) = IDYES then
+//      RefreshQueryGrid(cxGrid1DBBandedTableView1, 'fact_track_id');
 end;
 
 procedure TfmFactTrack.dxBarButton73Click(Sender: TObject);
@@ -1898,24 +1865,24 @@ var
   users_group_cod : string;
         FIO_users : string;
 begin
-  Screen.Cursor := crHourglass;
-
-  Query := TADOQuery.Create(nil);
-  Query.Connection := fmMain.Lis;
-  Query.SQL.Add('SELECT	inf_obj_cod as users_group_cod, FIO_users');
-  Query.SQL.Add('FROM	  users INNER JOIN inf_obj on users.users_group_id = inf_obj.inf_obj_id');
-  Query.SQL.Add('WHERE	users_name = system_user');
-  Query.Open;
-  users_group_cod := Query.FieldByName('users_group_cod').AsString;
-  FIO_users       := Query.FieldByName('FIO_users').AsString;
-  Query.Free;
-
-  Screen.Cursor := crdefault;
-
-  handle := LoadLibrary('etranECP.dll');
-  @FEtran := GetProcAddress(handle, 'CreateWndEtranECP');
-  v := FEtran(Application.Handle, users_group_cod, usr_pwd, FIO_users, cxGrid1DBBandedTableView1etran_ecp_id.DataBinding.Field.AsInteger);
-  FreeLibrary(handle);
+//  Screen.Cursor := crHourglass;
+//
+//  Query := TADOQuery.Create(nil);
+//  Query.Connection := fmMain.Lis;
+//  Query.SQL.Add('SELECT	inf_obj_cod as users_group_cod, FIO_users');
+//  Query.SQL.Add('FROM	  users INNER JOIN inf_obj on users.users_group_id = inf_obj.inf_obj_id');
+//  Query.SQL.Add('WHERE	users_name = system_user');
+//  Query.Open;
+//  users_group_cod := Query.FieldByName('users_group_cod').AsString;
+//  FIO_users       := Query.FieldByName('FIO_users').AsString;
+//  Query.Free;
+//
+//  Screen.Cursor := crdefault;
+//
+//  handle := LoadLibrary('etranECP.dll');
+//  @FEtran := GetProcAddress(handle, 'CreateWndEtranECP');
+//  v := FEtran(Application.Handle, users_group_cod, usr_pwd, FIO_users, cxGrid1DBBandedTableView1etran_ecp_id.DataBinding.Field.AsInteger);
+//  FreeLibrary(handle);
 end;
 
 procedure TfmFactTrack.dxBarButton74Click(Sender: TObject);
@@ -2412,7 +2379,7 @@ begin
   ClientDS.FieldByName('num_vagon').Value := cxGrid1DBBandedTableView1num_vagon.DataBinding.Field.Value;
   ClientDS.FieldByName('vagon_id' ).Value := cxGrid1DBBandedTableView1vagon_id.DataBinding.Field.Value;
   ClientDS.FieldByName('IsEmpty'  ).Value := cxGrid1DBBandedTableView1IsEmpty.DataBinding.Field.Value;
-  ClientDS.FieldByName('firm_name').Value := cxGrid1DBBandedTableView1firm_name.DataBinding.Field.Value;
+//  ClientDS.FieldByName('firm_name').Value := cxGrid1DBBandedTableView1firm_name.DataBinding.Field.Value;
   ClientDS.Post;
 
   handle := LoadLibrary('dictionary.dll');
@@ -2443,339 +2410,339 @@ var sp_fact_track_query_modify: TADOStoredProc;
              file_pos : integer;
                   str : string;
 begin
-  ShowTextMessage('Подготовка данных...', False);
-  sp_fact_track_query_modify := TADOStoredProc.Create(nil);
-  sp_fact_track_query_modify.Connection := fmMain.Lis;
-  sp_fact_track_query_modify.ProcedureName := 'sp_fact_track_query_modify';
-  sp_fact_track_query_modify.CommandTimeout := 300;
-  sp_fact_track_query_modify.Parameters.Refresh;
-  sp_fact_track_query_modify.Parameters.ParamByName('@query_id'   ).Value := cxGrid1DBBandedTableView1query_id.DataBinding.Field.AsInteger;
-  sp_fact_track_query_modify.Parameters.ParamByName('@type_action').Value := 10;
-  sp_fact_track_query_modify.Open;
-
-//  str1 := TStringList.Create;
-//  str2 := TStringList.Create;
-//  for i:=0 to sp_fact_track_query_modify.FieldCount-1 do begin
+//  ShowTextMessage('Подготовка данных...', False);
+//  sp_fact_track_query_modify := TADOStoredProc.Create(nil);
+//  sp_fact_track_query_modify.Connection := fmMain.Lis;
+//  sp_fact_track_query_modify.ProcedureName := 'sp_fact_track_query_modify';
+//  sp_fact_track_query_modify.CommandTimeout := 300;
+//  sp_fact_track_query_modify.Parameters.Refresh;
+//  sp_fact_track_query_modify.Parameters.ParamByName('@query_id'   ).Value := cxGrid1DBBandedTableView1query_id.DataBinding.Field.AsInteger;
+//  sp_fact_track_query_modify.Parameters.ParamByName('@type_action').Value := 10;
+//  sp_fact_track_query_modify.Open;
 //
-//    str1.Add('array_data[1, ' + IntToStr(i+1) + '] := ''' + sp_fact_track_query_modify.FieldDefs[i].Name + ''';');
-//    str2.Add('array_data[sp_fact_track_query_modify.RecNo+1, ' + IntToStr(i+1) + '] := Q.FieldByName(''' + sp_fact_track_query_modify.FieldDefs[i].Name + ''').Value;');
+////  str1 := TStringList.Create;
+////  str2 := TStringList.Create;
+////  for i:=0 to sp_fact_track_query_modify.FieldCount-1 do begin
+////
+////    str1.Add('array_data[1, ' + IntToStr(i+1) + '] := ''' + sp_fact_track_query_modify.FieldDefs[i].Name + ''';');
+////    str2.Add('array_data[sp_fact_track_query_modify.RecNo+1, ' + IntToStr(i+1) + '] := Q.FieldByName(''' + sp_fact_track_query_modify.FieldDefs[i].Name + ''').Value;');
+////  end;
+////
+////  str1.SaveToFile('d:\www\1.txt');
+////  str2.SaveToFile('d:\www\2.txt');
+//
+//  exApp := CreateOleObject('Excel.Application');
+//  exWkb := exApp.Workbooks.Add;
+//  exWkb := exApp.ActiveWorkbook;
+//  exWks := exWkb.WorkSheets[1];
+//
+//
+//  cnt_record := sp_fact_track_query_modify.RecordCount;
+//  cnt_column := 95;
+//  array_data := VarArrayCreate([1, cnt_record+4, 1, cnt_column+1], varVariant);
+//
+//  array_data[1, 1] := 'Период';
+//  array_data[1, 2] := 'ДатаДислокации';
+//  array_data[1, 3] := 'ДатаДобавления';
+//  array_data[1, 4] := 'ДатаОтправления';
+//  array_data[1, 5] := 'ДатаПоследнегоДеповскогоРемонта';
+//  array_data[1, 6] := 'ДатаСледующегоРемонта';
+//  array_data[1, 7] := 'ДатаПоследнегоКапитальногоРемонта';
+//  array_data[1, 8] := 'ДатаПостройки';
+//  array_data[1, 9] := 'ОриентировочнаяДатаПрибытия';
+//  array_data[1, 10] := 'ДатаОконСлужбы';
+//  array_data[1, 11] := 'ДатаРегистрации';
+//  array_data[1, 12] := 'ПробегТекДата';
+//  array_data[1, 13] := 'ПробегОстДата';
+//  array_data[1, 14] := 'ДатаОтправленияПоДаннымЖД';
+//  array_data[1, 15] := 'ДатаПостановки';
+//  array_data[1, 16] := 'НомерВагона';
+//  array_data[1, 17] := 'ВесГруза';
+//  array_data[1, 18] := 'Грузоподъемность';
+//  array_data[1, 19] := 'ДнейДоКонцаМаршрута';
+//  array_data[1, 20] := 'ДнейМаршрута';
+//  array_data[1, 21] := 'ДниБезДвижения';
+//  array_data[1, 22] := 'ДолготаСтанцииДислокации';
+//  array_data[1, 23] := 'ДолготаСтанцииНазначения';
+//  array_data[1, 24] := 'ДолготаСтанцииОтправления';
+//  array_data[1, 25] := 'Тара';
+//  array_data[1, 26] := 'ШиротаСтанцииДислокации';
+//  array_data[1, 27] := 'ШиротаСтанцииНазначения';
+//  array_data[1, 28] := 'ШиротаСтанцииОтправления';
+//  array_data[1, 29] := 'ТарифСумма';
+//  array_data[1, 30] := 'ВидСледующегоРемонта';
+//  array_data[1, 31] := 'Группа';
+//  array_data[1, 32] := 'ИДВагона';
+//  array_data[1, 33] := 'СтоитНаСлежении';
+//  array_data[1, 34] := 'Груженый';
+//  array_data[1, 35] := 'ДатаДислокацииUNIX';
+//  array_data[1, 36] := 'ИДГруппы';
+//  array_data[1, 37] := 'ИДОперации';
+//  array_data[1, 38] := 'ИндексПоезда';
+//  array_data[1, 39] := 'КодДорогиДислокации';
+//  array_data[1, 40] := 'КодДорогиНазначения';
+//  array_data[1, 41] := 'КодДорогиОтправления';
+//  array_data[1, 42] := 'КодЕТСНГ';
+//  array_data[1, 43] := 'КодСтанцииДислокации';
+//  array_data[1, 44] := 'КодСтанцииНазначения';
+//  array_data[1, 45] := 'КодСтанцииОтправления';
+//  array_data[1, 46] := 'Модель';
+//  array_data[1, 47] := 'НаименованиеОперации';
+//  array_data[1, 48] := 'НаименованиеСтанцииДислокации';
+//  array_data[1, 49] := 'НаименованиеСтанцииНазначения';
+//  array_data[1, 50] := 'НаименованиеСтанцииОтправления';
+//  array_data[1, 51] := 'НаПостоянномСлежении';
+//  array_data[1, 52] := 'НомерПоезда';
+//  array_data[1, 53] := 'Прибыл';
+//  array_data[1, 54] := 'РасстояниеОсталось';
+//  array_data[1, 55] := 'Сломан';
+//  array_data[1, 56] := 'Состояние';
+//  array_data[1, 57] := 'Тип';
+//  array_data[1, 58] := 'КодОперации';
+//  array_data[1, 59] := 'НаименованиеГруза';
+//  array_data[1, 60] := 'НомерНакладной';
+//  array_data[1, 61] := 'ОКПОГрузополучателя';
+//  array_data[1, 62] := 'ОКПОГрузоотправителя';
+//  array_data[1, 63] := 'Грузоотправитель';
+//  array_data[1, 64] := 'КодДепоПоступленияВРемонт';
+//  array_data[1, 65] := 'НаименованиеДепоПоступленияВРемонт';
+//  array_data[1, 66] := 'КодДепоВыходаИзРемонта';
+//  array_data[1, 67] := 'НаименованиеДепоВыходаИзРемонта';
+//  array_data[1, 68] := 'КодНеисправности';
+//  array_data[1, 69] := 'НаименованиеНеисправности';
+//  array_data[1, 70] := 'ДатаПокиданияСтОтправкиUNIX';
+//  array_data[1, 71] := 'ДатаФактическогПрибытияНаСтНазначенияUNIX';
+//  array_data[1, 72] := 'ДатаФактическогПрибытияНаСтНазначения';
+//  array_data[1, 73] := 'ДатаОтправкиСоВременем';
+//  array_data[1, 74] := 'Грузополучатель';
+//  array_data[1, 75] := 'ТарифВалюта';
+//  array_data[1, 76] := 'СобственникНаим';
+//  array_data[1, 77] := 'АрендаторНаим';
+//  array_data[1, 78] := 'ТипСлежения';
+//  array_data[1, 79] := 'НомерПлатформы';
+//  array_data[1, 80] := 'ОбъемКузова';
+//  array_data[1, 81] := 'ВагонТипПолн';
+//  array_data[1, 82] := 'ВагонРод';
+//  array_data[1, 83] := 'ДепоПоследнегоДеповскогоРемонта';
+//  array_data[1, 84] := 'ДепоПоследнегоКапитальногоРемонта';
+//  array_data[1, 85] := 'ГУ12';
+//  array_data[1, 86] := 'ПробегТекКм';
+//  array_data[1, 87] := 'ПробегОстКм';
+//  array_data[1, 88] := 'КонтрольРемонтаПоПробегу';
+//  array_data[1, 89] := 'ВагонТипСокр';
+//  array_data[1, 90] := 'НомерКонтейнера';
+//  array_data[1, 91] := 'ТипКонтейнера';
+//  array_data[1, 92] := 'НаименованиеОперацииАнгл';
+//  array_data[1, 93] := 'КодОперацииАнгл';
+//  array_data[1, 94] := 'НаименованиеСтанцииДислокацииАнг';
+//  array_data[1, 95] := 'НаименованиеСтанцииНазначенияАнг';
+//  array_data[1, 96] := 'НаименованиеСтанцииОтправленияАнг';
+//
+//  while not sp_fact_track_query_modify.Eof do begin
+//    array_data[sp_fact_track_query_modify.RecNo+1, 1] := sp_fact_track_query_modify.FieldByName('Период').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 2] := sp_fact_track_query_modify.FieldByName('ДатаДислокации').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 3] := sp_fact_track_query_modify.FieldByName('ДатаДобавления').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 4] := sp_fact_track_query_modify.FieldByName('ДатаОтправления').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 5] := sp_fact_track_query_modify.FieldByName('ДатаПоследнегоДеповскогоРемонта').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 6] := sp_fact_track_query_modify.FieldByName('ДатаСледующегоРемонта').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 7] := sp_fact_track_query_modify.FieldByName('ДатаПоследнегоКапитальногоРемонта').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 8] := sp_fact_track_query_modify.FieldByName('ДатаПостройки').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 9] := sp_fact_track_query_modify.FieldByName('ОриентировочнаяДатаПрибытия').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 10] := sp_fact_track_query_modify.FieldByName('ДатаОконСлужбы').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 11] := sp_fact_track_query_modify.FieldByName('ДатаРегистрации').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 12] := sp_fact_track_query_modify.FieldByName('ПробегТекДата').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 13] := sp_fact_track_query_modify.FieldByName('ПробегОстДата').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 14] := sp_fact_track_query_modify.FieldByName('ДатаОтправленияПоДаннымЖД').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 15] := sp_fact_track_query_modify.FieldByName('ДатаПостановки').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 16] := sp_fact_track_query_modify.FieldByName('НомерВагона').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 17] := sp_fact_track_query_modify.FieldByName('ВесГруза').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 18] := sp_fact_track_query_modify.FieldByName('Грузоподъемность').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 19] := sp_fact_track_query_modify.FieldByName('ДнейДоКонцаМаршрута').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 20] := sp_fact_track_query_modify.FieldByName('ДнейМаршрута').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 21] := sp_fact_track_query_modify.FieldByName('ДниБезДвижения').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 22] := sp_fact_track_query_modify.FieldByName('ДолготаСтанцииДислокации').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 23] := sp_fact_track_query_modify.FieldByName('ДолготаСтанцииНазначения').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 24] := sp_fact_track_query_modify.FieldByName('ДолготаСтанцииОтправления').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 25] := sp_fact_track_query_modify.FieldByName('Тара').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 26] := sp_fact_track_query_modify.FieldByName('ШиротаСтанцииДислокации').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 27] := sp_fact_track_query_modify.FieldByName('ШиротаСтанцииНазначения').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 28] := sp_fact_track_query_modify.FieldByName('ШиротаСтанцииОтправления').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 29] := sp_fact_track_query_modify.FieldByName('ТарифСумма').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 30] := sp_fact_track_query_modify.FieldByName('ВидСледующегоРемонта').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 31] := sp_fact_track_query_modify.FieldByName('Группа').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 32] := sp_fact_track_query_modify.FieldByName('ИДВагона').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 33] := sp_fact_track_query_modify.FieldByName('СтоитНаСлежении').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 34] := sp_fact_track_query_modify.FieldByName('Груженый').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 35] := sp_fact_track_query_modify.FieldByName('ДатаДислокацииUNIX').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 36] := sp_fact_track_query_modify.FieldByName('ИДГруппы').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 37] := sp_fact_track_query_modify.FieldByName('ИДОперации').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 38] := sp_fact_track_query_modify.FieldByName('ИндексПоезда').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 39] := sp_fact_track_query_modify.FieldByName('КодДорогиДислокации').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 40] := sp_fact_track_query_modify.FieldByName('КодДорогиНазначения').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 41] := sp_fact_track_query_modify.FieldByName('КодДорогиОтправления').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 42] := sp_fact_track_query_modify.FieldByName('КодЕТСНГ').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 43] := sp_fact_track_query_modify.FieldByName('КодСтанцииДислокации').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 44] := sp_fact_track_query_modify.FieldByName('КодСтанцииНазначения').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 45] := sp_fact_track_query_modify.FieldByName('КодСтанцииОтправления').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 46] := sp_fact_track_query_modify.FieldByName('Модель').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 47] := sp_fact_track_query_modify.FieldByName('НаименованиеОперации').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 48] := sp_fact_track_query_modify.FieldByName('НаименованиеСтанцииДислокации').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 49] := sp_fact_track_query_modify.FieldByName('НаименованиеСтанцииНазначения').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 50] := sp_fact_track_query_modify.FieldByName('НаименованиеСтанцииОтправления').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 51] := sp_fact_track_query_modify.FieldByName('НаПостоянномСлежении').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 52] := sp_fact_track_query_modify.FieldByName('НомерПоезда').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 53] := sp_fact_track_query_modify.FieldByName('Прибыл').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 54] := sp_fact_track_query_modify.FieldByName('РасстояниеОсталось').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 55] := sp_fact_track_query_modify.FieldByName('Сломан').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 56] := sp_fact_track_query_modify.FieldByName('Состояние').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 57] := sp_fact_track_query_modify.FieldByName('Тип').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 58] := sp_fact_track_query_modify.FieldByName('КодОперации').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 59] := sp_fact_track_query_modify.FieldByName('НаименованиеГруза').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 60] := sp_fact_track_query_modify.FieldByName('НомерНакладной').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 61] := sp_fact_track_query_modify.FieldByName('ОКПОГрузополучателя').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 62] := sp_fact_track_query_modify.FieldByName('ОКПОГрузоотправителя').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 63] := sp_fact_track_query_modify.FieldByName('Грузоотправитель').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 64] := sp_fact_track_query_modify.FieldByName('КодДепоПоступленияВРемонт').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 65] := sp_fact_track_query_modify.FieldByName('НаименованиеДепоПоступленияВРемонт').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 66] := sp_fact_track_query_modify.FieldByName('КодДепоВыходаИзРемонта').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 67] := sp_fact_track_query_modify.FieldByName('НаименованиеДепоВыходаИзРемонта').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 68] := sp_fact_track_query_modify.FieldByName('КодНеисправности').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 69] := sp_fact_track_query_modify.FieldByName('НаименованиеНеисправности').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 70] := sp_fact_track_query_modify.FieldByName('ДатаПокиданияСтОтправкиUNIX').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 71] := sp_fact_track_query_modify.FieldByName('ДатаФактическогПрибытияНаСтНазначенияUNIX').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 72] := sp_fact_track_query_modify.FieldByName('ДатаФактическогПрибытияНаСтНазначения').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 73] := sp_fact_track_query_modify.FieldByName('ДатаОтправкиСоВременем').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 74] := sp_fact_track_query_modify.FieldByName('Грузополучатель').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 75] := sp_fact_track_query_modify.FieldByName('ТарифВалюта').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 76] := sp_fact_track_query_modify.FieldByName('СобственникНаим').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 77] := sp_fact_track_query_modify.FieldByName('АрендаторНаим').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 78] := sp_fact_track_query_modify.FieldByName('ТипСлежения').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 79] := sp_fact_track_query_modify.FieldByName('НомерПлатформы').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 80] := sp_fact_track_query_modify.FieldByName('ОбъемКузова').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 81] := sp_fact_track_query_modify.FieldByName('ВагонТипПолн').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 82] := sp_fact_track_query_modify.FieldByName('ВагонРод').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 83] := sp_fact_track_query_modify.FieldByName('ДепоПоследнегоДеповскогоРемонта').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 84] := sp_fact_track_query_modify.FieldByName('ДепоПоследнегоКапитальногоРемонта').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 85] := sp_fact_track_query_modify.FieldByName('ГУ12').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 86] := sp_fact_track_query_modify.FieldByName('ПробегТекКм').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 87] := sp_fact_track_query_modify.FieldByName('ПробегОстКм').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 88] := sp_fact_track_query_modify.FieldByName('КонтрольРемонтаПоПробегу').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 89] := sp_fact_track_query_modify.FieldByName('ВагонТипСокр').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 90] := sp_fact_track_query_modify.FieldByName('НомерКонтейнера').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 91] := sp_fact_track_query_modify.FieldByName('ТипКонтейнера').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 92] := sp_fact_track_query_modify.FieldByName('НаименованиеОперацииАнгл').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 93] := sp_fact_track_query_modify.FieldByName('КодОперацииАнгл').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 94] := sp_fact_track_query_modify.FieldByName('НаименованиеСтанцииДислокацииАнг').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 95] := sp_fact_track_query_modify.FieldByName('НаименованиеСтанцииНазначенияАнг').Value;
+//    array_data[sp_fact_track_query_modify.RecNo+1, 96] := sp_fact_track_query_modify.FieldByName('НаименованиеСтанцииОтправленияАнг').Value;
+//
+//    sp_fact_track_query_modify.Next;
 //  end;
 //
-//  str1.SaveToFile('d:\www\1.txt');
-//  str2.SaveToFile('d:\www\2.txt');
-
-  exApp := CreateOleObject('Excel.Application');
-  exWkb := exApp.Workbooks.Add;
-  exWkb := exApp.ActiveWorkbook;
-  exWks := exWkb.WorkSheets[1];
-
-
-  cnt_record := sp_fact_track_query_modify.RecordCount;
-  cnt_column := 95;
-  array_data := VarArrayCreate([1, cnt_record+4, 1, cnt_column+1], varVariant);
-
-  array_data[1, 1] := 'Период';
-  array_data[1, 2] := 'ДатаДислокации';
-  array_data[1, 3] := 'ДатаДобавления';
-  array_data[1, 4] := 'ДатаОтправления';
-  array_data[1, 5] := 'ДатаПоследнегоДеповскогоРемонта';
-  array_data[1, 6] := 'ДатаСледующегоРемонта';
-  array_data[1, 7] := 'ДатаПоследнегоКапитальногоРемонта';
-  array_data[1, 8] := 'ДатаПостройки';
-  array_data[1, 9] := 'ОриентировочнаяДатаПрибытия';
-  array_data[1, 10] := 'ДатаОконСлужбы';
-  array_data[1, 11] := 'ДатаРегистрации';
-  array_data[1, 12] := 'ПробегТекДата';
-  array_data[1, 13] := 'ПробегОстДата';
-  array_data[1, 14] := 'ДатаОтправленияПоДаннымЖД';
-  array_data[1, 15] := 'ДатаПостановки';
-  array_data[1, 16] := 'НомерВагона';
-  array_data[1, 17] := 'ВесГруза';
-  array_data[1, 18] := 'Грузоподъемность';
-  array_data[1, 19] := 'ДнейДоКонцаМаршрута';
-  array_data[1, 20] := 'ДнейМаршрута';
-  array_data[1, 21] := 'ДниБезДвижения';
-  array_data[1, 22] := 'ДолготаСтанцииДислокации';
-  array_data[1, 23] := 'ДолготаСтанцииНазначения';
-  array_data[1, 24] := 'ДолготаСтанцииОтправления';
-  array_data[1, 25] := 'Тара';
-  array_data[1, 26] := 'ШиротаСтанцииДислокации';
-  array_data[1, 27] := 'ШиротаСтанцииНазначения';
-  array_data[1, 28] := 'ШиротаСтанцииОтправления';
-  array_data[1, 29] := 'ТарифСумма';
-  array_data[1, 30] := 'ВидСледующегоРемонта';
-  array_data[1, 31] := 'Группа';
-  array_data[1, 32] := 'ИДВагона';
-  array_data[1, 33] := 'СтоитНаСлежении';
-  array_data[1, 34] := 'Груженый';
-  array_data[1, 35] := 'ДатаДислокацииUNIX';
-  array_data[1, 36] := 'ИДГруппы';
-  array_data[1, 37] := 'ИДОперации';
-  array_data[1, 38] := 'ИндексПоезда';
-  array_data[1, 39] := 'КодДорогиДислокации';
-  array_data[1, 40] := 'КодДорогиНазначения';
-  array_data[1, 41] := 'КодДорогиОтправления';
-  array_data[1, 42] := 'КодЕТСНГ';
-  array_data[1, 43] := 'КодСтанцииДислокации';
-  array_data[1, 44] := 'КодСтанцииНазначения';
-  array_data[1, 45] := 'КодСтанцииОтправления';
-  array_data[1, 46] := 'Модель';
-  array_data[1, 47] := 'НаименованиеОперации';
-  array_data[1, 48] := 'НаименованиеСтанцииДислокации';
-  array_data[1, 49] := 'НаименованиеСтанцииНазначения';
-  array_data[1, 50] := 'НаименованиеСтанцииОтправления';
-  array_data[1, 51] := 'НаПостоянномСлежении';
-  array_data[1, 52] := 'НомерПоезда';
-  array_data[1, 53] := 'Прибыл';
-  array_data[1, 54] := 'РасстояниеОсталось';
-  array_data[1, 55] := 'Сломан';
-  array_data[1, 56] := 'Состояние';
-  array_data[1, 57] := 'Тип';
-  array_data[1, 58] := 'КодОперации';
-  array_data[1, 59] := 'НаименованиеГруза';
-  array_data[1, 60] := 'НомерНакладной';
-  array_data[1, 61] := 'ОКПОГрузополучателя';
-  array_data[1, 62] := 'ОКПОГрузоотправителя';
-  array_data[1, 63] := 'Грузоотправитель';
-  array_data[1, 64] := 'КодДепоПоступленияВРемонт';
-  array_data[1, 65] := 'НаименованиеДепоПоступленияВРемонт';
-  array_data[1, 66] := 'КодДепоВыходаИзРемонта';
-  array_data[1, 67] := 'НаименованиеДепоВыходаИзРемонта';
-  array_data[1, 68] := 'КодНеисправности';
-  array_data[1, 69] := 'НаименованиеНеисправности';
-  array_data[1, 70] := 'ДатаПокиданияСтОтправкиUNIX';
-  array_data[1, 71] := 'ДатаФактическогПрибытияНаСтНазначенияUNIX';
-  array_data[1, 72] := 'ДатаФактическогПрибытияНаСтНазначения';
-  array_data[1, 73] := 'ДатаОтправкиСоВременем';
-  array_data[1, 74] := 'Грузополучатель';
-  array_data[1, 75] := 'ТарифВалюта';
-  array_data[1, 76] := 'СобственникНаим';
-  array_data[1, 77] := 'АрендаторНаим';
-  array_data[1, 78] := 'ТипСлежения';
-  array_data[1, 79] := 'НомерПлатформы';
-  array_data[1, 80] := 'ОбъемКузова';
-  array_data[1, 81] := 'ВагонТипПолн';
-  array_data[1, 82] := 'ВагонРод';
-  array_data[1, 83] := 'ДепоПоследнегоДеповскогоРемонта';
-  array_data[1, 84] := 'ДепоПоследнегоКапитальногоРемонта';
-  array_data[1, 85] := 'ГУ12';
-  array_data[1, 86] := 'ПробегТекКм';
-  array_data[1, 87] := 'ПробегОстКм';
-  array_data[1, 88] := 'КонтрольРемонтаПоПробегу';
-  array_data[1, 89] := 'ВагонТипСокр';
-  array_data[1, 90] := 'НомерКонтейнера';
-  array_data[1, 91] := 'ТипКонтейнера';
-  array_data[1, 92] := 'НаименованиеОперацииАнгл';
-  array_data[1, 93] := 'КодОперацииАнгл';
-  array_data[1, 94] := 'НаименованиеСтанцииДислокацииАнг';
-  array_data[1, 95] := 'НаименованиеСтанцииНазначенияАнг';
-  array_data[1, 96] := 'НаименованиеСтанцииОтправленияАнг';
-
-  while not sp_fact_track_query_modify.Eof do begin
-    array_data[sp_fact_track_query_modify.RecNo+1, 1] := sp_fact_track_query_modify.FieldByName('Период').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 2] := sp_fact_track_query_modify.FieldByName('ДатаДислокации').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 3] := sp_fact_track_query_modify.FieldByName('ДатаДобавления').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 4] := sp_fact_track_query_modify.FieldByName('ДатаОтправления').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 5] := sp_fact_track_query_modify.FieldByName('ДатаПоследнегоДеповскогоРемонта').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 6] := sp_fact_track_query_modify.FieldByName('ДатаСледующегоРемонта').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 7] := sp_fact_track_query_modify.FieldByName('ДатаПоследнегоКапитальногоРемонта').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 8] := sp_fact_track_query_modify.FieldByName('ДатаПостройки').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 9] := sp_fact_track_query_modify.FieldByName('ОриентировочнаяДатаПрибытия').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 10] := sp_fact_track_query_modify.FieldByName('ДатаОконСлужбы').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 11] := sp_fact_track_query_modify.FieldByName('ДатаРегистрации').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 12] := sp_fact_track_query_modify.FieldByName('ПробегТекДата').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 13] := sp_fact_track_query_modify.FieldByName('ПробегОстДата').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 14] := sp_fact_track_query_modify.FieldByName('ДатаОтправленияПоДаннымЖД').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 15] := sp_fact_track_query_modify.FieldByName('ДатаПостановки').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 16] := sp_fact_track_query_modify.FieldByName('НомерВагона').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 17] := sp_fact_track_query_modify.FieldByName('ВесГруза').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 18] := sp_fact_track_query_modify.FieldByName('Грузоподъемность').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 19] := sp_fact_track_query_modify.FieldByName('ДнейДоКонцаМаршрута').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 20] := sp_fact_track_query_modify.FieldByName('ДнейМаршрута').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 21] := sp_fact_track_query_modify.FieldByName('ДниБезДвижения').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 22] := sp_fact_track_query_modify.FieldByName('ДолготаСтанцииДислокации').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 23] := sp_fact_track_query_modify.FieldByName('ДолготаСтанцииНазначения').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 24] := sp_fact_track_query_modify.FieldByName('ДолготаСтанцииОтправления').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 25] := sp_fact_track_query_modify.FieldByName('Тара').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 26] := sp_fact_track_query_modify.FieldByName('ШиротаСтанцииДислокации').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 27] := sp_fact_track_query_modify.FieldByName('ШиротаСтанцииНазначения').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 28] := sp_fact_track_query_modify.FieldByName('ШиротаСтанцииОтправления').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 29] := sp_fact_track_query_modify.FieldByName('ТарифСумма').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 30] := sp_fact_track_query_modify.FieldByName('ВидСледующегоРемонта').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 31] := sp_fact_track_query_modify.FieldByName('Группа').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 32] := sp_fact_track_query_modify.FieldByName('ИДВагона').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 33] := sp_fact_track_query_modify.FieldByName('СтоитНаСлежении').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 34] := sp_fact_track_query_modify.FieldByName('Груженый').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 35] := sp_fact_track_query_modify.FieldByName('ДатаДислокацииUNIX').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 36] := sp_fact_track_query_modify.FieldByName('ИДГруппы').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 37] := sp_fact_track_query_modify.FieldByName('ИДОперации').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 38] := sp_fact_track_query_modify.FieldByName('ИндексПоезда').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 39] := sp_fact_track_query_modify.FieldByName('КодДорогиДислокации').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 40] := sp_fact_track_query_modify.FieldByName('КодДорогиНазначения').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 41] := sp_fact_track_query_modify.FieldByName('КодДорогиОтправления').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 42] := sp_fact_track_query_modify.FieldByName('КодЕТСНГ').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 43] := sp_fact_track_query_modify.FieldByName('КодСтанцииДислокации').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 44] := sp_fact_track_query_modify.FieldByName('КодСтанцииНазначения').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 45] := sp_fact_track_query_modify.FieldByName('КодСтанцииОтправления').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 46] := sp_fact_track_query_modify.FieldByName('Модель').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 47] := sp_fact_track_query_modify.FieldByName('НаименованиеОперации').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 48] := sp_fact_track_query_modify.FieldByName('НаименованиеСтанцииДислокации').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 49] := sp_fact_track_query_modify.FieldByName('НаименованиеСтанцииНазначения').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 50] := sp_fact_track_query_modify.FieldByName('НаименованиеСтанцииОтправления').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 51] := sp_fact_track_query_modify.FieldByName('НаПостоянномСлежении').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 52] := sp_fact_track_query_modify.FieldByName('НомерПоезда').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 53] := sp_fact_track_query_modify.FieldByName('Прибыл').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 54] := sp_fact_track_query_modify.FieldByName('РасстояниеОсталось').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 55] := sp_fact_track_query_modify.FieldByName('Сломан').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 56] := sp_fact_track_query_modify.FieldByName('Состояние').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 57] := sp_fact_track_query_modify.FieldByName('Тип').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 58] := sp_fact_track_query_modify.FieldByName('КодОперации').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 59] := sp_fact_track_query_modify.FieldByName('НаименованиеГруза').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 60] := sp_fact_track_query_modify.FieldByName('НомерНакладной').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 61] := sp_fact_track_query_modify.FieldByName('ОКПОГрузополучателя').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 62] := sp_fact_track_query_modify.FieldByName('ОКПОГрузоотправителя').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 63] := sp_fact_track_query_modify.FieldByName('Грузоотправитель').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 64] := sp_fact_track_query_modify.FieldByName('КодДепоПоступленияВРемонт').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 65] := sp_fact_track_query_modify.FieldByName('НаименованиеДепоПоступленияВРемонт').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 66] := sp_fact_track_query_modify.FieldByName('КодДепоВыходаИзРемонта').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 67] := sp_fact_track_query_modify.FieldByName('НаименованиеДепоВыходаИзРемонта').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 68] := sp_fact_track_query_modify.FieldByName('КодНеисправности').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 69] := sp_fact_track_query_modify.FieldByName('НаименованиеНеисправности').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 70] := sp_fact_track_query_modify.FieldByName('ДатаПокиданияСтОтправкиUNIX').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 71] := sp_fact_track_query_modify.FieldByName('ДатаФактическогПрибытияНаСтНазначенияUNIX').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 72] := sp_fact_track_query_modify.FieldByName('ДатаФактическогПрибытияНаСтНазначения').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 73] := sp_fact_track_query_modify.FieldByName('ДатаОтправкиСоВременем').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 74] := sp_fact_track_query_modify.FieldByName('Грузополучатель').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 75] := sp_fact_track_query_modify.FieldByName('ТарифВалюта').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 76] := sp_fact_track_query_modify.FieldByName('СобственникНаим').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 77] := sp_fact_track_query_modify.FieldByName('АрендаторНаим').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 78] := sp_fact_track_query_modify.FieldByName('ТипСлежения').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 79] := sp_fact_track_query_modify.FieldByName('НомерПлатформы').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 80] := sp_fact_track_query_modify.FieldByName('ОбъемКузова').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 81] := sp_fact_track_query_modify.FieldByName('ВагонТипПолн').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 82] := sp_fact_track_query_modify.FieldByName('ВагонРод').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 83] := sp_fact_track_query_modify.FieldByName('ДепоПоследнегоДеповскогоРемонта').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 84] := sp_fact_track_query_modify.FieldByName('ДепоПоследнегоКапитальногоРемонта').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 85] := sp_fact_track_query_modify.FieldByName('ГУ12').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 86] := sp_fact_track_query_modify.FieldByName('ПробегТекКм').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 87] := sp_fact_track_query_modify.FieldByName('ПробегОстКм').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 88] := sp_fact_track_query_modify.FieldByName('КонтрольРемонтаПоПробегу').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 89] := sp_fact_track_query_modify.FieldByName('ВагонТипСокр').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 90] := sp_fact_track_query_modify.FieldByName('НомерКонтейнера').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 91] := sp_fact_track_query_modify.FieldByName('ТипКонтейнера').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 92] := sp_fact_track_query_modify.FieldByName('НаименованиеОперацииАнгл').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 93] := sp_fact_track_query_modify.FieldByName('КодОперацииАнгл').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 94] := sp_fact_track_query_modify.FieldByName('НаименованиеСтанцииДислокацииАнг').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 95] := sp_fact_track_query_modify.FieldByName('НаименованиеСтанцииНазначенияАнг').Value;
-    array_data[sp_fact_track_query_modify.RecNo+1, 96] := sp_fact_track_query_modify.FieldByName('НаименованиеСтанцииОтправленияАнг').Value;
-
-    sp_fact_track_query_modify.Next;
-  end;
-
-  ShowTextMessage('Вывод в Excel...', False);
-
-  // Левая верхняя ячейка области, в которую будем выводить данные
-  cell1 := exWks.Cells[3, 2];
-  // Правая нижняя ячейка области, в которую будем выводить данные
-  cell2 := exWks.Cells[3 + cnt_record - 1, 2 + cnt_column - 1];
-  // Область, в которую будем выводить данные
-  range := exWks.Range[cell1, cell2];
-
-  // Область заголовка
-  cell1 := exWks.Cells[3, 2];
-  cell2 := exWks.Cells[3, 2 + cnt_column - 1];
-  range_caption := exWks.Range[cell1, cell2];
-
-  // Область итогов
-  cell1 := exWks.Cells[3 + cnt_record - 1, 2];
-  cell2 := exWks.Cells[3 + cnt_record - 1, 2 + cnt_column - 1];
-  range_footer := exWks.Range[cell1, cell2];
-
-  // Вывод данных
-  range.Value := array_data;
-
-  exWks.Cells[4 + cnt_record - 2, 2].Value := '=COUNTA(R[-1]C:R[-' + IntToStr(cnt_record-2) + ']C)';
-
-  VarClear(array_data);
-
-  ShowTextMessage('Печать таблицы в Excel...' + #10 + 'Форматирование таблицы...', False);
-  exApp.ActiveWindow.DisplayGridlines := False;
-
-  range.Columns[1].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ ч:мм';
-  range.Columns[2].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ ч:мм';
-  range.Columns[3].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ ч:мм';
-  range.Columns[4].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ ч:мм';
-  range.Columns[5].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ';
-  range.Columns[6].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ';
-  range.Columns[7].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ';
-  range.Columns[8].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ';
-  range.Columns[9].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ';
-  range.Columns[10].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ';
-  range.Columns[11].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ';
-  range.Columns[12].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ';
-  range.Columns[13].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ';
-  range.Columns[14].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ ч:мм';
-  range.Columns[15].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ ч:мм';
-
-
-  range.Columns[17].NumberFormat := '# ##0,00';
-  range.Columns[18].NumberFormat := '# ##0';
-  range.Columns[19].NumberFormat := '# ##0';
-  range.Columns[20].NumberFormat := '# ##0';
-  range.Columns[21].NumberFormat := '# ##0,00';
-  range.Columns[22].NumberFormat := '# ##0,00';
-  range.Columns[23].NumberFormat := '# ##0,00';
-  range.Columns[24].NumberFormat := '# ##0,00';
-  range.Columns[25].NumberFormat := '# ##0,00';
-  range.Columns[26].NumberFormat := '# ##0,00';
-  range.Columns[27].NumberFormat := '# ##0,00';
-  range.Columns[28].NumberFormat := '# ##0,00';
-
-  range.Borders[7].LineStyle := 1;
-  range.Borders[8].LineStyle := 1;
-  range.Borders[9].LineStyle := 1;
-  range.Borders[10].LineStyle := 1;
-  range.Borders[11].LineStyle := 1;
-  range.Borders[12].LineStyle := 1;
-
-  range.Borders[7].Color := $C0C0C0;
-  range.Borders[8].Color := $C0C0C0;
-  range.Borders[9].Color := $C0C0C0;
-  range.Borders[10].Color := $C0C0C0;
-  range.Borders[11].Color := $C0C0C0;
-  range.Borders[12].Color := $C0C0C0;
-
-  range_caption.Interior.Color := $CCFFCC;
-  range_caption.Borders[7].Color := $000000;
-  range_caption.Borders[8].Color := $000000;
-  range_caption.Borders[9].Color := $000000;
-  range_caption.Borders[10].Color := $000000;
-  range_caption.Borders[11].Color := $000000;
-  range_caption.Borders[12].Color := $000000;
-
-  range_footer.Interior.Color := $CCFFCC;
-  range_footer.Borders[7].Color := $000000;
-  range_footer.Borders[8].Color := $000000;
-  range_footer.Borders[9].Color := $000000;
-  range_footer.Borders[10].Color := $000000;
-  range_footer.Borders[11].Color := $000000;
-  range_footer.Borders[12].Color := $000000;
-
-
-  exWks.Cells.Font.Size := 8;
-  exWks.Cells.Font.Name := 'MS Sans Serif';
-  exWks.Cells.Rows.AutoFit;
-
-  range.WrapText := False;
-
-  exWks.Range['A1'].Select;
-  exApp.Visible := True;
-  exWks := Null; exWkb := Null; exApp := Null;
-  VarClear(exWks); VarClear(exWkb); VarClear(exApp);
-
-
-  sp_fact_track_query_modify.Free;
-  ShowTextMessage;
+//  ShowTextMessage('Вывод в Excel...', False);
+//
+//  // Левая верхняя ячейка области, в которую будем выводить данные
+//  cell1 := exWks.Cells[3, 2];
+//  // Правая нижняя ячейка области, в которую будем выводить данные
+//  cell2 := exWks.Cells[3 + cnt_record - 1, 2 + cnt_column - 1];
+//  // Область, в которую будем выводить данные
+//  range := exWks.Range[cell1, cell2];
+//
+//  // Область заголовка
+//  cell1 := exWks.Cells[3, 2];
+//  cell2 := exWks.Cells[3, 2 + cnt_column - 1];
+//  range_caption := exWks.Range[cell1, cell2];
+//
+//  // Область итогов
+//  cell1 := exWks.Cells[3 + cnt_record - 1, 2];
+//  cell2 := exWks.Cells[3 + cnt_record - 1, 2 + cnt_column - 1];
+//  range_footer := exWks.Range[cell1, cell2];
+//
+//  // Вывод данных
+//  range.Value := array_data;
+//
+//  exWks.Cells[4 + cnt_record - 2, 2].Value := '=COUNTA(R[-1]C:R[-' + IntToStr(cnt_record-2) + ']C)';
+//
+//  VarClear(array_data);
+//
+//  ShowTextMessage('Печать таблицы в Excel...' + #10 + 'Форматирование таблицы...', False);
+//  exApp.ActiveWindow.DisplayGridlines := False;
+//
+//  range.Columns[1].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ ч:мм';
+//  range.Columns[2].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ ч:мм';
+//  range.Columns[3].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ ч:мм';
+//  range.Columns[4].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ ч:мм';
+//  range.Columns[5].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ';
+//  range.Columns[6].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ';
+//  range.Columns[7].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ';
+//  range.Columns[8].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ';
+//  range.Columns[9].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ';
+//  range.Columns[10].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ';
+//  range.Columns[11].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ';
+//  range.Columns[12].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ';
+//  range.Columns[13].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ';
+//  range.Columns[14].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ ч:мм';
+//  range.Columns[15].NumberFormat := 'ДД'+FormatSettings.DateSeparator+'ММ'+FormatSettings.DateSeparator+'ГГГГ ч:мм';
+//
+//
+//  range.Columns[17].NumberFormat := '# ##0,00';
+//  range.Columns[18].NumberFormat := '# ##0';
+//  range.Columns[19].NumberFormat := '# ##0';
+//  range.Columns[20].NumberFormat := '# ##0';
+//  range.Columns[21].NumberFormat := '# ##0,00';
+//  range.Columns[22].NumberFormat := '# ##0,00';
+//  range.Columns[23].NumberFormat := '# ##0,00';
+//  range.Columns[24].NumberFormat := '# ##0,00';
+//  range.Columns[25].NumberFormat := '# ##0,00';
+//  range.Columns[26].NumberFormat := '# ##0,00';
+//  range.Columns[27].NumberFormat := '# ##0,00';
+//  range.Columns[28].NumberFormat := '# ##0,00';
+//
+//  range.Borders[7].LineStyle := 1;
+//  range.Borders[8].LineStyle := 1;
+//  range.Borders[9].LineStyle := 1;
+//  range.Borders[10].LineStyle := 1;
+//  range.Borders[11].LineStyle := 1;
+//  range.Borders[12].LineStyle := 1;
+//
+//  range.Borders[7].Color := $C0C0C0;
+//  range.Borders[8].Color := $C0C0C0;
+//  range.Borders[9].Color := $C0C0C0;
+//  range.Borders[10].Color := $C0C0C0;
+//  range.Borders[11].Color := $C0C0C0;
+//  range.Borders[12].Color := $C0C0C0;
+//
+//  range_caption.Interior.Color := $CCFFCC;
+//  range_caption.Borders[7].Color := $000000;
+//  range_caption.Borders[8].Color := $000000;
+//  range_caption.Borders[9].Color := $000000;
+//  range_caption.Borders[10].Color := $000000;
+//  range_caption.Borders[11].Color := $000000;
+//  range_caption.Borders[12].Color := $000000;
+//
+//  range_footer.Interior.Color := $CCFFCC;
+//  range_footer.Borders[7].Color := $000000;
+//  range_footer.Borders[8].Color := $000000;
+//  range_footer.Borders[9].Color := $000000;
+//  range_footer.Borders[10].Color := $000000;
+//  range_footer.Borders[11].Color := $000000;
+//  range_footer.Borders[12].Color := $000000;
+//
+//
+//  exWks.Cells.Font.Size := 8;
+//  exWks.Cells.Font.Name := 'MS Sans Serif';
+//  exWks.Cells.Rows.AutoFit;
+//
+//  range.WrapText := False;
+//
+//  exWks.Range['A1'].Select;
+//  exApp.Visible := True;
+//  exWks := Null; exWkb := Null; exApp := Null;
+//  VarClear(exWks); VarClear(exWkb); VarClear(exApp);
+//
+//
+//  sp_fact_track_query_modify.Free;
+//  ShowTextMessage;
 end;
 
 procedure TfmFactTrack.dxBarButton86Click(Sender: TObject);
@@ -3444,8 +3411,8 @@ begin
     if VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1node_operation_name.Index]) = '' then
       exWks.Range['E' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1node_operation_cod.Index])
     else exWks.Range['E' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1node_operation_name.Index]);
-    exWks.Range['F' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1road_operation_name.Index]);
-    exWks.Range['G' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1road_end_name.Index]);
+//    exWks.Range['F' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1road_operation_name.Index]);
+//    exWks.Range['G' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1road_end_name.Index]);
     exWks.Range['H' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1index_train.Index]);
     exWks.Range['I' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1num_train.Index]);
     exWks.Range['J' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1kargoETSNG_name.Index]);
@@ -3482,8 +3449,8 @@ begin
 //       exWks.Range['R'+IntToStr(row_0)].Value := GetCalcDistanceDB(VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1node_operation_cod.Index]), VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1node_end_cod.Index]), fmMain.Lis, False, Date);
     end;
 
-    exWks.Range['S' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1cod_operation_vagon_cod.Index]);
-    exWks.Range['T' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1cod_operation_vagon_name_full.Index]);
+//    exWks.Range['S' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1cod_operation_vagon_cod.Index]);
+//    exWks.Range['T' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1cod_operation_vagon_name_full.Index]);
     exWks.Range['U' + IntToStr(row_0)].Value := String(' ');
 
     Q.Close;
@@ -3737,7 +3704,7 @@ begin
     exWks.Range['D' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1time_operation.Index]);
     exWks.Range['E' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1node_operation_name.Index]);
     exWks.Range['F' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1road_begin_name.Index]);
-    exWks.Range['G' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1road_end_name.Index]);
+//    exWks.Range['G' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1road_end_name.Index]);
     exWks.Range['H' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1index_train.Index]);
     exWks.Range['I' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1num_train.Index]);
     exWks.Range['J' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1kargoETSNG_name.Index]);
@@ -3769,18 +3736,18 @@ begin
 //       exWks.Range['R'+IntToStr(row_0)].Value := GetCalcDistanceDB(VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1node_operation_cod.Index]), VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1node_end_cod.Index]), fmMain.Lis, False, Date);
     end;
 
-    exWks.Range['S' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1cod_operation_vagon_cod.Index]);
-    exWks.Range['T' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1cod_operation_vagon_name_full.Index]);
+//    exWks.Range['S' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1cod_operation_vagon_cod.Index]);
+//    exWks.Range['T' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1cod_operation_vagon_name_full.Index]);
     exWks.Range['U' + IntToStr(row_0)].Value := String(' ');
 
-    exWks.Range['W' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1milage_rest.Index]);
-    exWks.Range['X' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1next_date_repair.Index]);
+//    exWks.Range['W' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1milage_rest.Index]);
+//    exWks.Range['X' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1next_date_repair.Index]);
 
     exWks.Range['Y' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1comment6.Index]);
     exWks.Range['Z' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1comment1.Index]);
 
-    exWks.Range['AA' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1firm_name.Index]);
-    exWks.Range['AB' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1days_free.Index]);
+//    exWks.Range['AA' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1firm_name.Index]);
+//    exWks.Range['AB' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1days_free.Index]);
     exWks.Range['AC' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1model_name.Index]);
 
     Q.Close;
@@ -3889,7 +3856,7 @@ begin
 
   ShowTextMessage('Вывод в Excel...', False);
   for i:=0 to cxGrid1DBBandedTableView1.Controller.SelectedRecordCount - 1 do begin
-    exWks.Range['D' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1days_free.Index]);
+//    exWks.Range['D' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1days_free.Index]);
     exWks.Range['E' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1num_vagon.Index]);
     exWks.Range['F' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1node_end_name.Index]);
 
@@ -3897,7 +3864,7 @@ begin
     exWks.Range['H' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1time_operation.Index]);
     exWks.Range['I' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1node_operation_name.Index]);
     exWks.Range['J' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1road_begin_name.Index]);
-    exWks.Range['K' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1road_end_name.Index]);
+//    exWks.Range['K' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1road_end_name.Index]);
     exWks.Range['L' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1index_train.Index]);
     exWks.Range['M' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1num_train.Index]);
     exWks.Range['N' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1kargoETSNG_name.Index]);
@@ -3916,8 +3883,8 @@ begin
     exWks.Range['U'+IntToStr(row_0)].Value := 0;
     exWks.Range['V'+IntToStr(row_0)].Value := 0;
 
-    exWks.Range['W' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1cod_operation_vagon_cod.Index]);
-    exWks.Range['X' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1cod_operation_vagon_name_full.Index]);
+//    exWks.Range['W' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1cod_operation_vagon_cod.Index]);
+//    exWks.Range['X' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1cod_operation_vagon_name_full.Index]);
     exWks.Range['Y' + IntToStr(row_0)].Value := String(' ');
 
     if show_distance then begin
@@ -3990,7 +3957,7 @@ begin
     Q.SQL.Add(' AND date_from_to = CONVERT(date,' +DateToSQL(date_otpr) + ')');
     Q.Open;
 
-    exWks.Range['AL'+IntToStr(row_0)].Value := cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1milage_rest.Index];
+//    exWks.Range['AL'+IntToStr(row_0)].Value := cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1milage_rest.Index];
 
     if Q.RecordCount > 0 then begin
       exWks.Range['AM'+IntToStr(row_0)].Value := Q.FieldByName('etran_date_expire').AsString;
@@ -4013,7 +3980,7 @@ begin
       exWks.Range['AN'+IntToStr(row_0)].Value := Q.FieldByName('kargoETSNG_name').AsString;
     end;
 
-    exWks.Range['AO'+IntToStr(row_0)].Value :=  VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1next_date_repair.Index]);
+//    exWks.Range['AO'+IntToStr(row_0)].Value :=  VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1next_date_repair.Index]);
 
     row_0 := row_0  + 1;
     ShowTextMessage('Осталось ' + IntToStr(cxGrid1DBBandedTableView1.Controller.SelectedRecordCount - i) + ' вагонов...', False);
@@ -4460,7 +4427,7 @@ begin
             exWks.Range['D' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1node_begin_name.Index]);
             exWks.Range['E' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1road_begin_name.Index]);
             exWks.Range['F' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1node_operation_name.Index]);
-            exWks.Range['G' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1road_operation_name.Index]);
+//            exWks.Range['G' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1road_operation_name.Index]);
             //Растояние оставшееся
 //            if show_distance then
 //              if not VarIsNull(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1distance2.Index]) then
@@ -4470,11 +4437,11 @@ begin
 
             exWks.Range['I' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1node_end_name.Index]);
 //            exWks.Range['J' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1poluchgr.Index]);
-            exWks.Range['K' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1road_end_name.Index]);
+//            exWks.Range['K' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1road_end_name.Index]);
             exWks.Range['L' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1date_query.Index]);
             exWks.Range['M' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1kargoETSNG_name.Index]);
             exWks.Range['N' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1fact_weight.Index]);
-            exWks.Range['O' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1cod_operation_vagon_name.Index]);
+//            exWks.Range['O' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1cod_operation_vagon_name.Index]);
             exWks.Range['P' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1num_train.Index]);
             exWks.Range['Q' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1index_train.Index]);
             exWks.Range['R' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1doc_number.Index]);
@@ -5073,7 +5040,7 @@ begin
       exWks.Range['E' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1node_operation_cod.Index])
     else exWks.Range['E' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1node_operation_name.Index]);
     exWks.Range['F' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1road_begin_name.Index]);
-    exWks.Range['G' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1road_end_name.Index]);
+//    exWks.Range['G' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1road_end_name.Index]);
     exWks.Range['H' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1index_train.Index]);
     exWks.Range['I' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1num_train.Index]);
     exWks.Range['J' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1kargoETSNG_name.Index]);
@@ -5107,8 +5074,8 @@ begin
 //    else
 //     exWks.Range['S'+IntToStr(row_0)].Value := GetCalcDistanceDB(VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1node_operation_cod.Index]), VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1node_end_cod.Index]), fmMain.Lis, False, Date);
 
-    exWks.Range['T' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1cod_operation_vagon_cod.Index]);
-    exWks.Range['U' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1cod_operation_vagon_name_full.Index]);
+//    exWks.Range['T' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1cod_operation_vagon_cod.Index]);
+//    exWks.Range['U' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1cod_operation_vagon_name_full.Index]);
 
 //    exWks.Range['W' + IntToStr(row_0)].Value := VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1type_park_name.Index]);
 
@@ -5470,8 +5437,8 @@ begin
    //Показываем пробег, только для вагонов на пробеге.
    if cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1set_on_run.Index] then begin
      if Q.Locate('num_vagon',cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1num_vagon.Index],[loPartialKey]) then begin
-       cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1milage_passed.Index] := Q.FieldByName('milage_passed').Value;
-       cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1milage_rest.Index] := Q.FieldByName('milage_rest').Value;
+//       cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1milage_passed.Index] := Q.FieldByName('milage_passed').Value;
+//       cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1milage_rest.Index] := Q.FieldByName('milage_rest').Value;
      end;
    end;
     ShowTextMessage('Осталось '+IntToStr(cxGrid1DBBandedTableView1.Controller.SelectedRecordCount - i)+' записей...', False);

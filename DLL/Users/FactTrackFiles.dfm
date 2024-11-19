@@ -243,10 +243,8 @@ object fmFactTrackFiles: TfmFactTrackFiles
     0003C0000003C0000003C0000003C0000003C0000003C0000003C0000003C000
     0003C0000003C0000003C0000003C0000003C0000003C0000003C0000003C000
     0003C0000003FFFFFFFFFFFFFFFF}
-  OldCreateOrder = False
   OnClose = FormClose
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object cxGrid1: TcxGrid
     Left = 0
@@ -270,6 +268,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       OnDblClick = dxBarButton6Click
       OnKeyPress = cxGrid1DBBandedTableView1KeyPress
       Navigator.Buttons.CustomButtons = <>
+      ScrollbarAnnotations.CustomAnnotations = <>
       OnCustomDrawCell = cxGrid1DBBandedTableView1CustomDrawCell
       OnFocusedItemChanged = cxGrid1DBBandedTableView1FocusedItemChanged
       DataController.DataSource = DS_FactTrackFiles
@@ -465,6 +464,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       object cxGrid1DBBandedTableView1files_track_id: TcxGridDBBandedColumn
         Caption = #8470' '#1079#1072#1087#1080#1089#1080
         DataBinding.FieldName = 'files_track_id'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 100
         Position.BandIndex = 0
@@ -473,6 +473,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       end
       object cxGrid1DBBandedTableView1users_owner_id: TcxGridDBBandedColumn
         DataBinding.FieldName = 'users_owner_id'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 100
         Position.BandIndex = -1
@@ -482,6 +483,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       object cxGrid1DBBandedTableView1FIO_users_owner: TcxGridDBBandedColumn
         Caption = #1054#1090#1074#1077#1090#1089#1090#1074#1077#1085#1085#1099#1081
         DataBinding.FieldName = 'FIO_users_owner'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 100
         Position.BandIndex = 0
@@ -490,6 +492,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       end
       object cxGrid1DBBandedTableView1users_group_id: TcxGridDBBandedColumn
         DataBinding.FieldName = 'users_group_id'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 100
         Position.BandIndex = -1
@@ -498,6 +501,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       end
       object cxGrid1DBBandedTableView1global_color: TcxGridDBBandedColumn
         DataBinding.FieldName = 'global_color'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 100
         Position.BandIndex = -1
@@ -507,6 +511,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       object cxGrid1DBBandedTableView1date_enter: TcxGridDBBandedColumn
         Caption = #1044#1072#1090#1072' '#1076#1086#1073#1072#1074#1083#1077#1085#1080#1103' '#1092#1072#1081#1083#1072
         DataBinding.FieldName = 'date_enter'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 146
         Position.BandIndex = 0
@@ -515,6 +520,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       end
       object cxGrid1DBBandedTableView1files_format_id: TcxGridDBBandedColumn
         DataBinding.FieldName = 'files_format_id'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 100
         Position.BandIndex = -1
@@ -524,6 +530,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       object cxGrid1DBBandedTableView1files_format_name: TcxGridDBBandedColumn
         Caption = #1060#1086#1088#1084#1072#1090
         DataBinding.FieldName = 'files_format_name'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 100
         Position.BandIndex = 0
@@ -533,6 +540,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       object cxGrid1DBBandedTableView1files_format_cod: TcxGridDBBandedColumn
         Caption = #1060#1086#1088#1084#1072#1090' ('#1082#1086#1076')'
         DataBinding.FieldName = 'files_format_cod'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 100
         Position.BandIndex = 0
@@ -542,6 +550,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       object cxGrid1DBBandedTableView1files_name: TcxGridDBBandedColumn
         Caption = #1048#1084#1103' '#1092#1072#1081#1083#1072
         DataBinding.FieldName = 'files_name'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 100
         Position.BandIndex = 0
@@ -551,6 +560,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       object cxGrid1DBBandedTableView1files_date: TcxGridDBBandedColumn
         Caption = #1044#1072#1090#1072' '#1079#1072#1087#1088#1086#1089#1072' '#1092#1072#1081#1083#1072
         DataBinding.FieldName = 'files_date'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 127
         Position.BandIndex = 0
@@ -560,6 +570,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       object cxGrid1DBBandedTableView1files_rows_count: TcxGridDBBandedColumn
         Caption = #1050#1086#1083'-'#1074#1086' '#1079#1072#1087#1080#1089#1077#1081' '#1074' '#1092#1072#1081#1083#1077
         DataBinding.FieldName = 'files_rows_count'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 140
         Position.BandIndex = 0
@@ -569,6 +580,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       object cxGrid1DBBandedTableView1files_rows_load: TcxGridDBBandedColumn
         Caption = #1050#1086#1083'-'#1074#1086' '#1079#1072#1075#1088#1091#1078#1077#1085#1085#1099#1093' '#1079#1072#1087#1080#1089#1077#1081
         DataBinding.FieldName = 'files_rows_load'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 167
         Position.BandIndex = 0
@@ -578,6 +590,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       object cxGrid1DBBandedTableView1set_error: TcxGridDBBandedColumn
         Caption = #1054#1096#1080#1073#1082#1072
         DataBinding.FieldName = 'set_error'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 100
         Position.BandIndex = 0
@@ -587,6 +600,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       object cxGrid1DBBandedTableView1files_status: TcxGridDBBandedColumn
         Caption = #1057#1090#1072#1090#1091#1089
         DataBinding.FieldName = 'files_status'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 100
         Position.BandIndex = 0
@@ -596,6 +610,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       object cxGrid1DBBandedTableView1files_load_date_begin: TcxGridDBBandedColumn
         Caption = #1044#1072#1090#1072' '#1085#1072#1095#1072#1083#1072' '#1079#1072#1075#1088#1091#1079#1082#1080
         DataBinding.FieldName = 'files_load_date_begin'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 131
         Position.BandIndex = 0
@@ -605,6 +620,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       object cxGrid1DBBandedTableView1files_load_date_end: TcxGridDBBandedColumn
         Caption = #1044#1072#1090#1072' '#1086#1082#1086#1085#1095#1072#1085#1080#1103' '#1079#1072#1075#1088#1091#1079#1082#1080
         DataBinding.FieldName = 'files_load_date_end'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 157
         Position.BandIndex = 0
@@ -614,6 +630,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       object cxGrid1DBBandedTableView1set_ftp: TcxGridDBBandedColumn
         Caption = #1040#1074#1090#1086#1084#1072#1090#1080#1095#1077#1089#1082#1072#1103' '#1079#1072#1075#1088#1091#1079#1082#1072
         DataBinding.FieldName = 'set_ftp'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 80
         Position.BandIndex = 0
@@ -623,6 +640,7 @@ object fmFactTrackFiles: TfmFactTrackFiles
       object cxGrid1DBBandedTableView1duration: TcxGridDBBandedColumn
         Caption = #1055#1088#1086#1076#1086#1083#1078#1080#1090#1077#1083#1100#1085#1086#1089#1090#1100' '#1079#1072#1075#1088#1091#1079#1082#1080' ('#1084#1080#1085'.)'
         DataBinding.FieldName = 'duration'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 110
         Position.BandIndex = 0
@@ -654,14 +672,10 @@ object fmFactTrackFiles: TfmFactTrackFiles
     object cxTabSheet1: TcxTabSheet
       Caption = #1042#1093#1086#1076#1103#1097#1080#1077' '#1092#1072#1081#1083#1099
       ImageIndex = 0
-      ExplicitLeft = 4
-      ExplicitWidth = 938
     end
     object cxTabSheet2: TcxTabSheet
       Caption = #1048#1089#1093#1086#1076#1103#1097#1080#1077' '#1092#1072#1081#1083#1099
       ImageIndex = 1
-      ExplicitLeft = 4
-      ExplicitWidth = 938
     end
   end
   object ADOFactTrack: TADOConnection

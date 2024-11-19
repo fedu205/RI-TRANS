@@ -23,7 +23,9 @@ uses
   dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinsDefaultPainters,
   dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
   dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
-  dxSkinXmas2008Blue, Vcl.ComCtrls, dxCore, cxDateUtils, cxClasses;
+  dxSkinXmas2008Blue, Vcl.ComCtrls, dxCore, cxDateUtils, cxClasses, dxSkinBasic,
+  dxSkinOffice2019Black, dxSkinOffice2019Colorful, dxSkinOffice2019DarkGray,
+  dxSkinOffice2019White, dxSkinTheBezier, dxSkinWXI;
 
 type
   TfmFactTrackFilesAdd = class(TForm)
@@ -272,65 +274,65 @@ begin
   if Ftype_action = 0 then begin
 
     Query_Format.Locate('inf_obj_id', cxLookupComboBox1.EditValue, []);
-    if Query_Format.FieldByName('inf_obj_cod').AsString = '00003' then begin
-
-      file_name := cxButtonEdit6.EditValue;
-      file_name := LeftStr(file_name, Length(file_name) - Length(ExtractFileExt(file_name)));
-      sp_fact_track_files_modify.Parameters.ParamByName('@files_name').Value := file_name + '.xml';
-
-
-      Client_Vagon := TClientDataSet.Create(nil);
-      Client_Vagon.FieldDefs.Add('num_vagon', ftString, 9);
-      Client_Vagon.FieldDefs.Add('date_otpr', ftDateTime);
-      Client_Vagon.FieldDefs.Add('fact_weight', ftFloat);
-      Client_Vagon.FieldDefs.Add('node_end_cod', ftString, 7);
-      Client_Vagon.FieldDefs.Add('node_begin_cod', ftString, 7);
-      Client_Vagon.FieldDefs.Add('date_operation', ftDateTime);
-      Client_Vagon.FieldDefs.Add('node_operation_cod', ftString, 7);
-      Client_Vagon.FieldDefs.Add('index_train', ftString, 14);
-      Client_Vagon.FieldDefs.Add('doc_number', ftString, 256);
-      Client_Vagon.CreateDataSet;
-      Client_Vagon.LogChanges := False;
-
-      exApp := CreateOleObject('Excel.Application');
-      exApp.Workbooks.Open(Ffile_name);
-      exWks := exApp.ActiveWorkbook.WorkSheets[1];
-      count_str := 3;
-      while not (TVarData(exWks.Cells[count_str,1].Value).VType = varEmpty) do begin
-        Client_Vagon.Append;
-        Client_Vagon['num_vagon']          := exWks.Range['A' + IntToStr(count_str)].Value;
-        Client_Vagon['date_otpr']          := exWks.Range['F' + IntToStr(count_str)].Value;
-        Client_Vagon['fact_weight']        := exWks.Range['R' + IntToStr(count_str)].Value;
-        Client_Vagon['node_end_cod']       := exWks.Range['M' + IntToStr(count_str)].Value;
-        Client_Vagon['node_begin_cod']     := exWks.Range['D' + IntToStr(count_str)].Value;
-        Client_Vagon['date_operation']     := exWks.Range['I' + IntToStr(count_str)].Value;
-        Client_Vagon['node_operation_cod'] := exWks.Range['G' + IntToStr(count_str)].Value;
-        Client_Vagon['index_train']        := exWks.Range['L' + IntToStr(count_str)].Value;
-        Client_Vagon['doc_number']         := exWks.Range['U' + IntToStr(count_str)].Value;
-        Client_Vagon.Post;
-        count_str := count_str + 1;
-        ShowTextMessage('Обработано '+IntToStr(count_str - 2)+' вагонов', False);
-      end;
-      ShowTextMessage;
-
-      exApp.Quit;
-      exWks := Null; exApp := Null;
-      VarClear(exWks); VarClear(exApp);
-
-      s := TStringStream.Create('');
-      s.WriteString(Client_Vagon.XMLData);
-      files_size := s.Size;
-      files_data := LZHPack(s.Bytes, s.Size);
-      s1 := TStringStream.Create(files_data);
-
-      sp_fact_track_files_modify.Parameters.ParamByName('@doc_image' ).LoadFromStream(s1,ftBlob);
-      sp_fact_track_files_modify.Parameters.ParamByName('@files_size').Value := files_size;
-
-      s.Free;
-      s1.Free;
-      Client_Vagon.Free;
-
-    end else begin
+//    if Query_Format.FieldByName('inf_obj_cod').AsString = '00003' then begin
+//
+//      file_name := cxButtonEdit6.EditValue;
+//      file_name := LeftStr(file_name, Length(file_name) - Length(ExtractFileExt(file_name)));
+//      sp_fact_track_files_modify.Parameters.ParamByName('@files_name').Value := file_name + '.xml';
+//
+//
+//      Client_Vagon := TClientDataSet.Create(nil);
+//      Client_Vagon.FieldDefs.Add('num_vagon', ftString, 9);
+//      Client_Vagon.FieldDefs.Add('date_otpr', ftDateTime);
+//      Client_Vagon.FieldDefs.Add('fact_weight', ftFloat);
+//      Client_Vagon.FieldDefs.Add('node_end_cod', ftString, 7);
+//      Client_Vagon.FieldDefs.Add('node_begin_cod', ftString, 7);
+//      Client_Vagon.FieldDefs.Add('date_operation', ftDateTime);
+//      Client_Vagon.FieldDefs.Add('node_operation_cod', ftString, 7);
+//      Client_Vagon.FieldDefs.Add('index_train', ftString, 14);
+//      Client_Vagon.FieldDefs.Add('doc_number', ftString, 256);
+//      Client_Vagon.CreateDataSet;
+//      Client_Vagon.LogChanges := False;
+//
+//      exApp := CreateOleObject('Excel.Application');
+//      exApp.Workbooks.Open(Ffile_name);
+//      exWks := exApp.ActiveWorkbook.WorkSheets[1];
+//      count_str := 3;
+//      while not (TVarData(exWks.Cells[count_str,1].Value).VType = varEmpty) do begin
+//        Client_Vagon.Append;
+//        Client_Vagon['num_vagon']          := exWks.Range['A' + IntToStr(count_str)].Value;
+//        Client_Vagon['date_otpr']          := exWks.Range['F' + IntToStr(count_str)].Value;
+//        Client_Vagon['fact_weight']        := exWks.Range['R' + IntToStr(count_str)].Value;
+//        Client_Vagon['node_end_cod']       := exWks.Range['M' + IntToStr(count_str)].Value;
+//        Client_Vagon['node_begin_cod']     := exWks.Range['D' + IntToStr(count_str)].Value;
+//        Client_Vagon['date_operation']     := exWks.Range['I' + IntToStr(count_str)].Value;
+//        Client_Vagon['node_operation_cod'] := exWks.Range['G' + IntToStr(count_str)].Value;
+//        Client_Vagon['index_train']        := exWks.Range['L' + IntToStr(count_str)].Value;
+//        Client_Vagon['doc_number']         := exWks.Range['U' + IntToStr(count_str)].Value;
+//        Client_Vagon.Post;
+//        count_str := count_str + 1;
+//        ShowTextMessage('Обработано '+IntToStr(count_str - 2)+' вагонов', False);
+//      end;
+//      ShowTextMessage;
+//
+//      exApp.Quit;
+//      exWks := Null; exApp := Null;
+//      VarClear(exWks); VarClear(exApp);
+//
+//      s := TStringStream.Create('');
+//      s.WriteString(Client_Vagon.XMLData);
+//      files_size := s.Size;
+//      files_data := LZHPack(s.Bytes, s.Size);
+//      s1 := TStringStream.Create(files_data);
+//
+//      sp_fact_track_files_modify.Parameters.ParamByName('@doc_image' ).LoadFromStream(s1,ftBlob);
+//      sp_fact_track_files_modify.Parameters.ParamByName('@files_size').Value := files_size;
+//
+//      s.Free;
+//      s1.Free;
+//      Client_Vagon.Free;
+//
+//    end else begin
 
       sp_fact_track_files_modify.Parameters.ParamByName('@files_name').Value := cxButtonEdit6.EditValue;
 
@@ -350,7 +352,7 @@ begin
       s.Free;
       s1.Free;
       AStream.Free;
-    end;
+//    end;
   end;
 
   try

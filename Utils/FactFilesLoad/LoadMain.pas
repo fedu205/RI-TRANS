@@ -944,7 +944,7 @@ begin
   if dxBarLargeButton1.Enabled = True  then begin
     FThreadFiles := TThreadFiles.Create(Fconnect_str , ClientDS_ftp.XMLData);
     FThreadFiles.OnTerminate := OnTerminateThread;
-    FThreadMail := TThreadMail.Create(Fconnect_str);
+//    FThreadMail := TThreadMail.Create(Fconnect_str);
 
 
     dxBarLargeButton1.Enabled := False;
@@ -1089,7 +1089,7 @@ procedure TfmLoadMain.FormCreate(Sender: TObject);
 var icon : TIcon;
 begin
 //  Fconnect_str := 'Persist Security Info=True;Provider=SQLOLEDB.1;User ID=sa;Password=325325"LBR;Initial Catalog=lis1;Data Source=141.101.246.34;';
-  Fconnect_str := 'Persist Security Info=True;Provider=SQLOLEDB.1;User ID=sa;Password=cjnhfkjubcnbrf;Initial Catalog=lis1;Data Source=92.53.107.222;';
+  Fconnect_str := 'Persist Security Info=True;Provider=SQLOLEDB.1;User ID=sa;Password=14remTTetran;Initial Catalog=lis1;Data Source=10.244.252.10;';
 
   cxImage1.Picture := cxImage3.Picture;
 

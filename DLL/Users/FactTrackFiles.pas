@@ -21,7 +21,9 @@ uses
   dxSkinWhiteprint, dxSkinXmas2008Blue, cxNavigator, dxSkinOffice2016Colorful,
   dxSkinOffice2016Dark, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
   dxSkinVisualStudio2013Light, System.ImageList, dxBarBuiltInMenu, cxImageList, dxSkinTheBezier, cxDataControllerConditionalFormattingRulesManagerDialog,
-  dxDateRanges, dxSkinOffice2019Colorful;
+  dxDateRanges, dxSkinOffice2019Colorful, dxSkinBasic, dxSkinOffice2019Black,
+  dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI,
+  dxScrollbarAnnotations;
 
 type
   TfmFactTrackFiles = class(TForm)
@@ -252,6 +254,7 @@ var                        Q : TADOQuery;
         sp_fact_param_modify : TADOStoredProc;
        sp_fact_milage_modify : TADOStoredProc;
               files_track_id : integer;
+          sp_fact_track_STAT : TADOStoredProc;
 
 begin
   if Application.MessageBox('Действительно хотите загрузить файл заново?', 'ВНИМАНИЕ', MB_OKCANCEL+MB_ICONWARNING) = IDOK then begin
@@ -284,6 +287,15 @@ begin
       end;
       Q.Free;
       sp_fact_track_delete.Free;
+
+      sp_fact_track_STAT := TADOStoredProc.Create(nil);
+      sp_fact_track_STAT.Connection := ADOFactTrack;
+      sp_fact_track_STAT.CommandTimeout := 600;
+      sp_fact_track_STAT.ProcedureName := 'sp_fact_track_STAT';
+      sp_fact_track_STAT.Parameters.Refresh;
+      sp_fact_track_STAT.Parameters.ParamByName('@date_last').Value := Now;
+      sp_fact_track_STAT.ExecProc;
+
       ShowTextMessage;
     end;
 
