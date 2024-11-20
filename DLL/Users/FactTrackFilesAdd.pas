@@ -178,7 +178,7 @@ begin
           Q := TADOQuery.Create(nil);
           Q.Connection := fmFactTrackFiles.ADOFactTrack;
           if OpenDialog.Execute then begin
-            cxLookupComboBox1.EditValue := null;
+//            cxLookupComboBox1.EditValue := null;
             cxDateEdit1.EditValue := null;
             Ffile_name := OpenDialog.FileName;
             cxButtonEdit6.EditValue := ExtractFileName(OpenDialog.FileName);

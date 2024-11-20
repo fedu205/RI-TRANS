@@ -524,7 +524,7 @@ object fmFactTrackAdd: TfmFactTrackAdd
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
+        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -607,7 +607,7 @@ object fmFactTrackAdd: TfmFactTrackAdd
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
+        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -867,8 +867,6 @@ object fmFactTrackAdd: TfmFactTrackAdd
       LookAndFeel.ScrollbarMode = sbmClassic
       LookAndFeel.SkinName = ''
       OnChange = cxPageControl2Change
-      ExplicitLeft = 11
-      ExplicitTop = -13
       ClientRectBottom = 567
       ClientRectRight = 816
       ClientRectTop = 24
@@ -1001,14 +999,23 @@ object fmFactTrackAdd: TfmFactTrackAdd
       object cxTabSheet2651: TcxTabSheet
         Tag = 2651
         Caption = #1058#1077#1093'. '#1087#1072#1089#1087#1086#1088#1090' '#1074#1072#1075#1086#1085#1072' (2651)'
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
       end
       object cxTabSheet2730: TcxTabSheet
         Tag = 2730
         Caption = #1057#1074#1077#1076#1077#1085#1080#1103' '#1087#1086' '#1091#1079#1083#1072#1084' '#1080' '#1076#1077#1090#1072#1083#1103#1084' (2730)'
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
       end
       object cxTabSheet2731: TcxTabSheet
         Tag = 2731
         Caption = #1057#1074#1077#1076#1077#1085#1080#1103' '#1086' '#1082#1086#1084#1087#1083#1077#1082#1090#1072#1094#1080#1080' (2731)'
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
         object cxGrid4: TcxGrid
           Left = 0
           Top = 0
@@ -1204,6 +1211,9 @@ object fmFactTrackAdd: TfmFactTrackAdd
         Tag = 4659
         Caption = #1058#1077#1093'.'#1089#1086#1089#1090#1086#1103#1085#1080#1077'(4659)'
         ImageIndex = 4
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
       end
     end
   end
@@ -1873,7 +1883,7 @@ object fmFactTrackAdd: TfmFactTrackAdd
         TabOrder = 0
         DesignSize = (
           342
-          79)
+          85)
         Height = 85
         Width = 342
         object Label24: TLabel

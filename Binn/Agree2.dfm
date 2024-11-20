@@ -176,9 +176,6 @@ object fmAgree2: TfmAgree2
     object cxTabSheet1: TcxTabSheet
       Caption = #1055#1077#1088#1077#1074#1086#1079#1082#1080
       ImageIndex = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Splitter1: TSplitter
         Left = 620
         Top = 0
@@ -2239,9 +2236,6 @@ object fmAgree2: TfmAgree2
           object cxTabSheet3: TcxTabSheet
             Caption = #1059#1089#1083#1091#1075#1080
             ImageIndex = 0
-            ExplicitTop = 0
-            ExplicitWidth = 0
-            ExplicitHeight = 0
             object cxGrid7: TcxGrid
               Left = 0
               Top = 0
@@ -10748,7 +10742,7 @@ object fmAgree2: TfmAgree2
       Glyph.SourceDPI = 96
       Glyph.Data = {
         424D360400000000000036000000280000001000000010000000010020000000
-        000000000000C40E0000C40E00000000000000000000FF00FF00FF00FF00FF00
+        00000000000074120000741200000000000000000000FF00FF00FF00FF00FF00
         FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
         FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00000000FF000000FF0000
         00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000

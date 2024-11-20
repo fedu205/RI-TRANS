@@ -16,7 +16,9 @@ uses
   dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue,
   dxSkinTheBezier, cxButtons, dxSkinOffice2019Colorful, cxStyles, cxCustomData, cxFilter, cxData, cxDataStorage, cxNavigator, dxDateRanges,
   cxDBData, cxGridLevel, cxGridCustomTableView, cxGridTableView, cxGridBandedTableView, cxGridDBBandedTableView, cxGridCustomView, cxGrid,
-  dxBarBuiltInMenu, cxLabel, cxPC, dxCore, cxDateUtils, dxScrollbarAnnotations, dxSkinWXI, dxBar, System.ImageList, Vcl.ImgList, cxImageList;
+  dxBarBuiltInMenu, cxLabel, cxPC, dxCore, cxDateUtils, dxScrollbarAnnotations, dxSkinWXI, dxBar, System.ImageList, Vcl.ImgList, cxImageList,
+  dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray,
+  dxSkinOffice2019White;
 
 type
   TfmFactTrackAdd = class(TForm)
@@ -202,7 +204,7 @@ begin
           cxTextEdit23.EditValue    := Q.FieldByName('node_end_name').Value;
           cxTextEdit24.EditValue    := Q.FieldByName('kargoETSNG_name').Value;
           cxDateEdit1.EditValue     := Q.FieldByName('date_operation').Value;
-          cxTextEdit4.EditValue     := FormatDateTime('dd.mm.yyyy', Q.FieldByName('date_build').Value);
+//          cxTextEdit4.EditValue     := FormatDateTime('dd.mm.yyyy', Q.FieldByName('date_build').Value);
           cxTextEdit5.EditValue     := Q.FieldByName('factory_name').Value;
           cxTextEdit17.EditValue    := Q.FieldByName('count_stay0').Value;
           cxTextEdit9.EditValue     := Q.FieldByName('OwnerOkpoName').Value;

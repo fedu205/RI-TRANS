@@ -20,7 +20,9 @@ uses
   dxSkinOffice2016Dark, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, cxFontNameComboBox,
   dxColorEdit, cxMemo, cxButtonEdit,cxPC, cxGroupBox, dxSkinTheBezier, dxmdaset, dxDateRanges, ImageList, ImgList, cxImageList, dxBarBuiltInMenu,
   cxCustomPivotGrid, cxDBPivotGrid, cxExportPivotGridLink, cxPivotGridCustomDataSet, cxPivotGridDrillDownDataSet,
-  dxSpreadSheetCore, dxSpreadSheetGraphics, dxSpreadSheet, dxSpreadSheetFormatXLSX,  dxScrollbarAnnotations;
+  dxSpreadSheetCore, dxSpreadSheetGraphics, dxSpreadSheet, dxSpreadSheetFormatXLSX,  dxScrollbarAnnotations,
+  dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019Colorful,
+  dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI;
 
 
 type

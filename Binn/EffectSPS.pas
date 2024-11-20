@@ -26,7 +26,8 @@ uses
   dxSkinXmas2008Blue, dxSkinscxPCPainter, dxBarBuiltInMenu, cxNavigator,
   dxSkinsdxBarPainter, dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
   dxSkinVisualStudio2013Light, dxSkinTheBezier, cxDataControllerConditionalFormattingRulesManagerDialog, dxDateRanges, cxPropertiesStore, cxPivotGrid,
-  dxSkinOffice2019Colorful, dxScrollbarAnnotations, dxSkinOffice2019Black;
+  dxSkinOffice2019Colorful, dxScrollbarAnnotations, dxSkinOffice2019Black,
+  dxSkinBasic, dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI;
 
 type
   TfmEffectSPS = class(TForm)

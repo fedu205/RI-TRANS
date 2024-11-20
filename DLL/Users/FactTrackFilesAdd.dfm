@@ -2,7 +2,7 @@ object fmFactTrackFilesAdd: TfmFactTrackFilesAdd
   Left = 0
   Top = 0
   Caption = #1047#1072#1075#1088#1091#1079#1082#1072' '#1092#1072#1081#1083#1072' '#1076#1080#1089#1083#1086#1082#1072#1094#1080#1080
-  ClientHeight = 143
+  ClientHeight = 150
   ClientWidth = 511
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -14,19 +14,20 @@ object fmFactTrackFilesAdd: TfmFactTrackFilesAdd
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 109
+    Top = 116
     Width = 511
     Height = 34
     Align = alBottom
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 1
+    ExplicitTop = 109
     DesignSize = (
       511
       34)
     object BitBtn2: TBitBtn
       Left = 346
-      Top = 4
+      Top = 6
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
@@ -156,11 +157,12 @@ object fmFactTrackFilesAdd: TfmFactTrackFilesAdd
     Left = 0
     Top = 0
     Width = 511
-    Height = 109
+    Height = 116
     Align = alClient
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 0
+    ExplicitHeight = 109
     object Label18: TLabel
       Left = 5
       Top = 15
@@ -177,7 +179,7 @@ object fmFactTrackFilesAdd: TfmFactTrackFilesAdd
     end
     object Label1: TLabel
       Left = 5
-      Top = 39
+      Top = 37
       Width = 149
       Height = 13
       Caption = #1060#1086#1088#1084#1072#1090' '#1092#1072#1081#1083#1072'...................'
@@ -266,8 +268,20 @@ object fmFactTrackFilesAdd: TfmFactTrackFilesAdd
       Style.Font.Height = -11
       Style.Font.Name = 'Tahoma'
       Style.Font.Style = []
-      Style.Shadow = True
+      Style.LookAndFeel.Kind = lfUltraFlat
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
       Style.IsFontAssigned = True
+      StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfUltraFlat
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfUltraFlat
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Width = 352
     end
@@ -284,14 +298,26 @@ object fmFactTrackFilesAdd: TfmFactTrackFilesAdd
       Style.Font.Height = -11
       Style.Font.Name = 'Tahoma'
       Style.Font.Style = []
-      Style.Shadow = True
+      Style.LookAndFeel.Kind = lfUltraFlat
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
       Style.IsFontAssigned = True
+      StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfUltraFlat
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfUltraFlat
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 3
       Width = 146
     end
     object cxLookupComboBox1: TcxLookupComboBox
       Left = 154
-      Top = 31
+      Top = 32
       Properties.DropDownListStyle = lsFixedList
       Properties.KeyFieldNames = 'inf_obj_id'
       Properties.ListColumns = <
@@ -301,13 +327,25 @@ object fmFactTrackFilesAdd: TfmFactTrackFilesAdd
       Properties.ListOptions.ShowHeader = False
       Properties.ListSource = DS_Format
       Properties.OnEditValueChanged = cxLookupComboBox1PropertiesEditValueChanged
-      Style.Shadow = True
+      Style.LookAndFeel.Kind = lfUltraFlat
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
+      StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfUltraFlat
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfUltraFlat
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
       Width = 226
     end
     object cxTextEdit1: TcxTextEdit
       Left = 386
-      Top = 31
+      Top = 32
       ParentFont = False
       Style.Color = clBtnFace
       Style.Font.Charset = DEFAULT_CHARSET
@@ -315,15 +353,39 @@ object fmFactTrackFilesAdd: TfmFactTrackFilesAdd
       Style.Font.Height = -11
       Style.Font.Name = 'Tahoma'
       Style.Font.Style = []
-      Style.Shadow = True
+      Style.LookAndFeel.Kind = lfUltraFlat
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
       Style.IsFontAssigned = True
+      StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfUltraFlat
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfUltraFlat
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 2
       Width = 120
     end
     object cxTimeEdit1: TcxTimeEdit
       Left = 154
       Top = 79
-      Style.Shadow = True
+      Style.LookAndFeel.Kind = lfUltraFlat
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
+      StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfUltraFlat
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfUltraFlat
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 4
       Width = 146
     end

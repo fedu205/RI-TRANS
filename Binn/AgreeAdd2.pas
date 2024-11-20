@@ -31,7 +31,8 @@ uses
   cxGridTableView, cxGridDBTableView, cxGrid, Datasnap.DBClient, Default,
   cxGridBandedTableView, cxGridDBBandedTableView, dxSkinsdxBarPainter, dxBar,
   cxMemo, cxRadioGroup, cxDataControllerConditionalFormattingRulesManagerDialog, dxSkinTheBezier, dxDateRanges, dxSkinOffice2019Colorful, dxScrollbarAnnotations,
-  cxCalendar, dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray, dxSkinOffice2019White;
+  cxCalendar, dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray, dxSkinOffice2019White,
+  dxSkinWXI;
 
 type
   TfmAgreeAdd2 = class(TForm)
