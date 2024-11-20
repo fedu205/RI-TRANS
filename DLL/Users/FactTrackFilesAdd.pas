@@ -162,7 +162,10 @@ var OpenDialog : TOpenDialog;
     dt_year  : integer;
     tm_hour  : integer;
     tm_minute: integer;
+
+    s: string;
     dt : TDateTime;
+
 
     Q : TADOQuery;
 begin
@@ -182,50 +185,18 @@ begin
 
             file_name := OpenDialog.FileName;
             file_name := ExtractFileName(file_name);
-            file_name := LeftStr(file_name, Length(file_name) - Length(ExtractFileExt(file_name)));
+            file_name := LeftStr(file_name, Length(file_name)-5);
 
-            if (Length(file_name) >= 22) and (Length(file_name) <= 24) then begin
+            s := RightStr(file_name, 4);
+            cxTimeEdit1.EditValue := EncodeTime(StrToInt(copy(s, 1, 2)), StrToInt(copy(s, 3, 2)), 0, 0);
 
-              file_name_tmp  := file_name;
+            s := RightStr(file_name, 13);
+            s := LeftStr(s, 8);
+            cxDateEdit1.EditValue := EncodeDate(StrToInt(copy(s, 5, 4)), StrToInt(copy(s, 3, 2)), StrToInt(copy(s, 1, 2)));
 
-              company_name   := LeftStr(file_name_tmp, Pos('_', file_name_tmp) - 1);
-              file_name_tmp  := RightStr(file_name_tmp, Length(file_name_tmp) - Pos('_', file_name_tmp));
+            cxLookupComboBox1.EditValue := 1475965;
 
-              str_files_date := LeftStr(file_name_tmp, Pos('_', file_name_tmp) - 1);
-              file_name_tmp  := RightStr(file_name_tmp, Length(file_name_tmp) - Pos('_', file_name_tmp));
-
-              str_files_time := LeftStr(file_name_tmp, Pos('_', file_name_tmp) - 1);
-              file_name_tmp  := RightStr(file_name_tmp, Length(file_name_tmp) - Pos('_', file_name_tmp));
-
-              format_name    := file_name_tmp;
-
-              dt_day   := StrToIntDef(MidStr(str_files_date, 1, 2),0);
-              dt_month := StrToIntDef(MidStr(str_files_date, 3, 2),0);
-              dt_year  := StrToIntDef(MidStr(str_files_date, 5, 4),0);
-              tm_hour  := StrToIntDef(MidStr(str_files_time, 1, 2),0);
-              tm_minute:= StrToIntDef(MidStr(str_files_time, 3, 2),0);
-
-              Q.SQL.Clear;
-              Q.SQL.Add('SELECT TOP 1 * FROM inf_obj');
-              Q.SQL.Add('WHERE type_inf_id = -3 AND ');
-              Q.SQL.Add('      inf_obj_name_full = ''' + company_name + ''' AND ');
-              Q.SQL.Add('      inf_obj_id in (SELECT users_group_id FROM users WHERE users_id = ' + IntToStr(fmFactTrackFiles.Fusr_pwd.users_id) + ')');
-              Q.Open;
-              if Q.RecordCount > 0 then begin
-                  if (TryEncodeDate(dt_year, dt_month, dt_day, dt) = True) and (TryEncodeTime(tm_hour, tm_minute, 0, 0, dt) = True) then begin
-                    Q.SQL.Clear;
-                    Q.SQL.Add('SELECT TOP 1 * FROM inf_obj');
-                    Q.SQL.Add('WHERE type_inf_id = 130 AND ');
-                    Q.SQL.Add('      inf_obj_cod = ''' + format_name + '''');
-                    Q.Open;
-                    if Q.RecordCount > 0 then begin
-                      cxLookupComboBox1.EditValue := Q.FieldByName('inf_obj_id').AsInteger;
-                      cxDateEdit1.EditValue := EncodeDate(dt_year, dt_month, dt_day);
-                      cxTimeEdit1.EditValue := EncodeTime(tm_hour, tm_minute, 0, 0);
-                    end;
-                  end;
-              end;
-            end;
+//        
           end;
           OpenDialog.Free;
           Q.Free;

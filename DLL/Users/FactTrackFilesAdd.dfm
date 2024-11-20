@@ -21,7 +21,6 @@ object fmFactTrackFilesAdd: TfmFactTrackFilesAdd
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 1
-    ExplicitTop = 85
     DesignSize = (
       511
       34)
@@ -353,8 +352,8 @@ object fmFactTrackFilesAdd: TfmFactTrackFilesAdd
       'FROM   view_inf_obj '
       'WHERE  type_inf_id = 130'
       'and inf_obj_cod not like '#39'9%'#39)
-    Left = 320
-    Top = 40
+    Left = 376
+    Top = 48
   end
   object DS_Format: TDataSource
     DataSet = Query_Format
