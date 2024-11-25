@@ -910,6 +910,7 @@ var sp_fact_track_files_modify : TADOStoredProc;
          sp_fact_milage_modify : TADOStoredProc;
                 files_track_id : integer;
                              Q : TADOQuery;
+            sp_fact_track_STAT : TADOStoredProc;
 begin
   if Application.MessageBox('Действительно хотите удалить файл?', 'ВНИМАНИЕ', MB_OKCANCEL+MB_ICONWARNING) = IDOK then begin
     files_track_id := cxGrid1DBBandedTableView1files_track_id.DataBinding.Field.Value;
@@ -941,6 +942,16 @@ begin
       end;
       Q.Free;
       sp_fact_track_delete.Free;
+
+      sp_fact_track_STAT := TADOStoredProc.Create(nil);
+      sp_fact_track_STAT.Connection := ADOFactTrack;
+      sp_fact_track_STAT.CommandTimeout := 600;
+      sp_fact_track_STAT.ProcedureName := 'sp_fact_track_STAT';
+      sp_fact_track_STAT.Parameters.Refresh;
+      sp_fact_track_STAT.Parameters.ParamByName('@date_last').Value := Now;
+      sp_fact_track_STAT.ExecProc;
+
+
       ShowTextMessage;
     end;
 

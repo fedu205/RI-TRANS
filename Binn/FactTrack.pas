@@ -4893,34 +4893,51 @@ procedure TfmFactTrack.dxBarButton59Click(Sender: TObject);
 var                  Query : TADOQuery;
         SP_fact_track_stat : TADOStoredProc;
 begin
-  Query := TADOQuery.Create(nil);
-  SP_fact_track_stat := TADOStoredProc.Create(nil);
-  try
-    Query.Connection      := fmMain.Lis;
-    Query.CommandTimeout  := 200;
-    Query.SQL.Text := 'SELECT MAX(s.date_query) AS stat, MAX(v.date_query) AS vagon FROM FACT_TRACK_STAT s ' +
-    'LEFT JOIN (select max(date_query) AS date_query from FACT_TRACK_VAGON ) v ON 1 = 1 ';
-    Query.Open;
-
-    if Query.FieldByName('stat').AsDateTime <> Query.FieldByName('vagon').AsDateTime then begin
-
-      SP_fact_track_stat.Connection     := fmMain.Lis;
-      SP_fact_track_stat.CommandTimeout := 500;
-      SP_fact_track_stat.ProcedureName  := 'sp_fact_track_stat';
-      SP_fact_track_stat.Parameters.Refresh;
-      SP_fact_track_stat.Parameters.ParamByName('@date_last').Value := Date;
-
       if Application.MessageBox(PChar('Будет обновлена последняя загрузка данных дислокации.' +#13#10 + 'Выполнение процедуры займет 5-7 мин.' +
       #13#10 + 'Вы уверены?'), 'Внимание', MB_ICONINFORMATION or MB_OKCANCEL) = mrOk then begin
-        SP_fact_track_stat.ExecProc;
+
+        sp_fact_track_STAT := TADOStoredProc.Create(nil);
+        sp_fact_track_STAT.Connection := fmMain.Lis;
+        sp_fact_track_STAT.CommandTimeout := 600;
+        sp_fact_track_STAT.ProcedureName := 'sp_fact_track_STAT';
+        sp_fact_track_STAT.Parameters.Refresh;
+//        sp_fact_track_STAT.Parameters.ParamByName('@date_last').Value := Now;
+        sp_fact_track_STAT.ExecProc;
+        sp_fact_track_STAT.Free;
+
+
         Application.MessageBox('Выполнение процедуры завершено. Обновите выборку дислокации.','Внимание', MB_ICONINFORMATION or MB_OK);
       end;
-    end else
-    Application.MessageBox('Дислокация актуальна.','Внимание', MB_ICONINFORMATION or MB_OK);
-  finally
-    SP_fact_track_stat.Free;
-    Query.Free;
-  end;
+
+
+//  Query := TADOQuery.Create(nil);
+//  SP_fact_track_stat := TADOStoredProc.Create(nil);
+//  try
+//    Query.Connection      := fmMain.Lis;
+//    Query.CommandTimeout  := 200;
+//    Query.SQL.Text := 'SELECT MAX(s.date_query) AS stat, MAX(v.date_query) AS vagon FROM FACT_TRACK_STAT s ' +
+//    'LEFT JOIN (select max(date_query) AS date_query from FACT_TRACK_VAGON ) v ON 1 = 1 ';
+//    Query.Open;
+//
+//    if Query.FieldByName('stat').AsDateTime <> Query.FieldByName('vagon').AsDateTime then begin
+//
+//      SP_fact_track_stat.Connection     := fmMain.Lis;
+//      SP_fact_track_stat.CommandTimeout := 500;
+//      SP_fact_track_stat.ProcedureName  := 'sp_fact_track_stat';
+//      SP_fact_track_stat.Parameters.Refresh;
+//      SP_fact_track_stat.Parameters.ParamByName('@date_last').Value := Date;
+//
+//      if Application.MessageBox(PChar('Будет обновлена последняя загрузка данных дислокации.' +#13#10 + 'Выполнение процедуры займет 5-7 мин.' +
+//      #13#10 + 'Вы уверены?'), 'Внимание', MB_ICONINFORMATION or MB_OKCANCEL) = mrOk then begin
+//        SP_fact_track_stat.ExecProc;
+//        Application.MessageBox('Выполнение процедуры завершено. Обновите выборку дислокации.','Внимание', MB_ICONINFORMATION or MB_OK);
+//      end;
+//    end else
+//    Application.MessageBox('Дислокация актуальна.','Внимание', MB_ICONINFORMATION or MB_OK);
+//  finally
+//    SP_fact_track_stat.Free;
+//    Query.Free;
+//  end;
 end;
 
 procedure TfmFactTrack.dxBarButton60Click(Sender: TObject);

@@ -47,6 +47,9 @@ object fmFactTrack: TfmFactTrack
     object cxTabSheet1: TcxTabSheet
       Caption = #1044#1080#1089#1083#1086#1082#1072#1094#1080#1103
       ImageIndex = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid1: TcxGrid
         Left = 0
         Top = 74
@@ -1719,6 +1722,9 @@ object fmFactTrack: TfmFactTrack
     object cxTabSheet2: TcxTabSheet
       Caption = #1056#1077#1081#1089#1099' '#1074#1072#1075#1086#1085#1072
       ImageIndex = 1
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid3: TcxGrid
         Left = 0
         Top = 0
@@ -2219,6 +2225,9 @@ object fmFactTrack: TfmFactTrack
     object cxTabSheet5: TcxTabSheet
       Caption = #1055#1088#1086#1089#1090#1086#1080' '#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093
       ImageIndex = 2
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid12: TcxGrid
         Left = 0
         Top = 0
