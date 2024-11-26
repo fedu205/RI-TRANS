@@ -4024,7 +4024,9 @@ begin
   res := '';
   if s <> '' then begin
     if (Pos('(', s) <> 0) and (Pos(')', s) <> 0) then begin
-      res := Copy(s, Pos('(', s)+1, Pos(')', s) - Pos('(', s)-1);
+      s := ReverseString(s);
+      res := Copy(s, Pos(')', s)+1, Pos('(', s) - Pos(')', s)-1);
+      res := ReverseString(res);
     end;
   end;
 
@@ -4076,7 +4078,7 @@ sp_fact_track_files_modify : TADOStoredProc;
       sp_fact_track_modify : TADOStoredProc;
             sp_files_error : TADOStoredProc;
            sp_vagon_modify : TADOStoredProc;
-   sp_fact_track_trip_find : TADOQuery;
+   sp_fact_track_trip_find : TADOStoredProc;
 
 
   files_load_date_begin: TDateTime;
@@ -4111,8 +4113,9 @@ begin
       SP_fact_track_modify.Connection := connect;
       SP_fact_track_modify.ProcedureName := 'SP_fact_track_modify';
 
-      sp_fact_track_trip_find := TADOQuery.Create(nil);
+      sp_fact_track_trip_find := TADOStoredProc.Create(nil);
       sp_fact_track_trip_find.Connection := connect;
+      sp_fact_track_trip_find.ProcedureName := 'sp_fact_track_trip_find_1';
       sp_fact_track_trip_find.CommandTimeout := 300;
 
 
@@ -4166,6 +4169,8 @@ begin
       Client_Vagon.FieldDefs.Add('prev_kargoETSNG_name', ftString, 200);
       Client_Vagon.FieldDefs.Add('node_operation_cod', ftString, 30);
       Client_Vagon.FieldDefs.Add('node_operation_name', ftString, 300);
+      Client_Vagon.FieldDefs.Add('fact_track_trip_id', ftInteger);
+
 
       Client_Vagon.FieldDefs.Add('cod_operation_vagon_name', ftString, 300);
       Client_Vagon.FieldDefs.Add('cod_operation_cod', ftString, 30);
@@ -4415,11 +4420,11 @@ begin
 
         Client_Vagon.FieldByName('rod_vagon_cod'           ).Value := CopyCod(exWks.Range['C' + IntToStr(cnt)].Value);
         Client_Vagon.FieldByName('road_begin_cod'          ).Value := CopyCod(exWks.Range['G' + IntToStr(cnt)].Value);
-        Client_Vagon.FieldByName('node_begin_cod'          ).Value := CopyCod(exWks.Range['H' + IntToStr(cnt)].Value);
-        Client_Vagon.FieldByName('node_end_cod'            ).Value := CopyCod(exWks.Range['L' + IntToStr(cnt)].Value);
-        Client_Vagon.FieldByName('kargoETSNG_cod'          ).Value := CopyCod(exWks.Range['U' + IntToStr(cnt)].Value);
-        Client_Vagon.FieldByName('prev_kargoETSNG_cod'     ).Value := CopyCod(exWks.Range['AE' + IntToStr(cnt)].Value);
-        Client_Vagon.FieldByName('node_operation_cod'      ).Value := CopyCod(exWks.Range['AF' + IntToStr(cnt)].Value);
+        Client_Vagon.FieldByName('node_begin_cod'          ).Value := RightStr('000000' + CopyCod(exWks.Range['H' + IntToStr(cnt)].Value),6);
+        Client_Vagon.FieldByName('node_end_cod'            ).Value := RightStr('000000' + CopyCod(exWks.Range['L' + IntToStr(cnt)].Value),6);
+        Client_Vagon.FieldByName('kargoETSNG_cod'          ).Value := RightStr('000000' + CopyCod(exWks.Range['U' + IntToStr(cnt)].Value),6);
+        Client_Vagon.FieldByName('prev_kargoETSNG_cod'     ).Value := RightStr('000000' + CopyCod(exWks.Range['AE' + IntToStr(cnt)].Value),6);
+        Client_Vagon.FieldByName('node_operation_cod'      ).Value := RightStr('000000' + CopyCod(exWks.Range['AF' + IntToStr(cnt)].Value),6);
 
         Client_Vagon.Post;
 
@@ -4429,6 +4434,7 @@ begin
         str_node_cod.Add(Client_Vagon.FieldByName('node_begin_cod').AsString);
         str_node_cod.Add(Client_Vagon.FieldByName('node_end_cod').AsString);
         str_node_cod.Add(Client_Vagon.FieldByName('node_operation_cod').AsString);
+
         str_road_cod.Add(Client_Vagon.FieldByName('road_begin_cod').AsString);
 
         str_kargoETSNG_cod.Add(Client_Vagon.FieldByName('kargoETSNG_cod').AsString);
@@ -4826,13 +4832,13 @@ begin
 
       MonitorOperInsert('Поиск рейсов: ' + IntToStr(files_track_id));
 
-//      sp_fact_track_trip_find.Parameters.Refresh;
-//      sp_fact_track_trip_find.Parameters.ParamByName('@xml'           ).Value := DataXMLToSQL(Client_VagonTrip);
-//      sp_fact_track_trip_find.Parameters.ParamByName('@users_group_id').Value := users_group_id;
+      sp_fact_track_trip_find.Parameters.Refresh;
+      sp_fact_track_trip_find.Parameters.ParamByName('@xml'           ).Value := DataXMLToSQL(Client_VagonTrip);
+      sp_fact_track_trip_find.Parameters.ParamByName('@users_group_id').Value := users_group_id;
 
-      sp_fact_track_trip_find.SQL.Add(GetProcedureFromRes('sp_fact_track_trip_find'));
-      sp_fact_track_trip_find.Parameters.ParamByName('users_group_id' ).Value := users_group_id;
-      sp_fact_track_trip_find.Parameters.ParamByName('param_xml'      ).Value := DataXMLToSQL(Client_VagonTrip);
+//      sp_fact_track_trip_find.SQL.Add(GetProcedureFromRes('sp_fact_track_trip_find'));
+//      sp_fact_track_trip_find.Parameters.ParamByName('users_group_id' ).Value := users_group_id;
+//      sp_fact_track_trip_find.Parameters.ParamByName('param_xml'      ).Value := DataXMLToSQL(Client_VagonTrip);
 
       sp_fact_track_trip_find.Open;
       while not sp_fact_track_trip_find.Eof do begin
@@ -4941,6 +4947,8 @@ begin
         SP_fact_track_modify.Parameters.ParamByName('@node_end_road_name'       ).Value := Client_Vagon.FieldByName('node_end_road_name').Value;
         SP_fact_track_modify.Parameters.ParamByName('@road_operation_cod'       ).Value := Client_Vagon.FieldByName('road_operation_cod').Value;
         SP_fact_track_modify.Parameters.ParamByName('@road_operation_name'      ).Value := Client_Vagon.FieldByName('road_operation_name').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@fact_track_trip_id'       ).Value := Client_Vagon.FieldByName('fact_track_trip_id').Value;
+
 
 
 
