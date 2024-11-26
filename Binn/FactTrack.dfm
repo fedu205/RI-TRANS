@@ -2,7 +2,7 @@ object fmFactTrack: TfmFactTrack
   Left = 0
   Top = 0
   Caption = #1044#1080#1089#1083#1086#1082#1072#1094#1080#1103' '#1074#1072#1075#1086#1085#1086#1074
-  ClientHeight = 748
+  ClientHeight = 728
   ClientWidth = 1169
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -147,7 +147,7 @@ object fmFactTrack: TfmFactTrack
   TextHeight = 13
   object Splitter1: TSplitter
     Left = 0
-    Top = 462
+    Top = 442
     Width = 1169
     Height = 3
     Cursor = crVSplit
@@ -163,26 +163,28 @@ object fmFactTrack: TfmFactTrack
     Left = 0
     Top = 26
     Width = 1169
-    Height = 436
+    Height = 416
     Align = alClient
     TabOrder = 0
-    Properties.ActivePage = cxTabSheet5
+    Properties.ActivePage = cxTabSheet1
     Properties.CustomButtons.Buttons = <>
     LookAndFeel.Kind = lfUltraFlat
     LookAndFeel.NativeStyle = False
     LookAndFeel.ScrollbarMode = sbmClassic
     LookAndFeel.SkinName = ''
-    ClientRectBottom = 436
+    ExplicitHeight = 436
+    ClientRectBottom = 416
     ClientRectRight = 1169
     ClientRectTop = 24
     object cxTabSheet1: TcxTabSheet
       Caption = #1044#1080#1089#1083#1086#1082#1072#1094#1080#1103
       ImageIndex = 0
+      ExplicitHeight = 412
       object cxGrid1: TcxGrid
         Left = 0
         Top = 74
         Width = 1169
-        Height = 338
+        Height = 318
         Align = alClient
         BevelInner = bvLowered
         BevelOuter = bvRaised
@@ -198,6 +200,7 @@ object fmFactTrack: TfmFactTrack
         LookAndFeel.NativeStyle = False
         LookAndFeel.ScrollbarMode = sbmClassic
         LookAndFeel.SkinName = 'Office2007Black'
+        ExplicitHeight = 338
         object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = Popup_TrackVagon
           OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -1850,11 +1853,12 @@ object fmFactTrack: TfmFactTrack
     object cxTabSheet2: TcxTabSheet
       Caption = #1056#1077#1081#1089#1099' '#1074#1072#1075#1086#1085#1072
       ImageIndex = 1
+      ExplicitHeight = 412
       object cxGrid3: TcxGrid
         Left = 0
         Top = 0
         Width = 1169
-        Height = 412
+        Height = 392
         Align = alClient
         BevelInner = bvLowered
         BevelOuter = bvRaised
@@ -1870,6 +1874,7 @@ object fmFactTrack: TfmFactTrack
         LookAndFeel.NativeStyle = False
         LookAndFeel.ScrollbarMode = sbmClassic
         LookAndFeel.SkinName = 'Office2007Black'
+        ExplicitHeight = 412
         object cxGridDBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = Popup_TrackTrip
           OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -2350,11 +2355,12 @@ object fmFactTrack: TfmFactTrack
     object cxTabSheet5: TcxTabSheet
       Caption = #1055#1088#1086#1089#1090#1086#1080' '#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093
       ImageIndex = 2
+      ExplicitHeight = 412
       object cxGrid12: TcxGrid
         Left = 0
         Top = 0
         Width = 1169
-        Height = 412
+        Height = 392
         Align = alClient
         BevelInner = bvLowered
         BevelOuter = bvRaised
@@ -2370,11 +2376,13 @@ object fmFactTrack: TfmFactTrack
         LookAndFeel.NativeStyle = False
         LookAndFeel.ScrollbarMode = sbmClassic
         LookAndFeel.SkinName = 'Office2007Black'
+        ExplicitHeight = 412
         object cxGrid12DBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = Popup_StayNode
           OnKeyPress = cxGrid1DBBandedTableView1KeyPress
           Navigator.Buttons.CustomButtons = <>
           ScrollbarAnnotations.CustomAnnotations = <>
+          OnCustomDrawCell = cxGrid12DBBandedTableView1CustomDrawCell
           OnFocusedItemChanged = cxGrid1DBBandedTableView1FocusedItemChanged
           OnSelectionChanged = cxGrid12DBBandedTableView1SelectionChanged
           DataController.DataSource = DS_StayByNode
@@ -2732,7 +2740,7 @@ object fmFactTrack: TfmFactTrack
   end
   object cxPageControl2: TcxPageControl
     Left = 0
-    Top = 465
+    Top = 445
     Width = 1169
     Height = 283
     Align = alBottom
@@ -2746,6 +2754,7 @@ object fmFactTrack: TfmFactTrack
     LookAndFeel.ScrollbarMode = sbmClassic
     LookAndFeel.SkinName = ''
     OnChange = cxPageControl2Change
+    ExplicitTop = 465
     ClientRectBottom = 283
     ClientRectRight = 1169
     ClientRectTop = 24
@@ -6645,42 +6654,38 @@ object fmFactTrack: TfmFactTrack
       #9'f.*, '
       '                comments           = NULL,'
       #9'note                    = NULL,'
-      #9'model_name              = NULL,'
       #9'vagon_id                = NULL,'
       #9'next_date_repair        = NULL,'
       #9'node_registration_name  = NULL,'
       #9'arenda_firm_name        = NULL,'
       #9'datpr                   = NULL,'
       #9'round_day               = NULL,'
-      '  i.inf_obj_name as rod_vagon_name,'
-      '  firm.firm_name, ftt.date_arrival AS date_arrival1'
+      
+        '                firm.firm_name, ftt.date_arrival AS date_arrival' +
+        '1'
       ''
-      'FROM'#9'view_fact_track_vagon f'
+      'FROM'#9'view_fact_track_vagon AS f'
       '     LEFT JOIN firm ON f.vagon_owner_firm_id = firm.firm_id'
       
-        '     LEFT JOIN inf_obj i ON cast(f.rod_vagon as varchar) = i.inf' +
-        '_obj_cod AND i.type_inf_id = 20'
+        '     LEFT JOIN vagon_comment  AS c6  WITH (NOLOCK) ON (c6.vagon_' +
+        'id = f.vagon_id) AND (c6.vagon_comment_type_id = 908732 ) AND ( ' +
+        '@date_end BETWEEN c6.date_begin AND ISNULL(c6.date_end + 0.999, ' +
+        '@date_end))'
       
-        '     LEFT JOIN vagon_comment       c6  WITH (NOLOCK) ON (c6.vago' +
-        'n_id = f.vagon_id) AND (c6.vagon_comment_type_id = 908732 ) AND ' +
-        '( @date_end BETWEEN c6.date_begin AND ISNULL(c6.date_end + 0.999' +
-        ', @date_end))'
+        '     LEFT JOIN view_vagon_comment6 AS vc6 ON c6.attached_global_' +
+        'id = vc6.comment6_id'
       
-        '     LEFT JOIN view_vagon_comment6 vc6 ON c6.attached_global_id ' +
-        '= vc6.comment6_id'
-      
-        '     LEFT JOIN FACT_TRACK_TRIP ftt ON ftt.fact_track_trip_id = f' +
-        '.fact_track_trip_id'
+        '     LEFT JOIN fact_track_trip AS  ftt ON ftt.fact_track_trip_id' +
+        ' = f.fact_track_trip_id'
       ''
       'WHERE (f.users_group_id = @users_group_id)'
       
-        #9#9'AND (FLOOR(convert(float, f.date_query)) BETWEEN @date_begin A' +
-        'ND @date_end)'
-      #9#9'AND (f.num_vagon = @num_vagon)'
+        '              AND (FLOOR(convert(float, f.date_query)) BETWEEN @' +
+        'date_begin AND @date_end)'
+      '              AND (f.num_vagon = @num_vagon)'
       
-        'and (f.fact_track_trip_id = @fact_track_trip_id or @fact_track_t' +
-        'rip_id = -9)'
-      'ORDER BY f.date_query desc'
+        '              AND (f.fact_track_trip_id = @fact_track_trip_id or' +
+        ' @fact_track_trip_id = -9)'
       '')
     Left = 52
     Top = 543

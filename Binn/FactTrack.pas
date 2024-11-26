@@ -635,6 +635,7 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     procedure dxBarButton117Click(Sender: TObject);
     procedure cxGrid12DBBandedTableView1SelectionChanged(Sender: TcxCustomGridTableView);
     procedure dxBarButton2Click(Sender: TObject);
+    procedure cxGrid12DBBandedTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
 
 
   private
@@ -1173,46 +1174,18 @@ begin
   Screen.Cursor := crDefault;
 end;
 
+procedure TfmFactTrack.cxGrid12DBBandedTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
+begin
+  if AViewInfo.GridRecord.Selected or AViewInfo.GridRecord.Focused then begin
+    ACanvas.Brush.Color := clNavy;
+    ACanvas.Font.Color := clWhite;
+    if AViewInfo.Focused then ACanvas.Brush.Color := clBlue;
+  end;
+end;
+
 procedure TfmFactTrack.cxGrid12DBBandedTableView1SelectionChanged(Sender: TcxCustomGridTableView);
 begin
-
-  if (cxGridDBBandedTableView1.GroupedColumnCount = 0) then begin
-    cxPageControl2Change(cxPageControl2);
-
-  end;
-
-//  Query_History.Close;
-//  Query_HistoryTrip.Close;
-//
-//  if (dxBarButton_History.Down) and (cxGridDBBandedTableView1.GroupedColumnCount = 0) then begin
-//    Screen.Cursor := crHourGlass;
-//
-//    case cxPageControl2.ActivePageIndex of
-//      // История: вагон
-//      0 : begin
-//            Query_History.Parameters.ParamByName('num_vagon'     ).Value := cxGrid12DBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
-//            Query_History.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
-//            Query_History.Parameters.ParamByName('date_begin'    ).Value := Fdate_history1;
-//            Query_History.Parameters.ParamByName('date_end'      ).Value := Fdate_history2;
-//            Query_History.Parameters.ParamByName('set_group'     ).Value := iif(dxBarButton115.Down, 1, 0);
-//            Query_History.Open;
-//          end;
-//
-//      // История: рейс
-//      1 : begin
-//            Query_HistoryTrip.Parameters.ParamByName('num_vagon'     ).Value := cxGrid12DBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
-//            Query_HistoryTrip.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
-//            Query_HistoryTrip.Parameters.ParamByName('date_begin1'    ).Value := Fdate_trip1;
-//            Query_HistoryTrip.Parameters.ParamByName('date_end2'      ).Value := Fdate_trip2;
-//            Query_HistoryTrip.Parameters.ParamByName('date_begin1'    ).Value := Fdate_trip1;
-//            Query_HistoryTrip.Parameters.ParamByName('date_end2'      ).Value := Fdate_trip2;
-//            Query_HistoryTrip.Open;
-//          end;
-//
-//    end;
-//
-//    Screen.Cursor := crDefault;
-//  end;
+  cxPageControl2Change(cxPageControl2);
 end;
 
 procedure TfmFactTrack.cxGrid1DBBandedTableView1CellDblClick(Sender: TcxCustomGridTableView; ACellViewInfo: TcxGridTableDataCellViewInfo; AButton: TMouseButton;  AShift: TShiftState; var AHandled: Boolean);
@@ -1478,44 +1451,7 @@ procedure TfmFactTrack.cxGridDBBandedTableView1FocusedRecordChanged(Sender: TcxC
 begin
   if (cxGridDBBandedTableView1.GroupedColumnCount = 0) then begin
     cxPageControl2Change(cxPageControl2);
-
   end;
-
-
-
-
-//  Query_History.Close;
-//  Query_HistoryTrip.Close;
-//
-//  if (dxBarButton_History.Down) and (AFocusedRecord<>nil) and ((cxGridDBBandedTableView1.GroupedColumnCount = 0) OR (AFocusedRecord.Level <> 0)) then begin
-//    Screen.Cursor := crHourGlass;
-//
-//    case cxPageControl2.ActivePageIndex of
-//      // История: вагон
-//      0 : begin
-//            Query_History.Parameters.ParamByName('num_vagon'     ).Value := cxGridDBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
-//            Query_History.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
-//            Query_History.Parameters.ParamByName('date_begin'    ).Value := Fdate_history1;
-//            Query_History.Parameters.ParamByName('date_end'      ).Value := Fdate_history2;
-//            Query_History.Parameters.ParamByName('set_group'     ).Value := iif(dxBarButton115.Down, 1, 0);
-//            Query_History.Open;
-//          end;
-//
-//      // История: рейс
-//      1 : begin
-//            Query_HistoryTrip.Parameters.ParamByName('num_vagon'     ).Value := cxGridDBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
-//            Query_HistoryTrip.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
-//            Query_HistoryTrip.Parameters.ParamByName('date_begin1'    ).Value := Fdate_trip1;
-//            Query_HistoryTrip.Parameters.ParamByName('date_end1'      ).Value := Fdate_trip2;
-//            Query_HistoryTrip.Parameters.ParamByName('date_begin2'    ).Value := Fdate_trip1;
-//            Query_HistoryTrip.Parameters.ParamByName('date_end2'      ).Value := Fdate_trip2;
-//            Query_HistoryTrip.Open;
-//          end;
-//
-//    end;
-//
-//    Screen.Cursor := crDefault;
-//  end;
 end;
 
 
@@ -5735,15 +5671,6 @@ begin
               Query_HistoryTrip.Parameters.ParamByName('date_begin'    ).Value := Fdate_trip1;
               Query_HistoryTrip.Parameters.ParamByName('date_end'      ).Value := Fdate_trip2;
               Query_HistoryTrip.Open;
-
-
-//              Query_HistoryTrip.Parameters.ParamByName('num_vagon'     ).Value := cxGrid1DBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
-//              Query_HistoryTrip.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
-//              Query_HistoryTrip.Parameters.ParamByName('date_begin1'    ).Value := Fdate_trip1;
-//              Query_HistoryTrip.Parameters.ParamByName('date_end1'      ).Value := Fdate_trip2;
-//              Query_HistoryTrip.Parameters.ParamByName('date_begin2'    ).Value := Fdate_trip1;
-//              Query_HistoryTrip.Parameters.ParamByName('date_end2'      ).Value := Fdate_trip2;
-//              Query_HistoryTrip.Open;
             end;
           end;
 
