@@ -713,11 +713,11 @@ begin
     WindowState := wsMaximized;
   end;
 
-//  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid1DBBandedTableView1, 3);
-//  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid2DBBandedTableView1);
-//  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid3DBBandedTableView1, 3);
-//  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGridDBBandedTableView1);
-//  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid12DBBandedTableView1);
+  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid1DBBandedTableView1, 3);
+  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid2DBBandedTableView1);
+  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid3DBBandedTableView1);
+  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGridDBBandedTableView1);
+  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid12DBBandedTableView1);
 
   Fdate_history1 := IncMonth(Date, -1);
   Fdate_history2 := Date;
@@ -1175,38 +1175,44 @@ end;
 
 procedure TfmFactTrack.cxGrid12DBBandedTableView1SelectionChanged(Sender: TcxCustomGridTableView);
 begin
-  Query_History.Close;
-  Query_HistoryTrip.Close;
 
-  if (dxBarButton_History.Down) and (cxGridDBBandedTableView1.GroupedColumnCount = 0) then begin
-    Screen.Cursor := crHourGlass;
+  if (cxGridDBBandedTableView1.GroupedColumnCount = 0) then begin
+    cxPageControl2Change(cxPageControl2);
 
-    case cxPageControl2.ActivePageIndex of
-      // История: вагон
-      0 : begin
-            Query_History.Parameters.ParamByName('num_vagon'     ).Value := cxGrid12DBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
-            Query_History.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
-            Query_History.Parameters.ParamByName('date_begin'    ).Value := Fdate_history1;
-            Query_History.Parameters.ParamByName('date_end'      ).Value := Fdate_history2;
-            Query_History.Parameters.ParamByName('set_group'     ).Value := iif(dxBarButton115.Down, 1, 0);
-            Query_History.Open;
-          end;
-
-      // История: рейс
-      1 : begin
-            Query_HistoryTrip.Parameters.ParamByName('num_vagon'     ).Value := cxGrid12DBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
-            Query_HistoryTrip.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
-            Query_HistoryTrip.Parameters.ParamByName('date_begin1'    ).Value := Fdate_trip1;
-            Query_HistoryTrip.Parameters.ParamByName('date_end2'      ).Value := Fdate_trip2;
-            Query_HistoryTrip.Parameters.ParamByName('date_begin1'    ).Value := Fdate_trip1;
-            Query_HistoryTrip.Parameters.ParamByName('date_end2'      ).Value := Fdate_trip2;
-            Query_HistoryTrip.Open;
-          end;
-
-    end;
-
-    Screen.Cursor := crDefault;
   end;
+
+//  Query_History.Close;
+//  Query_HistoryTrip.Close;
+//
+//  if (dxBarButton_History.Down) and (cxGridDBBandedTableView1.GroupedColumnCount = 0) then begin
+//    Screen.Cursor := crHourGlass;
+//
+//    case cxPageControl2.ActivePageIndex of
+//      // История: вагон
+//      0 : begin
+//            Query_History.Parameters.ParamByName('num_vagon'     ).Value := cxGrid12DBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
+//            Query_History.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
+//            Query_History.Parameters.ParamByName('date_begin'    ).Value := Fdate_history1;
+//            Query_History.Parameters.ParamByName('date_end'      ).Value := Fdate_history2;
+//            Query_History.Parameters.ParamByName('set_group'     ).Value := iif(dxBarButton115.Down, 1, 0);
+//            Query_History.Open;
+//          end;
+//
+//      // История: рейс
+//      1 : begin
+//            Query_HistoryTrip.Parameters.ParamByName('num_vagon'     ).Value := cxGrid12DBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
+//            Query_HistoryTrip.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
+//            Query_HistoryTrip.Parameters.ParamByName('date_begin1'    ).Value := Fdate_trip1;
+//            Query_HistoryTrip.Parameters.ParamByName('date_end2'      ).Value := Fdate_trip2;
+//            Query_HistoryTrip.Parameters.ParamByName('date_begin1'    ).Value := Fdate_trip1;
+//            Query_HistoryTrip.Parameters.ParamByName('date_end2'      ).Value := Fdate_trip2;
+//            Query_HistoryTrip.Open;
+//          end;
+//
+//    end;
+//
+//    Screen.Cursor := crDefault;
+//  end;
 end;
 
 procedure TfmFactTrack.cxGrid1DBBandedTableView1CellDblClick(Sender: TcxCustomGridTableView; ACellViewInfo: TcxGridTableDataCellViewInfo; AButton: TMouseButton;  AShift: TShiftState; var AHandled: Boolean);
@@ -1399,32 +1405,38 @@ end;
 
 procedure TfmFactTrack.cxGrid1DBBandedTableView1SelectionChanged(Sender: TcxCustomGridTableView);
 begin
-  Query_History.Close;
-  Query_HistoryTrip.Close;
-  if (dxBarButton_History.Down) and (cxGrid1DBBandedTableView1.Controller.SelectedRecordCount > 0) and (cxGrid1DBBandedTableView1.GroupedColumnCount = 0)  then begin
-    Screen.Cursor := crHourGlass;
+  if (cxGridDBBandedTableView1.GroupedColumnCount = 0) then begin
+    cxPageControl2Change(cxPageControl2);
 
-    if cxPageControl2.ActivePage = cxTabSheet3 then begin
-      // История вагона
-      Query_History.Parameters.ParamByName('num_vagon'     ).Value := cxGrid1DBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
-      Query_History.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
-      Query_History.Parameters.ParamByName('date_begin'    ).Value := Fdate_history1;
-      Query_History.Parameters.ParamByName('date_end'      ).Value := Fdate_history2;
-      Query_History.Parameters.ParamByName('set_group'     ).Value := iif(dxBarButton115.Down, 1, 0);
-      Query_History.Open;
-    end else begin
-      // История рейса
-      Query_HistoryTrip.Parameters.ParamByName('num_vagon'     ).Value := cxGrid1DBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
-      Query_HistoryTrip.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
-      Query_HistoryTrip.Parameters.ParamByName('date_begin1'    ).Value := Fdate_trip1;
-      Query_HistoryTrip.Parameters.ParamByName('date_end1'      ).Value := Fdate_trip2;
-      Query_HistoryTrip.Parameters.ParamByName('date_begin2'    ).Value := Fdate_trip1;
-      Query_HistoryTrip.Parameters.ParamByName('date_end2'      ).Value := Fdate_trip2;
-      Query_HistoryTrip.Open;
-    end;
-
-    Screen.Cursor := crDefault;
   end;
+
+
+//  Query_History.Close;
+//  Query_HistoryTrip.Close;
+//  if (dxBarButton_History.Down) and (cxGrid1DBBandedTableView1.Controller.SelectedRecordCount > 0) and (cxGrid1DBBandedTableView1.GroupedColumnCount = 0)  then begin
+//    Screen.Cursor := crHourGlass;
+//
+//    if cxPageControl2.ActivePage = cxTabSheet3 then begin
+//      // История вагона
+//      Query_History.Parameters.ParamByName('num_vagon'     ).Value := cxGrid1DBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
+//      Query_History.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
+//      Query_History.Parameters.ParamByName('date_begin'    ).Value := Fdate_history1;
+//      Query_History.Parameters.ParamByName('date_end'      ).Value := Fdate_history2;
+//      Query_History.Parameters.ParamByName('set_group'     ).Value := iif(dxBarButton115.Down, 1, 0);
+//      Query_History.Open;
+//    end else begin
+//      // История рейса
+//      Query_HistoryTrip.Parameters.ParamByName('num_vagon'     ).Value := cxGrid1DBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
+//      Query_HistoryTrip.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
+//      Query_HistoryTrip.Parameters.ParamByName('date_begin1'    ).Value := Fdate_trip1;
+//      Query_HistoryTrip.Parameters.ParamByName('date_end1'      ).Value := Fdate_trip2;
+//      Query_HistoryTrip.Parameters.ParamByName('date_begin2'    ).Value := Fdate_trip1;
+//      Query_HistoryTrip.Parameters.ParamByName('date_end2'      ).Value := Fdate_trip2;
+//      Query_HistoryTrip.Open;
+//    end;
+//
+//    Screen.Cursor := crDefault;
+//  end;
 end;
 
 
@@ -1464,38 +1476,46 @@ end;
 
 procedure TfmFactTrack.cxGridDBBandedTableView1FocusedRecordChanged(Sender: TcxCustomGridTableView; APrevFocusedRecord,AFocusedRecord: TcxCustomGridRecord; ANewItemRecordFocusingChanged: Boolean);
 begin
-  Query_History.Close;
-  Query_HistoryTrip.Close;
+  if (cxGridDBBandedTableView1.GroupedColumnCount = 0) then begin
+    cxPageControl2Change(cxPageControl2);
 
-  if (dxBarButton_History.Down) and (AFocusedRecord<>nil) and ((cxGridDBBandedTableView1.GroupedColumnCount = 0) OR (AFocusedRecord.Level <> 0)) then begin
-    Screen.Cursor := crHourGlass;
-
-    case cxPageControl2.ActivePageIndex of
-      // История: вагон
-      0 : begin
-            Query_History.Parameters.ParamByName('num_vagon'     ).Value := cxGridDBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
-            Query_History.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
-            Query_History.Parameters.ParamByName('date_begin'    ).Value := Fdate_history1;
-            Query_History.Parameters.ParamByName('date_end'      ).Value := Fdate_history2;
-            Query_History.Parameters.ParamByName('set_group'     ).Value := iif(dxBarButton115.Down, 1, 0);
-            Query_History.Open;
-          end;
-
-      // История: рейс
-      1 : begin
-            Query_HistoryTrip.Parameters.ParamByName('num_vagon'     ).Value := cxGridDBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
-            Query_HistoryTrip.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
-            Query_HistoryTrip.Parameters.ParamByName('date_begin1'    ).Value := Fdate_trip1;
-            Query_HistoryTrip.Parameters.ParamByName('date_end1'      ).Value := Fdate_trip2;
-            Query_HistoryTrip.Parameters.ParamByName('date_begin2'    ).Value := Fdate_trip1;
-            Query_HistoryTrip.Parameters.ParamByName('date_end2'      ).Value := Fdate_trip2;
-            Query_HistoryTrip.Open;
-          end;
-
-    end;
-
-    Screen.Cursor := crDefault;
   end;
+
+
+
+
+//  Query_History.Close;
+//  Query_HistoryTrip.Close;
+//
+//  if (dxBarButton_History.Down) and (AFocusedRecord<>nil) and ((cxGridDBBandedTableView1.GroupedColumnCount = 0) OR (AFocusedRecord.Level <> 0)) then begin
+//    Screen.Cursor := crHourGlass;
+//
+//    case cxPageControl2.ActivePageIndex of
+//      // История: вагон
+//      0 : begin
+//            Query_History.Parameters.ParamByName('num_vagon'     ).Value := cxGridDBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
+//            Query_History.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
+//            Query_History.Parameters.ParamByName('date_begin'    ).Value := Fdate_history1;
+//            Query_History.Parameters.ParamByName('date_end'      ).Value := Fdate_history2;
+//            Query_History.Parameters.ParamByName('set_group'     ).Value := iif(dxBarButton115.Down, 1, 0);
+//            Query_History.Open;
+//          end;
+//
+//      // История: рейс
+//      1 : begin
+//            Query_HistoryTrip.Parameters.ParamByName('num_vagon'     ).Value := cxGridDBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
+//            Query_HistoryTrip.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
+//            Query_HistoryTrip.Parameters.ParamByName('date_begin1'    ).Value := Fdate_trip1;
+//            Query_HistoryTrip.Parameters.ParamByName('date_end1'      ).Value := Fdate_trip2;
+//            Query_HistoryTrip.Parameters.ParamByName('date_begin2'    ).Value := Fdate_trip1;
+//            Query_HistoryTrip.Parameters.ParamByName('date_end2'      ).Value := Fdate_trip2;
+//            Query_HistoryTrip.Open;
+//          end;
+//
+//    end;
+//
+//    Screen.Cursor := crDefault;
+//  end;
 end;
 
 
@@ -3042,7 +3062,7 @@ procedure TfmFactTrack.FormDestroy(Sender: TObject);
 begin
   StoreRegistryGrid(rgSave,'\Software\Lis1\FactTrack_Grids', cxGrid1DBBandedTableView1, 3);
   StoreRegistryGrid(rgSave,'\Software\Lis1\FactTrack_Grids', cxGrid2DBBandedTableView1);
-  StoreRegistryGrid(rgSave,'\Software\Lis1\FactTrack_Grids', cxGrid3DBBandedTableView1, 3);
+  StoreRegistryGrid(rgSave,'\Software\Lis1\FactTrack_Grids', cxGrid3DBBandedTableView1);
   StoreRegistryGrid(rgSave,'\Software\Lis1\FactTrack_Grids', cxGridDBBandedTableView1);
   StoreRegistryGrid(rgSave,'\Software\Lis1\FactTrack_Grids', cxGrid12DBBandedTableView1);
 
@@ -4890,54 +4910,24 @@ begin
 end;
 
 procedure TfmFactTrack.dxBarButton59Click(Sender: TObject);
-var                  Query : TADOQuery;
-        SP_fact_track_stat : TADOStoredProc;
+var             Query : TADOQuery;
+   SP_fact_track_stat : TADOStoredProc;
 begin
-      if Application.MessageBox(PChar('Будет обновлена последняя загрузка данных дислокации.' +#13#10 + 'Выполнение процедуры займет 5-7 мин.' +
-      #13#10 + 'Вы уверены?'), 'Внимание', MB_ICONINFORMATION or MB_OKCANCEL) = mrOk then begin
+  if Application.MessageBox(PChar('Будет обновлена последняя загрузка данных дислокации.' +#13#10 + 'Выполнение процедуры займет 5-7 мин.' +
+                                   #13#10 + 'Вы уверены?'), 'Внимание', MB_ICONINFORMATION or MB_OKCANCEL) = mrOk then begin
 
-        sp_fact_track_STAT := TADOStoredProc.Create(nil);
-        sp_fact_track_STAT.Connection := fmMain.Lis;
-        sp_fact_track_STAT.CommandTimeout := 600;
-        sp_fact_track_STAT.ProcedureName := 'sp_fact_track_STAT';
-        sp_fact_track_STAT.Parameters.Refresh;
-//        sp_fact_track_STAT.Parameters.ParamByName('@date_last').Value := Now;
-        sp_fact_track_STAT.ExecProc;
-        sp_fact_track_STAT.Free;
+    sp_fact_track_STAT := TADOStoredProc.Create(nil);
+    sp_fact_track_STAT.Connection := fmMain.Lis;
+    sp_fact_track_STAT.CommandTimeout := 600;
+    sp_fact_track_STAT.ProcedureName := 'sp_fact_track_STAT';
+    sp_fact_track_STAT.Parameters.Refresh;
+    sp_fact_track_STAT.ExecProc;
+    sp_fact_track_STAT.Free;
 
+    Action_RefreshExecute(nil);
+    Application.MessageBox('Выполнение процедуры завершено.','Внимание', MB_ICONINFORMATION or MB_OK);
+  end;
 
-        Application.MessageBox('Выполнение процедуры завершено. Обновите выборку дислокации.','Внимание', MB_ICONINFORMATION or MB_OK);
-      end;
-
-
-//  Query := TADOQuery.Create(nil);
-//  SP_fact_track_stat := TADOStoredProc.Create(nil);
-//  try
-//    Query.Connection      := fmMain.Lis;
-//    Query.CommandTimeout  := 200;
-//    Query.SQL.Text := 'SELECT MAX(s.date_query) AS stat, MAX(v.date_query) AS vagon FROM FACT_TRACK_STAT s ' +
-//    'LEFT JOIN (select max(date_query) AS date_query from FACT_TRACK_VAGON ) v ON 1 = 1 ';
-//    Query.Open;
-//
-//    if Query.FieldByName('stat').AsDateTime <> Query.FieldByName('vagon').AsDateTime then begin
-//
-//      SP_fact_track_stat.Connection     := fmMain.Lis;
-//      SP_fact_track_stat.CommandTimeout := 500;
-//      SP_fact_track_stat.ProcedureName  := 'sp_fact_track_stat';
-//      SP_fact_track_stat.Parameters.Refresh;
-//      SP_fact_track_stat.Parameters.ParamByName('@date_last').Value := Date;
-//
-//      if Application.MessageBox(PChar('Будет обновлена последняя загрузка данных дислокации.' +#13#10 + 'Выполнение процедуры займет 5-7 мин.' +
-//      #13#10 + 'Вы уверены?'), 'Внимание', MB_ICONINFORMATION or MB_OKCANCEL) = mrOk then begin
-//        SP_fact_track_stat.ExecProc;
-//        Application.MessageBox('Выполнение процедуры завершено. Обновите выборку дислокации.','Внимание', MB_ICONINFORMATION or MB_OK);
-//      end;
-//    end else
-//    Application.MessageBox('Дислокация актуальна.','Внимание', MB_ICONINFORMATION or MB_OK);
-//  finally
-//    SP_fact_track_stat.Free;
-//    Query.Free;
-//  end;
 end;
 
 procedure TfmFactTrack.dxBarButton60Click(Sender: TObject);
@@ -5736,17 +5726,24 @@ begin
               Query_History.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
               Query_History.Parameters.ParamByName('date_begin'    ).Value := Fdate_history1;
               Query_History.Parameters.ParamByName('date_end'      ).Value := Fdate_history2;
-              Query_History.Parameters.ParamByName('set_group'     ).Value := iif(dxBarButton115.Down, 1, 0);
+//              Query_History.Parameters.ParamByName('set_group'     ).Value := iif(dxBarButton115.Down, 1, 0);
               Query_History.Open;
             end else begin
               // История рейса
               Query_HistoryTrip.Parameters.ParamByName('num_vagon'     ).Value := cxGrid1DBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
               Query_HistoryTrip.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
-              Query_HistoryTrip.Parameters.ParamByName('date_begin1'    ).Value := Fdate_trip1;
-              Query_HistoryTrip.Parameters.ParamByName('date_end1'      ).Value := Fdate_trip2;
-              Query_HistoryTrip.Parameters.ParamByName('date_begin2'    ).Value := Fdate_trip1;
-              Query_HistoryTrip.Parameters.ParamByName('date_end2'      ).Value := Fdate_trip2;
+              Query_HistoryTrip.Parameters.ParamByName('date_begin'    ).Value := Fdate_trip1;
+              Query_HistoryTrip.Parameters.ParamByName('date_end'      ).Value := Fdate_trip2;
               Query_HistoryTrip.Open;
+
+
+//              Query_HistoryTrip.Parameters.ParamByName('num_vagon'     ).Value := cxGrid1DBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
+//              Query_HistoryTrip.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
+//              Query_HistoryTrip.Parameters.ParamByName('date_begin1'    ).Value := Fdate_trip1;
+//              Query_HistoryTrip.Parameters.ParamByName('date_end1'      ).Value := Fdate_trip2;
+//              Query_HistoryTrip.Parameters.ParamByName('date_begin2'    ).Value := Fdate_trip1;
+//              Query_HistoryTrip.Parameters.ParamByName('date_end2'      ).Value := Fdate_trip2;
+//              Query_HistoryTrip.Open;
             end;
           end;
 
@@ -5758,7 +5755,7 @@ begin
               Query_History.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
               Query_History.Parameters.ParamByName('date_begin'    ).Value := Fdate_history1;
               Query_History.Parameters.ParamByName('date_end'      ).Value := Fdate_history2;
-              Query_History.Parameters.ParamByName('set_group'     ).Value := iif(dxBarButton115.Down, 1, 0);
+//              Query_History.Parameters.ParamByName('set_group'     ).Value := iif(dxBarButton115.Down, 1, 0);
               Query_History.Open;
             end else begin
               // История: рейс

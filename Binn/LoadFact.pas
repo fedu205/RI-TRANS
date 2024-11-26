@@ -27,8 +27,8 @@ uses
   dxSpreadSheet, dxSkinTheBezier, dxHashUtils, dxSpreadSheetCore, dxSpreadSheetCoreFormulas, dxSpreadSheetCoreHistory,
   dxSpreadSheetCoreStyles, dxSpreadSheetCoreStrs, dxSpreadSheetClasses, dxSpreadSheetContainers, dxSpreadSheetFormulas,
   dxSpreadSheetFunctions, dxSpreadSheetStyles, dxSpreadSheetGraphics, dxSpreadSheetPrinting, dxSpreadSheetTypes, dxDateRanges,
-  dxSkinOffice2019Colorful, dxSpreadSheetHyperlinks, dxSpreadSheetUtils,
-  dxSpreadSheetFormattedTextUtils, dxScrollbarAnnotations, cxButtons, cxPC, dxSpreadSheetConditionalFormatting, dxSpreadSheetConditionalFormattingRules;
+  dxSpreadSheetHyperlinks, dxSpreadSheetUtils, dxSpreadSheetFormattedTextUtils, dxScrollbarAnnotations, cxButtons, cxPC,
+  dxSpreadSheetConditionalFormatting, dxSpreadSheetConditionalFormattingRules;
 
 
 type

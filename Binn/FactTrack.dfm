@@ -10,6 +10,137 @@ object fmFactTrack: TfmFactTrack
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  Icon.Data = {
+    000001000200101000000100180068030000260000002020000001001800A80C
+    00008E0300002800000010000000200000000100180000000000400300000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000CECECE
+    CCCCCCCCCCCCCCCCCCCCCCCCDADADA0000000000000000000000000000000000
+    00000000000000CCCCCC66A0C20878BA0377BA0377BA0377BA0377B9388CBDA3
+    BAC7E5E5E5000000000000000000000000000000B4C1C91587C9339FDD4FB7F2
+    56BEFA56BEFC55BDFA55BBF644ABE51F8CCC659FC2DDDDDD0000000000000000
+    00B7C4CB3FA2DBAFD5E3F9F5E9E1AF77B8711DB77423B8711DDEAC75F1F9FDA7
+    DBF84AACE2549EC8DEDEDE000000CBD0D34EADE3E4E2D0FFF2DAD2A774A87531
+    988C61919576978D64A57632CA9B64FFFFFFFFFFF782C5E861A8D1DCDCDC6BBB
+    E7EDE0C9FFE9CBFCF0DEA66B21938E661A1D2417191E171B1F86825FA1691DFF
+    F9F3FFFCF3FFFCEDEAEDE87EB9DA0378BB5C9EBCFFEDCBFFF2DEA670298C967A
+    18191F1B1C1E5B5B5EA2A799BB9562F0DFCBFFFAEEFFFEE95FA4C70277BACEE4
+    F10072B95A9EBFFFF7DAB270219A8E631C1D2014131699999AD0CBB8DBBA92FF
+    FFF2FFF5E55CA2C60073B800000000000067ADDB0074B91683C28B8568BE7B29
+    AB8C519F8F5FEDD7BAFFE3C6E5DDCE94BFD1137DBA0278BDAED4EC0000000000
+    000000006BB3DF1583CA047CC60077C20077C20076BF0072BB006FB70073BA05
+    7AC01986CBC2DFF1000000000000000000000000000000D4E9F661AEE02A92D7
+    2B92D72B92D72A91D62A91D62F93D591C6E90000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000FFFFFFFFFFFFFFFFF81FFFFFE007FFFFC003
+    FFFF8001FFFF0000FFFF0000FFFF0000FFFF0001FFFF8001FFFFC003FFFFE00F
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFF280000002000000040000000010018000000
+    0000800C00000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000E8E8E8E4E4E4
+    E1E1E1DFDFDFDFDFDFE0E0E0E2E2E2E6E6E6EBEBEB0000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000D1C9C7B89E96AC877CA37667
+    9E65549D62519C62509D6352A27264A98377B59992CCC4C10000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000BFA9A2A67768A87566BB9488C7A99ED0B8B0
+    DCCAC4DECEC8DFCFC8DCCAC4D1B8B0C6A79DBA9285A57060A06F60BAA29B0000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000CDC0BCA8786AB99285D5BFB7E1D2CCE1D3CED0BEB6A0867A
+    8061516E4C396F4C397E5E4D9A7F73CAB8AFE1D3CFE1D3CCD5BEB6B68C7FA06C
+    5CC5B6B200000000000000000000000000000000000000000000000000000000
+    0000000000BEA39BB28678DAC6BEE3D6D1E5D8D2E6D7D2A58C80724F3D8B6651
+    9D7864AD8972A9866FA17C678C6855724E3C997E71E2D5D0E6D8D3E4D6D2D9C5
+    BDAC7B6CB4958C00000000000000000000000000000000000000000000000000
+    0000BFA49BC3A298E5D7D2E6DAD6E8DDD7E8DDD89377697C5745A27C68B18D79
+    B99782BD9E8BBA9886BD9D8BB99683A8836F7D5946896C5CE6DAD5E9DED9E7DB
+    D6E5D8D3BF9B8FB3948B000000000000000000000000000000000000000000CD
+    BCB6BA9488E4D9D6E9DEDAEBE1DDEDE3DFAB9489805C48A37C67B28F7AC0A38F
+    CBB1A2D2B9ACCFB7AAD1B9AAC8AC9BBA9886B2917B815E4A9E8578EDE4E0ECE2
+    DEE9E0DBE8DCD7B5887BC2ADA7000000000000000000000000000000E6E3E1AF
+    8576DDCFCDE9DFDDEDE4E1EFE7E4E1D5D0785744A17C64B18C78BE9F8CC2AA9B
+    786258563F36543D34766057C4AEA2CFB5A6BFA08CAD897575513FD6C9C3F0E8
+    E5EDE5E2ECE2DEE3D5CEA46F5FDDD9D7000000000000000000000000C7B0A8C3
+    A59EE5DDDFEDE5E3F0EAE7F2ECEAB09B908A6450AB846FBC9C88C0A798573F35
+    4B322A4B322A4B332A4A332A543B33C2AEA1CBB19FBA99858E6A57A1897DF3ED
+    EBF2EBE9EFE8E5ECE3E0BE998DBAA097000000000000000000000000AD8779CA
+    BCBEE4DDDFEEE8E8F4EEECF6F1EF9276679A725DAF8D76C4A9977C655952392E
+    513A2F523A2F52392F523A2E51392F7D685BD4BEAEBFA28FA4826B836353F6F2
+    F0F5EFEDF2ECE9EAE3E0CFBEB99F7262000000000000000000000000678EBF9D
+    9EA8D8D3D5EDE7E8F5F1F0F8F4F38466569D745FAF8D75C5AB98634B3F594136
+    5941355A41355A41365941365A413660483DD4BEAEBFA28EAC8A74775443F8F5
+    F3F6F2F1F0EBEAE0DAD79B9BA130538F00000000000000000000000090ABCE63
+    7998B4B1B4E3DFE0F4F0EFF9F5F4866757A57E68B5947ECAB19F938270E8E3C8
+    EFEBD097867461493D61493C62493D695145D7C2B3C5A995B3927D74523FF9F6
+    F5F4F1EFE4E1E0B9B5B446597D6980AC00000000000000000000000000000068
+    8AB4677890BAB8B9E6E4E3F4F2F2977D6F9F7B65B4957EC8AF9BDDD5BCE8E4C9
+    EFEBD0ECE7CC6B5143685041684F418F796AD4BFAEC2A993A7887387695AF4F2
+    F1E4E2E2B9B7B6525F7B4B68990000000000000000000000000000000000006F
+    94C4738EAD66748BAEADADDAD9D9B3A49C8E6B58B4947CBFA48FE5DDC3E2DCC2
+    E9E4C9E9E4C97058486D5445755D4DCBB9A6CBB6A2BFA48E93735FA38E83D8D7
+    D7AAA9AA515D76677DA03F619C00000000000000000000000000000000000000
+    00006A99CF7991AE657083818790B2AEAD6F5444A38470B1957FCAB8A2E1D8C0
+    D4CBB39A88767A635395806FCABBA7CAB6A2BEA891AC927D6C4E3EA7A19E767B
+    85555D737288A44A74B100000000000000000000000000000000000000000000
+    000090AFD379A8D787A8C87077825D67785E5D645942367F6A5B927F6EA1917E
+    B0A08FB8A998B3A593B1A392A59683968574806E5E5943374E4C554C54676B6E
+    78829FC15D87BF5976A900000000000000000000000000000000000000000000
+    00000000007EA7D47EAFDD95C2E789A4BB6E737B59585F484D5B4547534A484C
+    544D4A5E544A5B5145524C494643493C3E4B3D3F4F504C546C6C718BA0B48EB5
+    DD5986BF3F63A200000000000000000000000000000000000000000000000000
+    000000000000000093B4DA7EB1DE92C4EAA1CFF09EC4DF859AA9737D85615F62
+    51484645353041302A4E42405F5B5C757A808A9AA6A6C3DB9DC4E677A3D24470
+    B04F6FA700000000000000000000000000000000000000000000000000000000
+    0000000000000000000000B9CCE376A4D588BBE597CAF09FD1F4A6D6F6ACD9F7
+    B1DDF8B7E0FABBE2FAB8E0F8B4DBF6A8D2F097C2E877A6D44E7CB92A549B849A
+    BE00000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000009FBBDB6F9BCE79A9D982B4E08CBFE8
+    94C8EE99CDF296CAF088BAE575A6D75E8DC44774B2325D9F728EBA0000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000000009AB6D87B9FCD
+    5C89C25885BF5380BB4F7BB8668BBF829FC8B0C1D90000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFF007FFFFC003FFFF0000FFFC00003FF800001FF000
+    000FE0000007C0000003C0000003C0000003C0000003C0000003E0000007E000
+    0007F000000FF000000FF800001FFC00003FFE00007FFF8001FFFFF007FFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   ShowHint = True
   OnClose = FormClose
   OnDestroy = FormDestroy
@@ -35,7 +166,7 @@ object fmFactTrack: TfmFactTrack
     Height = 436
     Align = alClient
     TabOrder = 0
-    Properties.ActivePage = cxTabSheet1
+    Properties.ActivePage = cxTabSheet5
     Properties.CustomButtons.Buttons = <>
     LookAndFeel.Kind = lfUltraFlat
     LookAndFeel.NativeStyle = False
@@ -47,9 +178,6 @@ object fmFactTrack: TfmFactTrack
     object cxTabSheet1: TcxTabSheet
       Caption = #1044#1080#1089#1083#1086#1082#1072#1094#1080#1103
       ImageIndex = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object cxGrid1: TcxGrid
         Left = 0
         Top = 74
@@ -1722,9 +1850,6 @@ object fmFactTrack: TfmFactTrack
     object cxTabSheet2: TcxTabSheet
       Caption = #1056#1077#1081#1089#1099' '#1074#1072#1075#1086#1085#1072
       ImageIndex = 1
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object cxGrid3: TcxGrid
         Left = 0
         Top = 0
@@ -2225,9 +2350,6 @@ object fmFactTrack: TfmFactTrack
     object cxTabSheet5: TcxTabSheet
       Caption = #1055#1088#1086#1089#1090#1086#1080' '#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093
       ImageIndex = 2
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object cxGrid12: TcxGrid
         Left = 0
         Top = 0
@@ -5799,7 +5921,7 @@ object fmFactTrack: TfmFactTrack
       OnClick = dxBarButton111Click
     end
     object dxBarButton112: TdxBarButton
-      Caption = '('#1048#1051#1043') '#1055#1088#1086#1089#1090#1086#1081' '#1085#1072' '#1089#1090'. '#1087#1086#1075#1088'./'#1074#1099#1075#1088'.'
+      Caption = #1055#1088#1086#1089#1090#1086#1081' '#1085#1072' '#1089#1090'. '#1087#1086#1075#1088'./'#1074#1099#1075#1088'.'
       Category = 0
       Hint = #1086#1089#1090#1072#1074#1096#1077#1077#1089#1103' '#1088#1072#1089#1089#1090#1086#1103#1085#1080#1077' = 0 '#1080' '#1087#1088#1086#1089#1090#1086#1081' '#1085#1072' '#1089#1090#1072#1085#1094#1080#1080' >= 3 '
       Visible = ivAlways
@@ -5808,7 +5930,7 @@ object fmFactTrack: TfmFactTrack
       OnClick = dxBarButton112Click
     end
     object dxBarButton113: TdxBarButton
-      Caption = '('#1048#1051#1043') '#1055#1088#1086#1089#1090#1086#1081' '#1074' '#1087#1091#1090#1080
+      Caption = #1055#1088#1086#1089#1090#1086#1081' '#1074' '#1087#1091#1090#1080
       Category = 0
       Hint = 
         #1086#1089#1090#1072#1074#1096#1077#1077#1089#1103' '#1088#1072#1089#1089#1090#1086#1103#1085#1080#1077' <> 0 '#1080' ('#1087#1088#1086#1089#1090#1086#1081' '#1085#1072' '#1089#1090#1072#1085#1094#1080#1080' >= 3 '#1080#1083#1080' '#1080#1084#1103' '#1086#1087 +
@@ -5931,17 +6053,17 @@ object fmFactTrack: TfmFactTrack
       OnClick = dxBarButton16Click
     end
     object dxBarButton31: TdxBarButton
-      Caption = #1054#1090#1095#1077#1090' '#1087#1086' '#1074#1072#1075#1086#1085#1072#1084' '#1040#1053#1055#1047' (316)'
+      Caption = #1054#1090#1095#1077#1090' '#1087#1086' '#1074#1072#1075#1086#1085#1072#1084' (316)'
       Category = 1
-      Hint = #1054#1090#1095#1077#1090' '#1087#1086' '#1074#1072#1075#1086#1085#1072#1084' '#1040#1053#1055#1047' (316)'
+      Hint = #1054#1090#1095#1077#1090' '#1087#1086' '#1074#1072#1075#1086#1085#1072#1084' (316)'
       Visible = ivAlways
       ImageIndex = 8
       OnClick = dxBarButton31Click
     end
     object dxBarButton33: TdxBarButton
-      Caption = #1054#1090#1095#1077#1090' '#1087#1086' '#1074#1072#1075#1086#1085#1072#1084' '#1052#1053#1055#1047' (329)'
+      Caption = #1054#1090#1095#1077#1090' '#1087#1086' '#1074#1072#1075#1086#1085#1072#1084' (329)'
       Category = 1
-      Hint = #1054#1090#1095#1077#1090' '#1087#1086' '#1074#1072#1075#1086#1085#1072#1084' '#1052#1053#1055#1047' (329)'
+      Hint = #1054#1090#1095#1077#1090' '#1087#1086' '#1074#1072#1075#1086#1085#1072#1084' (329)'
       Visible = ivAlways
       ImageIndex = 8
       OnClick = dxBarButton33Click
@@ -6274,8 +6396,8 @@ object fmFactTrack: TfmFactTrack
   end
   object DS_History: TDataSource
     DataSet = Query_History
-    Left = 72
-    Top = 480
+    Left = 66
+    Top = 570
   end
   object Query_FactTrack: TADOQuery
     Connection = fmMain.Lis
@@ -6411,22 +6533,12 @@ object fmFactTrack: TfmFactTrack
         Value = Null
       end
       item
-        Name = 'date_begin1'
+        Name = 'date_begin'
         Size = -1
         Value = Null
       end
       item
-        Name = 'date_end1'
-        Size = -1
-        Value = Null
-      end
-      item
-        Name = 'date_begin2'
-        Size = -1
-        Value = Null
-      end
-      item
-        Name = 'date_end2'
+        Name = 'date_end'
         Size = -1
         Value = Null
       end
@@ -6445,24 +6557,17 @@ object fmFactTrack: TfmFactTrack
         #9#9'LEFT JOIN instruction ON fact_track_trip.instruction_id = inst' +
         'ruction.instruction_id'
       'WHERE'#9'(num_vagon = :num_vagon)'
-      #9#9'AND '
       
-        #9#9'('#9'(FLOOR(convert(float, date_otpr)) BETWEEN :date_begin1 AND :' +
-        'date_end1)'
-      #9#9#9'or'
-      
-        #9#9#9'(FLOOR(convert(float, isnull(date_arrival,getdate()))) BETWEE' +
-        'N :date_begin2 AND :date_end2)'
-      #9#9')'
-      #9#9'AND (users_group_id =:users_group_id)'
-      'ORDER BY date_otpr DESC')
-    Left = 288
-    Top = 608
+        #9#9'AND (FLOOR(convert(float, date_otpr)) BETWEEN :date_begin AND ' +
+        ':date_end)'
+      #9#9'AND (users_group_id =:users_group_id)')
+    Left = 204
+    Top = 524
   end
   object DS_HistoryTrip: TDataSource
     DataSet = Query_HistoryTrip
-    Left = 288
-    Top = 544
+    Left = 207
+    Top = 556
   end
   object dxBarPopupMenu3: TdxBarPopupMenu
     Tag = 3
@@ -6487,8 +6592,8 @@ object fmFactTrack: TfmFactTrack
       end>
     UseOwnFont = False
     OnPopup = Popup_HistoryPopup
-    Left = 288
-    Top = 480
+    Left = 210
+    Top = 588
     PixelsPerInch = 96
   end
   object Query_History: TADOQuery
@@ -6517,284 +6622,68 @@ object fmFactTrack: TfmFactTrack
         Value = Null
       end
       item
-        Name = 'set_group'
-        Size = -1
-        Value = Null
+        Name = 'fact_track_trip_id'
+        DataType = ftInteger
+        Size = 16
+        Value = -9
       end>
     SQL.Strings = (
-      'DECLARE @date_begin       datetime'
-      'DECLARE @date_end         datetime'
-      'DECLARE @num_vagon        int'
-      'DECLARE @users_group_id   int'
-      'DECLARE @set_group int'
+      'DECLARE @date_begin       datetime,'
+      '                @date_end         datetime,'
+      '                @num_vagon        int,'
+      '                @users_group_id   int,'
+      '                @fact_track_trip_id int'
       ''
       'SET @date_begin     = CAST (:date_begin AS datetime)'
       'SET @date_end       = CAST (:date_end AS datetime)'
       'SET @num_vagon      = :num_vagon'
       'SET @users_group_id = :users_group_id'
-      'SET @set_group = :set_group'
+      'SET @fact_track_trip_id = :fact_track_trip_id'
       ''
-      
-        'SELECT '#9'v.num_vagon, v.note, v.vagon_id, v.comments, v.date_buil' +
-        'd, v.firm_customer_name, v.type_park_name, '
-      
-        '    v.type_park_cod, v.type_park_id, v.vagon_model_id, v.users_g' +
-        'roup_id ,'
-      '    v.comment as vagon_owner_comment, v.set_on_run,'
-      
-        '    vm.uchet_name, vm.copper_calibration, vm.capacity, vm.volume' +
-        ', vm.model_name, vm.rod_vagon_name'
-      'INTO'#9'#v_vagon_owner'
-      'FROM'#9'view_vagon_owner v'
-      
-        #9#9'LEFT OUTER JOIN vagon_model  vm  ON vm.vagon_model_id = v.vago' +
-        'n_model_id'
-      
-        'WHERE'#9'@date_end BETWEEN date_begin AND ISNULL(date_end, @date_en' +
-        'd + 1)'
-      #9#9'AND v.num_vagon = @num_vagon'
-      ''
-      'SELECT * INTO #temp_oper FROM'
-      
-        '      (SELECT'#9'row_number() over(partition by fact.num_vagon orde' +
-        'r by etran_oper_date desc) row_num,'
-      '          fact.num_vagon,'
-      '     '#9#9'  num_document_pref + num_document as num_document_etr,'
-      '      '#9'  claim_num as claim_num_etr,'
-      '      '#9'  node1.inf_obj_name node_begin_name_etr,'
-      '      '#9'  node2.inf_obj_name node_end_name_etr,'
-      '      '#9#9'etran_oper_date,'
-      '      '#9#9'etran_oper_result,'
-      '          payer_cod,'
-      #9#9#9'    u.users_group_id'
-      '      FROM fact'
-      #9#9#9'  LEFT JOIN users u ON u.users_id = fact.users_id'
-      
-        '     '#9#9'JOIN etran_link_xml on fact.fact_id = etran_link_xml.row_' +
-        'id'
-      
-        '      '#9'JOIN inf_obj_node node1 on fact.node_begin_id = node1.inf' +
-        '_obj_id'
-      
-        '      '#9'JOIN inf_obj_node node2 on fact.node_end_id = node2.inf_o' +
-        'bj_id'
-      '      WHERE'#9'fact.num_vagon = @num_vagon'
-      '        AND'#9'tip_zap = 0'
-      '        AND'#9'datpr is null'
-      '        AND etran_oper_result_id in (31,76,86,160,24,3,4,32)'
-      '      ) x1'
-      '      WHERE row_num = 1'
-      ''
-      ''
-      ''
-      
-        '/*'#1092#1086#1088#1084#1080#1088#1091#1077#1084' '#1090#1072#1073'. '#1089' '#1086#1089#1090#1072#1090#1086#1095#1085#1099#1084' '#1087#1088#1086#1073#1077#1075#1086#1084' '#1087#1086' '#1074#1072#1075#1086#1085#1091' '#1074' '#1080#1085#1090#1077#1088#1074#1072#1083#1077' '#1076#1072#1090 +
-        ' +1 '#1076#1077#1085#1100' '#1082' @date_end '#1076#1083#1103' '#1073#1086#1083#1077#1077' '#1087#1086#1083#1085#1086#1081' '#1074#1099#1073#1086#1088#1082#1080' '#1076#1072#1085#1085#1099#1093' '#1090#1082' file_loa' +
-        'd_date '#1093#1088#1072#1085#1080#1090#1089#1103' '#1089' '#1074#1088#1077#1084#1077#1085#1077#1084'*/'
-      'SELECT users_group_id, num_vagon, milage_rest, file_load_date'
-      'INTO #milage_rest'
-      'FROM fact_milage'
-      'WHERE users_group_id = @users_group_id'
-      '  AND num_vagon = @num_vagon'
-      
-        '  AND FLOOR(CONVERT(float, file_load_date)) BETWEEN @date_begin ' +
-        'AND @date_end'
       ''
       'SELECT'
-      '  f.*,'
-      '  comments           = NULL,'
-      '  note                    = NULL,'
-      '  node_registration_name  = NULL,'
-      '  arenda_firm_name        = NULL,'
-      '  datpr                   = NULL,'
-      '  round_day               = NULL,'
-      
-        '  v.firm_customer_name, v.type_park_name, v.uchet_name, v.copper' +
-        '_calibration, v.capacity, v.volume,v.type_park_cod, v.date_build' +
-        ','
-      
-        '  v.rod_vagon_name, v.vagon_owner_comment, v.set_on_run, v.model' +
-        '_name,'
-      '  case'#9'when vid_next_repair = 1 then '#39#1044#1077#1087#1086#1074#1089#1082#1086#1081' '#1088#1077#1084#1086#1085#1090#39
-      '        when vid_next_repair = 2 then '#39#1050#1072#1087#1080#1090#1072#1083#1100#1085#1099#1081' '#1088#1077#1084#1086#1085#1090#39
-      '        when vid_next_repair = 3 then '#39#1058#1077#1082#1091#1097#1080#1081' '#1088#1077#1084#1086#1085#1090#39
-      '  else null end as vid_next_repair_name,'
-      '  view_vagon_nsi.carTrustedOperatorOKPO as operator_rzd_okpo,'
-      '  view_vagon_nsi.carTrustedOperator as operator_rzd_name,'
-      '  view_vagon_nsi.zavod as factory_cod,'
-      '  view_vagon_nsi.zavod_name as factory_name,'
-      '  o.node_begin_name_etr,'
-      '  o.node_end_name_etr,'
-      '  o.num_document_etr,'
-      '  o.claim_num_etr,'
-      '  o.etran_oper_date,'
-      '  o.etran_oper_result,'
-      '  o.payer_cod,'
-      '  firm.firm_name, mr.milage_rest AS mr_milage_rest'
-      'INTO #res'
+      #9'f.*, '
+      '                comments           = NULL,'
+      #9'note                    = NULL,'
+      #9'model_name              = NULL,'
+      #9'vagon_id                = NULL,'
+      #9'next_date_repair        = NULL,'
+      #9'node_registration_name  = NULL,'
+      #9'arenda_firm_name        = NULL,'
+      #9'datpr                   = NULL,'
+      #9'round_day               = NULL,'
+      '  i.inf_obj_name as rod_vagon_name,'
+      '  firm.firm_name, ftt.date_arrival AS date_arrival1'
+      ''
       'FROM'#9'view_fact_track_vagon f'
-      '    LEFT JOIN firm ON f.vagon_owner_firm_id = firm.firm_id'
-      '    LEFT JOIN #v_vagon_owner v on f.vagon_id = v.vagon_id'
-      '    LEFT JOIN #temp_oper o on o.num_vagon = f.num_vagon'
+      '     LEFT JOIN firm ON f.vagon_owner_firm_id = firm.firm_id'
       
-        '    LEFT OUTER JOIN view_vagon_nsi on view_vagon_nsi.vagon_id = ' +
-        'f.vagon_id'
+        '     LEFT JOIN inf_obj i ON cast(f.rod_vagon as varchar) = i.inf' +
+        '_obj_cod AND i.type_inf_id = 20'
       
-        '    LEFT JOIN fact_track_trip ftt ON ftt.fact_track_trip_id = f.' +
-        'fact_track_trip_id'
+        '     LEFT JOIN vagon_comment       c6  WITH (NOLOCK) ON (c6.vago' +
+        'n_id = f.vagon_id) AND (c6.vagon_comment_type_id = 908732 ) AND ' +
+        '( @date_end BETWEEN c6.date_begin AND ISNULL(c6.date_end + 0.999' +
+        ', @date_end))'
       
-        '    LEFT JOIN #milage_rest mr ON mr.users_group_id = f.users_gro' +
-        'up_id AND mr.num_vagon = f.num_vagon AND FLOOR(CONVERT(float, f.' +
-        'date_operation)) = FLOOR(CONVERT(float, mr.file_load_date))'
+        '     LEFT JOIN view_vagon_comment6 vc6 ON c6.attached_global_id ' +
+        '= vc6.comment6_id'
+      
+        '     LEFT JOIN FACT_TRACK_TRIP ftt ON ftt.fact_track_trip_id = f' +
+        '.fact_track_trip_id'
       ''
       'WHERE (f.users_group_id = @users_group_id)'
       
         #9#9'AND (FLOOR(convert(float, f.date_query)) BETWEEN @date_begin A' +
         'ND @date_end)'
       #9#9'AND (f.num_vagon = @num_vagon)'
+      
+        'and (f.fact_track_trip_id = @fact_track_trip_id or @fact_track_t' +
+        'rip_id = -9)'
       'ORDER BY f.date_query desc'
-      ''
-      'DROP TABLE #milage_rest'
-      ''
-      ''
-      'IF @set_group = 0 BEGIN'
-      
-        'SELECT'#9'fact_track_id, fact_track_trip_id, vagon_id, num_vagon, t' +
-        'ype_park_name, date_otpr, date_arrival, fact_weight, node_end_na' +
-        'me, node_end_cod, kargoETSNG_name, kargoETSNG_cod, node_begin_na' +
-        'me, node_begin_cod, road_begin_name,'
-      
-        #9#9'road_end_name, index_train, num_train, date_operation, time_op' +
-        'eration, node_operation_name, node_operation_cod, FIO_users, glo' +
-        'bal_color, cod_operation_vagon_name, cod_operation_vagon_name_fu' +
-        'll,'
-      
-        #9#9'cod_operation_vagon_cod, cod_operation_cod, road_operation_nam' +
-        'e, firm_customer_name, arenda_firm_name, date_query, comments, c' +
-        'omment, comment1, comment2, comment3, comment4, comment5, commen' +
-        't6,'
-      
-        #9#9'client_firm_customer_name, comment7, comment8, comment9, comme' +
-        'nt10, comment11, comment12, comment13, comment14, next_date_repa' +
-        'ir, doc_number, node_end_road_name, node_begin_road_name, model_' +
-        'name,'
-      
-        #9#9'milage_passed, milage_rest, uchet_name, copper_calibration, se' +
-        't_archive, grpol_okpo, grpol_name, grotpr_okpo, grotpr_name, cap' +
-        'acity, node_begin_name_etr, node_end_name_etr, num_document_etr,' +
-        ' claim_num_etr, etran_oper_date,'
-      
-        #9#9'etran_oper_result, payer_cod, date_build, volume, type_park_co' +
-        'd, etran_ecp_id, etran_comment, rod_vagon_name, set_on_run, IsEm' +
-        'pty, vagon_owner_comment, last_depot_repair_date, last_capital_r' +
-        'epair_date, last_depot_repair_depo,'
-      
-        #9#9'last_capital_repair_depo, defect_cod, defect_name, set_control' +
-        '_repair, vid_next_repair, milage_passed_date, milage_rest_date, ' +
-        'days_route, days_route_end, days_free, distance_node_end, date_a' +
-        'rrival_plan, set_arrival,'
-      
-        #9#9'vagon_status, date_otpr_zd, transport_pay, brief_name, trackin' +
-        'g_type, gu12_cod, factory_cod, factory_name, vid_next_repair_nam' +
-        'e, operator_rzd_okpo, operator_rzd_name, OwnerOkpoName, ArendOkp' +
-        'oName, time_otpr, broken_name,'
-      #9#9'prev_kargoETSNG_cod, prev_kargoETSNG_name'
-      'FROM #res'
-      'END'
-      'ELSE'
-      'BEGIN'
-      
-        'SELECT'#9'max(fact_track_id) fact_track_id, fact_track_trip_id, vag' +
-        'on_id, num_vagon, type_park_name, date_otpr, date_arrival, fact_' +
-        'weight, node_end_name, node_end_cod, kargoETSNG_name, kargoETSNG' +
-        '_cod, node_begin_name, node_begin_cod, road_begin_name,'
-      
-        #9#9'road_end_name, index_train, num_train, date_operation, time_op' +
-        'eration, node_operation_name, node_operation_cod, FIO_users, glo' +
-        'bal_color, cod_operation_vagon_name, cod_operation_vagon_name_fu' +
-        'll,'
-      
-        #9#9'cod_operation_vagon_cod, cod_operation_cod, road_operation_nam' +
-        'e, firm_customer_name, arenda_firm_name, max(date_query) date_qu' +
-        'ery, comments, comment, comment1, comment2, comment3, comment4, ' +
-        'comment5, comment6,'
-      
-        #9#9'client_firm_customer_name, comment7, comment8, comment9, comme' +
-        'nt10, comment11, comment12, comment13, comment14, next_date_repa' +
-        'ir, doc_number, node_end_road_name, node_begin_road_name, model_' +
-        'name,'
-      
-        #9#9'milage_passed, milage_rest, uchet_name, copper_calibration, se' +
-        't_archive, grpol_okpo, grpol_name, grotpr_okpo, grotpr_name, cap' +
-        'acity, node_begin_name_etr, node_end_name_etr, num_document_etr,' +
-        ' claim_num_etr, etran_oper_date,'
-      
-        #9#9'etran_oper_result, payer_cod, date_build, volume, type_park_co' +
-        'd, etran_ecp_id, etran_comment, rod_vagon_name, set_on_run, IsEm' +
-        'pty, vagon_owner_comment, last_depot_repair_date, last_capital_r' +
-        'epair_date, last_depot_repair_depo,'
-      
-        #9#9'last_capital_repair_depo, defect_cod, defect_name, set_control' +
-        '_repair, vid_next_repair, milage_passed_date, milage_rest_date, ' +
-        'days_route, days_route_end, days_free, distance_node_end, date_a' +
-        'rrival_plan, set_arrival,'
-      
-        #9#9'vagon_status, date_otpr_zd, transport_pay, brief_name, trackin' +
-        'g_type, gu12_cod, factory_cod, factory_name, vid_next_repair_nam' +
-        'e, operator_rzd_okpo, operator_rzd_name, OwnerOkpoName, ArendOkp' +
-        'oName, time_otpr, broken_name,'
-      #9#9'prev_kargoETSNG_cod, prev_kargoETSNG_name'
-      'FROM #res'
-      'GROUP BY'
-      
-        'fact_track_trip_id, vagon_id, num_vagon, type_park_name, date_ot' +
-        'pr, date_arrival, fact_weight, node_end_name, node_end_cod, karg' +
-        'oETSNG_name, kargoETSNG_cod, node_begin_name, node_begin_cod, ro' +
-        'ad_begin_name,'
-      
-        #9#9'road_end_name, index_train, num_train, date_operation, time_op' +
-        'eration, node_operation_name, node_operation_cod, FIO_users, glo' +
-        'bal_color, cod_operation_vagon_name, cod_operation_vagon_name_fu' +
-        'll,'
-      
-        #9#9'cod_operation_vagon_cod, cod_operation_cod, road_operation_nam' +
-        'e, firm_customer_name, arenda_firm_name,  comments, comment, com' +
-        'ment1, comment2, comment3, comment4, comment5, comment6,'
-      
-        #9#9'client_firm_customer_name, comment7, comment8, comment9, comme' +
-        'nt10, comment11, comment12, comment13, comment14, next_date_repa' +
-        'ir, doc_number, node_end_road_name, node_begin_road_name, model_' +
-        'name,'
-      
-        #9#9'milage_passed, milage_rest, uchet_name, copper_calibration, se' +
-        't_archive, grpol_okpo, grpol_name, grotpr_okpo, grotpr_name, cap' +
-        'acity, node_begin_name_etr, node_end_name_etr, num_document_etr,' +
-        ' claim_num_etr, etran_oper_date,'
-      
-        #9#9'etran_oper_result, payer_cod, date_build, volume, type_park_co' +
-        'd, etran_ecp_id, etran_comment, rod_vagon_name, set_on_run, IsEm' +
-        'pty, vagon_owner_comment, last_depot_repair_date, last_capital_r' +
-        'epair_date, last_depot_repair_depo,'
-      
-        #9#9'last_capital_repair_depo, defect_cod, defect_name, set_control' +
-        '_repair, vid_next_repair, milage_passed_date, milage_rest_date, ' +
-        'days_route, days_route_end, days_free, distance_node_end, date_a' +
-        'rrival_plan, set_arrival,'
-      
-        #9#9'vagon_status, date_otpr_zd, transport_pay, brief_name, trackin' +
-        'g_type, gu12_cod, factory_cod, factory_name, vid_next_repair_nam' +
-        'e, operator_rzd_okpo, operator_rzd_name, OwnerOkpoName, ArendOkp' +
-        'oName, time_otpr, broken_name,'
-      #9#9'prev_kargoETSNG_cod, prev_kargoETSNG_name'
-      'END'
-      ''
-      ''
-      'DROP TABLE #res'
-      'DROP TABLE #v_vagon_owner'
-      'DROP TABLE #temp_oper '
       '')
-    Left = 40
-    Top = 480
+    Left = 52
+    Top = 543
   end
   object ClientDataSet1: TClientDataSet
     Aggregates = <>
@@ -6837,8 +6726,8 @@ object fmFactTrack: TfmFactTrack
         ItemName = 'dxBarSubItem13'
       end>
     UseOwnFont = False
-    Left = 104
-    Top = 480
+    Left = 65
+    Top = 603
     PixelsPerInch = 96
   end
   object SP_fact_track_stat_get: TADOStoredProc
@@ -7213,7 +7102,7 @@ object fmFactTrack: TfmFactTrack
       'DROP TABLE #res'
       'DROP TABLE #v_vagon_owner'
       'DROP TABLE #temp_oper ')
-    Left = 40
-    Top = 510
+    Left = 85
+    Top = 543
   end
 end
