@@ -713,11 +713,11 @@ begin
     WindowState := wsMaximized;
   end;
 
-//  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid1DBBandedTableView1, 3);
-//  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid2DBBandedTableView1);
-//  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid3DBBandedTableView1, 3);
-//  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGridDBBandedTableView1);
-//  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid12DBBandedTableView1);
+  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid1DBBandedTableView1, 3);
+  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid2DBBandedTableView1);
+  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid3DBBandedTableView1, 3);
+  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGridDBBandedTableView1);
+  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid12DBBandedTableView1);
 
   Fdate_history1 := IncMonth(Date, -1);
   Fdate_history2 := Date;
