@@ -168,6 +168,8 @@ var OpenDialog : TOpenDialog;
 
 
     Q : TADOQuery;
+
+    exWks, exApp : Variant;
 begin
   case AButtonIndex of
     0 : begin
@@ -181,18 +183,37 @@ begin
 //            cxLookupComboBox1.EditValue := null;
             cxDateEdit1.EditValue := null;
             Ffile_name := OpenDialog.FileName;
+
+            exApp := CreateOleObject('Excel.Application');
+            exApp.Workbooks.Open(Ffile_name);
+            exWks := exApp.ActiveWorkbook.WorkSheets[1];
+
+
+            s := exWks.Range['A2'].Value;
+            s := rightStr(s,5);
+            cxTimeEdit1.EditValue := EncodeTime(StrToInt(copy(s, 1, 2)), StrToInt(copy(s, 4, 2)), 0, 0);
+
+            s := exWks.Range['A2'].Value;
+            s := LeftStr(s,10);
+            cxDateEdit1.EditValue := EncodeDate(StrToInt(copy(s, 7, 4)), StrToInt(copy(s, 4, 2)), StrToInt(copy(s, 1, 2)));
+
+            exApp.Quit;
+            exWks := Null; exApp := Null;
+            VarClear(exWks); VarClear(exApp);
+
+
             cxButtonEdit6.EditValue := ExtractFileName(OpenDialog.FileName);
-
-            file_name := OpenDialog.FileName;
-            file_name := ExtractFileName(file_name);
-            file_name := LeftStr(file_name, Length(file_name)-5);
-
-            s := RightStr(file_name, 4);
-            cxTimeEdit1.EditValue := EncodeTime(StrToInt(copy(s, 1, 2)), StrToInt(copy(s, 3, 2)), 0, 0);
-
-            s := RightStr(file_name, 13);
-            s := LeftStr(s, 8);
-            cxDateEdit1.EditValue := EncodeDate(StrToInt(copy(s, 5, 4)), StrToInt(copy(s, 3, 2)), StrToInt(copy(s, 1, 2)));
+//
+//            file_name := OpenDialog.FileName;
+//            file_name := ExtractFileName(file_name);
+//            file_name := LeftStr(file_name, Length(file_name)-5);
+//
+//            s := RightStr(file_name, 4);
+//            cxTimeEdit1.EditValue := EncodeTime(StrToInt(copy(s, 1, 2)), StrToInt(copy(s, 3, 2)), 0, 0);
+//
+//            s := RightStr(file_name, 13);
+//            s := LeftStr(s, 8);
+//            cxDateEdit1.EditValue := EncodeDate(StrToInt(copy(s, 5, 4)), StrToInt(copy(s, 3, 2)), StrToInt(copy(s, 1, 2)));
 
             cxLookupComboBox1.EditValue := 1475965;
 
