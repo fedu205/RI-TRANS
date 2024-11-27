@@ -955,7 +955,7 @@ end;
 procedure TfmLoadMain.dxBarLargeButton2Click(Sender: TObject);
 begin
   FThreadFiles.Terminate;
-  FThreadMail.Terminate;
+//  FThreadMail.Terminate;
   dxBarLargeButton2.Enabled := False;
 end;
 

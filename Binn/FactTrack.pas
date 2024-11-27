@@ -513,6 +513,7 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1distance_node_begin: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1distance: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1days_free_detail: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1file_load_name: TcxGridDBBandedColumn;
 
     procedure N4Click(Sender: TObject);
     procedure N2Click(Sender: TObject);

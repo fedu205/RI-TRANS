@@ -4701,7 +4701,7 @@ begin
           sp_vagon_modify.Parameters.ParamByName('@node_registration_id' ).Value := null;
           sp_vagon_modify.Parameters.ParamByName('@set_sanctions'        ).Value := False;
 
-//          sp_vagon_modify.Parameters.ParamByName('@owner_contract_id'   ).Value := 11937127;
+          sp_vagon_modify.Parameters.ParamByName('@owner_contract_id'   ).Value := 12065304;
           sp_vagon_modify.Parameters.ParamByName('@owner_date_begin'    ).Value := EncodeDate(2024, 1, 1);
           sp_vagon_modify.Parameters.ParamByName('@type_park_id'        ).Value := 4824867;
 

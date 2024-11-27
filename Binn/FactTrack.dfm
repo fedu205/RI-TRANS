@@ -172,14 +172,12 @@ object fmFactTrack: TfmFactTrack
     LookAndFeel.NativeStyle = False
     LookAndFeel.ScrollbarMode = sbmClassic
     LookAndFeel.SkinName = ''
-    ExplicitHeight = 436
     ClientRectBottom = 416
     ClientRectRight = 1169
     ClientRectTop = 24
     object cxTabSheet1: TcxTabSheet
       Caption = #1044#1080#1089#1083#1086#1082#1072#1094#1080#1103
       ImageIndex = 0
-      ExplicitHeight = 412
       object cxGrid1: TcxGrid
         Left = 0
         Top = 74
@@ -200,7 +198,6 @@ object fmFactTrack: TfmFactTrack
         LookAndFeel.NativeStyle = False
         LookAndFeel.ScrollbarMode = sbmClassic
         LookAndFeel.SkinName = 'Office2007Black'
-        ExplicitHeight = 338
         object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = Popup_TrackVagon
           OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -1295,6 +1292,14 @@ object fmFactTrack: TfmFactTrack
             Position.ColIndex = 80
             Position.RowIndex = 0
           end
+          object cxGrid1DBBandedTableView1file_load_name: TcxGridDBBandedColumn
+            Caption = #1060#1072#1081#1083' '#1079#1072#1075#1088#1091#1079#1082#1080
+            DataBinding.FieldName = 'file_load_name'
+            DataBinding.IsNullValueType = True
+            Position.BandIndex = 0
+            Position.ColIndex = 81
+            Position.RowIndex = 0
+          end
         end
         object cxGrid1Level1: TcxGridLevel
           GridView = cxGrid1DBBandedTableView1
@@ -1853,6 +1858,8 @@ object fmFactTrack: TfmFactTrack
     object cxTabSheet2: TcxTabSheet
       Caption = #1056#1077#1081#1089#1099' '#1074#1072#1075#1086#1085#1072
       ImageIndex = 1
+      ExplicitTop = 0
+      ExplicitWidth = 0
       ExplicitHeight = 412
       object cxGrid3: TcxGrid
         Left = 0
@@ -2355,6 +2362,8 @@ object fmFactTrack: TfmFactTrack
     object cxTabSheet5: TcxTabSheet
       Caption = #1055#1088#1086#1089#1090#1086#1080' '#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093
       ImageIndex = 2
+      ExplicitTop = 0
+      ExplicitWidth = 0
       ExplicitHeight = 412
       object cxGrid12: TcxGrid
         Left = 0
@@ -2754,7 +2763,6 @@ object fmFactTrack: TfmFactTrack
     LookAndFeel.ScrollbarMode = sbmClassic
     LookAndFeel.SkinName = ''
     OnChange = cxPageControl2Change
-    ExplicitTop = 465
     ClientRectBottom = 283
     ClientRectRight = 1169
     ClientRectTop = 24
