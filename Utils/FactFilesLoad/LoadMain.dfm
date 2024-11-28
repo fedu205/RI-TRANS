@@ -2459,6 +2459,9 @@ object fmLoadMain: TfmLoadMain
     object cxTabSheet5: TcxTabSheet
       Caption = #1057#1087#1080#1089#1086#1082' '#1087#1086#1089#1083#1077#1076#1085#1080#1093' '#1086#1087#1077#1088#1072#1094#1080#1081
       ImageIndex = 4
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid4: TcxGrid
         Left = 0
         Top = 0

@@ -5,10 +5,10 @@ interface
 uses  RailTariff_TLB,
       TariffSupportFunctions,
       Default,
-      psAPI,
+      psAPI,     StrUtils,
       Soap.InvokeRegistry, Soap.Rio, Soap.SOAPHTTPClient,
       System.Types, Soap.XSBuiltIns, Soap.SOAPHTTPTrans,
-      Classes, Variants, ActiveX, StrUtils, DateUtils, SysUtils, Dialogs, DB,
+      Classes, Variants, ActiveX, DateUtils, SysUtils, Dialogs, DB,
       ADODB, Graphics, ComObj, Windows, DBClient, XMLDoc, XMLIntf, Math, WinInet,
       IdBaseComponent, IdComponent, Forms, Datasnap.Provider, IdFTPCommon,
       IdTCPConnection, IdTCPClient, IdExplicitTLSClientServerBase, IdFTP;
@@ -121,6 +121,9 @@ var      connect : TADOConnection;
        files_xml : string;
          AStream : TBytesStream;
             s,s1 : TStringStream;
+                     fd : TDateTime;
+            ss1, ss2 : string;
+     exWks, exApp : Variant;
 begin
   Q   := nil;
   Q2  := nil;
@@ -182,21 +185,36 @@ begin
       SP.Parameters.ParamByName('@files_name_xml' ).Value := files_xml;
       SP.Open;
       while not SP.Eof do begin
-        MonitorSetCaption2('Загрузка файла:' + SP.FieldByName('files_name').AsString);
 
-        if not CopyFileFtp(ftp_server, ftp_port, ftp_users, ftp_password, folder_name + '/', SP.FieldByName('files_name').AsString, 'c:\disl_temp\' + SP.FieldByName('files_name').AsString) then begin
-          Result := False;
-          Exit;
-        end;
 
         MonitorSetCaption2('Сохранение файла:' + SP.FieldByName('files_name').AsString);
+
+
+        exApp := CreateOleObject('Excel.Application');
+        exApp.Workbooks.Open(folder_name + '\' + SP.FieldByName('files_name').AsString);
+        exWks := exApp.ActiveWorkbook.WorkSheets[1];
+
+
+        ss1 := exWks.Range['A2'].Value;
+        ss1 := RightStr(ss1,5);
+
+        ss2 := exWks.Range['A2'].Value;
+        ss2 := LeftStr(ss2,10);
+        fd := EncodeDatetime (StrToInt(copy(ss2, 7, 4)), StrToInt(copy(ss2, 4, 2)), StrToInt(copy(ss2, 1, 2)), StrToInt(copy(ss1, 1, 2)), StrToInt(copy(ss1, 4, 2)), 0, 0);
+
+
+        exApp.Quit;
+        exWks := Null; exApp := Null;
+        VarClear(exWks); VarClear(exApp);
+
+
         SP2.Parameters.Refresh;
         SP2.Parameters.ParamByName('@files_track_id' ).Value := null;
         SP2.Parameters.ParamByName('@type_action'    ).Value := 0;
-        SP2.Parameters.ParamByName('@users_group_id' ).Value := users_group_id;//530438;
+        SP2.Parameters.ParamByName('@users_group_id' ).Value := users_group_id;
         SP2.Parameters.ParamByName('@files_priority' ).Value := 1;
         SP2.Parameters.ParamByName('@files_format_id').Value := Q.FieldByName('inf_obj_id').Value;
-        SP2.Parameters.ParamByName('@files_date'     ).Value := SP.FieldByName('files_date').AsDateTime;
+        SP2.Parameters.ParamByName('@files_date'     ).Value := fd;
         SP2.Parameters.ParamByName('@files_name'     ).Value := SP.FieldByName('files_name').AsString;
         SP2.Parameters.ParamByName('@set_ftp'        ).Value := 1;
         if set_load = False then begin
@@ -205,23 +223,11 @@ begin
         end;
 
         AStream := TBytesStream.Create;
-        AStream.LoadFromFile('c:\disl_temp\' + SP.FieldByName('files_name').AsString);
+        AStream.LoadFromFile(folder_name + '\' + SP.FieldByName('files_name').AsString);
         SP2.Parameters.ParamByName('@files_size').Value := AStream.Size;
-
-//        s := TStringStream.Create('');
-//        AStream.Seek(0,0);
-//        s.CopyFrom(AStream, AStream.Size);
-//        s1 := TStringStream.Create(VarToStr(LZHPack(s.DataString)));
-//        SP2.Parameters.ParamByName('@doc_image' ).LoadFromStream(s1,ftBlob);
         SP2.Parameters.ParamByName('@doc_image' ).Value := LZHPack(AStream.Bytes, AStream.Size);
-
-//        s.Free;
-//        s1.Free;
         AStream.Free;
         SP2.ExecProc;
-
-        MonitorSetCaption2('Удаление временного файла:' + SP.FieldByName('files_name').AsString);
-        DeleteFile(PChar('c:\disl_temp\' + SP.FieldByName('files_name').AsString));
 
         SP.Next;
       end;
@@ -4911,7 +4917,7 @@ begin
         SP_fact_track_modify.Parameters.ParamByName('@kargoETSNG_name'          ).Value := Client_Vagon.FieldByName('kargoETSNG_name').Value;
         SP_fact_track_modify.Parameters.ParamByName('@kargoGNG_cod'             ).Value := Client_Vagon.FieldByName('kargoGNG_cod').Value;
         SP_fact_track_modify.Parameters.ParamByName('@kargoGNG_name'            ).Value := Client_Vagon.FieldByName('kargoGNG_name').Value;
-        SP_fact_track_modify.Parameters.ParamByName('@fact_weight'              ).Value := Client_Vagon.FieldByName('fact_weight').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@fact_weight'              ).Value := Client_Vagon.FieldByName('fact_weight').Value/1000;
         SP_fact_track_modify.Parameters.ParamByName('@milage_load'              ).Value := Client_Vagon.FieldByName('milage_load').Value;
         SP_fact_track_modify.Parameters.ParamByName('@milage_empty'             ).Value := Client_Vagon.FieldByName('milage_empty').Value;
         SP_fact_track_modify.Parameters.ParamByName('@milage_sum'               ).Value := Client_Vagon.FieldByName('milage_sum').Value;
@@ -5712,8 +5718,8 @@ begin
       MonitorOperClear;
 
 //      // 1. Опрос FTP (поиск и сохранение файла) (Все ftp)
-//      SearchFilesFTP;
-//      if Terminated then Break;
+      SearchFilesFTP;
+      if Terminated then Break;
 //
 //      // 1.1 Передача списка вагонов (при необходимости)
 //      PutVagonListFTP;
@@ -5826,76 +5832,14 @@ end;
 
 
 function TThreadFiles.ListFileFtp(ftp_server: string; ftp_port: integer; ftp_users: string; ftp_password: string; Path: string; FileList: TStrings): boolean;
-var
-  hNet, hFTP, hFind : HINTERNET;
-               sRec : TWin32FindData;
-           bSuccess : Boolean;
-        rec_timeout : DWORD;
-          str_error : string;
+var fs : TSearchRec;
 begin
-  hNet  := nil;
-  hFTP  := nil;
-  hFind := nil;
-
-  try
-    // Открыть сессию
-    hNet := InternetOpen('SFH_Search', INTERNET_OPEN_TYPE_PRECONFIG, nil, nil, 0);
-    if hNet = nil then begin
-      Raise Exception.CreateFmt('(1) Неудалось подключиться к ftp:' + ftp_server, []);
-    end;
-
-    rec_timeout := 1000; // 1 sec
-    InternetSetOption(hNet, INTERNET_OPTION_CONNECT_TIMEOUT, @rec_timeout, sizeof(rec_timeout));
-    // Соединение с ftp срвером
-    hFTP := InternetConnect(hNet,
-                            PChar(ftp_server),
-                            ftp_port,
-                            PChar(ftp_users),
-                            PChar(ftp_password),
-                            INTERNET_SERVICE_FTP, INTERNET_FLAG_PASSIVE, 0);
-                            //INTERNET_SERVICE_FTP, 0, 0);
-    if hFTP = nil then begin
-      str_error := IntToStr(GetLastError) + ':' + SysErrorMessage(GetLastError);
-      InternetCloseHandle(hNet);
-      Raise Exception.CreateFmt('(2) Неудалось подключиться к ftp:' + ftp_server + ':' + str_error, []);
-    end;
-
-    rec_timeout := 30 * 1000; // 30 sec
-    InternetSetOption(hNet, INTERNET_OPTION_CONNECT_TIMEOUT, @rec_timeout, sizeof(rec_timeout));
-
-    // Изменить каталог
-    bSuccess := FtpSetCurrentDirectory(hFTP, PChar(Path));
-
-    if not bSuccess then begin
-      InternetCloseHandle(hFTP);
-      InternetCloseHandle(hNet);
-      Raise Exception.CreateFmt('(3) Неудалось подключиться к ftp:' + ftp_server + ' каталог:' + Path, []);
-    end;
-
-    // Поиск файлов
-    hFind := FtpFindFirstFile(hFTP, PWideChar('*.*'), sRec, 0, 0);
-    if  hFind <> nil then begin
-      repeat
-        if sRec.dwFileAttributes <> FILE_ATTRIBUTE_DIRECTORY then begin
-          FileList.Add(sRec.cFileName);
-        end;
-      until not InternetFindNextFile(hFind, @sRec);
-      InternetCloseHandle(hFind);
-    end;
-
-    if hFind <> nil then InternetCloseHandle(hFind);
-    if hFTP  <> nil then InternetCloseHandle(hFTP);
-    if hNet  <> nil then InternetCloseHandle(hNet);
-
-    Result := True;
-  except
-    on E: Exception do begin
-      SaveLogError('100', 'ListFileFtp', E.Message, 'Ошибка при поиске файлов на ftp:' + ftp_server);
-      if hFind <> nil then InternetCloseHandle(hFind);
-      if hFTP  <> nil then InternetCloseHandle(hFTP);
-      if hNet  <> nil then InternetCloseHandle(hNet);
-      Result := False;
-    end;
+  if FindFirst(Path + '\*.*', faAnyFile - faDirectory - faVolumeID, fs) = 0 then begin
+    repeat
+      FileList.Add(PChar(fs.Name));
+    until
+      FindNext(fs) <> 0;
+  Sysutils.FindClose(fs);
   end;
 end;
 

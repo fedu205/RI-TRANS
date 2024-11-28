@@ -1111,6 +1111,10 @@ begin
   ClientDS_ftp.CreateDataSet;
   ClientDS_ftp.LogChanges := False;
 
+  AddFTP('', 0, '' , ''  , 'RiTrans', 'F:\Dislocate', '00003', 'Дислокация (Excel)', 158706, 'РиТранс', True, False);
+//  AddFTP('', 0, '' , ''  , 'RiTrans', 'C:\test', '00003', 'Дислокация (Excel)', 158706, 'РиТранс', True, False);
+
+
 //   // УЛГ
 //  AddFTP('46.182.28.10', 20021, 'sf' , 'Driv22cos87A'  , 'Питер', 'reglament/out'         , '00002', 'Дислокация (XML)'       , 4633962 , 'Урал', True, False);
 //  AddFTP('46.182.28.10', 20021, 'sf' , 'Driv22cos87A'  , 'Питер', 'reglament/out/sng'     , '00002', 'Дислокация (XML)'       , 4633962 , 'Урал', True, False);
