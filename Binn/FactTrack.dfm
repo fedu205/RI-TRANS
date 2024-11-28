@@ -899,7 +899,7 @@ object fmFactTrack: TfmFactTrack
             Position.RowIndex = 0
           end
           object cxGrid1DBBandedTableView1grpol_okpo: TcxGridDBBandedColumn
-            Caption = #1054#1050#1055#1054' '#1043#1088#1091#1079#1086#1087#1086#1083#1091#1095#1072#1090#1077#1083#1103
+            Caption = #1054#1050#1055#1054' '#1043#1088#1091#1079#1086#1086#1090#1087#1088#1072#1074#1080#1090#1077#1083#1103
             DataBinding.FieldName = 'grpol_okpo'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
@@ -909,7 +909,7 @@ object fmFactTrack: TfmFactTrack
             Position.RowIndex = 0
           end
           object cxGrid1DBBandedTableView1grpol_name: TcxGridDBBandedColumn
-            Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1043#1088#1091#1079#1086#1087#1086#1083#1091#1095#1072#1090#1077#1083#1103
+            Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1043#1088#1091#1079#1086#1086#1090#1087#1088#1072#1074#1080#1090#1077#1083#1103
             DataBinding.FieldName = 'grpol_name'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
@@ -918,8 +918,18 @@ object fmFactTrack: TfmFactTrack
             Position.ColIndex = 47
             Position.RowIndex = 0
           end
+          object cxGrid1DBBandedTableView1grpol_tgnl: TcxGridDBBandedColumn
+            Caption = #1058#1043#1053#1051' '#1043#1088#1091#1079#1086#1086#1090#1087#1088#1072#1074#1080#1090#1077#1083#1103
+            DataBinding.FieldName = 'grpol_tgnl'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Width = 90
+            Position.BandIndex = 0
+            Position.ColIndex = 65
+            Position.RowIndex = 0
+          end
           object cxGrid1DBBandedTableView1grotpr_okpo: TcxGridDBBandedColumn
-            Caption = #1054#1050#1055#1054' '#1043#1088#1091#1079#1086#1086#1090#1087#1088#1072#1074#1080#1090#1077#1083#1103
+            Caption = #1054#1050#1055#1054' '#1043#1088#1091#1079#1086#1087#1086#1083#1091#1095#1072#1090#1077#1083#1103
             DataBinding.FieldName = 'grotpr_okpo'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
@@ -929,13 +939,23 @@ object fmFactTrack: TfmFactTrack
             Position.RowIndex = 0
           end
           object cxGrid1DBBandedTableView1grotpr_name: TcxGridDBBandedColumn
-            Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1043#1088#1091#1079#1086#1086#1090#1087#1088#1072#1074#1080#1090#1077#1083#1103
+            Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1043#1088#1091#1079#1086#1087#1086#1083#1091#1095#1072#1090#1077#1083#1103
             DataBinding.FieldName = 'grotpr_name'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
             Position.ColIndex = 45
+            Position.RowIndex = 0
+          end
+          object cxGrid1DBBandedTableView1grotpr_tgnl: TcxGridDBBandedColumn
+            Caption = #1058#1043#1053#1051' '#1043#1088#1091#1079#1086#1087#1086#1083#1091#1095#1072#1090#1077#1083#1103' '
+            DataBinding.FieldName = 'grotpr_tgnl'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Width = 90
+            Position.BandIndex = 0
+            Position.ColIndex = 66
             Position.RowIndex = 0
           end
           object cxGrid1DBBandedTableView1color: TcxGridDBBandedColumn
@@ -1132,26 +1152,6 @@ object fmFactTrack: TfmFactTrack
             Position.ColIndex = 64
             Position.RowIndex = 0
           end
-          object cxGrid1DBBandedTableView1grpol_tgnl: TcxGridDBBandedColumn
-            Caption = #1043#1088#1091#1079#1086#1086#1090#1087#1088#1072#1074#1080#1090#1077#1083#1100' ('#1058#1043#1053#1051')'
-            DataBinding.FieldName = 'grpol_tgnl'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
-            Width = 90
-            Position.BandIndex = 0
-            Position.ColIndex = 65
-            Position.RowIndex = 0
-          end
-          object cxGrid1DBBandedTableView1grotpr_tgnl: TcxGridDBBandedColumn
-            Caption = #1043#1088#1091#1079#1086#1087#1086#1083#1091#1095#1072#1090#1077#1083#1100' ('#1058#1043#1053#1051')'
-            DataBinding.FieldName = 'grotpr_tgnl'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
-            Width = 90
-            Position.BandIndex = 0
-            Position.ColIndex = 66
-            Position.RowIndex = 0
-          end
           object cxGrid1DBBandedTableView1kargoGNG_cod: TcxGridDBBandedColumn
             Caption = #1043#1053#1043' ('#1082#1086#1076')'
             DataBinding.FieldName = 'kargoGNG_cod'
@@ -1296,6 +1296,8 @@ object fmFactTrack: TfmFactTrack
             Caption = #1060#1072#1081#1083' '#1079#1072#1075#1088#1091#1079#1082#1080
             DataBinding.FieldName = 'file_load_name'
             DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 81
             Position.RowIndex = 0
