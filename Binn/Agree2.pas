@@ -4637,8 +4637,8 @@ begin
   Screen.Cursor := crHourglass;
   set_main := TControl(Sender).Tag;
   SP_FactClient.Close;
-  SP_FactClient.Parameters.ParamByName('set_main').Value := set_main;
-  SP_FactClient.Parameters.ParamByName('type_fact_sum').Value := set_FactSum;
+  SP_FactClient.Parameters.ParamByName('@set_main').Value := set_main;
+  SP_FactClient.Parameters.ParamByName('@type_fact_sum').Value := set_FactSum;
   SP_FactClient.Open;
   case set_main of
     0 : begin
