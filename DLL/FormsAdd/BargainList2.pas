@@ -18,7 +18,8 @@ uses
   dxSkinsDefaultPainters, dxSkinValentine, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxSkinscxPCPainter, cxNavigator, dxBarBuiltInMenu,
   dxSkinsdxBarPainter, dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
   dxSkinVisualStudio2013Light,  cxImageList, cxCheckBox, cxRadioGroup, cxButtonEdit, cxGridDBTableView, dxDateRanges, dxSkinOffice2019Colorful,
-  cxDataControllerConditionalFormattingRulesManagerDialog, dxSkinTheBezier, dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray;
+  cxDataControllerConditionalFormattingRulesManagerDialog, dxSkinTheBezier, dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray,
+  dxSkinWXI;
 
 
 type
@@ -490,6 +491,8 @@ type
     cxGrid3DBBandedTableView1firm_info_name: TcxGridDBBandedColumn;
     cxButton1: TcxButton;
     cxButton3: TcxButton;
+    Client_Contractbudget_name: TStringField;
+    cxGrid1DBBandedTableView1budget_name: TcxGridDBBandedColumn;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure cxGrid1DBBandedTableView1FocusedRecordChanged(Sender: TcxCustomGridTableView; APrevFocusedRecord, AFocusedRecord: TcxCustomGridRecord; ANewItemRecordFocusingChanged: Boolean);
     procedure cxGrid1DBBandedTableView1FilterOnChanged(Sender: TObject);
@@ -3745,6 +3748,7 @@ begin
     Client_Contract.Append;
     Client_Contract.FieldByName('global_id'              ).Value := Q.FieldByName('shaping_rate_id').Value;
     Client_Contract.FieldByName('bargain_id'             ).Value := Q.FieldByName('bargain_id').Value;
+    Client_Contract.FieldByName('budget_name'            ).Value := Q.FieldByName('budget_name').Value;
     Client_Contract.FieldByName('shaping_rate_id'        ).Value := Q.FieldByName('shaping_rate_id').Value;
     Client_Contract.FieldByName('contract_id'            ).Value := Q.FieldByName('contract_agent_id').Value;
     Client_Contract.FieldByName('contract_cod'           ).Value := Q.FieldByName('contract_agent_cod').Value;
