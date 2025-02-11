@@ -258,6 +258,8 @@ type
     cxLookAndFeelController1: TcxLookAndFeelController;
     dxSkinController1: TdxSkinController;
     dxBarButton53: TdxBarButton;
+    dxBarButton15: TdxBarButton;
+    dxBarButton26: TdxBarButton;
     procedure dxBarButton61Click(Sender: TObject);
     procedure dxBarButton58Click(Sender: TObject);
     procedure dxBarSubItem15Popup(Sender: TObject);

@@ -13,10 +13,8 @@ object fmFactIncDlg: TfmFactIncDlg
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poDesigned
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
@@ -986,13 +984,13 @@ object fmFactIncDlg: TfmFactIncDlg
       object Panel9: TPanel
         Left = 119
         Top = 2
-        Width = 97
+        Width = 98
         Height = 76
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 1
         DesignSize = (
-          97
+          98
           76)
         object cxRadioGroup5: TcxRadioGroup
           Left = 1
@@ -1020,13 +1018,13 @@ object fmFactIncDlg: TfmFactIncDlg
           StyleDisabled.LookAndFeel.SkinName = ''
           TabOrder = 0
           Height = 77
-          Width = 97
+          Width = 98
         end
       end
       object Panel10: TPanel
-        Left = 216
+        Left = 217
         Top = 2
-        Width = 98
+        Width = 97
         Height = 76
         Align = alClient
         BevelOuter = bvNone
@@ -1058,7 +1056,7 @@ object fmFactIncDlg: TfmFactIncDlg
           StyleDisabled.LookAndFeel.SkinName = ''
           TabOrder = 0
           Height = 76
-          Width = 94
+          Width = 93
         end
       end
     end
@@ -1304,14 +1302,8 @@ object fmFactIncDlg: TfmFactIncDlg
         Properties.DropDownRows = 20
         Properties.Items.Strings = (
           #1062#1060#1058#1054
-          #1054#1040#1054' "'#1055#1077#1088#1074#1072#1103' '#1075#1088#1091#1079#1086#1074#1072#1103' '#1082#1086#1084#1087#1072#1085#1080#1103'"'
-          #1055#1088#1077#1076#1086#1089#1090#1072#1074#1083#1077#1085#1080#1077' '#1074#1072#1075#1086#1085#1086#1074' '#1062#1060#1058#1054
-          #1054#1040#1054' "'#1060#1077#1076#1077#1088#1072#1083#1100#1085#1072#1103' '#1075#1088#1091#1079#1086#1074#1072#1103' '#1082#1086#1084#1087#1072#1085#1080#1103'"'
-          #1054#1054#1054' "'#1043#1072#1079#1087#1088#1086#1084#1090#1088#1072#1085#1089'"'
-          'CORBET TRANS GROUP LLP'
-          #1047#1040#1054' "'#1057#1086#1074#1092#1088#1072#1093#1090'-'#1055#1088#1080#1074#1086#1083#1078#1089#1082'"'
-          #1057#1082#1086#1087#1080#1088#1086#1074#1072#1085#1085#1099#1077' '#1087#1077#1088#1077#1095#1085#1080' '#1062#1060#1058#1054
-          #1040#1054' "'#1053#1077#1092#1090#1077#1058#1088#1072#1085#1089#1057#1077#1088#1074#1080#1089'"')
+          #1041#1040#1051#1058#1058#1056#1040#1053#1057#1057#1045#1056#1042#1048#1057
+          #1059#1088#1072#1083' '#1051#1086#1075#1080#1089#1090#1080#1082#1072)
         Properties.OnEditValueChanged = cxComboBox3PropertiesEditValueChanged
         Style.LookAndFeel.Kind = lfUltraFlat
         Style.LookAndFeel.NativeStyle = False

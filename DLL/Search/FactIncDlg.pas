@@ -17,7 +17,9 @@ uses
   dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringTime, dxSkinStardust,
   dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine, dxSkinVS2010, dxSkinWhiteprint,
   dxSkinXmas2008Blue, dxCore, cxDateUtils, cxClasses, dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light,
-  dxSkinTheBezier, Vcl.Menus, cxButtons, dxSkinOffice2019Colorful, cxMemo;
+  dxSkinTheBezier, Vcl.Menus, cxButtons, dxSkinOffice2019Colorful, cxMemo,
+  dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray,
+  dxSkinOffice2019White, dxSkinWXI;
 
 type
   TFactIncDlgResult = record
@@ -221,12 +223,20 @@ end;
 procedure TfmFactIncDlg.cxButton1Click(Sender: TObject);
 var FResultString, str_max_load_id  : string;
     monthStr : string;
+    type_self : integer;
 begin
 
   if not cxCheckBox2.Checked then begin
+
+    type_self := -1;
+    if cxComboBox3.ItemIndex = 0 then type_self :=  0;
+    if cxComboBox3.ItemIndex = 1 then type_self := 12;
+    if cxComboBox3.ItemIndex = 2 then type_self := 13;
+
+
     FResultString := FResultString + 'SELECT * FROM view_fact_inc_temp WITH (NOLOCK) WHERE (users_group_id = ' + IntToStr(Fusr_pwd.user_group_id) + ')';
-    if cxComboBox3.ItemIndex>-1 then FResultString := FResultString + ' AND (type_self='+IntToStr(cxComboBox3.ItemIndex)+')';
-    Query1.SQL.Text :='SELECT max(max_load_id) AS max_load_id FROM view_fact_inc_temp WHERE (users_group_id = ' + IntToStr(Fusr_pwd.user_group_id) + ') AND (type_self = ' + IntToStr(cxComboBox3.ItemIndex) + ') AND (LEFT(max_load_id,4) =  ' + cxComboBox5.Text + ')';
+    if type_self>-1 then FResultString := FResultString + ' AND (type_self='+IntToStr(type_self)+')';
+    Query1.SQL.Text :='SELECT max(max_load_id) AS max_load_id FROM view_fact_inc_temp WHERE (users_group_id = ' + IntToStr(Fusr_pwd.user_group_id) + ') AND (type_self = ' + IntToStr(type_self) + ') AND (LEFT(max_load_id,4) =  ' + cxComboBox5.Text + ')';
     Query1.Open;
     str_max_load_id := Query1.FieldByName('max_load_id').AsString;
 

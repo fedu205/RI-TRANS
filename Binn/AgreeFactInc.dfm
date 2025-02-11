@@ -967,6 +967,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
       object cxGrid1DBBandedTableView1fact_id: TcxGridDBBandedColumn
         Tag = 35241992
         DataBinding.FieldName = 'fact_id'
+        DataBinding.IsNullValueType = True
         Width = 60
         Position.BandIndex = -1
         Position.ColIndex = -1
@@ -976,6 +977,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 35242864
         Caption = #8470' '#1074#1072#1075'.'
         DataBinding.FieldName = 'num_vagon_F'
+        DataBinding.IsNullValueType = True
         Width = 63
         Position.BandIndex = 0
         Position.ColIndex = 0
@@ -985,6 +987,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 69722520
         Caption = #8470' '#1082#1086#1085#1090'.'
         DataBinding.FieldName = 'num_konten_F'
+        DataBinding.IsNullValueType = True
         Visible = False
         Width = 61
         Position.BandIndex = 0
@@ -995,6 +998,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 69723436
         Caption = #1055#1088#1077#1092'. '#1082#1086#1085#1090
         DataBinding.FieldName = 'num_konten_pref_F'
+        DataBinding.IsNullValueType = True
         Visible = False
         Width = 49
         Position.BandIndex = 0
@@ -1005,6 +1009,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 69724328
         Caption = #8470' '#1085#1072#1082#1083'.'
         DataBinding.FieldName = 'num_document_F'
+        DataBinding.IsNullValueType = True
         Width = 48
         Position.BandIndex = 0
         Position.ColIndex = 3
@@ -1014,6 +1019,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 69725240
         Caption = #1057#1077#1088'.'#1076#1086#1082'.'
         DataBinding.FieldName = 'num_document_ser_F'
+        DataBinding.IsNullValueType = True
         Visible = False
         Width = 60
         Position.BandIndex = 0
@@ -1024,6 +1030,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 5
         Caption = #1060'.'#1074#1077#1089
         DataBinding.FieldName = 'fact_weight_F'
+        DataBinding.IsNullValueType = True
         PropertiesClassName = 'TcxCurrencyEditProperties'
         Properties.DecimalPlaces = 3
         Properties.DisplayFormat = '#,##0.000'
@@ -1037,6 +1044,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 23196528
         Caption = #1056'.'#1074#1077#1089
         DataBinding.FieldName = 'calc_weight_F'
+        DataBinding.IsNullValueType = True
         PropertiesClassName = 'TcxCurrencyEditProperties'
         Properties.DecimalPlaces = 3
         Properties.DisplayFormat = '#,##0.000'
@@ -1049,6 +1057,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
       object cxGrid1DBBandedTableView1rate_val_F: TcxGridDBBandedColumn
         Caption = #1057#1090#1072#1074#1082#1072
         DataBinding.FieldName = 'rate_val_F'
+        DataBinding.IsNullValueType = True
         Width = 60
         Position.BandIndex = 0
         Position.ColIndex = 8
@@ -1058,6 +1067,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 1
         Caption = #1043'/'#1087
         DataBinding.FieldName = 'kargo_capacity_F'
+        DataBinding.IsNullValueType = True
         Width = 30
         Position.BandIndex = 0
         Position.ColIndex = 7
@@ -1066,6 +1076,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
       object cxGrid1DBBandedTableView1add_F: TcxGridDBBandedColumn
         Caption = #1044'/'#1089#1073'.'
         DataBinding.FieldName = 'add_F'
+        DataBinding.IsNullValueType = True
         PropertiesClassName = 'TcxCurrencyEditProperties'
         Properties.DisplayFormat = '#,##0.00'
         Properties.UseDisplayFormatWhenEditing = True
@@ -1077,6 +1088,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
       object cxGrid1DBBandedTableView1sum_F: TcxGridDBBandedColumn
         Caption = #1057#1091#1084#1084#1072
         DataBinding.FieldName = 'sum_F'
+        DataBinding.IsNullValueType = True
         PropertiesClassName = 'TcxCurrencyEditProperties'
         Properties.DisplayFormat = '#,##0.00'
         Properties.UseDisplayFormatWhenEditing = True
@@ -1089,6 +1101,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 111
         Caption = #1044#1072#1090#1072#1054#1090
         DataBinding.FieldName = 'date_otp_F'
+        DataBinding.IsNullValueType = True
         Width = 57
         Position.BandIndex = 0
         Position.ColIndex = 11
@@ -1097,6 +1110,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
       object cxGrid1DBBandedTableView1fact_inc_id: TcxGridDBBandedColumn
         Tag = 69851956
         DataBinding.FieldName = 'fact_inc_id'
+        DataBinding.IsNullValueType = True
         Visible = False
         Width = 60
         Position.BandIndex = 0
@@ -1107,6 +1121,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 111
         Caption = #8470' '#1074#1072#1075'.'
         DataBinding.FieldName = 'num_vagon_Z'
+        DataBinding.IsNullValueType = True
         Width = 71
         Position.BandIndex = 2
         Position.ColIndex = 2
@@ -1116,6 +1131,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 111
         Caption = #8470' '#1082#1086#1085#1090'.'
         DataBinding.FieldName = 'num_konten_Z'
+        DataBinding.IsNullValueType = True
         Visible = False
         Width = 61
         Position.BandIndex = 2
@@ -1126,6 +1142,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 111
         Caption = #1055#1088#1077#1092'.'#1082#1086#1085#1090
         DataBinding.FieldName = 'num_konten_pref_Z'
+        DataBinding.IsNullValueType = True
         Visible = False
         Width = 60
         Position.BandIndex = 2
@@ -1136,6 +1153,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 111
         Caption = #8470' '#1085#1072#1082#1083'.'
         DataBinding.FieldName = 'num_document_Z'
+        DataBinding.IsNullValueType = True
         Width = 57
         Position.BandIndex = 2
         Position.ColIndex = 3
@@ -1145,6 +1163,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 111
         Caption = #1057#1077#1088'.'#1076#1086#1082
         DataBinding.FieldName = 'num_document_ser_Z'
+        DataBinding.IsNullValueType = True
         Visible = False
         Width = 60
         Position.BandIndex = 2
@@ -1155,6 +1174,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 1
         Caption = #1060'.'#1074#1077#1089
         DataBinding.FieldName = 'fact_weight_Z'
+        DataBinding.IsNullValueType = True
         PropertiesClassName = 'TcxCurrencyEditProperties'
         Properties.DecimalPlaces = 3
         Properties.DisplayFormat = '#,##0.000'
@@ -1168,6 +1188,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 1
         Caption = #1056'.'#1074#1077#1089
         DataBinding.FieldName = 'calc_weight_Z'
+        DataBinding.IsNullValueType = True
         PropertiesClassName = 'TcxCurrencyEditProperties'
         Properties.DecimalPlaces = 3
         Properties.DisplayFormat = '#,##0.000'
@@ -1180,6 +1201,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
       object cxGrid1DBBandedTableView1rate_val_Z: TcxGridDBBandedColumn
         Caption = #1057#1090#1072#1074#1082#1072
         DataBinding.FieldName = 'rate_val_Z'
+        DataBinding.IsNullValueType = True
         Width = 60
         Position.BandIndex = 2
         Position.ColIndex = 8
@@ -1189,6 +1211,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 1
         Caption = #1043'/'#1087
         DataBinding.FieldName = 'kargo_capacity_Z'
+        DataBinding.IsNullValueType = True
         Width = 30
         Position.BandIndex = 2
         Position.ColIndex = 7
@@ -1197,6 +1220,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
       object cxGrid1DBBandedTableView1sum_Z: TcxGridDBBandedColumn
         Caption = #1057#1091#1084#1084#1072
         DataBinding.FieldName = 'sum_Z'
+        DataBinding.IsNullValueType = True
         PropertiesClassName = 'TcxCurrencyEditProperties'
         Properties.DisplayFormat = '#,##0.00'
         Properties.UseDisplayFormatWhenEditing = True
@@ -1209,6 +1233,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 69844216
         Caption = #1044#1072#1090#1072#1054#1090'.'
         DataBinding.FieldName = 'date_otp_Z'
+        DataBinding.IsNullValueType = True
         Width = 62
         Position.BandIndex = 2
         Position.ColIndex = 10
@@ -1218,6 +1243,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 69845560
         Caption = #1044#1072#1090#1072#1055#1088'.'
         DataBinding.FieldName = 'date_pr_Z'
+        DataBinding.IsNullValueType = True
         Width = 65
         Position.BandIndex = 2
         Position.ColIndex = 11
@@ -1227,6 +1253,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 69847232
         Caption = #1059#1095'.'#1085#1086#1084#1077#1088
         DataBinding.FieldName = 'id_uch_Z'
+        DataBinding.IsNullValueType = True
         Width = 70
         Position.BandIndex = 4
         Position.ColIndex = 1
@@ -1236,6 +1263,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 69856600
         Caption = #1055#1088#1077#1090#1077#1085#1079#1080#1103
         DataBinding.FieldName = 'free_fact'
+        DataBinding.IsNullValueType = True
         PropertiesClassName = 'TcxCheckBoxProperties'
         Properties.NullStyle = nssUnchecked
         Width = 48
@@ -1247,6 +1275,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Tag = 69851108
         Caption = #1058#1077#1082#1089#1090' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
         DataBinding.FieldName = 'free_fact_text'
+        DataBinding.IsNullValueType = True
         Width = 44
         Position.BandIndex = 4
         Position.ColIndex = 3
@@ -1255,6 +1284,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
       object cxGrid1DBBandedTableView1add_profit: TcxGridDBBandedColumn
         Caption = #1055#1088#1080#1073#1099#1083#1100
         DataBinding.FieldName = 'add_profit'
+        DataBinding.IsNullValueType = True
         PropertiesClassName = 'TcxCurrencyEditProperties'
         Properties.DisplayFormat = '#,##0.00'
         Properties.UseDisplayFormatWhenEditing = True
@@ -1265,24 +1295,28 @@ object fmAgreeFactInc: TfmAgreeFactInc
       end
       object cxGrid1DBBandedTableView1sto_name: TcxGridDBBandedColumn
         DataBinding.FieldName = 'sto_name'
+        DataBinding.IsNullValueType = True
         Position.BandIndex = -1
         Position.ColIndex = -1
         Position.RowIndex = -1
       end
       object cxGrid1DBBandedTableView1stn_name: TcxGridDBBandedColumn
         DataBinding.FieldName = 'stn_name'
+        DataBinding.IsNullValueType = True
         Position.BandIndex = -1
         Position.ColIndex = -1
         Position.RowIndex = -1
       end
       object cxGrid1DBBandedTableView1cnt_f: TcxGridDBBandedColumn
         DataBinding.FieldName = 'cnt_f'
+        DataBinding.IsNullValueType = True
         Position.BandIndex = -1
         Position.ColIndex = -1
         Position.RowIndex = -1
       end
       object cxGrid1DBBandedTableView1Column2: TcxGridDBBandedColumn
         DataBinding.FieldName = 'cnt_z'
+        DataBinding.IsNullValueType = True
         Position.BandIndex = -1
         Position.ColIndex = -1
         Position.RowIndex = -1
@@ -1290,6 +1324,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
       object cxGrid1DBBandedTableView1Column1: TcxGridDBBandedColumn
         Caption = #1057#1095#1077#1090#1072'_'#1092#1072#1082#1090#1091#1088#1099
         DataBinding.FieldName = 'zfto_score_num'
+        DataBinding.IsNullValueType = True
         Visible = False
         Width = 100
         Position.BandIndex = 2

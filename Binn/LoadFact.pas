@@ -28,7 +28,9 @@ uses
   dxSpreadSheetCoreStyles, dxSpreadSheetCoreStrs, dxSpreadSheetClasses, dxSpreadSheetContainers, dxSpreadSheetFormulas,
   dxSpreadSheetFunctions, dxSpreadSheetStyles, dxSpreadSheetGraphics, dxSpreadSheetPrinting, dxSpreadSheetTypes, dxDateRanges,
   dxSpreadSheetHyperlinks, dxSpreadSheetUtils, dxSpreadSheetFormattedTextUtils, dxScrollbarAnnotations, cxButtons, cxPC,
-  dxSpreadSheetConditionalFormatting, dxSpreadSheetConditionalFormattingRules;
+  dxSpreadSheetConditionalFormatting, dxSpreadSheetConditionalFormattingRules,
+  dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019Colorful,
+  dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI;
 
 
 type
@@ -1048,7 +1050,10 @@ var //exApp, exWkb, exWks     : OleVariant;
     v_float                 : Extended;
     v_date                  : TDateTime;
     file_name_dbf           : Variant;
+    s : string;
+    n : integer;
 
+    Q : TADOQuery;
     SP  : TADOStoredProc;
     Param : TParameter;
 begin
@@ -1057,6 +1062,10 @@ begin
     Screen.Cursor := crHourglass;
     ModalResult := mrNone;
     ShowTextMessage('Идет анализ...', False);
+
+    Q := TADOQuery.Create(nil);
+    Q.Connection := FConnection;
+
 
      // проверка на признак конца
     Query_SceneFact.Sort := 'set_of_end DESC';
@@ -1118,7 +1127,68 @@ begin
           if prepare_value[1] = '''' then value_col := RightStr(prepare_value, Length(prepare_value) - 1)
           else value_col := prepare_value;
 
-          if ((name_col = 'node_begin') or (name_col = 'node_end')) and (Length(value_col) > 5) then value_col := Copy(value_col, 1, 5);
+
+          //if ((name_col = 'node_begin') or (name_col = 'node_end')) and (Length(value_col) > 5) then value_col := Copy(value_col, 1, 5);
+
+          if ((name_col = 'node_begin') or (name_col = 'node_end')) then begin
+
+            if Length(value_col) > 8 then begin
+               s := value_col;
+               s := ReverseString(s);
+               s := LeftStr(s, 7);
+               s := ReverseString(s);
+               s := LeftStr(s, 6);
+               if TryStrToInt(s,n) then begin
+                  value_col := Copy(s, 1, 5);
+               end;
+            end;
+
+
+
+            if TryStrToInt(value_col,n)  then begin
+              if Length(value_col)>5 then value_col := Copy(value_col, 1, 5);
+            end else begin
+              Q.SQL.Clear;
+              Q.SQL.Add('select top 1 inf_obj_cod_5 from view_inf_obj_node where inf_obj_name = ''' + value_col + '''  order by 1 desc');
+              Q.Open;
+
+              if Q.RecordCount > 0 then begin
+                value_col := Q.FieldByName('inf_obj_cod_5').AsString;
+              end else
+                value_col := '';
+            end;
+
+          end;
+
+          if (name_col = 'kargoETSNG')  then begin
+
+            if Length(value_col) > 8 then begin
+               s := value_col;
+               s := ReverseString(s);
+               s := LeftStr(s, 7);
+               s := ReverseString(s);
+               s := LeftStr(s, 6);
+               if TryStrToInt(s,n) then begin
+                  value_col := Copy(s, 1, 5);
+               end;
+            end;
+
+            if TryStrToInt(value_col,n)  then begin
+              if Length(value_col)>5 then value_col := Copy(value_col, 1, 5);
+            end else begin
+              Q.SQL.Clear;
+              Q.SQL.Add('select top 1 inf_obj_cod from inf_obj_etsng where inf_obj_name = ''' + value_col + '''  order by 1 desc');
+              Q.Open;
+
+              if Q.RecordCount > 0 then begin
+                value_col := Q.FieldByName('inf_obj_cod').AsString;
+                value_col := Copy(value_col, 1, 5);
+              end else
+                value_col := '';
+            end;
+
+          end;
+
 
           case FSL.IndexOf(Query_SceneFact['fact_data_type']) of
             0,2,4 : begin // число
@@ -1161,6 +1231,7 @@ begin
       Sheet := nil;
       ShowTextMessage;
 
+      Q.Free;
       SP.Free;
       Screen.Cursor := crDefault;
     end;
