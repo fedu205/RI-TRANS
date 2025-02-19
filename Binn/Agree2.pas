@@ -10674,20 +10674,11 @@ end;
 procedure TfmAgree2.dxBarButton195Click(Sender: TObject);
 var
   retActSettings      : Variant;
-
   exApp, exWkb, exWks : Variant;
   SP_Balans_Detail    : TADOStoredProc;
   Query_tmp           : TADOQuery;
-//  recNo               : integer;
   str_bargain_id      : string;
-//  nds_rate            : Currency;
-
   str_expeditor       : array [1..2] of string;
-//  firm_property_cod   : string;
-//  PrintArea           : string;
-//  Query_Currency      : TADOQuery;
-//  ClientDS_distance   : TClientDataSet;
-
   cod_shablon         : integer;
 begin
   cod_shablon := TComponent(Sender).Tag;
@@ -10700,7 +10691,6 @@ begin
   Query_tmp.Connection := Fconnect;
   Query_tmp.SQL.Add('SELECT type_firm_self_name, type_firm_customer_name, firm_property_cod FROM view_contract WHERE contract_id = ' + SP_Agree.FieldByName('contract_id').AsString);
   Query_tmp.Open;
-//  firm_property_cod:= Query_tmp.FieldByName('firm_property_cod').AsString;
   str_expeditor[1] := Query_tmp.FieldByName('type_firm_self_name').AsString;
   str_expeditor[2] := Query_tmp.FieldByName('type_firm_customer_name').AsString;
   Query_tmp.Free;
@@ -10726,6 +10716,8 @@ begin
   exApp := CreateOleObject('Excel.Application');
   exWkb := exApp.Workbooks.Add(GetDocBlob(Fconnect, cod_shablon));
   exWkb := exApp.ActiveWorkbook;
+  exWks := exWkb.WorkSheets[1];
+//     exApp.Visible := True;
 
   // Данные отчета - перевозки
   ShowTextMessage('Подготовка данных ...', False);
@@ -10749,8 +10741,6 @@ begin
   // Расчет объема (у нас есть специальная процедура)
   Report_WorkVolume(retActSettings, exWkb, str_bargain_id, SP_Balans_Detail);
 
-  exWks := exWkb.WorkSheets[2];
-  exWks.Select;
   exWks.Range['A1'].Select;
 
   SP_Balans_Detail.Free;
@@ -10759,7 +10749,8 @@ begin
 
   Screen.Cursor := crDefault;
   ShowTextMessage('', True);
-//  exApp.Visible := True;
+
+  exApp.Visible := True;
   VarClear(exWks); VarClear(exWkb); VarClear(exApp);
 end;
 
@@ -26111,55 +26102,52 @@ begin
   Query_tmp.Free;
 
   ShowTextMessage('Формирование отчёта...', False);
-  exWks := exWkb.WorkSheets[2];
+  exWks := exWkb.WorkSheets[1];
   exWks.Select;
+
 
   // Перед заполнением спрячем не нужные колонки - если это необходимо
   if VarToStr(retActSettings[10]) <> '' then
     exWks.Range[VarToStr(retActSettings[10])].EntireColumn.Hidden := True;
 
   // Заполняем шапку и подписи
-  exWks.Range['B2'].Value := 'за период с ' + FormatDateTime('dd.mm.yyyy', retActSettings[3][1]) + 'г. по ' + FormatDateTime('dd.mm.yyyy', retActSettings[3][2]) + 'г.' + #10 +
-                             'по Договору № ' + SP_Agree.FieldByName('contract_cod').AsString + ' от ' + FormatDateTime('dd.mm.yyyy', SP_Agree.FieldByName('contract_date_begin').AsDateTime) + 'г.';
-  exWks.Range['O4'].Value := FormatDateTime('dd.mm.yyyy', retActSettings[3][0]) + 'г.';
 
-  exWks.Range['B20'].Value := 'Настоящий расчёт объёма оказанных услуг составлен в двух экземплярах (для каждой из Сторон) и является неотъемлемой частью ' +
-                              'договора № ' + SP_Agree.FieldByName('contract_cod').AsString + ' от ' + FormatDateTime('dd.mm.yyyy', SP_Agree.FieldByName('contract_date_begin').AsDateTime) + 'г.';
+  exWks.Range['B2'].Value := 'Исполнитель: ' + SP_Agree.FieldByName('firm_self_name_short').AsString;
+  exWks.Range['B3'].Value := 'Заказчик: ' + SP_Agree.FieldByName('firm_customer_name_short').AsString;
+  exWks.Range['B4'].Value := 'Период: c ' + VarToStr(retActSettings[3][1]) + ' по ' + VarToStr(retActSettings[3][2]);
 
-  exWks.Range['B6'].Value := VarToStr(retActSettings[12][1]) + ' - ' + str_expeditor[1];
-  exWks.Range['B7'].Value := SP_Agree.FieldByName('firm_customer_name_short').AsString + ' - ' + str_expeditor[2];
-  exWks.Range['B24'].Value := VarToStr(retActSettings[12][1]);
-  exWks.Range['K24'].Value := SP_Agree.FieldByName('firm_customer_name_short').AsString;
 
   // валюта
-  if (retActSettings[7][0] <> 3) then begin
-    exWks.Range['brief_name'].Value := VarToStr(retActSettings[7][1]);
-  end;
+//  if (retActSettings[7][0] <> 3) then begin
+//    exWks.Range['brief_name'].Value := VarToStr(retActSettings[7][1]);
+//  end;
 
   // Подписанты
-  if retActSettings[13][2] = True then begin
-    exWks.Range['B26'].Value := retActSettings[14][1];
-    exWks.Range['F26'].Value := retActSettings[13][1];
-  end else
-    exWks.Range['B26:H26'].ClearContents;
-  if retActSettings[13][5] = True then begin
-    exWks.Range['B28'].Value := retActSettings[14][4];
-    exWks.Range['F28'].Value := retActSettings[13][4];
-  end else
-    exWks.Range['B28:H28'].ClearContents;
-  if retActSettings[13][8] = True then begin
-    exWks.Range['K26'].Value := retActSettings[14][7];
-    exWks.Range['N26'].Value := retActSettings[13][7];
-  end else
-    exWks.Range['K26:O26'].ClearContents;
-  if retActSettings[13][11] = True then begin
-    exWks.Range['K28'].Value := retActSettings[14][10];
-    exWks.Range['N28'].Value := retActSettings[13][10];
-  end else
-    exWks.Range['K28:O28'].ClearContents;
+//  if retActSettings[13][2] = True then begin
+//    exWks.Range['B26'].Value := retActSettings[14][1];
+//    exWks.Range['F26'].Value := retActSettings[13][1];
+//  end else
+//    exWks.Range['B26:H26'].ClearContents;
+//
+//  if retActSettings[13][5] = True then begin
+//    exWks.Range['B28'].Value := retActSettings[14][4];
+//    exWks.Range['F28'].Value := retActSettings[13][4];
+//  end else
+//    exWks.Range['B28:H28'].ClearContents;
+//
+//  if retActSettings[13][8] = True then begin
+//    exWks.Range['K26'].Value := retActSettings[14][7];
+//    exWks.Range['N26'].Value := retActSettings[13][7];
+//  end else
+//    exWks.Range['K26:O26'].ClearContents;
+//  if retActSettings[13][11] = True then begin
+//    exWks.Range['K28'].Value := retActSettings[14][10];
+//    exWks.Range['N28'].Value := retActSettings[13][10];
+//  end else
+//    exWks.Range['K28:O28'].ClearContents;
 
   // Автоподбор по высоте
-  AutoFitMergeCell(exWks.Range['B20']);
+//  AutoFitMergeCell(exWks.Range['B20']);
 
   // Данные отчета - перевозки
   ShowTextMessage('Подготовка данных ...', False);
@@ -26207,7 +26195,7 @@ begin
 
   SP_Balans_Detail.First;
   recNo := 1;
-  recXls := 12;
+  recXls := 9;
   while not SP_Balans_Detail.Eof do begin
     // Копируем строку
     exWks.Rows[IntToStr(recXls + 1)].Insert;
@@ -26215,24 +26203,26 @@ begin
     exWks.Rows[IntToStr(recXls + 1)].PasteSpecial(1);
 
     exWks.Range['A' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('bargain_id').Value;
-    exWks.Range['B' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('date_period').Value;
-    exWks.Range['C' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('date_delivery').Value;
-    exWks.Range['D' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('bargain_node_begin_name').AsString;
-    exWks.Range['E' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('bargain_road_begin_name').AsString;
-    exWks.Range['F' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('bargain_node_end_name').AsString;
-    exWks.Range['G' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('bargain_road_end_name').AsString;
-    exWks.Range['H' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('bargain_kargoETSNG_name').AsString;
-    exWks.Range['J' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('date_from_to').Value;
-    exWks.Range['K' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('num_document').AsString;
-    exWks.Range['L' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('num_vagon').AsString;
+    exWks.Range['B' + IntToStr(recXls)].Value := SP_Balans_Detail.RecNo;
+    exWks.Range['C' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('date_from_to').Value;
+    exWks.Range['D' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('num_document').AsString;
+    exWks.Range['E' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('num_vagon').AsString;
+    exWks.Range['F' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('fact_node_begin_name').AsString;
+    exWks.Range['G' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('fact_node_end_name').AsString;
+    exWks.Range['H' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('fact_kargoETSNG_name').AsString;
+    if SP_Balans_Detail.FieldByName('calc_weight').IsNull then
+      exWks.Range['I' + IntToStr(recXls)].Value := null
+    else
+      exWks.Range['I' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('calc_weight').AsFloat;
+    exWks.Range['J' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('date_delivery').Value;
+    exWks.Range['K' + IntToStr(recXls)].Value := '';
+    exWks.Range['L' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('rate').Value;
+
+
 
     Query_NDS.Locate('nds_id', SP_Balans_Detail.FieldByName('bargain_nds_id').Value, []);
     exWks.Range['M' + IntToStr(recXls)].Value := Query_NDS.FieldByName('nds_name').AsString;
 
-    if SP_Balans_Detail.FieldByName('calc_weight').IsNull then
-      exWks.Range['N' + IntToStr(recXls)].Value := null
-    else
-      exWks.Range['N' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('calc_weight').AsFloat;
 
     // посчитаем корректировку (размазываем разницу по всем вагонам в перевозке)
     delta_sum := 0; delta_nds := 0; delta_notnds := 0;
@@ -26251,19 +26241,10 @@ begin
     end;
 
     if not TryStrToCurr(SP_Balans_Detail.FieldByName('bargain_nds_cod').AsString, nds_rate) then nds_rate := 0;
-    exWks.Range['O' + IntToStr(recXls)].Value := RoundCurr(SP_Balans_Detail.FieldByName('summa').Value * (100 / (100 + nds_rate)), -2) + delta_notnds;
-    exWks.Range['P' + IntToStr(recXls)].Value := RoundCurr(SP_Balans_Detail.FieldByName('summa').Value * (nds_rate / (100 + nds_rate)), -2) + delta_nds;
-    exWks.Range['Q' + IntToStr(recXls)].Value := RoundCurr(SP_Balans_Detail.FieldByName('summa').Value, -2) + delta_sum;
+    exWks.Range['M' + IntToStr(recXls)].Value := RoundCurr(SP_Balans_Detail.FieldByName('summa').Value * (100 / (100 + nds_rate)), -2) + delta_notnds;
+    exWks.Range['N' + IntToStr(recXls)].Value := RoundCurr(SP_Balans_Detail.FieldByName('summa').Value * (nds_rate / (100 + nds_rate)), -2) + delta_nds;
+    exWks.Range['O' + IntToStr(recXls)].Value := RoundCurr(SP_Balans_Detail.FieldByName('summa').Value, -2) + delta_sum;
 
-    if not ClientDS_distance.Locate('node_begin;node_end', VarArrayOf([SP_Balans_Detail.FieldByName('bargain_node_begin_cod').AsString, SP_Balans_Detail.FieldByName('bargain_node_end_cod').AsString]), []) then begin
-      ClientDS_distance.Append;
-      ClientDS_distance.FieldByName('node_begin').AsString := SP_Balans_Detail.FieldByName('bargain_node_begin_cod').AsString;
-      ClientDS_distance.FieldByName('node_end').AsString   := SP_Balans_Detail.FieldByName('bargain_node_end_cod').AsString;
-      ClientDS_distance.FieldByName('distance').Value      := null;
-      ClientDS_distance.FieldByName('distance').Value      := GetCalcDistanceDB(ClientDS_distance.FieldByName('node_begin').AsString, ClientDS_distance.FieldByName('node_end').AsString, Fconnect, retActSettings[6][11], SP_Balans_Detail.FieldByName('date_from_to').Value);
-      ClientDS_distance.Post;
-    end;
-    exWks.Range['I' + IntToStr(recXls)].Value := ClientDS_distance.FieldByName('distance').Value;
 
     inc(recNo);
     inc(recXls);
