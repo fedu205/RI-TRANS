@@ -3,10 +3,10 @@ object fmFactCard: TfmFactCard
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize, biMaximize, biHelp]
   Caption = #1050#1072#1088#1090#1086#1095#1082#1072' '#1092#1072#1082#1090#1072
-  ClientHeight = 603
+  ClientHeight = 598
   ClientWidth = 449
   Color = clBtnFace
-  Constraints.MinHeight = 630
+  Constraints.MinHeight = 637
   Constraints.MinWidth = 465
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -148,13 +148,14 @@ object fmFactCard: TfmFactCard
   TextHeight = 13
   object Panel2: TPanel
     Left = 0
-    Top = 566
+    Top = 561
     Width = 449
     Height = 37
     Align = alBottom
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 0
+    ExplicitTop = 566
     DesignSize = (
       449
       37)
@@ -330,21 +331,23 @@ object fmFactCard: TfmFactCard
     Left = 0
     Top = 0
     Width = 449
-    Height = 566
+    Height = 561
     Align = alClient
     TabOrder = 1
-    Properties.ActivePage = cxTabSheet2
+    Properties.ActivePage = cxTabSheet1
     Properties.CustomButtons.Buttons = <>
     LookAndFeel.Kind = lfUltraFlat
     LookAndFeel.NativeStyle = False
     LookAndFeel.ScrollbarMode = sbmClassic
     LookAndFeel.SkinName = ''
-    ClientRectBottom = 566
+    ExplicitHeight = 566
+    ClientRectBottom = 561
     ClientRectRight = 449
     ClientRectTop = 24
     object cxTabSheet1: TcxTabSheet
       Caption = #1054#1073#1097#1080#1077
       ImageIndex = 0
+      ExplicitHeight = 542
       object Panel1: TPanel
         Left = 0
         Top = 0
@@ -3339,11 +3342,12 @@ object fmFactCard: TfmFactCard
         Left = 0
         Top = 487
         Width = 449
-        Height = 55
+        Height = 50
         Align = alClient
         BevelInner = bvRaised
         BevelOuter = bvLowered
         TabOrder = 3
+        ExplicitHeight = 55
         object Panel7: TPanel
           Left = 7
           Top = 6
@@ -3533,6 +3537,7 @@ object fmFactCard: TfmFactCard
     object cxTabSheet2: TcxTabSheet
       Caption = #1055#1088#1086#1095#1077#1077
       ImageIndex = 1
+      ExplicitHeight = 542
       object Panel3: TPanel
         Left = 0
         Top = 106
@@ -3686,14 +3691,14 @@ object fmFactCard: TfmFactCard
         Left = 0
         Top = 185
         Width = 449
-        Height = 106
+        Height = 107
         Align = alTop
         BevelInner = bvRaised
         BevelOuter = bvLowered
         TabOrder = 1
         DesignSize = (
           449
-          106)
+          107)
         object Label27: TLabel
           Left = 9
           Top = 60
@@ -3925,13 +3930,14 @@ object fmFactCard: TfmFactCard
       end
       object Panel8: TPanel
         Left = 0
-        Top = 291
+        Top = 292
         Width = 449
         Height = 64
         Align = alTop
         BevelInner = bvRaised
         BevelOuter = bvLowered
         TabOrder = 2
+        ExplicitTop = 291
         DesignSize = (
           449
           64)
@@ -4238,16 +4244,18 @@ object fmFactCard: TfmFactCard
       end
       object Panel15: TPanel
         Left = 0
-        Top = 355
+        Top = 356
         Width = 449
-        Height = 187
+        Height = 181
         Align = alClient
         BevelInner = bvRaised
         BevelOuter = bvLowered
         TabOrder = 4
+        ExplicitTop = 355
+        ExplicitHeight = 187
         DesignSize = (
           449
-          187)
+          181)
         object Label33: TLabel
           Left = 9
           Top = 10
@@ -4280,7 +4288,8 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
-          Height = 175
+          ExplicitHeight = 175
+          Height = 169
           Width = 313
         end
         object cxCheckBox20: TcxCheckBox

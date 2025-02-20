@@ -495,6 +495,7 @@ begin
                 SP_FactModify.Parameters.ParamByName('@set_main').Value := Ord(cxCheckBox1.Checked);
                 if (SP_FactModify.Parameters.ParamByName('@attr_self').Value = NULL) then SP_FactModify.Parameters.ParamByName('@attr_self').Value := 0;
                 SP_FactModify.Parameters.ParamByName('@set_double_vagon').Value := Ord(cxCheckBox2.Checked);
+                SP_FactModify.Parameters.ParamByName('@set_update_vagon').Value := Ord(cxCheckBox3.Checked);
 
                 try
                   SP_FactModify.ExecProc;
