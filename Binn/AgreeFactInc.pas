@@ -323,39 +323,47 @@ begin
   RUB_to_USD.Down  := Q.FieldByName('set_RUB_to_USD').AsBoolean;
   USD_to_RUB.Down  := Q.FieldByName('set_USD_to_RUB').AsBoolean;
 
+  Q.Close;
+  Q.SQL.Clear;
+  Q.SQL.Add('select firm_agent_name, firm_agent_name_short from view_shaping_rate where shaping_rate_id = ' + Fstr_shaping_rate_id);
+  Q.Open;
+
+  FLabel1 := Q.FieldByName('firm_agent_name').AsString;
+  Flabel2 := Q.FieldByName('firm_agent_name').AsString;
+
   Q.Free;
 
-  // Заголовки
-  case Ftype_self of
-  0,2,7:begin
-        FLabel1 := 'ЦФТО';
-        Flabel2 := 'Ц Ф Т О';
-        end;
-    1 : begin
-        FLabel1 := 'ПГК';
-        Flabel2 := 'П Г К';
-        end;
-    3 : begin
-        FLabel1 := 'ФГК';
-        Flabel2 := 'Ф Г К';
-        end;
-    4 : begin
-        FLabel1 := 'ГПТ';
-        Flabel2 := 'Г П Т';
-        end;
-    5 : begin
-        FLabel1 := '____________';
-        Flabel2 := '____________';
-        end;
-    6 : begin
-        FLabel1 := '______________';
-        Flabel2 := '______________';
-        end;
-    8 : begin
-        FLabel1 := 'НефтеТрансСервис';
-        Flabel2 := 'НефтеТрансСервис';
-        end;
-  end;
+//  // Заголовки
+//  case Ftype_self of
+//  0,2,7:begin
+//        FLabel1 := 'ЦФТО';
+//        Flabel2 := 'Ц Ф Т О';
+//        end;
+//    1 : begin
+//        FLabel1 := 'ПГК';
+//        Flabel2 := 'П Г К';
+//        end;
+//    3 : begin
+//        FLabel1 := 'ФГК';
+//        Flabel2 := 'Ф Г К';
+//        end;
+//    4 : begin
+//        FLabel1 := 'ГПТ';
+//        Flabel2 := 'Г П Т';
+//        end;
+//    5 : begin
+//        FLabel1 := '____________';
+//        Flabel2 := '____________';
+//        end;
+//    6 : begin
+//        FLabel1 := '______________';
+//        Flabel2 := '______________';
+//        end;
+//    8 : begin
+//        FLabel1 := 'НефтеТрансСервис';
+//        Flabel2 := 'НефтеТрансСервис';
+//        end;
+//  end;
 
   self.Caption := 'Сверка с ' + FLabel1;
   N1.Caption := 'Добавить факт ' + FLabel1 + '...';

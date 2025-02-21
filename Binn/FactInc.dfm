@@ -58,7 +58,6 @@ object fmFactInc: TfmFactInc
     Align = alClient
     Caption = 'Panel2'
     TabOrder = 0
-    ExplicitHeight = 474
     object cxGrid1: TcxGrid
       Left = 1
       Top = 23
@@ -69,7 +68,6 @@ object fmFactInc: TfmFactInc
       LookAndFeel.Kind = lfUltraFlat
       LookAndFeel.NativeStyle = False
       LookAndFeel.ScrollbarMode = sbmClassic
-      ExplicitHeight = 450
       object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
         PopupMenu = PopupMenu1
         OnDblClick = N1Click
@@ -440,6 +438,8 @@ object fmFactInc: TfmFactInc
           Caption = #1060'.'#1074#1077#1089
           DataBinding.FieldName = 'vg'
           DataBinding.IsNullValueType = True
+          PropertiesClassName = 'TcxCurrencyEditProperties'
+          Properties.DisplayFormat = '##0.000'
           HeaderAlignmentVert = vaTop
           Width = 53
           Position.BandIndex = 0
@@ -1258,7 +1258,6 @@ object fmFactInc: TfmFactInc
       LookAndFeel.Kind = lfUltraFlat
       LookAndFeel.NativeStyle = False
       LookAndFeel.ScrollbarMode = sbmClassic
-      ExplicitHeight = 120
       object cxGrid2DBBandedTableView1: TcxGridDBBandedTableView
         Navigator.Buttons.CustomButtons = <>
         ScrollbarAnnotations.CustomAnnotations = <>
