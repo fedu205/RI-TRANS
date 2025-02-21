@@ -1,36 +1,32 @@
-unit FactIncDlg;
+п»їunit FactIncDlg;
 
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, ComCtrls, Db, ADODB, DBCtrls, Variants, Default,
-  cxControls, cxContainer, cxEdit, cxCheckBox, cxPropertiesStore, cxGroupBox, cxRadioGroup,
-  cxGraphics, cxTextEdit, cxMaskEdit, cxDropDownEdit, cxLabel, cxCalendar, cxLookupEdit,
-  cxDBLookupEdit, cxDBLookupComboBox, cxDBExtLookupComboBox,
-  cxLookAndFeelPainters, cxLookAndFeels, dxSkinsCore, dxSkinBlack, dxSkinBlue, dxSkinBlueprint, dxSkinCaramel,
-  dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide, dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
-  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian, dxSkinLiquidSky, dxSkinLondonLiquidSky,
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, Default,
+  StdCtrls, Buttons, ExtCtrls, ComCtrls, Db, ADODB, DBCtrls, Variants,
+  cxControls, cxContainer, cxEdit, cxCheckBox, cxPropertiesStore, cxGroupBox, cxRadioGroup, cxGraphics, cxTextEdit, cxMaskEdit, cxDropDownEdit,
+  cxLabel, cxCalendar, cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, cxDBExtLookupComboBox, cxLookAndFeelPainters, cxLookAndFeels, dxSkinsCore,
+  dxSkinBlack, dxSkinBlue, dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide, dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle,
+  dxSkinFoggy, dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian, dxSkinLiquidSky, dxSkinLondonLiquidSky,
   dxSkinMcSkin, dxSkinMetropolis, dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black, dxSkinOffice2007Blue,
   dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
   dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White, dxSkinPumpkin,
   dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringTime, dxSkinStardust,
   dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine, dxSkinVS2010, dxSkinWhiteprint,
   dxSkinXmas2008Blue, dxCore, cxDateUtils, cxClasses, dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light,
-  dxSkinTheBezier, Vcl.Menus, cxButtons, dxSkinOffice2019Colorful, cxMemo,
-  dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray,
-  dxSkinOffice2019White, dxSkinWXI;
+  dxSkinTheBezier, Vcl.Menus, cxButtons, dxSkinOffice2019Colorful, cxMemo;
 
 type
   TFactIncDlgResult = record
-    ModalResult   : integer;     {v[0]  ModalResult : TModalResult - Используется для определения нажата ли  кнопка mbOk или нет}
-    TypeResult    : byte;        {v[1]  TypeResult: byte - Используется для определения опции "Тип дополнения" в случае, если отмечен "Отчетный период"}
-    SQLText       : string;      {v[2]  SQLText : PChar -  Если не отмечен "Отчетный период" в поле SQLText : PChar записывается SQL запрос для Query_FactIncDBF в форме fmFactInc}
-    ProcedureName : string;      {v[3]  используется для записи имени процедуры }
-    ProcParam1    : integer;     {v[4]  Параметр процедур. номера месяца (cxComboBox1) }
-    ProcParam2    : integer;     {v[5]  Параметр процедур. Используется для обозначения номера года (cxComboBox2) }
-    ProcParam3    : integer;     {v[6]  Параметр процедур. При выборе типа дополнения "Начисленные платежи"  используется для хранения значения "Экспедитор ЦФТО".  В остальных случаях типа дополнения ("Штрафы", "Охрана", "ТД")    используется для хранения типа расчета (cxRadioGroup1)}
-    ProcParam4    : integer;     {v[7]  ProcParam4: integer - Параметр процедур. Используется для типа  передачи расчета (cxRadioGroup1) для типа дополнения "Начисленные платежи" }
+    ModalResult   : integer;     {v[0]  ModalResult : TModalResult - РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РЅР°Р¶Р°С‚Р° Р»Рё  РєРЅРѕРїРєР° mbOk РёР»Рё РЅРµС‚}
+    TypeResult    : byte;        {v[1]  TypeResult: byte - РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РѕРїС†РёРё "РўРёРї РґРѕРїРѕР»РЅРµРЅРёСЏ" РІ СЃР»СѓС‡Р°Рµ, РµСЃР»Рё РѕС‚РјРµС‡РµРЅ "РћС‚С‡РµС‚РЅС‹Р№ РїРµСЂРёРѕРґ"}
+    SQLText       : string;      {v[2]  SQLText : PChar -  Р•СЃР»Рё РЅРµ РѕС‚РјРµС‡РµРЅ "РћС‚С‡РµС‚РЅС‹Р№ РїРµСЂРёРѕРґ" РІ РїРѕР»Рµ SQLText : PChar Р·Р°РїРёСЃС‹РІР°РµС‚СЃСЏ SQL Р·Р°РїСЂРѕСЃ РґР»СЏ Query_FactIncDBF РІ С„РѕСЂРјРµ fmFactInc}
+    ProcedureName : string;      {v[3]  РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ Р·Р°РїРёСЃРё РёРјРµРЅРё РїСЂРѕС†РµРґСѓСЂС‹ }
+    ProcParam1    : integer;     {v[4]  РџР°СЂР°РјРµС‚СЂ РїСЂРѕС†РµРґСѓСЂ. РЅРѕРјРµСЂР° РјРµСЃСЏС†Р° (cxComboBox1) }
+    ProcParam2    : integer;     {v[5]  РџР°СЂР°РјРµС‚СЂ РїСЂРѕС†РµРґСѓСЂ. РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РѕР±РѕР·РЅР°С‡РµРЅРёСЏ РЅРѕРјРµСЂР° РіРѕРґР° (cxComboBox2) }
+    ProcParam3    : integer;     {v[6]  РџР°СЂР°РјРµС‚СЂ РїСЂРѕС†РµРґСѓСЂ. РџСЂРё РІС‹Р±РѕСЂРµ С‚РёРїР° РґРѕРїРѕР»РЅРµРЅРёСЏ "РќР°С‡РёСЃР»РµРЅРЅС‹Рµ РїР»Р°С‚РµР¶Рё"  РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ Р·РЅР°С‡РµРЅРёСЏ "Р­РєСЃРїРµРґРёС‚РѕСЂ Р¦Р¤РўРћ".  Р’ РѕСЃС‚Р°Р»СЊРЅС‹С… СЃР»СѓС‡Р°СЏС… С‚РёРїР° РґРѕРїРѕР»РЅРµРЅРёСЏ ("РЁС‚СЂР°С„С‹", "РћС…СЂР°РЅР°", "РўР”")    РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ С‚РёРїР° СЂР°СЃС‡РµС‚Р° (cxRadioGroup1)}
+    ProcParam4    : integer;     {v[7]  ProcParam4: integer - РџР°СЂР°РјРµС‚СЂ РїСЂРѕС†РµРґСѓСЂ. РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ С‚РёРїР°  РїРµСЂРµРґР°С‡Рё СЂР°СЃС‡РµС‚Р° (cxRadioGroup1) РґР»СЏ С‚РёРїР° РґРѕРїРѕР»РЅРµРЅРёСЏ "РќР°С‡РёСЃР»РµРЅРЅС‹Рµ РїР»Р°С‚РµР¶Рё" }
 end;
 
 
@@ -187,8 +183,11 @@ begin
   end;
   // -------------------------------------
 
-  if Ftype_self < 0 then cxComboBox3.ItemIndex := 0
-  else cxComboBox3.ItemIndex := Ftype_self;
+  case Ftype_self of
+    0 : cxComboBox3.ItemIndex := 0;
+   12 : cxComboBox3.ItemIndex := 1;
+   13 : cxComboBox3.ItemIndex := 2;
+  end;
 
   cxCheckBox4PropertiesChange(nil);
   Query_BeginNode.Connection := ADOConnection1;
@@ -240,7 +239,7 @@ begin
     Query1.Open;
     str_max_load_id := Query1.FieldByName('max_load_id').AsString;
 
-    // --------- месяц или год отправления ----------
+    // --------- РјРµСЃСЏС† РёР»Рё РіРѕРґ РѕС‚РїСЂР°РІР»РµРЅРёСЏ ----------
     if cxCheckBox3.Checked then begin
       monthStr := IntToStr(cxComboBox4.ItemIndex+1);
       if Length(monthStr) = 1 then  monthStr := '0' + monthStr;
@@ -252,7 +251,7 @@ begin
       FResultString := FResultString + ' AND max_load_id = ' + str_max_load_id;
     end;
 
-    // -------- период отправления ------------
+    // -------- РїРµСЂРёРѕРґ РѕС‚РїСЂР°РІР»РµРЅРёСЏ ------------
     if (cxCheckBox4.Checked) and (cxDateEdit1.Text<>'') and (cxDateEdit2.Text<>'') then begin
       FResultString := FResultString + ' AND (dataot >= ''' + FormatDateTime('yyyymmdd', cxDateEdit1.Date) + '''';
       FResultString := FResultString + ' AND dataot < ''' + FormatDateTime('yyyymmdd', cxDateEdit2.Date) + ''')';

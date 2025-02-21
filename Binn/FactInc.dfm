@@ -127,17 +127,14 @@ object fmFactInc: TfmFactInc
           item
             Format = '#,##0.00'
             Kind = skSum
-            Column = cxGrid1DBBandedTableView1Itog_TD
           end
           item
             Format = '#,##0.00'
             Kind = skSum
-            Column = cxGrid1DBBandedTableView1itog_SHTRAF
           end
           item
             Format = '#,##0.00'
             Kind = skSum
-            Column = cxGrid1DBBandedTableView1itog_VOHR
           end
           item
             Format = '#,#0.00'
@@ -306,7 +303,7 @@ object fmFactInc: TfmFactInc
           Position.RowIndex = 0
         end
         object cxGrid1DBBandedTableView1bargain_cod: TcxGridDBBandedColumn
-          Caption = #8470' '#1087#1088#1080#1083#1086#1078
+          Caption = #8470' '#1087#1077#1088#1077#1074#1086#1079#1082#1080
           DataBinding.FieldName = 'bargain_cod'
           DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
@@ -326,7 +323,7 @@ object fmFactInc: TfmFactInc
           Position.RowIndex = 0
         end
         object cxGrid1DBBandedTableView1date_period_month: TcxGridDBBandedColumn
-          Caption = #1052#1077#1089#1103#1094' '#1087#1088#1080#1083#1086#1078'.'
+          Caption = #1052#1077#1089#1103#1094' '#1087#1077#1088#1077#1074#1086#1079#1082#1080
           DataBinding.FieldName = 'date_period_month'
           DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
@@ -336,7 +333,7 @@ object fmFactInc: TfmFactInc
           Position.RowIndex = 0
         end
         object cxGrid1DBBandedTableView1date_period_year: TcxGridDBBandedColumn
-          Caption = #1043#1086#1076' '#1087#1088#1080#1083#1086#1078'.'
+          Caption = #1043#1086#1076' '#1087#1077#1088#1077#1074#1086#1079#1082#1080
           DataBinding.FieldName = 'date_period_year'
           DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
@@ -346,7 +343,7 @@ object fmFactInc: TfmFactInc
           Position.RowIndex = 0
         end
         object cxGrid1DBBandedTableView1date_period_finance_name: TcxGridDBBandedColumn
-          Caption = #1060#1080#1085'. '#1084#1077#1089#1103#1094' '#1087#1088#1080#1083#1086#1078#1077#1085#1080#1103
+          Caption = #1060#1080#1085'. '#1084#1077#1089#1103#1094' '#1087#1077#1088#1077#1074#1086#1079#1082#1080
           DataBinding.FieldName = 'date_period_finance_name'
           DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
@@ -415,7 +412,7 @@ object fmFactInc: TfmFactInc
           Position.RowIndex = 0
         end
         object cxGrid1DBBandedTableView1dataot: TcxGridDBBandedColumn
-          Caption = #1044#1072#1090#1072#1054#1090
+          Caption = #1044#1072#1090#1072' '#1054#1090#1087#1088'.'
           DataBinding.FieldName = 'dataot'
           DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
@@ -425,7 +422,7 @@ object fmFactInc: TfmFactInc
           Position.RowIndex = 0
         end
         object cxGrid1DBBandedTableView1datpr: TcxGridDBBandedColumn
-          Caption = #1044#1072#1090#1072#1055#1088#1080#1073
+          Caption = #1044#1072#1090#1072' '#1055#1088#1080#1073'.'
           DataBinding.FieldName = 'datpr'
           DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
@@ -488,7 +485,7 @@ object fmFactInc: TfmFactInc
           HeaderGlyph.SourceDPI = 96
           HeaderGlyph.Data = {
             424D360400000000000036000000280000001000000010000000010020000000
-            00000000000074120000741200000000000000000000FFFFFF00FFFFFF00FFFF
+            000000000000C40E0000C40E00000000000000000000FFFFFF00FFFFFF00FFFF
             FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
             FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
             FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
@@ -537,7 +534,7 @@ object fmFactInc: TfmFactInc
           Position.RowIndex = 0
         end
         object cxGrid1DBBandedTableView1sto_name: TcxGridDBBandedColumn
-          Caption = #1057#1090#1054#1090#1087#1088
+          Caption = #1057#1090'.'#1054#1090#1087#1088'.'
           DataBinding.FieldName = 'sto_name'
           DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
@@ -547,7 +544,7 @@ object fmFactInc: TfmFactInc
           Position.RowIndex = 0
         end
         object cxGrid1DBBandedTableView1stn_name: TcxGridDBBandedColumn
-          Caption = #1057#1090#1053#1072#1079#1085
+          Caption = #1057#1090'.'#1053#1072#1079#1085'.'
           DataBinding.FieldName = 'stn_name'
           DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
@@ -663,43 +660,7 @@ object fmFactInc: TfmFactInc
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
-          Position.ColIndex = 41
-          Position.RowIndex = 0
-        end
-        object cxGrid1DBBandedTableView1Itog_TD: TcxGridDBBandedColumn
-          Caption = #1058'. '#1044'.'
-          DataBinding.FieldName = 'itog_TD'
-          DataBinding.IsNullValueType = True
-          PropertiesClassName = 'TcxCurrencyEditProperties'
-          Properties.DisplayFormat = '#,##0.00'
-          HeaderAlignmentVert = vaTop
-          Width = 79
-          Position.BandIndex = 0
-          Position.ColIndex = 32
-          Position.RowIndex = 0
-        end
-        object cxGrid1DBBandedTableView1itog_SHTRAF: TcxGridDBBandedColumn
-          Caption = #1064#1090#1088#1072#1092
-          DataBinding.FieldName = 'itog_SHTRAF'
-          DataBinding.IsNullValueType = True
-          PropertiesClassName = 'TcxCurrencyEditProperties'
-          Properties.DisplayFormat = '#,##0.00'
-          HeaderAlignmentVert = vaTop
-          Width = 79
-          Position.BandIndex = 0
-          Position.ColIndex = 33
-          Position.RowIndex = 0
-        end
-        object cxGrid1DBBandedTableView1itog_VOHR: TcxGridDBBandedColumn
-          Caption = #1054#1093#1088#1072#1085#1072
-          DataBinding.FieldName = 'itog_VOHR'
-          DataBinding.IsNullValueType = True
-          PropertiesClassName = 'TcxCurrencyEditProperties'
-          Properties.DisplayFormat = '#,##0.00'
-          HeaderAlignmentVert = vaTop
-          Width = 79
-          Position.BandIndex = 0
-          Position.ColIndex = 34
+          Position.ColIndex = 38
           Position.RowIndex = 0
         end
         object cxGrid1DBBandedTableView1check_invoice_score: TcxGridDBBandedColumn
@@ -710,7 +671,7 @@ object fmFactInc: TfmFactInc
           HeaderAlignmentVert = vaTop
           Width = 25
           Position.BandIndex = 0
-          Position.ColIndex = 35
+          Position.ColIndex = 32
           Position.RowIndex = 0
         end
         object cxGrid1DBBandedTableView1od: TcxGridDBBandedColumn
@@ -720,7 +681,7 @@ object fmFactInc: TfmFactInc
           HeaderAlignmentVert = vaTop
           Width = 30
           Position.BandIndex = 0
-          Position.ColIndex = 36
+          Position.ColIndex = 33
           Position.RowIndex = 0
         end
         object cxGrid1DBBandedTableView1sto: TcxGridDBBandedColumn
@@ -745,7 +706,7 @@ object fmFactInc: TfmFactInc
           DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Position.BandIndex = 0
-          Position.ColIndex = 37
+          Position.ColIndex = 34
           Position.RowIndex = 0
         end
         object cxGrid1DBBandedTableView1zfto_score_num: TcxGridDBBandedColumn
@@ -757,7 +718,7 @@ object fmFactInc: TfmFactInc
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
-          Position.ColIndex = 38
+          Position.ColIndex = 35
           Position.RowIndex = 0
         end
         object cxGrid1DBBandedTableView1fexan: TcxGridDBBandedColumn
@@ -779,7 +740,7 @@ object fmFactInc: TfmFactInc
           HeaderAlignmentVert = vaTop
           Width = 60
           Position.BandIndex = 0
-          Position.ColIndex = 39
+          Position.ColIndex = 36
           Position.RowIndex = 0
         end
         object cxGrid1DBBandedTableView1file_name_dbf: TcxGridDBBandedColumn
@@ -789,7 +750,7 @@ object fmFactInc: TfmFactInc
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
-          Position.ColIndex = 40
+          Position.ColIndex = 37
           Position.RowIndex = 0
         end
         object cxGrid1DBBandedTableView1shaping_rate_id: TcxGridDBBandedColumn
@@ -800,7 +761,7 @@ object fmFactInc: TfmFactInc
           Styles.Content = fmMain.cxStyle_ClientFrahtCard_Profitt
           Width = 60
           Position.BandIndex = 0
-          Position.ColIndex = 42
+          Position.ColIndex = 39
           Position.RowIndex = 0
         end
         object cxGrid1DBBandedTableView1contract_agent_cod: TcxGridDBBandedColumn
@@ -811,7 +772,7 @@ object fmFactInc: TfmFactInc
           Styles.Content = fmMain.cxStyle_ClientFrahtCard_Profitt
           Width = 60
           Position.BandIndex = 0
-          Position.ColIndex = 43
+          Position.ColIndex = 40
           Position.RowIndex = 0
         end
         object cxGrid1DBBandedTableView1agent_name: TcxGridDBBandedColumn
@@ -822,16 +783,17 @@ object fmFactInc: TfmFactInc
           Styles.Content = fmMain.cxStyle_ClientFrahtCard_Profitt
           Width = 60
           Position.BandIndex = 0
-          Position.ColIndex = 44
+          Position.ColIndex = 41
           Position.RowIndex = 0
         end
         object cxGrid1DBBandedTableView1FIO_users: TcxGridDBBandedColumn
           Caption = #1054#1090#1074#1077#1090#1089#1074#1077#1085#1085#1099#1081
           DataBinding.FieldName = 'FIO_users'
           DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
           Width = 80
           Position.BandIndex = 0
-          Position.ColIndex = 45
+          Position.ColIndex = 42
           Position.RowIndex = 0
         end
       end
@@ -1794,15 +1756,15 @@ object fmFactInc: TfmFactInc
       OnClick = dxBarButton4Click
     end
     object dxBarButton_LoadDBF: TdxBarButton
-      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1085#1072#1088#1072#1089#1090#1072#1102#1097#1080#1081' '#1092#1072#1082#1090' '#1080#1079' '#1092#1072#1081#1083#1072' (dbf)'
+      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1092#1072#1082#1090' '#1062#1060#1058#1054' '#1080#1079' '#1092#1072#1081#1083#1072' (dbf)'
       Category = 0
-      Hint = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1085#1072#1088#1072#1089#1090#1072#1102#1097#1080#1081' '#1092#1072#1082#1090' '#1080#1079' '#1092#1072#1081#1083#1072' (dbf)'
+      Hint = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1092#1072#1082#1090' '#1062#1060#1058#1054' '#1080#1079' '#1092#1072#1081#1083#1072' (dbf)'
       Visible = ivAlways
       ImageIndex = 55
       OnClick = dxBarButton_LoadDBFClick
     end
     object dxBarButton_DelDBF: TdxBarButton
-      Caption = #1059#1076#1072#1083#1080#1090#1100' '#1085#1072#1088#1072#1089#1090#1072#1102#1097#1080#1081' '#1092#1072#1082#1090' '#1079#1072' '#1087#1103#1090#1080#1076#1085#1077#1074#1082#1091
+      Caption = #1059#1076#1072#1083#1080#1090#1100'  '#1092#1072#1082#1090' '#1079#1072' '#1087#1103#1090#1080#1076#1085#1077#1074#1082#1091
       Category = 0
       Hint = #1059#1076#1072#1083#1080#1090#1100' '#1079#1072#1075#1088#1091#1078#1077#1085#1085#1099#1081' '#1092#1072#1082#1090' (dbf)'
       Visible = ivAlways
@@ -1887,9 +1849,9 @@ object fmFactInc: TfmFactInc
       OnClick = dxBarButton_ReportClientClick
     end
     object dxBarButton6: TdxBarButton
-      Caption = #1059#1076#1072#1083#1080#1090#1100' '#1085#1072#1088#1072#1089#1090#1072#1102#1097#1080#1081' '#1080#1090#1086#1075' ('#1092#1072#1081#1083' '#1079#1072#1075#1088#1091#1079#1082#1080')'
+      Caption = #1059#1076#1072#1083#1080#1090#1100' '#1040#1082#1090' '#1087#1086#1076#1088#1103#1076#1095#1080#1082#1072' ('#1092#1072#1081#1083' '#1079#1072#1075#1088#1091#1079#1082#1080')'
       Category = 0
-      Hint = #1059#1076#1072#1083#1080#1090#1100' '#1085#1072#1088#1072#1089#1090#1072#1102#1097#1080#1081' '#1080#1090#1086#1075' ('#1092#1072#1081#1083' '#1079#1072#1075#1088#1091#1079#1082#1080')'
+      Hint = #1059#1076#1072#1083#1080#1090#1100' '#1040#1082#1090' '#1087#1086#1076#1088#1103#1076#1095#1080#1082#1072' ('#1092#1072#1081#1083' '#1079#1072#1075#1088#1091#1079#1082#1080')'
       Visible = ivAlways
       ImageIndex = 2
       OnClick = dxBarButton6Click
@@ -1916,8 +1878,9 @@ object fmFactInc: TfmFactInc
       OnClick = Action_AgreeExecute
     end
     object N17: TdxBarButton
-      Caption = #1060#1088#1072#1093#1090#1086#1074#1072#1103' '#1082#1072#1088#1090#1086#1095#1082#1072
+      Caption = #1050#1072#1088#1090#1086#1095#1082#1072' '#1087#1077#1088#1077#1074#1086#1079#1082#1080
       Category = 1
+      Hint = #1050#1072#1088#1090#1086#1095#1082#1072' '#1087#1077#1088#1077#1074#1086#1079#1082#1080
       Visible = ivAlways
       ImageIndex = 10
       OnClick = N17Click
@@ -1986,14 +1949,6 @@ object fmFactInc: TfmFactInc
       Category = 1
       Visible = ivAlways
       OnClick = N22Click
-    end
-    object N34: TdxBarButton
-      Tag = 43
-      Caption = #1055#1088#1086#1089#1090#1072#1074#1080#1090#1100' '#1089#1090#1072#1074#1082#1080' '#1055#1043#1050
-      Category = 1
-      Hint = #1055#1088#1086#1089#1090#1072#1074#1080#1090#1100' '#1089#1090#1072#1074#1082#1080' '#1055#1043#1050
-      Visible = ivAlways
-      OnClick = N34Click
     end
     object N11: TdxBarButton
       Caption = #1055#1077#1095#1072#1090#1100' '#1090#1072#1073#1083#1080#1094#1099' '#1074' Excel'
@@ -2068,32 +2023,6 @@ object fmFactInc: TfmFactInc
       ImageIndex = 13
       OnClick = N4Click
     end
-    object dxBarButton5: TdxBarButton
-      Tag = 43
-      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1085#1086#1074#1091#1102' '#1057#1077#1090#1082#1091' '#1055#1043#1050
-      Category = 1
-      Hint = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1085#1086#1074#1091#1102' '#1057#1077#1090#1082#1091' '#1055#1043#1050
-      Visible = ivAlways
-      ImageIndex = 55
-      OnClick = dxBarButton5Click
-    end
-    object dxBarButton7: TdxBarButton
-      Tag = 430
-      Caption = #1055#1088#1086#1089#1090#1072#1074#1080#1090#1100' '#1089#1090#1072#1074#1082#1080' '#1060#1043#1050
-      Category = 1
-      Hint = #1055#1088#1086#1089#1090#1072#1074#1080#1090#1100' '#1089#1090#1072#1074#1082#1080' '#1060#1043#1050
-      Visible = ivAlways
-      OnClick = N34Click
-    end
-    object dxBarButton8: TdxBarButton
-      Tag = 430
-      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1085#1086#1074#1091#1102' '#1057#1077#1090#1082#1091' '#1060#1043#1050
-      Category = 1
-      Hint = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1085#1086#1074#1091#1102' '#1057#1077#1090#1082#1091' '#1060#1043#1050
-      Visible = ivAlways
-      ImageIndex = 55
-      OnClick = dxBarButton5Click
-    end
   end
   object PopupMenu1: TdxBarPopupMenu
     BarManager = dxBarManager1
@@ -2145,23 +2074,6 @@ object fmFactInc: TfmFactInc
       item
         Visible = True
         ItemName = 'dxBarButton_Unbind'
-      end
-      item
-        BeginGroup = True
-        Visible = True
-        ItemName = 'N34'
-      end
-      item
-        Visible = True
-        ItemName = 'dxBarButton5'
-      end
-      item
-        Visible = True
-        ItemName = 'dxBarButton7'
-      end
-      item
-        Visible = True
-        ItemName = 'dxBarButton8'
       end
       item
         BeginGroup = True

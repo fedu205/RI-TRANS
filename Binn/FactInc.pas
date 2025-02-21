@@ -1,21 +1,21 @@
-unit FactInc;
+п»їunit FactInc;
 
 {
-Данный модуль вызывается из:
-  - Главное меню "Факт"/"Железная дорога (нарастающий ЦФТО)". Появится окно
-      с параментами поиска, после которого открывается данное окно.
-  - Главное меню "Приложения", в ней кнопка "Сверить с фактической информацией ЦФТО",
-      далее контекстное меню "Аналитический поиск вагонов".
-  - Главное меню "Приложения", в ней кнопка "Сверить с фактической информацией ЦФТО",
-      далее контекстное меню "Копировать в буфер". Далее открывается четыре пункта
-      меню, любой из которых открывает окно с параментами поиска, после которого
-      открывается данное окно.
-  - Главное меню "Финансы"/"Суммы по фрахт.карточкам". Вкладка "Субподрядчики".
-      Контекстное меню "Сверка с ЦФТО", далее контекстное меню "Аналитический поиск вагонов".
-  - Главное меню "Финансы"/"Суммы по фрахт.карточкам". Вкладка "Субподрядчики".
-      Контекстное меню "Сверка с ЦФТО", далее контекстное меню "Копировать в буфер".
-      Далее открывается четыре пункта меню, любой из которых открывает окно с
-      параментами поиска, после которого открывается данное окно.
+Р”Р°РЅРЅС‹Р№ РјРѕРґСѓР»СЊ РІС‹Р·С‹РІР°РµС‚СЃСЏ РёР·:
+  - Р“Р»Р°РІРЅРѕРµ РјРµРЅСЋ "Р¤Р°РєС‚"/"Р–РµР»РµР·РЅР°СЏ РґРѕСЂРѕРіР° (РЅР°СЂР°СЃС‚Р°СЋС‰РёР№ Р¦Р¤РўРћ)". РџРѕСЏРІРёС‚СЃСЏ РѕРєРЅРѕ
+      СЃ РїР°СЂР°РјРµРЅС‚Р°РјРё РїРѕРёСЃРєР°, РїРѕСЃР»Рµ РєРѕС‚РѕСЂРѕРіРѕ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ РґР°РЅРЅРѕРµ РѕРєРЅРѕ.
+  - Р“Р»Р°РІРЅРѕРµ РјРµРЅСЋ "РџСЂРёР»РѕР¶РµРЅРёСЏ", РІ РЅРµР№ РєРЅРѕРїРєР° "РЎРІРµСЂРёС‚СЊ СЃ С„Р°РєС‚РёС‡РµСЃРєРѕР№ РёРЅС„РѕСЂРјР°С†РёРµР№ Р¦Р¤РўРћ",
+      РґР°Р»РµРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРµ РјРµРЅСЋ "РђРЅР°Р»РёС‚РёС‡РµСЃРєРёР№ РїРѕРёСЃРє РІР°РіРѕРЅРѕРІ".
+  - Р“Р»Р°РІРЅРѕРµ РјРµРЅСЋ "РџСЂРёР»РѕР¶РµРЅРёСЏ", РІ РЅРµР№ РєРЅРѕРїРєР° "РЎРІРµСЂРёС‚СЊ СЃ С„Р°РєС‚РёС‡РµСЃРєРѕР№ РёРЅС„РѕСЂРјР°С†РёРµР№ Р¦Р¤РўРћ",
+      РґР°Р»РµРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРµ РјРµРЅСЋ "РљРѕРїРёСЂРѕРІР°С‚СЊ РІ Р±СѓС„РµСЂ". Р”Р°Р»РµРµ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ С‡РµС‚С‹СЂРµ РїСѓРЅРєС‚Р°
+      РјРµРЅСЋ, Р»СЋР±РѕР№ РёР· РєРѕС‚РѕСЂС‹С… РѕС‚РєСЂС‹РІР°РµС‚ РѕРєРЅРѕ СЃ РїР°СЂР°РјРµРЅС‚Р°РјРё РїРѕРёСЃРєР°, РїРѕСЃР»Рµ РєРѕС‚РѕСЂРѕРіРѕ
+      РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ РґР°РЅРЅРѕРµ РѕРєРЅРѕ.
+  - Р“Р»Р°РІРЅРѕРµ РјРµРЅСЋ "Р¤РёРЅР°РЅСЃС‹"/"РЎСѓРјРјС‹ РїРѕ С„СЂР°С…С‚.РєР°СЂС‚РѕС‡РєР°Рј". Р’РєР»Р°РґРєР° "РЎСѓР±РїРѕРґСЂСЏРґС‡РёРєРё".
+      РљРѕРЅС‚РµРєСЃС‚РЅРѕРµ РјРµРЅСЋ "РЎРІРµСЂРєР° СЃ Р¦Р¤РўРћ", РґР°Р»РµРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРµ РјРµРЅСЋ "РђРЅР°Р»РёС‚РёС‡РµСЃРєРёР№ РїРѕРёСЃРє РІР°РіРѕРЅРѕРІ".
+  - Р“Р»Р°РІРЅРѕРµ РјРµРЅСЋ "Р¤РёРЅР°РЅСЃС‹"/"РЎСѓРјРјС‹ РїРѕ С„СЂР°С…С‚.РєР°СЂС‚РѕС‡РєР°Рј". Р’РєР»Р°РґРєР° "РЎСѓР±РїРѕРґСЂСЏРґС‡РёРєРё".
+      РљРѕРЅС‚РµРєСЃС‚РЅРѕРµ РјРµРЅСЋ "РЎРІРµСЂРєР° СЃ Р¦Р¤РўРћ", РґР°Р»РµРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРµ РјРµРЅСЋ "РљРѕРїРёСЂРѕРІР°С‚СЊ РІ Р±СѓС„РµСЂ".
+      Р”Р°Р»РµРµ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ С‡РµС‚С‹СЂРµ РїСѓРЅРєС‚Р° РјРµРЅСЋ, Р»СЋР±РѕР№ РёР· РєРѕС‚РѕСЂС‹С… РѕС‚РєСЂС‹РІР°РµС‚ РѕРєРЅРѕ СЃ
+      РїР°СЂР°РјРµРЅС‚Р°РјРё РїРѕРёСЃРєР°, РїРѕСЃР»Рµ РєРѕС‚РѕСЂРѕРіРѕ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ РґР°РЅРЅРѕРµ РѕРєРЅРѕ.
 }
 
 interface
@@ -42,17 +42,17 @@ uses
 
 type
   TFactIncDlgResult = record
-    {для определения нажата ли кнопка mbOk или нет}
+    {РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РЅР°Р¶Р°С‚Р° Р»Рё РєРЅРѕРїРєР° mbOk РёР»Рё РЅРµС‚}
     ModalResult : TModalResult;    // v[0]
 
-    {для определения опции "Тип дополнения"  в случае, если отмечен "Отчетный период"}
+    {РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РѕРїС†РёРё "РўРёРї РґРѕРїРѕР»РЅРµРЅРёСЏ"  РІ СЃР»СѓС‡Р°Рµ, РµСЃР»Рё РѕС‚РјРµС‡РµРЅ "РћС‚С‡РµС‚РЅС‹Р№ РїРµСЂРёРѕРґ"}
     TypeResult: byte;             // v[1]
 
-    {Если не отмечен "Отчетный период" в поле SQLText записывается SQL запрос для Query_FactIncDBF в форме fmFactInc}
+    {Р•СЃР»Рё РЅРµ РѕС‚РјРµС‡РµРЅ "РћС‚С‡РµС‚РЅС‹Р№ РїРµСЂРёРѕРґ" РІ РїРѕР»Рµ SQLText Р·Р°РїРёСЃС‹РІР°РµС‚СЃСЏ SQL Р·Р°РїСЂРѕСЃ РґР»СЏ Query_FactIncDBF РІ С„РѕСЂРјРµ fmFactInc}
     SQLText : PChar;              // v[2]
 
-    {для записи имени процедуры в случае выбора "Начисленные платежи". Выбор процедуры соответствует понятию
-     "С корректир.", "Без коррект." и "Коррект."
+    {РґР»СЏ Р·Р°РїРёСЃРё РёРјРµРЅРё РїСЂРѕС†РµРґСѓСЂС‹ РІ СЃР»СѓС‡Р°Рµ РІС‹Р±РѕСЂР° "РќР°С‡РёСЃР»РµРЅРЅС‹Рµ РїР»Р°С‚РµР¶Рё". Р’С‹Р±РѕСЂ РїСЂРѕС†РµРґСѓСЂС‹ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ РїРѕРЅСЏС‚РёСЋ
+     "РЎ РєРѕСЂСЂРµРєС‚РёСЂ.", "Р‘РµР· РєРѕСЂСЂРµРєС‚." Рё "РљРѕСЂСЂРµРєС‚."
       case cxRadioGroup2.ItemIndex of
         0: ProcedureName:='sp_fact_inc_month_10_01;1';
         1: ProcedureName:='sp_fact_inc_month_without_correct;1';
@@ -60,18 +60,18 @@ type
       end}
     ProcedureName: PChar;        // v[3]
 
-    {Параметр процедур. Используется для обозначения номера месяца (cxComboBox1) }
+    {РџР°СЂР°РјРµС‚СЂ РїСЂРѕС†РµРґСѓСЂ. РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РѕР±РѕР·РЅР°С‡РµРЅРёСЏ РЅРѕРјРµСЂР° РјРµСЃСЏС†Р° (cxComboBox1) }
     ProcParam1: integer;         // v[4]
 
-    {Параметр процедур. Используется для обозначения  номера года (cxComboBox2) }
+    {РџР°СЂР°РјРµС‚СЂ РїСЂРѕС†РµРґСѓСЂ. РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РѕР±РѕР·РЅР°С‡РµРЅРёСЏ  РЅРѕРјРµСЂР° РіРѕРґР° (cxComboBox2) }
     ProcParam2: integer;         // v[5]
 
-    {Параметр процедур. При выборе типа дополнения
-    "Начисленные платежи"  используется для хранения значения "Экспедитор ЦФТО".
-    В остальных случаях типа дополнения ("Штрафы", "Охрана", "ТД") используется для хранения типа расчета (cxRadioGroup1)}
+    {РџР°СЂР°РјРµС‚СЂ РїСЂРѕС†РµРґСѓСЂ. РџСЂРё РІС‹Р±РѕСЂРµ С‚РёРїР° РґРѕРїРѕР»РЅРµРЅРёСЏ
+    "РќР°С‡РёСЃР»РµРЅРЅС‹Рµ РїР»Р°С‚РµР¶Рё"  РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ Р·РЅР°С‡РµРЅРёСЏ "Р­РєСЃРїРµРґРёС‚РѕСЂ Р¦Р¤РўРћ".
+    Р’ РѕСЃС‚Р°Р»СЊРЅС‹С… СЃР»СѓС‡Р°СЏС… С‚РёРїР° РґРѕРїРѕР»РЅРµРЅРёСЏ ("РЁС‚СЂР°С„С‹", "РћС…СЂР°РЅР°", "РўР”") РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ С‚РёРїР° СЂР°СЃС‡РµС‚Р° (cxRadioGroup1)}
     ProcParam3: integer;         // v[6]
 
-    {Параметр процедур. Используется для типа передачи расчета (cxRadioGroup1) для типа дополнения "Начисленные платежи" }
+    {РџР°СЂР°РјРµС‚СЂ РїСЂРѕС†РµРґСѓСЂ. РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ С‚РёРїР° РїРµСЂРµРґР°С‡Рё СЂР°СЃС‡РµС‚Р° (cxRadioGroup1) РґР»СЏ С‚РёРїР° РґРѕРїРѕР»РЅРµРЅРёСЏ "РќР°С‡РёСЃР»РµРЅРЅС‹Рµ РїР»Р°С‚РµР¶Рё" }
     ProcParam4: integer;         // v[7]
   end;
 
@@ -159,9 +159,6 @@ type
     cxGrid1DBBandedTableView2date_period_year: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView2itog: TcxGridDBBandedColumn;
     DS_FindEmpty: TDataSource;
-    cxGrid1DBBandedTableView1Itog_TD: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1itog_SHTRAF: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1itog_VOHR: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1itogr: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1check_invoice_score: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1od: TcxGridDBBandedColumn;
@@ -214,7 +211,6 @@ type
     N19: TdxBarButton;
     N22: TdxBarButton;
     N21: TdxBarSubItem;
-    N34: TdxBarButton;
     N11: TdxBarButton;
     N20: TdxBarButton;
     N25: TdxBarButton;
@@ -243,10 +239,7 @@ type
     cxGrid1DBBandedTableView1shaping_rate_id: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1contract_agent_cod: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1agent_name: TcxGridDBBandedColumn;
-    dxBarButton5: TdxBarButton;
     dxBarButton6: TdxBarButton;
-    dxBarButton7: TdxBarButton;
-    dxBarButton8: TdxBarButton;
     cxGrid1DBBandedTableView1FIO_users: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1date_period_finance_name: TcxGridDBBandedColumn;
     procedure dxBarButton4Click(Sender: TObject);
@@ -257,7 +250,6 @@ type
     procedure dxBarButton2Click(Sender: TObject);
     procedure dxBarButton1Click(Sender: TObject);
     procedure cxGrid1DBBandedTableView1FocusedRecordChanged(Sender: TcxCustomGridTableView; APrevFocusedRecord, AFocusedRecord: TcxCustomGridRecord; ANewItemRecordFocusingChanged: Boolean);
-    procedure N34Click(Sender: TObject);
     procedure cxGrid1DBBandedTableView2CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
     procedure N25Click(Sender: TObject);
     procedure cxGrid1DBBandedTableView1KeyPress(Sender: TObject; var Key: Char);
@@ -285,8 +277,8 @@ type
     procedure dxBarButton_FilterRecords1Click(Sender: TObject);
     procedure dxBarButton_AddSnapClick(Sender: TObject);
     procedure dxBarButton_ReportClientClick(Sender: TObject);
-    procedure dxBarButton5Click(Sender: TObject);
     procedure dxBarButton6Click(Sender: TObject);
+    procedure dxBarButton8Click(Sender: TObject);
   private
     Fstr_fact_inc_id  : string;
     Ftype_self        : integer;
@@ -335,9 +327,6 @@ begin
   cxGrid1DBBandedTableView1date_period_year.Styles.Content := fmMain.cxStyle_AgreeFact;
   cxGrid1DBBandedTableView1date_period_finance_name.Styles.Content := fmMain.cxStyle_AgreeFact;
   cxGrid1DBBandedTableView1itog.Styles.Content := fmMain.cxStyle_AgreeFactInc_Sum;
-  cxGrid1DBBandedTableView1itog_TD.Styles.Content := fmMain.cxStyle_Agree_bargain_cod;
-  cxGrid1DBBandedTableView1itog_VOHR.Styles.Content := fmMain.cxStyle_Agree_bargain_cod;
-  cxGrid1DBBandedTableView1itog_SHTRAF.Styles.Content := fmMain.cxStyle_Agree_bargain_cod;
 
   cxGrid1DBBandedTableView2FIO_users_owner.Styles.Content := fmMain.cxStyle_AgreeFact;
   cxGrid1DBBandedTableView2bargain_cod.Styles.Content := fmMain.cxStyle_AgreeFact;
@@ -462,7 +451,7 @@ procedure TfmFactInc.dxBarButton4Click(Sender: TObject);
 var          i : integer;
  Sp_Fact_Inc_Copy_To_Fact : TADOStoredProc;
 begin
-  if Application.MessageBox('Действительно копировать вагоны в оперативный факт?', 'ВНИМАНИЕ', MB_OKCANCEL+MB_ICONWARNING) = IDOK then begin
+  if Application.MessageBox('Р”РµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ РєРѕРїРёСЂРѕРІР°С‚СЊ РІР°РіРѕРЅС‹ РІ РѕРїРµСЂР°С‚РёРІРЅС‹Р№ С„Р°РєС‚?', 'Р’РќРРњРђРќРР•', MB_OKCANCEL+MB_ICONWARNING) = IDOK then begin
     Screen.Cursor := crHourglass;
     Sp_Fact_Inc_Copy_To_Fact := TADOStoredProc.Create(nil);
     Sp_Fact_Inc_Copy_To_Fact.Connection := fmMain.Lis;
@@ -472,52 +461,12 @@ begin
       Sp_Fact_Inc_Copy_To_Fact.Close;
       Sp_Fact_Inc_Copy_To_Fact.Parameters.ParamByName('@fact_inc_id').Value := cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1fact_inc_id.Index];
       Sp_Fact_Inc_Copy_To_Fact.ExecProc;
-      ShowTextMessage('Осталось ' + IntToStr(cxGrid1DBBandedTableView1.Controller.SelectedRowCount - i) + ' записей...',  False);
+      ShowTextMessage('РћСЃС‚Р°Р»РѕСЃСЊ ' + IntToStr(cxGrid1DBBandedTableView1.Controller.SelectedRowCount - i) + ' Р·Р°РїРёСЃРµР№...',  False);
     end;
     Sp_Fact_Inc_Copy_To_Fact.Free;
     ShowTextMessage;
     Screen.Cursor := crDefault;
   end;
-end;
-
-procedure TfmFactInc.dxBarButton5Click(Sender: TObject);
-var OpenDialog     : TOpenDialog;
-    SP_BLOB_modify : TADOStoredProc;
-       cod_shablon : integer;
-begin
-  cod_shablon := TComponent(Sender).Tag;
-
-  OpenDialog           := TOpenDialog.Create(self);
-  OpenDialog.Filter    := 'Файлы Excel|*.xls; *.xlsx';
-  OpenDialog.DefaultExt:= 'xls';
-  OpenDialog.Options   := [ofPathMustExist,ofFileMustExist,ofEnableSizing];
-
-  if not OpenDialog.Execute then begin
-    OpenDialog.Free;
-    exit;
-  end;
-
-  SP_BLOB_modify := TADOStoredProc.Create(nil);
-  SP_BLOB_modify.Connection := fmMain.Lis;
-  SP_BLOB_modify.ProcedureName := 'sp_BLOB_SHABLON_modify';
-  SP_BLOB_modify.Parameters.Refresh;
-  SP_BLOB_modify.Parameters.ParamByName('@doc_id').Value       := null;
-  SP_BLOB_modify.Parameters.ParamByName('@doc_type_cod').Value := '9';
-  SP_BLOB_modify.Parameters.ParamByName('@type_action').Value  := 101;
-  SP_BLOB_modify.Parameters.ParamByName('@doc_cod').Value      := IntToStr(cod_shablon);
-  SP_BLOB_modify.Parameters.ParamByName('@users_group_id').Value := usr_pwd.user_group_id;
-
-  SP_BLOB_modify.Parameters.ParamByName('@doc_image').LoadFromFile(OpenDialog.FileName, ftBlob);
-  SP_BLOB_modify.Parameters.ParamByName('@file_name').Value := ExtractFileName(OpenDialog.FileName);
-
-  try
-    SP_BLOB_modify.ExecProc;
-
-    Application.MessageBox('Сетка загружена', 'Сетка ПГК', MB_OK or MB_ICONINFORMATION);
-  except
-  end;
-
-  SP_BLOB_modify.Free;
 end;
 
 procedure TfmFactInc.dxBarButton6Click(Sender: TObject);
@@ -534,7 +483,7 @@ begin
   type_self := cxGrid1DBBandedTableView1type_self.DataBinding.Field.AsInteger;
 
   if file_name_dbf = '' then begin
-    Application.MessageBox('Нет файла загрузки. Удаление невозможно', 'Вниание', MB_OK or MB_ICONERROR);
+    Application.MessageBox('РќРµС‚ С„Р°Р№Р»Р° Р·Р°РіСЂСѓР·РєРё. РЈРґР°Р»РµРЅРёРµ РЅРµРІРѕР·РјРѕР¶РЅРѕ', 'Р’РЅРёР°РЅРёРµ', MB_OK or MB_ICONERROR);
     exit;
   end;
 
@@ -550,14 +499,14 @@ begin
   Q.SQL.Add('AND users.users_group_id = ' + IntToStr(usr_pwd.user_group_id));
   Q.SQL.Add('AND fact_inc_temp.file_name_dbf = ''' + file_name_dbf + '''');
   Q.Open;
-  msg := 'Вы хотите удалить Нарастающий итог'#10'Файл загрузки = ' + file_name_dbf +
-          #10#10'Будут удалены ' + Q.FieldByName('cnt').AsString + ' запись(и,ей)' +
-          #10#10'Продолжить ?';
+  msg := 'Р’С‹ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ РќР°СЂР°СЃС‚Р°СЋС‰РёР№ РёС‚РѕРі'#10'Р¤Р°Р№Р» Р·Р°РіСЂСѓР·РєРё = ' + file_name_dbf +
+          #10#10'Р‘СѓРґСѓС‚ СѓРґР°Р»РµРЅС‹ ' + Q.FieldByName('cnt').AsString + ' Р·Р°РїРёСЃСЊ(Рё,РµР№)' +
+          #10#10'РџСЂРѕРґРѕР»Р¶РёС‚СЊ ?';
   Q.Free;
 
   Screen.Cursor := crDefault;
 
-  if Application.MessageBox(PWideChar(msg), 'Внимание', MB_YESNO or MB_ICONQUESTION) <> ID_YES then
+  if Application.MessageBox(PWideChar(msg), 'Р’РЅРёРјР°РЅРёРµ', MB_YESNO or MB_ICONQUESTION) <> ID_YES then
     exit;
 
   SP := TADOStoredProc.Create(nil);
@@ -572,7 +521,7 @@ begin
   try
     SP.ExecProc;
 
-    Application.MessageBox(PWideChar('Файл ' + file_name_dbf + ' был удален из базы!'), 'Удаление', MB_OK or MB_ICONINFORMATION);
+    Application.MessageBox(PWideChar('Р¤Р°Р№Р» ' + file_name_dbf + ' Р±С‹Р» СѓРґР°Р»РµРЅ РёР· Р±Р°Р·С‹!'), 'РЈРґР°Р»РµРЅРёРµ', MB_OK or MB_ICONINFORMATION);
     RefreshQueryGrid(cxGrid1DBBandedTableView1, 'fact_inc_id', cxGrid1DBBandedTableView1fact_inc_id.DataBinding.Field.AsInteger);
   except
   end;
@@ -581,7 +530,12 @@ begin
 
 end;
 
-{$REGION 'Загрузить предоставление ЦФТО'}
+procedure TfmFactInc.dxBarButton8Click(Sender: TObject);
+begin
+
+end;
+
+{$REGION 'Р—Р°РіСЂСѓР·РёС‚СЊ РїСЂРµРґРѕСЃС‚Р°РІР»РµРЅРёРµ Р¦Р¤РўРћ'}
 procedure TfmFactInc.dxBarButton_AddGrantClick(Sender: TObject);
 type
   TFunc = function(AppHand: THandle; usr_pwd: PUser_pwd; type_table_cod, alias_name: string) : variant;
@@ -595,7 +549,7 @@ var OpenDialog      : TOpenDialog;
     filename        : string;
 begin
   OpenDialog           := TOpenDialog.Create(self);
-  OpenDialog.Filter    := 'Файлы dbf|*.dbf';
+  OpenDialog.Filter    := 'Р¤Р°Р№Р»С‹ dbf|*.dbf';
   OpenDialog.DefaultExt:= 'dbf';
   OpenDialog.Options   := [ofHideReadOnly,ofAllowMultiSelect,ofEnableSizing];
   if not OpenDialog.Execute then begin
@@ -605,31 +559,31 @@ begin
   filename := OpenDialog.FileName;
   OpenDialog.Free;
 
-  ShowTextMessage('Проверка по имени файла... ', False);
+  ShowTextMessage('РџСЂРѕРІРµСЂРєР° РїРѕ РёРјРµРЅРё С„Р°Р№Р»Р°... ', False);
   Q := TADOQuery.Create(nil);
   Q.Connection := fmMain.Lis;
   Q.SQL.Add('SELECT file_name_dbf FROM view_fact_inc_temp WHERE file_name_dbf = ''' + ExtractFileName(filename) + ''' AND users_group_id = ' + IntToStr(usr_pwd.user_group_id) + '');
   Q.Open;
   if Q.RecordCount > 0 then begin
-    Application.MessageBox('Информация из файла с таким именем уже загружена!!!','Внимание',MB_OK);
+    Application.MessageBox('РРЅС„РѕСЂРјР°С†РёСЏ РёР· С„Р°Р№Р»Р° СЃ С‚Р°РєРёРј РёРјРµРЅРµРј СѓР¶Рµ Р·Р°РіСЂСѓР¶РµРЅР°!!!','Р’РЅРёРјР°РЅРёРµ',MB_OK);
     Q.Free;
     ShowTextMessage();
     exit;
   end;
   Q.Free;
 
-// Читаем файл
-  ShowTextMessage('Чтение файла... ', False);
+// Р§РёС‚Р°РµРј С„Р°Р№Р»
+  ShowTextMessage('Р§С‚РµРЅРёРµ С„Р°Р№Р»Р°... ', False);
   Client_Records := TClientDataSet.Create(nil);
   if ParserDBF(filename, Client_Records, str_error) = False then begin
     ShowTextMessage();
-    Application.MessageBox(Pchar(str_error),'Внимание',MB_OK);
+    Application.MessageBox(Pchar(str_error),'Р’РЅРёРјР°РЅРёРµ',MB_OK);
     OpenDialog.Free;
     Client_Records.Free;
     exit;
   end;
-// Проверяем формат данных
-  ShowTextMessage('Проверка формата... ', False);
+// РџСЂРѕРІРµСЂСЏРµРј С„РѕСЂРјР°С‚ РґР°РЅРЅС‹С…
+  ShowTextMessage('РџСЂРѕРІРµСЂРєР° С„РѕСЂРјР°С‚Р°... ', False);
   if not checkFileDBF(4, Client_Records) then begin
     ShowTextMessage();
     OpenDialog.Free;
@@ -681,7 +635,7 @@ begin
 
 
       SP.ExecProc;
-      ShowTextMessage('Осталось загрузить ' + IntToStr(Client_Records.RecordCount - Client_Records.RecNo) + ' вагонов ...', False);
+      ShowTextMessage('РћСЃС‚Р°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ ' + IntToStr(Client_Records.RecordCount - Client_Records.RecNo) + ' РІР°РіРѕРЅРѕРІ ...', False);
       Client_Records.Next;
     end;
     sp.Free;
@@ -690,12 +644,12 @@ begin
   except
     SP.Free;
     ShowTextMessage();
-    Application.MessageBox(Pchar('Непредвиденная ошибка, обратитесь к разработчикам.'),'Внимание',MB_OK);
+    Application.MessageBox(Pchar('РќРµРїСЂРµРґРІРёРґРµРЅРЅР°СЏ РѕС€РёР±РєР°, РѕР±СЂР°С‚РёС‚РµСЃСЊ Рє СЂР°Р·СЂР°Р±РѕС‚С‡РёРєР°Рј.'),'Р’РЅРёРјР°РЅРёРµ',MB_OK);
   end;
 end;
-{$ENDREGION 'Загрузить предоставление ЦФТО'}
+{$ENDREGION 'Р—Р°РіСЂСѓР·РёС‚СЊ РїСЂРµРґРѕСЃС‚Р°РІР»РµРЅРёРµ Р¦Р¤РўРћ'}
 
-{$REGION 'Удалить вагон'}
+{$REGION 'РЈРґР°Р»РёС‚СЊ РІР°РіРѕРЅ'}
 procedure TfmFactInc.dxBarButton_DelDBFClick(Sender: TObject);
 var     SP : TADOStoredProc;
          Q : TADOQuery;
@@ -719,7 +673,7 @@ begin
   try
     Screen.Cursor := crHourglass;
     if not Q.Locate('id',fmFilter.GetId,[]) then begin
-      Application.MessageBox('Непредвиденная ошибка, удаление невозможно!','Внимание!', MB_OK or MB_ICONERROR);
+      Application.MessageBox('РќРµРїСЂРµРґРІРёРґРµРЅРЅР°СЏ РѕС€РёР±РєР°, СѓРґР°Р»РµРЅРёРµ РЅРµРІРѕР·РјРѕР¶РЅРѕ!','Р’РЅРёРјР°РЅРёРµ!', MB_OK or MB_ICONERROR);
       Q.Free;
       exit;
     end;
@@ -746,7 +700,7 @@ begin
         except
         end;
         Q.next;
-        ShowTextMessage('Осталось удалить ' + IntToStr(Q.RecordCount - Q.RecNo) + ' записей...', False);
+        ShowTextMessage('РћСЃС‚Р°Р»РѕСЃСЊ СѓРґР°Р»РёС‚СЊ ' + IntToStr(Q.RecordCount - Q.RecNo) + ' Р·Р°РїРёСЃРµР№...', False);
       end;
       SP.Free;
     end;
@@ -757,14 +711,14 @@ begin
     Q.Free;
   end;
 end;
-{$ENDREGION 'Удалить вагон'}
+{$ENDREGION 'РЈРґР°Р»РёС‚СЊ РІР°РіРѕРЅ'}
 
-{$REGION 'Фильтр по всем записям'}
+{$REGION 'Р¤РёР»СЊС‚СЂ РїРѕ РІСЃРµРј Р·Р°РїРёСЃСЏРј'}
 procedure TfmFactInc.dxBarButton_FilterRecords1Click(Sender: TObject);
 begin
   cxGrid1DBBandedTableView1.Filtering.ColumnFilteredItemsList := not dxBarButton_FilterRecords1.Down;
 end;
-{$ENDREGION 'Фильтр по всем записям'}
+{$ENDREGION 'Р¤РёР»СЊС‚СЂ РїРѕ РІСЃРµРј Р·Р°РїРёСЃСЏРј'}
 
 procedure TfmFactInc.dxBarButton_LoadDBFClick(Sender: TObject);
 type
@@ -784,7 +738,7 @@ var OpenDialog      : TOpenDialog;
     fact_inc_id     : integer;
 begin
   OpenDialog           := TOpenDialog.Create(self);
-  OpenDialog.Filter    := 'Файлы dbf|*.dbf';
+  OpenDialog.Filter    := 'Р¤Р°Р№Р»С‹ dbf|*.dbf';
   OpenDialog.DefaultExt:= 'dbf';
   OpenDialog.Options   := [ofHideReadOnly,ofAllowMultiSelect,ofEnableSizing];
 
@@ -801,7 +755,7 @@ begin
   Q.SQL.Add('SELECT file_name_dbf FROM view_fact_inc_temp WHERE file_name_dbf = ''' + ExtractFileName(file_name) + ''' AND users_group_id = ' + IntToStr(usr_pwd.user_group_id) + '');
   Q.Open;
   if Q.RecordCount > 0 then begin
-    Application.MessageBox('Информация из файла с таким именем уже загружена!!!','Внимание',MB_OK);
+    Application.MessageBox('РРЅС„РѕСЂРјР°С†РёСЏ РёР· С„Р°Р№Р»Р° СЃ С‚Р°РєРёРј РёРјРµРЅРµРј СѓР¶Рµ Р·Р°РіСЂСѓР¶РµРЅР°!!!','Р’РЅРёРјР°РЅРёРµ',MB_OK);
     Q.Free;
     exit;
   end;
@@ -809,9 +763,9 @@ begin
 
   Screen.Cursor := crHourglass;
   Client_Records := TClientDataSet.Create(nil);
-  ShowTextMessage('Чтение информации из файла.', False);
+  ShowTextMessage('Р§С‚РµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё РёР· С„Р°Р№Р»Р°.', False);
   if ParserDBF(file_name, Client_Records, str_error) = False then begin
-    Application.MessageBox(Pchar(str_error),'Внимание',MB_OK);
+    Application.MessageBox(Pchar(str_error),'Р’РЅРёРјР°РЅРёРµ',MB_OK);
     Client_Records.Free;
     ShowTextMessage();
     Screen.Cursor := crDefault;
@@ -831,7 +785,7 @@ begin
   SP.Parameters.ParamByName('@type_action').Value := 4;
   SP.Parameters.ParamByName('@str_xml_load_dbf').Value := DataXMLToSQL(Client_Records);
   try
-    ShowTextMessage('Проверка информации.', False);
+    ShowTextMessage('РџСЂРѕРІРµСЂРєР° РёРЅС„РѕСЂРјР°С†РёРё.', False);
     SP.ExecProc;
   except
     Client_Records.Free;
@@ -859,15 +813,15 @@ begin
 
     fact_inc_id := -9;
     while not Client_Records.Eof do begin
-      ShowTextMessage('Осталось загрузить ' + IntToStr(Client_Records.RecordCount - Client_Records.RecNo) + ' вагонов ...', False);
+      ShowTextMessage('РћСЃС‚Р°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ ' + IntToStr(Client_Records.RecordCount - Client_Records.RecNo) + ' РІР°РіРѕРЅРѕРІ ...', False);
 //      SP.Parameters.Refresh;
       SP.Close;
       SP.Parameters.Clear;
       SP.Parameters.Refresh;
       SP.Parameters.ParamByName('@type_action'  ).Value := 0;
 
-      // первая запись без указания fact_inc_id
-      // далее мы указываем предыдущий загруженный вагон
+      // РїРµСЂРІР°СЏ Р·Р°РїРёСЃСЊ Р±РµР· СѓРєР°Р·Р°РЅРёСЏ fact_inc_id
+      // РґР°Р»РµРµ РјС‹ СѓРєР°Р·С‹РІР°РµРј РїСЂРµРґС‹РґСѓС‰РёР№ Р·Р°РіСЂСѓР¶РµРЅРЅС‹Р№ РІР°РіРѕРЅ
       SP.Parameters.ParamByName('@fact_inc_id').Value := iif(fact_inc_id = -9, null, fact_inc_id);
 
       if Client_Records.FieldByName('o_sto').Value <> '' then
@@ -1473,7 +1427,7 @@ begin
       Client_Records.Next;
     end;
     if p_om <> -9 then begin
-      ShowTextMessage('Пересчет сумм удержанных за там. деклар., охрану и штрафы', False);
+      ShowTextMessage('РџРµСЂРµСЃС‡РµС‚ СЃСѓРјРј СѓРґРµСЂР¶Р°РЅРЅС‹С… Р·Р° С‚Р°Рј. РґРµРєР»Р°СЂ., РѕС…СЂР°РЅСѓ Рё С€С‚СЂР°С„С‹', False);
       SP.Parameters.Refresh;
       SP.Parameters.ParamByName('@type_action').Value := 1;
       SP.Parameters.ParamByName('@p_god').Value := p_god;
@@ -1481,7 +1435,7 @@ begin
       SP.ExecProc;
     end;
   except
-    Application.MessageBox(Pchar('Непредвиденная ошибка, обратитесь к разработчикам.'),'Внимание',MB_OK);
+    Application.MessageBox(Pchar('РќРµРїСЂРµРґРІРёРґРµРЅРЅР°СЏ РѕС€РёР±РєР°, РѕР±СЂР°С‚РёС‚РµСЃСЊ Рє СЂР°Р·СЂР°Р±РѕС‚С‡РёРєР°Рј.'),'Р’РЅРёРјР°РЅРёРµ',MB_OK);
   end;
   ShowTextMessage();
   Client_Records.Free;
@@ -1489,7 +1443,7 @@ begin
   RefreshQueryGrid(cxGrid1DBBandedTableView1, 'fact_inc_id', cxGrid1DBBandedTableView1fact_inc_id.DataBinding.Field.AsInteger);
 end;
 
-{$REGION 'Отчёт по сч-ф в разрезе клиентов'}
+{$REGION 'РћС‚С‡С‘С‚ РїРѕ СЃС‡-С„ РІ СЂР°Р·СЂРµР·Рµ РєР»РёРµРЅС‚РѕРІ'}
 procedure TfmFactInc.dxBarButton_ReportClientClick(Sender: TObject);
 var    exApp,exWkb, exWks : variant;
                  line_cnt : integer;
@@ -1541,20 +1495,20 @@ begin
 
   try
 
-    ShowTextMessage('Формирование отчёта...', False);
+    ShowTextMessage('Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ РѕС‚С‡С‘С‚Р°...', False);
 
     exApp := CreateOleObject('Excel.Application');
     exWkb := exApp.Workbooks.Add(GetDocBlob(fmMain.Lis, 193));
     exWkb := exApp.ActiveWorkbook;
     exWks := exWkb.WorkSheets[1];
 
-    exWks.Range['C3'].Value := 'за период с ' + DateToStr(date_begin) + 'г. по ' + DateToStr(date_end) + 'г.';
+    exWks.Range['C3'].Value := 'Р·Р° РїРµСЂРёРѕРґ СЃ ' + DateToStr(date_begin) + 'Рі. РїРѕ ' + DateToStr(date_end) + 'Рі.';
 
     line_cnt := 6;
     zfto_score_id := -9;
     count_group := 0;
     while not Q.EOF do begin
-      ShowTextMessage('Осталось '+IntToStr(Q.RecordCount - Q.RecNo), False);
+      ShowTextMessage('РћСЃС‚Р°Р»РѕСЃСЊ '+IntToStr(Q.RecordCount - Q.RecNo), False);
       exWks.Range['B' + IntToStr(line_cnt+1) + ':G' + IntToStr(line_cnt+1)].Select;
       exWks.Range['B' + IntToStr(line_cnt+1) + ':G' + IntToStr(line_cnt+1)].Insert(-4121);
       if zfto_score_id = Q.FieldByName('zfto_score_id').AsInteger then begin
@@ -1612,7 +1566,7 @@ begin
     Screen.Cursor := crDefault;
   end;
 end;
-{$ENDREGION 'Отчёт по сч-ф в разрезе клиентов'}
+{$ENDREGION 'РћС‚С‡С‘С‚ РїРѕ СЃС‡-С„ РІ СЂР°Р·СЂРµР·Рµ РєР»РёРµРЅС‚РѕРІ'}
 
 procedure TfmFactInc.dxBarButton_SnapClick(Sender: TObject);
 var      SP  : TADOStoredProc;
@@ -1623,11 +1577,11 @@ contract_id  : integer;
 begin
   contract_id := -9;
   case TdxBarButton(sender).Tag of
-    0 : s := 'Привязать факт к счет-фактуре?';
-    1 : s := 'Отвязать факт от счет-фактуры?';
+    0 : s := 'РџСЂРёРІСЏР·Р°С‚СЊ С„Р°РєС‚ Рє СЃС‡РµС‚-С„Р°РєС‚СѓСЂРµ?';
+    1 : s := 'РћС‚РІСЏР·Р°С‚СЊ С„Р°РєС‚ РѕС‚ СЃС‡РµС‚-С„Р°РєС‚СѓСЂС‹?';
   end;
 
-  if Application.MessageBox(PChar(s), 'Внимание!', MB_YESNO or MB_ICONWARNING) = IDNO then
+  if Application.MessageBox(PChar(s), 'Р’РЅРёРјР°РЅРёРµ!', MB_YESNO or MB_ICONWARNING) = IDNO then
     exit;
 
   if TdxBarButton(sender).Tag = 0 then begin
@@ -1661,9 +1615,9 @@ begin
       SP.Parameters.ParamByName('@fact_inc_id').Value := cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1fact_inc_id.Index];
       SP.Parameters.ParamByName('@contract_id').Value := iif(contract_id = -9, Null, contract_id);
       SP.ExecProc;
-      ShowTextMessage('Осталось ' + IntToStr(cxGrid1DBBandedTableView1.Controller.SelectedRowCount - i) + ' записей...',  False);
+      ShowTextMessage('РћСЃС‚Р°Р»РѕСЃСЊ ' + IntToStr(cxGrid1DBBandedTableView1.Controller.SelectedRowCount - i) + ' Р·Р°РїРёСЃРµР№...',  False);
     end;
-    ShowTextMessage('Обновление информации...',  False);
+    ShowTextMessage('РћР±РЅРѕРІР»РµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё...',  False);
     RefreshQueryGrid(cxGrid1DBBandedTableView1, 'fact_inc_id', cxGrid1DBBandedTableView1fact_inc_id.DataBinding.Field.AsInteger);
   finally
     ShowTextMessage;
@@ -1679,7 +1633,7 @@ begin
   Screen.Cursor := -11;
   d := Now;
 
-  // Если в качестве SQL пришла пустая строка, то заменяем ее на пустой RS
+  // Р•СЃР»Рё РІ РєР°С‡РµСЃС‚РІРµ SQL РїСЂРёС€Р»Р° РїСѓСЃС‚Р°СЏ СЃС‚СЂРѕРєР°, С‚Рѕ Р·Р°РјРµРЅСЏРµРј РµРµ РЅР° РїСѓСЃС‚РѕР№ RS
   if sql_string = '' then
     sql_string := 'SELECT * FROM view_fact_inc_temp WHERE 1=0';
 
@@ -1690,7 +1644,7 @@ begin
   DS_FactInc.DataSet := Query_FactIncDBF;
 
   Screen.Cursor := 0;
-  fmMain.dxStatusBar1.Panels[3].Text := IntToStr(SecondsBetween(now, d)) + ' сек.';
+  fmMain.dxStatusBar1.Panels[3].Text := IntToStr(SecondsBetween(now, d)) + ' СЃРµРє.';
 end;
 
 procedure TfmFactInc.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -1785,7 +1739,7 @@ begin
   Q.SQL.Add('AND dataot = (SELECT MIN(dataot) FROM fact_inc_temp JOIN users ON fact_inc_temp.users_id = users.users_id WHERE sto = @stn AND nvag = @nvag AND dataot >= @datpr AND (users_group_id = ' + IntToStr(usr_pwd.user_group_id) + '))');
 
   for i:=0 to FcxGridView.Controller.SelectedRowCount-1 do begin
-    ShowTextMessage('Осталось '+IntToStr(FcxGridView.Controller.SelectedRowCount - i)+' записей...', False);
+    ShowTextMessage('РћСЃС‚Р°Р»РѕСЃСЊ '+IntToStr(FcxGridView.Controller.SelectedRowCount - i)+' Р·Р°РїРёСЃРµР№...', False);
     Q.Close;
     Q.Parameters.ParamByName('stn').Value := FcxGridView.Controller.SelectedRows[i].Values[FcxGridView.GetColumnByFieldName('stn').Index];
     Q.Parameters.ParamByName('nvag').Value := FcxGridView.Controller.SelectedRows[i].Values[FcxGridView.GetColumnByFieldName('nvag').Index];
@@ -1797,7 +1751,7 @@ begin
   end;
   Delete(str_fact_inc_id, 1, 1);
   if str_fact_inc_id <> '' then begin
-    ShowTextMessage('Запрос к базе на порожние вагоны...', False);
+    ShowTextMessage('Р—Р°РїСЂРѕСЃ Рє Р±Р°Р·Рµ РЅР° РїРѕСЂРѕР¶РЅРёРµ РІР°РіРѕРЅС‹...', False);
     Query_FindEmpty.Close;
     Query_FindEmpty.SQL.Clear;
     Query_FindEmpty.SQL.Add('SELECT * FROM view_fact_inc_temp WHERE fact_inc_id IN ('+str_fact_inc_id+')');
@@ -1806,7 +1760,7 @@ begin
 
   cxTabControl1.Visible := True;
   cxTabControl1.TabIndex := 1;
-  cxTabControl1.Tabs[1].Caption := 'Порожние вагоны';
+  cxTabControl1.Tabs[1].Caption := 'РџРѕСЂРѕР¶РЅРёРµ РІР°РіРѕРЅС‹';
 
   Q.Free;
   ShowTextMessage;
@@ -1842,7 +1796,7 @@ begin
   Q.SQL.Add('AND datpr = (SELECT MAX(datpr) FROM fact_inc_temp JOIN users ON fact_inc_temp.users_id = users.users_id WHERE stn = @sto AND nvag = @nvag AND datpr < @dataot AND (users_group_id = ' + IntToStr(usr_pwd.user_group_id) + '))');
 
   for i:=0 to FcxGridView.Controller.SelectedRowCount-1 do begin
-    ShowTextMessage('Осталось '+IntToStr(FcxGridView.Controller.SelectedRowCount - i)+' записей...', False);
+    ShowTextMessage('РћСЃС‚Р°Р»РѕСЃСЊ '+IntToStr(FcxGridView.Controller.SelectedRowCount - i)+' Р·Р°РїРёСЃРµР№...', False);
     Q.Close;
     Q.Parameters.ParamByName('sto').Value := FcxGridView.Controller.SelectedRows[i].Values[FcxGridView.GetColumnByFieldName('sto').Index];
     Q.Parameters.ParamByName('nvag').Value := FcxGridView.Controller.SelectedRows[i].Values[FcxGridView.GetColumnByFieldName('nvag').Index];
@@ -1854,7 +1808,7 @@ begin
   end;
   Delete(str_fact_inc_id, 1, 1);
 
-  ShowTextMessage('Запрос к базе на порожние вагоны...', False);
+  ShowTextMessage('Р—Р°РїСЂРѕСЃ Рє Р±Р°Р·Рµ РЅР° РїРѕСЂРѕР¶РЅРёРµ РІР°РіРѕРЅС‹...', False);
   Query_FindEmpty.Close;
   Query_FindEmpty.SQL.Clear;
   Query_FindEmpty.SQL.Add('SELECT * FROM view_fact_inc_temp WHERE fact_inc_id IN ('+str_fact_inc_id+')');
@@ -1862,7 +1816,7 @@ begin
 
   cxTabControl1.Visible := True;
   cxTabControl1.TabIndex := 1;
-  cxTabControl1.Tabs[1].Caption := 'Гружёные вагоны';
+  cxTabControl1.Tabs[1].Caption := 'Р“СЂСѓР¶С‘РЅС‹Рµ РІР°РіРѕРЅС‹';
 
   Q.Free;
   ShowTextMessage;
@@ -1873,175 +1827,6 @@ procedure TfmFactInc.N25Click(Sender: TObject);
 begin
   SetRecordColor('fact_inc_id', cxGrid1DBBandedTableView1, 'FACT_INC_TEMP', TMenuItem(Sender).Tag=1, 'fact_inc_color');
   RefreshQueryGrid(cxGrid1DBBandedTableView1, 'fact_inc_id', cxGrid1DBBandedTableView1fact_inc_id.DataBinding.Field.AsInteger);
-end;
-
-procedure TfmFactInc.N34Click(Sender: TObject);
-var
-  exWks : variant;
-  fact_len   : boolean;
-  prev_len   : boolean;
-  i     : integer;
-  Q     : TADOQuery;
-  DS_err: TADODataSet;
-  SP    : TADOStoredProc;
-  cnt_ignor_distance  : integer;
-  cnt_error           : integer;
-  cnt_ok              : integer;
-  dist  : variant;
-  rows  : integer;
-  rate_val : currency;
-  set_nds  : boolean;
-  nds_rate : currency;
-  str_mess : string;
-  set_iskl : boolean;
-  set_vagon_rate : boolean;
-
-  cod_shablon : integer;
-begin
-  cod_shablon := TComponent(Sender).Tag;
-
-  // 'Сетка_ПГК_Сверка.xls'
-  // 'Сетка_ФГК_Сверка.xls'
-  if not GetWorkSheetPGK(GetDocBlob(fmMain.Lis, cod_shablon), exWks, False, set_nds, fact_len, prev_len) then
-    exit;
-
-  // По умолчанию ставка с НДС (внутрянка)
-  set_nds := True;
-  nds_rate := 20;
-
-  // Проверка на исключение
-  set_iskl := False;
-  set_vagon_rate := False;
-  if VarToStr(exWks.Cells[1, 1].Value) = '<Исключениe>' then begin
-    set_iskl := True;
-    DS_err := TADODataSet.Create(nil);
-    DS_err.FieldDefs.Add( 'id'         , ftInteger  );
-    DS_err.FieldDefs.Add( 'node_begin' , ftString   , 255);
-    DS_err.FieldDefs.Add( 'node_end'   , ftString   , 255);
-    DS_err.FieldDefs.Add( 'kargo'      , ftString   , 255);
-    DS_err.FieldDefs.Add( 'rate'       , ftCurrency );
-    DS_err.FieldDefs.Add( 'nds'        , ftInteger  );
-    DS_err.FieldDefs.Add( 'period'     , ftString   , 255);
-    DS_err.FieldDefs.Add( 'vagon_rate' , ftInteger  );
-    DS_err.CreateDataSet;
-
-    // Заполняем rs
-    rows := 3;
-    while True do begin
-      if TVarData(exWks.Cells[rows, 1].Value).VType = varEmpty then break;
-
-      DS_err.Append;
-      DS_err.Fields[0].Value := rows - 2;
-      DS_err.Fields[1].Value := exWks.Cells[rows, 1].Value;
-      DS_err.Fields[2].Value := exWks.Cells[rows, 2].Value;
-      DS_err.Fields[3].Value := exWks.Cells[rows, 3].Value;
-      DS_err.Fields[4].Value := exWks.Cells[rows, 4].Value;
-      DS_err.Fields[5].Value := exWks.Cells[rows, 5].Value;
-      DS_err.Fields[6].Value := exWks.Cells[rows, 6].Value;
-      DS_err.Fields[7].Value := exWks.Cells[rows, 7].Value;
-      DS_err.Post;
-
-      rows := rows + 1;
-    end;
-
-    fmFilter := TfmFilter.Create(1, DS_err, 'id', 'node_begin', 'node_end');
-    fmFilter._SetRateChoose := True;
-    if fmFilter.ShowModal() = mrOk then begin
-      DS_err.Locate('id', fmFilter.GetId, []);
-      rate_val       := DS_err.FieldByName('rate').AsCurrency;
-      set_nds        := (DS_err.FieldByName('nds').AsInteger <> 0);
-      nds_rate       := DS_err.FieldByName('nds').AsInteger;
-      set_vagon_rate := (DS_err.FieldByName('vagon_rate').AsInteger <> 0);
-    end else begin
-      fmFilter.Free;
-      DS_err.Free;
-      exit;
-    end;
-
-    fmFilter.Free;
-    DS_err.Free;
-  end;
-
-  Q := TADOQuery.Create(nil);
-  Q.Connection := fmMain.Lis;
-
-  SP := TADOStoredProc.Create(nil);
-  SP.Connection := fmMain.Lis;
-  SP.ProcedureName := 'sp_FactInc_UpdateRate';
-  SP.Parameters.Refresh;
-
-  cnt_ignor_distance  := 0;
-  cnt_error           := 0;
-  cnt_ok              := 0;
-  for i := 0 to FcxGridView.Controller.SelectedRowCount - 1 do begin
-    ShowTextMessage('Обработка вагона ' + IntToStr(i+1) + ' из ' + IntToStr(FcxGridView.Controller.SelectedRowCount), False);
-
-    try
-
-      // Если исключение, то ставку мы уже знаем
-      if not set_iskl then begin
-        // Получаем расстояние - проверка расстояния
-        Q.Close;
-        Q.SQL.Clear;
-        Q.SQL.Add('SELECT p_lmar FROM fact_inc WHERE fact_inc_id = ' + String(FcxGridView.Controller.SelectedRows[i].Values[FcxGridView.GetColumnByFieldName('fact_inc_id').Index]));
-        Q.Open;
-
-        dist := Q.FieldByName('p_lmar').Value;
-        if dist = null then begin
-          inc(cnt_ignor_distance);
-          break;
-        end;
-
-        // Находим ставку
-        rows := 2;
-        rate_val := 0;
-        while True do begin
-          if TVarData(exWks.Cells[rows, 1].Value).VType = varEmpty then break;
-
-          if (exWks.Range['A'+IntToStr(rows)].Value <= dist)
-              and (dist <= exWks.Range['B'+IntToStr(rows)].Value)
-          then begin
-            rate_val := exWks.Range['C'+IntToStr(rows)].Value;
-            break;
-          end;
-          rows := rows + 1;
-        end;
-      end;
-
-      // Выполняем ХП по обновлению ставки
-      SP.Close;
-      SP.Parameters.ParamByName('@fact_inc_id').Value    := FcxGridView.Controller.SelectedRows[i].Values[FcxGridView.GetColumnByFieldName('fact_inc_id').Index];
-      SP.Parameters.ParamByName('@rate').Value           := rate_val;
-      SP.Parameters.ParamByName('@set_nds').Value        := set_nds;
-      SP.Parameters.ParamByName('@nds_rate').Value       := nds_rate;
-      SP.Parameters.ParamByName('@set_vagon_rate').Value := set_vagon_rate;
-
-      SP.ExecProc;
-
-      inc(cnt_ok);
-    except
-      inc(cnt_error);
-    end;
-
-  end;
-
-  // Обновляем форму
-  dxBarButton2.Click;
-  // Выводим отчет
-  str_mess := 'Обновлено строк: ' + IntToStr(cnt_ok) + #13#10;
-  if cnt_ignor_distance > 0 then str_mess := str_mess + 'Пропущено строк (не указано расстояние): ' + IntToStr(cnt_ignor_distance) + #13#10;
-  if cnt_error > 0 then str_mess := str_mess + 'Ошибки при обработке: ' + IntToStr(cnt_error) + #13#10;
-
-  Application.MessageBox(PChar(str_mess), '', MB_OK or MB_ICONINFORMATION);
-
-  Q.Free;
-  SP.Free;
-
-  exWks.Application.Quit;
-  exWks := Null;
-  VarClear(exWks);
-
-  ShowTextMessage;
 end;
 
 procedure TfmFactInc.N20Click(Sender: TObject);
@@ -2079,7 +1864,7 @@ begin
     fmAgree2.ShowModal;
   end else begin
     fmAgree2.Close;
-    Application.MessageBox('Нет прав для просмотра приложения', '', MB_OK or MB_ICONINFORMATION);
+    Application.MessageBox('РќРµС‚ РїСЂР°РІ РґР»СЏ РїСЂРѕСЃРјРѕС‚СЂР° РїСЂРёР»РѕР¶РµРЅРёСЏ', '', MB_OK or MB_ICONINFORMATION);
   end;
 end;
 
@@ -2090,7 +1875,7 @@ end;
 
 procedure TfmFactInc.Change_SQL_Procedures(v : variant);
 begin
-  Caption := 'Нарастающий факт по ж/д (' + v[11] + ')';
+  Caption := 'РќР°СЂР°СЃС‚Р°СЋС‰РёР№ С„Р°РєС‚ РїРѕ Р¶/Рґ (' + v[11] + ')';
   Fexpeditor := v[11];
   case v[1] of
     0: begin
@@ -2136,7 +1921,7 @@ begin
   end;
 end;
 
-{$REGION 'Привязать факт к счет-фактуре (вручную)'}
+{$REGION 'РџСЂРёРІСЏР·Р°С‚СЊ С„Р°РєС‚ Рє СЃС‡РµС‚-С„Р°РєС‚СѓСЂРµ (РІСЂСѓС‡РЅСѓСЋ)'}
 procedure TfmFactInc.dxBarButton_AddSnapClick(Sender: TObject);
 var          i : integer;
  zfto_score_id : integer;
@@ -2162,14 +1947,14 @@ begin
     SP.Connection := fmMain.Lis;
     SP.ProcedureName := 'sp_load_link_dbf';
     SP.Parameters.Refresh;
-    ShowTextMessage('Обработка факта...', False);
+    ShowTextMessage('РћР±СЂР°Р±РѕС‚РєР° С„Р°РєС‚Р°...', False);
     for i := 0 to cxGrid1DBBandedTableView1.Controller.SelectedRowCount - 1 do begin
       SP.Close;
       SP.Parameters.ParamByName('@type_action').Value := 2;
       SP.Parameters.ParamByName('@fact_inc_id').Value := cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1fact_inc_id.Index];
       SP.Parameters.ParamByName('@zfto_score_id').Value := zfto_score_id;
       SP.ExecProc;
-      ShowTextMessage('Осталось ' + IntToStr(cxGrid1DBBandedTableView1.Controller.SelectedRowCount - i) + ' записей...',  False);
+      ShowTextMessage('РћСЃС‚Р°Р»РѕСЃСЊ ' + IntToStr(cxGrid1DBBandedTableView1.Controller.SelectedRowCount - i) + ' Р·Р°РїРёСЃРµР№...',  False);
     end;
     RefreshQueryGrid(cxGrid1DBBandedTableView1, 'fact_inc_id', cxGrid1DBBandedTableView1fact_inc_id.DataBinding.Field.AsInteger);
   finally
@@ -2179,7 +1964,7 @@ begin
   end;
 
 end;
-{$ENDREGION 'Привязать факт к счет-фактуре (вручную)'}
+{$ENDREGION 'РџСЂРёРІСЏР·Р°С‚СЊ С„Р°РєС‚ Рє СЃС‡РµС‚-С„Р°РєС‚СѓСЂРµ (РІСЂСѓС‡РЅСѓСЋ)'}
 
 
 end.
