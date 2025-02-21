@@ -303,7 +303,11 @@ begin
     FProcParam4 := cxRadioGroup1.ItemIndex;
   end;
 
-  expeditor := cxComboBox3.ItemIndex;
+
+  if cxComboBox3.ItemIndex = 0 then expeditor :=  0;
+  if cxComboBox3.ItemIndex = 1 then expeditor := 12;
+  if cxComboBox3.ItemIndex = 2 then expeditor := 13;
+
   month := cxComboBox4.ItemIndex + 1;
   year := StrToInt(cxComboBox5.Text);
   expeditor_name := cxComboBox3.Text;
