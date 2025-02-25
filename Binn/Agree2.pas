@@ -26215,7 +26215,7 @@ begin
     else
       exWks.Range['I' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('calc_weight').AsFloat;
     exWks.Range['J' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('date_delivery').Value;
-    exWks.Range['K' + IntToStr(recXls)].Value := '';
+    exWks.Range['K' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('distance').Value;
     exWks.Range['L' + IntToStr(recXls)].Value := SP_Balans_Detail.FieldByName('rate').Value;
 
 
