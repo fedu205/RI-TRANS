@@ -553,6 +553,7 @@ end;
 procedure TfmAgreeFactInc.N9Click(Sender: TObject);
 const array_first           : array[1..2] of string = ('1', '''1''');
 var str_vagon, sql_string   : string;
+    str_fact_id             : string;
         i                   : integer;
         str_type_self       : string;
         SP                  : TADOStoredProc;
@@ -574,8 +575,9 @@ begin
   cxGrid1DBBandedTableView1.DataController.GotoFirst;
   case Ftype_str of
     1 : begin
-          if (cxGrid1DBBandedTableView1num_vagon_F.DataBinding.Field.AsString <> '') AND (cxGrid1DBBandedTableView1num_vagon_Z.DataBinding.Field.AsString = '') then
-            str_vagon := cxGrid1DBBandedTableView1num_vagon_F.DataBinding.Field.AsString;
+          if (cxGrid1DBBandedTableView1num_vagon_F.DataBinding.Field.AsString <> '') AND (cxGrid1DBBandedTableView1num_vagon_Z.DataBinding.Field.AsString = '') then begin
+            str_fact_id := cxGrid1DBBandedTableView1fact_id.DataBinding.Field.AsString;
+          end;
         end;
     2 : begin
           if (cxGrid1DBBandedTableView1num_konten_F.DataBinding.Field.AsString <> '') AND (cxGrid1DBBandedTableView1num_konten_Z.DataBinding.Field.AsString = '') then
@@ -587,8 +589,9 @@ begin
     cxGrid1DBBandedTableView1.DataController.GotoNext;
     case Ftype_str of
       1 : begin
-            if (cxGrid1DBBandedTableView1num_vagon_F.DataBinding.Field.AsString <> '') AND (cxGrid1DBBandedTableView1num_vagon_Z.DataBinding.Field.AsString = '') then
-              str_vagon := str_vagon + ',' + cxGrid1DBBandedTableView1num_vagon_F.DataBinding.Field.AsString;
+            if (cxGrid1DBBandedTableView1num_vagon_F.DataBinding.Field.AsString <> '') AND (cxGrid1DBBandedTableView1num_vagon_Z.DataBinding.Field.AsString = '') then begin
+              str_fact_id := str_fact_id + ',' + cxGrid1DBBandedTableView1fact_id.DataBinding.Field.AsString;
+            end;
           end;
       2 : begin
             if (cxGrid1DBBandedTableView1num_konten_F.DataBinding.Field.AsString <> '') AND (cxGrid1DBBandedTableView1num_konten_Z.DataBinding.Field.AsString = '') then
@@ -598,8 +601,11 @@ begin
   until (cxGrid1DBBandedTableView1.DataController.IsEOF);
   cxGrid1DBBandedTableView1.DataController.GotoFirst;
 
+
   if Ftype_str = 1 then
-    sql_string := 'SELECT * FROM view_fact_inc_temp WHERE (nvag IN('+str_vagon+')) '
+    sql_string := 'SELECT	view_fact_inc_temp.* ' +
+                  'FROM	view_fact_inc_temp inner join fact on view_fact_inc_temp.nvag = fact.num_vagon and (isnull(view_fact_inc_temp.ndser,'''') + cast(view_fact_inc_temp.ndnum as varchar(100))) = (isnull(fact.num_document_pref,'''') + cast(fact.num_document as varchar(200))) ' +
+                  'WHERE	(fact.fact_id IN (' + str_fact_id + ')) '
   else
     sql_string := 'SELECT * FROM view_fact_inc_temp WHERE (nkont IN('+str_vagon+')) ';
 
@@ -618,6 +624,9 @@ begin
   sql_string := sql_string + ' AND YEAR(dataot) = ' + IntToStr(year);
 
   Q.Free;
+
+//  showmessage(str_fact_id);
+//  showmessage(sql_string);
 
   fmFactInc := TfmFactInc.Create(Application, True);
   fmFactInc._GetData_DBF := sql_string;
