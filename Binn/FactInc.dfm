@@ -485,7 +485,7 @@ object fmFactInc: TfmFactInc
           HeaderGlyph.SourceDPI = 96
           HeaderGlyph.Data = {
             424D360400000000000036000000280000001000000010000000010020000000
-            000000000000C40E0000C40E00000000000000000000FFFFFF00FFFFFF00FFFF
+            00000000000074120000741200000000000000000000FFFFFF00FFFFFF00FFFF
             FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
             FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
             FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
@@ -1678,9 +1678,10 @@ object fmFactInc: TfmFactInc
       ItemLinks = <
         item
           Visible = True
-          ItemName = 'dxBarSubItem_GroupDBF'
+          ItemName = 'dxBarButton6'
         end
         item
+          BeginGroup = True
           Visible = True
           ItemName = 'dxBarButton1'
         end
