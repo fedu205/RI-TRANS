@@ -604,7 +604,9 @@ begin
 
   if Ftype_str = 1 then
     sql_string := 'SELECT	view_fact_inc_temp.* ' +
-                  'FROM	view_fact_inc_temp inner join fact on view_fact_inc_temp.nvag = fact.num_vagon and (isnull(view_fact_inc_temp.ndser,'''') + cast(view_fact_inc_temp.ndnum as varchar(100))) = (isnull(fact.num_document_pref,'''') + cast(fact.num_document as varchar(200))) ' +
+                  'FROM	view_fact_inc_temp inner join fact on ' +
+                  'view_fact_inc_temp.nvag = fact.num_vagon and ' +
+                  '(isnull(view_fact_inc_temp.ndser,'''') + right(''000000'' + cast(view_fact_inc_temp.ndnum as varchar(100)),6)) = (isnull(fact.num_document_pref,'''') + cast(fact.num_document as varchar(200))) ' +
                   'WHERE	(fact.fact_id IN (' + str_fact_id + ')) '
   else
     sql_string := 'SELECT * FROM view_fact_inc_temp WHERE (nkont IN('+str_vagon+')) ';
