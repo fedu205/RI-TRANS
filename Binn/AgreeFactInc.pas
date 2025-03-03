@@ -601,10 +601,6 @@ begin
   until (cxGrid1DBBandedTableView1.DataController.IsEOF);
   cxGrid1DBBandedTableView1.DataController.GotoFirst;
 
-  if str_fact_id <> '' then
-    Delete(str_fact_id, 1, 1);
-
-
   if Ftype_str = 1 then
     sql_string := 'SELECT	view_fact_inc_temp.* ' +
                   'FROM	view_fact_inc_temp INNER JOIN fact ON ' +
