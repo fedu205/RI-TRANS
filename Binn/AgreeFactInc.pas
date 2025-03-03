@@ -601,12 +601,15 @@ begin
   until (cxGrid1DBBandedTableView1.DataController.IsEOF);
   cxGrid1DBBandedTableView1.DataController.GotoFirst;
 
+  if str_fact_id <> '' then
+    Delete(str_fact_id, 1, 1);
+
 
   if Ftype_str = 1 then
     sql_string := 'SELECT	view_fact_inc_temp.* ' +
                   'FROM	view_fact_inc_temp INNER JOIN fact ON ' +
                   'view_fact_inc_temp.nvag = fact.num_vagon AND ' +
-                  '(right(''000000'' + cast(view_fact_inc_temp.ndnum as varchar(100)),6) = RIGHT(cast(fact.num_document as varchar(200)), 6) ) ' +
+                  '(right(''000000'' + cast(view_fact_inc_temp.ndnum as varchar(100)), 6) = RIGHT(cast(fact.num_document as varchar(200)), 6) ) ' +
                   'WHERE	(fact.fact_id IN (' + str_fact_id + ')) '
   else
     sql_string := 'SELECT * FROM view_fact_inc_temp WHERE (nkont IN('+str_vagon+')) ';
