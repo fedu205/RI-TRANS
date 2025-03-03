@@ -590,7 +590,10 @@ begin
     case Ftype_str of
       1 : begin
             if (cxGrid1DBBandedTableView1num_vagon_F.DataBinding.Field.AsString <> '') AND (cxGrid1DBBandedTableView1num_vagon_Z.DataBinding.Field.AsString = '') then begin
-              str_fact_id := str_fact_id + ',' + cxGrid1DBBandedTableView1fact_id.DataBinding.Field.AsString;
+              if str_fact_id = '' then
+                str_fact_id := cxGrid1DBBandedTableView1fact_id.DataBinding.Field.AsString
+              else
+                str_fact_id := str_fact_id + ',' + cxGrid1DBBandedTableView1fact_id.DataBinding.Field.AsString;
             end;
           end;
       2 : begin
