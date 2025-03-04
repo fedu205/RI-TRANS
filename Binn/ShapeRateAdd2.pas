@@ -26,7 +26,8 @@ uses
   Vcl.StdCtrls, cxGroupBox, cxLabel, Vcl.Buttons, Vcl.ExtCtrls, Vcl.Menus,
   cxButtons, cxRadioGroup, Data.DB, Datasnap.DBClient, cxClasses,
   cxPropertiesStore, Data.Win.ADODB, Raznoe, Default, Filter, Period, DateUtils, dxSkinTheBezier, StrUtils,
-  dxBar, dxSkinOffice2019Colorful, dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray, dxSkinOffice2019White;
+  dxBar, dxSkinOffice2019Colorful, dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray, dxSkinOffice2019White,
+  dxSkinWXI;
 
 type
   TfmShapeRateAdd2 = class(TForm)

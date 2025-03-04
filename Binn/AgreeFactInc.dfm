@@ -1338,8 +1338,8 @@ object fmAgreeFactInc: TfmAgreeFactInc
   end
   object DS_Sverka: TDataSource
     DataSet = SP_AgreeFactInc_Sverka
-    Left = 180
-    Top = 159
+    Left = 140
+    Top = 279
   end
   object SP_ZFTOAct: TADOStoredProc
     Connection = fmMain.Lis
@@ -1433,8 +1433,8 @@ object fmAgreeFactInc: TfmAgreeFactInc
       'SELECT * FROM view_bargain_rights WITH (NOLOCK)'
       'WHERE bargain_id = :bargain_id '
       '')
-    Left = 218
-    Top = 130
+    Left = 338
+    Top = 234
   end
   object dxBarManager1: TdxBarManager
     Tag = 555
@@ -1910,8 +1910,8 @@ object fmAgreeFactInc: TfmAgreeFactInc
         ItemName = 'N26'
       end>
     UseOwnFont = False
-    Left = 178
-    Top = 189
+    Left = 274
+    Top = 341
     PixelsPerInch = 96
   end
   object SP_AgreeFactInc_Sverka: TADOStoredProc
@@ -1919,7 +1919,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
     Filtered = True
     ProcedureName = 'sp_AgreeFactInc_Sverka2;1'
     Parameters = <>
-    Left = 181
-    Top = 131
+    Left = 93
+    Top = 183
   end
 end

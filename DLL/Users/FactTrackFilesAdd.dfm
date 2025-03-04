@@ -21,7 +21,6 @@ object fmFactTrackFilesAdd: TfmFactTrackFilesAdd
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 1
-    ExplicitTop = 109
     DesignSize = (
       511
       34)
@@ -162,7 +161,6 @@ object fmFactTrackFilesAdd: TfmFactTrackFilesAdd
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 0
-    ExplicitHeight = 109
     object Label18: TLabel
       Left = 5
       Top = 15

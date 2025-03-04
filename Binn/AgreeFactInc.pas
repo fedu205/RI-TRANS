@@ -569,6 +569,7 @@ begin
   end else
     Exit;
 
+
   Screen.Cursor := crHourglass;
 
   str_vagon := array_first[Ftype_str];
