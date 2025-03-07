@@ -189,6 +189,7 @@ begin
     0 : cxComboBox3.ItemIndex := 0;
    12 : cxComboBox3.ItemIndex := 1;
    13 : cxComboBox3.ItemIndex := 2;
+   14 : cxComboBox3.ItemIndex := 3;
   end;
 
   cxCheckBox4PropertiesChange(nil);
@@ -233,6 +234,7 @@ begin
     if cxComboBox3.ItemIndex = 0 then type_self :=  0;
     if cxComboBox3.ItemIndex = 1 then type_self := 12;
     if cxComboBox3.ItemIndex = 2 then type_self := 13;
+    if cxComboBox3.ItemIndex = 3 then type_self := 14;
 
 
     FResultString := FResultString + 'SELECT * FROM view_fact_inc_temp WITH (NOLOCK) WHERE (users_group_id = ' + IntToStr(Fusr_pwd.user_group_id) + ')';
@@ -308,6 +310,7 @@ begin
   if cxComboBox3.ItemIndex = 0 then expeditor :=  0;
   if cxComboBox3.ItemIndex = 1 then expeditor := 12;
   if cxComboBox3.ItemIndex = 2 then expeditor := 13;
+  if cxComboBox3.ItemIndex = 3 then expeditor := 14;
 
   month := cxComboBox4.ItemIndex + 1;
   year := StrToInt(cxComboBox5.Text);
