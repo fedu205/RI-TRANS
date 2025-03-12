@@ -1352,7 +1352,8 @@ object fmFactIncDlg: TfmFactIncDlg
           #1062#1060#1058#1054
           #1041#1040#1051#1058#1058#1056#1040#1053#1057#1057#1045#1056#1042#1048#1057
           #1059#1088#1072#1083' '#1051#1086#1075#1080#1089#1090#1080#1082#1072
-          #1043#1050' '#1042#1072#1075#1086#1085#1089#1077#1088#1074#1080#1089)
+          #1043#1050' '#1042#1072#1075#1086#1085#1089#1077#1088#1074#1080#1089
+          #1056#1058#1057)
         Properties.OnEditValueChanged = cxComboBox3PropertiesEditValueChanged
         Style.LookAndFeel.Kind = lfUltraFlat
         Style.LookAndFeel.NativeStyle = False

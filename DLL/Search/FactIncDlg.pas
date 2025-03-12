@@ -235,6 +235,7 @@ begin
     if cxComboBox3.ItemIndex = 1 then type_self := 12;
     if cxComboBox3.ItemIndex = 2 then type_self := 13;
     if cxComboBox3.ItemIndex = 3 then type_self := 14;
+    if cxComboBox3.ItemIndex = 4 then type_self := 15;
 
 
     FResultString := FResultString + 'SELECT * FROM view_fact_inc_temp WITH (NOLOCK) WHERE (users_group_id = ' + IntToStr(Fusr_pwd.user_group_id) + ')';
@@ -311,6 +312,7 @@ begin
   if cxComboBox3.ItemIndex = 1 then expeditor := 12;
   if cxComboBox3.ItemIndex = 2 then expeditor := 13;
   if cxComboBox3.ItemIndex = 3 then expeditor := 14;
+  if cxComboBox3.ItemIndex = 4 then expeditor := 15;
 
   month := cxComboBox4.ItemIndex + 1;
   year := StrToInt(cxComboBox5.Text);
