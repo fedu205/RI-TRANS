@@ -1092,7 +1092,8 @@ begin
       i := Query_Scene['num_rows'];
       while True do begin
         if (not Assigned(Sheet.Cells[i-1, num_col_end-1])) or (Sheet.Cells[i-1, num_col_end-1].IsEmpty) then
-          break;
+          if (not Assigned(Sheet.Cells[i-0, num_col_end-1])) or (Sheet.Cells[i-0, num_col_end-1].IsEmpty) then
+            break;
 
         cnt := cnt + 1;
         i := i + 1;
@@ -1107,120 +1108,126 @@ begin
       SP.ProcedureName := 'sp_FactInc_Load_PGK';
       SP.Parameters.Refresh;
 
-      while (Assigned(Sheet.Cells[i-1, num_col_end-1])) and (not Sheet.Cells[i-1, num_col_end-1].IsEmpty) do begin
+      while (Assigned(Sheet.Cells[i-1, num_col_end-1])) and (Assigned(Sheet.Cells[i-0, num_col_end-1]))
+            and
+            ((not Sheet.Cells[i-1, num_col_end-1].IsEmpty) or (not Sheet.Cells[i-0, num_col_end-1].IsEmpty)) do begin
         // цикл по столбцам сценария
 
-        for j := 0 to SP.Parameters.Count - 1 do begin
-          SP.Parameters.Items[j].Value := null;
+        if Sheet.Cells[i-1, num_col_end-1].AsString <> '' then begin
+
+
+          for j := 0 to SP.Parameters.Count - 1 do begin
+            SP.Parameters.Items[j].Value := null;
+          end;
+
+          SP.Parameters.ParamByName('@file_name_dbf').Value := file_name_dbf;
+  //        SP.Parameters.ParamByName('@zfto_score_num').Value := ComboBox1.Text;
+          SP.Parameters.ParamByName('@zfto_score_num').Value := dxSpreadSheet1.ActiveSheetAsTable.Caption;
+          SP.Parameters.ParamByName('@type_self').Value := Ffact_inc_type_self;
+
+          Query_SceneFact.First;
+          while not Query_SceneFact.Eof do begin
+            // наименование колонки
+            name_col := Query_SceneFact.FieldByName('fact_physic_name').AsString;
+            // значение
+            prepare_value := Sheet.Cells[i-1,Query_SceneFact.FieldByName('excel_num_column').AsInteger-1].AsString;
+            if prepare_value[1] = '''' then value_col := RightStr(prepare_value, Length(prepare_value) - 1)
+            else value_col := prepare_value;
+
+
+            //if ((name_col = 'node_begin') or (name_col = 'node_end')) and (Length(value_col) > 5) then value_col := Copy(value_col, 1, 5);
+
+            if ((name_col = 'node_begin') or (name_col = 'node_end')) then begin
+
+              if Length(value_col) > 8 then begin
+                 s := value_col;
+                 s := ReverseString(s);
+                 s := LeftStr(s, 7);
+                 s := ReverseString(s);
+                 s := LeftStr(s, 6);
+                 if TryStrToInt(s,n) then begin
+                    value_col := Copy(s, 1, 5);
+                 end;
+              end;
+
+
+
+              if TryStrToInt(value_col,n)  then begin
+                if Length(value_col)>5 then value_col := Copy(value_col, 1, 5);
+              end else begin
+                Q.SQL.Clear;
+                Q.SQL.Add('select top 1 inf_obj_cod_5 from view_inf_obj_node where inf_obj_name = ''' + value_col + '''  order by 1 desc');
+                Q.Open;
+
+                if Q.RecordCount > 0 then begin
+                  value_col := Q.FieldByName('inf_obj_cod_5').AsString;
+                end else
+                  value_col := '';
+              end;
+
+            end;
+
+            if (name_col = 'kargoETSNG')  then begin
+
+              if Length(value_col) > 8 then begin
+                 s := value_col;
+                 s := ReverseString(s);
+                 s := LeftStr(s, 7);
+                 s := ReverseString(s);
+                 s := LeftStr(s, 6);
+                 if TryStrToInt(s,n) then begin
+                    value_col := Copy(s, 1, 5);
+                 end;
+              end;
+
+              if TryStrToInt(value_col,n)  then begin
+                if Length(value_col)>5 then value_col := Copy(value_col, 1, 5);
+              end else begin
+                Q.SQL.Clear;
+                Q.SQL.Add('select top 1 inf_obj_cod from inf_obj_etsng where inf_obj_name = ''' + value_col + '''  order by 1 desc');
+                Q.Open;
+
+                if Q.RecordCount > 0 then begin
+                  value_col := Q.FieldByName('inf_obj_cod').AsString;
+                  value_col := Copy(value_col, 1, 5);
+                end else
+                  value_col := '';
+              end;
+
+            end;
+
+
+            case FSL.IndexOf(Query_SceneFact['fact_data_type']) of
+              0,2,4 : begin // число
+                value_col := ConvertDataType(value_col, Query_SceneFact['fact_data_type']);
+                if not TryStrToFloat(value_col, v_float) then value_col := null
+                else value_col := v_float;
+              end;
+              1,3 : begin // число - целое
+                value_col := ConvertDataType(value_col, Query_SceneFact['fact_data_type']);
+                if not TryStrToInt(value_col, v_int) then value_col := null
+                else value_col := v_int;
+              end;
+              5,6 : begin // дата
+                value_col := ReplaceStr(value_col, '  ', ' ');
+                if TryStrToDateTime(value_col, v_date) then value_col := DateOf(v_date)
+                else value_col := null;
+              end;
+            end;
+
+            //ShowMessage(name_col + '(' + Query_SceneFact['fact_data_type'] + ')' + ' : ' + String(value_col));
+
+            Param := SP.Parameters.ParamByName('@' + name_col);
+            if Param <> nil then Param.Value := value_col;
+
+            Query_SceneFact.Next;
+          end;
+
+          // Выполним ХП
+          SP.ExecProc;
+          file_name_dbf := SP.Parameters.ParamByName('@file_name_dbf').Value;
+          SP.Close;
         end;
-
-        SP.Parameters.ParamByName('@file_name_dbf').Value := file_name_dbf;
-//        SP.Parameters.ParamByName('@zfto_score_num').Value := ComboBox1.Text;
-        SP.Parameters.ParamByName('@zfto_score_num').Value := dxSpreadSheet1.ActiveSheetAsTable.Caption;
-        SP.Parameters.ParamByName('@type_self').Value := Ffact_inc_type_self;
-
-        Query_SceneFact.First;
-        while not Query_SceneFact.Eof do begin
-          // наименование колонки
-          name_col := Query_SceneFact.FieldByName('fact_physic_name').AsString;
-          // значение
-          prepare_value := Sheet.Cells[i-1,Query_SceneFact.FieldByName('excel_num_column').AsInteger-1].AsString;
-          if prepare_value[1] = '''' then value_col := RightStr(prepare_value, Length(prepare_value) - 1)
-          else value_col := prepare_value;
-
-
-          //if ((name_col = 'node_begin') or (name_col = 'node_end')) and (Length(value_col) > 5) then value_col := Copy(value_col, 1, 5);
-
-          if ((name_col = 'node_begin') or (name_col = 'node_end')) then begin
-
-            if Length(value_col) > 8 then begin
-               s := value_col;
-               s := ReverseString(s);
-               s := LeftStr(s, 7);
-               s := ReverseString(s);
-               s := LeftStr(s, 6);
-               if TryStrToInt(s,n) then begin
-                  value_col := Copy(s, 1, 5);
-               end;
-            end;
-
-
-
-            if TryStrToInt(value_col,n)  then begin
-              if Length(value_col)>5 then value_col := Copy(value_col, 1, 5);
-            end else begin
-              Q.SQL.Clear;
-              Q.SQL.Add('select top 1 inf_obj_cod_5 from view_inf_obj_node where inf_obj_name = ''' + value_col + '''  order by 1 desc');
-              Q.Open;
-
-              if Q.RecordCount > 0 then begin
-                value_col := Q.FieldByName('inf_obj_cod_5').AsString;
-              end else
-                value_col := '';
-            end;
-
-          end;
-
-          if (name_col = 'kargoETSNG')  then begin
-
-            if Length(value_col) > 8 then begin
-               s := value_col;
-               s := ReverseString(s);
-               s := LeftStr(s, 7);
-               s := ReverseString(s);
-               s := LeftStr(s, 6);
-               if TryStrToInt(s,n) then begin
-                  value_col := Copy(s, 1, 5);
-               end;
-            end;
-
-            if TryStrToInt(value_col,n)  then begin
-              if Length(value_col)>5 then value_col := Copy(value_col, 1, 5);
-            end else begin
-              Q.SQL.Clear;
-              Q.SQL.Add('select top 1 inf_obj_cod from inf_obj_etsng where inf_obj_name = ''' + value_col + '''  order by 1 desc');
-              Q.Open;
-
-              if Q.RecordCount > 0 then begin
-                value_col := Q.FieldByName('inf_obj_cod').AsString;
-                value_col := Copy(value_col, 1, 5);
-              end else
-                value_col := '';
-            end;
-
-          end;
-
-
-          case FSL.IndexOf(Query_SceneFact['fact_data_type']) of
-            0,2,4 : begin // число
-              value_col := ConvertDataType(value_col, Query_SceneFact['fact_data_type']);
-              if not TryStrToFloat(value_col, v_float) then value_col := null
-              else value_col := v_float;
-            end;
-            1,3 : begin // число - целое
-              value_col := ConvertDataType(value_col, Query_SceneFact['fact_data_type']);
-              if not TryStrToInt(value_col, v_int) then value_col := null
-              else value_col := v_int;
-            end;
-            5,6 : begin // дата
-              value_col := ReplaceStr(value_col, '  ', ' ');
-              if TryStrToDateTime(value_col, v_date) then value_col := DateOf(v_date)
-              else value_col := null;
-            end;
-          end;
-
-          //ShowMessage(name_col + '(' + Query_SceneFact['fact_data_type'] + ')' + ' : ' + String(value_col));
-
-          Param := SP.Parameters.ParamByName('@' + name_col);
-          if Param <> nil then Param.Value := value_col;
-
-          Query_SceneFact.Next;
-        end;
-
-        // Выполним ХП
-        SP.ExecProc;
-        file_name_dbf := SP.Parameters.ParamByName('@file_name_dbf').Value;
-        SP.Close;
 
         i := i + 1;
         ShowTextMessage('Осталось '+IntToStr(cnt-i+Query_Scene['num_rows'])+' строк...', False);

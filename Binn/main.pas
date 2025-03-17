@@ -262,6 +262,8 @@ type
     dxBarButton26: TdxBarButton;
     dxBarButton56: TdxBarButton;
     dxBarButton57: TdxBarButton;
+    dxBarButton60: TdxBarButton;
+    dxBarButton73: TdxBarButton;
     procedure dxBarButton61Click(Sender: TObject);
     procedure dxBarButton58Click(Sender: TObject);
     procedure dxBarSubItem15Popup(Sender: TObject);
