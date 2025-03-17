@@ -890,6 +890,18 @@ object fmAgree2: TfmAgree2
               Position.ColIndex = 41
               Position.RowIndex = 0
             end
+            object cxGrid2DBBandedTableView1distance: TcxGridDBBandedColumn
+              Caption = #1056#1072#1089#1089#1090#1086#1103#1085#1080#1077', '#1082#1084'.'
+              DataBinding.FieldName = 'distance'
+              DataBinding.IsNullValueType = True
+              PropertiesClassName = 'TcxCurrencyEditProperties'
+              Properties.DisplayFormat = '#,##0'
+              HeaderAlignmentVert = vaTop
+              Width = 60
+              Position.BandIndex = 0
+              Position.ColIndex = 43
+              Position.RowIndex = 0
+            end
           end
           object cxGrid2Level1: TcxGridLevel
             GridView = cxGrid2DBBandedTableView1

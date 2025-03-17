@@ -257,7 +257,7 @@ object fmFact: TfmFact
             item
               Format = '#,##0'
               Kind = skSum
-              Column = cxGrid1DBBandedTableView1distance1
+              Column = cxGrid1DBBandedTableView1distance
             end
             item
               Format = '#,##0.000'
@@ -1248,9 +1248,9 @@ object fmFact: TfmFact
             Position.ColIndex = 99
             Position.RowIndex = 0
           end
-          object cxGrid1DBBandedTableView1distance1: TcxGridDBBandedColumn
+          object cxGrid1DBBandedTableView1distance: TcxGridDBBandedColumn
             Caption = #1056#1072#1089#1089#1090#1086#1103#1085#1080#1077', '#1082#1084
-            DataBinding.FieldName = 'distance1'
+            DataBinding.FieldName = 'distance'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Options.VertSizing = False

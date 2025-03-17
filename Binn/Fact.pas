@@ -191,7 +191,7 @@ type
     cxGrid1DBBandedTableView1comment1: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1kargoETSNG_cod: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1nds: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1distance1: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1distance: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1etran_carTenantName: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1owner_name: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1type_park_name: TcxGridDBBandedColumn;

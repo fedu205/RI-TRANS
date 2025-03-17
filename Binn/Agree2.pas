@@ -958,6 +958,7 @@ type
     cxGrid3DBBandedTableView1date_period_finance: TcxGridDBBandedColumn;
     cxGrid7DBBandedTableView1shaping_rate_id: TcxGridDBBandedColumn;
     SP_FactClient: TADOStoredProc;
+    cxGrid2DBBandedTableView1distance: TcxGridDBBandedColumn;
     procedure dxBarButton25Click(Sender: TObject);
     procedure dxBarButton21Click(Sender: TObject);
     procedure dxBarButton19Click(Sender: TObject);
