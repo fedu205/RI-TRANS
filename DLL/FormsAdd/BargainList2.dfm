@@ -894,6 +894,7 @@ object fmBargainList2: TfmBargainList2
         LookAndFeel.NativeStyle = False
         LookAndFeel.ScrollbarMode = sbmClassic
         LookAndFeel.SkinName = 'Office2007Black'
+        ExplicitLeft = 3
         object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = dxBarPopupMenu1
           OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -1869,7 +1870,7 @@ object fmBargainList2: TfmBargainList2
                 Glyph.SourceDPI = 96
                 Glyph.Data = {
                   424D360400000000000036000000280000001000000010000000010020000000
-                  00000000000074120000741200000000000000000000B8A394FF69503DFF7059
+                  000000000000C40E0000C40E00000000000000000000B8A394FF69503DFF7059
                   46FF765F4EFF765F4EFF745C4AFF6F5745FF6C5340FF6E5643FF745C4AFF7862
                   51FF786251FF725B49FF6C5340FF654C38FF634935FFB9A596FFFDF8F6FFFDF7
                   F5FFE3D9D3FFFDF5F0FFFCF2EBFFD7CAC1FFFAE9DEFFFAE7DBFFD7CAC2FFFBEB
@@ -1940,7 +1941,7 @@ object fmBargainList2: TfmBargainList2
                 Glyph.SourceDPI = 96
                 Glyph.Data = {
                   424D360400000000000036000000280000001000000010000000010020000000
-                  00000000000074120000741200000000000000000000B8A394FF69503DFF7059
+                  000000000000C40E0000C40E00000000000000000000B8A394FF69503DFF7059
                   46FF765F4EFF765F4EFF745C4AFF6F5745FF6C5340FF6E5643FF745C4AFF7862
                   51FF786251FF725B49FF6C5340FF654C38FF634935FFB9A596FFFDF8F6FFFDF7
                   F5FFE3D9D3FFFDF5F0FFFCF2EBFFD7CAC1FFFAE9DEFFFAE7DBFFD7CAC2FFFBEB
@@ -2116,7 +2117,7 @@ object fmBargainList2: TfmBargainList2
                 Glyph.SourceDPI = 96
                 Glyph.Data = {
                   424D360400000000000036000000280000001000000010000000010020000000
-                  00000000000074120000741200000000000000000000B8A394FF69503DFF7059
+                  000000000000C40E0000C40E00000000000000000000B8A394FF69503DFF7059
                   46FF765F4EFF765F4EFF745C4AFF6F5745FF6C5340FF6E5643FF745C4AFF7862
                   51FF786251FF725B49FF6C5340FF654C38FF634935FFB9A596FFFDF8F6FFFDF7
                   F5FFE3D9D3FFFDF5F0FFFCF2EBFFD7CAC1FFFAE9DEFFFAE7DBFFD7CAC2FFFBEB
@@ -2340,7 +2341,7 @@ object fmBargainList2: TfmBargainList2
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
+        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -2424,7 +2425,7 @@ object fmBargainList2: TfmBargainList2
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
+        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -2648,6 +2649,7 @@ object fmBargainList2: TfmBargainList2
             LookAndFeel.NativeStyle = False
             LookAndFeel.ScrollbarMode = sbmClassic
             LookAndFeel.SkinName = 'Office2007Black'
+            ExplicitLeft = 3
             object cxGrid3DBBandedTableView1: TcxGridDBBandedTableView
               PopupMenu = dxBarPopupMenu3
               OnDblClick = dxBarButton19Click
@@ -4439,7 +4441,7 @@ object fmBargainList2: TfmBargainList2
       Tag = 500
       Caption = #1040#1085#1072#1083#1080#1079' '#1089#1090#1072#1074#1086#1082' '#1080#1079' '#1086#1090#1075#1088#1091#1079#1086#1095#1085#1086#1081' '#1080#1085#1092#1086#1088#1084#1072#1094#1080#1080
       Category = 0
-      Visible = ivNever
+      Visible = ivAlways
       ImageIndex = 143
       ShowCaption = False
       ItemLinks = <
@@ -4504,14 +4506,14 @@ object fmBargainList2: TfmBargainList2
     object dxBarSubItem6: TdxBarSubItem
       Caption = #1057#1090#1072#1074#1082#1080' '#1080#1079' '#1086#1090#1075#1088#1091#1079#1082#1080
       Category = 0
-      Visible = ivAlways
+      Visible = ivNever
       ItemLinks = <>
       OnPopup = dxBarSubItem6Popup
     end
     object dxBarSubItem7: TdxBarSubItem
       Caption = #1057#1090#1072#1074#1082#1080' '#1080#1079' '#1086#1090#1075#1088#1091#1079#1082#1080' (- '#1053#1044#1057') + %'
       Category = 0
-      Visible = ivAlways
+      Visible = ivNever
       ImageIndex = 145
       ItemLinks = <>
       OnPopup = dxBarSubItem7Popup
@@ -4519,21 +4521,21 @@ object fmBargainList2: TfmBargainList2
     object dxBarSubItem8: TdxBarSubItem
       Caption = #1057#1090#1072#1074#1082#1080' '#1080#1079' '#1086#1090#1075#1088#1091#1079#1082#1080' '#1088'. '#1042#1077#1089
       Category = 0
-      Visible = ivAlways
+      Visible = ivNever
       ItemLinks = <>
       OnPopup = dxBarSubItem8Popup
     end
     object dxBarSubItem9: TdxBarSubItem
       Caption = #1057#1090#1072#1074#1082#1080' '#1080#1079' '#1086#1090#1075#1088#1091#1079#1082#1080' '#1092'. '#1042#1077#1089
       Category = 0
-      Visible = ivAlways
+      Visible = ivNever
       ItemLinks = <>
       OnPopup = dxBarSubItem9Popup
     end
     object dxBarSubItem10: TdxBarSubItem
       Caption = #1057#1090#1072#1074#1082#1080' '#1080#1079' '#1086#1090#1075#1088#1091#1079#1082#1080' (+ '#1053#1044#1057' 20%)'
       Category = 0
-      Visible = ivAlways
+      Visible = ivNever
       ImageIndex = 145
       ItemLinks = <>
       OnPopup = dxBarSubItem10Popup
@@ -4541,7 +4543,7 @@ object fmBargainList2: TfmBargainList2
     object dxBarSubItem11: TdxBarSubItem
       Caption = #1057#1090#1072#1074#1082#1072' '#1074#1086#1079#1085#1072#1075#1088#1072#1078#1076#1077#1085#1080#1103' (%)'
       Category = 0
-      Visible = ivAlways
+      Visible = ivNever
       ImageIndex = 143
       ItemLinks = <>
       OnPopup = dxBarSubItem11Popup
@@ -4549,7 +4551,7 @@ object fmBargainList2: TfmBargainList2
     object dxBarSubItem12: TdxBarSubItem
       Caption = #1057#1090#1072#1074#1082#1072' '#1074#1086#1079#1085#1072#1075#1088#1072#1078#1076#1077#1085#1080#1103' (-20% * %)'
       Category = 0
-      Visible = ivAlways
+      Visible = ivNever
       ImageIndex = 143
       ItemLinks = <>
       OnPopup = dxBarSubItem12Popup
@@ -4557,28 +4559,28 @@ object fmBargainList2: TfmBargainList2
     object dxBarSubItem13: TdxBarSubItem
       Caption = #1057#1090#1072#1074#1082#1072' ('#1053#1072#1082#1083#1072#1076#1085#1072#1103'/'#1082#1086#1083'-'#1074#1086' '#1074#1072#1075#1086#1085#1086#1074')'
       Category = 0
-      Visible = ivAlways
+      Visible = ivNever
       ItemLinks = <>
       OnPopup = dxBarSubItem13Popup
     end
     object dxBarSubItem14: TdxBarSubItem
       Caption = #1057#1090#1072#1074#1082#1072' ('#1057#1091#1084'.'#1085#1072#1082#1083#1072#1076#1085#1086#1081'/'#1042#1077#1089' '#1085#1072#1082#1083#1072#1076#1085#1086#1081') * '#1074#1077#1089' '#1074#1072#1075#1086#1085#1072
       Category = 0
-      Visible = ivAlways
+      Visible = ivNever
       ItemLinks = <>
       OnPopup = dxBarSubItem14Popup
     end
     object dxBarSubItem15: TdxBarSubItem
       Caption = #1057#1090#1072#1074#1082#1072' ('#1086#1089#1090#1072#1090#1086#1095#1085#1072#1103' '#1089#1091#1084#1084#1072' '#1079#1072' '#1074#1072#1075#1086#1085')'
       Category = 0
-      Visible = ivAlways
+      Visible = ivNever
       ItemLinks = <>
       OnPopup = dxBarSubItem15Popup
     end
     object dxBarSubItem16: TdxBarSubItem
       Caption = #1057#1077#1090#1082#1080' '#1089#1090#1072#1074#1086#1082
       Category = 0
-      Visible = ivNever
+      Visible = ivAlways
       ItemLinks = <
         item
           Visible = True
@@ -5135,7 +5137,7 @@ object fmBargainList2: TfmBargainList2
     object dxBarSubItem110: TdxBarSubItem
       Caption = #1057#1090#1072#1074#1082#1080' '#1080#1079' '#1087#1083#1072#1085#1072
       Category = 0
-      Visible = ivAlways
+      Visible = ivNever
       ItemLinks = <>
       OnPopup = dxBarSubItem110Popup
     end
