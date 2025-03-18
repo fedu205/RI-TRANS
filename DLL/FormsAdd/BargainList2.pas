@@ -5523,6 +5523,7 @@ begin
         ClientDS_tmp.FieldByName('attr_self'      ).Value := ClientDS.FieldByName('attr_self').Value;
         ClientDS_tmp.FieldByName('node_begin_cod' ).Value := ClientDS.FieldByName('node_begin_cod').Value;
         ClientDS_tmp.FieldByName('node_end_cod'   ).Value := ClientDS.FieldByName('node_end_cod').Value;
+        ClientDS_tmp.FieldByName('distance'       ).Value := ClientDS.FieldByName('distance').Value;
         ClientDS_tmp.Post;
       end;
 
@@ -5592,12 +5593,13 @@ begin
         node_begin := ClientDS_tmp.FieldByName('node_begin_cod').AsString;
         node_end   := ClientDS_tmp.FieldByName('node_end_cod').AsString;
 
-        dist := null;
-        dist := GetCalcDistance(node_begin, node_end, -9, ''); // Fast(node_begin, node_end);
+//        dist := null;
+//        dist := GetCalcDistance(node_begin, node_end, -9, ''); // Fast(node_begin, node_end);
+//        ClientDS_tmp.Edit;
+//        ClientDS_tmp.FieldByName('distance').Value := dist;
+//        ClientDS_tmp.Post;
 
-        ClientDS_tmp.Edit;
-        ClientDS_tmp.FieldByName('distance').Value := dist;
-        ClientDS_tmp.Post;
+        dist := ClientDS_tmp.FieldByName('distance').AsInteger;
 
         rate_val := 0;
         if dist <> null then begin

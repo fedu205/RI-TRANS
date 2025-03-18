@@ -894,7 +894,6 @@ object fmBargainList2: TfmBargainList2
         LookAndFeel.NativeStyle = False
         LookAndFeel.ScrollbarMode = sbmClassic
         LookAndFeel.SkinName = 'Office2007Black'
-        ExplicitLeft = 3
         object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = dxBarPopupMenu1
           OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -1673,6 +1672,10 @@ object fmBargainList2: TfmBargainList2
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.Kind = lfOffice11
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 0
             Width = 104
           end
@@ -1709,6 +1712,10 @@ object fmBargainList2: TfmBargainList2
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.Kind = lfOffice11
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 1
             Width = 97
           end
@@ -1742,6 +1749,10 @@ object fmBargainList2: TfmBargainList2
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.Kind = lfOffice11
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 2
             Width = 85
           end
@@ -1774,6 +1785,10 @@ object fmBargainList2: TfmBargainList2
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.Kind = lfOffice11
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 3
             Width = 60
           end
@@ -1808,6 +1823,10 @@ object fmBargainList2: TfmBargainList2
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.Kind = lfOffice11
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 4
             Width = 155
           end
@@ -1839,6 +1858,10 @@ object fmBargainList2: TfmBargainList2
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.Kind = lfOffice11
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 5
             Width = 124
           end
@@ -1856,6 +1879,8 @@ object fmBargainList2: TfmBargainList2
             StyleFocused.LookAndFeel.SkinName = 'Coffee'
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 6
           end
           object cxButtonEdit1: TcxButtonEdit
@@ -1870,7 +1895,7 @@ object fmBargainList2: TfmBargainList2
                 Glyph.SourceDPI = 96
                 Glyph.Data = {
                   424D360400000000000036000000280000001000000010000000010020000000
-                  000000000000C40E0000C40E00000000000000000000B8A394FF69503DFF7059
+                  00000000000074120000741200000000000000000000B8A394FF69503DFF7059
                   46FF765F4EFF765F4EFF745C4AFF6F5745FF6C5340FF6E5643FF745C4AFF7862
                   51FF786251FF725B49FF6C5340FF654C38FF634935FFB9A596FFFDF8F6FFFDF7
                   F5FFE3D9D3FFFDF5F0FFFCF2EBFFD7CAC1FFFAE9DEFFFAE7DBFFD7CAC2FFFBEB
@@ -1925,6 +1950,10 @@ object fmBargainList2: TfmBargainList2
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.Kind = lfOffice11
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 8
             Text = '0'
             Width = 84
@@ -1941,7 +1970,7 @@ object fmBargainList2: TfmBargainList2
                 Glyph.SourceDPI = 96
                 Glyph.Data = {
                   424D360400000000000036000000280000001000000010000000010020000000
-                  000000000000C40E0000C40E00000000000000000000B8A394FF69503DFF7059
+                  00000000000074120000741200000000000000000000B8A394FF69503DFF7059
                   46FF765F4EFF765F4EFF745C4AFF6F5745FF6C5340FF6E5643FF745C4AFF7862
                   51FF786251FF725B49FF6C5340FF654C38FF634935FFB9A596FFFDF8F6FFFDF7
                   F5FFE3D9D3FFFDF5F0FFFCF2EBFFD7CAC1FFFAE9DEFFFAE7DBFFD7CAC2FFFBEB
@@ -1996,6 +2025,10 @@ object fmBargainList2: TfmBargainList2
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.Kind = lfOffice11
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 9
             Text = '0'
             Width = 84
@@ -2031,6 +2064,10 @@ object fmBargainList2: TfmBargainList2
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.Kind = lfOffice11
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 10
             Width = 155
           end
@@ -2065,6 +2102,10 @@ object fmBargainList2: TfmBargainList2
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.Kind = lfOffice11
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 11
             Width = 155
           end
@@ -2117,7 +2158,7 @@ object fmBargainList2: TfmBargainList2
                 Glyph.SourceDPI = 96
                 Glyph.Data = {
                   424D360400000000000036000000280000001000000010000000010020000000
-                  000000000000C40E0000C40E00000000000000000000B8A394FF69503DFF7059
+                  00000000000074120000741200000000000000000000B8A394FF69503DFF7059
                   46FF765F4EFF765F4EFF745C4AFF6F5745FF6C5340FF6E5643FF745C4AFF7862
                   51FF786251FF725B49FF6C5340FF654C38FF634935FFB9A596FFFDF8F6FFFDF7
                   F5FFE3D9D3FFFDF5F0FFFCF2EBFFD7CAC1FFFAE9DEFFFAE7DBFFD7CAC2FFFBEB
@@ -2172,6 +2213,10 @@ object fmBargainList2: TfmBargainList2
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.Kind = lfOffice11
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 7
             Text = '0'
             Width = 84
@@ -2229,6 +2274,8 @@ object fmBargainList2: TfmBargainList2
             StyleFocused.LookAndFeel.SkinName = 'Coffee'
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 1
           end
           object cxCheckBox2: TcxCheckBox
@@ -2244,6 +2291,8 @@ object fmBargainList2: TfmBargainList2
             StyleFocused.LookAndFeel.SkinName = 'Coffee'
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 2
           end
           object cxTextEdit5: TcxTextEdit
@@ -2255,6 +2304,7 @@ object fmBargainList2: TfmBargainList2
             StyleDisabled.LookAndFeel.SkinName = 'Coffee'
             StyleFocused.LookAndFeel.SkinName = 'Coffee'
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 3
             Visible = False
             Width = 46
@@ -2272,6 +2322,8 @@ object fmBargainList2: TfmBargainList2
             StyleFocused.LookAndFeel.SkinName = 'Coffee'
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 4
           end
           object cxCheckBox3: TcxCheckBox
@@ -2287,6 +2339,8 @@ object fmBargainList2: TfmBargainList2
             StyleFocused.LookAndFeel.SkinName = 'Coffee'
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 5
             Visible = False
           end
@@ -2341,7 +2395,7 @@ object fmBargainList2: TfmBargainList2
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
+        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -2425,7 +2479,7 @@ object fmBargainList2: TfmBargainList2
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
+        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -2649,7 +2703,6 @@ object fmBargainList2: TfmBargainList2
             LookAndFeel.NativeStyle = False
             LookAndFeel.ScrollbarMode = sbmClassic
             LookAndFeel.SkinName = 'Office2007Black'
-            ExplicitLeft = 3
             object cxGrid3DBBandedTableView1: TcxGridDBBandedTableView
               PopupMenu = dxBarPopupMenu3
               OnDblClick = dxBarButton19Click
@@ -4614,7 +4667,7 @@ object fmBargainList2: TfmBargainList2
         end>
     end
     object dxBarSubItem19: TdxBarSubItem
-      Tag = 218
+      Tag = 802
       Caption = #1057#1090#1072#1074#1082#1080' '#1050#1086#1084#1087#1072#1085#1080#1080
       Category = 0
       Visible = ivAlways
@@ -4844,7 +4897,7 @@ object fmBargainList2: TfmBargainList2
       Caption = #1056#1072#1079#1085#1077#1089#1090#1080' '#1085#1072' '#1090#1080#1087#1099' '#1089#1090#1072#1074#1086#1082' - '#1087#1086' '#1085#1072#1087#1088#1072#1074#1083#1077#1085#1080#1103#1084
       Category = 0
       Hint = #1056#1072#1079#1085#1077#1089#1090#1080' '#1085#1072' '#1090#1080#1087#1099' '#1089#1090#1072#1074#1086#1082' - '#1087#1086' '#1085#1072#1087#1088#1072#1074#1083#1077#1085#1080#1103#1084
-      Visible = ivNever
+      Visible = ivAlways
       OnClick = dxBarButton5Click
     end
     object dxBarButton9: TdxBarButton
