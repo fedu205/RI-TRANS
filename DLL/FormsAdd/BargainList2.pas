@@ -3892,7 +3892,10 @@ begin
     ClientDS_Fact.FieldByName('xml_reply_id'        ).Value := Q.FieldByName('xml_reply_id').Value;
 
 
-
+    Q2.SQL.Clear;
+    Q2.SQL.Add('select distance from view_fact_all where fact_id = ' + Q.FieldByName('fact_id').AsString);
+    Q2.Open;
+    ClientDS_Fact.FieldByName('distance'        ).Value := Q2.FieldByName('distance').Value;
 
 
     ClientDS_Fact.FieldByName('fact_rate'          ).Value := null;
