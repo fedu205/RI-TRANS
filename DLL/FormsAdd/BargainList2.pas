@@ -19,7 +19,7 @@ uses
   dxSkinsdxBarPainter, dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
   dxSkinVisualStudio2013Light,  cxImageList, cxCheckBox, cxRadioGroup, cxButtonEdit, cxGridDBTableView, dxDateRanges, dxSkinOffice2019Colorful,
   cxDataControllerConditionalFormattingRulesManagerDialog, dxSkinTheBezier, dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray,
-  dxSkinWXI;
+  dxSkinWXI, dxCoreGraphics;
 
 
 type
@@ -3288,7 +3288,108 @@ var
   pos1, pos_fact_id1         : integer;
   pos2, pos_fact_id2         : integer;
   num_rec                    : integer;
+  ClientDS, ClientDS2 : TClientDataSet;
+  set_ready : boolean;
+  cnt_router, cnt_rate : integer;
 begin
+  cxGrid3DBBandedTableView1.Controller.SelectAll;
+
+
+  ClientDS2 := TClientDataSet.Create(nil);
+  ClientDS2.Data := ClientDS_Fact.Data;
+
+  ClientDS := TClientDataSet.Create(nil);
+  ClientDS.FieldDefs.Add('node_begin_id', ftInteger);
+  ClientDS.FieldDefs.Add('node_end_id'  , ftInteger);
+  ClientDS.FieldDefs.Add('type_kontener', ftInteger);
+  ClientDS.FieldDefs.Add('attr_self'    , ftInteger);
+  ClientDS.CreateDataSet;
+  ClientDS.LogChanges := False;
+
+  cnt_router := 0;
+  cnt_rate   := 0;
+
+  ClientDS2.First;
+  while not ClientDS2.Eof do begin
+    if not ClientDS.Locate('node_begin_id;node_end_id', VarArrayOf([ClientDS2['node_begin_id'], ClientDS2['node_end_id']]), []) then begin
+      cnt_router := cnt_router + 1;
+
+      ClientDS.Append;
+      ClientDS['node_begin_id'] := ClientDS2['node_begin_id'];
+      ClientDS['node_end_id']   := ClientDS2['node_end_id'];
+      ClientDS.Post;
+    end;
+    ClientDS2.Next;
+  end;
+
+  ClientDS.EmptyDataSet;
+
+  ClientDS2.First;
+  while not ClientDS2.Eof do begin
+    if not ClientDS.Locate('type_kontener;attr_self', VarArrayOf([ClientDS2['type_kontener'], ClientDS2['attr_self']]), []) then begin
+      cnt_rate := cnt_rate + 1;
+
+      ClientDS.Append;
+      ClientDS['type_kontener'] := ClientDS2['type_kontener'];
+      ClientDS['attr_self']   := ClientDS2['attr_self'];
+      ClientDS.Post;
+    end;
+    ClientDS2.Next;
+  end;
+
+
+  if cnt_rate <> cnt_router then begin
+    set_ready := False;
+  end else begin
+
+    ClientDS.EmptyDataSet;
+    set_ready := True;
+    ClientDS2.First;
+    while not ClientDS2.Eof do begin
+
+      if ClientDS.Locate('node_begin_id;node_end_id', VarArrayOf([ClientDS2['node_begin_id'], ClientDS2['node_end_id']]), []) then begin
+
+        if (ClientDS['type_kontener'] <> ClientDS2['type_kontener']) or (ClientDS['attr_self'] <> ClientDS2['attr_self']) then
+          set_ready := False;
+
+
+      end else begin
+        ClientDS.Append;
+        ClientDS['node_begin_id'] := ClientDS2['node_begin_id'];
+        ClientDS['node_end_id']   := ClientDS2['node_end_id'];
+        ClientDS['type_kontener'] := ClientDS2['type_kontener'];
+        ClientDS['attr_self']     := ClientDS2['attr_self'];
+        ClientDS.Post;
+      end;
+
+  //    if not ClientDS.Locate('node_begin_id;node_end_id;type_kontener;attr_self', VarArrayOf([ClientDS2['node_begin_id'], ClientDS2['node_end_id'], ClientDS2['type_kontener'], ClientDS2['attr_self']]), []) then begin
+  //
+  //      ClientDS.Append;
+  //      ClientDS['node_begin_id'] := ClientDS2['node_begin_id'];
+  //      ClientDS['node_end_id']   := ClientDS2['node_end_id'];
+  //      ClientDS['type_kontener'] := ClientDS2['type_kontener'];
+  //      ClientDS['attr_self']     := ClientDS2['attr_self'];
+  //      ClientDS.Post;
+  //
+  //    end else begin
+  //      set_ready := True;
+  //    end;
+
+
+      ClientDS2.Next;
+    end;
+  end;
+
+
+
+  ClientDS.Free;
+  ClientDS2.Free;
+
+  if set_ready then Exit;
+
+
+
+
   Client_Node := TClientDataSet.Create(nil);
   Client_Node.FieldDefs.Add('node_begin_id', ftInteger);
   Client_Node.FieldDefs.Add('node_end_id'  , ftInteger);
@@ -3322,6 +3423,9 @@ begin
     pos_fact_id2 := -9;
   ClientDS_Fact.DisableControls;
   FClientDS_FactDetail.DisableControls;
+
+
+
 
   Q.First;
   for num_rec := 0 to cxGrid3DBBandedTableView1.Controller.SelectedRecordCount - 1 do
@@ -5353,6 +5457,8 @@ begin
     fmBargainRate.cxCheckBox3.Enabled := cxGrid3DBBandedTableView1.DataController.RecordCount <> 0;
 
     if fmBargainRate.ShowModal = mrOk then begin
+      dxBarButton5Click(nil);
+
       rate_id := (Sender as TdxBarButton).Tag;
 
       ClientDS := TClientDataSet.Create(nil);
@@ -5382,6 +5488,7 @@ begin
 //        end;
 
       // удаляем из ClientDS невыделенные строки
+      cxGrid3DBBandedTableView1.Controller.SelectAll;
       for num_rec := 0 to cxGrid3DBBandedTableView1.Controller.SelectedRecordCount - 1 do begin
         if ClientDS.Locate('fact_id', cxGrid3DBBandedTableView1.Controller.SelectedRows[num_rec].Values[cxGrid3DBBandedTableView1fact_id.Index], []) then begin
           ClientDS.Edit;
@@ -5403,8 +5510,8 @@ begin
       set_nds       := fmBargainRate._GetNDS;
       set_fact_len  := fmBargainRate._GetDistFact;
       set_prev_len  := fmBargainRate._GetDistPrev;
-      type_tools_id := fmBargainRate._GetTypeKontener;
-      attr_self_id  := fmBargainRate._GetAttrSelf;
+      type_tools_id := -9;//fmBargainRate._GetTypeKontener;
+      attr_self_id  := -9;//fmBargainRate._GetAttrSelf;
 
       if (type_tools_id = -9) and (attr_self_id <> -9) then begin
         Application.MessageBox('Выберите "Род п/с, тип конт"!!!', 'ОШИБКА', MB_ICONSTOP or MB_OK);
@@ -5661,6 +5768,11 @@ begin
   end;
   ClientDS_Fact.EnableControls;
 
+
+
+  CalcFrahtSum(1, '');
+  UpdateSum;
+  UpdateSumResult;
 
 
   Q_TypeTools.Free;

@@ -4552,6 +4552,7 @@ object fmBargainList2: TfmBargainList2
           ItemName = 'dxBarSubItem104'
         end
         item
+          BeginGroup = True
           Visible = True
           ItemName = 'dxBarSubItem16'
         end>
@@ -5253,7 +5254,7 @@ object fmBargainList2: TfmBargainList2
     object dxBarSubItem100: TdxBarSubItem
       Caption = #1057#1090#1072#1074#1082#1080'  ('#1087#1086' '#1087#1086#1075#1088#1072#1085#1087#1077#1088#1077#1093#1086#1076#1072#1084')'
       Category = 1
-      Visible = ivAlways
+      Visible = ivNever
       ItemLinks = <
         item
           Visible = True
