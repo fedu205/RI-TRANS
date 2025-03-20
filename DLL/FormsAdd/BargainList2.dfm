@@ -4555,6 +4555,11 @@ object fmBargainList2: TfmBargainList2
           BeginGroup = True
           Visible = True
           ItemName = 'dxBarSubItem16'
+        end
+        item
+          BeginGroup = True
+          Visible = True
+          ItemName = 'dxBarSubItem4'
         end>
     end
     object dxBarSubItem6: TdxBarSubItem
@@ -4634,7 +4639,7 @@ object fmBargainList2: TfmBargainList2
     object dxBarSubItem16: TdxBarSubItem
       Caption = #1057#1077#1090#1082#1080' '#1089#1090#1072#1074#1086#1082
       Category = 0
-      Visible = ivAlways
+      Visible = ivNever
       ItemLinks = <
         item
           Visible = True
@@ -5151,7 +5156,7 @@ object fmBargainList2: TfmBargainList2
     object dxBarSubItem104: TdxBarSubItem
       Caption = #1042#1099#1073#1088#1072#1090#1100' '#1089#1077#1090#1082#1091' '#1080#1079' '#1089#1087#1088#1072#1074#1086#1095#1085#1080#1082#1072
       Category = 0
-      Visible = ivAlways
+      Visible = ivNever
       ImageIndex = 8
       OnClick = dxBarSubItem104Click
       ItemLinks = <>
@@ -5203,12 +5208,17 @@ object fmBargainList2: TfmBargainList2
       ItemLinks = <
         item
           Visible = True
-          ItemName = 'dxBarButton40'
+          ItemName = 'dxBarSubItem4'
         end
         item
           BeginGroup = True
           Visible = True
           ItemName = 'dxBarButton41'
+        end
+        item
+          BeginGroup = True
+          Visible = True
+          ItemName = 'dxBarButton40'
         end
         item
           BeginGroup = True
@@ -5239,7 +5249,7 @@ object fmBargainList2: TfmBargainList2
       Caption = #1042#1099#1073#1088#1072#1090#1100' '#1089#1077#1090#1082#1091' '#1080#1079' '#1089#1087#1088#1072#1074#1086#1095#1085#1080#1082#1072
       Category = 0
       Hint = #1042#1099#1073#1088#1072#1090#1100' '#1089#1077#1090#1082#1091' '#1080#1079' '#1089#1087#1088#1072#1074#1086#1095#1085#1080#1082#1072
-      Visible = ivAlways
+      Visible = ivNever
       ImageIndex = 8
       OnClick = dxBarButton50Click
     end
@@ -5250,6 +5260,13 @@ object fmBargainList2: TfmBargainList2
       Visible = ivAlways
       ImageIndex = 127
       OnClick = dxBarButton52Click
+    end
+    object dxBarSubItem4: TdxBarSubItem
+      Caption = #1057#1077#1090#1082#1080' '#1089#1090#1072#1074#1086#1082
+      Category = 0
+      Visible = ivAlways
+      ItemLinks = <>
+      OnPopup = dxBarSubItem4Popup
     end
     object dxBarSubItem100: TdxBarSubItem
       Caption = #1057#1090#1072#1074#1082#1080'  ('#1087#1086' '#1087#1086#1075#1088#1072#1085#1087#1077#1088#1077#1093#1086#1076#1072#1084')'

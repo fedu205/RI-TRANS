@@ -493,6 +493,7 @@ type
     cxButton3: TcxButton;
     Client_Contractbudget_name: TStringField;
     cxGrid1DBBandedTableView1budget_name: TcxGridDBBandedColumn;
+    dxBarSubItem4: TdxBarSubItem;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure cxGrid1DBBandedTableView1FocusedRecordChanged(Sender: TcxCustomGridTableView; APrevFocusedRecord, AFocusedRecord: TcxCustomGridRecord; ANewItemRecordFocusingChanged: Boolean);
     procedure cxGrid1DBBandedTableView1FilterOnChanged(Sender: TObject);
@@ -588,6 +589,7 @@ type
     procedure dxBarButton52Click(Sender: TObject);
     procedure dxBarButton50Click(Sender: TObject);
     procedure cxButton1Click(Sender: TObject);
+    procedure dxBarSubItem4Popup(Sender: TObject);
 
   private
     Fbargain_id    : integer;
@@ -657,6 +659,7 @@ type
     procedure FunctionRate53(Sender: TObject);
     procedure LoadRateExcel(Sender: TObject);
     procedure FunctionGridRate(Sender: TObject);
+    procedure FunctionGridRate2(Sender: TObject);
     procedure FunctionGridRateSablon(Sender: TObject);
     procedure FunctionGridRate4RoutePP(Sender: TObject);
 
@@ -5794,6 +5797,406 @@ begin
 end;
 
 
+
+procedure TfmBargainList2.FunctionGridRate2(Sender: TObject);
+var
+  exWks, exApp, exWkb : variant;
+  list : TStringList;
+  set_nds   : boolean;
+  set_fact_len : boolean;
+  set_prev_len : boolean;
+  i     : integer;
+  dist  : variant;
+  rows  : integer;
+  rate_val : currency;
+  type_tools_id : integer;
+  attr_self_id  : integer;
+  rate_id : integer;
+  ClientDS : TClientDataSet;
+  ClientDS_tmp : TClientDataSet;
+  node_begin, node_end : string;
+  Q, Q_TypeTools, Q_AttrSelf : TADOQuery;
+  num_rec : integer;
+begin
+  Screen.Cursor := crHourglass;
+  try
+
+    ShowTextMessage('Запуск Excel...', False);
+    exApp := CreateOleObject('Excel.Application');
+    exWkb := exApp.Workbooks.Open(GetDocBlob(Fconnect, (Sender as TdxBarButton).Tag, 5), EmptyParam, True);
+    exWkb := exApp.ActiveWorkbook;
+    list := TStringList.Create;
+    for i := 1 to exWkb.WorkSheets.count do begin
+      list.Add(VarToStr(exWkb.WorkSheets[i].Name));
+    end;
+    ShowTextMessage;
+
+    fmBargainRate := TfmBargainRate.Create(Application, Fconnect, Fusr_pwd);
+    fmBargainRate._SetSelectRate := False;
+    fmBargainRate._SetParamList  := list;
+    fmBargainRate._SetAllRate    := True;
+    fmBargainRate._SetDocCod     := TdxBarButton(Sender).ClickItemLink.Owner.Owner.Tag;
+
+
+    if not (cxGrid3DBBandedTableView1.DataController.RecordCount = 0) then begin
+      fmBargainRate.Height := fmBargainRate.Height - fmBargainRate.Panel2.Height;
+      fmBargainRate.Panel2.Visible := False;
+    end
+    else begin
+      if not ClientDS_ListRate.FieldByName('type_tools_id').IsNull then
+        fmBargainRate._SetTypeKontener := ClientDS_ListRate.FieldByName('type_tools_id').Value;
+      if not ClientDS_ListRate.FieldByName('attr_self'    ).IsNull then
+        fmBargainRate._SetAttrSelf     := ClientDS_ListRate.FieldByName('attr_self'    ).Value;
+
+      if not(cxGridDBBandedTableView2.DataController.RecordCount = 0) then begin
+        fmBargainRate.cxLookupComboBox7.Enabled := False;
+        fmBargainRate.cxLookupComboBox10.Enabled := False;
+        fmBargainRate.cxCheckBox3.Checked := False;
+        fmBargainRate.cxCheckBox3.Enabled := False;
+      end;
+    end;
+
+    fmBargainRate.cxCheckBox3.Checked := cxGrid3DBBandedTableView1.DataController.RecordCount <> 0;
+    fmBargainRate.cxCheckBox3.Enabled := cxGrid3DBBandedTableView1.DataController.RecordCount <> 0;
+
+    if fmBargainRate.ShowModal = mrOk then begin
+      dxBarButton5Click(nil);
+
+      rate_id := cxGrid1DBBandedTableView1global_id.DataBinding.Field.AsInteger;
+
+      ClientDS := TClientDataSet.Create(nil);
+//      ClientDS.Close;
+//      ClientDS.Fields.Clear;
+//      ClientDS.FieldDefs.Clear;
+
+//      for num_field:= 0 to ClientDS_Fact.FieldDefs.Count - 1 do begin
+//        ClientDS.FieldDefs.Add(ClientDS_Fact.FieldDefs[num_field].Name,
+//                               ClientDS_Fact.FieldDefs[num_field].DataType,
+//                               ClientDS_Fact.FieldDefs[num_field].Size,
+//                               ClientDS_Fact.FieldDefs[num_field].Required);
+//      end;
+
+      ClientDS.Data := ClientDS_Fact.Data;
+//      ClientDS.CreateDataSet;
+      ClientDS.LogChanges := False;
+
+
+
+//      for num_rec := 0 to cxGrid3DBBandedTableView1.Controller.SelectedRecordCount - 1 do
+//        if ClientDS_Fact.Locate('fact_id', cxGrid3DBBandedTableView1.Controller.SelectedRows[num_rec].Values[cxGrid3DBBandedTableView1fact_id.Index], []) then begin
+//          ClientDS.Insert;
+//          for num_field := 0 to ClientDS_Fact.FieldCount - 1 do
+//            ClientDS.Fields[num_field].Value := ClientDS_Fact.Fields[num_field].Value;
+//          ClientDS.Post;
+//        end;
+
+      // удаляем из ClientDS невыделенные строки
+      cxGrid3DBBandedTableView1.Controller.SelectAll;
+      for num_rec := 0 to cxGrid3DBBandedTableView1.Controller.SelectedRecordCount - 1 do begin
+        if ClientDS.Locate('fact_id', cxGrid3DBBandedTableView1.Controller.SelectedRows[num_rec].Values[cxGrid3DBBandedTableView1fact_id.Index], []) then begin
+          ClientDS.Edit;
+          ClientDS.FieldByName('set_not_delete').Value := True;
+          ClientDS.Post;
+        end;
+      end;
+
+      ClientDS.First;
+      while not ClientDS.Eof do begin
+        if ClientDS.FieldByName('set_not_delete').AsBoolean = True then
+          ClientDS.Next
+        else
+          ClientDS.Delete;
+      end;
+
+
+      exWks := exWkb.WorkSheets[fmBargainRate._GetParamId + 1];
+      set_nds       := fmBargainRate._GetNDS;
+      set_fact_len  := fmBargainRate._GetDistFact;
+      set_prev_len  := fmBargainRate._GetDistPrev;
+      type_tools_id := -9;//fmBargainRate._GetTypeKontener;
+      attr_self_id  := -9;//fmBargainRate._GetAttrSelf;
+
+      if (type_tools_id = -9) and (attr_self_id <> -9) then begin
+        Application.MessageBox('Выберите "Род п/с, тип конт"!!!', 'ОШИБКА', MB_ICONSTOP or MB_OK);
+        exApp.Quit;
+        exWks := Null;
+        VarClear(exWks);
+        Exit;
+      end;
+
+      if (type_tools_id <> -9) and (attr_self_id = -9) then begin
+        Application.MessageBox('Выберите "Тип ставки"!!!', 'ОШИБКА', MB_ICONSTOP or MB_OK);
+        Exit;
+      end;
+
+    end else begin
+      exApp.Quit;
+      VarClear(exApp);
+      Exit;
+    end;
+  except
+    on E: Exception do begin
+      Application.MessageBox(PChar('Ошибка при открытии файла.' + #10 + E.Message), 'Внимание', MB_OK);
+      ShowTextMessage;
+      exApp.Quit;
+      VarClear(exApp);
+      Exit;
+    end;
+  end;
+
+  ClientDS_tmp := TClientDataSet.Create(nil);
+  ClientDS_tmp.FieldDefs.Add('type_kontener', ftInteger);
+  ClientDS_tmp.FieldDefs.Add('attr_self', ftInteger);
+  ClientDS_tmp.FieldDefs.Add('node_begin_cod', ftString, 10);
+  ClientDS_tmp.FieldDefs.Add('node_end_cod', ftString, 10);
+  ClientDS_tmp.FieldDefs.Add('distance', ftInteger);
+  ClientDS_tmp.CreateDataSet;
+  ClientDS_tmp.LogChanges := False;
+
+
+  Q_TypeTools := TADOQuery.Create(nil);
+  Q_TypeTools.Connection := Fconnect;
+  Q_TypeTools.SQL.Add('SELECT inf_obj_id, type_inf_id, inf_obj_name, inf_obj_cod FROM inf_obj WHERE ((type_inf_id = 220))');
+  Q_TypeTools.Open;
+
+
+  Q_AttrSelf  := TADOQuery.Create(nil);
+  Q_AttrSelf.Connection := Fconnect;
+  Q_AttrSelf.SQL.Add('SELECT attr_self, attr_self_name FROM view_attr_self');
+  Q_AttrSelf.Open;
+
+
+  Q := TADOQuery.Create(nil);
+  Q.Connection := Fconnect;
+
+
+  Screen.Cursor := crHourglass;
+
+  if (not set_fact_len) and (not set_prev_len) then begin
+    ShowTextMessage('Поиск ставки для перевозки ...', False);
+    // Получаем расстояние - проверка расстояния
+    Q.SQL.Clear;
+    Q.SQL.Add('SELECT node_begin_cod, node_end_cod FROM view_bargain v (NOLOCK) WHERE bargain_id = ' + IntToStr(Fbargain_id));
+    Q.Open;
+    node_begin := Q.FieldByName('node_begin_cod').AsString;
+    node_end   := Q.FieldByName('node_end_cod').AsString;
+    Q.Close;
+
+    dist := null;
+    dist := GetCalcDistance(node_begin, node_end, -9, ''); //Fast(node_begin, node_end);//
+
+    if dist = null then begin
+      ShowTextMessage;
+      Screen.Cursor := crDefault;
+      Application.MessageBox('Не определено расстояние между станциями перевозки', 'Ставки ПГК', MB_OK + MB_ICONWARNING);
+      exit;
+    end;
+
+    // Находим ставку (для перевозки)
+    rows := 2;
+    rate_val := 0;
+    while True do begin
+      if TVarData(exWks.Cells[rows, 1].Value).VType = varEmpty then break;
+
+      if (exWks.Range['A'+IntToStr(rows)].Value <= dist)  and (dist <= exWks.Range['B'+IntToStr(rows)].Value)then begin
+
+        rate_val := exWks.Range['C'+IntToStr(rows)].Value;
+        rate_val := RoundCurr(rate_val, -2);
+        if set_nds then
+          rate_val := RoundCurr(rate_val * 1.18, -2);
+
+        break;
+      end;
+      rows := rows + 1;
+    end;
+  end;
+
+  // Удаляем лишнии ставки
+  //ClearListRate(rate_id, type_tools_id, attr_self_id);
+  ClientDS_ListRate.DisableControls;
+
+  Q.Close;
+  Q.SQL.Clear;
+
+
+  if (type_tools_id <> -9) and (attr_self_id <> -9) then begin
+    ClientDS.Filter   := 'type_kontener='+ IntToStr(type_tools_id) + ' AND attr_self=' + IntToStr(attr_self_id);
+    ClientDS.Filtered := True;
+  end;
+
+  if set_fact_len then begin
+    ClientDS.First;
+    while not ClientDS.Eof do begin
+      if not ClientDS_tmp.Locate('type_kontener;attr_self;node_begin_cod;node_end_cod', VarArrayOf([ClientDS.FieldByName('type_kontener').Value, ClientDS.FieldByName('attr_self').Value, ClientDS.FieldByName('node_begin_cod').Value, ClientDS.FieldByName('node_end_cod').Value]), []) then begin
+        ClientDS_tmp.Append;
+        ClientDS_tmp.FieldByName('type_kontener'  ).Value := ClientDS.FieldByName('type_kontener').Value;
+        ClientDS_tmp.FieldByName('attr_self'      ).Value := ClientDS.FieldByName('attr_self').Value;
+        ClientDS_tmp.FieldByName('node_begin_cod' ).Value := ClientDS.FieldByName('node_begin_cod').Value;
+        ClientDS_tmp.FieldByName('node_end_cod'   ).Value := ClientDS.FieldByName('node_end_cod').Value;
+        ClientDS_tmp.FieldByName('distance'       ).Value := ClientDS.FieldByName('distance').Value;
+        ClientDS_tmp.Post;
+      end;
+
+      ClientDS.Next;
+    end;
+  end
+  else
+    if set_prev_len then begin
+
+//    Q.SQL.Add('CREATE TABLE #tmp (fact_id int, type_kontener int, attr_self int, node_begin_cod varchar(50), node_end_cod varchar(50))');
+//    Q.SQL.Add('');
+//    Q.SQL.Add('INSERT INTO #tmp');
+//    Q.SQL.Add('EXEC [dbo].[sp_TypeRateFromPrevTrip_calc] @bargain_id = ' + IntToStr(Fbargain_id) + ', @type_calc = 1'); // для получения RS испольхуем тип = 1
+//    Q.SQL.Add('');
+//    Q.SQL.Add('SELECT type_kontener, attr_self, node_end_cod as node_begin_cod, node_begin_cod as node_end_cod'); // для расчета расстояния "переворачиваем" маршрут
+//    Q.SQL.Add('FROM #tmp');
+//    Q.SQL.Add('WHERE 1 = 1');
+//    if (type_tools_id <> -9) and (attr_self_id <> -9) then begin
+//      Q.SQL.Add('AND type_kontener = ' + IntToStr(type_tools_id));
+//      Q.SQL.Add('AND attr_self     = ' + IntToStr(attr_self_id));
+//    end;
+//    Q.SQL.Add('GROUP BY type_kontener, attr_self, node_begin_cod, node_end_cod');
+//    Q.SQL.Add('');
+//    Q.SQL.Add('DROP TABLE #tmp');
+
+    end
+      else begin
+        ClientDS.First;
+        while not ClientDS.Eof do begin
+          if not ClientDS_tmp.Locate('type_kontener;attr_self', VarArrayOf([ClientDS.FieldByName('type_kontener').Value, ClientDS.FieldByName('attr_self').Value]), []) then begin
+            ClientDS_tmp.Append;
+            ClientDS_tmp.FieldByName('type_kontener'  ).Value := ClientDS.FieldByName('type_kontener').Value;
+            ClientDS_tmp.FieldByName('attr_self'      ).Value := ClientDS.FieldByName('attr_self').Value;
+            ClientDS_tmp.Post;
+          end;
+
+          ClientDS.Next;
+        end;
+      end;
+
+  if ClientDS_tmp.RecordCount = 0 then begin
+
+    if (type_tools_id <> -9) AND (attr_self_id <> -9) then begin
+      ClientDS_ListRate.Edit;
+      ClientDS_ListRate.FieldByName('rate_id').Value        := rate_id;
+      ClientDS_ListRate.FieldByName('type_rate').Value      := 1;
+      ClientDS_ListRate.FieldByName('type_tools_id').Value  := type_tools_id;
+      ClientDS_ListRate.FieldByName('attr_self').Value      := attr_self_id;
+
+      if Q_TypeTools.Locate('inf_obj_id', type_tools_id, []) then
+        ClientDS_ListRate.FieldByName('type_tools_name').Value:= Q_TypeTools.FieldByName('inf_obj_name').Value;
+      if Q_AttrSelf.Locate('attr_self', attr_self_id, []) then
+        ClientDS_ListRate.FieldByName('attr_self_name').Value := Q_AttrSelf.FieldByName('attr_self_name').Value;
+
+      ClientDS_ListRate.FieldByName('weight'  ).Value         := -9;
+      ClientDS_ListRate.FieldByName('rate_val').Value       := rate_val;
+      ClientDS_ListRate.FieldByName('set_one' ).Value        := True;
+      ClientDS_ListRate.Post;
+    end;
+  end else begin
+    ClientDS_tmp.First;
+    while not ClientDS_tmp.Eof do begin
+      ShowTextMessage('Загрузка ставок ' + IntToStr(ClientDS_tmp.RecNo) + ' из ' + IntToStr(ClientDS_tmp.RecordCount) + ' ...', False);
+      // Расстояние из факта - посчитаем для каждорй записи свою ставку
+      if set_fact_len or set_prev_len then begin
+        // Получаем расстояние - проверка расстояния
+        node_begin := ClientDS_tmp.FieldByName('node_begin_cod').AsString;
+        node_end   := ClientDS_tmp.FieldByName('node_end_cod').AsString;
+
+//        dist := null;
+//        dist := GetCalcDistance(node_begin, node_end, -9, ''); // Fast(node_begin, node_end);
+//        ClientDS_tmp.Edit;
+//        ClientDS_tmp.FieldByName('distance').Value := dist;
+//        ClientDS_tmp.Post;
+
+        dist := ClientDS_tmp.FieldByName('distance').AsInteger;
+
+        rate_val := 0;
+        if dist <> null then begin
+          // Находим ставку
+          rows := 2;
+          rate_val := 0;
+          while True do begin
+            if TVarData(exWks.Cells[rows, 1].Value).VType = varEmpty then break;
+
+            if (exWks.Range['A'+IntToStr(rows)].Value <= dist)
+                and (dist <= exWks.Range['B'+IntToStr(rows)].Value)
+            then begin
+              rate_val := exWks.Range['C'+IntToStr(rows)].Value;
+              rate_val := RoundCurr(rate_val, -2);
+              if set_nds then
+                rate_val := RoundCurr(rate_val * 1.18, -2);
+
+              break;
+            end;
+            rows := rows + 1;
+          end;
+        end;
+
+      end;
+
+      if ClientDS_ListRate.Locate('set_one;rate_id;type_tools_id;attr_self', VarArrayOf([True, rate_id, ClientDS_tmp.FieldByName('type_kontener').Value, ClientDS_tmp.FieldByName('attr_self').Value]), []) then
+        ClientDS_ListRate.Edit
+      else
+        ClientDS_ListRate.Append;
+
+      ClientDS_ListRate.FieldByName('rate_id').Value        := rate_id;
+      ClientDS_ListRate.FieldByName('type_rate').Value      := 1;
+      ClientDS_ListRate.FieldByName('type_tools_id').Value  := ClientDS_tmp.FieldByName('type_kontener').Value;
+      ClientDS_ListRate.FieldByName('attr_self').Value      := ClientDS_tmp.FieldByName('attr_self').Value;
+
+      if Q_TypeTools.Locate('inf_obj_id', ClientDS_tmp.FieldByName('type_kontener').Value, []) then
+        ClientDS_ListRate.FieldByName('type_tools_name').Value:= Q_TypeTools.FieldByName('inf_obj_name').Value;
+      if Q_AttrSelf.Locate('attr_self', ClientDS_tmp.FieldByName('attr_self').Value, []) then
+        ClientDS_ListRate.FieldByName('attr_self_name').Value := Q_AttrSelf.FieldByName('attr_self_name').Value;
+
+      ClientDS_ListRate.FieldByName('weight').Value         := 0;
+      ClientDS_ListRate.FieldByName('rate_val').Value       := rate_val;
+      ClientDS_ListRate.FieldByName('set_one').Value        := True;
+      ClientDS_ListRate.Post;
+      ClientDS_tmp.Next
+    end;
+  end;
+
+
+  ClientDS_Fact.DisableControls;
+  for i:=0 to cxGrid3DBBandedTableView1.Controller.SelectedRecordCount - 1 do begin
+    if ClientDS_Fact.FindKey([cxGrid3DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid3DBBandedTableView1fact_id.Index]]) then begin
+      if ClientDS_tmp.Locate('node_begin_cod;node_end_cod', VarArrayOf([ClientDS_Fact.FieldByName('node_begin_cod').AsString, ClientDS_Fact.FieldByName('node_end_cod').AsString]), []) then begin
+        ClientDS_Fact.Edit;
+        ClientDS_Fact.FieldByName('distance').Value := ClientDS_tmp.FieldByName('distance').Value;
+        ClientDS_Fact.Post;
+      end;
+    end;
+  end;
+  ClientDS_Fact.EnableControls;
+
+
+
+  CalcFrahtSum(1, '');
+  UpdateSum;
+  UpdateSumResult;
+
+
+  Q_TypeTools.Free;
+  Q_AttrSelf.Free;
+  Q.Free;
+
+  exWks.Application.Quit;
+  exWks := Null;
+  exWkb := Null;
+  exApp := Null;
+  VarClear(exWks);
+  VarClear(exWkb);
+  VarClear(exApp);
+  ClientDS.Free;
+  ClientDS_tmp.Free;
+  ClientDS_ListRate.EnableControls;
+  Screen.Cursor := crDefault;
+  ShowTextMessage;
+end;
+
+
 procedure TfmBargainList2.CreateClientRate();
 var          Q : TADOQuery;
        rate_id : integer;
@@ -6350,6 +6753,35 @@ procedure TfmBargainList2.dxBarSubItem19Popup(Sender: TObject);
 begin
    // Сетки
   CreateBarButton(TdxBarSubItem(Sender), FunctionGridRate);
+end;
+
+procedure TfmBargainList2.dxBarSubItem4Popup(Sender: TObject);
+var NewButton     : TdxBarButton;
+    Q : TADOQuery;
+begin
+  // Удаляем сами кнопки, а не только чистим список ссылок
+  while dxBarSubItem4.ItemLinks.Count > 0 do begin
+    dxBarSubItem4.ItemLinks[dxBarSubItem4.ItemLinks.Count - 1].Item.Free;
+  end;
+
+  Q := TADOQuery.Create(nil);
+  Q.Connection := Fconnect;
+  Q.SQL.Add('select doc_id, doc_describe, doc_cod from view_doc_shablon where doc_type_cod = ''5'' and doc_cod > 801 order by doc_cod');
+  Q.Open;
+
+  while not Q.Eof do begin
+
+    NewButton             := TdxBarButton.Create(nil);
+    NewButton.Caption     := Q.FieldByName('doc_describe').AsString;
+    NewButton.Tag         := Q.FieldByName('doc_cod').AsInteger;
+    NewButton.ImageIndex  := 8;
+    NewButton.OnClick     := FunctionGridRate2;
+
+    dxBarSubItem4.ItemLinks.Add(NewButton);
+    Q.Next;
+  end;
+
+  Q.Free;
 end;
 
 procedure TfmBargainList2.dxBarSubItem62Popup(Sender: TObject);
