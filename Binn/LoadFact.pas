@@ -30,7 +30,7 @@ uses
   dxSpreadSheetHyperlinks, dxSpreadSheetUtils, dxSpreadSheetFormattedTextUtils, dxScrollbarAnnotations, cxButtons, cxPC,
   dxSpreadSheetConditionalFormatting, dxSpreadSheetConditionalFormattingRules,
   dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019Colorful,
-  dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI;
+  dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI, dxCoreGraphics;
 
 
 type
@@ -1101,7 +1101,8 @@ begin
 
      // &&&&&&&&&&&&&&&& основной цикл &&&&&&&&&&&&&&&&&&&&&&&
       i := Query_Scene['num_rows'];
-      file_name_dbf := null;
+
+      file_name_dbf := ExtractFileName(cxButtonEdit1.EditText);
 
       SP := TADOStoredProc.Create(nil);
       SP.Connection := FConnection;
