@@ -1,4 +1,4 @@
-unit DocShablon;
+п»їunit DocShablon;
 
 interface
 
@@ -18,7 +18,7 @@ uses
   dxSkinSharpPlus, dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine, dxSkinVisualStudio2013Blue,
   dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxSkinscxPCPainter, dxSkinsdxBarPainter, System.ImageList, cxImageList,
   cxDataControllerConditionalFormattingRulesManagerDialog, dxDateRanges, dxCore,
-  dxSkinTheBezier, dxSkinOffice2019Colorful;
+  dxSkinTheBezier, dxSkinOffice2019Colorful, dxScrollbarAnnotations;
 
 type
   TfmDocShablon = class(TForm)
@@ -260,7 +260,7 @@ end;
 procedure TfmDocShablon.ADOShablonExecuteComplete(Connection: TADOConnection; RecordsAffected: Integer; const Error: Error; var EventStatus: TEventStatus; const Command: _Command; const Recordset: _Recordset);
 begin
   if EventStatus = esErrorsOccured then begin
-    Application.MessageBox(PWideChar(error.Description), 'Внимание', MB_OK);
+    Application.MessageBox(PWideChar(error.Description), 'Р’РЅРёРјР°РЅРёРµ', MB_OK);
     ShowTextMessage('', True);
   end;
 end;
@@ -290,17 +290,24 @@ end;
 
 procedure TfmDocShablon.dxBarButton2Click(Sender: TObject);
 var SP_BLOB_modify: TADOStoredProc;
+                i : integer;
 begin
-  if Application.MessageBox('Вы точно хотите удалить документ?', 'Внимание', MB_OKCANCEL)=IDOK then begin
+  if Application.MessageBox('Р’С‹ С‚РѕС‡РЅРѕ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ РґРѕРєСѓРјРµРЅС‚?', 'Р’РЅРёРјР°РЅРёРµ', MB_OKCANCEL)=IDOK then begin
     Screen.Cursor := crHourglass;
-    SP_BLOB_modify := TADOStoredProc.Create(nil);
-    SP_BLOB_modify.Connection := ADOShablon;
-    SP_BLOB_modify.ProcedureName := 'SP_BLOB_SHABLON_modify';
-    SP_BLOB_modify.Parameters.Refresh;
-    SP_BLOB_modify.Parameters.ParamByName('@type_action').Value := 2;
-    SP_BLOB_modify.Parameters.ParamByName('@doc_id').Value := Query_Shablon.FieldByName('doc_id').AsInteger;
-    SP_BLOB_modify.ExecProc;
-    SP_BLOB_modify.Free;
+    for i:=0 to cxGrid1DBBandedTableView1.Controller.SelectedRowCount - 1 do begin
+      ShowTextMessage('РћСЃС‚Р°Р»РѕСЃСЊ ' + IntToStr(cxGrid1DBBandedTableView1.Controller.SelectedRowCount - i) + ' Р·Р°РїРёСЃРµР№...',  False);
+
+      SP_BLOB_modify := TADOStoredProc.Create(nil);
+      SP_BLOB_modify.Connection := ADOShablon;
+      SP_BLOB_modify.ProcedureName := 'SP_BLOB_SHABLON_modify';
+      SP_BLOB_modify.Parameters.Refresh;
+      SP_BLOB_modify.Parameters.ParamByName('@type_action').Value := 2;
+      SP_BLOB_modify.Parameters.ParamByName('@doc_id').Value := cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1doc_id.Index];
+      SP_BLOB_modify.ExecProc;
+      SP_BLOB_modify.Free;
+    end;
+
+    ShowTextMessage();
     RefreshQueryGrid(cxGrid1DBBandedTableView1,'doc_id');
     Screen.Cursor := crDefault;
   end;
@@ -328,7 +335,7 @@ begin
       LoadFileFromDB(FileName, Q.FieldByName('doc_image')  as TBlobField, False);
       ShellExecute(Handle, 'open', PChar(FileName), nil, nil, SW_SHOWNORMAL);
       Q.Free;
-    end else Application.MessageBox('НЕТ ФАЙЛА К ДАННОЙ ЗАПИСИ', 'ВНИМАНИЕ', MB_OK);
+    end else Application.MessageBox('РќР•Рў Р¤РђР™Р›Рђ Рљ Р”РђРќРќРћР™ Р—РђРџРРЎР', 'Р’РќРРњРђРќРР•', MB_OK);
   end;
 end;
 
@@ -360,12 +367,12 @@ begin
   SetdxDBGridColumns(cxGrid1DBBandedTableView1);
 end;
 
-{$REGION 'Фильтр по всем записям'}
+{$REGION 'Р¤РёР»СЊС‚СЂ РїРѕ РІСЃРµРј Р·Р°РїРёСЃСЏРј'}
 procedure TfmDocShablon.dxBarButton_FilterRecords1Click(Sender: TObject);
 begin
   cxGrid1DBBandedTableView1.Filtering.ColumnFilteredItemsList := not dxBarButton_FilterRecords1.Down;
 end;
-{$ENDREGION 'Фильтр по всем записям'}
+{$ENDREGION 'Р¤РёР»СЊС‚СЂ РїРѕ РІСЃРµРј Р·Р°РїРёСЃСЏРј'}
 
 procedure TfmDocShablon.FormClose(Sender: TObject; var Action: TCloseAction);
 begin

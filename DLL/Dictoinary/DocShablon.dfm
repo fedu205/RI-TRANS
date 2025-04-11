@@ -48,10 +48,8 @@ object fmDocShablon: TfmDocShablon
     000000000000000000000000000000000000000000000000000000000000FFFF
     0000F83F0000F11F0000F01F0000F45F0000F55F0000F55F0000F55F0000F55F
     0000F55F0000F55F0000F55F0000FDDF0000FC9F0000FC1F0000FFFF0000}
-  OldCreateOrder = False
   Position = poMainFormCenter
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
@@ -107,6 +105,7 @@ object fmDocShablon: TfmDocShablon
       OptionsSelection.HideFocusRect = False
       OptionsView.ColumnAutoWidth = True
       OptionsView.TreeLineStyle = tllsNone
+      ScrollbarAnnotations.CustomAnnotations = <>
       TabOrder = 0
       OnFocusedNodeChanged = cxTreeList1FocusedNodeChanged
       Data = {
@@ -137,7 +136,6 @@ object fmDocShablon: TfmDocShablon
         004B0000004B000000FFFFFFFFFFFFFFFFFFFFFFFF1A0006000000}
       object cxTreeList1cxTreeListColumn1: TcxTreeListColumn
         Caption.Text = ' '#1042#1089#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1099
-        DataBinding.ValueType = 'String'
         Options.Focusing = False
         Width = 268
         Position.ColIndex = 0
@@ -188,6 +186,7 @@ object fmDocShablon: TfmDocShablon
           OnDblClick = dxBarButton4Click
           OnKeyPress = cxGrid1DBBandedTableView1KeyPress
           Navigator.Buttons.CustomButtons = <>
+          ScrollbarAnnotations.CustomAnnotations = <>
           OnCustomDrawCell = cxGrid1DBBandedTableView1CustomDrawCell
           OnFocusedItemChanged = cxGrid1DBBandedTableView1FocusedItemChanged
           DataController.DataSource = DS_Shablon
@@ -220,6 +219,7 @@ object fmDocShablon: TfmDocShablon
           object cxGrid1DBBandedTableView1doc_id: TcxGridDBBandedColumn
             Caption = #8470' '#1047#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'doc_id'
+            DataBinding.IsNullValueType = True
             Width = 66
             Position.BandIndex = 0
             Position.ColIndex = 0
@@ -227,6 +227,7 @@ object fmDocShablon: TfmDocShablon
           end
           object cxGrid1DBBandedTableView1doc_type_cod: TcxGridDBBandedColumn
             DataBinding.FieldName = 'doc_type_cod'
+            DataBinding.IsNullValueType = True
             Width = 66
             Position.BandIndex = -1
             Position.ColIndex = -1
@@ -234,6 +235,7 @@ object fmDocShablon: TfmDocShablon
           end
           object cxGrid1DBBandedTableView1global_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'global_id'
+            DataBinding.IsNullValueType = True
             Width = 66
             Position.BandIndex = -1
             Position.ColIndex = -1
@@ -242,6 +244,7 @@ object fmDocShablon: TfmDocShablon
           object cxGrid1DBBandedTableView1doc_describe: TcxGridDBBandedColumn
             Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
             DataBinding.FieldName = 'doc_describe'
+            DataBinding.IsNullValueType = True
             Options.Editing = False
             SortIndex = 0
             SortOrder = soAscending
@@ -253,6 +256,7 @@ object fmDocShablon: TfmDocShablon
           object cxGrid1DBBandedTableView1file_name: TcxGridDBBandedColumn
             Caption = #1048#1084#1103' '#1092#1072#1081#1083#1072
             DataBinding.FieldName = 'file_name'
+            DataBinding.IsNullValueType = True
             Options.Editing = False
             Width = 136
             Position.BandIndex = 0
@@ -262,6 +266,7 @@ object fmDocShablon: TfmDocShablon
           object cxGrid1DBBandedTableView1doc_type_describe: TcxGridDBBandedColumn
             Caption = #1058#1080#1087' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
             DataBinding.FieldName = 'doc_type_describe'
+            DataBinding.IsNullValueType = True
             Options.Editing = False
             Width = 140
             Position.BandIndex = 0
@@ -271,6 +276,7 @@ object fmDocShablon: TfmDocShablon
           object cxGrid1DBBandedTableView1doc_cod: TcxGridDBBandedColumn
             Caption = #1050#1086#1076
             DataBinding.FieldName = 'doc_cod'
+            DataBinding.IsNullValueType = True
             Options.Editing = False
             Width = 66
             Position.BandIndex = 0
@@ -280,6 +286,7 @@ object fmDocShablon: TfmDocShablon
           object cxGrid1DBBandedTableView1date_enter: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1089#1086#1079#1076#1072#1085#1080#1103
             DataBinding.FieldName = 'date_enter'
+            DataBinding.IsNullValueType = True
             Options.Editing = False
             Position.BandIndex = 0
             Position.ColIndex = 5
@@ -288,6 +295,7 @@ object fmDocShablon: TfmDocShablon
           object cxGrid1DBBandedTableView1FIO_users: TcxGridDBBandedColumn
             Caption = #1054#1090#1074#1077#1090#1089#1090#1074#1077#1085#1085#1099#1081
             DataBinding.FieldName = 'FIO_users'
+            DataBinding.IsNullValueType = True
             Options.Editing = False
             Position.BandIndex = 0
             Position.ColIndex = 6
@@ -295,12 +303,14 @@ object fmDocShablon: TfmDocShablon
           end
           object cxGrid1DBBandedTableView1global_color: TcxGridDBBandedColumn
             DataBinding.FieldName = 'global_color'
+            DataBinding.IsNullValueType = True
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
           end
           object cxGrid1DBBandedTableView1users_group_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'users_group_id'
+            DataBinding.IsNullValueType = True
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -308,6 +318,7 @@ object fmDocShablon: TfmDocShablon
           object cxGrid1DBBandedTableView1users_group_name: TcxGridDBBandedColumn
             Caption = #1042#1080#1076#1080#1084#1086#1089#1090#1100
             DataBinding.FieldName = 'users_group_name'
+            DataBinding.IsNullValueType = True
             Width = 120
             Position.BandIndex = 0
             Position.ColIndex = 7

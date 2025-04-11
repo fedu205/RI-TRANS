@@ -47,10 +47,8 @@ object fmDocBlob: TfmDocBlob
     000000000000000000000000000000000000000000000000000000000000FFFF
     0000F83F0000F11F0000F01F0000F45F0000F55F0000F55F0000F55F0000F55F
     0000F55F0000F55F0000F55F0000FDDF0000FC9F0000FC1F0000FFFF0000}
-  OldCreateOrder = False
   Position = poMainFormCenter
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
@@ -116,6 +114,7 @@ object fmDocBlob: TfmDocBlob
       OptionsView.TreeLineStyle = tllsNone
       ParentFont = False
       PopupMenu = dxBarPopupMenu2
+      ScrollbarAnnotations.CustomAnnotations = <>
       TabOrder = 1
       OnDragDrop = cxTreeList1DragDrop
       OnDragOver = cxTreeList1DragOver
@@ -148,7 +147,6 @@ object fmDocBlob: TfmDocBlob
         004B0000004B000000FFFFFFFFFFFFFFFFFFFFFFFF1A0006000000}
       object cxTreeList1cxTreeListColumn1: TcxTreeListColumn
         Caption.Text = ' '#1042#1089#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1099
-        DataBinding.ValueType = 'String'
         Options.Focusing = False
         Width = 268
         Position.ColIndex = 0
@@ -209,6 +207,7 @@ object fmDocBlob: TfmDocBlob
           OnDblClick = dxBarButton4Click
           OnKeyPress = cxGrid1DBBandedTableView2KeyPress
           Navigator.Buttons.CustomButtons = <>
+          ScrollbarAnnotations.CustomAnnotations = <>
           OnCustomDrawCell = cxGrid1DBBandedTableView2CustomDrawCell
           OnFocusedItemChanged = cxGrid1DBBandedTableView2FocusedItemChanged
           OnFocusedRecordChanged = cxGrid1DBBandedTableView2FocusedRecordChanged
@@ -249,6 +248,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2doc_id: TcxGridDBBandedColumn
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'doc_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -258,6 +258,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2doc_describe: TcxGridDBBandedColumn
             Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
             DataBinding.FieldName = 'doc_describe'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -267,6 +268,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2file_name: TcxGridDBBandedColumn
             Caption = #1048#1084#1103' '#1092#1072#1081#1083#1072
             DataBinding.FieldName = 'file_name'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -276,6 +278,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2doc_cod: TcxGridDBBandedColumn
             Caption = #8470' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
             DataBinding.FieldName = 'doc_cod'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -285,6 +288,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2FIO_users: TcxGridDBBandedColumn
             Caption = #1054#1090#1074#1077#1090#1089#1090#1074#1077#1085#1085#1099#1081
             DataBinding.FieldName = 'FIO_users'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -294,6 +298,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2date_enter: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1074#1074#1086#1076#1072
             DataBinding.FieldName = 'date_enter'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -303,6 +308,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2doc_location_date: TcxGridDBBandedColumn
             Caption = #1055#1086#1089#1083#1077#1076#1085#1077#1077' '#1087#1077#1088#1077#1084#1077#1097#1077#1085#1080#1077
             DataBinding.FieldName = 'doc_location_date'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -312,6 +318,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2doc_location_FIO_users: TcxGridDBBandedColumn
             Caption = #1055#1086#1089#1090#1091#1087#1080#1083' '#1086#1090
             DataBinding.FieldName = 'doc_location_FIO_users'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -321,6 +328,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2sign_customer_name: TcxGridDBBandedColumn
             Caption = #1055#1086#1076#1087#1080#1089#1100' '#1082#1086#1085#1090#1088#1072#1075#1077#1085#1090#1072
             DataBinding.FieldName = 'sign_customer_name'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -330,6 +338,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2sign_self_name: TcxGridDBBandedColumn
             Caption = #1055#1086#1076#1087#1080#1089#1100' '#1085#1072#1096#1072
             DataBinding.FieldName = 'sign_self_name'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -339,6 +348,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2doc_location_name: TcxGridDBBandedColumn
             Caption = #1052#1077#1089#1090#1086#1085#1072#1093#1086#1078#1076#1077#1085#1080#1077
             DataBinding.FieldName = 'doc_location_name'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -348,6 +358,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2doc_image_date: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
             DataBinding.FieldName = 'doc_image_date'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -357,6 +368,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2doc_type_describe: TcxGridDBBandedColumn
             Caption = #1058#1080#1087' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
             DataBinding.FieldName = 'doc_type_describe'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -366,6 +378,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2doc_original_date: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1087#1088#1077#1076'. '#1086#1088#1080#1075#1080#1085#1072#1083#1072
             DataBinding.FieldName = 'doc_original_date'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -375,6 +388,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2doc_invoice_score_cod: TcxGridDBBandedColumn
             Caption = #8470' '#1089'\'#1092
             DataBinding.FieldName = 'doc_invoice_score_cod'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -384,6 +398,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2contract_cod: TcxGridDBBandedColumn
             Caption = #8470' '#1076#1086#1075#1086#1074#1086#1088#1072
             DataBinding.FieldName = 'contract_cod'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -393,6 +408,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2firm_customer_name: TcxGridDBBandedColumn
             Caption = #1050#1086#1085#1090#1088#1072#1075#1077#1085#1090
             DataBinding.FieldName = 'firm_customer_name'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -402,6 +418,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2firm_self_name: TcxGridDBBandedColumn
             Caption = #1057#1086#1073#1089#1090#1074#1077#1085#1085#1072#1103
             DataBinding.FieldName = 'firm_self_name'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -411,6 +428,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2date_begin: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1076#1086#1075#1086#1074#1086#1088#1072
             DataBinding.FieldName = 'date_begin'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -420,6 +438,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2curator_FIO_users: TcxGridDBBandedColumn
             Caption = #1050#1091#1088#1072#1090#1086#1088
             DataBinding.FieldName = 'curator_FIO_users'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -429,6 +448,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2firm_name_short: TcxGridDBBandedColumn
             Caption = #1050#1086#1085#1090#1088#1072#1075#1077#1085#1090
             DataBinding.FieldName = 'firm_name_short'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -438,6 +458,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2invoice_cod: TcxGridDBBandedColumn
             Caption = #1057#1095#1077#1090
             DataBinding.FieldName = 'invoice_cod'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -447,6 +468,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2invoice_date: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1089#1095#1077#1090#1072
             DataBinding.FieldName = 'invoice_date'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -456,6 +478,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2pretenzia_cod: TcxGridDBBandedColumn
             Caption = #1055#1088#1077#1090#1077#1085#1079#1080#1103
             DataBinding.FieldName = 'pretenzia_cod'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -465,6 +488,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2doc_kind_name: TcxGridDBBandedColumn
             Caption = #1042#1080#1076' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
             DataBinding.FieldName = 'doc_kind_name'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -474,6 +498,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2fact_num: TcxGridDBBandedColumn
             Caption = #8470' '#1089#1095'-'#1092' '#1062#1060#1058#1054
             DataBinding.FieldName = 'fact_num'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -482,6 +507,7 @@ object fmDocBlob: TfmDocBlob
           end
           object cxGrid1DBBandedTableView2doc_location_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'doc_location_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = -1
@@ -490,6 +516,7 @@ object fmDocBlob: TfmDocBlob
           end
           object cxGrid1DBBandedTableView2doc_kind_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'doc_kind_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = -1
@@ -498,6 +525,7 @@ object fmDocBlob: TfmDocBlob
           end
           object cxGrid1DBBandedTableView2sign_customer_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'sign_customer_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = -1
@@ -506,6 +534,7 @@ object fmDocBlob: TfmDocBlob
           end
           object cxGrid1DBBandedTableView2sign_self_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'sign_self_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = -1
@@ -514,6 +543,7 @@ object fmDocBlob: TfmDocBlob
           end
           object cxGrid1DBBandedTableView2global_color: TcxGridDBBandedColumn
             DataBinding.FieldName = 'global_color'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = -1
@@ -522,6 +552,7 @@ object fmDocBlob: TfmDocBlob
           end
           object cxGrid1DBBandedTableView2doc_location_FIO_users_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'doc_location_FIO_users_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = -1
@@ -530,6 +561,7 @@ object fmDocBlob: TfmDocBlob
           end
           object cxGrid1DBBandedTableView2doc_cod1: TcxGridDBBandedColumn
             DataBinding.FieldName = 'doc_cod1'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = -1
@@ -538,6 +570,7 @@ object fmDocBlob: TfmDocBlob
           end
           object cxGrid1DBBandedTableView2doc_type_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'doc_type_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = -1
@@ -546,6 +579,7 @@ object fmDocBlob: TfmDocBlob
           end
           object cxGrid1DBBandedTableView2doc_type_cod: TcxGridDBBandedColumn
             DataBinding.FieldName = 'doc_type_cod'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -554,6 +588,7 @@ object fmDocBlob: TfmDocBlob
           end
           object cxGrid1DBBandedTableView2users_group_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'users_group_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = -1
@@ -562,6 +597,7 @@ object fmDocBlob: TfmDocBlob
           end
           object cxGrid1DBBandedTableView2sign_customer_cod: TcxGridDBBandedColumn
             DataBinding.FieldName = 'sign_customer_cod'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = -1
@@ -570,6 +606,7 @@ object fmDocBlob: TfmDocBlob
           end
           object cxGrid1DBBandedTableView2sign_self_cod: TcxGridDBBandedColumn
             DataBinding.FieldName = 'sign_self_cod'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = -1
@@ -579,6 +616,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2contract_id: TcxGridDBBandedColumn
             Caption = #8470' '#1079#1072#1087#1080#1089#1080' '#1076#1086#1075#1086#1074#1086#1088#1072
             DataBinding.FieldName = 'contract_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -588,6 +626,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2firm_id: TcxGridDBBandedColumn
             Caption = #8470' '#1079#1072#1087#1080#1089#1080' '#1082#1086#1085#1090#1088#1072#1075#1077#1085#1090#1072
             DataBinding.FieldName = 'firm_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -596,6 +635,7 @@ object fmDocBlob: TfmDocBlob
           end
           object cxGrid1DBBandedTableView2invoice_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'invoice_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = -1
@@ -604,6 +644,7 @@ object fmDocBlob: TfmDocBlob
           end
           object cxGrid1DBBandedTableView2pretenzia_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'pretenzia_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = -1
@@ -612,6 +653,7 @@ object fmDocBlob: TfmDocBlob
           end
           object cxGrid1DBBandedTableView2fact_repair_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'fact_repair_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = -1
@@ -620,6 +662,7 @@ object fmDocBlob: TfmDocBlob
           end
           object cxGrid1DBBandedTableView2zfto_score_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'zfto_score_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = -1
@@ -628,6 +671,7 @@ object fmDocBlob: TfmDocBlob
           end
           object cxGrid1DBBandedTableView2date_end: TcxGridDBBandedColumn
             DataBinding.FieldName = 'date_end'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = -1
@@ -637,6 +681,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2doc_image_size: TcxGridDBBandedColumn
             Caption = #1056#1072#1079#1084#1077#1088' ('#1050#1073')'
             DataBinding.FieldName = 'doc_image_size'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0'
             HeaderAlignmentVert = vaTop
@@ -648,6 +693,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2type_contract_name: TcxGridDBBandedColumn
             Caption = #1058#1080#1087' '#1076#1086#1075#1086#1074#1086#1088#1072
             DataBinding.FieldName = 'type_contract_name'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -657,6 +703,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2doc_date_end: TcxGridDBBandedColumn
             Caption = #1054#1082#1086#1085#1095#1072#1085#1080#1077
             DataBinding.FieldName = 'doc_date_end'
+            DataBinding.IsNullValueType = True
             Visible = False
             HeaderAlignmentVert = vaTop
             Width = 70
@@ -667,6 +714,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2num_arc_book: TcxGridDBBandedColumn
             Caption = #8470' '#1058#1086#1084#1072
             DataBinding.FieldName = 'num_arc_book'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -676,6 +724,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2index_arc_book: TcxGridDBBandedColumn
             Caption = #1048#1085#1076#1077#1082#1089' '#1076#1077#1083#1072
             DataBinding.FieldName = 'index_arc_book'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -685,6 +734,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2firm_cod: TcxGridDBBandedColumn
             Caption = #1050#1086#1076' '#1082#1086#1085#1090#1088#1072#1075#1077#1085#1090#1072
             DataBinding.FieldName = 'firm_cod'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
@@ -694,6 +744,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2docs_id: TcxGridDBBandedColumn
             Caption = #8470' '#1079#1072#1087#1080#1089#1080' ('#1076#1086#1082#1091#1084#1077#1085#1090#1086#1086#1073#1086#1088#1086#1090')'
             DataBinding.FieldName = 'docs_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Styles.Content = cxStyle1
             Width = 70
@@ -704,6 +755,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2docs_status_name: TcxGridDBBandedColumn
             Caption = #1057#1090#1072#1090#1091#1089' ('#1076#1086#1082#1091#1084#1077#1085#1090#1086#1086#1073#1086#1088#1086#1090')'
             DataBinding.FieldName = 'docs_status_name'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Styles.Content = cxStyle1
             Width = 70
@@ -714,6 +766,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2docs_date_agree: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1089#1086#1075#1083#1072#1089#1086#1074#1072#1085#1080#1103' ('#1044#1086#1082#1091#1084#1077#1085#1090#1086#1086#1073#1086#1088#1086#1090')'
             DataBinding.FieldName = 'docs_date_agree'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Styles.Content = cxStyle1
             Width = 70
@@ -724,6 +777,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2process_step_name: TcxGridDBBandedColumn
             Caption = #1069#1090#1072#1087' ('#1076#1086#1082#1091#1084#1077#1085#1090#1086#1086#1073#1086#1088#1086#1090')'
             DataBinding.FieldName = 'process_step_name'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Styles.Content = cxStyle1
             Width = 70
@@ -734,6 +788,7 @@ object fmDocBlob: TfmDocBlob
           object cxGrid1DBBandedTableView2set_lzh: TcxGridDBBandedColumn
             Caption = 'ZIP'
             DataBinding.FieldName = 'set_lzh'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0

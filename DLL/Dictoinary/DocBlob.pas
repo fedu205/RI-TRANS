@@ -1,4 +1,4 @@
-unit DocBlob;
+п»їunit DocBlob;
 
 interface
 
@@ -30,7 +30,7 @@ uses
   dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
   dxSkinVisualStudio2013Light, System.ImageList, cxImageList,
   cxDataControllerConditionalFormattingRulesManagerDialog, dxSkinTheBezier,
-  dxDateRanges, dxSkinOffice2019Colorful;
+  dxDateRanges, dxSkinOffice2019Colorful, dxScrollbarAnnotations;
 
 type
   TNodeTag = class(TObject)
@@ -313,13 +313,13 @@ begin
   QFld.SQL.Add('ORDER BY folder_name');
   QFld.Open;
 
-  // Загрузка Папок
+  // Р—Р°РіСЂСѓР·РєР° РџР°РїРѕРє
   for i := 0 to cxTreeList1.Count - 1 do
     LoadFolder(cxTreeList1.Items[i], QFld);
 
   QFld.Free;
 
-  // ---- проверка прав на изменение документов ----------
+  // ---- РїСЂРѕРІРµСЂРєР° РїСЂР°РІ РЅР° РёР·РјРµРЅРµРЅРёРµ РґРѕРєСѓРјРµРЅС‚РѕРІ ----------
   if not usr_pwd.user_func.Locate('func_name', 'set_doc_modify', [loCaseInsensitive]) then begin
     dxBarButton1.Enabled := False;
     dxBarButton2.Enabled := False;
@@ -373,7 +373,7 @@ end;
 function TfmDocBlob.FindNode(StartNode : TcxTreeListNode; doc_type_cod, doc_folder_id : integer) : TcxTreeListNode;
 var i : integer;
 begin
-// Функция поиска Node по заданным: стартовой Ноде, типу документа и ИД папки
+// Р¤СѓРЅРєС†РёСЏ РїРѕРёСЃРєР° Node РїРѕ Р·Р°РґР°РЅРЅС‹Рј: СЃС‚Р°СЂС‚РѕРІРѕР№ РќРѕРґРµ, С‚РёРїСѓ РґРѕРєСѓРјРµРЅС‚Р° Рё РР” РїР°РїРєРё
   Result := nil;
 
   if (TObject(StartNode.Data) is TNodeTag) then
@@ -393,8 +393,8 @@ var QFld  : TADOQuery;
     pNode : TcxTreeListNode;
     i     : integer;
 begin
-//  doc_type_cod - Какой тип документов будем перегружать
-//  doc_folder_id - На какую папку будем потом позиционироваться
+//  doc_type_cod - РљР°РєРѕР№ С‚РёРї РґРѕРєСѓРјРµРЅС‚РѕРІ Р±СѓРґРµРј РїРµСЂРµРіСЂСѓР¶Р°С‚СЊ
+//  doc_folder_id - РќР° РєР°РєСѓСЋ РїР°РїРєСѓ Р±СѓРґРµРј РїРѕС‚РѕРј РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°С‚СЊСЃСЏ
 
   QFld := TADOQuery.Create(nil);
   QFld.Connection := ADOShablon;
@@ -405,7 +405,7 @@ begin
   QFld.SQL.Add('ORDER BY folder_name');
   QFld.Open;
 
-  // Найдем нужный тип документов
+  // РќР°Р№РґРµРј РЅСѓР¶РЅС‹Р№ С‚РёРї РґРѕРєСѓРјРµРЅС‚РѕРІ
   pNode := nil;
   for i := 0 to cxTreeList1.Count - 1 do begin
     if (TNodeTag(cxTreeList1.Items[i].Data).doc_type_cod = doc_type_cod) and (TNodeTag(cxTreeList1.Items[i].Data).doc_folder_id = -9) then begin
@@ -420,7 +420,7 @@ begin
     pNode.DeleteChildren;
     LoadFolder(pNode, QFld);
 
-    // позиционирование  на папку
+    // РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёРµ  РЅР° РїР°РїРєСѓ
     pNode := FindNode(pNode, doc_type_cod, doc_folder_id);
     if pNode <> nil then begin
       pNode.Focused := True;
@@ -440,7 +440,7 @@ end;
 procedure TfmDocBlob.cxGrid1DBBandedTableView2CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
 begin
   if (TNodeTag(cxTreeList1.FocusedNode.Data).doc_type_cod = 7)
-    AND (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView2.GetColumnByFieldName('doc_kind_name').Index] = 'Копия')
+    AND (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView2.GetColumnByFieldName('doc_kind_name').Index] = 'РљРѕРїРёСЏ')
     AND (AViewInfo.GridRecord.Values[cxGrid1DBBandedTableView2.GetColumnByFieldName('doc_original_date').Index] <= Now)
     then ACanvas.Brush.Color := $008080FF;
 
@@ -493,9 +493,9 @@ begin
   end;
 
   spam_dir := ExtractFilePath(ParamStr(0)) + 'Temp';
-  // Проверка и создание директории
+  // РџСЂРѕРІРµСЂРєР° Рё СЃРѕР·РґР°РЅРёРµ РґРёСЂРµРєС‚РѕСЂРёРё
   ForceDirectories(spam_dir);
-  // Попытка удаления мусора из временной директории
+  // РџРѕРїС‹С‚РєР° СѓРґР°Р»РµРЅРёСЏ РјСѓСЃРѕСЂР° РёР· РІСЂРµРјРµРЅРЅРѕР№ РґРёСЂРµРєС‚РѕСЂРёРё
   DeleteFileFromDir(spam_dir);
 
   SP := TADOStoredProc.Create(nil);
@@ -551,7 +551,7 @@ begin
             str_doc_id := str_doc_id + ',' + IntToStr(cxGrid1DBBandedTableView2.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView2doc_id.Index]);
           Delete(str_doc_id, 1, 1);
 
-          if Application.MessageBox(PWideChar('Переместить ' + IntToStr(cxGrid1DBBandedTableView2.Controller.SelectedRecordCount) + ' документ(а,ов) в папку "' + VarToStr(pNode.Values[0]) + '"?'), 'Внимание', MB_YESNO or MB_ICONQUESTION) = ID_NO then
+          if Application.MessageBox(PWideChar('РџРµСЂРµРјРµСЃС‚РёС‚СЊ ' + IntToStr(cxGrid1DBBandedTableView2.Controller.SelectedRecordCount) + ' РґРѕРєСѓРјРµРЅС‚(Р°,РѕРІ) РІ РїР°РїРєСѓ "' + VarToStr(pNode.Values[0]) + '"?'), 'Р’РЅРёРјР°РЅРёРµ', MB_YESNO or MB_ICONQUESTION) = ID_NO then
             exit;
 
           SP := TADOStoredProc.Create(nil);
@@ -604,7 +604,7 @@ end;
 procedure TfmDocBlob.ADOShablonExecuteComplete(Connection: TADOConnection; RecordsAffected: Integer; const Error: Error; var EventStatus: TEventStatus; const Command: _Command; const Recordset: _Recordset);
 begin
   if EventStatus = esErrorsOccured then begin
-    Application.MessageBox(PWideChar(error.Description), 'Внимание', MB_OK or MB_ICONERROR);
+    Application.MessageBox(PWideChar(error.Description), 'Р’РЅРёРјР°РЅРёРµ', MB_OK or MB_ICONERROR);
     ShowTextMessage('', True);
   end;
 end;
@@ -643,19 +643,23 @@ begin
 end;
 
 procedure TfmDocBlob.dxBarButton2Click(Sender: TObject);
-var SP_BLOB_modify: TADOStoredProc;
+var SP_BLOB_modify : TADOStoredProc;
+                 i : integer;
 begin
-  if Application.MessageBox('Вы точно хотите удалить документ?', 'Внимание', MB_OKCANCEL)=IDOK then begin
+  if Application.MessageBox('Р’С‹ С‚РѕС‡РЅРѕ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ РґРѕРєСѓРјРµРЅС‚?', 'Р’РЅРёРјР°РЅРёРµ', MB_OKCANCEL)=IDOK then begin
     Screen.Cursor := crHourglass;
 
-    SP_BLOB_modify := TADOStoredProc.Create(nil);
-    SP_BLOB_modify.Connection := ADOShablon;
-    SP_BLOB_modify.ProcedureName := 'sp_BLOB_modify';
-    SP_BLOB_modify.Parameters.Refresh;
-    SP_BLOB_modify.Parameters.ParamByName('@type_action').Value := 2;
-    SP_BLOB_modify.Parameters.ParamByName('@doc_id').Value := cxGrid1DBBandedTableView2doc_id.DataBinding.Field.AsInteger;
-    SP_BLOB_modify.ExecProc;
-    SP_BLOB_modify.Free;
+    for i:=0 to cxGrid1DBBandedTableView2.Controller.SelectedRowCount - 1 do begin
+      ShowTextMessage('РћСЃС‚Р°Р»РѕСЃСЊ ' + IntToStr(cxGrid1DBBandedTableView2.Controller.SelectedRowCount - i) + ' Р·Р°РїРёСЃРµР№...',  False);
+      SP_BLOB_modify := TADOStoredProc.Create(nil);
+      SP_BLOB_modify.Connection := ADOShablon;
+      SP_BLOB_modify.ProcedureName := 'sp_BLOB_modify';
+      SP_BLOB_modify.Parameters.Refresh;
+      SP_BLOB_modify.Parameters.ParamByName('@type_action').Value := 2;
+      SP_BLOB_modify.Parameters.ParamByName('@doc_id').Value := cxGrid1DBBandedTableView2.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView2doc_id.Index];
+      SP_BLOB_modify.ExecProc;
+      SP_BLOB_modify.Free;
+    end;
 
     RefreshQueryGrid(cxGrid1DBBandedTableView2, 'doc_id');
     Screen.Cursor := crDefault;
@@ -683,7 +687,7 @@ begin
   if not cxGrid1DBBandedTableView2doc_id.DataBinding.Field.IsNull then begin
     if not cxGrid1DBBandedTableView2file_name.DataBinding.Field.IsNull then begin
       GetDocBlobView(cxGrid1DBBandedTableView2doc_id.DataBinding.Field.AsInteger, nil, '', ADOShablon);
-    end else Application.MessageBox('НЕТ ФАЙЛА К ДАННОЙ ЗАПИСИ', 'ВНИМАНИЕ', MB_OK);
+    end else Application.MessageBox('РќР•Рў Р¤РђР™Р›Рђ Рљ Р”РђРќРќРћР™ Р—РђРџРРЎР', 'Р’РќРРњРђРќРР•', MB_OK);
   end;
 end;
 
@@ -708,12 +712,12 @@ begin
   SetdxDBGridColumns(cxGrid1DBBandedTableView2);
 end;
 
-{$REGION 'Фильтр по всем записям'}
+{$REGION 'Р¤РёР»СЊС‚СЂ РїРѕ РІСЃРµРј Р·Р°РїРёСЃСЏРј'}
 procedure TfmDocBlob.dxBarButton_FilterRecords1Click(Sender: TObject);
 begin
   cxGrid1DBBandedTableView2.Filtering.ColumnFilteredItemsList := not dxBarButton_FilterRecords1.Down;
 end;
-{$ENDREGION 'Фильтр по всем записям'}
+{$ENDREGION 'Р¤РёР»СЊС‚СЂ РїРѕ РІСЃРµРј Р·Р°РїРёСЃСЏРј'}
 
 procedure TfmDocBlob.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
@@ -934,9 +938,9 @@ var folder: string;
     s_old : TArray<Byte>;
 begin
   doc_id := -9;
-  folder := BrowseDialog('Выбор каталога:');
+  folder := BrowseDialog('Р’С‹Р±РѕСЂ РєР°С‚Р°Р»РѕРіР°:');
   if folder <> '' then begin
-    if Application.MessageBox(PChar('Сохранить ' + IntToStr(cxGrid1DBBandedTableView2.Controller.SelectedRecordCount) + ' файлов?'), 'ВНИМАНИЕ', MB_ICONWARNING or MB_YESNO) = ID_YES then begin
+    if Application.MessageBox(PChar('РЎРѕС…СЂР°РЅРёС‚СЊ ' + IntToStr(cxGrid1DBBandedTableView2.Controller.SelectedRecordCount) + ' С„Р°Р№Р»РѕРІ?'), 'Р’РќРРњРђРќРР•', MB_ICONWARNING or MB_YESNO) = ID_YES then begin
       SP := TADOStoredProc.Create(nil);
       SP.Connection := ADOShablon;
       SP.ProcedureName := 'sp_BLOB_modify';
@@ -949,7 +953,7 @@ begin
         SP.Open;
 
         if cxGrid1DBBandedTableView2.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView2file_name.Index] = null then
-          OutFileName := 'пусто_' + FormatDateTime('sszzz', Now) + '.txt'
+          OutFileName := 'РїСѓСЃС‚Рѕ_' + FormatDateTime('sszzz', Now) + '.txt'
         else
           OutFileName := SP.FieldByName('file_name').AsString;
 
@@ -960,20 +964,20 @@ begin
 
         PrefFileName := '';
         doc_type_cod := VarToStr(cxGrid1DBBandedTableView2.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView2doc_type_cod.Index]);
-        //1 Договор
-        //2 Приложение
-        //3 счет
-        //10 акты
-        //9 прочие
-        //12 доверенность
-        //13 Письмо
-        //7 Карточка контрагента
+        //1 Р”РѕРіРѕРІРѕСЂ
+        //2 РџСЂРёР»РѕР¶РµРЅРёРµ
+        //3 СЃС‡РµС‚
+        //10 Р°РєС‚С‹
+        //9 РїСЂРѕС‡РёРµ
+        //12 РґРѕРІРµСЂРµРЅРЅРѕСЃС‚СЊ
+        //13 РџРёСЃСЊРјРѕ
+        //7 РљР°СЂС‚РѕС‡РєР° РєРѕРЅС‚СЂР°РіРµРЅС‚Р°
 
         //if doc_type_cod = '1' then
         // PrefFileName := PrefFileName + '_' +VarToStr(cxGrid1DBBandedTableView2.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView2contract_cod.Index])+'_' + FormatDateTime('dd.mm.yy', cxGrid1DBBandedTableView2.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView2date_begin.Index]);
         if (doc_type_cod = '1') or (doc_type_cod = '2') or (doc_type_cod = '3') or (doc_type_cod = '10') or (doc_type_cod = '12') or (doc_type_cod = '13')then  begin
          if not VarIsNull(cxGrid1DBBandedTableView2.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView2contract_cod.Index]) then
-          PrefFileName :=  VarToStr(cxGrid1DBBandedTableView2.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView2firm_customer_name.Index])+ 'Дог.№_' + VarToStr(cxGrid1DBBandedTableView2.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView2contract_cod.Index]) +'_от_' + FormatDateTime('dd.mm.yy', cxGrid1DBBandedTableView2.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView2date_begin.Index]);
+          PrefFileName :=  VarToStr(cxGrid1DBBandedTableView2.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView2firm_customer_name.Index])+ 'Р”РѕРі.в„–_' + VarToStr(cxGrid1DBBandedTableView2.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView2contract_cod.Index]) +'_РѕС‚_' + FormatDateTime('dd.mm.yy', cxGrid1DBBandedTableView2.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView2date_begin.Index]);
          PrefFileName := PrefFileName + '_' + VarToStr(cxGrid1DBBandedTableView2.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView2doc_type_describe.Index])
         // if doc_type_cod = '2' then
         //  PrefFileName := PrefFileName + '_' +VarToStr(cxGrid1DBBandedTableView2.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView2doc_cod.Index])+'_' + FormatDateTime('dd.mm.yy', cxGrid1DBBandedTableView2.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView2doc_image_date.Index]);
@@ -1000,7 +1004,7 @@ begin
         WriteFile(hFile, PAnsiChar(s)^, Length(s), num_write, nil);
         CloseHandle(hFile);
         FileSetAttr(OutFileName, SysUtils.faReadOnly);
-        ShowTextMessage('Осталось ' + IntToStr(cxGrid1DBBandedTableView2.Controller.SelectedRecordCount-i) + ' файлов...',False);
+        ShowTextMessage('РћСЃС‚Р°Р»РѕСЃСЊ ' + IntToStr(cxGrid1DBBandedTableView2.Controller.SelectedRecordCount-i) + ' С„Р°Р№Р»РѕРІ...',False);
       end;
       ShellExecute(HWND(nil), 'open', PChar(folder), nil, PChar(folder), SW_SHOWNORMAL);
       SP.Free;
@@ -1016,7 +1020,7 @@ var
 begin
   Screen.Cursor := crHourglass;
   if cxGrid1DBBandedTableView2docs_id.DataBinding.Field.AsInteger = 0 then
-    Application.MessageBox('Запись LIS-Docs отстствует !!!', 'Внимание', MB_OK + MB_ICONWARNING)
+    Application.MessageBox('Р—Р°РїРёСЃСЊ LIS-Docs РѕС‚СЃС‚СЃС‚РІСѓРµС‚ !!!', 'Р’РЅРёРјР°РЅРёРµ', MB_OK + MB_ICONWARNING)
   else
     if RunLisDocs then begin
       New(vData);
@@ -1077,7 +1081,7 @@ var SP : TADOStoredProc;
 begin
   if TNodeTag(cxTreeList1.FocusedNode.Data).doc_folder_id = -9 then
     exit;
-  if Application.MessageBox(PWideChar('Удалить папку "' + VarToStr(cxTreeList1.FocusedNode.Values[0]) + '"?'), 'Внимание', MB_YESNO or MB_ICONQUESTION) = ID_NO then
+  if Application.MessageBox(PWideChar('РЈРґР°Р»РёС‚СЊ РїР°РїРєСѓ "' + VarToStr(cxTreeList1.FocusedNode.Values[0]) + '"?'), 'Р’РЅРёРјР°РЅРёРµ', MB_YESNO or MB_ICONQUESTION) = ID_NO then
     exit;
 
   SP := TADOStoredProc.Create(nil);
