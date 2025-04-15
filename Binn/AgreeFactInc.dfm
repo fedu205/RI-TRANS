@@ -949,14 +949,14 @@ object fmAgreeFactInc: TfmAgreeFactInc
       Bands = <
         item
           Caption = #1055#1040#1054' "'#1057#1086#1074#1092#1088#1072#1093#1090'"'
-          Width = 460
+          Width = 547
         end
         item
           Visible = False
         end
         item
           Caption = #1062' '#1060' '#1058' '#1054
-          Width = 511
+          Width = 560
         end
         item
           Visible = False
@@ -978,7 +978,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Caption = #8470' '#1074#1072#1075'.'
         DataBinding.FieldName = 'num_vagon_F'
         DataBinding.IsNullValueType = True
-        Width = 63
+        Width = 64
         Position.BandIndex = 0
         Position.ColIndex = 0
         Position.RowIndex = 0
@@ -1035,7 +1035,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Properties.DecimalPlaces = 3
         Properties.DisplayFormat = '#,##0.000'
         Properties.UseDisplayFormatWhenEditing = True
-        Width = 43
+        Width = 44
         Position.BandIndex = 0
         Position.ColIndex = 5
         Position.RowIndex = 0
@@ -1049,7 +1049,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Properties.DecimalPlaces = 3
         Properties.DisplayFormat = '#,##0.000'
         Properties.UseDisplayFormatWhenEditing = True
-        Width = 38
+        Width = 42
         Position.BandIndex = 0
         Position.ColIndex = 6
         Position.RowIndex = 0
@@ -1058,7 +1058,9 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Caption = #1057#1090#1072#1074#1082#1072
         DataBinding.FieldName = 'rate_val_F'
         DataBinding.IsNullValueType = True
-        Width = 60
+        PropertiesClassName = 'TcxCurrencyEditProperties'
+        Properties.DisplayFormat = '#,##0.00'
+        Width = 61
         Position.BandIndex = 0
         Position.ColIndex = 8
         Position.RowIndex = 0
@@ -1068,7 +1070,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Caption = #1043'/'#1087
         DataBinding.FieldName = 'kargo_capacity_F'
         DataBinding.IsNullValueType = True
-        Width = 30
+        Width = 23
         Position.BandIndex = 0
         Position.ColIndex = 7
         Position.RowIndex = 0
@@ -1080,7 +1082,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         PropertiesClassName = 'TcxCurrencyEditProperties'
         Properties.DisplayFormat = '#,##0.00'
         Properties.UseDisplayFormatWhenEditing = True
-        Width = 44
+        Width = 45
         Position.BandIndex = 0
         Position.ColIndex = 9
         Position.RowIndex = 0
@@ -1092,19 +1094,30 @@ object fmAgreeFactInc: TfmAgreeFactInc
         PropertiesClassName = 'TcxCurrencyEditProperties'
         Properties.DisplayFormat = '#,##0.00'
         Properties.UseDisplayFormatWhenEditing = True
-        Width = 77
+        Width = 79
         Position.BandIndex = 0
         Position.ColIndex = 10
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1date_otp_F: TcxGridDBBandedColumn
         Tag = 111
-        Caption = #1044#1072#1090#1072#1054#1090
+        Caption = #1044#1072#1090#1072#1054#1090#1087#1088
         DataBinding.FieldName = 'date_otp_F'
         DataBinding.IsNullValueType = True
-        Width = 57
+        Width = 65
         Position.BandIndex = 0
         Position.ColIndex = 11
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1date_prib_F: TcxGridDBBandedColumn
+        Tag = 112
+        Caption = #1044#1072#1090#1072#1055#1088#1080#1073
+        DataBinding.FieldName = 'date_prib_F'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Width = 60
+        Position.BandIndex = 0
+        Position.ColIndex = 13
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1fact_inc_id: TcxGridDBBandedColumn
@@ -1122,7 +1135,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Caption = #8470' '#1074#1072#1075'.'
         DataBinding.FieldName = 'num_vagon_Z'
         DataBinding.IsNullValueType = True
-        Width = 71
+        Width = 78
         Position.BandIndex = 2
         Position.ColIndex = 2
         Position.RowIndex = 0
@@ -1154,7 +1167,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Caption = #8470' '#1085#1072#1082#1083'.'
         DataBinding.FieldName = 'num_document_Z'
         DataBinding.IsNullValueType = True
-        Width = 57
+        Width = 62
         Position.BandIndex = 2
         Position.ColIndex = 3
         Position.RowIndex = 0
@@ -1179,7 +1192,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Properties.DecimalPlaces = 3
         Properties.DisplayFormat = '#,##0.000'
         Properties.UseDisplayFormatWhenEditing = True
-        Width = 43
+        Width = 47
         Position.BandIndex = 2
         Position.ColIndex = 5
         Position.RowIndex = 0
@@ -1193,7 +1206,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Properties.DecimalPlaces = 3
         Properties.DisplayFormat = '#,##0.000'
         Properties.UseDisplayFormatWhenEditing = True
-        Width = 33
+        Width = 39
         Position.BandIndex = 2
         Position.ColIndex = 6
         Position.RowIndex = 0
@@ -1202,7 +1215,9 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Caption = #1057#1090#1072#1074#1082#1072
         DataBinding.FieldName = 'rate_val_Z'
         DataBinding.IsNullValueType = True
-        Width = 60
+        PropertiesClassName = 'TcxCurrencyEditProperties'
+        Properties.DisplayFormat = '#,##0.00'
+        Width = 65
         Position.BandIndex = 2
         Position.ColIndex = 8
         Position.RowIndex = 0
@@ -1212,7 +1227,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Caption = #1043'/'#1087
         DataBinding.FieldName = 'kargo_capacity_Z'
         DataBinding.IsNullValueType = True
-        Width = 30
+        Width = 33
         Position.BandIndex = 2
         Position.ColIndex = 7
         Position.RowIndex = 0
@@ -1224,17 +1239,17 @@ object fmAgreeFactInc: TfmAgreeFactInc
         PropertiesClassName = 'TcxCurrencyEditProperties'
         Properties.DisplayFormat = '#,##0.00'
         Properties.UseDisplayFormatWhenEditing = True
-        Width = 89
+        Width = 115
         Position.BandIndex = 2
         Position.ColIndex = 9
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1date_otp_Z: TcxGridDBBandedColumn
         Tag = 69844216
-        Caption = #1044#1072#1090#1072#1054#1090'.'
+        Caption = #1044#1072#1090#1072#1054#1090#1087#1088
         DataBinding.FieldName = 'date_otp_Z'
         DataBinding.IsNullValueType = True
-        Width = 62
+        Width = 59
         Position.BandIndex = 2
         Position.ColIndex = 10
         Position.RowIndex = 0
@@ -1244,7 +1259,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Caption = #1044#1072#1090#1072#1055#1088'.'
         DataBinding.FieldName = 'date_pr_Z'
         DataBinding.IsNullValueType = True
-        Width = 65
+        Width = 60
         Position.BandIndex = 2
         Position.ColIndex = 11
         Position.RowIndex = 0
@@ -1254,6 +1269,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Caption = #1059#1095'.'#1085#1086#1084#1077#1088
         DataBinding.FieldName = 'id_uch_Z'
         DataBinding.IsNullValueType = True
+        Visible = False
         Width = 70
         Position.BandIndex = 4
         Position.ColIndex = 1
@@ -1338,8 +1354,8 @@ object fmAgreeFactInc: TfmAgreeFactInc
   end
   object DS_Sverka: TDataSource
     DataSet = SP_AgreeFactInc_Sverka
-    Left = 140
-    Top = 279
+    Left = 92
+    Top = 213
   end
   object SP_ZFTOAct: TADOStoredProc
     Connection = fmMain.Lis
@@ -1433,8 +1449,8 @@ object fmAgreeFactInc: TfmAgreeFactInc
       'SELECT * FROM view_bargain_rights WITH (NOLOCK)'
       'WHERE bargain_id = :bargain_id '
       '')
-    Left = 338
-    Top = 234
+    Left = 212
+    Top = 132
   end
   object dxBarManager1: TdxBarManager
     Tag = 555

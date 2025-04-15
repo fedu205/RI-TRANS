@@ -103,6 +103,7 @@ type
     cxGrid1DBBandedTableView1Column2: TcxGridDBBandedColumn;
     dxBarButton3: TdxBarButton;
     cxGrid1DBBandedTableView1Column1: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1date_prib_F: TcxGridDBBandedColumn;
     procedure Excel1Click(Sender: TObject);
     procedure cxGrid1DBBandedTableView1KeyPress(Sender: TObject; var Key: Char);
     procedure cxGrid1DBBandedTableView1FocusedItemChanged(Sender: TcxCustomGridTableView; APrevFocusedItem,  AFocusedItem: TcxCustomGridTableItem);
@@ -130,6 +131,7 @@ type
     procedure N28Click(Sender: TObject);
   private
     Fstr_shaping_rate_id         : string;
+    Fstr_bargain_id              : string;
     Ftype_str, Ftype             : byte;
     Fnvag, Ftype_self, Fbargain_id : integer;
     Fbrief_name, Fnkont, Fndnum  : string;
@@ -140,7 +142,9 @@ type
     function ShowFactIncDlg(Buffer: PChar; type_buffer, type_self: integer; var v: Variant): TModalResult;
     procedure ReCalc();
   public
-    constructor Create(AOwner : TApplication; bargain_id : integer);
+    constructor Create(AOwner : TApplication; bargain_id : integer); overload;
+    constructor Create(AOwner : TApplication; str_bargain_id : string); overload;
+
     function SetFrahtFact() : integer;
 
 //    property _SetShapingRateID : integer write FShaping_rate_id;
@@ -164,6 +168,7 @@ begin
   inherited Create(nil);
   Ftype_self := 0;
   Fbargain_id := bargain_id;
+  Fstr_bargain_id := IntToStr(bargain_id);
   Fstr_shaping_rate_id := ''; // Подрядчик еще не выбран
 
   SP_AgreeFactInc_Sverka.Parameters.Refresh;
@@ -173,6 +178,60 @@ begin
   Query_Agree.Close;
   Query_Agree.Parameters.ParamByName('bargain_id').Value := Fbargain_id;
   Query_Agree.Open;
+
+  if (Query_Agree.FieldByName('ed_izm_cod').AsString = '001') then begin
+    Ftype_str := 2;
+  end else begin
+    Ftype_str := 1;
+  end;
+
+  cxGrid1DBBandedTableView1num_vagon_F.Visible := (Ftype_str = 1);
+  cxGrid1DBBandedTableView1num_vagon_Z.Visible := (Ftype_str = 1);
+  cxGrid1DBBandedTableView1num_konten_F.Visible := (Ftype_str = 2);
+  cxGrid1DBBandedTableView1num_konten_Z.Visible := (Ftype_str = 2);
+
+  cxGrid1DBBandedTableView1sum_F.Styles.Content := fmMain.cxStyle_AgreeFactInc_Sum;
+  cxGrid1DBBandedTableView1sum_Z.Styles.Content := fmMain.cxStyle_AgreeFactInc_Sum;
+  cxGrid1DBBandedTableView1add_profit.Styles.Content := fmMain.cxStyle_AgreeFactInc_AddProfit;
+
+  SetUsersModuleRights(self, fmMain.Lis);
+
+  MonitorEventFormOpen('OPEN_FORM', self.Name, fmMain.Lis, -9);
+
+  WindowState := wsMaximized;
+  Screen.Cursor := crDefault;
+end;
+
+constructor TfmAgreeFactInc.Create(AOwner: TApplication; str_bargain_id : string);
+var ed_izm_cod : string;
+begin
+  Screen.Cursor := crHourglass;
+  inherited Create(nil);
+
+  Ftype_self := 0;
+  Fstr_bargain_id := str_bargain_id;
+  Fstr_shaping_rate_id := ''; // Подрядчик еще не выбран
+
+  SP_AgreeFactInc_Sverka.Parameters.Refresh;
+  SP_ZFTOAct.Parameters.Refresh;
+
+  // Открываем запрос Query_Agree для Fbargain_id
+  Query_Agree.Close;
+  Query_Agree.SQL.Clear;
+  Query_Agree.SQL.Add('SET ANSI_NULLS OFF');
+  Query_Agree.SQL.Add('SELECT * FROM view_bargain_rights WITH (NOLOCK)');
+  Query_Agree.SQL.Add('WHERE bargain_id IN (' + Fstr_bargain_id + ')');
+  Query_Agree.Open;
+
+  ed_izm_cod := Query_Agree.FieldByName('ed_izm_cod').AsString;
+  while not Query_Agree.Eof do begin
+    if Query_Agree.FieldByName('ed_izm_cod').AsString <> ed_izm_cod then begin
+      Application.MessageBox('Выбраны перевозки с различной единицей измерения (ставка за вагон и за тонну)!', 'Внимание', MB_OK);
+      Screen.Cursor := crDefault;
+      Close;
+    end;
+    Query_Agree.Next;
+  end;
 
   if (Query_Agree.FieldByName('ed_izm_cod').AsString = '001') then begin
     Ftype_str := 2;
@@ -264,10 +323,16 @@ begin
   // Проверки
   Q := TADOQuery.Create(nil);
   Q.Connection := fmMain.Lis;
-  Q.SQL.Add('SELECT view_shaping_rate.shaping_rate_id, contract_set, firm_agent_name, contract_agent_cod, FRAHT_AGENT.agent_sum_fact_real, shaping_rate_type_name');
-  Q.SQL.Add('FROM view_shaping_rate LEFT JOIN FRAHT_AGENT ON view_shaping_rate.shaping_rate_id = FRAHT_AGENT.shaping_rate_id');
-  Q.SQL.Add('WHERE view_shaping_rate.bargain_id = ' + IntToStr(Fbargain_id));
-  Q.SQL.Add('AND view_shaping_rate.contract_set < 100'); // не null и не меньше 100
+//  Q.SQL.Add('SELECT s.shaping_rate_id, contract_set, firm_agent_name, contract_agent_cod, fa.agent_sum_fact_real, shaping_rate_type_name');
+//  Q.SQL.Add('FROM view_shaping_rate s LEFT JOIN fraht_agent fa ON s.shaping_rate_id = fa.shaping_rate_id');
+//  Q.SQL.Add('WHERE s.bargain_id IN (' + IntToStr(Fbargain_id) + ')');
+//  Q.SQL.Add('AND s.contract_set < 100'); // не null и не меньше 100
+
+  Q.SQL.Add('SELECT s.shaping_rate_id, contract_set, firm_agent_name, contract_agent_cod, fa.agent_sum_fact_real, shaping_rate_type_name,');
+  Q.SQL.Add('firm_client_name, bargain_cod');
+  Q.SQL.Add('FROM view_shaping_rate s LEFT JOIN fraht_agent fa ON s.shaping_rate_id = fa.shaping_rate_id');
+  Q.SQL.Add('WHERE s.bargain_id IN (' + Fstr_bargain_id + ')');
+  Q.SQL.Add('AND s.contract_set < 100'); // не null и не меньше 100
 
   Q.Open;
 
@@ -282,7 +347,7 @@ begin
     fmFilter._SetContract4AgreeFactInc := True;
 
     if fmFilter.ShowModal = mrOk then begin
-      Fstr_shaping_rate_id := fmFilter._GetStrId;
+       Fstr_shaping_rate_id := fmFilter._GetStrId;
       Q.Locate('shaping_rate_id', fmFilter.GetId, [loCaseInsensitive]);
       Ftype_self           := Q.FieldByName('contract_set').AsInteger - 1;
 
@@ -325,7 +390,7 @@ begin
 
   Q.Close;
   Q.SQL.Clear;
-  Q.SQL.Add('select firm_agent_name, firm_agent_name_short from view_shaping_rate where shaping_rate_id = ' + Fstr_shaping_rate_id);
+  Q.SQL.Add('SELECT firm_agent_name, firm_agent_name_short FROM view_shaping_rate WHERE shaping_rate_id IN (' + Fstr_shaping_rate_id + ')');
   Q.Open;
 
   FLabel1 := Q.FieldByName('firm_agent_name').AsString;
@@ -333,37 +398,6 @@ begin
 
   Q.Free;
 
-//  // Заголовки
-//  case Ftype_self of
-//  0,2,7:begin
-//        FLabel1 := 'ЦФТО';
-//        Flabel2 := 'Ц Ф Т О';
-//        end;
-//    1 : begin
-//        FLabel1 := 'ПГК';
-//        Flabel2 := 'П Г К';
-//        end;
-//    3 : begin
-//        FLabel1 := 'ФГК';
-//        Flabel2 := 'Ф Г К';
-//        end;
-//    4 : begin
-//        FLabel1 := 'ГПТ';
-//        Flabel2 := 'Г П Т';
-//        end;
-//    5 : begin
-//        FLabel1 := '____________';
-//        Flabel2 := '____________';
-//        end;
-//    6 : begin
-//        FLabel1 := '______________';
-//        Flabel2 := '______________';
-//        end;
-//    8 : begin
-//        FLabel1 := 'НефтеТрансСервис';
-//        Flabel2 := 'НефтеТрансСервис';
-//        end;
-//  end;
 
   self.Caption := 'Сверка с ' + FLabel1;
   N1.Caption := 'Добавить факт ' + FLabel1 + '...';
@@ -408,7 +442,7 @@ begin
     SP.ProcedureName := 'sp_fact_inc_bargain_update;1';
     SP.Parameters.Refresh;
     SP.Parameters.ParamByName('@type_action').Value := 10;
-    SP.Parameters.ParamByName('@bargain_id').Value := Fbargain_id;
+    SP.Parameters.ParamByName('@bargain_id').Value := null; //Fbargain_id;
     SP.Parameters.ParamByName('@str_shaping_rate_id').Value := Fstr_shaping_rate_id;
     SP.ExecProc;
     SP.Free;

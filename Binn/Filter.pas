@@ -871,6 +871,8 @@ begin
     AddVisibleColumn('shaping_rate_id', '№ Услуги', 100);
     AddVisibleColumn('contract_agent_cod', '№ Договора', 120, True);
     AddVisibleColumn('firm_agent_name', 'Подрядчик', 200);
+    AddVisibleColumn('firm_client_name', 'Клиент', 120, True);
+    AddVisibleColumn('bargain_cod', '№ перевозки', 100, True);
     AddVisibleColumn('shaping_rate_type_name', 'Тип расчета', 100);
     AddVisibleColumn('agent_sum_fact_real', 'Сумма', 120);
     cxGrid1DBBandedTableView1.GetColumnByFieldName('agent_sum_fact_real').PropertiesClassName := 'TcxCurrencyEditProperties';
