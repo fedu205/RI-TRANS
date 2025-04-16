@@ -5462,6 +5462,14 @@ object fmFact: TfmFact
       ImageIndex = 40
       OnClick = dxBarButton14Click
     end
+    object dxBarButton4: TdxBarButton
+      Caption = #1050#1086#1087#1080#1088#1086#1074#1072#1090#1100' '#1079#1085#1072#1095#1077#1085#1080#1103' '#1082#1086#1083#1086#1085#1082#1080
+      Category = 0
+      Hint = #1050#1086#1087#1080#1088#1086#1074#1072#1090#1100' '#1079#1085#1072#1095#1077#1085#1080#1103' '#1082#1086#1083#1086#1085#1082#1080
+      Visible = ivAlways
+      ImageIndex = 94
+      OnClick = dxBarButton4Click
+    end
     object N49: TdxBarButton
       Caption = #1055#1086#1082#1072#1079#1072#1090#1100' '#1074' '#1069#1090#1088#1072#1085#1077'...'
       Category = 1
@@ -5941,6 +5949,10 @@ object fmFact: TfmFact
       item
         Visible = True
         ItemName = 'N47'
+      end
+      item
+        Visible = True
+        ItemName = 'dxBarButton4'
       end
       item
         BeginGroup = True

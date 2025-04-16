@@ -604,6 +604,7 @@ type
     cxGrid1DBBandedTableView1fact_num: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1fact_date: TcxGridDBBandedColumn;
     dxBarButton14: TdxBarButton;
+    dxBarButton4: TdxBarButton;
     procedure dxBarButton6Click(Sender: TObject);
     procedure N18Click(Sender: TObject);
     procedure N40Click(Sender: TObject);
@@ -673,6 +674,7 @@ type
     procedure dxBarButton62Click(Sender: TObject);
     procedure dxBarButton14Click(Sender: TObject);
     procedure dxBarButton17Click(Sender: TObject);
+    procedure dxBarButton4Click(Sender: TObject);
   private
     Fflag            : boolean;
     Ftype_fact       : integer; // 0-Опер факт, 1- Все, 2-Оборот вагона, 3-факт всё опер
@@ -731,7 +733,7 @@ implementation
 
 uses
     Main, Raznoe, FactCard, Filter, Period, LoadFact, Other, ComObj, Math, ShellApi, StrUtils,
-    cxGridDBTableView, AgreeFactInc, FactTrack, ZFTOScore, PlanClient, FactSum, Agree2;
+    cxGridDBTableView, AgreeFactInc, FactTrack, ZFTOScore, PlanClient, FactSum, Agree2, Clipbrd;
 
 {$R *.DFM}
 
@@ -4322,6 +4324,23 @@ end;
 procedure TfmFact.dxBarButton47Click(Sender: TObject);
 begin
   UsersSettingModify(TComponent(Sender).Tag, TForm(self).Name, TcxControl(cxGrid1DBBandedTableView1), fmMain.Lis);
+end;
+
+procedure TfmFact.dxBarButton4Click(Sender: TObject);
+var str_cells : string;
+            i : integer;
+      clboard : TClipboard;
+begin
+  str_cells := '';
+
+  for i := 0 to cxGrid1DBBandedTableView1.Controller.SelectedRecordCount - 1 do begin
+    str_cells := str_cells + VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRecords[i].Values[cxGrid1DBBandedTableView1.VisibleColumns[cxGrid1DBBandedTableView1.Controller.FocusedItemIndex].Index]);
+    str_cells := str_cells + #13#10;
+  end;
+
+  clboard := TClipboard.Create;
+  clboard.AsText := str_cells;
+  clboard.Free;
 end;
 
 procedure TfmFact.dxBarButton7Click(Sender: TObject);

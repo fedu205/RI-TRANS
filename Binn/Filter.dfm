@@ -354,17 +354,20 @@ object fmFilter: TfmFilter
       OnCustomDrawColumnHeader = cxGrid1DBTableView1CustomDrawColumnHeader
       object cxGrid1DBTableView1Column1: TcxGridDBColumn
         DataBinding.FieldName = 'id'
+        DataBinding.IsNullValueType = True
         Visible = False
         Width = 60
       end
       object cxGrid1DBTableView1Column2: TcxGridDBColumn
         Caption = #1050#1086#1076
         DataBinding.FieldName = 'cod'
+        DataBinding.IsNullValueType = True
         Width = 80
       end
       object cxGrid1DBTableView1Column3: TcxGridDBColumn
         Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077
         DataBinding.FieldName = 'name'
+        DataBinding.IsNullValueType = True
         Width = 230
       end
     end
@@ -406,6 +409,7 @@ object fmFilter: TfmFilter
         end>
       object cxGrid1DBBandedTableView1Column1: TcxGridDBBandedColumn
         DataBinding.FieldName = 'id'
+        DataBinding.IsNullValueType = True
         Width = 60
         Position.BandIndex = 0
         Position.ColIndex = 0
@@ -414,6 +418,7 @@ object fmFilter: TfmFilter
       object cxGrid1DBBandedTableView1Column2: TcxGridDBBandedColumn
         Caption = #1050#1086#1076
         DataBinding.FieldName = 'cod'
+        DataBinding.IsNullValueType = True
         Width = 107
         Position.BandIndex = 0
         Position.ColIndex = 1
@@ -422,6 +427,7 @@ object fmFilter: TfmFilter
       object cxGrid1DBBandedTableView1Column3: TcxGridDBBandedColumn
         Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077
         DataBinding.FieldName = 'name'
+        DataBinding.IsNullValueType = True
         Width = 230
         Position.BandIndex = 0
         Position.ColIndex = 2
