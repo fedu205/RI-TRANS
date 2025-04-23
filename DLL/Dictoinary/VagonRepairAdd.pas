@@ -17,7 +17,7 @@ uses
   dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine, dxSkinWhiteprint,
   dxSkinscxPCPainter, dxSkinsdxBarPainter,  dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinVisualStudio2013Blue,  dxSkinVisualStudio2013Dark,
   dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinXmas2008Blue, dxDateRanges, dxSkinTheBezier, cxButtons,  dxScrollbarAnnotations, cxSpinEdit,
-  cxDBEdit;
+  cxDBEdit, dxCoreGraphics;
 
 type
   TfmVagonRepairAdd = class(TForm)
