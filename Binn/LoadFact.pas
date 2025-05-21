@@ -1102,7 +1102,7 @@ begin
      // &&&&&&&&&&&&&&&& основной цикл &&&&&&&&&&&&&&&&&&&&&&&
       i := Query_Scene['num_rows'];
 
-      file_name_dbf := ExtractFileName(cxButtonEdit1.EditText);
+      file_name_dbf := ExtractFileName(cxButtonEdit1.EditText) + cxTextEdit1.Text;
 
       SP := TADOStoredProc.Create(nil);
       SP.Connection := FConnection;
