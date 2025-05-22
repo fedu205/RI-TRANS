@@ -1572,11 +1572,15 @@ end;
 procedure TfmMain.dxBarButton28Click(Sender: TObject);
 var i : integer;
   bln : boolean;
+  file_name : string;
 begin
   fmLoadFact := TfmLoadFact.Create(Application, -9);
   fmLoadFact.SetConnection(Lis, usr_pwd);
   fmLoadFact._LoadToFactInc(TComponent(Sender).Tag, TdxBarButton(Sender).Description);
   if fmLoadFact.ShowModal = mrOk then begin
+
+    file_name := fmLoadFact._GetFileName;
+
     bln := False;
     for i := 0 to self.MDIChildCount - 1 do
       if MDIChildren[i].ClassName = TfmFactInc.ClassName then begin
@@ -1586,7 +1590,7 @@ begin
     if not bln then fmFactInc := TfmFactInc.Create(Application, False);
 
     fmFactInc._GetData_DBF := 'SELECT * FROM view_fact_inc_temp WHERE (users_group_id = ' + IntToStr(usr_pwd.user_group_id) + ') AND (type_self = ' + IntToStr(TComponent(Sender).Tag) + ')' +
-      ' AND (file_name_dbf = (SELECT max(file_name_dbf) as max_file_name_dbf FROM view_fact_inc_temp WHERE (users_group_id = ' + IntToStr(usr_pwd.user_group_id) + ') AND (type_self = ' + IntToStr(TComponent(Sender).Tag) + ')))';
+      ' AND (file_name_dbf = '''+ file_name +''')';
     if TComponent(Sender).Tag = 1 then
       Application.MessageBox('Не забудте проставить ставки', '', MB_OK or MB_ICONINFORMATION);
   end;

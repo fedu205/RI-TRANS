@@ -163,6 +163,8 @@ type
     Ffact_inc_type_self : integer;
     Ffact_inc_type_doc  : string;
 
+    Ffile_name : string;
+
     FConnection : TADOConnection;
     Fusr_pwd : PUser_pwd;
 
@@ -179,6 +181,7 @@ type
   published
     property _SetTypeScene: integer write SetTypeScene;
     property _GetClientExcelRecords: TClientDataSet read Client_ExcelRecords;
+    property _GetFileName: string read Ffile_name;
 
   end;
 
@@ -200,6 +203,7 @@ begin
   Ftype_scene         := 0;
   Ffact_inc_type_self := 0;
   Ffact_inc_type_doc  := '';
+  Ffile_name := '';
 
   FSL := TStringList.Create;
   FSL.Add('float');      // 0
@@ -1102,7 +1106,8 @@ begin
      // &&&&&&&&&&&&&&&& основной цикл &&&&&&&&&&&&&&&&&&&&&&&
       i := Query_Scene['num_rows'];
 
-      file_name_dbf := ExtractFileName(cxButtonEdit1.EditText) + cxTextEdit1.Text;
+      file_name_dbf := ExtractFileName(cxButtonEdit1.EditText) + ' ' + cxTextEdit1.Text;
+      Ffile_name := file_name_dbf;
 
       SP := TADOStoredProc.Create(nil);
       SP.Connection := FConnection;
