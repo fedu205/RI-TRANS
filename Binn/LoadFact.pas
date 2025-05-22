@@ -1114,6 +1114,7 @@ begin
       SP.ProcedureName := 'sp_FactInc_Load_PGK';
       SP.Parameters.Refresh;
 
+
       while (Assigned(Sheet.Cells[i-1, num_col_end-1])) and (Assigned(Sheet.Cells[i-0, num_col_end-1]))
             and
             ((not Sheet.Cells[i-1, num_col_end-1].IsEmpty) or (not Sheet.Cells[i-0, num_col_end-1].IsEmpty)) do begin

@@ -1579,6 +1579,10 @@ begin
   fmLoadFact._LoadToFactInc(TComponent(Sender).Tag, TdxBarButton(Sender).Description);
   if fmLoadFact.ShowModal = mrOk then begin
 
+
+
+
+
     file_name := fmLoadFact._GetFileName;
 
     bln := False;
