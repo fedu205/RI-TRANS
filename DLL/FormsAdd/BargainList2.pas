@@ -5860,6 +5860,13 @@ begin
     fmBargainRate.cxCheckBox3.Enabled := cxGrid3DBBandedTableView1.DataController.RecordCount <> 0;
 
     if fmBargainRate.ShowModal = mrOk then begin
+      exWks := exWkb.WorkSheets[fmBargainRate._GetParamId + 1];
+      set_nds       := fmBargainRate._GetNDS;
+      set_fact_len  := fmBargainRate._GetDistFact;
+      set_prev_len  := fmBargainRate._GetDistPrev;
+      type_tools_id := -9;//fmBargainRate._GetTypeKontener;
+      attr_self_id  := -9;//fmBargainRate._GetAttrSelf;
+
       dxBarButton5Click(nil);
 
       rate_id := cxGrid1DBBandedTableView1global_id.DataBinding.Field.AsInteger;
@@ -5908,13 +5915,6 @@ begin
           ClientDS.Delete;
       end;
 
-
-      exWks := exWkb.WorkSheets[fmBargainRate._GetParamId + 1];
-      set_nds       := fmBargainRate._GetNDS;
-      set_fact_len  := fmBargainRate._GetDistFact;
-      set_prev_len  := fmBargainRate._GetDistPrev;
-      type_tools_id := -9;//fmBargainRate._GetTypeKontener;
-      attr_self_id  := -9;//fmBargainRate._GetAttrSelf;
 
       if (type_tools_id = -9) and (attr_self_id <> -9) then begin
         Application.MessageBox('Выберите "Род п/с, тип конт"!!!', 'ОШИБКА', MB_ICONSTOP or MB_OK);
