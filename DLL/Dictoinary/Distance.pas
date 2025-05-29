@@ -3,8 +3,9 @@
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Data.Win.ADODB, Default, cxGraphics, cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxStyles,
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Default,
+  Controls, Forms, Dialogs, DB, ADODB,ImageList, ImgList,
+  cxGraphics, cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxStyles, cxGridDBBandedTableView, cxClasses, cxGridCustomView,
   dxSkinsCore, dxSkinBlack, dxSkinBlue, dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide, dxSkinDevExpressDarkStyle,
   dxSkinDevExpressStyle, dxSkinFoggy, dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian, dxSkinLiquidSky, dxSkinLondonLiquidSky,
   dxSkinMcSkin, dxSkinMetropolis, dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black, dxSkinOffice2007Blue, dxSkinOffice2007Green,
@@ -12,10 +13,9 @@ uses
   dxSkinOffice2013LightGray, dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic,
   dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinTheBezier,
   dxSkinsDefaultPainters, dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010,
-  dxSkinWhiteprint, dxSkinXmas2008Blue, cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit, cxNavigator,
-  cxDBData, cxGridLevel, cxGridCustomTableView, cxGridTableView, cxGridBandedTableView,
-  cxGridDBBandedTableView, cxClasses, cxGridCustomView, cxGrid, dxBar,
-  cxPropertiesStore, cxCurrencyEdit, System.ImageList, Vcl.ImgList, cxImageList, dxDateRanges, dxSkinOffice2019Colorful, dxScrollbarAnnotations;
+  dxSkinWhiteprint, dxSkinXmas2008Blue, cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit, cxNavigator, cxDBData, cxGridLevel,
+  cxGridCustomTableView, cxGridTableView, cxGridBandedTableView, cxGrid, dxBar, cxPropertiesStore, cxCurrencyEdit, cxImageList, dxDateRanges,
+  dxScrollbarAnnotations;
 
 type
   TfmDistance = class(TForm)
@@ -239,7 +239,7 @@ end;
 procedure TfmDistance.dxBarButton2Click(Sender: TObject);
 var i : integer;
 begin
-  if Application.MessageBox(PChar('Вы точно уверены, что хотите пересчитать выделенные строки?'),'Внимание', MB_ICONQUESTION or MB_OKCANCEL) = ID_OK then begin
+  if Application.MessageBox(PChar('Вы точно уверены, что хотите пересчитать выделенные строки по Rail-Тариф?'),'Внимание', MB_ICONQUESTION or MB_OKCANCEL) = ID_OK then begin
     Screen.Cursor := crHourglass;
 
     for i := 0 to cxGrid1DBBandedTableView1.Controller.SelectedRowCount - 1 do begin
@@ -257,6 +257,7 @@ end;
 procedure TfmDistance.dxBarButton3Click(Sender: TObject);
 var SP : TADOStoredProc;
 begin
+  Screen.Cursor := crHourglass;
   SP := TADOStoredProc.Create(nil);
   SP.Connection := Fconnect;
   SP.ProcedureName := 'sp_inf_obj_distance_modify';
@@ -266,6 +267,8 @@ begin
 
   SP.Free;
   RefreshQueryGrid(cxGrid1DBBandedTableView1, 'inf_obj_id');
+
+  Screen.CUrsor := crDefault;
 end;
 
 procedure TfmDistance.dxBarButton4Click(Sender: TObject);

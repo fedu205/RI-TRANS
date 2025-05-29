@@ -468,6 +468,8 @@ begin
 
     end;
   end;
+
+  ModalResult         := mrOk;
 end;
 
 procedure TfmFilter.cxGrid1DBBandedTableView1DataControllerFilterChanged(Sender: TObject);
