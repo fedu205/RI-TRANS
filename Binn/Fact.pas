@@ -605,6 +605,8 @@ type
     cxGrid1DBBandedTableView1fact_date: TcxGridDBBandedColumn;
     dxBarButton14: TdxBarButton;
     dxBarButton4: TdxBarButton;
+    cxGrid1DBBandedTableView1etran_invTypeName: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1etran_invTypeID: TcxGridDBBandedColumn;
     procedure dxBarButton6Click(Sender: TObject);
     procedure N18Click(Sender: TObject);
     procedure N40Click(Sender: TObject);
@@ -1043,7 +1045,7 @@ begin
   ShowTextMessage('Идет подготовка и извлечение необходимых данных. Подождите пожалуйста...', False);
 
   ADOEtran := TADOConnection.Create(nil);
-  ADOEtran.ConnectionString := 'Provider=SQLOLEDB.1;Persist Security Info=True;User ID=etran_gru;Password=etran;Initial Catalog=lis_etran;Data Source='+usr_pwd^.server+';';
+  ADOEtran.ConnectionString := 'Provider=SQLOLEDB.1;Persist Security Info=True;User ID=etran_rtr;Password=etran;Initial Catalog=lis_etran;Data Source='+usr_pwd^.server+';';
   ADOEtran.KeepConnection   := False;
   ADOEtran.LoginPrompt      := False;
 
@@ -1893,7 +1895,7 @@ begin
   ShowTextMessage('Выполнение запроса к базе данных.'+#10#13+'Это может занять несколько секунд. ПОДОЖДИТЕ !!!!!', False);
 
   connect := TADOConnection.Create(nil);
-  connect.ConnectionString := 'Persist Security Info=True;Provider=SQLOLEDB.1;User ID=ETRAN_GRU;Password=etran;Initial Catalog='+usr_pwd^.catalog + ';Data Source='+usr_pwd^.server+';';
+  connect.ConnectionString := 'Persist Security Info=True;Provider=SQLOLEDB.1;User ID=ETRAN_rtr;Password=etran;Initial Catalog='+usr_pwd^.catalog + ';Data Source='+usr_pwd^.server+';';
   connect.KeepConnection := False;
   connect.LoginPrompt := False;
   connect.Open;
@@ -4899,7 +4901,7 @@ begin
     ETRAN.LoginPrompt := False;
 
     case Q.FieldByName('users_group_cod').AsInteger of
-      0 : Etran.ConnectionString := 'Persist Security Info=True;Provider=SQLOLEDB.1;User ID=Etran_GRU;Password=etran;Initial Catalog=lis_etran;Data Source=' + usr_pwd.server + ';';
+      0 : Etran.ConnectionString := 'Persist Security Info=True;Provider=SQLOLEDB.1;User ID=Etran_rtr;Password=etran;Initial Catalog=lis_etran;Data Source=' + usr_pwd.server + ';';
     end;
     ETRAN.Connected := True;
     // ----------------------------------

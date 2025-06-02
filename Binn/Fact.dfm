@@ -1890,6 +1890,23 @@ object fmFact: TfmFact
             Position.ColIndex = 120
             Position.RowIndex = 0
           end
+          object cxGrid1DBBandedTableView1etran_invTypeName: TcxGridDBBandedColumn
+            Caption = #1058#1080#1087' '#1085#1072#1082#1083#1072#1076#1085#1086#1081
+            DataBinding.FieldName = 'etran_invTypeName'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Width = 80
+            Position.BandIndex = 0
+            Position.ColIndex = 121
+            Position.RowIndex = 0
+          end
+          object cxGrid1DBBandedTableView1etran_invTypeID: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'etran_invTypeID'
+            DataBinding.IsNullValueType = True
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
         end
         object cxGrid1Level1: TcxGridLevel
           GridView = cxGrid1DBBandedTableView1
@@ -1899,6 +1916,9 @@ object fmFact: TfmFact
     object cxTabSheet3: TcxTabSheet
       Caption = #1054#1073#1086#1088#1086#1090' '#1074#1072#1075#1086#1085#1072
       ImageIndex = 91
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid3: TcxGrid
         Left = 0
         Top = 0
@@ -4279,6 +4299,9 @@ object fmFact: TfmFact
     object cxTabSheet5: TcxTabSheet
       Caption = #1055#1086#1082#1072#1079#1072#1090#1077#1083#1080' '#1088#1072#1073#1086#1090#1099' '#1087#1072#1088#1082#1072
       ImageIndex = 157
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Splitter2: TSplitter
         Left = 499
         Top = 0
