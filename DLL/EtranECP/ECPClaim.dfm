@@ -10,10 +10,8 @@ object fmECPClaim: TfmECPClaim
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object cxGrid1: TcxGrid
     Left = 0
@@ -28,6 +26,7 @@ object fmECPClaim: TfmECPClaim
       PopupMenu = dxBarPopupMenu1
       OnKeyPress = cxGrid1DBBandedTableView1KeyPress
       Navigator.Buttons.CustomButtons = <>
+      ScrollbarAnnotations.CustomAnnotations = <>
       OnCustomDrawCell = cxGrid1DBBandedTableView1CustomDrawCell
       OnFocusedItemChanged = cxGrid1DBBandedTableView1FocusedItemChanged
       DataController.DataSource = DS_ECPClaim
@@ -59,6 +58,7 @@ object fmECPClaim: TfmECPClaim
       object cxGrid1DBBandedTableView1etran_ecp_claim_id: TcxGridDBBandedColumn
         Caption = #8470' '#1079#1072#1087#1080#1089#1080
         DataBinding.FieldName = 'etran_ecp_claim_id'
+        DataBinding.IsNullValueType = True
         Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 0
@@ -67,6 +67,7 @@ object fmECPClaim: TfmECPClaim
       object cxGrid1DBBandedTableView1date_send: TcxGridDBBandedColumn
         Caption = #1044#1072#1090#1072' '#1086#1090#1087#1088#1072#1074#1082#1080' '#1074' '#1069#1058#1056#1040#1053
         DataBinding.FieldName = 'date_send'
+        DataBinding.IsNullValueType = True
         Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 1
@@ -75,6 +76,7 @@ object fmECPClaim: TfmECPClaim
       object cxGrid1DBBandedTableView1claimNumber: TcxGridDBBandedColumn
         Caption = #8470' '#1079#1072#1103#1074#1082#1080
         DataBinding.FieldName = 'claimNumber'
+        DataBinding.IsNullValueType = True
         Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 2
@@ -83,6 +85,7 @@ object fmECPClaim: TfmECPClaim
       object cxGrid1DBBandedTableView1clmSenderName: TcxGridDBBandedColumn
         Caption = #1043#1088#1091#1079#1086#1086#1090#1087#1088#1072#1074#1080#1090#1077#1083#1100
         DataBinding.FieldName = 'clmSenderName'
+        DataBinding.IsNullValueType = True
         Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 3
@@ -91,6 +94,7 @@ object fmECPClaim: TfmECPClaim
       object cxGrid1DBBandedTableView1clmStartDate: TcxGridDBBandedColumn
         Caption = #1053#1072#1095#1072#1083#1086
         DataBinding.FieldName = 'clmStartDate'
+        DataBinding.IsNullValueType = True
         Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 4
@@ -99,6 +103,7 @@ object fmECPClaim: TfmECPClaim
       object cxGrid1DBBandedTableView1clmFinishDate: TcxGridDBBandedColumn
         Caption = #1054#1082#1086#1085#1095#1072#1085#1080#1077
         DataBinding.FieldName = 'clmFinishDate'
+        DataBinding.IsNullValueType = True
         Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 5
@@ -107,6 +112,7 @@ object fmECPClaim: TfmECPClaim
       object cxGrid1DBBandedTableView1clmSendKindName: TcxGridDBBandedColumn
         Caption = #1042#1080#1076' '#1086#1090#1087#1088#1072#1074#1082#1080
         DataBinding.FieldName = 'clmSendKindName'
+        DataBinding.IsNullValueType = True
         Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 6
@@ -115,6 +121,7 @@ object fmECPClaim: TfmECPClaim
       object cxGrid1DBBandedTableView1clmFromStationName: TcxGridDBBandedColumn
         Caption = #1057#1090'. '#1086#1090#1087#1088'.'
         DataBinding.FieldName = 'clmFromStationName'
+        DataBinding.IsNullValueType = True
         Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 7
@@ -123,6 +130,7 @@ object fmECPClaim: TfmECPClaim
       object cxGrid1DBBandedTableView1FIO_users_create: TcxGridDBBandedColumn
         Caption = #1054#1090#1074#1077#1090#1089#1090#1074#1077#1085#1085#1099#1081
         DataBinding.FieldName = 'FIO_users_create'
+        DataBinding.IsNullValueType = True
         Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 8
@@ -131,6 +139,7 @@ object fmECPClaim: TfmECPClaim
       object cxGrid1DBBandedTableView1FIO_users_send: TcxGridDBBandedColumn
         Caption = #1054#1090#1087#1088#1072#1074#1080#1083
         DataBinding.FieldName = 'FIO_users_send'
+        DataBinding.IsNullValueType = True
         Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 9
@@ -139,6 +148,7 @@ object fmECPClaim: TfmECPClaim
       object cxGrid1DBBandedTableView1set_error: TcxGridDBBandedColumn
         Caption = #1054#1096#1080#1073#1082#1072
         DataBinding.FieldName = 'set_error'
+        DataBinding.IsNullValueType = True
         Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 10
@@ -146,6 +156,7 @@ object fmECPClaim: TfmECPClaim
       end
       object cxGrid1DBBandedTableView1users_owner_id: TcxGridDBBandedColumn
         DataBinding.FieldName = 'users_owner_id'
+        DataBinding.IsNullValueType = True
         Width = 100
         Position.BandIndex = -1
         Position.ColIndex = -1
@@ -154,6 +165,7 @@ object fmECPClaim: TfmECPClaim
       object cxGrid1DBBandedTableView1date_enter: TcxGridDBBandedColumn
         Caption = #1044#1072#1090#1072' '#1089#1086#1079#1076#1072#1085#1080#1103
         DataBinding.FieldName = 'date_enter'
+        DataBinding.IsNullValueType = True
         Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 11
@@ -161,6 +173,7 @@ object fmECPClaim: TfmECPClaim
       end
       object cxGrid1DBBandedTableView1global_color: TcxGridDBBandedColumn
         DataBinding.FieldName = 'global_color'
+        DataBinding.IsNullValueType = True
         Width = 100
         Position.BandIndex = -1
         Position.ColIndex = -1
@@ -168,6 +181,7 @@ object fmECPClaim: TfmECPClaim
       end
       object cxGrid1DBBandedTableView1etran_ecp_type_id: TcxGridDBBandedColumn
         DataBinding.FieldName = 'etran_ecp_type_id'
+        DataBinding.IsNullValueType = True
         Width = 100
         Position.BandIndex = -1
         Position.ColIndex = -1
@@ -176,6 +190,7 @@ object fmECPClaim: TfmECPClaim
       object cxGrid1DBBandedTableView1etran_ecp_type_name: TcxGridDBBandedColumn
         Caption = #1058#1080#1087' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
         DataBinding.FieldName = 'etran_ecp_type_name'
+        DataBinding.IsNullValueType = True
         Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 12

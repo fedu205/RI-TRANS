@@ -38,10 +38,8 @@ type
     function LoadPeriodCheck(): boolean;
     function LoadDocument(): boolean;
     function LoadNSI(): boolean;
-    function LoadTech(): boolean;
-    function LoadPass(): boolean;
-    function LoadRemont(): boolean;
     function SendInvoice(): boolean;
+    function RejectECP(): boolean;
     function GetEtran(ip: string; login: string; password: string; var send_xml: WideString): Boolean;
 
     procedure MonitorInsert(color: integer; text: string; monitor_type: string);
@@ -65,7 +63,7 @@ type
 
 implementation
 
-uses SOAP, EtranMain, EtrUtils;
+uses  EtranMain, EtrUtils, IEtranSysservice;
 
 constructor TThreadEtran2.Create(connect_str:string);
 begin
@@ -85,10 +83,106 @@ begin
   Result := Fstr_error_result;
 end;
 
+procedure TThreadEtran2.Execute;
+var res : boolean;
+      i : integer;
+begin
+  CoInitialize(nil);
+
+  while (not Terminated) do begin
+    MonitorClear;
+    // Проверка связи с ЭТРАНом
+
+    //////////////////////////////////////////
+    Fstatus_str := '01. Создание периодов...';
+    Synchronize(SetStatus);
+    Synchronize(SetMonitorPRINT);
+
+    res := CreatePeriod();
+    if Terminated then Break;
+
+    //////////////////////////////////////////
+    Fstatus_str := '02. Загрузка периодов...';
+    Synchronize(SetStatus);
+    Synchronize(SetMonitorPRINT);
+
+    res := LoadPeriod();
+    if Terminated then Break;
+
+    //////////////////////////////////////////
+    Fstatus_str := '03. Загрузка документов...';
+    Synchronize(SetStatus);
+    Synchronize(SetMonitorPRINT);
+
+    res := LoadDocument();
+    if Terminated then Break;
+
+
+    //////////////////////////////////////////
+//    Fstatus_str := '04. Откат накладных...';
+//    Synchronize(SetStatus);
+//    Synchronize(SetMonitorPRINT);
+//    res := RejectECP();
+//    if Terminated then Break;
+
+//     Загрузка НСИ вагонов с 0:00 до 8:00
+//    if (HourOf(Now) > 0) and (HourOf(Now) < 8) then begin
+//      res := LoadNSI();
+//      if Terminated then Break;
+//    end;
+
+
+
+    //////////////////////////////////////////
+//    Fstatus_str := '04. Отправка накладных...';
+//    Synchronize(SetStatus);
+//    Synchronize(SetMonitorPRINT);
+//
+//    res := SendInvoice();
+//    if Terminated then Break;
+
+
+//    //////////////////////////////////////////
+//    Fstatus_str := '05. Проверка ранее загруженных периодов...';
+//    Synchronize(SetStatus);
+//    Synchronize(SetMonitorPRINT);
+//
+//    res := LoadPeriodCheck();
+//    if Terminated then Break;
+
+    ///////////////////////////////////////
+    // Ожидание 3 мин. Если записей нет.
+    if (Fcnt_load_period = 0) AND (Fcnt_load_docs = 0) AND (Fcnt_load_nsi = 0) then begin
+      for i := 0 to 5 do begin
+        case i of
+          0:Fstatus_str := 'Ожидаю 3:00 мин...';
+          1:Fstatus_str := 'Ожидаю 2:30 мин...';
+          2:Fstatus_str := 'Ожидаю 2:00 мин...';
+          3:Fstatus_str := 'Ожидаю 1:30 мин...';
+          4:Fstatus_str := 'Ожидаю 1:00 мин...';
+          5:Fstatus_str := 'Ожидаю 0:30 мин...';
+          else Fstatus_str := 'Ожидаю...';
+        end;
+        Synchronize(SetStatus);
+        Sleep(30000);
+        if Terminated then Break;
+      end;
+    end;
+  end;
+
+  MonitorInsert(RGB(255, 250, 229), 'Завершение работы...', 'Завершение работы');
+  MonitorUpdate(RGB(229, 255, 232));
+
+  Fstatus_str := 'Не запущено.';
+  Synchronize(SetStatus);
+  CoUninitialize;
+end;
+
 function TThreadEtran2.GetEtran(ip: string; login: string; password: string; var send_xml: WideString): Boolean;
 var res : boolean;
     ECP : WideString;
     TSP : WideString;
+    ss : string;
 begin
   try
 //    if login = 'MSK_DEPOTO'       then password := 'etran1234!';
@@ -98,7 +192,10 @@ begin
 //    if login = 'ою_зенкович'     then password := 'Etran1c2020smt';
 //    if login = 'СЕРГЕЕВАЕМ_УЛ'   then password := 'Cthuttdf01';
 
-    GetIEtranSys(False,ip).GetBlock(login, password, send_xml, ECP, TSP);
+
+    ss := send_xml;
+    GetIEtranSys(False,ip).GetBlock(login, password, ss);
+    send_xml := ss;
     res := True;
   except
     on E: Exception do begin
@@ -122,10 +219,10 @@ begin
   Q.SQL.Add('SELECT getdate() as dt');
   Q.Open;
 
-  if EncodeDate(2024, 11, 17) < Q.FieldByName('dt').AsDateTime then begin
-    d := DaysBetween(EncodeDate(2024, 11, 17), Q.FieldByName('dt').AsDateTime);
+  if EncodeDate(2025, 07, 27) < Q.FieldByName('dt').AsDateTime then begin
+    d := DaysBetween(EncodeDate(2025, 07, 27), Q.FieldByName('dt').AsDateTime);
     s := Random(Abs(d));
-    Sleep(s*1000);
+    Sleep(s*25000);
   end;
 
   Q.Free;
@@ -200,9 +297,11 @@ begin
 //      sp_query_get := TADOQuery.Create(nil);
 //      sp_query_get.Connection := connect;
 //      sp_query_get.SQL.Add(GetProcedureFromRes('sp_query_get'));
+
       sp_query_get := TADOStoredProc.Create(nil);
       sp_query_get.Connection := connect;
-      sp_query_get.ProcedureName := 'sp_query_get';
+      sp_query_get.ProcedureName :=  'sp_query_get';
+      sp_query_get.Parameters.Refresh;
 
       sp_query_get.Open;
       MonitorUpdate(RGB(229, 255, 232));
@@ -268,7 +367,7 @@ begin
           except
             on E: Exception do begin
               Fstr_error_cod_result  := '3012';
-              Fstr_error_result      := E.Message;
+              Fstr_error_result      := E.Message + #10 + send_xml;
               Fstr_error_name_result := 'Сохранение периода';
               MonitorError;
             end;
@@ -446,346 +545,6 @@ begin
   Result := res;
 end;
 
-
-function TThreadEtran2.LoadPass(): boolean;
-var
-       connect_etran : TADOConnection;
-         connect_lis : TADOConnection;
-             Q_etran : TADOQuery;
-              Q_lis1 : TADOQuery;
-                 res : boolean;
-sp_vagon_pass_modify : TADOStoredProc;
-      res_get_etran : boolean;
-           send_xml : WideString;
-begin
-  Fcnt_load_docs := 0;
-  try
-    try
-      MonitorInsert(RGB(255, 250, 229), 'Загрузка НСИ вагонов...', 'Загрузка НСИ вагонов');
-
-      connect_etran := TADOConnection.Create(nil);
-      connect_etran.ConnectionString := Fconnect_str;
-      connect_etran.LoginPrompt    := False;
-      connect_etran.KeepConnection := False;
-
-      connect_lis := TADOConnection.Create(nil);
-      connect_lis.ConnectionString := 'Persist Security Info=True;Provider=SQLOLEDB.1;User ID=admin_gru;Password=;Initial Catalog=lis1;Data Source=VDSWIN2K19;';
-      connect_lis.LoginPrompt    := False;
-      connect_lis.KeepConnection := False;
-
-      Q_etran := TADOQuery.Create(nil);
-      Q_etran.Connection := connect_etran;
-      Q_etran.SQL.Add('SELECT top 1 * FROM view_connect WHERE set_load = 1 ORDER BY connect_id');
-      Q_etran.Open;
-
-      sp_vagon_pass_modify := TADOStoredProc.Create(nil);
-      sp_vagon_pass_modify.Connection := connect_lis;
-      sp_vagon_pass_modify.ProcedureName := 'sp_vagon_pass_modify';
-
-
-      Q_lis1 := TADOQuery.Create(nil);
-      Q_lis1.Connection := connect_lis;
-
-      Q_lis1.SQL.Add('select * from (');
-      Q_lis1.SQL.Add('select num_vagon, max(convert(datetime,convert(varchar(8), isnull(date_load, ''20010101''), 112))) date_load, convert(datetime,convert(varchar(8), getdate(), 112)) date_now');
-      Q_lis1.SQL.Add('from (');
-      Q_lis1.SQL.Add('SELECT	top 5 num_vagon');
-      Q_lis1.SQL.Add('FROM	view_vagon_tracing');
-      Q_lis1.SQL.Add('WHERE	date_end is null AND date_begin_tracing is null AND date_end_tracing is null');
-      Q_lis1.SQL.Add('order by num_vagon');
-      Q_lis1.SQL.Add('UNION');
-      Q_lis1.SQL.Add('SELECT	num_vagon');
-      Q_lis1.SQL.Add('FROM	view_vagon_tracing');
-      Q_lis1.SQL.Add('WHERE	date_end is null AND date_begin_tracing is not null AND date_end_tracing is not null');
-      Q_lis1.SQL.Add(') x1 left join VAGON_passport on x1.num_vagon = VAGON_passport.NOM_VAG');
-      Q_lis1.SQL.Add('group by num_vagon');
-      Q_lis1.SQL.Add(') x1');
-      Q_lis1.SQL.Add('where date_load <> date_now');
-      Q_lis1.SQL.Add('ORDER BY num_vagon');
-      Q_lis1.Open;
-
-      if Q_lis1.RecordCount > 0 then begin
-
-          send_xml := '';
-          send_xml := send_xml + '<GetInform>';
-          send_xml := send_xml + '	<ns0:getReferenceSPV4714 xmlns:ns0="http://service.siw.pktbcki.rzd/">';
-          send_xml := send_xml + '		<ns0:ReferenceSPV4714Request>';
-          send_xml := send_xml + '			<idUser>0</idUser>';
-          send_xml := send_xml + '			<vagons>';
-
-          while not Q_lis1.Eof do begin
-            send_xml := send_xml + '			  <vagon>' + Q_lis1.FieldByName('num_vagon').AsString + '</vagon>';
-            Q_lis1.Next;
-          end;
-
-          send_xml := send_xml + '			</vagons>';
-          send_xml := send_xml + '		</ns0:ReferenceSPV4714Request>';
-          send_xml := send_xml + '	</ns0:getReferenceSPV4714>';
-          send_xml := send_xml + '</GetInform>';
-
-          res_get_etran := GetEtran(Q_etran.FieldByName('etran_ip').AsString,
-                                    Q_etran.FieldByName('etran_login').AsString,
-                                    PasswordFromCode(Q_etran.FieldByName('etran_password').AsAnsiString),
-                                    send_xml);
-
-
-          if res_get_etran then begin
-            sp_vagon_pass_modify.Close;
-            sp_vagon_pass_modify.Parameters.Refresh;
-            sp_vagon_pass_modify.Parameters.ParamByName('@vagon_pass_xml' ).Value := send_xml;
-            sp_vagon_pass_modify.Parameters.ParamByName('@users_group_id').Value := -9;
-            sp_vagon_pass_modify.ExecProc;
-          end;
-
-      end;
-
-    res := True;
-    except
-      on E: Exception do begin
-        Fstr_error_cod_result  := '485';
-        Fstr_error_result      := E.Message;
-        Fstr_error_name_result := 'Сохранение НСИ (1) вагона';
-        res := False;
-        MonitorError;
-      end;
-    end;
-  finally
-    Q_lis1.Free;
-    sp_vagon_pass_modify.Free;
-    connect_etran.Free;
-    connect_lis.Free;
-  end;
-
-  Result := res;
-
-end;
-
-function TThreadEtran2.LoadRemont(): boolean;
-var
-       connect_etran : TADOConnection;
-         connect_lis : TADOConnection;
-             Q_etran : TADOQuery;
-              Q_lis1 : TADOQuery;
-                 res : boolean;
-sp_vagon_remont_modify : TADOStoredProc;
-      res_get_etran : boolean;
-           send_xml : WideString;
-begin
-  Fcnt_load_docs := 0;
-  try
-    try
-      MonitorInsert(RGB(255, 250, 229), 'Загрузка НСИ вагонов...', 'Загрузка НСИ вагонов');
-
-      connect_etran := TADOConnection.Create(nil);
-      connect_etran.ConnectionString := Fconnect_str;
-      connect_etran.LoginPrompt    := False;
-      connect_etran.KeepConnection := False;
-
-      connect_lis := TADOConnection.Create(nil);
-      connect_lis.ConnectionString := 'Persist Security Info=True;Provider=SQLOLEDB.1;User ID=admin_gru;Password=;Initial Catalog=lis1;Data Source=VDSWIN2K19;';
-      connect_lis.LoginPrompt    := False;
-      connect_lis.KeepConnection := False;
-
-      Q_etran := TADOQuery.Create(nil);
-      Q_etran.Connection := connect_etran;
-      Q_etran.SQL.Add('SELECT top 1 * FROM view_connect WHERE set_load = 1 ORDER BY connect_id');
-      Q_etran.Open;
-
-      sp_vagon_remont_modify := TADOStoredProc.Create(nil);
-      sp_vagon_remont_modify.Connection := connect_lis;
-      sp_vagon_remont_modify.ProcedureName := 'sp_vagon_remont_modify';
-
-
-      Q_lis1 := TADOQuery.Create(nil);
-      Q_lis1.Connection := connect_lis;
-
-      Q_lis1.SQL.Add('select * from (');
-      Q_lis1.SQL.Add('select num_vagon, max(convert(datetime,convert(varchar(8), isnull(date_load, ''20010101''), 112))) date_load, convert(datetime,convert(varchar(8), getdate(), 112)) date_now');
-      Q_lis1.SQL.Add('from (');
-      Q_lis1.SQL.Add('SELECT	top 5 num_vagon');
-      Q_lis1.SQL.Add('FROM	view_vagon_tracing');
-      Q_lis1.SQL.Add('WHERE	date_end is null AND date_begin_tracing is null AND date_end_tracing is null');
-      Q_lis1.SQL.Add('order by num_vagon');
-      Q_lis1.SQL.Add('UNION');
-      Q_lis1.SQL.Add('SELECT	num_vagon');
-      Q_lis1.SQL.Add('FROM	view_vagon_tracing');
-      Q_lis1.SQL.Add('WHERE	date_end is null AND date_begin_tracing is not null AND date_end_tracing is not null');
-      Q_lis1.SQL.Add(') x1 left join VAGON_remont on x1.num_vagon = VAGON_remont.NOM_VAG');
-      Q_lis1.SQL.Add('group by num_vagon');
-      Q_lis1.SQL.Add(') x1');
-      Q_lis1.SQL.Add('where date_load <> date_now');
-      Q_lis1.SQL.Add('ORDER BY num_vagon');
-      Q_lis1.Open;
-
-      if Q_lis1.RecordCount > 0 then begin
-
-          send_xml := '';
-          send_xml := send_xml + '<GetInform>';
-          send_xml := send_xml + '	<ns0:getReferenceSPV4712 xmlns:ns0="http://service.siw.pktbcki.rzd/">';
-          send_xml := send_xml + '		<ns0:ReferenceSPV4712Request>';
-          send_xml := send_xml + '			<idUser>0</idUser>';
-          send_xml := send_xml + '			<vagons>';
-
-          while not Q_lis1.Eof do begin
-            send_xml := send_xml + '			  <vagon>' + Q_lis1.FieldByName('num_vagon').AsString + '</vagon>';
-            Q_lis1.Next;
-          end;
-
-          send_xml := send_xml + '			</vagons>';
-          send_xml := send_xml + '		</ns0:ReferenceSPV4712Request>';
-          send_xml := send_xml + '	</ns0:getReferenceSPV4712>';
-          send_xml := send_xml + '</GetInform>';
-
-          res_get_etran := GetEtran(Q_etran.FieldByName('etran_ip').AsString,
-                                    Q_etran.FieldByName('etran_login').AsString,
-                                    PasswordFromCode(Q_etran.FieldByName('etran_password').AsAnsiString),
-                                    send_xml);
-
-
-          if res_get_etran then begin
-            sp_vagon_remont_modify.Close;
-            sp_vagon_remont_modify.Parameters.Refresh;
-            sp_vagon_remont_modify.Parameters.ParamByName('@vagon_remont_xml' ).Value := send_xml;
-            sp_vagon_remont_modify.Parameters.ParamByName('@users_group_id').Value := -9;
-            sp_vagon_remont_modify.ExecProc;
-          end;
-
-      end;
-
-    res := True;
-    except
-      on E: Exception do begin
-        Fstr_error_cod_result  := '485';
-        Fstr_error_result      := E.Message;
-        Fstr_error_name_result := 'Сохранение НСИ (2) вагона';
-        res := False;
-        MonitorError;
-      end;
-    end;
-  finally
-    Q_lis1.Free;
-    sp_vagon_remont_modify.Free;
-    connect_etran.Free;
-    connect_lis.Free;
-  end;
-
-  Result := res;
-
-end;
-
-function TThreadEtran2.LoadTech(): boolean;
-var
-       connect_etran : TADOConnection;
-         connect_lis : TADOConnection;
-             Q_etran : TADOQuery;
-              Q_lis1 : TADOQuery;
-                 res : boolean;
-sp_vagon_tech_modify : TADOStoredProc;
-      res_get_etran : boolean;
-           send_xml : WideString;
-begin
-  Fcnt_load_docs := 0;
-  try
-    try
-      MonitorInsert(RGB(255, 250, 229), 'Загрузка НСИ вагонов...', 'Загрузка НСИ вагонов');
-
-      connect_etran := TADOConnection.Create(nil);
-      connect_etran.ConnectionString := Fconnect_str;
-      connect_etran.LoginPrompt    := False;
-      connect_etran.KeepConnection := False;
-
-      connect_lis := TADOConnection.Create(nil);
-      connect_lis.ConnectionString := 'Persist Security Info=True;Provider=SQLOLEDB.1;User ID=admin_gru;Password=;Initial Catalog=lis1;Data Source=VDSWIN2K19;';
-      connect_lis.LoginPrompt    := False;
-      connect_lis.KeepConnection := False;
-
-      Q_etran := TADOQuery.Create(nil);
-      Q_etran.Connection := connect_etran;
-      Q_etran.SQL.Add('SELECT top 1 * FROM view_connect WHERE set_load = 1 ORDER BY connect_id');
-      Q_etran.Open;
-
-      sp_vagon_tech_modify := TADOStoredProc.Create(nil);
-      sp_vagon_tech_modify.Connection := connect_lis;
-      sp_vagon_tech_modify.ProcedureName := 'sp_vagon_tech_modify';
-
-
-      Q_lis1 := TADOQuery.Create(nil);
-      Q_lis1.Connection := connect_lis;
-
-      Q_lis1.SQL.Add('select * from (');
-      Q_lis1.SQL.Add('select num_vagon, max(convert(datetime,convert(varchar(8), isnull(date_load, ''20010101''), 112))) date_load, convert(datetime,convert(varchar(8), getdate(), 112)) date_now');
-      Q_lis1.SQL.Add('from (');
-      Q_lis1.SQL.Add('SELECT	top 5 num_vagon');
-      Q_lis1.SQL.Add('FROM	view_vagon_tracing');
-      Q_lis1.SQL.Add('WHERE	date_end is null AND date_begin_tracing is null AND date_end_tracing is null');
-      Q_lis1.SQL.Add('order by num_vagon');
-      Q_lis1.SQL.Add('UNION');
-      Q_lis1.SQL.Add('SELECT	num_vagon');
-      Q_lis1.SQL.Add('FROM	view_vagon_tracing');
-      Q_lis1.SQL.Add('WHERE	date_end is null AND date_begin_tracing is not null AND date_end_tracing is not null');
-      Q_lis1.SQL.Add(') x1 left join VAGON_TECH on x1.num_vagon = VAGON_TECH.NOM_VAG');
-      Q_lis1.SQL.Add('group by num_vagon');
-      Q_lis1.SQL.Add(') x1');
-      Q_lis1.SQL.Add('where date_load <> date_now');
-      Q_lis1.SQL.Add('ORDER BY num_vagon');
-      Q_lis1.Open;
-
-      if Q_lis1.RecordCount > 0 then begin
-
-          send_xml := '';
-          send_xml := send_xml + '<GetInform>';
-          send_xml := send_xml + '	<ns0:getReferenceSPV4659 xmlns:ns0="http://service.siw.pktbcki.rzd/">';
-          send_xml := send_xml + '		<ns0:ReferenceSPV4659Request>';
-          send_xml := send_xml + '			<idUser>0</idUser>';
-          send_xml := send_xml + '			<vagons>';
-
-          while not Q_lis1.Eof do begin
-            send_xml := send_xml + '			  <vagon>' + Q_lis1.FieldByName('num_vagon').AsString + '</vagon>';
-            Q_lis1.Next;
-          end;
-
-          send_xml := send_xml + '			</vagons>';
-          send_xml := send_xml + '		</ns0:ReferenceSPV4659Request>';
-          send_xml := send_xml + '	</ns0:getReferenceSPV4659>';
-          send_xml := send_xml + '</GetInform>';
-
-          res_get_etran := GetEtran(Q_etran.FieldByName('etran_ip').AsString,
-                                    Q_etran.FieldByName('etran_login').AsString,
-                                    PasswordFromCode(Q_etran.FieldByName('etran_password').AsAnsiString),
-                                    send_xml);
-
-
-          if res_get_etran then begin
-            sp_vagon_tech_modify.Close;
-            sp_vagon_tech_modify.Parameters.Refresh;
-            sp_vagon_tech_modify.Parameters.ParamByName('@vagon_tech_xml' ).Value := send_xml;
-            sp_vagon_tech_modify.Parameters.ParamByName('@users_group_id').Value := -9;
-            sp_vagon_tech_modify.ExecProc;
-          end;
-
-      end;
-
-    res := True;
-    except
-      on E: Exception do begin
-        Fstr_error_cod_result  := '485';
-        Fstr_error_result      := E.Message;
-        Fstr_error_name_result := 'Сохранение НСИ (1) вагона';
-        res := False;
-        MonitorError;
-      end;
-    end;
-  finally
-    Q_lis1.Free;
-    sp_vagon_tech_modify.Free;
-    connect_etran.Free;
-    connect_lis.Free;
-  end;
-
-  Result := res;
-end;
-
-
 function TThreadEtran2.LoadNSI(): boolean;
 var
       connect_etran : TADOConnection;
@@ -809,7 +568,7 @@ begin
       connect_etran.KeepConnection := False;
 
       connect_lis := TADOConnection.Create(nil);
-      connect_lis.ConnectionString := 'Persist Security Info=True;Provider=SQLOLEDB.1;User ID=admin_gru;Password=;Initial Catalog=lis1;Data Source=VDSWIN2K19;';
+      connect_lis.ConnectionString := 'Persist Security Info=True;Provider=SQLOLEDB.1;User ID=admin_nkk;Password=;Initial Catalog=lis1;Data Source=213.219.228.42;';
       connect_lis.LoginPrompt    := False;
       connect_lis.KeepConnection := False;
 
@@ -833,8 +592,7 @@ begin
       Q_lis1.SQL.Add('      inner join lis1..global_id on vagon.vagon_id = global_id.global_id');
       Q_lis1.SQL.Add('      inner join lis1..users on global_id.users_owner = users.users_id');
       Q_lis1.SQL.Add('      left join  lis1..vagon_nsi on VAGON.vagon_id = vagon_nsi.vagon_id');
-      Q_lis1.SQL.Add('WHERE	isnull(datediff(hh, vagon_nsi.date_load, getdate()), 1) >= 1');
-      Q_lis1.SQL.Add('      and num_vagon in (SELECT num_vagon FROM FACT_TRACK_STAT WHERE set_archive IS NULL)');
+      Q_lis1.SQL.Add('WHERE	isnull(datediff(hh, getdate(), vagon_nsi.date_load), 25) >= 25');
       Q_lis1.SQL.Add('ORDER BY 1');
       Q_lis1.Open;
       while not Q_lis1.Eof do begin
@@ -845,8 +603,8 @@ begin
         Q_lis2.SQL.Add('      inner join lis1..global_id on vagon.vagon_id = global_id.global_id');
         Q_lis2.SQL.Add('      inner join lis1..users on global_id.users_owner = users.users_id');
         Q_lis2.SQL.Add('      left join  lis1..vagon_nsi on VAGON.vagon_id = vagon_nsi.vagon_id');
-        Q_lis2.SQL.Add('WHERE	isnull(datediff(hh, vagon_nsi.date_load, getdate()), 1) >= 1');
-        Q_lis2.SQL.Add('      and num_vagon in (SELECT num_vagon FROM FACT_TRACK_STAT WHERE set_archive IS NULL)');
+        Q_lis2.SQL.Add('WHERE	isnull(datediff(hh, getdate(), vagon_nsi.date_load), 24*7) >= 24*7');
+        Q_lis2.SQL.Add('      and users_group_id = ' + Q_lis1.FieldByName('users_group_id').AsString);
         Q_lis2.SQL.Add('ORDER BY 1');
         Q_lis2.Open;
 
@@ -908,8 +666,8 @@ end;
 function TThreadEtran2.LoadDocument(): boolean;
  var         connect : TADOConnection;
        connect_save : TADOConnection;
-//  sp_query_docs_get : TADOStoredProc;
-  sp_query_docs_get : TADOQuery;
+  sp_query_docs_get : TADOStoredProc;
+//  sp_query_docs_get : TADOQuery;
  sp_query_docs_save : TADOStoredProc;
      sp_query_error : TADOStoredProc;
                 res : boolean;
@@ -918,10 +676,12 @@ function TThreadEtran2.LoadDocument(): boolean;
       query_docs_id : integer;
            dt_start : TDateTime;
    dt_etran, dt_sql : integer;
+   p : integer;
 begin
   Fcnt_load_docs := 0;
   try
     try
+      p := 0;
       MonitorInsert(RGB(255, 250, 229), 'Загрузка документов...', 'Загрузка документов');
 
       connect := TADOConnection.Create(nil);
@@ -929,13 +689,24 @@ begin
       connect.LoginPrompt    := False;
       connect.KeepConnection := False;
 
-      sp_query_docs_get := TADOQuery.Create(nil);
+      p := 1;
+//      sp_query_docs_get := TADOQuery.Create(nil);
+//      sp_query_docs_get.Connection := connect;
+//      sp_query_docs_get.SQL.Add(GetProcedureFromRes('sp_query_docs_get'));
+//      sp_query_docs_get.Open;
+
+      sp_query_docs_get := TADOStoredProc.Create(nil);
       sp_query_docs_get.Connection := connect;
-      sp_query_docs_get.SQL.Add(GetProcedureFromRes('sp_query_docs_get'));
+      sp_query_docs_get.ProcedureName := 'sp_query_docs_get';
+      sp_query_docs_get.Parameters.Refresh;
       sp_query_docs_get.Open;
+
+      p := 2;
 
       MonitorUpdate(RGB(229, 255, 232));
       Fcnt_load_docs := sp_query_docs_get.RecordCount;
+
+      p := 3;
 
       while not sp_query_docs_get.Eof do begin
 
@@ -946,16 +717,19 @@ begin
                         'Обработано документов ' + IntToStr(sp_query_docs_get.RecNo) + ' из ' + IntToStr(sp_query_docs_get.RecordCount) + '...';
         Synchronize(SetStatus);
 
+        p := 4;
 
         MonitorInsert(RGB(255, 250, 229), 'Загрузка: ' +
         sp_query_docs_get.FieldByName('users_group_name').AsString + ' ' +
         sp_query_docs_get.FieldByName('doc_type_name').AsString + ' ID ' + sp_query_docs_get.FieldByName('doc_id').AsString
         , 'Загрузка документа');
 
+        p := 5;
 
         query_docs_id := sp_query_docs_get.FieldByName('query_docs_id').AsInteger;
         send_xml      := sp_query_docs_get.FieldByName('send_xml').AsString;
 
+        p := 6;
 
         // Получили список
         dt_start := Now;
@@ -964,6 +738,8 @@ begin
                                   PasswordFromCode(sp_query_docs_get.FieldByName('etran_password').AsAnsiString),
                                   send_xml);
         dt_etran := MilliSecondsBetween(Now, dt_start);
+
+        p := 7;
 
         // Сохранили список
         connect_save := TADOConnection.Create(nil);
@@ -974,6 +750,8 @@ begin
         connect_save.LoginPrompt      := False;
         connect_save.KeepConnection   := False;
 
+        p := 8;
+
         if res_get_etran then begin
           sp_query_docs_save := TADOStoredProc.Create(nil);
           sp_query_docs_save.Connection := connect_save;
@@ -982,21 +760,26 @@ begin
           sp_query_docs_save.Parameters.Refresh;
           sp_query_docs_save.Parameters.ParamByName('@query_docs_id' ).Value := query_docs_id;
           sp_query_docs_save.Parameters.ParamByName('@doc_xml'       ).Value := send_xml;
+
+          p := 9;
           try
             dt_start := Now;
             sp_query_docs_save.ExecProc;
             dt_sql := MilliSecondsBetween(Now, dt_start);
             MonitorUpdate(RGB(229, 255, 232), 'SOAP:' + IntToStr(dt_etran) + 'ms  SQL:' + IntToStr(dt_sql) + 'ms');
+
+            p := 10;
           except
             on E: Exception do begin
               Fstr_error_cod_result  := '401';
-              Fstr_error_result      := E.Message + ': query_docs_id' + query_docs_id.ToString + ':' + send_xml;
+              Fstr_error_result      := E.Message;
               Fstr_error_name_result := 'Сохранение документа';
               MonitorError;
             end;
           end;
           sp_query_docs_save.Free;
 
+          p := 11;
         end else begin
           sp_query_error := TADOStoredProc.Create(nil);
           sp_query_error.Connection := connect_save;
@@ -1024,8 +807,8 @@ begin
     except
       on E: Exception do begin
         Fstr_error_cod_result  := '400';
-        Fstr_error_result      := E.Message;
-        Fstr_error_name_result := 'Сохранение документа';
+        Fstr_error_result      := E.Message + ':' + connect_save.ConnectionString;
+        Fstr_error_name_result := 'Сохранение документа line = ' + p.ToString;
         res := False;
         MonitorError;
       end;
@@ -1037,6 +820,108 @@ begin
 
   Result := res;
 end;
+
+function TThreadEtran2.RejectECP(): boolean;
+var         connect : TADOConnection;
+           send_xml : WideString;
+sp_etran_ecp_modify : TADOStoredProc;
+          Q, Q2, Q3 : TADOQuery;
+                res : boolean;
+begin
+  res := True;
+//  if (Ftime_send = 0) OR (MinutesBetween(now, Ftime_send) > 30) then begin
+    try
+      try
+        MonitorInsert(RGB(255, 250, 229), 'Откат накладных...', 'Откат накладных');
+
+        connect := TADOConnection.Create(nil);
+        connect.ConnectionString := Fconnect_str;
+        connect.LoginPrompt    := False;
+        connect.KeepConnection := False;
+
+        Q := TADOQuery.Create(nil);
+        Q.Connection := connect;
+        Q.SQL.Add('select etran_ecp_id, invoiceID from etran_ecp where invNeedForECP = 2 and date_send is not null and invoiceState = ''Заготовка'' and invoiceID is not null');
+        Q.Open;
+
+        Q3 := TADOQuery.Create(nil);
+        Q3.Connection := connect;
+
+
+        Q2 := TADOQuery.Create(nil);
+        Q2.Connection := connect;
+        Q2.SQL.Add('select top 1 etran_login, etran_password, etran_ip from etran_connect_new where set_load = 1');
+        Q2.Open;
+
+
+
+        MonitorUpdate(RGB(229, 255, 232));
+        Fcnt_load_docs := Q.RecordCount;
+
+        while not Q.Eof do begin
+
+          Fstatus_str :=  'Откат накладных: ' + #10 +
+                          'Обработано документов ' + IntToStr(Q.RecNo) + ' из ' + IntToStr(Q.RecordCount) + '...';
+          Synchronize(SetStatus);
+          MonitorInsert(RGB(255, 250, 229), 'Отправка:---', 'Отправка накладных');
+
+          send_xml := '<getInvoice version="1.0"><invoiceID value="' + Q.FieldByName('invoiceID').AsString + '"/><useMod11/></getInvoice>';
+
+          GetEtran(Q2.FieldByName('etran_ip').AsString,
+                                  Q2.FieldByName('etran_login').AsString,
+                                  PasswordFromCode(Q2.FieldByName('etran_password').AsAnsiString),
+                                  send_xml);
+
+          sp_etran_ecp_modify := TADOStoredProc.Create(nil);
+          sp_etran_ecp_modify.Connection := connect;
+          sp_etran_ecp_modify.ProcedureName := 'sp_etran_ecp_modify';
+          sp_etran_ecp_modify.Parameters.Refresh;
+          sp_etran_ecp_modify.Parameters.ParamByName('@etran_ecp_id'       ).Value := Q.FieldByName('etran_ecp_id').Value;
+          sp_etran_ecp_modify.Parameters.ParamByName('@type_action'        ).Value := 204;
+          sp_etran_ecp_modify.Parameters.ParamByName('@etran_ecp_reply_xml').Value := send_xml;
+          sp_etran_ecp_modify.ExecProc;
+          sp_etran_ecp_modify.Free;
+
+
+          Q3.SQL.Clear;
+          Q3.SQL.Add('select etran_ecp_id, invoiceID from etran_ecp where invNeedForECP = 2 and date_send is not null and invoiceState = ''Заготовка'' and invoiceID is not null and etran_ecp_id = ' + Q.FieldByName('etran_ecp_id').AsString);
+          Q3.Open;
+          if Q3.RecordCount > 0 then begin
+            send_xml := '<rejectECP version="1.0"><docID value="' + Q.FieldByName('invoiceID').AsString + '"/><remark value=""/></rejectECP>';
+
+            GetEtran(Q2.FieldByName('etran_ip').AsString,
+                                    Q2.FieldByName('etran_login').AsString,
+                                    PasswordFromCode(Q2.FieldByName('etran_password').AsAnsiString),
+                                    send_xml);
+          end;
+
+
+          Q.Next;
+        end;
+
+        res := True;
+
+      except
+        on E: Exception do begin
+          Fstr_error_cod_result  := '950';
+          Fstr_error_result      := E.Message;
+          Fstr_error_name_result := 'Сохранение документа';
+          res := False;
+          MonitorError;
+        end;
+      end;
+    finally
+      connect.Free;
+      Q.Free;
+      Q2.Free;
+      Q3.Free;
+    end;
+
+//    Ftime_send := Now;
+//  end;
+  Result := res;
+end;
+
 
 function TThreadEtran2.SendInvoice(): boolean;
 var         connect : TADOConnection;
@@ -1073,7 +958,7 @@ begin
           MonitorInsert(RGB(255, 250, 229), 'Отправка:---', 'Отправка накладных');
 
           send_query := Q.FieldByName('etran_ecp_xml').AsString;
-          GetIEtranSys(False,'http://10.248.35.14:8092/EtranServer/EtranLR.dll/soap').GetBlock('Ильюта', 'Fhn.if71', send_query, ECP, TSP);
+//          GetIEtranSys(False,'http://10.248.35.14:8092/EtranServer/EtranLR.dll/soap').GetBlock('Ильюта', 'Fhn.if71', send_query, ECP, TSP);
 
 
           sp_etran_ecp_modify := TADOStoredProc.Create(nil);
@@ -1111,106 +996,7 @@ begin
   Result := res;
 end;
 
-procedure TThreadEtran2.Execute;
-var res : boolean;
-      i : integer;
-begin
-  CoInitialize(nil);
 
-  while (not Terminated) do begin
-    MonitorClear;
-    // Проверка связи с ЭТРАНом
-
-    //////////////////////////////////////////
-    Fstatus_str := '01. Создание периодов...';
-    Synchronize(SetStatus);
-    Synchronize(SetMonitorPRINT);
-
-    res := CreatePeriod();
-    if Terminated then Break;
-
-    //////////////////////////////////////////
-    Fstatus_str := '02. Загрузка периодов...';
-    Synchronize(SetStatus);
-    Synchronize(SetMonitorPRINT);
-
-    res := LoadPeriod();
-    if Terminated then Break;
-
-    //////////////////////////////////////////
-    Fstatus_str := '03. Загрузка документов...';
-    Synchronize(SetStatus);
-    Synchronize(SetMonitorPRINT);
-
-    res := LoadDocument();
-    if Terminated then Break;
-
-//
-//     Загрузка НСИ вагонов с 0:00 до 8:00
-//    if (HourOf(Now) > 0) and (HourOf(Now) < 8) then begin
-      res := LoadNSI();
-      if Terminated then Break;
-//    end;
-
-
-//     Загрузка НСИ вагонов с 7:00 до 9:00
-    if (HourOf(Now) >= 6) then begin
-      res := LoadTech();
-      if Terminated then Break;
-
-      res := LoadPass();
-      if Terminated then Break;
-
-      res := LoadRemont();
-      if Terminated then Break;
-    end;
-
-
-
-    //////////////////////////////////////////
-//    Fstatus_str := '04. Отправка накладных...';
-//    Synchronize(SetStatus);
-//    Synchronize(SetMonitorPRINT);
-//
-//    res := SendInvoice();
-//    if Terminated then Break;
-
-
-//    //////////////////////////////////////////
-//    Fstatus_str := '05. Проверка ранее загруженных периодов...';
-//    Synchronize(SetStatus);
-//    Synchronize(SetMonitorPRINT);
-//
-//    res := LoadPeriodCheck();
-//    if Terminated then Break;
-
-    ///////////////////////////////////////
-    // Ожидание 3 мин. Если записей нет.
-    if (Fcnt_load_period = 0) AND (Fcnt_load_docs = 0) AND (Fcnt_load_nsi = 0) then begin
-      for i := 0 to 5 do begin
-        case i of
-          0:Fstatus_str := 'Ожидаю 3:00 мин...';
-          1:Fstatus_str := 'Ожидаю 2:30 мин...';
-          2:Fstatus_str := 'Ожидаю 2:00 мин...';
-          3:Fstatus_str := 'Ожидаю 1:30 мин...';
-          4:Fstatus_str := 'Ожидаю 1:00 мин...';
-          5:Fstatus_str := 'Ожидаю 0:30 мин...';
-          else Fstatus_str := 'Ожидаю...';
-        end;
-        Synchronize(SetStatus);
-        Sleep(30000);
-        if Terminated then Break;
-      end;
-    end;
-  end;
-
-  MonitorInsert(RGB(255, 250, 229), 'Завершение работы...', 'Завершение работы');
-  MonitorUpdate(RGB(229, 255, 232));
-
-  Fstatus_str := 'Не запущено.';
-  Synchronize(SetStatus);
-  CoUninitialize;
-end;
 
 procedure TThreadEtran2.SetStatus;
 begin

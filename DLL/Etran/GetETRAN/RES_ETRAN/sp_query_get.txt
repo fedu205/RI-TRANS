@@ -31,7 +31,6 @@ SELECT	query_id,
 			when doc_type_cod = '120' then '<getKkrCredit version="1.0"><fromDate value="' + period_begin_etran_format + '"/><toDate value="' + period_end_etran_format + '"/></getKkrCredit>'
 			when doc_type_cod = '130' then '<getKkrTransfer version="1.0"><fromDate value="' + period_begin_etran_format + '"/><toDate value="' + period_end_etran_format + '"/></getKkrTransfer>'
 			when doc_type_cod = '140' then '<getKkrSaldo version="1.0"><fromDate value="' + period_begin_etran_date + '"/><toDate value="' + period_end_etran_date + '"/></getKkrSaldo>'
-                        when doc_type_cod = '200' then '<getClientContract></getClientContract>'
 
 			
 			
@@ -58,7 +57,7 @@ GROUP BY etran_query_error.query_id
 
 SELECT	#query_tmp.* 
 FROM	#query_tmp left join #query_error on #query_tmp.query_id = #query_error.query_id
-WHERE	((isnull(#query_error.cnt_error,0) <= 5) OR (last_error_hour > 1))
+WHERE	((isnull(#query_error.cnt_error,0) <= 5) OR (last_error_hour >= 1))
 
 DROP TABLE #query_tmp
 DROP TABLE #query_error

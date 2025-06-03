@@ -21,7 +21,7 @@ object fmECPDoc: TfmECPDoc
     Width = 1322
     Height = 722
     Align = alClient
-    TabOrder = 1
+    TabOrder = 0
     LookAndFeel.Kind = lfUltraFlat
     LookAndFeel.ScrollbarMode = sbmClassic
     object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
@@ -61,6 +61,7 @@ object fmECPDoc: TfmECPDoc
         end>
       object cxGrid1DBBandedTableView1doc_id: TcxGridDBBandedColumn
         DataBinding.FieldName = 'doc_id'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 80
         Position.BandIndex = -1
@@ -69,6 +70,7 @@ object fmECPDoc: TfmECPDoc
       end
       object cxGrid1DBBandedTableView1DocTypeID: TcxGridDBBandedColumn
         DataBinding.FieldName = 'DocTypeID'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 80
         Position.BandIndex = -1
@@ -78,6 +80,7 @@ object fmECPDoc: TfmECPDoc
       object cxGrid1DBBandedTableView1ReasonName: TcxGridDBBandedColumn
         Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1087#1088#1080#1095#1080#1085#1099
         DataBinding.FieldName = 'ReasonName'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 315
         Position.BandIndex = 0
@@ -86,6 +89,7 @@ object fmECPDoc: TfmECPDoc
       end
       object cxGrid1DBBandedTableView1MPSOrgID: TcxGridDBBandedColumn
         DataBinding.FieldName = 'MPSOrgID'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 80
         Position.BandIndex = -1
@@ -95,6 +99,7 @@ object fmECPDoc: TfmECPDoc
       object cxGrid1DBBandedTableView1PC_OrgName: TcxGridDBBandedColumn
         Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1086#1088#1075#1072#1080#1085#1079#1072#1094#1080#1080' '#1050#1083#1080#1077#1085#1090#1072
         DataBinding.FieldName = 'PC_OrgName'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 353
         Position.BandIndex = 0
@@ -104,6 +109,7 @@ object fmECPDoc: TfmECPDoc
       object cxGrid1DBBandedTableView1DateSign: TcxGridDBBandedColumn
         Caption = #1044#1072#1090#1072' '#1087#1086#1076#1087#1080#1089#1072#1085#1080#1103' '#1076#1086#1075#1086#1074#1086#1088#1072
         DataBinding.FieldName = 'DateSign'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 120
         Position.BandIndex = 0
@@ -113,6 +119,7 @@ object fmECPDoc: TfmECPDoc
       object cxGrid1DBBandedTableView1DocNum: TcxGridDBBandedColumn
         Caption = #1053#1086#1084#1077#1088' '#1076#1086#1075#1086#1074#1086#1088#1072
         DataBinding.FieldName = 'DocNum'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 138
         Position.BandIndex = 0
@@ -121,6 +128,7 @@ object fmECPDoc: TfmECPDoc
       end
       object cxGrid1DBBandedTableView1ReasonID: TcxGridDBBandedColumn
         DataBinding.FieldName = 'ReasonID'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 80
         Position.BandIndex = -1
@@ -130,6 +138,7 @@ object fmECPDoc: TfmECPDoc
       object cxGrid1DBBandedTableView1StateName: TcxGridDBBandedColumn
         Caption = #1057#1086#1089#1090#1086#1103#1085#1080#1077
         DataBinding.FieldName = 'StateName'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 80
         Position.BandIndex = 0
@@ -138,6 +147,7 @@ object fmECPDoc: TfmECPDoc
       end
       object cxGrid1DBBandedTableView1PC_OrgID: TcxGridDBBandedColumn
         DataBinding.FieldName = 'PC_OrgID'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 80
         Position.BandIndex = -1
@@ -147,6 +157,7 @@ object fmECPDoc: TfmECPDoc
       object cxGrid1DBBandedTableView1DateEnd: TcxGridDBBandedColumn
         Caption = #1044#1072#1090#1072' '#1086#1082#1086#1085#1095#1072#1085#1080#1103' '#1076#1077#1081#1089#1090#1074#1080#1103' '#1076#1086#1075#1086#1074#1086#1088#1072
         DataBinding.FieldName = 'DateEnd'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 120
         Position.BandIndex = 0
@@ -156,6 +167,7 @@ object fmECPDoc: TfmECPDoc
       object cxGrid1DBBandedTableView1DocID: TcxGridDBBandedColumn
         Caption = #1048#1044' '#1076#1086#1075#1086#1074#1086#1088#1072
         DataBinding.FieldName = 'DocID'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 94
         Position.BandIndex = 0
@@ -165,6 +177,7 @@ object fmECPDoc: TfmECPDoc
       object cxGrid1DBBandedTableView1DocTypeName: TcxGridDBBandedColumn
         Caption = #1058#1080#1087' '#1076#1086#1075#1086#1074#1086#1088#1072
         DataBinding.FieldName = 'DocTypeName'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 109
         Position.BandIndex = 0
@@ -173,6 +186,7 @@ object fmECPDoc: TfmECPDoc
       end
       object cxGrid1DBBandedTableView1StateID: TcxGridDBBandedColumn
         DataBinding.FieldName = 'StateID'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 80
         Position.BandIndex = -1
@@ -182,6 +196,7 @@ object fmECPDoc: TfmECPDoc
       object cxGrid1DBBandedTableView1MPSOrgName: TcxGridDBBandedColumn
         Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1086#1088#1075#1072#1085#1080#1079#1072#1094#1080#1080' '#1056#1046#1044
         DataBinding.FieldName = 'MPSOrgName'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 325
         Position.BandIndex = 0
@@ -191,6 +206,7 @@ object fmECPDoc: TfmECPDoc
       object cxGrid1DBBandedTableView1DateBegin: TcxGridDBBandedColumn
         Caption = #1044#1072#1090#1072' '#1074#1089#1090#1091#1087#1083#1077#1085#1080#1103' '#1076#1086#1075#1086#1074#1086#1088#1072' '#1074' '#1076#1077#1081#1089#1090#1074#1080#1077
         DataBinding.FieldName = 'DateBegin'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 120
         Position.BandIndex = 0
@@ -200,6 +216,7 @@ object fmECPDoc: TfmECPDoc
       object cxGrid1DBBandedTableView1DateSuspend: TcxGridDBBandedColumn
         Caption = #1044#1072#1090#1072' '#1087#1088#1080#1086#1089#1090#1072#1085#1086#1074#1082#1080' '#1076#1086#1075#1086#1074#1086#1088#1072
         DataBinding.FieldName = 'DateSuspend'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 120
         Position.BandIndex = 0
@@ -209,6 +226,7 @@ object fmECPDoc: TfmECPDoc
       object cxGrid1DBBandedTableView1els_cod: TcxGridDBBandedColumn
         Caption = #1045#1051#1057
         DataBinding.FieldName = 'els_cod'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 80
         Position.BandIndex = 0

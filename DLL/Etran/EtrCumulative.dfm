@@ -10,47 +10,45 @@ object fmEtrCumulative: TfmEtrCumulative
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object Splitter1: TSplitter
     Left = 417
-    Top = 49
+    Top = 26
     Width = 5
-    Height = 584
+    Height = 607
     Color = 8421631
     ParentColor = False
     ExplicitLeft = 353
-    ExplicitTop = 26
     ExplicitHeight = 533
   end
   object Panel1: TPanel
     Left = 0
-    Top = 49
+    Top = 26
     Width = 417
-    Height = 584
+    Height = 607
     Align = alLeft
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 0
-    ExplicitTop = 26
-    ExplicitHeight = 607
+    ExplicitTop = 49
+    ExplicitHeight = 584
     object cxGrid1: TcxGrid
       Left = 2
       Top = 2
       Width = 413
-      Height = 580
+      Height = 603
       Align = alClient
       TabOrder = 0
       LookAndFeel.Kind = lfUltraFlat
       LookAndFeel.ScrollbarMode = sbmClassic
-      ExplicitHeight = 603
+      ExplicitHeight = 580
       object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
         PopupMenu = dxBarPopupMenu1
         OnKeyPress = cxGrid1DBBandedTableView1KeyPress
         Navigator.Buttons.CustomButtons = <>
+        ScrollbarAnnotations.CustomAnnotations = <>
         OnCustomDrawCell = cxGrid1DBBandedTableView1CustomDrawCell
         OnFocusedItemChanged = cxGrid1DBBandedTableView1FocusedItemChanged
         OnFocusedRecordChanged = cxGrid1DBBandedTableView1FocusedRecordChanged
@@ -99,6 +97,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1cumulative_id: TcxGridDBBandedColumn
           Caption = #8470' '#1079#1072#1087#1080#1089#1080
           DataBinding.FieldName = 'cumulative_id'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -108,6 +107,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1cumID: TcxGridDBBandedColumn
           Caption = #1048#1044' '#1074#1077#1076#1086#1084#1086#1089#1090#1080
           DataBinding.FieldName = 'cumID'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -116,6 +116,7 @@ object fmEtrCumulative: TfmEtrCumulative
         end
         object cxGrid1DBBandedTableView1cumStateID: TcxGridDBBandedColumn
           DataBinding.FieldName = 'cumStateID'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = -1
@@ -125,6 +126,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1cumState: TcxGridDBBandedColumn
           Caption = #1057#1086#1089#1090#1086#1103#1085#1080#1077
           DataBinding.FieldName = 'cumState'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -134,6 +136,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1cumNumber: TcxGridDBBandedColumn
           Caption = #1053#1086#1084#1077#1088
           DataBinding.FieldName = 'cumNumber'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -143,6 +146,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1cumLastOper: TcxGridDBBandedColumn
           Caption = #1044#1072#1090#1072' '#1087#1086#1089#1083'. '#1086#1087#1077#1088'.'
           DataBinding.FieldName = 'cumLastOper'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -151,6 +155,7 @@ object fmEtrCumulative: TfmEtrCumulative
         end
         object cxGrid1DBBandedTableView1cumTypeID: TcxGridDBBandedColumn
           DataBinding.FieldName = 'cumTypeID'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = -1
@@ -160,6 +165,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1cumTypeName: TcxGridDBBandedColumn
           Caption = #1042#1080#1076' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
           DataBinding.FieldName = 'cumTypeName'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -168,6 +174,7 @@ object fmEtrCumulative: TfmEtrCumulative
         end
         object cxGrid1DBBandedTableView1cumRZDOrgID: TcxGridDBBandedColumn
           DataBinding.FieldName = 'cumRZDOrgID'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = -1
@@ -177,6 +184,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1cumRZDOrgName: TcxGridDBBandedColumn
           Caption = #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1103' '#1056#1046#1044
           DataBinding.FieldName = 'cumRZDOrgName'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -185,6 +193,7 @@ object fmEtrCumulative: TfmEtrCumulative
         end
         object cxGrid1DBBandedTableView1cumStationID: TcxGridDBBandedColumn
           DataBinding.FieldName = 'cumStationID'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = -1
@@ -194,6 +203,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1cumStationName: TcxGridDBBandedColumn
           Caption = #1057#1090'. '#1089#1086#1074#1077#1088#1096#1077#1085#1080#1103' '#1086#1087#1077#1088'.'
           DataBinding.FieldName = 'cumStationName'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -203,6 +213,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1cumStartDate: TcxGridDBBandedColumn
           Caption = #1055#1077#1088#1080#1086#1076' ('#1085#1072#1095#1072#1083#1086')'
           DataBinding.FieldName = 'cumStartDate'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -212,6 +223,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1cumFinishDate: TcxGridDBBandedColumn
           Caption = #1055#1077#1088#1080#1086#1076' ('#1086#1082#1086#1085#1095#1072#1085#1080#1077')'
           DataBinding.FieldName = 'cumFinishDate'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -221,6 +233,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1cumPayerCode: TcxGridDBBandedColumn
           Caption = #1055#1083#1072#1090#1077#1083#1100#1097#1080#1082' ('#1082#1086#1076')'
           DataBinding.FieldName = 'cumPayerCode'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -229,6 +242,7 @@ object fmEtrCumulative: TfmEtrCumulative
         end
         object cxGrid1DBBandedTableView1cumPayerID: TcxGridDBBandedColumn
           DataBinding.FieldName = 'cumPayerID'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = -1
@@ -238,6 +252,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1cumPayerOKPO: TcxGridDBBandedColumn
           Caption = #1055#1083#1072#1090#1077#1083#1100#1097#1080#1082' ('#1054#1050#1055#1054')'
           DataBinding.FieldName = 'cumPayerOKPO'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -247,6 +262,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1cumPayerName: TcxGridDBBandedColumn
           Caption = #1055#1083#1072#1090#1077#1083#1100#1097#1080#1082
           DataBinding.FieldName = 'cumPayerName'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -256,6 +272,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1cumContractor: TcxGridDBBandedColumn
           Caption = #1055#1086#1076#1082#1086#1076' '#1082#1086#1085#1090#1088#1072#1075#1077#1085#1090#1072
           DataBinding.FieldName = 'cumContractor'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -264,6 +281,7 @@ object fmEtrCumulative: TfmEtrCumulative
         end
         object cxGrid1DBBandedTableView1cumClientID: TcxGridDBBandedColumn
           DataBinding.FieldName = 'cumClientID'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = -1
@@ -273,6 +291,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1cumClientOKPO: TcxGridDBBandedColumn
           Caption = #1050#1083#1080#1077#1085#1090' ('#1054#1050#1055#1054')'
           DataBinding.FieldName = 'cumClientOKPO'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -282,6 +301,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1cumClientName: TcxGridDBBandedColumn
           Caption = #1050#1083#1080#1077#1085#1090
           DataBinding.FieldName = 'cumClientName'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -291,6 +311,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1cumDateCreate: TcxGridDBBandedColumn
           Caption = #1044#1072#1090#1072' '#1089#1086#1079#1076#1072#1085#1080#1103
           DataBinding.FieldName = 'cumDateCreate'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -299,6 +320,7 @@ object fmEtrCumulative: TfmEtrCumulative
         end
         object cxGrid1DBBandedTableView1global_id: TcxGridDBBandedColumn
           DataBinding.FieldName = 'global_id'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = -1
@@ -307,6 +329,7 @@ object fmEtrCumulative: TfmEtrCumulative
         end
         object cxGrid1DBBandedTableView1object_id: TcxGridDBBandedColumn
           DataBinding.FieldName = 'object_id'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = -1
@@ -315,6 +338,7 @@ object fmEtrCumulative: TfmEtrCumulative
         end
         object cxGrid1DBBandedTableView1users_owner_id: TcxGridDBBandedColumn
           DataBinding.FieldName = 'users_owner_id'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = -1
@@ -323,6 +347,7 @@ object fmEtrCumulative: TfmEtrCumulative
         end
         object cxGrid1DBBandedTableView1date_enter: TcxGridDBBandedColumn
           DataBinding.FieldName = 'date_enter'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = -1
@@ -331,6 +356,7 @@ object fmEtrCumulative: TfmEtrCumulative
         end
         object cxGrid1DBBandedTableView1global_color: TcxGridDBBandedColumn
           DataBinding.FieldName = 'global_color'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = -1
@@ -340,6 +366,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1cumNeedForECP: TcxGridDBBandedColumn
           Caption = #1054#1078#1080#1076#1072#1085#1080#1077' '#1069#1062#1055
           DataBinding.FieldName = 'cumNeedForECP'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -348,6 +375,7 @@ object fmEtrCumulative: TfmEtrCumulative
         end
         object cxGrid1DBBandedTableView1cumStationCode: TcxGridDBBandedColumn
           DataBinding.FieldName = 'cumStationCode'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = -1
@@ -357,6 +385,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1ELS_cod: TcxGridDBBandedColumn
           Caption = #1050#1086#1076' '#1045#1051#1057
           DataBinding.FieldName = 'ELS_cod'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -366,6 +395,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1cnt_docs: TcxGridDBBandedColumn
           Caption = #1050#1086#1083'-'#1074#1086' '#1076#1086#1082#1091#1084#1077#1085#1090#1086#1074
           DataBinding.FieldName = 'cnt_docs'
+          DataBinding.IsNullValueType = True
           PropertiesClassName = 'TcxCurrencyEditProperties'
           Properties.DisplayFormat = '#,##0'
           HeaderAlignmentVert = vaTop
@@ -377,6 +407,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGrid1DBBandedTableView1summa: TcxGridDBBandedColumn
           Caption = #1057#1091#1084#1084#1072
           DataBinding.FieldName = 'dueSum'
+          DataBinding.IsNullValueType = True
           PropertiesClassName = 'TcxCurrencyEditProperties'
           Properties.DisplayFormat = '#,##0.00'
           HeaderAlignmentVert = vaTop
@@ -393,15 +424,15 @@ object fmEtrCumulative: TfmEtrCumulative
   end
   object Panel2: TPanel
     Left = 422
-    Top = 49
+    Top = 26
     Width = 529
-    Height = 584
+    Height = 607
     Align = alClient
     BevelInner = bvRaised
     BevelOuter = bvLowered
-    TabOrder = 4
-    ExplicitTop = 26
-    ExplicitHeight = 607
+    TabOrder = 3
+    ExplicitTop = 49
+    ExplicitHeight = 584
     object Panel3: TPanel
       Left = 2
       Top = 2
@@ -866,16 +897,17 @@ object fmEtrCumulative: TfmEtrCumulative
       Left = 2
       Top = 401
       Width = 525
-      Height = 181
+      Height = 204
       Align = alClient
       TabOrder = 1
       LookAndFeel.Kind = lfUltraFlat
       LookAndFeel.ScrollbarMode = sbmClassic
-      ExplicitHeight = 204
+      ExplicitHeight = 181
       object cxGridDBBandedTableView1: TcxGridDBBandedTableView
         PopupMenu = dxBarPopupMenu2
         OnKeyPress = cxGridDBBandedTableView1KeyPress
         Navigator.Buttons.CustomButtons = <>
+        ScrollbarAnnotations.CustomAnnotations = <>
         DataController.DataSource = DS_cumDue
         DataController.Filter.Options = [fcoCaseInsensitive]
         DataController.Filter.Active = True
@@ -913,6 +945,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGridDBBandedTableView1cumDue_id: TcxGridDBBandedColumn
           Caption = #8470' '#1079#1072#1087#1080#1089#1080
           DataBinding.FieldName = 'cumDue_id'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -921,6 +954,7 @@ object fmEtrCumulative: TfmEtrCumulative
         end
         object cxGridDBBandedTableView1cumulative_id: TcxGridDBBandedColumn
           DataBinding.FieldName = 'cumulative_id'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = -1
@@ -930,6 +964,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGridDBBandedTableView1dueDate: TcxGridDBBandedColumn
           Caption = #1044#1072#1090#1072' '#1089#1073#1086#1088#1072
           DataBinding.FieldName = 'dueDate'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -938,6 +973,7 @@ object fmEtrCumulative: TfmEtrCumulative
         end
         object cxGridDBBandedTableView1dueParentDocId: TcxGridDBBandedColumn
           DataBinding.FieldName = 'dueParentDocId'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = -1
@@ -946,6 +982,7 @@ object fmEtrCumulative: TfmEtrCumulative
         end
         object cxGridDBBandedTableView1dueParentDocTypeId: TcxGridDBBandedColumn
           DataBinding.FieldName = 'dueParentDocTypeId'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = -1
@@ -954,6 +991,7 @@ object fmEtrCumulative: TfmEtrCumulative
         end
         object cxGridDBBandedTableView1dueParentDocNameId: TcxGridDBBandedColumn
           DataBinding.FieldName = 'dueParentDocNameId'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = -1
@@ -963,6 +1001,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGridDBBandedTableView1dueParentDocName: TcxGridDBBandedColumn
           Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
           DataBinding.FieldName = 'dueParentDocName'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -972,6 +1011,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGridDBBandedTableView1dueParentDocNum: TcxGridDBBandedColumn
           Caption = #1053#1086#1084#1077#1088' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
           DataBinding.FieldName = 'dueParentDocNum'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -980,6 +1020,7 @@ object fmEtrCumulative: TfmEtrCumulative
         end
         object cxGridDBBandedTableView1dueId: TcxGridDBBandedColumn
           DataBinding.FieldName = 'dueId'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = -1
@@ -989,6 +1030,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGridDBBandedTableView1dueCode: TcxGridDBBandedColumn
           Caption = #1050#1086#1076' '#1087#1083#1072#1090#1077#1078#1072
           DataBinding.FieldName = 'dueCode'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -998,6 +1040,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGridDBBandedTableView1dueSum: TcxGridDBBandedColumn
           Caption = #1057#1091#1084#1084#1072' '#1087#1083#1072#1090#1077#1078#1072' ('#1088#1091#1073')'
           DataBinding.FieldName = 'dueSum'
+          DataBinding.IsNullValueType = True
           PropertiesClassName = 'TcxCurrencyEditProperties'
           Properties.DisplayFormat = '#,##0.00'
           HeaderAlignmentVert = vaTop
@@ -1009,6 +1052,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGridDBBandedTableView1dueTaxAble: TcxGridDBBandedColumn
           Caption = #1055#1088#1080#1079#1085#1072#1082' '#1086#1073#1083#1086#1078#1077#1085#1080#1103' '#1085#1072#1083#1086#1075#1086#1084
           DataBinding.FieldName = 'dueTaxAble'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -1018,6 +1062,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGridDBBandedTableView1dueInfo: TcxGridDBBandedColumn
           Caption = #1044#1072#1085#1085#1099#1077' '#1076#1083#1103' '#1090#1072#1082#1089#1080#1088#1086#1074#1082#1080' '#1076#1083#1103' '#1087#1077#1095#1072#1090#1080
           DataBinding.FieldName = 'dueInfo'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -1027,6 +1072,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGridDBBandedTableView1dueNote: TcxGridDBBandedColumn
           Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
           DataBinding.FieldName = 'dueNote'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -1036,6 +1082,7 @@ object fmEtrCumulative: TfmEtrCumulative
         object cxGridDBBandedTableView1inf_obj_name: TcxGridDBBandedColumn
           Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1089#1090#1072#1090#1100#1080' '#1089#1073#1086#1088#1072
           DataBinding.FieldName = 'inf_obj_name'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 200
           Position.BandIndex = 0
@@ -1046,52 +1093,6 @@ object fmEtrCumulative: TfmEtrCumulative
       object cxGridLevel1: TcxGridLevel
         GridView = cxGridDBBandedTableView1
       end
-    end
-  end
-  object cxPageControl2: TcxPageControl
-    Left = 0
-    Top = 26
-    Width = 951
-    Height = 23
-    Align = alTop
-    Font.Charset = RUSSIAN_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 6
-    Properties.ActivePage = cxTabSheet4
-    Properties.CustomButtons.Buttons = <>
-    Properties.Style = 2
-    LookAndFeel.Kind = lfUltraFlat
-    LookAndFeel.NativeStyle = False
-    LookAndFeel.ScrollbarMode = sbmClassic
-    LookAndFeel.SkinName = ''
-    OnChange = cxPageControl2Change
-    ExplicitLeft = -253
-    ExplicitTop = 144
-    ExplicitWidth = 1204
-    ClientRectBottom = 25
-    ClientRectRight = 951
-    ClientRectTop = 25
-    object cxTabSheet4: TcxTabSheet
-      Caption = #1043#1091#1088#1091
-      ImageIndex = 0
-      ExplicitTop = 0
-      ExplicitWidth = 1204
-    end
-    object cxTabSheet5: TcxTabSheet
-      Caption = #1040#1091#1088#1072' '#1054#1081#1083
-      ImageIndex = 1
-      ExplicitTop = 0
-      ExplicitWidth = 0
-    end
-    object cxTabSheet6: TcxTabSheet
-      Caption = #1056#1077#1089#1091#1088#1089' '#1058#1088#1077#1081#1076
-      ImageIndex = 2
-      ExplicitTop = 0
-      ExplicitWidth = 0
     end
   end
   object cxImageList1: TcxImageList
@@ -7869,7 +7870,7 @@ object fmEtrCumulative: TfmEtrCumulative
         ' in (SELECT users2.users_id FROM etran_users users1 inner join e' +
         'tran_users users2 on users1.users_group_id = users2.users_group_' +
         'id WHERE users1.users_name = system_user)'
-      'AND etran_users.els_cod = '#39'1004653067'#39)
+      '')
     Left = 168
     Top = 104
   end

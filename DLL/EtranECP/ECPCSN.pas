@@ -14,7 +14,7 @@ uses
   cxEdit, cxNavigator, dxDateRanges, cxDBData, cxGridLevel, cxGridCustomTableView, cxGridTableView, cxGridBandedTableView, cxGridDBBandedTableView, cxGridCustomView, cxGrid,
   Default, Raznoe, Period, DateUtils, dxSkinOffice2019Colorful, dxSkinBasic,
   dxSkinOffice2019Black, dxSkinOffice2019DarkGray, dxSkinOffice2019White,
-  dxScrollbarAnnotations, dxCore;
+  dxScrollbarAnnotations, dxCore, dxSkinWXI;
 
 type
   TfmECPCSN = class(TForm)
@@ -147,7 +147,7 @@ begin
 //  if Fusers_group_cod =  '0' then Fetran_ip := '172.16.200.129'; // Совфрахт
 //  if Fusers_group_cod = '35' then Fetran_ip := '172.25.45.4' ;  // Урал Логистика
 
-  login := 'Etran_GRU';
+  login := 'Etran_rtr';
   db_name := 'lis_etran';
   Fetran_ip := '92.53.107.222';
   Fetran_port := '7450';

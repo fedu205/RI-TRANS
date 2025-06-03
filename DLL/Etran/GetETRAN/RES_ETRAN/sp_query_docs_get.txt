@@ -1,12 +1,12 @@
-UPDATE etran_query_docs_new 
+UPDATE etran_query_docs_new
 SET set_load = 0
 WHERE query_docs_id in (
 
 SELECT query_docs_id
-FROM 
+FROM
 		(	SELECT	etran_query_docs_new.query_docs_id, error_param
-			FROM	etran_query_docs_new 
-					inner join etran_query_error on etran_query_docs_new.query_docs_id = etran_query_error.query_id		
+			FROM	etran_query_docs_new
+					inner join etran_query_error on etran_query_docs_new.query_docs_id = etran_query_error.query_id
 			WHERE	doc_date_load is null and set_load = 1
 					AND PATINDEX('%<error>%',error_param) <> 0
 		) x1
@@ -27,8 +27,8 @@ SELECT	query_docs_id,
 		users_group_name,
 		doc_id, 
 		case 	
-			--when doc_type_cod =  '-2' then '<getDocOper version="1.0"><docID value="' + cast(doc_id as varchar(20)) + '"/><useECP/></getDocOper>'
-			when doc_type_cod =  '-2' then '<getDocOper version="1.0"><docID value="' + cast(doc_id as varchar(20)) + '"/></getDocOper>'
+			when doc_type_cod =  '-2' then '<getDocOper version="1.0"><docID value="' + cast(doc_id as varchar(20)) + '"/><useECP/></getDocOper>'
+			--when doc_type_cod =  '-2' then '<getDocOper version="1.0"><docID value="' + cast(doc_id as varchar(20)) + '"/></getDocOper>'
 			when doc_type_cod =  '-1' then '<getDocLink version="1.0"><docID value="' + cast(doc_id as varchar(20)) + '"/></getDocLink>'
 			when doc_type_cod =   '1' then '<getClaim version="1.0"><claimID value="' + cast(doc_id as varchar(20)) + '"/><useMod11/></getClaim>'
 			when doc_type_cod =   '2' then '<getInvoice version="1.0"><invoiceID value="' + cast(doc_id as varchar(20)) + '"/><useMod11/></getInvoice>'

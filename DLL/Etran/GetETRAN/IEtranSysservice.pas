@@ -1,10 +1,10 @@
 // ************************************************************************ //
 // The types declared in this file were generated from data read from the
 // WSDL File described below:
-// WSDL     : D:\www\IEtranSysservice.xml
+// WSDL     : D:\Project\SFH\NKK\DLL\Etran\GetETRAN\IEtranSysservice.xml
 // Encoding : UTF-8
 // Version  : 1.0
-// (24.04.2022 17:02:00 - - $Rev: 86412 $)
+// (28.11.2023 22:24:18 - - $Rev: 112483 $)
 // ************************************************************************ //
 
 unit IEtranSysservice;
@@ -22,8 +22,8 @@ type
   // typically map to predefined/known XML or Embarcadero types; however, they could also 
   // indicate incorrect WSDL documents that failed to declare or import a schema type.
   // ************************************************************************ //
-  // !:boolean         - "http://www.w3.org/2001/XMLSchema"[]
   // !:string          - "http://www.w3.org/2001/XMLSchema"[]
+  // !:boolean         - "http://www.w3.org/2001/XMLSchema"[]
 
 
   // ************************************************************************ //
@@ -51,7 +51,7 @@ implementation
 
 function GetIEtranSys(UseWSDL: Boolean; Addr: string; HTTPRIO: THTTPRIO): IEtranSys;
 const
-  defWSDL = 'D:\www\IEtranSysservice.xml';
+  defWSDL = 'D:\Project\SFH\NKK\DLL\Etran\GetETRAN\IEtranSysservice.xml';
   defURL  = 'http://10.248.35.14:8092/AppServer/IEtranSysservice';
   defSvc  = 'IEtranSysservice';
   defPrt  = 'IEtranSysPort';

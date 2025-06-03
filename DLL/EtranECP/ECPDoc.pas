@@ -14,7 +14,7 @@ uses
   cxEdit, cxNavigator, dxDateRanges, cxDBData, cxGridLevel, cxGridCustomTableView, cxGridTableView, cxGridBandedTableView, cxGridDBBandedTableView, cxGridCustomView, cxGrid,
   Default, Raznoe, Period, DateUtils, dxSkinOffice2019Colorful, dxBarBuiltInMenu, cxPC,
   dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray,
-  dxSkinOffice2019White, dxScrollbarAnnotations, dxCore;
+  dxSkinOffice2019White, dxScrollbarAnnotations, dxCore, dxSkinWXI;
 
 type
   TfmECPDoc = class(TForm)
@@ -136,7 +136,7 @@ begin
   Fusr_pwd := usr_pwd;
   Fusers_group_cod := users_group_cod;
 
-  login := 'Etran_GRU';
+  login := 'Etran_rtr';
   db_name := 'lis_etran';
   Fetran_ip := '92.53.107.222';
   Fetran_port := '7450';

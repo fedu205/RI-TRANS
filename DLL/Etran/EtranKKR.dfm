@@ -10,34 +10,36 @@ object fmEtranKKR: TfmEtranKKR
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object cxPageControl1: TcxPageControl
     Left = 0
-    Top = 49
+    Top = 26
     Width = 1140
-    Height = 701
+    Height = 724
     Align = alClient
-    TabOrder = 2
+    TabOrder = 1
     Properties.ActivePage = cxTabSheet3
     Properties.CustomButtons.Buttons = <>
-    ClientRectBottom = 701
+    ExplicitTop = 49
+    ExplicitHeight = 701
+    ClientRectBottom = 724
     ClientRectRight = 1140
     ClientRectTop = 24
     object cxTabSheet3: TcxTabSheet
       Caption = #1057#1072#1083#1100#1076#1086
       ImageIndex = 2
+      ExplicitHeight = 677
       object Panel5: TPanel
         Left = 0
         Top = 0
         Width = 1140
-        Height = 677
+        Height = 700
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 0
+        ExplicitHeight = 677
         object Splitter4: TSplitter
           Left = 0
           Top = 321
@@ -54,7 +56,7 @@ object fmEtranKKR: TfmEtranKKR
           Left = 732
           Top = 326
           Width = 5
-          Height = 351
+          Height = 374
           Align = alRight
           Color = 8421631
           ParentColor = False
@@ -83,6 +85,7 @@ object fmEtranKKR: TfmEtranKKR
               PopupMenu = dxBarPopupMenu5
               OnKeyPress = cxGrid1DBBandedTableView1KeyPress
               Navigator.Buttons.CustomButtons = <>
+              ScrollbarAnnotations.CustomAnnotations = <>
               OnCustomDrawCell = cxGrid1DBBandedTableView1CustomDrawCell
               OnFocusedItemChanged = cxGrid1DBBandedTableView1FocusedItemChanged
               DataController.DataSource = DS_KKR_saldo_get
@@ -122,6 +125,7 @@ object fmEtranKKR: TfmEtranKKR
                 end>
               object cxGridDBBandedTableView3rowDocType: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'rowDocType'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Position.BandIndex = -1
                 Position.ColIndex = -1
@@ -130,6 +134,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView3rowDocTypeName: TcxGridDBBandedColumn
                 Caption = #1057#1091#1073#1089#1095#1077#1090
                 DataBinding.FieldName = 'rowDocTypeName'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 339
                 Position.BandIndex = 0
@@ -139,6 +144,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView3rowSaldo: TcxGridDBBandedColumn
                 Caption = #1053#1072#1095#1072#1083#1100#1085#1086#1077' '#1089#1072#1083#1100#1076#1086
                 DataBinding.FieldName = 'rowSaldo'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -150,6 +156,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView3rowDebet: TcxGridDBBandedColumn
                 Caption = #1044#1077#1073#1077#1090
                 DataBinding.FieldName = 'rowDebet'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -161,6 +168,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView3rowCredit: TcxGridDBBandedColumn
                 Caption = #1050#1088#1077#1076#1080#1090
                 DataBinding.FieldName = 'rowCredit'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -172,6 +180,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView3rowSaldotek: TcxGridDBBandedColumn
                 Caption = #1057#1072#1083#1100#1076#1086
                 DataBinding.FieldName = 'rowSaldotek'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -183,6 +192,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView3kkrPayerOrgELS: TcxGridDBBandedColumn
                 Caption = #1045#1051#1057
                 DataBinding.FieldName = 'kkrPayerOrgELS'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 100
                 Position.BandIndex = 0
@@ -192,6 +202,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView3Column2: TcxGridDBBandedColumn
                 Caption = #1055#1083#1072#1090#1077#1083#1100#1097#1080#1082' '
                 DataBinding.FieldName = 'kkrPayerOrgName'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 250
                 Position.BandIndex = 0
@@ -208,23 +219,26 @@ object fmEtranKKR: TfmEtranKKR
           Left = 0
           Top = 326
           Width = 732
-          Height = 351
+          Height = 374
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
+          ExplicitHeight = 351
           object cxGrid6: TcxGrid
             Left = 0
             Top = 17
             Width = 732
-            Height = 334
+            Height = 357
             Align = alClient
             TabOrder = 0
             LookAndFeel.Kind = lfUltraFlat
             LookAndFeel.ScrollbarMode = sbmClassic
+            ExplicitHeight = 334
             object cxGridDBBandedTableView5: TcxGridDBBandedTableView
               PopupMenu = dxBarPopupMenu6
               OnKeyPress = cxGridDBBandedTableView5KeyPress
               Navigator.Buttons.CustomButtons = <>
+              ScrollbarAnnotations.CustomAnnotations = <>
               OnCustomDrawCell = cxGrid1DBBandedTableView1CustomDrawCell
               OnFocusedItemChanged = cxGridDBBandedTableView5FocusedItemChanged
               DataController.DataSource = DS_KKR_transfer_get
@@ -275,6 +289,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView5kkr_transfer_id: TcxGridDBBandedColumn
                 Caption = #8470' '#1079#1072#1087#1080#1089#1080
                 DataBinding.FieldName = 'kkr_transfer_id'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Position.BandIndex = 0
                 Position.ColIndex = 0
@@ -283,6 +298,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView5kkrPayerOrgELS: TcxGridDBBandedColumn
                 Caption = #1050#1086#1076' '#1045#1051#1057
                 DataBinding.FieldName = 'kkrPayerOrgELS'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 83
                 Position.BandIndex = 0
@@ -292,6 +308,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView5rowRepDate: TcxGridDBBandedColumn
                 Caption = #1044#1072#1090#1072
                 DataBinding.FieldName = 'rowRepDate'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 78
                 Position.BandIndex = 0
@@ -301,6 +318,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView5rowSaldo: TcxGridDBBandedColumn
                 Caption = #1053#1072#1095#1072#1083#1100#1085#1086#1077' '#1089#1072#1083#1100#1076#1086
                 DataBinding.FieldName = 'rowSaldo'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -312,6 +330,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView5rowDebet: TcxGridDBBandedColumn
                 Caption = #1044#1077#1073#1077#1090
                 DataBinding.FieldName = 'rowDebet'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -323,6 +342,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView5rowCredit: TcxGridDBBandedColumn
                 Caption = #1050#1088#1077#1076#1080#1090
                 DataBinding.FieldName = 'rowCredit'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -334,6 +354,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView5rowSaldotek: TcxGridDBBandedColumn
                 Caption = #1057#1072#1083#1100#1076#1086
                 DataBinding.FieldName = 'rowSaldotek'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -369,23 +390,26 @@ object fmEtranKKR: TfmEtranKKR
           Left = 737
           Top = 326
           Width = 403
-          Height = 351
+          Height = 374
           Align = alRight
           BevelOuter = bvNone
           TabOrder = 2
+          ExplicitHeight = 351
           object cxGrid7: TcxGrid
             Left = 0
             Top = 30
             Width = 403
-            Height = 321
+            Height = 344
             Align = alClient
             TabOrder = 0
             LookAndFeel.Kind = lfUltraFlat
             LookAndFeel.ScrollbarMode = sbmClassic
+            ExplicitHeight = 321
             object cxGridDBBandedTableView6: TcxGridDBBandedTableView
               PopupMenu = dxBarPopupMenu7
               OnKeyPress = cxGridDBBandedTableView6KeyPress
               Navigator.Buttons.CustomButtons = <>
+              ScrollbarAnnotations.CustomAnnotations = <>
               OnCustomDrawCell = cxGrid1DBBandedTableView1CustomDrawCell
               OnFocusedItemChanged = cxGridDBBandedTableView6FocusedItemChanged
               DataController.DataSource = DS_KKR_agent_sum_get
@@ -439,6 +463,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView6contract_id: TcxGridDBBandedColumn
                 Caption = #8470' '#1079#1072#1087#1080#1089#1080
                 DataBinding.FieldName = 'contract_id'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 64
                 Position.BandIndex = 0
@@ -448,6 +473,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView6firm_customer_name: TcxGridDBBandedColumn
                 Caption = #1050#1083#1080#1077#1085#1090
                 DataBinding.FieldName = 'firm_customer_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 86
                 Position.BandIndex = 0
@@ -457,6 +483,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView6summa: TcxGridDBBandedColumn
                 Caption = #1057#1091#1084#1084#1072' '#1076#1077#1073#1077#1090
                 DataBinding.FieldName = 'summa'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -468,6 +495,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView6min_RepDate: TcxGridDBBandedColumn
                 Caption = #1053#1072#1095#1072#1083#1086
                 DataBinding.FieldName = 'min_RepDate'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 62
                 Position.BandIndex = 0
@@ -477,6 +505,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView6max_RepDate: TcxGridDBBandedColumn
                 Caption = #1054#1082#1086#1085#1095#1072#1085#1080#1077
                 DataBinding.FieldName = 'max_RepDate'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 62
                 Position.BandIndex = 0
@@ -515,11 +544,12 @@ object fmEtranKKR: TfmEtranKKR
     object cxTabSheet1: TcxTabSheet
       Caption = #1044#1077#1073#1077#1090
       ImageIndex = 0
+      ExplicitHeight = 677
       object Splitter1: TSplitter
         Left = 739
         Top = 0
         Width = 5
-        Height = 677
+        Height = 700
         Align = alRight
         Color = 8421631
         ParentColor = False
@@ -531,15 +561,17 @@ object fmEtranKKR: TfmEtranKKR
         Left = 0
         Top = 0
         Width = 739
-        Height = 677
+        Height = 700
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfUltraFlat
         LookAndFeel.ScrollbarMode = sbmClassic
+        ExplicitHeight = 677
         object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = dxBarPopupMenu1
           OnKeyPress = cxGrid1DBBandedTableView1KeyPress
           Navigator.Buttons.CustomButtons = <>
+          ScrollbarAnnotations.CustomAnnotations = <>
           OnCustomDrawCell = cxGrid1DBBandedTableView1CustomDrawCell
           OnFocusedItemChanged = cxGrid1DBBandedTableView1FocusedItemChanged
           OnSelectionChanged = cxGrid1DBBandedTableView1SelectionChanged
@@ -596,6 +628,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGrid1DBBandedTableView1kkr_debet_id: TcxGridDBBandedColumn
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'kkr_debet_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 69
             Position.BandIndex = 0
@@ -605,6 +638,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGrid1DBBandedTableView1kkrPayerOrgELS: TcxGridDBBandedColumn
             Caption = #1050#1086#1076' '#1045#1051#1057
             DataBinding.FieldName = 'kkrPayerOrgELS'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 79
             Position.BandIndex = 0
@@ -614,6 +648,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGrid1DBBandedTableView1rowRepDate: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1087#1088#1086#1074#1086#1076#1082#1080
             DataBinding.FieldName = 'rowRepDate'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 83
             Position.BandIndex = 0
@@ -623,6 +658,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGrid1DBBandedTableView1rowDocDate: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1085#1072#1095#1080#1089#1083#1077#1085#1080#1103
             DataBinding.FieldName = 'rowDocDate'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 93
             Position.BandIndex = 0
@@ -632,6 +668,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGrid1DBBandedTableView1rowDocType: TcxGridDBBandedColumn
             Caption = #1042#1080#1076' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
             DataBinding.FieldName = 'rowDocType'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 96
             Position.BandIndex = 0
@@ -641,6 +678,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGrid1DBBandedTableView1rowDocID: TcxGridDBBandedColumn
             Caption = 'ID '#1076#1086#1082#1091#1084#1077#1085#1090#1072
             DataBinding.FieldName = 'rowDocID'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 74
             Position.BandIndex = 0
@@ -650,6 +688,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGrid1DBBandedTableView1rowDocNum: TcxGridDBBandedColumn
             Caption = #8470' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
             DataBinding.FieldName = 'rowDocNum'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 76
             Position.BandIndex = 0
@@ -659,6 +698,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGrid1DBBandedTableView1rowOper: TcxGridDBBandedColumn
             Caption = #1054#1087#1077#1088#1072#1094#1080#1103
             DataBinding.FieldName = 'rowOper'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 241
             Position.BandIndex = 0
@@ -668,6 +708,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGrid1DBBandedTableView1rowRwName: TcxGridDBBandedColumn
             Caption = #1044'. '#1086#1087#1077#1088'.'
             DataBinding.FieldName = 'rowRwName'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 48
             Position.BandIndex = 0
@@ -677,6 +718,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGrid1DBBandedTableView1rowStName: TcxGridDBBandedColumn
             Caption = #1057#1090'. '#1086#1087#1077#1088#1072#1094#1080#1080
             DataBinding.FieldName = 'rowStName'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 190
             Position.BandIndex = 0
@@ -686,6 +728,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGrid1DBBandedTableView1rowDebet: TcxGridDBBandedColumn
             Caption = #1057#1091#1084#1084#1072
             DataBinding.FieldName = 'rowDebet'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0.00'
             HeaderAlignmentVert = vaTop
@@ -697,6 +740,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGrid1DBBandedTableView1rowNds: TcxGridDBBandedColumn
             Caption = #1053#1044#1057
             DataBinding.FieldName = 'rowNds'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0.00'
             HeaderAlignmentVert = vaTop
@@ -708,6 +752,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGrid1DBBandedTableView1rowDebetNds: TcxGridDBBandedColumn
             Caption = #1057#1091#1084#1084#1072' '#1089' '#1053#1044#1057
             DataBinding.FieldName = 'rowDebetNds'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0.00'
             HeaderAlignmentVert = vaTop
@@ -720,6 +765,7 @@ object fmEtranKKR: TfmEtranKKR
           end
           object cxGrid1DBBandedTableView1invoice_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'invoice_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 60
             Position.BandIndex = -1
@@ -728,6 +774,7 @@ object fmEtranKKR: TfmEtranKKR
           end
           object cxGrid1DBBandedTableView1invoiceID: TcxGridDBBandedColumn
             DataBinding.FieldName = 'invoiceID'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 60
             Position.BandIndex = -1
@@ -737,6 +784,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGrid1DBBandedTableView1invFromStationName: TcxGridDBBandedColumn
             Caption = #1057#1090'. '#1086#1090#1087#1088'.'
             DataBinding.FieldName = 'invFromStationName'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 190
             Position.BandIndex = 0
@@ -746,6 +794,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGrid1DBBandedTableView1invToStationName: TcxGridDBBandedColumn
             Caption = #1057#1090'. '#1085#1072#1079#1085'.'
             DataBinding.FieldName = 'invToStationName'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 190
             Position.BandIndex = 0
@@ -754,6 +803,7 @@ object fmEtranKKR: TfmEtranKKR
           end
           object cxGrid1DBBandedTableView1xml_reply_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'xml_reply_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 60
             Position.BandIndex = -1
@@ -763,6 +813,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGrid1DBBandedTableView1firm_customer_name: TcxGridDBBandedColumn
             Caption = #1050#1083#1080#1077#1085#1090
             DataBinding.FieldName = 'firm_customer_name'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 236
             Position.BandIndex = 0
@@ -778,11 +829,12 @@ object fmEtranKKR: TfmEtranKKR
         Left = 744
         Top = 0
         Width = 396
-        Height = 677
+        Height = 700
         Align = alRight
         BevelOuter = bvNone
         TabOrder = 1
         Visible = False
+        ExplicitHeight = 677
         object Splitter2: TSplitter
           Left = 0
           Top = 289
@@ -836,6 +888,7 @@ object fmEtranKKR: TfmEtranKKR
               PopupMenu = dxBarPopupMenu2
               OnKeyPress = cxGridDBBandedTableView4KeyPress
               Navigator.Buttons.CustomButtons = <>
+              ScrollbarAnnotations.CustomAnnotations = <>
               OnCustomDrawCell = cxGrid1DBBandedTableView1CustomDrawCell
               OnFocusedItemChanged = cxGridDBBandedTableView4FocusedItemChanged
               DataController.DataSource = DS_Invoice
@@ -891,6 +944,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView4rowRepDate: TcxGridDBBandedColumn
                 Caption = #1044#1072#1090#1072' '#1087#1088#1086#1074#1086#1076#1082#1080
                 DataBinding.FieldName = 'rowRepDate'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 84
                 Position.BandIndex = 0
@@ -900,6 +954,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView4rowDocDate: TcxGridDBBandedColumn
                 Caption = #1044#1072#1090#1072' '#1085#1072#1095#1080#1089#1083#1077#1085#1080#1103
                 DataBinding.FieldName = 'rowDocDate'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 93
                 Position.BandIndex = 0
@@ -909,6 +964,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView4rowDocID: TcxGridDBBandedColumn
                 Caption = 'ID '#1076#1086#1082#1091#1084#1077#1085#1090#1072
                 DataBinding.FieldName = 'rowDocID'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 80
                 Position.BandIndex = 0
@@ -918,6 +974,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView4rowDocNum: TcxGridDBBandedColumn
                 Caption = #8470' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
                 DataBinding.FieldName = 'rowDocNum'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 80
                 Position.BandIndex = 0
@@ -927,6 +984,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView4rowOper: TcxGridDBBandedColumn
                 Caption = #1054#1087#1077#1088#1072#1094#1080#1103
                 DataBinding.FieldName = 'rowOper'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 187
                 Position.BandIndex = 0
@@ -936,6 +994,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView4rowRwName: TcxGridDBBandedColumn
                 Caption = #1044#1086#1088#1086#1075#1072' '#1086#1087#1077#1088'.'
                 DataBinding.FieldName = 'rowRwName'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 73
                 Position.BandIndex = 0
@@ -945,6 +1004,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView4rowStName: TcxGridDBBandedColumn
                 Caption = #1057#1090'. '#1086#1087#1077#1088'.'
                 DataBinding.FieldName = 'rowStName'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 53
                 Position.BandIndex = 0
@@ -954,6 +1014,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView4rowDebet: TcxGridDBBandedColumn
                 Caption = #1057#1091#1084#1084#1072' '#1073#1077#1079' '#1053#1044#1057
                 DataBinding.FieldName = 'rowDebet'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -965,6 +1026,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView4rowNDS: TcxGridDBBandedColumn
                 Caption = #1053#1044#1057
                 DataBinding.FieldName = 'rowNDS'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -976,6 +1038,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView4rowDebetNDS: TcxGridDBBandedColumn
                 Caption = #1057#1091#1084#1084#1072' '#1089' '#1053#1044#1057
                 DataBinding.FieldName = 'rowDebetNDS'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -989,6 +1052,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedTableView4kkr_debet_id: TcxGridDBBandedColumn
                 Caption = #8470' '#1079#1072#1087#1080#1089#1080
                 DataBinding.FieldName = 'kkr_debet_id'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 72
                 Position.BandIndex = 0
@@ -1005,24 +1069,27 @@ object fmEtranKKR: TfmEtranKKR
           Left = 0
           Top = 294
           Width = 396
-          Height = 383
+          Height = 406
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
+          ExplicitHeight = 383
           object cxGrid3: TcxGrid
             Left = 0
             Top = 20
             Width = 396
-            Height = 363
+            Height = 386
             Align = alClient
             TabOrder = 0
             Visible = False
             LookAndFeel.Kind = lfUltraFlat
             LookAndFeel.ScrollbarMode = sbmClassic
+            ExplicitHeight = 363
             object cxGridDBBandedTableView2: TcxGridDBBandedTableView
               PopupMenu = dxBarPopupMenu3
               OnKeyPress = cxGridDBBandedTableView2KeyPress
               Navigator.Buttons.CustomButtons = <>
+              ScrollbarAnnotations.CustomAnnotations = <>
               OnCustomDrawCell = cxGridDBBandedTableView2CustomDrawCell
               OnFocusedItemChanged = cxGridDBBandedTableView2FocusedItemChanged
               DataController.DataSource = DS_fact
@@ -1194,6 +1261,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1fact_id: TcxGridDBBandedColumn
                 Tag = 157724920
                 DataBinding.FieldName = 'fact_id'
+                DataBinding.IsNullValueType = True
                 Visible = False
                 HeaderAlignmentVert = vaTop
                 Width = 65
@@ -1205,6 +1273,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 1
                 Caption = #8470' '#1074#1072#1075#1086#1085#1072
                 DataBinding.FieldName = 'num_vagon'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 65
                 Position.BandIndex = 0
@@ -1214,6 +1283,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1num_document_pref: TcxGridDBBandedColumn
                 Caption = #1057#1077#1088'.'#1085#1072#1082#1083#1072#1076'.'
                 DataBinding.FieldName = 'num_document_pref'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 31
                 Position.BandIndex = 0
@@ -1224,6 +1294,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 157730812
                 Caption = #8470' '#1085#1072#1082#1083#1072#1076'.'
                 DataBinding.FieldName = 'num_document'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 69
                 Position.BandIndex = 0
@@ -1234,6 +1305,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 157729332
                 Caption = #1044#1072#1090#1072' '#1086#1090#1087#1088'.'
                 DataBinding.FieldName = 'date_from_to'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 65
                 Position.BandIndex = 0
@@ -1243,6 +1315,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1date_ready: TcxGridDBBandedColumn
                 Caption = #1044#1072#1090#1072#1055#1086#1075#1088#1091#1079
                 DataBinding.FieldName = 'date_ready'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 63
                 Position.BandIndex = 0
@@ -1252,6 +1325,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1datpr: TcxGridDBBandedColumn
                 Caption = #1044#1072#1090#1072' '#1087#1088#1080#1073'.'
                 DataBinding.FieldName = 'datpr'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxDateEditProperties'
                 Properties.ShowTime = False
                 HeaderAlignmentVert = vaTop
@@ -1263,6 +1337,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 354641128
                 Caption = #8470' '#1087#1088#1080#1083#1086#1078'.'
                 DataBinding.FieldName = 'bargain_cod'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 65
                 Position.BandIndex = 0
@@ -1272,6 +1347,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedColumn1: TcxGridDBBandedColumn
                 Caption = #1050#1083#1080#1077#1085#1090
                 DataBinding.FieldName = 'firm_customer_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 65
                 Position.BandIndex = 0
@@ -1282,6 +1358,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 157708204
                 Caption = #8470' '#1082#1086#1085#1090'.'
                 DataBinding.FieldName = 'num_konten'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 65
                 Position.BandIndex = 0
@@ -1292,6 +1369,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 3
                 Caption = #1060'.'#1074#1077#1089
                 DataBinding.FieldName = 'fact_weight'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 56
                 Position.BandIndex = 0
@@ -1302,6 +1380,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 1
                 Caption = #1043'/'#1087
                 DataBinding.FieldName = 'kargo_capacity'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 41
                 Position.BandIndex = 0
@@ -1312,6 +1391,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 1
                 Caption = #1056'.'#1074#1077#1089
                 DataBinding.FieldName = 'calc_weight'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 46
                 Position.BandIndex = 0
@@ -1321,6 +1401,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGridDBBandedColumn22: TcxGridDBBandedColumn
                 Caption = #1057#1091#1084#1084#1072
                 DataBinding.FieldName = 'transport_pay'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 HeaderAlignmentVert = vaTop
@@ -1335,6 +1416,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 22222
                 Caption = #1055#1086#1076#1082#1086#1076
                 DataBinding.FieldName = 'sub_cod_self'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 65
                 Position.BandIndex = 0
@@ -1345,6 +1427,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 65436568
                 Caption = #1057#1090#1054#1090#1087#1088
                 DataBinding.FieldName = 'node_begin_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 65
                 Position.BandIndex = 0
@@ -1355,6 +1438,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 65437936
                 Caption = #1057#1090#1053#1072#1079#1085
                 DataBinding.FieldName = 'node_end_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 65
                 Position.BandIndex = 0
@@ -1364,6 +1448,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1node_end_SNG_name: TcxGridDBBandedColumn
                 Caption = #1057#1090#1072#1085#1094#1080#1103' '#1085#1072#1079'. '#1057#1053#1043
                 DataBinding.FieldName = 'node_end_SNG_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 95
                 Position.BandIndex = 0
@@ -1373,6 +1458,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1node_begin_SNG_name: TcxGridDBBandedColumn
                 Caption = #1057#1090#1072#1085#1094#1080#1103' '#1086#1090#1087#1088'. '#1057#1053#1043
                 DataBinding.FieldName = 'node_begin_SNG_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 304
                 Position.BandIndex = 0
@@ -1383,6 +1469,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 65420072
                 Caption = #1043#1088#1091#1079' '#1045#1058#1057#1053#1043
                 DataBinding.FieldName = 'kargoETSNG_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 65
                 Position.BandIndex = 0
@@ -1393,6 +1480,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 65421636
                 Caption = #1043#1088#1091#1079' '#1043#1053#1043
                 DataBinding.FieldName = 'kargoGNG_name'
+                DataBinding.IsNullValueType = True
                 Visible = False
                 HeaderAlignmentVert = vaTop
                 Width = 65
@@ -1403,6 +1491,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1state_begin_name: TcxGridDBBandedColumn
                 Caption = #1057#1090#1088'.'#1054#1090#1087#1088'.'
                 DataBinding.FieldName = 'state_begin_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 65
                 Position.BandIndex = 0
@@ -1412,6 +1501,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1state_end_name: TcxGridDBBandedColumn
                 Caption = #1057#1090#1088'.'#1053#1072#1079#1085'.'
                 DataBinding.FieldName = 'state_end_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 65
                 Position.BandIndex = 0
@@ -1422,6 +1512,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 1
                 Caption = #1050#1072#1090'.'#1054#1090#1087#1088
                 DataBinding.FieldName = 'kateg_send'
+                DataBinding.IsNullValueType = True
                 Visible = False
                 HeaderAlignmentVert = vaTop
                 Width = 65
@@ -1433,6 +1524,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 71741452
                 Caption = #1042#1080#1076#1057#1086#1086#1073#1097
                 DataBinding.FieldName = 'vid_transfer'
+                DataBinding.IsNullValueType = True
                 Visible = False
                 HeaderAlignmentVert = vaTop
                 Width = 65
@@ -1444,6 +1536,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 354568164
                 Caption = #1054#1089#1085'./'#1053#1077' '#1086#1089#1085'.'
                 DataBinding.FieldName = 'set_main'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCheckBoxProperties'
                 Properties.DisplayChecked = #1054#1089#1085'.'
                 Properties.DisplayUnchecked = #1053#1077#1054#1089#1085'.'
@@ -1459,6 +1552,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 354676096
                 Caption = #1042#1072#1083#1102#1090#1072
                 DataBinding.FieldName = 'brief_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 65
                 Position.BandIndex = 0
@@ -1468,6 +1562,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1kexp: TcxGridDBBandedColumn
                 Caption = #1050#1086#1076#1069#1082#1089#1087#1077#1076#1080#1090#1086#1088#1072
                 DataBinding.FieldName = 'kexp'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 60
                 Position.BandIndex = 0
@@ -1477,6 +1572,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1from_to_name: TcxGridDBBandedColumn
                 Caption = #1054#1090#1087#1088'/'#1055#1088#1080#1073
                 DataBinding.FieldName = 'from_to_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 85
                 Position.BandIndex = 0
@@ -1486,6 +1582,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1mps_sps_name: TcxGridDBBandedColumn
                 Caption = #1052#1055#1057'/'#1057#1055#1057
                 DataBinding.FieldName = 'mps_sps_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 60
                 Position.BandIndex = 0
@@ -1496,6 +1593,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 65366744
                 Caption = #1048#1089#1090#1086#1095#1085#1080#1082
                 DataBinding.FieldName = 'firm_info_name'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 65
                 Position.BandIndex = 0
@@ -1506,6 +1604,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 157903364
                 Caption = #1060#1072#1081#1083' '#1079#1072#1075#1088'.'
                 DataBinding.FieldName = 'file_load_info'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 65
                 Position.BandIndex = 0
@@ -1516,6 +1615,7 @@ object fmEtranKKR: TfmEtranKKR
                 Tag = 157905024
                 Caption = #1044#1072#1090#1072' '#1079#1072#1075#1088'.'
                 DataBinding.FieldName = 'date_load_file'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxDateEditProperties'
                 HeaderAlignmentVert = vaTop
                 Width = 65
@@ -1526,6 +1626,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1last_bargain_id: TcxGridDBBandedColumn
                 Caption = #1055#1086#1089#1083'. '#1087#1088#1080#1083#1086#1078'.'
                 DataBinding.FieldName = 'last_bargain_id'
+                DataBinding.IsNullValueType = True
                 Visible = False
                 HeaderAlignmentVert = vaTop
                 Position.BandIndex = 0
@@ -1535,6 +1636,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1fact_etran_comment: TcxGridDBBandedColumn
                 Caption = #1050#1086#1084#1084'. '#1069#1090#1088#1072#1085
                 DataBinding.FieldName = 'fact_etran_comment'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 100
                 Position.BandIndex = 0
@@ -1544,6 +1646,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1fact_users_comment: TcxGridDBBandedColumn
                 Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
                 DataBinding.FieldName = 'fact_users_comment'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 100
                 Position.BandIndex = 0
@@ -1553,6 +1656,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1etran_folder: TcxGridDBBandedColumn
                 Caption = #1057#1086#1089#1090#1086#1103#1085#1080#1077
                 DataBinding.FieldName = 'etran_folder'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 78
                 Position.BandIndex = 0
@@ -1562,6 +1666,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1doc_date_last_oper: TcxGridDBBandedColumn
                 Caption = #1044#1072#1090#1072' '#1087#1086#1089#1083#1077#1076'. '#1086#1073#1085#1086#1074#1083#1077#1085#1080#1103
                 DataBinding.FieldName = 'doc_date_last_oper'
+                DataBinding.IsNullValueType = True
                 Visible = False
                 HeaderAlignmentVert = vaTop
                 Position.BandIndex = 0
@@ -1570,6 +1675,7 @@ object fmEtranKKR: TfmEtranKKR
               end
               object cxGrid1DBBandedTableView1bargain_id: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'bargain_id'
+                DataBinding.IsNullValueType = True
                 Visible = False
                 HeaderAlignmentVert = vaTop
                 Width = 65
@@ -1579,6 +1685,7 @@ object fmEtranKKR: TfmEtranKKR
               end
               object cxGrid1DBBandedTableView1calc_weight_check: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'calc_weight_check'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCheckBoxProperties'
                 HeaderAlignmentVert = vaTop
                 Width = 65
@@ -1588,6 +1695,7 @@ object fmEtranKKR: TfmEtranKKR
               end
               object cxGrid1DBBandedTableView1attr_self: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'attr_self'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 65
                 Position.BandIndex = -1
@@ -1596,6 +1704,7 @@ object fmEtranKKR: TfmEtranKKR
               end
               object cxGrid1DBBandedTableView1attr_route: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'attr_route'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 65
                 Position.BandIndex = -1
@@ -1604,6 +1713,7 @@ object fmEtranKKR: TfmEtranKKR
               end
               object cxGridDBBandedColumn2: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'xml_reply_id'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Position.BandIndex = -1
                 Position.ColIndex = -1
@@ -1612,6 +1722,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1global_color: TcxGridDBBandedColumn
                 Caption = #1062#1074#1077#1090
                 DataBinding.FieldName = 'global_color'
+                DataBinding.IsNullValueType = True
                 Visible = False
                 HeaderAlignmentVert = vaTop
                 Position.BandIndex = -1
@@ -1621,6 +1732,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1date_delivery: TcxGridDBBandedColumn
                 Caption = #1044#1072#1090#1072' '#1056#1072#1089#1082#1088#1077#1076'.'
                 DataBinding.FieldName = 'date_delivery'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxDateEditProperties'
                 Properties.ShowTime = False
                 HeaderAlignmentVert = vaTop
@@ -1632,6 +1744,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1payer_cod: TcxGridDBBandedColumn
                 Caption = #1050#1086#1076' '#1087#1083#1072#1090#1077#1083#1100#1097#1080#1082#1072
                 DataBinding.FieldName = 'payer_cod'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 100
                 Position.BandIndex = 0
@@ -1641,6 +1754,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1claim_num: TcxGridDBBandedColumn
                 Caption = #1053#1086#1084#1077#1088' '#1079#1072#1103#1074#1082#1080
                 DataBinding.FieldName = 'claim_num'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 100
                 Position.BandIndex = 0
@@ -1650,6 +1764,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1set_zfto_agree: TcxGridDBBandedColumn
                 Caption = #1057#1086#1075#1083#1072#1089#1086#1074#1072#1085#1085#1086
                 DataBinding.FieldName = 'set_zfto_agree'
+                DataBinding.IsNullValueType = True
                 HeaderAlignmentVert = vaTop
                 Width = 100
                 Position.BandIndex = 0
@@ -1659,6 +1774,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1etran_fact_load: TcxGridDBBandedColumn
                 Caption = #1044'. '#1087#1086#1075#1088#1091#1079#1082#1080
                 DataBinding.FieldName = 'etran_fact_load'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxDateEditProperties'
                 Properties.ShowTime = False
                 HeaderAlignmentVert = vaTop
@@ -1670,6 +1786,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1etran_date_ready: TcxGridDBBandedColumn
                 Caption = #1044'. '#1087#1088#1080#1085#1103#1090#1080#1103' '#1082' '#1087#1077#1088#1077#1074#1086#1079#1082#1077
                 DataBinding.FieldName = 'etran_date_ready'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxDateEditProperties'
                 Properties.ShowTime = False
                 HeaderAlignmentVert = vaTop
@@ -1681,6 +1798,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1etran_date_departure: TcxGridDBBandedColumn
                 Caption = #1044'. '#1086#1090#1087#1088#1072#1074#1083#1077#1085#1080#1103
                 DataBinding.FieldName = 'etran_date_departure'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxDateEditProperties'
                 Properties.ShowTime = False
                 HeaderAlignmentVert = vaTop
@@ -1692,6 +1810,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1etran_date_arrive: TcxGridDBBandedColumn
                 Caption = #1044'. '#1087#1088#1080#1073#1099#1090#1080#1103
                 DataBinding.FieldName = 'etran_date_arrive'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxDateEditProperties'
                 Properties.ShowTime = False
                 HeaderAlignmentVert = vaTop
@@ -1703,6 +1822,7 @@ object fmEtranKKR: TfmEtranKKR
               object cxGrid1DBBandedTableView1etran_date_delivery: TcxGridDBBandedColumn
                 Caption = #1044'. '#1088#1072#1089#1082#1088#1077#1076#1080#1090#1086#1074#1072#1085#1080#1103
                 DataBinding.FieldName = 'etran_date_delivery'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxDateEditProperties'
                 Properties.ShowTime = False
                 HeaderAlignmentVert = vaTop
@@ -1739,22 +1859,22 @@ object fmEtranKKR: TfmEtranKKR
     object cxTabSheet2: TcxTabSheet
       Caption = #1050#1088#1077#1076#1080#1090
       ImageIndex = 1
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
+      ExplicitHeight = 677
       object cxGrid2: TcxGrid
         Left = 0
         Top = 0
         Width = 1140
-        Height = 677
+        Height = 700
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfUltraFlat
         LookAndFeel.ScrollbarMode = sbmClassic
+        ExplicitHeight = 677
         object cxGridDBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = dxBarPopupMenu4
           OnKeyPress = cxGrid1DBBandedTableView1KeyPress
           Navigator.Buttons.CustomButtons = <>
+          ScrollbarAnnotations.CustomAnnotations = <>
           OnCustomDrawCell = cxGrid1DBBandedTableView1CustomDrawCell
           OnFocusedItemChanged = cxGrid1DBBandedTableView1FocusedItemChanged
           DataController.DataSource = DS_KKR_credit_get
@@ -1800,6 +1920,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGridDBBandedTableView1kkr_credit_id: TcxGridDBBandedColumn
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'kkr_credit_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 84
             Position.BandIndex = 0
@@ -1809,6 +1930,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGridDBBandedTableView1kkrPayerOrgELS: TcxGridDBBandedColumn
             Caption = #1050#1086#1076' '#1045#1051#1057
             DataBinding.FieldName = 'kkrPayerOrgELS'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 97
             Position.BandIndex = 0
@@ -1818,6 +1940,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGridDBBandedTableView1rowRepDate: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1074#1074#1086#1076#1072
             DataBinding.FieldName = 'rowRepDate'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Position.BandIndex = 0
             Position.ColIndex = 2
@@ -1826,6 +1949,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGridDBBandedTableView1rowInsDate: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
             DataBinding.FieldName = 'rowInsDate'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Position.BandIndex = 0
             Position.ColIndex = 3
@@ -1834,6 +1958,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGridDBBandedTableView1rowVidDokum: TcxGridDBBandedColumn
             Caption = #1042#1080#1076' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
             DataBinding.FieldName = 'rowVidDokum'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 140
             Position.BandIndex = 0
@@ -1843,6 +1968,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGridDBBandedTableView1rowDok: TcxGridDBBandedColumn
             Caption = #8470' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
             DataBinding.FieldName = 'rowDok'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 87
             Position.BandIndex = 0
@@ -1852,6 +1978,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGridDBBandedTableView1rowNazn: TcxGridDBBandedColumn
             Caption = #1053#1072#1079#1085#1072#1095#1077#1085#1080#1077' '#1087#1083#1072#1090#1077#1078#1072
             DataBinding.FieldName = 'rowNazn'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 223
             Position.BandIndex = 0
@@ -1861,6 +1988,7 @@ object fmEtranKKR: TfmEtranKKR
           object cxGridDBBandedTableView1rowCredit: TcxGridDBBandedColumn
             Caption = #1057#1091#1084#1084#1072
             DataBinding.FieldName = 'rowCredit'
+            DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0.00'
             HeaderAlignmentVert = vaTop
@@ -1876,50 +2004,6 @@ object fmEtranKKR: TfmEtranKKR
           GridView = cxGridDBBandedTableView1
         end
       end
-    end
-  end
-  object cxPageControl2: TcxPageControl
-    Left = 0
-    Top = 26
-    Width = 1140
-    Height = 23
-    Align = alTop
-    Font.Charset = RUSSIAN_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 5
-    Properties.ActivePage = cxTabSheet4
-    Properties.CustomButtons.Buttons = <>
-    Properties.Style = 2
-    LookAndFeel.Kind = lfUltraFlat
-    LookAndFeel.NativeStyle = False
-    LookAndFeel.ScrollbarMode = sbmClassic
-    LookAndFeel.SkinName = ''
-    OnChange = cxPageControl2Change
-    ExplicitTop = 20
-    ClientRectBottom = 25
-    ClientRectRight = 1140
-    ClientRectTop = 25
-    object cxTabSheet4: TcxTabSheet
-      Caption = #1043#1091#1088#1091
-      ImageIndex = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-    end
-    object cxTabSheet5: TcxTabSheet
-      Caption = #1040#1091#1088#1072' '#1054#1081#1083
-      ImageIndex = 1
-      ExplicitTop = 0
-      ExplicitWidth = 0
-    end
-    object cxTabSheet6: TcxTabSheet
-      Caption = #1056#1077#1089#1091#1088#1089' '#1058#1088#1077#1081#1076
-      ImageIndex = 2
-      ExplicitTop = 0
-      ExplicitWidth = 0
     end
   end
   object ADOEtran: TADOConnection

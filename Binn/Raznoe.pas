@@ -4570,7 +4570,7 @@ begin
     Q.Open;
 
     login := '';
-    if Q.FieldByName('users_group_cod').AsString =  '0' then login := 'Etran_GRU';
+    if Q.FieldByName('users_group_cod').AsString =  '0' then login := 'Etran_rtr';
 //    if Q.FieldByName('users_group_cod').AsString =  '1' then login := 'Etran_KHT';
 //    if Q.FieldByName('users_group_cod').AsString =  '3' then login := 'Etran_PRV';
 //    if Q.FieldByName('users_group_cod').AsString =  '5' then login := 'Etran_STS';

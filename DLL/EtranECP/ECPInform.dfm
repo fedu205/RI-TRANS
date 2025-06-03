@@ -322,6 +322,8 @@ object fmECPInform: TfmECPInform
       object cxTabSheet1: TcxTabSheet
         Caption = '39'
         ImageIndex = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
         ExplicitHeight = 514
         DesignSize = (
           873
@@ -486,6 +488,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Width = 525
         end
@@ -511,6 +517,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Width = 525
         end
@@ -536,6 +546,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Width = 525
         end
@@ -561,6 +575,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Width = 525
         end
@@ -586,6 +604,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Width = 525
         end
@@ -611,6 +633,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Width = 525
         end
@@ -636,6 +662,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 6
           Width = 525
         end
@@ -661,6 +691,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 7
           Width = 525
         end
@@ -686,6 +720,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 8
           Width = 525
         end
@@ -711,6 +749,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 9
           Width = 525
         end
@@ -736,6 +778,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 10
           Width = 525
         end
@@ -761,6 +807,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 11
           Width = 525
         end
@@ -786,6 +836,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 12
           Width = 525
         end
@@ -811,6 +865,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 13
           Width = 525
         end
@@ -818,6 +876,8 @@ object fmECPInform: TfmECPInform
       object cxTabSheet2: TcxTabSheet
         Caption = '40'
         ImageIndex = 1
+        ExplicitTop = 0
+        ExplicitWidth = 0
         ExplicitHeight = 514
         DesignSize = (
           873
@@ -954,6 +1014,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Width = 525
         end
@@ -979,6 +1043,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Width = 525
         end
@@ -1004,6 +1072,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Width = 525
         end
@@ -1029,6 +1101,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Width = 525
         end
@@ -1054,6 +1130,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Width = 525
         end
@@ -1079,6 +1159,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Width = 525
         end
@@ -1104,6 +1188,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 6
           Width = 525
         end
@@ -1129,6 +1217,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 7
           Width = 525
         end
@@ -1154,6 +1246,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 8
           Width = 525
         end
@@ -1179,6 +1275,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 9
           Width = 525
         end
@@ -1204,6 +1304,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 10
           Width = 525
         end
@@ -1211,6 +1315,8 @@ object fmECPInform: TfmECPInform
       object cxTabSheet3: TcxTabSheet
         Caption = '41'
         ImageIndex = 2
+        ExplicitTop = 0
+        ExplicitWidth = 0
         ExplicitHeight = 514
         DesignSize = (
           873
@@ -1317,6 +1423,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Width = 525
         end
@@ -1342,6 +1452,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Width = 525
         end
@@ -1367,6 +1481,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Width = 525
         end
@@ -1392,6 +1510,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Width = 525
         end
@@ -1417,6 +1539,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Width = 525
         end
@@ -1442,6 +1568,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Width = 525
         end
@@ -1467,6 +1597,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 6
           Width = 525
         end
@@ -1492,6 +1626,10 @@ object fmECPInform: TfmECPInform
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 7
           Width = 525
         end
@@ -1499,6 +1637,8 @@ object fmECPInform: TfmECPInform
       object cxTabSheet4: TcxTabSheet
         Caption = '14'
         ImageIndex = 3
+        ExplicitTop = 0
+        ExplicitWidth = 0
         ExplicitHeight = 514
         object cxGrid2: TcxGrid
           Left = 0
@@ -1552,6 +1692,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_VAG: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1074#1072#1075#1086#1085#1072
               DataBinding.FieldName = 'NOM_VAG'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Styles.Content = cxStyle1
               Width = 80
@@ -1562,6 +1703,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1ROD_VAG_UCH: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1088#1086#1076#1072' '#1074#1072#1075#1086#1085#1072
               DataBinding.FieldName = 'ROD_VAG_UCH'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1571,6 +1713,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1KOD_SOB: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1075#1086#1089#1091#1076#1072#1088#1089#1090#1074#1072' '#1089#1086#1073#1089#1090#1074#1077#1085'. '#1074#1072#1075#1086#1085#1072
               DataBinding.FieldName = 'KOD_SOB'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1580,6 +1723,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1DATE_NACH: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1085#1072#1095#1072#1083#1072' '#1088#1077#1081#1089#1072
               DataBinding.FieldName = 'DATE_NACH'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1589,6 +1733,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1STAN_NACH: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1089#1090#1072#1085#1094#1080#1080' '#1085#1072#1095#1072#1083#1072' '#1088#1077#1081#1089#1072
               DataBinding.FieldName = 'STAN_NACH'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1598,6 +1743,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1DOR_NACH: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1076#1086#1088#1086#1075#1080' '#1085#1072#1095#1072#1083#1072' '#1088#1077#1081#1089#1072
               DataBinding.FieldName = 'DOR_NACH'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1607,6 +1753,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1STR_NACH: TcxGridDBBandedColumn
               Caption = #1057#1090#1088#1072#1085#1072' '#1085#1072#1095#1072#1083#1072' '#1088#1077#1081#1089#1072
               DataBinding.FieldName = 'STR_NACH'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1616,6 +1763,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1DATE_KON: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1086#1082#1086#1085#1095#1072#1085#1080#1103' '#1088#1077#1081#1089#1072
               DataBinding.FieldName = 'DATE_KON'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1625,6 +1773,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1STAN_NAZN: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1089#1090#1072#1085#1094#1080#1080' '#1085#1072#1079#1085#1072#1095#1077#1085#1080#1103
               DataBinding.FieldName = 'STAN_NAZN'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1634,6 +1783,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1DOR_NAZN: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1076#1086#1088#1086#1075#1080' '#1085#1072#1079#1085#1072#1095#1077#1085#1080#1103
               DataBinding.FieldName = 'DOR_NAZN'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1643,6 +1793,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1STR_NAZN: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1089#1090#1088#1072#1085#1099' '#1085#1072#1079#1085#1072#1095#1077#1085#1080#1103
               DataBinding.FieldName = 'STR_NAZN'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1652,6 +1803,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1GRUZPOL: TcxGridDBBandedColumn
               Caption = #1043#1088#1091#1079#1086#1087#1086#1083#1091#1095#1072#1090#1077#1083#1100
               DataBinding.FieldName = 'GRUZPOL'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1661,6 +1813,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1GRUZPOL_OKPO: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1075#1088#1091#1079#1086#1087#1086#1083#1091#1095#1072#1090#1077#1083#1103' '#1087#1086' '#1054#1050#1055#1054
               DataBinding.FieldName = 'GRUZPOL_OKPO'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1670,6 +1823,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1GRUZOTPR: TcxGridDBBandedColumn
               Caption = #1043#1088#1091#1079#1086#1090#1087#1088#1072#1074#1080#1090#1077#1083#1100
               DataBinding.FieldName = 'GRUZOTPR'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1679,6 +1833,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1GRUZOTPR_OKPO: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1075#1088#1091#1079#1086#1086#1090#1087#1088#1072#1074#1080#1090#1077#1083#1103' '#1087#1086' '#1054#1050#1055#1054
               DataBinding.FieldName = 'GRUZOTPR_OKPO'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1688,6 +1843,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1KOD_GRZ_GNG: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1075#1088#1091#1079#1072' '#1087#1086' '#1043#1053#1043
               DataBinding.FieldName = 'KOD_GRZ_GNG'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1697,6 +1853,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1PROB_GRJ: TcxGridDBBandedColumn
               Caption = #1055#1088#1086#1073#1077#1075' '#1074' '#1075#1088#1091#1078#1077#1085#1086#1084' '#1089#1086#1089#1090#1086#1103#1085#1080#1080
               DataBinding.FieldName = 'PROB_GRJ'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1706,6 +1863,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1PROB_POR: TcxGridDBBandedColumn
               Caption = #1055#1088#1086#1073#1077#1075' '#1074' '#1087#1086#1088#1086#1078#1085#1077#1084' '#1089#1086#1089#1090#1086#1103#1085#1080#1080
               DataBinding.FieldName = 'PROB_POR'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1715,6 +1873,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1OS_OTM1: TcxGridDBBandedColumn
               Caption = #1054#1089#1086#1073#1072#1103' '#1086#1090#1084#1077#1090#1082#1072' 1'
               DataBinding.FieldName = 'OS_OTM1'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1724,6 +1883,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1OS_OTM2: TcxGridDBBandedColumn
               Caption = #1054#1089#1086#1073#1072#1103' '#1086#1090#1084#1077#1090#1082#1072' 2'
               DataBinding.FieldName = 'OS_OTM2'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1733,6 +1893,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1OS_OTM3: TcxGridDBBandedColumn
               Caption = #1054#1089#1086#1073#1072#1103' '#1086#1090#1084#1077#1090#1082#1072' 3'
               DataBinding.FieldName = 'OS_OTM3'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1742,6 +1903,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1VES_GRZ: TcxGridDBBandedColumn
               Caption = #1042#1077#1089' '#1075#1088#1091#1079#1072
               DataBinding.FieldName = 'VES_GRZ'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1751,6 +1913,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1DATE_OP: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1080' '#1074#1088#1077#1084#1103' '#1089#1086#1074#1077#1088#1096#1077#1085#1080#1103' '#1086#1087#1077#1088#1072#1094#1080#1080
               DataBinding.FieldName = 'DATE_OP'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1760,6 +1923,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1DOR_RASCH: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1076#1086#1088#1086#1075#1080' '#1086#1087#1077#1088#1072#1094#1080#1080
               DataBinding.FieldName = 'DOR_RASCH'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1769,6 +1933,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1STAN_OP: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1089#1090#1072#1085#1094#1080#1080' '#1089#1086#1074#1077#1088#1096#1077#1085#1080#1103' '#1086#1087#1077#1088#1072#1094#1080#1080
               DataBinding.FieldName = 'STAN_OP'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1778,6 +1943,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1KOP_VMD: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1086#1087#1077#1088#1072#1094#1080#1080' '#1089' '#1074#1072#1075#1086#1085#1086#1084
               DataBinding.FieldName = 'KOP_VMD'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1787,6 +1953,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1KOP_PMD: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1086#1087#1077#1088#1072#1094#1080#1080' '#1089' '#1087#1086#1077#1079#1076#1086#1084
               DataBinding.FieldName = 'KOP_PMD'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1796,6 +1963,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1PPV_MEST: TcxGridDBBandedColumn
               Caption = #1052#1077#1089#1090#1085#1099#1081' '#1076#1083#1103' '#1076#1086#1088#1086#1075#1080
               DataBinding.FieldName = 'PPV_MEST'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1805,6 +1973,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1PPV_TRANZ: TcxGridDBBandedColumn
               Caption = #1058#1088#1072#1085#1079#1080#1090#1085#1099#1081' '#1076#1083#1103' '#1076#1086#1088#1086#1075#1080
               DataBinding.FieldName = 'PPV_TRANZ'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1814,6 +1983,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1PPV_POR: TcxGridDBBandedColumn
               Caption = #1055#1086#1088#1086#1078#1085#1080#1081
               DataBinding.FieldName = 'PPV_POR'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1823,6 +1993,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1PPV_GRUJ: TcxGridDBBandedColumn
               Caption = #1043#1088#1091#1078#1077#1085#1099#1081
               DataBinding.FieldName = 'PPV_GRUJ'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1832,6 +2003,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1PPV_NRP: TcxGridDBBandedColumn
               Caption = #1042#1072#1075#1086#1085' '#1053#1056#1055
               DataBinding.FieldName = 'PPV_NRP'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1841,6 +2013,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1PPV_RP: TcxGridDBBandedColumn
               Caption = #1042#1072#1075#1086#1085' '#1056#1055
               DataBinding.FieldName = 'PPV_RP'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1850,6 +2023,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1VNRP_NEISP: TcxGridDBBandedColumn
               Caption = #1053#1077#1080#1089#1087#1088#1072#1074#1085#1099#1077
               DataBinding.FieldName = 'VNRP_NEISP'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1859,6 +2033,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1VNRP_SPEC_TEX: TcxGridDBBandedColumn
               Caption = #1044#1083#1103' '#1089#1087#1077#1094#1090#1077#1093#1085#1091#1078#1076
               DataBinding.FieldName = 'VNRP_SPEC_TEX'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1868,6 +2043,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1DOR_SDACH_GOS: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1076#1086#1088#1086#1075#1080' '#1089#1076#1072#1095#1080' '#1089' '#1075#1086#1089'-'#1074#1072
               DataBinding.FieldName = 'DOR_SDACH_GOS'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1877,6 +2053,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1DOR_PRIEM_GOS: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1076#1086#1088#1086#1075#1080' '#1087#1088#1080#1077#1084#1072' '#1085#1072' '#1075#1086#1089'-'#1074#1086
               DataBinding.FieldName = 'DOR_PRIEM_GOS'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1886,6 +2063,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1INDEX_POEZD: TcxGridDBBandedColumn
               Caption = #1048#1085#1076#1077#1082#1089' '#1087#1086#1077#1079#1076#1072
               DataBinding.FieldName = 'INDEX_POEZD'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1895,6 +2073,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_POEZD: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1087#1086#1077#1079#1076#1072
               DataBinding.FieldName = 'NOM_POEZD'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1904,6 +2083,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NPP_VAG: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1074#1072#1075#1086#1085#1072' '#1074' '#1089#1086#1089#1090#1072#1074#1077' '#1087#1086#1077#1079#1076#1072
               DataBinding.FieldName = 'NPP_VAG'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1913,6 +2093,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_PARK: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1087#1072#1088#1082#1072
               DataBinding.FieldName = 'NOM_PARK'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1922,6 +2103,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_PUT: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1087#1091#1090#1080
               DataBinding.FieldName = 'NOM_PUT'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1931,6 +2113,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1KOL_ZPU: TcxGridDBBandedColumn
               Caption = #1050#1086#1083#1080#1095#1077#1089#1090#1074#1086' '#1087#1083#1086#1084#1073
               DataBinding.FieldName = 'KOL_ZPU'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1940,6 +2123,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1KOL_GRJ_KONT: TcxGridDBBandedColumn
               Caption = #1050#1086#1083#1080#1095#1077#1089#1090#1074#1086' '#1075#1088#1091#1078#1077#1085#1099#1093' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1086#1074
               DataBinding.FieldName = 'KOL_GRJ_KONT'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1949,6 +2133,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1KOL_POR_KONT: TcxGridDBBandedColumn
               Caption = #1050#1086#1083#1080#1095#1077#1089#1090#1074#1086' '#1087#1086#1088#1086#1078#1085#1080#1093' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1086#1074
               DataBinding.FieldName = 'KOL_POR_KONT'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1958,6 +2143,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_KON1: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088#1072' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1072' 1'
               DataBinding.FieldName = 'NOM_KON1'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1967,6 +2153,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_KON2: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088#1072' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1072' 2'
               DataBinding.FieldName = 'NOM_KON2'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1976,6 +2163,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_KON3: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088#1072' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1072' 3'
               DataBinding.FieldName = 'NOM_KON3'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1985,6 +2173,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_KON4: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088#1072' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1072' 4'
               DataBinding.FieldName = 'NOM_KON4'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -1994,6 +2183,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_KON5: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088#1072' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1072' 5'
               DataBinding.FieldName = 'NOM_KON5'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2003,6 +2193,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_KON6: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088#1072' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1072' 6'
               DataBinding.FieldName = 'NOM_KON6'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2012,6 +2203,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_KON7: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088#1072' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1072' 7'
               DataBinding.FieldName = 'NOM_KON7'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2021,6 +2213,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_KON8: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088#1072' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1072' 8'
               DataBinding.FieldName = 'NOM_KON8'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2030,6 +2223,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_KON9: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088#1072' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1072' 9'
               DataBinding.FieldName = 'NOM_KON9'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2039,6 +2233,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_KON10: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088#1072' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1072' 10'
               DataBinding.FieldName = 'NOM_KON10'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2048,6 +2243,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_KON11: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088#1072' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1072' 11'
               DataBinding.FieldName = 'NOM_KON11'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2057,6 +2253,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_KON12: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088#1072' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1072' 12'
               DataBinding.FieldName = 'NOM_KON12'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2066,6 +2263,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_KON13: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088#1072' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1072' 13'
               DataBinding.FieldName = 'NOM_KON13'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2075,6 +2273,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1ID_OTPRK: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080
               DataBinding.FieldName = 'ID_OTPRK'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2084,6 +2283,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_NAK: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1085#1072#1082#1083#1072#1076#1085#1086#1081
               DataBinding.FieldName = 'NOM_NAK'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2093,6 +2293,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1UNO: TcxGridDBBandedColumn
               Caption = #1059#1085#1080#1082#1072#1083#1100#1085#1099#1081' '#1085#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080
               DataBinding.FieldName = 'UNO'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2102,6 +2303,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_OTPRK_1: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080' '#1087#1086' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1091' 1'
               DataBinding.FieldName = 'NOM_OTPRK_1'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2111,6 +2313,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_OTPRK_2: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080' '#1087#1086' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1091' 2'
               DataBinding.FieldName = 'NOM_OTPRK_2'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2120,6 +2323,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_OTPRK_3: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080' '#1087#1086' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1091' 3'
               DataBinding.FieldName = 'NOM_OTPRK_3'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2129,6 +2333,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_OTPRK_4: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080' '#1087#1086' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1091' 4'
               DataBinding.FieldName = 'NOM_OTPRK_4'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2138,6 +2343,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_OTPRK_5: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080' '#1087#1086' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1091' 5'
               DataBinding.FieldName = 'NOM_OTPRK_5'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2147,6 +2353,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_OTPRK_6: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080' '#1087#1086' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1091' 6'
               DataBinding.FieldName = 'NOM_OTPRK_6'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2156,6 +2363,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_OTPRK_7: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080' '#1087#1086' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1091' 7'
               DataBinding.FieldName = 'NOM_OTPRK_7'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2165,6 +2373,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_OTPRK_8: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080' '#1087#1086' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1091' 8'
               DataBinding.FieldName = 'NOM_OTPRK_8'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2174,6 +2383,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_OTPRK_9: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080' '#1087#1086' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1091' 9'
               DataBinding.FieldName = 'NOM_OTPRK_9'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2183,6 +2393,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_OTPRK_10: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080' '#1087#1086' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1091' 10'
               DataBinding.FieldName = 'NOM_OTPRK_10'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2192,6 +2403,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_OTPRK_11: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080' '#1087#1086' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1091' 11'
               DataBinding.FieldName = 'NOM_OTPRK_11'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2201,6 +2413,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_OTPRK_12: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080' '#1087#1086' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1091' 12'
               DataBinding.FieldName = 'NOM_OTPRK_12'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2210,6 +2423,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NOM_OTPRK_13: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080' '#1087#1086' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1091' 13'
               DataBinding.FieldName = 'NOM_OTPRK_13'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2219,6 +2433,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1ID_OTPRK_DOSYL: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1085#1072#1082#1083#1072#1076#1085#1086#1081' '#1087#1086' '#1076#1086#1089#1099#1083#1082#1077
               DataBinding.FieldName = 'ID_OTPRK_DOSYL'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2228,6 +2443,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1UNO_DOSYL: TcxGridDBBandedColumn
               Caption = #1059#1085#1080#1082#1072#1083#1100#1085#1099#1081' '#1085#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080' '#1087#1086' '#1076#1086#1089#1099#1083#1082#1077
               DataBinding.FieldName = 'UNO_DOSYL'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2237,6 +2453,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1DATE_DOSTAV: TcxGridDBBandedColumn
               Caption = #1053#1086#1088#1084#1072#1090#1080#1074#1085#1099#1081' '#1089#1088#1086#1082' '#1076#1086#1089#1090#1072#1074#1082#1080
               DataBinding.FieldName = 'DATE_DOSTAV'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2246,6 +2463,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1RASST_OB: TcxGridDBBandedColumn
               Caption = #1056#1072#1089#1089#1090#1086#1103#1085#1080#1077' '#1086#1073#1097#1077#1077' ('#1086#1090' '#1089#1090#1072#1085#1094#1080#1080' '#1087#1088#1080#1077#1084#1072' '#1075#1088#1091#1079#1072' '#1082' '#1087#1077#1088#1077#1074#1086
               DataBinding.FieldName = 'RASST_OB'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2255,6 +2473,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1RASST_STAN_OP: TcxGridDBBandedColumn
               Caption = #1056#1072#1089#1089#1090#1086#1103#1085#1080#1077' '#1087#1088#1086#1081#1076#1077#1085#1085#1086#1077' ('#1086#1090' '#1089#1090#1072#1085#1094#1080#1080' '#1087#1088#1080#1077#1084#1072' '#1075#1088#1091#1079#1072' '#1082' '#1087
               DataBinding.FieldName = 'RASST_STAN_OP'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2264,6 +2483,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1RASST_STAN_NAZN: TcxGridDBBandedColumn
               Caption = #1056#1072#1089#1089#1090#1086#1103#1085#1080#1077' '#1086#1089#1090#1072#1074#1096#1077#1077#1089#1103' ('#1086#1090' '#1090#1077#1082#1091#1097#1077#1081' '#1089#1090#1072#1085#1094#1080#1080' '#1076#1080#1089#1083#1086#1082#1072#1094
               DataBinding.FieldName = 'RASST_STAN_NAZN'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2273,6 +2493,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1PROST_DN: TcxGridDBBandedColumn
               Caption = #1042#1088#1077#1084#1103' '#1087#1088#1086#1089#1090#1086#1103' '#1087#1086#1076' '#1087#1086#1089#1083#1077#1076#1085#1077#1081' '#1086#1087#1077#1088#1072#1094#1080#1077#1081' ('#1089#1091#1090#1082#1080')'
               DataBinding.FieldName = 'PROST_DN'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2282,6 +2503,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1PROST_: TcxGridDBBandedColumn
               Caption = #1042#1088#1077#1084#1103' '#1087#1088#1086#1089#1090#1086#1103' '#1087#1086#1076' '#1087#1086#1089#1083#1077#1076#1085#1077#1081' '#1086#1087#1077#1088#1072#1094#1080#1077#1081' ('#1095#1072#1089#1099')'
               DataBinding.FieldName = 'PROST_'#1057#1053
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2291,6 +2513,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1PROST_MIN: TcxGridDBBandedColumn
               Caption = #1042#1088#1077#1084#1103' '#1087#1088#1086#1089#1090#1086#1103' '#1087#1086#1076' '#1087#1086#1089#1083#1077#1076#1085#1077#1081' '#1086#1087#1077#1088#1072#1094#1080#1077#1081' ('#1084#1080#1085#1091#1090#1099')'
               DataBinding.FieldName = 'PROST_MIN'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2300,6 +2523,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1NORMA_KM: TcxGridDBBandedColumn
               Caption = #1053#1086#1088#1084#1072#1090#1080#1074' '#1074#1077#1083#1080#1095#1080#1085#1099' '#1087#1088#1086#1073#1077#1075#1072' ('#1082#1084')'
               DataBinding.FieldName = 'NORMA_KM'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2309,6 +2533,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1OSTATOK: TcxGridDBBandedColumn
               Caption = #1054#1089#1090#1072#1090#1086#1082' '#1087#1088#1086#1073#1077#1075#1072' ('#1082#1084')'
               DataBinding.FieldName = 'OSTATOK'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2318,6 +2543,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1KOD_GRZ_VYGR: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1074#1099#1075#1088#1091#1078#1077#1085#1085#1086#1075#1086' '#1075#1088#1091#1079#1072' ('#1045#1058#1057#1053#1043') ('#1091#1082#1072#1079#1072#1085#1080#1077' '#1082#1086#1076#1072' '#1075#1088#1091#1079
               DataBinding.FieldName = 'KOD_GRZ_VYGR'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2327,6 +2553,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1PR_OST_GRZ: TcxGridDBBandedColumn
               Caption = #1055#1088#1080#1079#1085#1072#1082' '#1085#1072#1083#1080#1095#1080#1103' '#1086#1089#1090#1072#1090#1082#1072' '#1075#1088#1091#1079#1072
               DataBinding.FieldName = 'PR_OST_GRZ'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2336,6 +2563,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1DATE_OTPR: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1080' '#1074#1088#1077#1084#1103' '#1086#1090#1087#1088#1072#1074#1083#1077#1085#1080#1103' ('#1040#1057#1054#1059#1055') '#1089#1086' '#1089#1090#1072#1085#1094#1080#1080' '#1087#1088#1080#1077#1084#1072
               DataBinding.FieldName = 'DATE_OTPR'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2345,6 +2573,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1DATE_PRIB: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1080' '#1074#1088#1077#1084#1103' '#1087#1088#1080#1073#1099#1090#1080#1103' ('#1040#1057#1054#1059#1055') '#1085#1072' '#1089#1090#1072#1085#1094#1080#1102' '#1085#1072#1079#1085#1072#1095#1077#1085#1080
               DataBinding.FieldName = 'DATE_PRIB'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2354,6 +2583,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1KOD_PL_OTPR: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1087#1083#1072#1090#1077#1083#1100#1097#1080#1082#1072' '#1086#1090#1087#1088#1072#1074#1080#1090#1077#1083#1103' ('#1045#1051#1057')'
               DataBinding.FieldName = 'KOD_PL_OTPR'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2363,6 +2593,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1TARIF: TcxGridDBBandedColumn
               Caption = #1058#1072#1088#1080#1092
               DataBinding.FieldName = 'TARIF'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2372,6 +2603,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1OTM_GOD_VAG: TcxGridDBBandedColumn
               Caption = #1056#1077#1079#1091#1083#1100#1090#1072#1090' '#1086#1089#1084#1086#1090#1088#1072' '#1087#1086' '#1042#1059'-14'#1052#1042#1062
               DataBinding.FieldName = 'OTM_GOD_VAG'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2381,6 +2613,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1POROG_PROB: TcxGridDBBandedColumn
               Caption = #1055#1088#1080#1079#1085#1072#1082' '#1087#1088#1086#1073#1077#1075#1072
               DataBinding.FieldName = 'POROG_PROB'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2390,6 +2623,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1PR_OTM: TcxGridDBBandedColumn
               Caption = #1055#1088#1080#1079#1085#1072#1082' '#1082#1086#1088#1088#1077#1082#1090#1080#1088#1086#1074#1082#1080' '#1079#1072#1087#1080#1089#1080
               DataBinding.FieldName = 'PR_OTM'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2399,6 +2633,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1PR_STR: TcxGridDBBandedColumn
               Caption = #1055#1088#1080#1079#1085#1072#1082' '#1089#1090#1088#1072#1085#1099
               DataBinding.FieldName = 'PR_STR'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2408,6 +2643,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1DATE_ZAP: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1079#1072#1087#1080#1089#1080' '#1074' '#1041#1044' '#1040#1057#1054#1059#1055
               DataBinding.FieldName = 'DATE_ZAP'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2417,6 +2653,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1KOD_GRZ_UCH: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1075#1088#1091#1079#1072' '#1091#1095#1077#1090#1085#1099#1081
               DataBinding.FieldName = 'KOD_GRZ_UCH'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2426,6 +2663,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1KDS_T: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1089#1086#1086#1073#1097#1077#1085#1080#1103', '#1089#1082#1086#1088#1088#1077#1082#1090#1080#1088#1086#1074#1072#1074#1096#1077#1075#1086' '#1079#1072#1087#1080#1089#1100
               DataBinding.FieldName = 'KDS_T'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2435,6 +2673,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1DVS_T: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1074#1074#1086#1076#1072' '#1089#1086#1086#1073#1097#1077#1085#1080#1103' KDS_T'
               DataBinding.FieldName = 'DVS_T'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2444,6 +2683,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1ID_GRUZPOL: TcxGridDBBandedColumn
               Caption = #1048#1076#1077#1085#1090#1080#1092#1080#1082#1072#1090#1086#1088' '#1075#1088#1091#1079#1086#1087#1086#1083#1091#1095#1072#1090#1077#1083#1103
               DataBinding.FieldName = 'ID_GRUZPOL'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0
@@ -2453,6 +2693,7 @@ object fmECPInform: TfmECPInform
             object cxGrid2DBBandedTableView1ID_GRUZOTPR: TcxGridDBBandedColumn
               Caption = #1048#1076#1077#1085#1090#1080#1092#1080#1082#1072#1090#1086#1088' '#1075#1088#1091#1079#1086#1086#1090#1087#1088#1072#1074#1080#1090#1077#1083#1103' '
               DataBinding.FieldName = 'ID_GRUZOTPR'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 80
               Position.BandIndex = 0

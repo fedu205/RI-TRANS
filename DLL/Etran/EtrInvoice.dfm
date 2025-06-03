@@ -146,38 +146,39 @@ object fmEtrInvoice: TfmEtrInvoice
   TextHeight = 13
   object cxSplitter1: TcxSplitter
     Left = 300
-    Top = 49
+    Top = 26
     Width = 8
-    Height = 658
+    Height = 681
     HotZoneClassName = 'TcxSimpleStyle'
     HotZone.SizePercent = 100
     Control = Panel2
     Color = 8421631
     ParentColor = False
     Visible = False
-    ExplicitHeight = 646
+    ExplicitHeight = 683
   end
   object Panel2: TPanel
     Left = 0
-    Top = 49
+    Top = 26
     Width = 300
-    Height = 658
+    Height = 681
     Align = alLeft
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitHeight = 646
+    ExplicitTop = 49
+    ExplicitHeight = 658
     object cxGrid1: TcxGrid
       Left = 0
       Top = 0
       Width = 300
-      Height = 658
+      Height = 681
       Align = alClient
       TabOrder = 0
       LookAndFeel.Kind = lfUltraFlat
       LookAndFeel.NativeStyle = False
       LookAndFeel.ScrollbarMode = sbmClassic
       LookAndFeel.SkinName = 'Office2007Black'
-      ExplicitHeight = 646
+      ExplicitHeight = 658
       object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
         PopupMenu = dxBarPopupMenu2
         OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -1677,15 +1678,15 @@ object fmEtrInvoice: TfmEtrInvoice
   end
   object Panel3: TPanel
     Left = 308
-    Top = 49
+    Top = 26
     Width = 937
-    Height = 658
+    Height = 681
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 2
     Visible = False
-    ExplicitWidth = 868
-    ExplicitHeight = 646
+    ExplicitTop = 49
+    ExplicitHeight = 658
     object Panel31: TPanel
       Left = 0
       Top = 0
@@ -1694,7 +1695,6 @@ object fmEtrInvoice: TfmEtrInvoice
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitWidth = 868
       object cxLabel109: TcxLabel
         Left = 0
         Top = 0
@@ -1711,7 +1711,6 @@ object fmEtrInvoice: TfmEtrInvoice
         Style.Font.Style = [fsBold]
         Style.IsFontAssigned = True
         Properties.Alignment.Horz = taLeftJustify
-        ExplicitWidth = 868
         Height = 29
         Width = 937
       end
@@ -1724,7 +1723,6 @@ object fmEtrInvoice: TfmEtrInvoice
       HotZoneClassName = 'TcxSimpleStyle'
       AlignSplitter = salTop
       Control = GridPanel2
-      ExplicitWidth = 868
     end
     object cxSplitter5: TcxSplitter
       Left = 0
@@ -1737,7 +1735,7 @@ object fmEtrInvoice: TfmEtrInvoice
       Control = GridPanel8
       Color = 8421631
       ParentColor = False
-      ExplicitWidth = 868
+      ExplicitTop = 459
     end
     object cxSplitter6: TcxSplitter
       Left = 0
@@ -1747,7 +1745,7 @@ object fmEtrInvoice: TfmEtrInvoice
       HotZoneClassName = 'TcxSimpleStyle'
       AlignSplitter = salTop
       Control = GridPanel5
-      ExplicitWidth = 868
+      ExplicitTop = 377
     end
     object cxSplitter7: TcxSplitter
       Left = 0
@@ -1757,7 +1755,7 @@ object fmEtrInvoice: TfmEtrInvoice
       HotZoneClassName = 'TcxSimpleStyle'
       AlignSplitter = salTop
       Control = GridPanel7
-      ExplicitWidth = 868
+      ExplicitTop = 271
     end
     object cxSplitter8: TcxSplitter
       Left = 0
@@ -1767,7 +1765,6 @@ object fmEtrInvoice: TfmEtrInvoice
       HotZoneClassName = 'TcxSimpleStyle'
       AlignSplitter = salTop
       Control = GridPanel6
-      ExplicitWidth = 868
     end
     object GridPanel2: TGridPanel
       Left = 0
@@ -1808,7 +1805,6 @@ object fmEtrInvoice: TfmEtrInvoice
           Value = 100.000000000000000000
         end>
       TabOrder = 6
-      ExplicitWidth = 868
       object Panel9: TPanel
         Left = 0
         Top = 0
@@ -1819,7 +1815,6 @@ object fmEtrInvoice: TfmEtrInvoice
         BevelKind = bkFlat
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitWidth = 291
         DesignSize = (
           314
           74)
@@ -1837,6 +1832,7 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.NativeStyle = True
           StyleFocused.LookAndFeel.NativeStyle = True
           StyleHot.LookAndFeel.NativeStyle = True
+          StyleReadOnly.LookAndFeel.NativeStyle = True
           TabOrder = 1
           Text = 'cxTextEdit_invoiceID'
           Width = 210
@@ -1855,6 +1851,7 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Text = 'cxTextEdit_invNumber'
           Width = 210
@@ -1873,6 +1870,7 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Text = 'cxTextEdit_invUniqueNumber'
           Width = 210
@@ -1888,8 +1886,6 @@ object fmEtrInvoice: TfmEtrInvoice
         BevelKind = bkFlat
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitLeft = 291
-        ExplicitWidth = 289
         DesignSize = (
           312
           74)
@@ -1907,9 +1903,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Text = 'cxTextEdit_invTypeName'
-          ExplicitWidth = 156
           Width = 179
         end
         object cxLabel36: TcxLabel
@@ -1926,9 +1922,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Text = 'cxTextEdit_invSendKindName'
-          ExplicitWidth = 156
           Width = 179
         end
         object cxLabel23: TcxLabel
@@ -1945,9 +1941,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Text = 'cxTextEdit_invoiceState'
-          ExplicitWidth = 156
           Width = 179
         end
       end
@@ -1961,8 +1957,6 @@ object fmEtrInvoice: TfmEtrInvoice
         BevelKind = bkFlat
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitLeft = 580
-        ExplicitWidth = 288
         DesignSize = (
           311
           74)
@@ -1990,9 +1984,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Text = 'cxTextEdit_invDispKindID'
-          ExplicitWidth = 158
           Width = 181
         end
         object cxTextEdit_invIxTariffCode: TcxTextEdit
@@ -2004,9 +1998,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Text = 'cxTextEdit_invIxTariffCode'
-          ExplicitWidth = 158
           Width = 181
         end
         object cxTextEdit_invFRWSubCode: TcxTextEdit
@@ -2018,9 +2012,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Text = 'cxTextEdit_invFRWSubCode'
-          ExplicitWidth = 158
           Width = 181
         end
       end
@@ -2064,7 +2058,6 @@ object fmEtrInvoice: TfmEtrInvoice
           Value = 100.000000000000000000
         end>
       TabOrder = 7
-      ExplicitWidth = 868
       object Panel17: TPanel
         Left = 0
         Top = 0
@@ -2075,7 +2068,6 @@ object fmEtrInvoice: TfmEtrInvoice
         BevelKind = bkFlat
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitWidth = 291
         DesignSize = (
           312
           96)
@@ -2103,9 +2095,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Text = 'cxTextEdit_invSenderName'
-          ExplicitWidth = 278
           Width = 301
         end
         object cxTextEdit_invSenderAddress: TcxTextEdit
@@ -2117,9 +2109,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Text = 'cxTextEdit_invSenderAddress'
-          ExplicitWidth = 278
           Width = 301
         end
         object cxTextEdit_invSenderOKPO: TcxTextEdit
@@ -2130,6 +2122,7 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Text = 'cxTextEdit_invSenderOKPO'
           Width = 93
@@ -2143,9 +2136,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Text = 'cxTextEdit_invSenderTGNL'
-          ExplicitWidth = 109
           Width = 132
         end
       end
@@ -2159,8 +2152,6 @@ object fmEtrInvoice: TfmEtrInvoice
         BevelKind = bkFlat
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitLeft = 291
-        ExplicitWidth = 289
         DesignSize = (
           310
           96)
@@ -2188,9 +2179,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Text = 'cxTextEdit_invRecipName'
-          ExplicitWidth = 276
           Width = 299
         end
         object cxTextEdit_invRecipAddress: TcxTextEdit
@@ -2202,9 +2193,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Text = 'cxTextEdit_invRecipAddress'
-          ExplicitWidth = 276
           Width = 299
         end
         object cxTextEdit_invRecipOKPO: TcxTextEdit
@@ -2215,6 +2206,7 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Text = 'cxTextEdit_invRecipOKPO'
           Width = 93
@@ -2228,9 +2220,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Text = 'cxTextEdit_invRecipTGNL'
-          ExplicitWidth = 106
           Width = 129
         end
       end
@@ -2243,8 +2235,6 @@ object fmEtrInvoice: TfmEtrInvoice
         BevelKind = bkFlat
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitLeft = 580
-        ExplicitWidth = 288
         DesignSize = (
           307
           96)
@@ -2277,9 +2267,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Text = 'cxTextEdit_invPayerName'
-          ExplicitWidth = 213
           Width = 236
         end
         object cxTextEdit_invPayerCode: TcxTextEdit
@@ -2291,9 +2281,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Text = 'cxTextEdit_invPayerCode'
-          ExplicitWidth = 213
           Width = 236
         end
         object cxTextEdit_invPayerBank: TcxTextEdit
@@ -2305,9 +2295,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Text = 'cxTextEdit_invPayerBank'
-          ExplicitWidth = 213
           Width = 236
         end
         object cxTextEdit_invPayerAccount: TcxTextEdit
@@ -2319,9 +2309,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Text = 'cxTextEdit_invPayerAccount'
-          ExplicitWidth = 213
           Width = 236
         end
       end
@@ -2365,7 +2355,6 @@ object fmEtrInvoice: TfmEtrInvoice
           Value = 100.000000000000000000
         end>
       TabOrder = 8
-      ExplicitWidth = 868
       object Panel7: TPanel
         Left = 0
         Top = 0
@@ -2376,7 +2365,6 @@ object fmEtrInvoice: TfmEtrInvoice
         BevelKind = bkFlat
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitWidth = 291
         DesignSize = (
           314
           74)
@@ -2404,9 +2392,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Text = 'cxTextEdit_invFromCountryName'
-          ExplicitWidth = 165
           Width = 188
         end
         object cxTextEdit_invFromCountryCode: TcxTextEdit
@@ -2418,6 +2406,7 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Text = 'cxTextEdit_invFromCountryCode'
           Width = 48
@@ -2431,6 +2420,7 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Text = 'cxTextEdit_invFromPointCode'
           Width = 48
@@ -2444,9 +2434,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Text = 'cxTextEdit_invFromPointName'
-          ExplicitWidth = 165
           Width = 188
         end
         object cxTextEdit_invFromStationName: TcxTextEdit
@@ -2458,9 +2448,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Text = 'cxTextEdit_invFromStationName'
-          ExplicitWidth = 165
           Width = 188
         end
         object cxTextEdit_invFromStationCode: TcxTextEdit
@@ -2472,6 +2462,7 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Text = 'cxTextEdit_invFromStationCode'
           Width = 48
@@ -2487,8 +2478,6 @@ object fmEtrInvoice: TfmEtrInvoice
         BevelKind = bkFlat
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitLeft = 291
-        ExplicitWidth = 289
         DesignSize = (
           312
           74)
@@ -2511,9 +2500,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Text = 'cxTextEdit_invToCountryCode'
-          ExplicitLeft = 233
           Width = 54
         end
         object cxTextEdit_invToCountryName: TcxTextEdit
@@ -2525,9 +2514,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Text = 'cxTextEdit_invToCountryName'
-          ExplicitWidth = 164
           Width = 187
         end
         object cxTextEdit_invToPointName: TcxTextEdit
@@ -2539,9 +2528,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Text = 'cxTextEdit_invToPointName'
-          ExplicitWidth = 164
           Width = 187
         end
         object cxTextEdit_invToPointCode: TcxTextEdit
@@ -2553,9 +2542,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Text = 'cxTextEdit_invToPointCode'
-          ExplicitLeft = 233
           Width = 54
         end
         object cxLabel29: TcxLabel
@@ -2572,9 +2561,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 7
           Text = 'cxTextEdit_invToStationName'
-          ExplicitWidth = 164
           Width = 187
         end
         object cxTextEdit_invToStationCode: TcxTextEdit
@@ -2586,9 +2575,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 8
           Text = 'cxTextEdit_invToStationCode'
-          ExplicitLeft = 233
           Width = 54
         end
       end
@@ -2602,8 +2591,6 @@ object fmEtrInvoice: TfmEtrInvoice
         BevelKind = bkFlat
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitLeft = 580
-        ExplicitWidth = 288
         DesignSize = (
           311
           74)
@@ -2626,9 +2613,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Text = 'cxTextEdit_freightGNGName'
-          ExplicitWidth = 150
           Width = 173
         end
         object cxTextEdit_freightName: TcxTextEdit
@@ -2640,9 +2627,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Text = 'cxTextEdit_freightName'
-          ExplicitWidth = 150
           Width = 173
         end
         object cxTextEdit_freightCode: TcxTextEdit
@@ -2654,9 +2641,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Text = 'cxTextEdit_freightCode'
-          ExplicitLeft = 237
           Width = 51
         end
         object cxTextEdit_freightGNGCode: TcxTextEdit
@@ -2668,9 +2655,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Text = 'cxTextEdit_freightGNGCode'
-          ExplicitLeft = 237
           Width = 51
         end
       end
@@ -2714,7 +2701,6 @@ object fmEtrInvoice: TfmEtrInvoice
           Value = 100.000000000000000000
         end>
       TabOrder = 9
-      ExplicitWidth = 868
       object Panel15: TPanel
         Left = 0
         Top = 0
@@ -2725,7 +2711,6 @@ object fmEtrInvoice: TfmEtrInvoice
         BevelKind = bkFlat
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitWidth = 291
         DesignSize = (
           314
           74)
@@ -2753,6 +2738,7 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Text = 'cxTextEdit_invDateReady'
           Width = 150
@@ -2766,6 +2752,7 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Text = 'cxTextEdit_invDateDeparture'
           Width = 150
@@ -2779,6 +2766,7 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Text = 'cxTextEdit_invDateCustom'
           Width = 150
@@ -2794,8 +2782,6 @@ object fmEtrInvoice: TfmEtrInvoice
         BevelKind = bkFlat
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitLeft = 291
-        ExplicitWidth = 289
         DesignSize = (
           312
           74)
@@ -2813,9 +2799,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Text = 'cxTextEdit_invDateRegister'
-          ExplicitWidth = 127
           Width = 150
         end
         object cxLabel47: TcxLabel
@@ -2837,9 +2823,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Text = 'cxTextEdit_invDateArrive'
-          ExplicitWidth = 127
           Width = 150
         end
         object cxTextEdit_invDateDelivery: TcxTextEdit
@@ -2851,9 +2837,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Text = 'cxTextEdit_invDateDelivery'
-          ExplicitWidth = 127
           Width = 150
         end
       end
@@ -2867,8 +2853,6 @@ object fmEtrInvoice: TfmEtrInvoice
         BevelKind = bkFlat
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitLeft = 580
-        ExplicitWidth = 288
         DesignSize = (
           311
           74)
@@ -2896,9 +2880,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Text = 'cxTextEdit_invFactDateAccept'
-          ExplicitWidth = 125
           Width = 148
         end
         object cxTextEdit_invFactDateToLoad: TcxTextEdit
@@ -2910,9 +2894,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Text = 'cxTextEdit_invFactDateToLoad'
-          ExplicitWidth = 125
           Width = 148
         end
         object cxTextEdit_invVizaDate: TcxTextEdit
@@ -2924,9 +2908,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Text = 'cxTextEdit_invVizaDate'
-          ExplicitWidth = 125
           Width = 148
         end
       end
@@ -2970,7 +2954,6 @@ object fmEtrInvoice: TfmEtrInvoice
           Value = 100.000000000000000000
         end>
       TabOrder = 10
-      ExplicitWidth = 868
       object Panel20: TPanel
         Left = 0
         Top = 0
@@ -2981,7 +2964,6 @@ object fmEtrInvoice: TfmEtrInvoice
         BevelKind = bkFlat
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitWidth = 291
         DesignSize = (
           314
           74)
@@ -3008,6 +2990,8 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Text = 'cxTextEdit_invClaimNumber'
           Width = 222
@@ -3024,6 +3008,8 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Text = 'cxTextEdit_invOtprNum'
           Width = 50
@@ -3040,6 +3026,8 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Text = 'cxTextEdit_invPodNum'
           Width = 50
@@ -3055,8 +3043,6 @@ object fmEtrInvoice: TfmEtrInvoice
         BevelKind = bkFlat
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitLeft = 291
-        ExplicitWidth = 289
         DesignSize = (
           312
           74)
@@ -3074,9 +3060,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Text = 'cxTextEdit_invPlanCarTypeName'
-          ExplicitWidth = 131
           Width = 154
         end
         object cxLabel62: TcxLabel
@@ -3093,9 +3079,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Text = 'cxTextEdit_invPlanCarCount'
-          ExplicitWidth = 131
           Width = 154
         end
         object cxLabel66: TcxLabel
@@ -3112,9 +3098,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Text = 'cxTextEdit_invPlanCarOwnerTypeName'
-          ExplicitWidth = 131
           Width = 154
         end
       end
@@ -3128,8 +3114,6 @@ object fmEtrInvoice: TfmEtrInvoice
         BevelKind = bkFlat
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitLeft = 580
-        ExplicitWidth = 288
         DesignSize = (
           311
           74)
@@ -3147,9 +3131,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Text = 'cxTextEdit_invPlanOutsizeCode'
-          ExplicitWidth = 126
           Width = 149
         end
         object cxLabel68: TcxLabel
@@ -3166,9 +3150,9 @@ object fmEtrInvoice: TfmEtrInvoice
           StyleDisabled.LookAndFeel.SkinName = 'Coffee'
           StyleFocused.LookAndFeel.SkinName = 'Coffee'
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Text = 'cxTextEdit_invDateLoad'
-          ExplicitWidth = 126
           Width = 149
         end
       end
@@ -3177,17 +3161,16 @@ object fmEtrInvoice: TfmEtrInvoice
       Left = 0
       Top = 473
       Width = 937
-      Height = 185
+      Height = 208
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 11
-      ExplicitWidth = 868
-      ExplicitHeight = 173
+      ExplicitHeight = 185
       object cxPageControl2: TcxPageControl
         Left = 0
         Top = 0
         Width = 937
-        Height = 185
+        Height = 208
         Align = alClient
         TabOrder = 0
         Properties.ActivePage = cxTabSheet10
@@ -3196,9 +3179,8 @@ object fmEtrInvoice: TfmEtrInvoice
         Properties.Style = 6
         OnChange = cxPageControl2Change
         OnDrawTabEx = cxPageControl2DrawTabEx
-        ExplicitWidth = 868
-        ExplicitHeight = 173
-        ClientRectBottom = 185
+        ExplicitHeight = 185
+        ClientRectBottom = 208
         ClientRectRight = 937
         ClientRectTop = 72
         object cxTabSheet3: TcxTabSheet
@@ -3210,22 +3192,22 @@ object fmEtrInvoice: TfmEtrInvoice
           Font.Style = []
           ImageIndex = 0
           ParentFont = False
-          ExplicitHeight = 101
+          ExplicitHeight = 113
           object ScrollBox1: TScrollBox
             Left = 0
             Top = 0
             Width = 937
-            Height = 113
+            Height = 136
             VertScrollBar.Position = 96
             Align = alClient
             Ctl3D = True
             ParentCtl3D = False
             TabOrder = 0
-            ExplicitHeight = 101
+            ExplicitHeight = 113
             object GridPanel3: TGridPanel
               Left = 0
               Top = -96
-              Width = 916
+              Width = 912
               Height = 480
               Align = alTop
               Caption = 'GridPanel3'
@@ -3255,13 +3237,13 @@ object fmEtrInvoice: TfmEtrInvoice
               object Panel23: TPanel
                 Left = 1
                 Top = 1
-                Width = 422
+                Width = 455
                 Height = 478
                 Align = alClient
                 BevelOuter = bvNone
                 TabOrder = 0
                 DesignSize = (
-                  422
+                  455
                   478)
                 object cxLabel24: TcxLabel
                   Left = 5
@@ -3580,15 +3562,15 @@ object fmEtrInvoice: TfmEtrInvoice
                 end
               end
               object Panel24: TPanel
-                Left = 423
+                Left = 456
                 Top = 1
-                Width = 423
+                Width = 455
                 Height = 478
                 Align = alClient
                 BevelOuter = bvNone
                 TabOrder = 1
                 DesignSize = (
-                  423
+                  455
                   478)
                 object cxLabel82: TcxLabel
                   Left = 5
@@ -3877,18 +3859,18 @@ object fmEtrInvoice: TfmEtrInvoice
           Font.Style = []
           ImageIndex = 0
           ParentFont = False
-          ExplicitHeight = 101
+          ExplicitHeight = 113
           object cxGrid13: TcxGrid
             Left = 0
             Top = 0
             Width = 937
-            Height = 113
+            Height = 136
             Align = alClient
             TabOrder = 0
             LookAndFeel.Kind = lfUltraFlat
             LookAndFeel.NativeStyle = False
             LookAndFeel.ScrollbarMode = sbmClassic
-            ExplicitHeight = 101
+            ExplicitHeight = 113
             object cxGridDBBandedTableView11: TcxGridDBBandedTableView
               PopupMenu = dxBarPopupMenu3
               OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -4061,18 +4043,18 @@ object fmEtrInvoice: TfmEtrInvoice
           Tag = 1
           Caption = #1043#1088#1091#1079#1099
           ImageIndex = 11
-          ExplicitHeight = 101
+          ExplicitHeight = 113
           object cxGrid12: TcxGrid
             Left = 0
             Top = 0
             Width = 937
-            Height = 113
+            Height = 136
             Align = alClient
             TabOrder = 0
             LookAndFeel.Kind = lfUltraFlat
             LookAndFeel.NativeStyle = False
             LookAndFeel.ScrollbarMode = sbmClassic
-            ExplicitHeight = 101
+            ExplicitHeight = 113
             object cxGridDBBandedTableView10: TcxGridDBBandedTableView
               PopupMenu = dxBarPopupMenu4
               OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -4399,18 +4381,18 @@ object fmEtrInvoice: TfmEtrInvoice
           Tag = 2
           Caption = #1052#1072#1088#1096#1088#1091#1090' '#1089#1083#1077#1076#1086#1074#1072#1085#1080#1103
           ImageIndex = 2
-          ExplicitHeight = 101
+          ExplicitHeight = 113
           object cxGrid3: TcxGrid
             Left = 0
             Top = 0
             Width = 937
-            Height = 113
+            Height = 136
             Align = alClient
             TabOrder = 0
             LookAndFeel.Kind = lfUltraFlat
             LookAndFeel.NativeStyle = False
             LookAndFeel.ScrollbarMode = sbmClassic
-            ExplicitHeight = 101
+            ExplicitHeight = 113
             object cxGrid3DBBandedTableView1: TcxGridDBBandedTableView
               PopupMenu = dxBarPopupMenu5
               OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -4685,18 +4667,18 @@ object fmEtrInvoice: TfmEtrInvoice
           Tag = 3
           Caption = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1099#1077' '#1086#1090#1084#1077#1090#1082#1080
           ImageIndex = 3
-          ExplicitHeight = 101
+          ExplicitHeight = 113
           object cxGrid4: TcxGrid
             Left = 0
             Top = 0
             Width = 937
-            Height = 113
+            Height = 136
             Align = alClient
             TabOrder = 0
             LookAndFeel.Kind = lfUltraFlat
             LookAndFeel.NativeStyle = False
             LookAndFeel.ScrollbarMode = sbmClassic
-            ExplicitHeight = 101
+            ExplicitHeight = 113
             object cxGridDBBandedTableView2: TcxGridDBBandedTableView
               PopupMenu = dxBarPopupMenu6
               OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -4775,18 +4757,18 @@ object fmEtrInvoice: TfmEtrInvoice
           Tag = 4
           Caption = #1055#1088#1080#1083#1072#1075#1072#1077#1084#1099#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1099
           ImageIndex = 4
-          ExplicitHeight = 101
+          ExplicitHeight = 113
           object cxGrid5: TcxGrid
             Left = 0
             Top = 0
             Width = 937
-            Height = 113
+            Height = 136
             Align = alClient
             TabOrder = 0
             LookAndFeel.Kind = lfUltraFlat
             LookAndFeel.NativeStyle = False
             LookAndFeel.ScrollbarMode = sbmClassic
-            ExplicitHeight = 101
+            ExplicitHeight = 113
             object cxGridDBBandedTableView3: TcxGridDBBandedTableView
               PopupMenu = dxBarPopupMenu7
               Navigator.Buttons.CustomButtons = <>
@@ -4850,18 +4832,18 @@ object fmEtrInvoice: TfmEtrInvoice
           Tag = 5
           Caption = #1055#1077#1088#1077#1074#1086#1079#1086#1095#1085#1099#1077' '#1089#1088#1077#1076#1089#1090#1074#1072
           ImageIndex = 5
-          ExplicitHeight = 101
+          ExplicitHeight = 113
           object cxGrid6: TcxGrid
             Left = 0
             Top = 0
             Width = 937
-            Height = 113
+            Height = 136
             Align = alClient
             TabOrder = 0
             LookAndFeel.Kind = lfUltraFlat
             LookAndFeel.NativeStyle = False
             LookAndFeel.ScrollbarMode = sbmClassic
-            ExplicitHeight = 101
+            ExplicitHeight = 113
             object cxGridDBBandedTableView4: TcxGridDBBandedTableView
               PopupMenu = dxBarPopupMenu8
               OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -5019,18 +5001,18 @@ object fmEtrInvoice: TfmEtrInvoice
           Tag = 6
           Caption = #1050#1086#1085#1090#1077#1081#1085#1077#1088#1099
           ImageIndex = 6
-          ExplicitHeight = 101
+          ExplicitHeight = 113
           object cxGrid7: TcxGrid
             Left = 0
             Top = 0
             Width = 937
-            Height = 113
+            Height = 136
             Align = alClient
             TabOrder = 0
             LookAndFeel.Kind = lfUltraFlat
             LookAndFeel.NativeStyle = False
             LookAndFeel.ScrollbarMode = sbmClassic
-            ExplicitHeight = 101
+            ExplicitHeight = 113
             object cxGridDBBandedTableView5: TcxGridDBBandedTableView
               PopupMenu = dxBarPopupMenu9
               OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -5259,20 +5241,18 @@ object fmEtrInvoice: TfmEtrInvoice
           Tag = 7
           Caption = #1042#1072#1075#1086#1085#1099
           ImageIndex = 7
-          ExplicitWidth = 868
-          ExplicitHeight = 101
+          ExplicitHeight = 113
           object cxGrid8: TcxGrid
             Left = 0
             Top = 0
             Width = 937
-            Height = 113
+            Height = 136
             Align = alClient
             TabOrder = 0
             LookAndFeel.Kind = lfUltraFlat
             LookAndFeel.NativeStyle = False
             LookAndFeel.ScrollbarMode = sbmClassic
-            ExplicitWidth = 868
-            ExplicitHeight = 101
+            ExplicitHeight = 113
             object cxGridDBBandedTableView6: TcxGridDBBandedTableView
               PopupMenu = dxBarPopupMenu10
               OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -5735,19 +5715,19 @@ object fmEtrInvoice: TfmEtrInvoice
           Tag = 8
           Caption = #1055#1088#1086#1074#1086#1079#1085#1099#1077' '#1087#1083#1072#1090#1077#1078#1080' '#1080' '#1089#1073#1086#1088#1099' '#1087#1086' '#1086#1090#1087#1088#1072#1074#1083#1077#1085#1080#1102
           ImageIndex = 8
-          ExplicitHeight = 101
+          ExplicitHeight = 113
           object cxGrid9: TcxGrid
             Left = 0
             Top = 0
             Width = 937
-            Height = 113
+            Height = 136
             Align = alClient
             TabOrder = 0
             LookAndFeel.Kind = lfUltraFlat
             LookAndFeel.NativeStyle = False
             LookAndFeel.ScrollbarMode = sbmClassic
             LookAndFeel.SkinName = ''
-            ExplicitHeight = 101
+            ExplicitHeight = 113
             object cxGridDBBandedTableView7: TcxGridDBBandedTableView
               PopupMenu = dxBarPopupMenu11
               OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -6141,18 +6121,18 @@ object fmEtrInvoice: TfmEtrInvoice
           Tag = 9
           Caption = #1055#1088#1086#1074#1086#1079#1085#1099#1077' '#1087#1083#1072#1090#1077#1078#1080' '#1080' '#1089#1073#1086#1088#1099' '#1087#1086' '#1087#1088#1080#1073#1099#1090#1080#1102
           ImageIndex = 9
-          ExplicitHeight = 101
+          ExplicitHeight = 113
           object cxGrid10: TcxGrid
             Left = 0
             Top = 0
             Width = 937
-            Height = 113
+            Height = 136
             Align = alClient
             TabOrder = 0
             LookAndFeel.Kind = lfUltraFlat
             LookAndFeel.NativeStyle = False
             LookAndFeel.ScrollbarMode = sbmClassic
-            ExplicitHeight = 101
+            ExplicitHeight = 113
             object cxGridDBBandedTableView8: TcxGridDBBandedTableView
               PopupMenu = dxBarPopupMenu12
               OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -6546,18 +6526,18 @@ object fmEtrInvoice: TfmEtrInvoice
           Tag = 10
           Caption = #1044#1072#1085#1085#1099#1077' '#1086' '#1087#1088#1086#1093#1086#1078#1076#1077#1085#1080#1080' '#1087#1086#1075#1088#1072#1085#1087#1077#1088#1077#1093#1086#1076#1086#1074
           ImageIndex = 10
-          ExplicitHeight = 101
+          ExplicitHeight = 113
           object cxGrid11: TcxGrid
             Left = 0
             Top = 0
             Width = 937
-            Height = 113
+            Height = 136
             Align = alClient
             TabOrder = 0
             LookAndFeel.Kind = lfUltraFlat
             LookAndFeel.NativeStyle = False
             LookAndFeel.ScrollbarMode = sbmClassic
-            ExplicitHeight = 101
+            ExplicitHeight = 113
             object cxGridDBBandedTableView9: TcxGridDBBandedTableView
               PopupMenu = dxBarPopupMenu13
               OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -6637,18 +6617,18 @@ object fmEtrInvoice: TfmEtrInvoice
           Tag = 12
           Caption = #1055#1088#1086#1074#1086#1079#1085#1099#1077' '#1087#1083#1072#1090#1077#1078#1080' '#1080' '#1089#1073#1086#1088#1099' '#1087#1086' '#1074#1093#1086#1076#1091' '
           ImageIndex = 12
-          ExplicitHeight = 101
+          ExplicitHeight = 113
           object cxGrid28: TcxGrid
             Left = 0
             Top = 0
             Width = 937
-            Height = 113
+            Height = 136
             Align = alClient
             TabOrder = 0
             LookAndFeel.Kind = lfUltraFlat
             LookAndFeel.NativeStyle = False
             LookAndFeel.ScrollbarMode = sbmClassic
-            ExplicitHeight = 101
+            ExplicitHeight = 113
             object cxGridDBBandedTableView25: TcxGridDBBandedTableView
               PopupMenu = dxBarPopupMenu14
               Navigator.Buttons.CustomButtons = <>
@@ -6825,18 +6805,18 @@ object fmEtrInvoice: TfmEtrInvoice
         object cxTabSheet1: TcxTabSheet
           Caption = #1054#1090#1084#1077#1090#1082#1080' '#1074' '#1087#1091#1090#1080' '#1089#1083#1077#1076#1086#1074#1072#1085#1080#1103
           ImageIndex = 13
-          ExplicitHeight = 101
+          ExplicitHeight = 113
           object cxGrid2: TcxGrid
             Left = 0
             Top = 0
             Width = 937
-            Height = 113
+            Height = 136
             Align = alClient
             TabOrder = 0
             LookAndFeel.Kind = lfUltraFlat
             LookAndFeel.NativeStyle = False
             LookAndFeel.ScrollbarMode = sbmClassic
-            ExplicitHeight = 101
+            ExplicitHeight = 113
             object cxGridDBBandedTableView1: TcxGridDBBandedTableView
               PopupMenu = dxBarPopupMenu1
               Navigator.Buttons.CustomButtons = <>
@@ -6952,8 +6932,6 @@ object fmEtrInvoice: TfmEtrInvoice
     BevelOuter = bvNone
     TabOrder = 4
     Visible = False
-    ExplicitTop = 703
-    ExplicitWidth = 1176
   end
   object cxSplitter3: TcxSplitter
     Left = 0
@@ -6967,47 +6945,7 @@ object fmEtrInvoice: TfmEtrInvoice
     Color = 8421631
     ParentColor = False
     Visible = False
-    ExplicitTop = 695
-    ExplicitWidth = 1176
-  end
-  object cxPageControl1: TcxPageControl
-    Left = 0
-    Top = 26
-    Width = 1245
-    Height = 23
-    Align = alTop
-    Font.Charset = RUSSIAN_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 9
-    Properties.ActivePage = cxTabSheet2
-    Properties.CustomButtons.Buttons = <>
-    Properties.Style = 2
-    LookAndFeel.Kind = lfUltraFlat
-    LookAndFeel.NativeStyle = False
-    LookAndFeel.ScrollbarMode = sbmClassic
-    LookAndFeel.SkinName = ''
-    OnChange = cxPageControl1Change
-    ExplicitWidth = 1176
-    ClientRectBottom = 25
-    ClientRectRight = 1245
-    ClientRectTop = 25
-    object cxTabSheet2: TcxTabSheet
-      Caption = #1043#1091#1088#1091
-      ImageIndex = 0
-      ExplicitWidth = 1176
-    end
-    object cxTabSheet15: TcxTabSheet
-      Caption = #1040#1091#1088#1072' '#1054#1081#1083
-      ImageIndex = 1
-    end
-    object cxTabSheet16: TcxTabSheet
-      Caption = #1056#1077#1089#1091#1088#1089' '#1058#1088#1077#1081#1076
-      ImageIndex = 2
-    end
+    ExplicitTop = 709
   end
   object ADOEtran: TADOConnection
     KeepConnection = False

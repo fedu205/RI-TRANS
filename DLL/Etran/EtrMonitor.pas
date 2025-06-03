@@ -28,7 +28,7 @@ uses
   dxRibbonCustomizationForm, dxRibbon, System.ImageList,
   cxDataControllerConditionalFormattingRulesManagerDialog, cxImageList, dxSkinTheBezier, dxDateRanges, dxSkinOffice2019Colorful,
   dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray,
-  dxSkinOffice2019White, dxScrollbarAnnotations;
+  dxSkinOffice2019White, dxScrollbarAnnotations, dxSkinWXI;
 
 type
   TfmEtrMonitor = class(TForm)
@@ -197,7 +197,7 @@ begin
   StoreRegistryGrid(rgLoad,'\Software\Lis1\EtrMonitor_Grids', cxGridDBBandedTableView1);
 
 //  Fusers_group_cod := users_group_cod;
-  if users_group_cod =  '0' then begin login := 'Etran_GRU'; db_name := 'lis_etran'; end;
+  if users_group_cod =  '0' then begin login := 'Etran_RTR'; db_name := 'lis_etran'; end;
 //  if users_group_cod =  '1' then begin login := 'Etran_KHT'; db_name := 'depo_etran'; end;
 //  if users_group_cod =  '3' then begin login := 'Etran_PRV'; db_name := 'depo_etran'; end;
 //  if users_group_cod =  '5' then begin login := 'Etran_STS'; db_name := 'depo_etran'; end;
@@ -215,7 +215,7 @@ begin
   dxBarSubItem2.Caption := FormatDateTime('dd.mm.yy', Fdate1) + ' - ' + FormatDateTime('dd.mm.yy', Fdate2);
 
   LisEtran_Connect.Connected := False;
-  LisEtran_Connect.ConnectionString := 'Persist Security Info=True;Provider=SQLOLEDB.1;User ID=sa;Password=cjnhfkjubcnbrf;Initial Catalog='+ db_name +';Data Source='+Fusr_pwd^.server+';';
+  LisEtran_Connect.ConnectionString := 'Persist Security Info=True;Provider=SQLOLEDB.1;User ID=sa;Password=14remTTetran;Initial Catalog='+ db_name +';Data Source='+Fusr_pwd^.server+';';
   LisEtran_Connect.Connected := True;
 
   Query_Connect.Parameters.ParamByName('date1').Value := Fdate1;

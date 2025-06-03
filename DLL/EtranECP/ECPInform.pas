@@ -313,9 +313,9 @@ begin
 
   ADOEtran.Connected := False;
   if connect = nil then
-    ADOEtran.ConnectionString := ADOEtran.ConnectionString+';User ID=etran_gru;Password=''etran'';Initial Catalog=' + EtranDatabase + ';Data Source='+usr_pwd^.server+';'
+    ADOEtran.ConnectionString := ADOEtran.ConnectionString+';User ID=etran_rtr;Password=''etran'';Initial Catalog=' + EtranDatabase + ';Data Source='+usr_pwd^.server+';'
   else
-    ADOEtran.ConnectionString := ADOEtran.ConnectionString+';User ID=etran_gru;Password=''etran'';Initial Catalog=' + EtranDatabase + ';Data Source='+GetDBServer(connect)+';';
+    ADOEtran.ConnectionString := ADOEtran.ConnectionString+';User ID=etran_rtr;Password=''etran'';Initial Catalog=' + EtranDatabase + ';Data Source='+GetDBServer(connect)+';';
   ADOEtran.Connected := True;
 
   Freference_id := -9;

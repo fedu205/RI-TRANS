@@ -11,7 +11,9 @@ uses
   cxGridDBBandedTableView, cxGridCustomView, cxGrid, Default, Raznoe, Period, Other,
   cxNavigator, System.ImageList, dxSkinsCore, dxSkinBlack, dxSkinBlue, dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide, dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy, dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian, dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis, dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black, dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue, dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light,
   dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxSkinscxPCPainter, dxSkinsdxBarPainter,
-  cxImageList, cxDataControllerConditionalFormattingRulesManagerDialog, dxSkinOffice2019Colorful, dxSkinTheBezier, dxDateRanges;
+  cxImageList, cxDataControllerConditionalFormattingRulesManagerDialog, dxSkinOffice2019Colorful, dxSkinTheBezier, dxDateRanges,
+  dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray,
+  dxSkinOffice2019White, dxSkinWXI, dxScrollbarAnnotations;
 
 type
   TfmECPClaim = class(TForm)
@@ -131,7 +133,7 @@ begin
 
   Fusr_pwd := usr_pwd;
   Fusers_group_cod := users_group_cod;
-  if Fusers_group_cod =  '0' then begin login := 'Etran_GRU'; db_name := 'lis_etran'; end;
+  if Fusers_group_cod =  '0' then begin login := 'Etran_rtr'; db_name := 'lis_etran'; end;
 //  if Fusers_group_cod =  '1' then begin login := 'Etran_KHT'; db_name := 'lis_etran'; end;
 //  if Fusers_group_cod =  '3' then begin login := 'Etran_PRV'; db_name := 'lis_etran'; end;
 //  if Fusers_group_cod =  '5' then begin login := 'Etran_STS'; db_name := 'lis_etran'; end;

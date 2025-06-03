@@ -28,7 +28,9 @@ uses
   dxSkinOffice2016Dark, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
   dxSkinVisualStudio2013Light,
   cxDataControllerConditionalFormattingRulesManagerDialog, System.ImageList,
-  cxImageList, dxSkinTheBezier, dxDateRanges, dxBarBuiltInMenu, cxPC, dxSkinOffice2019Colorful;
+  cxImageList, dxSkinTheBezier, dxDateRanges, dxBarBuiltInMenu, cxPC, dxSkinOffice2019Colorful,
+  dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray,
+  dxSkinOffice2019White, dxSkinWXI, dxScrollbarAnnotations;
 
 type
   TfmEtrCumulative = class(TForm)
@@ -148,10 +150,6 @@ type
     cxGridDBBandedTableView1inf_obj_name: TcxGridDBBandedColumn;
     dxBarButton1: TdxBarButton;
     dxBarButton2: TdxBarButton;
-    cxPageControl2: TcxPageControl;
-    cxTabSheet4: TcxTabSheet;
-    cxTabSheet5: TcxTabSheet;
-    cxTabSheet6: TcxTabSheet;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure dxBarButton8Click(Sender: TObject);
     procedure dxBarButton9Click(Sender: TObject);
@@ -178,7 +176,6 @@ type
     procedure dxBarButton15Click(Sender: TObject);
     procedure cxGridDBBandedTableView1KeyPress(Sender: TObject; var Key: Char);
     procedure dxBarButton2Click(Sender: TObject);
-    procedure cxPageControl2Change(Sender: TObject);
   private
     Fusr_pwd         : PUser_pwd;
     Fusers_group_cod : string;
@@ -403,22 +400,6 @@ end;
 procedure TfmEtrCumulative.cxGridDBBandedTableView1KeyPress(Sender: TObject; var Key: Char);
 begin
   FilterColumnGridOnKeyPress(cxGridDBBandedTableView1, Key);
-end;
-
-procedure TfmEtrCumulative.cxPageControl2Change(Sender: TObject);
-begin
-  Screen.Cursor := crHourGlass;
-
-  Query_Cumulative.SQL.Strings[Query_Cumulative.SQL.Count-1] := '';
-  case cxPageControl2.ActivePageIndex of
-    0: Query_Cumulative.SQL.Add('AND etran_users.els_cod = ''1004653067''');
-    1: Query_Cumulative.SQL.Add('AND etran_users.els_cod = ''1006059161''');
-    2: Query_Cumulative.SQL.Add('AND etran_users.els_cod = ''1006062218''');
-  end;
-
-  Query_Cumulative.Open;
-
-  Screen.Cursor := crDefault;
 end;
 
 procedure TfmEtrCumulative.dxBarButton11Click(Sender: TObject);

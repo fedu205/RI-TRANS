@@ -100,6 +100,7 @@ object fmEtrMonitor: TfmEtrMonitor
         object cxGridDBBandedTableView1connect_id: TcxGridDBBandedColumn
           Caption = #8470' '#1079#1072#1087#1080#1089#1080
           DataBinding.FieldName = 'connect_id'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 76
           Position.BandIndex = 0
@@ -109,6 +110,7 @@ object fmEtrMonitor: TfmEtrMonitor
         object cxGridDBBandedTableView1connect_name: TcxGridDBBandedColumn
           Caption = #1057#1086#1077#1076#1080#1085#1077#1085#1080#1077
           DataBinding.FieldName = 'connect_name'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 90
           Position.BandIndex = 0
@@ -118,6 +120,7 @@ object fmEtrMonitor: TfmEtrMonitor
         object cxGridDBBandedTableView1etran_login: TcxGridDBBandedColumn
           Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100' '#1069#1058#1056#1040#1053
           DataBinding.FieldName = 'etran_login'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 132
           Position.BandIndex = 0
@@ -127,6 +130,7 @@ object fmEtrMonitor: TfmEtrMonitor
         object cxGridDBBandedTableView1read_interval: TcxGridDBBandedColumn
           Caption = #1048#1085#1090#1077#1088#1074#1072#1083' ('#1084#1080#1085')'
           DataBinding.FieldName = 'read_interval'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 88
           Position.BandIndex = 0
@@ -136,6 +140,7 @@ object fmEtrMonitor: TfmEtrMonitor
         object cxGridDBBandedTableView1set_load: TcxGridDBBandedColumn
           Caption = #1047#1072#1075#1088#1091#1079#1082#1072
           DataBinding.FieldName = 'set_load'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -145,6 +150,7 @@ object fmEtrMonitor: TfmEtrMonitor
         object cxGridDBBandedTableView1users_name: TcxGridDBBandedColumn
           Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100' '#1041#1044
           DataBinding.FieldName = 'users_name'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -154,6 +160,7 @@ object fmEtrMonitor: TfmEtrMonitor
         object cxGridDBBandedTableView1doc_type_name: TcxGridDBBandedColumn
           Caption = #1044#1086#1082#1091#1084#1077#1085#1090
           DataBinding.FieldName = 'doc_type_name'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -163,6 +170,7 @@ object fmEtrMonitor: TfmEtrMonitor
         object cxGridDBBandedTableView1users_group_name: TcxGridDBBandedColumn
           Caption = #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1103
           DataBinding.FieldName = 'users_group_name'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -172,6 +180,7 @@ object fmEtrMonitor: TfmEtrMonitor
         object cxGridDBBandedTableView1period_end: TcxGridDBBandedColumn
           Caption = #1055#1086#1089#1083'. '#1076#1072#1090#1072' '#1079#1072#1075#1088#1091#1079#1082#1080
           DataBinding.FieldName = 'period_end'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -181,6 +190,7 @@ object fmEtrMonitor: TfmEtrMonitor
         object cxGridDBBandedTableView1cnt: TcxGridDBBandedColumn
           Caption = #1050#1086#1083'-'#1074#1086' '#1087#1077#1088#1080#1086#1076#1086#1074
           DataBinding.FieldName = 'cnt'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -190,6 +200,7 @@ object fmEtrMonitor: TfmEtrMonitor
         object cxGridDBBandedTableView1cnt_not_load: TcxGridDBBandedColumn
           Caption = #1055#1077#1088#1080#1086#1076#1086#1074' '#1085#1077' '#1079#1072#1075#1088#1091#1078#1077#1085#1085#1086' '
           DataBinding.FieldName = 'cnt_not_load'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Styles.Content = cxStyle2
           Width = 100
@@ -200,6 +211,7 @@ object fmEtrMonitor: TfmEtrMonitor
         object cxGridDBBandedTableView1cnt_docs: TcxGridDBBandedColumn
           Caption = #1050#1086#1083'-'#1074#1086' '#1076#1086#1082#1091#1084#1077#1085#1090#1086#1074
           DataBinding.FieldName = 'cnt_docs'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
@@ -209,6 +221,7 @@ object fmEtrMonitor: TfmEtrMonitor
         object cxGridDBBandedTableView1cnt_docs_not_load: TcxGridDBBandedColumn
           Caption = #1044#1086#1082#1091#1084#1077#1085#1090#1086#1074' '#1085#1077' '#1079#1072#1075#1088#1091#1078#1077#1085#1085#1086
           DataBinding.FieldName = 'cnt_docs_not_load'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Styles.Content = cxStyle2
           Width = 100
@@ -318,6 +331,7 @@ object fmEtrMonitor: TfmEtrMonitor
           object cxGridDBBandedTableView2query_id: TcxGridDBBandedColumn
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'query_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 67
             Position.BandIndex = 0
@@ -327,6 +341,7 @@ object fmEtrMonitor: TfmEtrMonitor
           object cxGridDBBandedTableView2period_begin: TcxGridDBBandedColumn
             Caption = #1053#1072#1095#1072#1083#1086
             DataBinding.FieldName = 'period_begin'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 120
             Position.BandIndex = 0
@@ -336,6 +351,7 @@ object fmEtrMonitor: TfmEtrMonitor
           object cxGridDBBandedTableView2period_end: TcxGridDBBandedColumn
             Caption = #1054#1082#1086#1085#1095#1072#1085#1080#1077
             DataBinding.FieldName = 'period_end'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 120
             Position.BandIndex = 0
@@ -345,6 +361,7 @@ object fmEtrMonitor: TfmEtrMonitor
           object cxGridDBBandedTableView2set_load: TcxGridDBBandedColumn
             Caption = #1047#1072#1075#1088#1091#1079#1082#1072
             DataBinding.FieldName = 'set_load'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 59
             Position.BandIndex = 0
@@ -354,6 +371,7 @@ object fmEtrMonitor: TfmEtrMonitor
           object cxGridDBBandedTableView2query_date_load: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1079#1072#1075#1088#1091#1079#1082#1080
             DataBinding.FieldName = 'query_date_load'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 120
             Position.BandIndex = 0
@@ -363,6 +381,7 @@ object fmEtrMonitor: TfmEtrMonitor
           object cxGridDBBandedTableView2cnt_error: TcxGridDBBandedColumn
             Caption = #1050#1086#1083'-'#1074#1086' '#1086#1096#1080#1073#1086#1082
             DataBinding.FieldName = 'cnt_error'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 100
             Position.BandIndex = 0
@@ -372,6 +391,7 @@ object fmEtrMonitor: TfmEtrMonitor
           object cxGridDBBandedTableView2cnt_not_load: TcxGridDBBandedColumn
             Caption = #1044#1086#1082#1091#1084#1077#1085#1090#1086#1074' '#1085#1077' '#1079#1072#1075#1088#1091#1078#1077#1085#1085#1086
             DataBinding.FieldName = 'cnt_not_load'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Styles.Content = cxStyle2
             Width = 100
@@ -382,6 +402,7 @@ object fmEtrMonitor: TfmEtrMonitor
           object cxGridDBBandedTableView2cnt: TcxGridDBBandedColumn
             Caption = #1050#1086#1083'-'#1074#1086' '#1076#1086#1082#1091#1084#1077#1085#1090#1086#1074
             DataBinding.FieldName = 'cnt'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 100
             Position.BandIndex = 0
@@ -473,6 +494,7 @@ object fmEtrMonitor: TfmEtrMonitor
           object cxGridDBBandedTableView3query_docs_id: TcxGridDBBandedColumn
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'query_docs_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 72
             Position.BandIndex = 0
@@ -481,6 +503,7 @@ object fmEtrMonitor: TfmEtrMonitor
           end
           object cxGridDBBandedTableView3query_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'query_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 100
             Position.BandIndex = -1
@@ -489,6 +512,7 @@ object fmEtrMonitor: TfmEtrMonitor
           end
           object cxGridDBBandedTableView3doc_type_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'doc_type_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 100
             Position.BandIndex = -1
@@ -498,6 +522,7 @@ object fmEtrMonitor: TfmEtrMonitor
           object cxGridDBBandedTableView3doc_id: TcxGridDBBandedColumn
             Caption = 'ID '#1076#1086#1082#1091#1084#1077#1085#1090#1072
             DataBinding.FieldName = 'doc_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 82
             Position.BandIndex = 0
@@ -507,6 +532,7 @@ object fmEtrMonitor: TfmEtrMonitor
           object cxGridDBBandedTableView3doc_date_load: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1079#1072#1075#1088#1091#1079#1082#1080
             DataBinding.FieldName = 'doc_date_load'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 120
             Position.BandIndex = 0
@@ -515,6 +541,7 @@ object fmEtrMonitor: TfmEtrMonitor
           end
           object cxGridDBBandedTableView3xml_reply_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'xml_reply_id'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 100
             Position.BandIndex = -1
@@ -524,6 +551,7 @@ object fmEtrMonitor: TfmEtrMonitor
           object cxGridDBBandedTableView3set_load: TcxGridDBBandedColumn
             Caption = #1047#1072#1075#1088#1091#1079#1082#1072
             DataBinding.FieldName = 'set_load'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
@@ -533,6 +561,7 @@ object fmEtrMonitor: TfmEtrMonitor
           object cxGridDBBandedTableView3doc_type_name: TcxGridDBBandedColumn
             Caption = #1058#1080#1087' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
             DataBinding.FieldName = 'doc_type_name'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 113
             Position.BandIndex = 0
@@ -542,6 +571,7 @@ object fmEtrMonitor: TfmEtrMonitor
           object cxGridDBBandedTableView3cnt_error: TcxGridDBBandedColumn
             Caption = #1050#1086#1083'-'#1074#1086' '#1086#1096#1080#1073#1086#1082
             DataBinding.FieldName = 'cnt_error'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 100
             Position.BandIndex = 0
@@ -551,6 +581,7 @@ object fmEtrMonitor: TfmEtrMonitor
           object cxGridDBBandedTableView3error_name: TcxGridDBBandedColumn
             Caption = #1054#1096#1080#1073#1082#1072
             DataBinding.FieldName = 'error_name'
+            DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 100
             Position.BandIndex = 0

@@ -350,14 +350,14 @@ object Form1: TForm1
         Left = 64
         Top = 13
         TabOrder = 0
-        Text = #1052#1057#1050'_'#1051#1025#1059#1064#1050#1048#1053#1057
+        Text = #1051#1059#1053#1050#1053#1048#1050#1054'0756'
         Width = 401
       end
       object cxTextEdit2: TcxTextEdit
         Left = 64
         Top = 37
         TabOrder = 1
-        Text = 'Auraoil@2019%'
+        Text = 'Ritrans0756&&'
         Width = 401
       end
       object cxTextEdit3: TcxTextEdit

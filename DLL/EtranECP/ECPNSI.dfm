@@ -151,6 +151,8 @@ object fmECPNSI: TfmECPNSI
         StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.Kind = lfUltraFlat
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
         TabOrder = 0
         Height = 154
         Width = 447

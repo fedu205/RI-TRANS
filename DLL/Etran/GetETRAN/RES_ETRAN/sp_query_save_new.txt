@@ -45,7 +45,7 @@ BEGIN TRY
 	SELECT @doc_type_link_id	= doc_type_id FROM etran_doc_type WHERE doc_type_cod = '-2'
 
 
-	-- SELECT * FROM [dbo].[ETRAN_DOC_TYPE] WHERE doc_type_cod in ('1', '2', '27', '29', '900', '44', '40', '41', '100', '110', '120', '130', '140', '200')
+	-- SELECT * FROM [dbo].[ETRAN_DOC_TYPE] WHERE doc_type_cod in ('1', '2', '27', '29', '900', '44', '40', '41', '100', '110', '120', '130', '140')
 	--1		Заявка
 	--2		Накладная
 	--27	Накопительная ведомость
@@ -60,7 +60,7 @@ BEGIN TRY
 	--130	ККР (движение)
 	--140	ККР (сальдо)
 	--900	ККР (дебет)
-	IF @doc_type_cod not in ('1', '2', '27', '29', '900', '44', '40', '41', '100', '110', '120', '130', '140', '50', '88', '71', '200') BEGIN
+	IF @doc_type_cod not in ('1', '2', '27', '29', '900', '44', '40', '41', '100', '110', '120', '130', '140', '50', '88', '71') BEGIN
 		SET @s = 'Документ [' + @doc_type_cod + '] не поддерживается.'
 		RAISERROR(@s, 16, 1)
 	END
@@ -140,16 +140,6 @@ BEGIN TRY
 
 		SELECT	@oper_id   = ref.value('(OperId/@value)[1]','bigint')
 		FROM	@xml.nodes('/actStatusReply') as node(ref)
-
-		SELECT	@oper_date = period_end
-		FROM	etran_query_new
-		WHERE	query_id = @query_id
-	END
-
-        IF @doc_type_cod = '200'
-	BEGIN
-		DELETE #doc_list_id
-		EXEC sp_SAVE_Doc @xml_info = @query_xml
 
 		SELECT	@oper_date = period_end
 		FROM	etran_query_new

@@ -2,65 +2,48 @@ object fmEtranMain: TfmEtranMain
   Left = 0
   Top = 0
   Caption = #1047#1072#1075#1088#1091#1079#1082#1072' '#1101#1090#1088#1072#1085#1086#1074#1089#1082#1086#1081' '#1080#1085#1092#1086#1088#1084#1072#1094#1080#1080'... (EMPTY)'
-  ClientHeight = 846
-  ClientWidth = 1171
+  ClientHeight = 623
+  ClientWidth = 925
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -14
+  Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
   Position = poScreenCenter
+  OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
-  PixelsPerInch = 120
-  TextHeight = 17
+  TextHeight = 13
   object cxPageControl1: TcxPageControl
     Left = 0
-    Top = 158
-    Width = 1171
-    Height = 663
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
+    Top = 126
+    Width = 925
+    Height = 477
     Align = alClient
     TabOrder = 0
-    Properties.ActivePage = cxTabSheet3
+    Properties.ActivePage = cxTabSheet7
     Properties.CustomButtons.Buttons = <>
     Properties.Style = 6
     OnChange = cxPageControl1Change
-    ClientRectBottom = 663
-    ClientRectRight = 1171
-    ClientRectTop = 29
+    ClientRectBottom = 477
+    ClientRectRight = 925
+    ClientRectTop = 24
     object cxTabSheet7: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = #1052#1086#1085#1080#1090#1086#1088#1080#1085#1075
       ImageIndex = 5
-      ExplicitTop = 30
       object Panel6: TPanel
         Left = 0
         Top = 0
-        Width = 1171
-        Height = 634
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 925
+        Height = 453
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 0
         object cxGrid5: TcxGrid
           Left = 0
           Top = 0
-          Width = 1171
-          Height = 634
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Width = 925
+          Height = 453
           Align = alClient
           TabOrder = 0
           LookAndFeel.Kind = lfUltraFlat
@@ -77,9 +60,6 @@ object fmEtranMain: TfmEtranMain
                 Column = cxGridDBBandedTableView1monitor_id
               end>
             DataController.Summary.SummaryGroups = <>
-            FilterRow.SeparatorWidth = 8
-            FixedDataRows.SeparatorWidth = 8
-            NewItemRow.SeparatorWidth = 8
             OptionsData.CancelOnExit = False
             OptionsData.Deleting = False
             OptionsData.DeletingConfirmation = False
@@ -87,32 +67,23 @@ object fmEtranMain: TfmEtranMain
             OptionsData.Inserting = False
             OptionsSelection.MultiSelect = True
             OptionsSelection.InvertSelect = False
-            OptionsView.NavigatorOffset = 63
-            OptionsView.FixedColumnSeparatorWidth = 3
             OptionsView.Footer = True
             OptionsView.GroupByBox = False
-            OptionsView.IndicatorWidth = 15
             OptionsView.BandHeaders = False
-            OptionsView.FixedBandSeparatorWidth = 3
-            Preview.LeftIndent = 25
-            Preview.RightIndent = 6
-            RowLayout.MinValueWidth = 100
             Bands = <
               item
               end>
             object cxGridDBBandedTableView1monitor_id: TcxGridDBBandedColumn
               Caption = #8470' '#1079#1072#1087#1080#1089#1080
               DataBinding.FieldName = 'monitor_id'
-              MinWidth = 25
-              Width = 86
+              Width = 69
               Position.BandIndex = 0
               Position.ColIndex = 0
               Position.RowIndex = 0
             end
             object cxGridDBBandedTableView1color: TcxGridDBBandedColumn
               DataBinding.FieldName = 'color'
-              MinWidth = 25
-              Width = 125
+              Width = 100
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
@@ -120,8 +91,7 @@ object fmEtranMain: TfmEtranMain
             object cxGridDBBandedTableView1monitor_date_end: TcxGridDBBandedColumn
               Caption = #1054#1082#1086#1085#1095#1072#1085#1080#1077
               DataBinding.FieldName = 'monitor_date_end'
-              MinWidth = 25
-              Width = 145
+              Width = 116
               Position.BandIndex = 0
               Position.ColIndex = 2
               Position.RowIndex = 0
@@ -129,8 +99,7 @@ object fmEtranMain: TfmEtranMain
             object cxGridDBBandedTableView1monitor_date_begin: TcxGridDBBandedColumn
               Caption = #1053#1072#1095#1072#1083#1086
               DataBinding.FieldName = 'monitor_date_begin'
-              MinWidth = 25
-              Width = 145
+              Width = 116
               Position.BandIndex = 0
               Position.ColIndex = 1
               Position.RowIndex = 0
@@ -138,8 +107,7 @@ object fmEtranMain: TfmEtranMain
             object cxGridDBBandedTableView1monitor_text: TcxGridDBBandedColumn
               Caption = #1054#1087#1080#1089#1072#1085#1080#1077
               DataBinding.FieldName = 'monitor_text'
-              MinWidth = 25
-              Width = 413
+              Width = 330
               Position.BandIndex = 0
               Position.ColIndex = 4
               Position.RowIndex = 0
@@ -147,8 +115,7 @@ object fmEtranMain: TfmEtranMain
             object cxGridDBBandedTableView1monitor_status: TcxGridDBBandedColumn
               Caption = #1057#1090#1072#1090#1091#1089
               DataBinding.FieldName = 'monitor_status'
-              MinWidth = 25
-              Width = 125
+              Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 5
               Position.RowIndex = 0
@@ -156,15 +123,13 @@ object fmEtranMain: TfmEtranMain
             object cxGridDBBandedTableView1monitor_type: TcxGridDBBandedColumn
               Caption = #1044#1077#1081#1089#1090#1074#1080#1077
               DataBinding.FieldName = 'monitor_type'
-              MinWidth = 25
-              Width = 125
+              Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 3
               Position.RowIndex = 0
             end
             object cxGridDBBandedTableView4monitor_font_bold: TcxGridDBBandedColumn
               DataBinding.FieldName = 'monitor_font_bold'
-              MinWidth = 25
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
@@ -177,22 +142,16 @@ object fmEtranMain: TfmEtranMain
       end
     end
     object cxTabSheet8: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = #1054#1096#1080#1073#1082#1080
       ImageIndex = 6
-      ExplicitTop = 30
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid6: TcxGrid
         Left = 0
         Top = 0
-        Width = 1171
-        Height = 634
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 925
+        Height = 453
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfUltraFlat
@@ -207,9 +166,6 @@ object fmEtranMain: TfmEtranMain
               Kind = skCount
             end>
           DataController.Summary.SummaryGroups = <>
-          FilterRow.SeparatorWidth = 8
-          FixedDataRows.SeparatorWidth = 8
-          NewItemRow.SeparatorWidth = 8
           OptionsData.CancelOnExit = False
           OptionsData.Deleting = False
           OptionsData.DeletingConfirmation = False
@@ -217,24 +173,16 @@ object fmEtranMain: TfmEtranMain
           OptionsData.Inserting = False
           OptionsSelection.MultiSelect = True
           OptionsSelection.InvertSelect = False
-          OptionsView.NavigatorOffset = 63
-          OptionsView.FixedColumnSeparatorWidth = 3
           OptionsView.Footer = True
           OptionsView.GroupByBox = False
-          OptionsView.IndicatorWidth = 15
           OptionsView.BandHeaders = False
-          OptionsView.FixedBandSeparatorWidth = 3
-          Preview.LeftIndent = 25
-          Preview.RightIndent = 6
-          RowLayout.MinValueWidth = 100
           Bands = <
             item
             end>
           object cxGridDBBandedTableView2error_id: TcxGridDBBandedColumn
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'error_id'
-            MinWidth = 25
-            Width = 100
+            Width = 80
             Position.BandIndex = 0
             Position.ColIndex = 0
             Position.RowIndex = 0
@@ -242,8 +190,7 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView2error_date: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072
             DataBinding.FieldName = 'error_date'
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 1
             Position.RowIndex = 0
@@ -251,8 +198,7 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView2error_cod: TcxGridDBBandedColumn
             Caption = #1050#1086#1076
             DataBinding.FieldName = 'error_cod'
-            MinWidth = 25
-            Width = 63
+            Width = 50
             Position.BandIndex = 0
             Position.ColIndex = 2
             Position.RowIndex = 0
@@ -260,8 +206,7 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView2error_message: TcxGridDBBandedColumn
             Caption = #1054#1087#1080#1089#1072#1085#1080#1077
             DataBinding.FieldName = 'error_message'
-            MinWidth = 25
-            Width = 583
+            Width = 466
             Position.BandIndex = 0
             Position.ColIndex = 4
             Position.RowIndex = 0
@@ -269,8 +214,7 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView2error_name: TcxGridDBBandedColumn
             Caption = #1054#1096#1080#1073#1082#1072
             DataBinding.FieldName = 'error_name'
-            MinWidth = 25
-            Width = 250
+            Width = 200
             Position.BandIndex = 0
             Position.ColIndex = 3
             Position.RowIndex = 0
@@ -282,22 +226,16 @@ object fmEtranMain: TfmEtranMain
       end
     end
     object cxTabSheet1: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1072' '#1079#1072#1075#1088#1091#1079#1082#1080
       ImageIndex = 2
-      ExplicitTop = 30
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid1: TcxGrid
         Left = 0
         Top = 0
-        Width = 1171
-        Height = 634
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 925
+        Height = 453
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfUltraFlat
@@ -313,9 +251,6 @@ object fmEtranMain: TfmEtranMain
               Column = cxGridDBBandedTableView1connect_id
             end>
           DataController.Summary.SummaryGroups = <>
-          FilterRow.SeparatorWidth = 8
-          FixedDataRows.SeparatorWidth = 8
-          NewItemRow.SeparatorWidth = 8
           OptionsData.CancelOnExit = False
           OptionsData.Deleting = False
           OptionsData.DeletingConfirmation = False
@@ -323,24 +258,17 @@ object fmEtranMain: TfmEtranMain
           OptionsData.Inserting = False
           OptionsSelection.MultiSelect = True
           OptionsSelection.InvertSelect = False
-          OptionsView.NavigatorOffset = 63
-          OptionsView.FixedColumnSeparatorWidth = 3
           OptionsView.Footer = True
           OptionsView.GroupByBox = False
-          OptionsView.IndicatorWidth = 15
           OptionsView.BandHeaders = False
-          OptionsView.FixedBandSeparatorWidth = 3
-          Preview.LeftIndent = 25
-          Preview.RightIndent = 6
-          RowLayout.MinValueWidth = 100
           Bands = <
             item
             end>
           object cxGridDBBandedTableView1connect_id: TcxGridDBBandedColumn
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'connect_id'
-            MinWidth = 25
-            Width = 95
+            DataBinding.IsNullValueType = True
+            Width = 76
             Position.BandIndex = 0
             Position.ColIndex = 0
             Position.RowIndex = 0
@@ -348,8 +276,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView1connect_name: TcxGridDBBandedColumn
             Caption = #1057#1086#1077#1076#1080#1085#1077#1085#1080#1077
             DataBinding.FieldName = 'connect_name'
-            MinWidth = 25
-            Width = 113
+            DataBinding.IsNullValueType = True
+            Width = 90
             Position.BandIndex = 0
             Position.ColIndex = 8
             Position.RowIndex = 0
@@ -357,8 +285,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView1etran_login: TcxGridDBBandedColumn
             Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100' '#1069#1058#1056#1040#1053
             DataBinding.FieldName = 'etran_login'
-            MinWidth = 25
-            Width = 124
+            DataBinding.IsNullValueType = True
+            Width = 99
             Position.BandIndex = 0
             Position.ColIndex = 2
             Position.RowIndex = 0
@@ -366,8 +294,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView1read_interval: TcxGridDBBandedColumn
             Caption = #1048#1085#1090#1077#1088#1074#1072#1083' ('#1084#1080#1085')'
             DataBinding.FieldName = 'read_interval'
-            MinWidth = 25
-            Width = 110
+            DataBinding.IsNullValueType = True
+            Width = 88
             Position.BandIndex = 0
             Position.ColIndex = 6
             Position.RowIndex = 0
@@ -375,8 +303,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView1set_load: TcxGridDBBandedColumn
             Caption = #1047#1072#1075#1088#1091#1079#1082#1072
             DataBinding.FieldName = 'set_load'
-            MinWidth = 25
-            Width = 125
+            DataBinding.IsNullValueType = True
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 4
             Position.RowIndex = 0
@@ -384,8 +312,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView1users_name: TcxGridDBBandedColumn
             Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100' '#1041#1044
             DataBinding.FieldName = 'users_name'
-            MinWidth = 25
-            Width = 125
+            DataBinding.IsNullValueType = True
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 5
             Position.RowIndex = 0
@@ -393,8 +321,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView1doc_type_name: TcxGridDBBandedColumn
             Caption = #1044#1086#1082#1091#1084#1077#1085#1090
             DataBinding.FieldName = 'doc_type_name'
-            MinWidth = 25
-            Width = 125
+            DataBinding.IsNullValueType = True
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 3
             Position.RowIndex = 0
@@ -402,8 +330,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView1users_group_name: TcxGridDBBandedColumn
             Caption = #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1103
             DataBinding.FieldName = 'users_group_name'
-            MinWidth = 25
-            Width = 125
+            DataBinding.IsNullValueType = True
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 1
             Position.RowIndex = 0
@@ -411,8 +339,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView1period_end: TcxGridDBBandedColumn
             Caption = #1055#1086#1089#1083'. '#1076#1072#1090#1072' '#1079#1072#1075#1088#1091#1079#1082#1080
             DataBinding.FieldName = 'period_end'
-            MinWidth = 25
-            Width = 125
+            DataBinding.IsNullValueType = True
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 7
             Position.RowIndex = 0
@@ -424,48 +352,36 @@ object fmEtranMain: TfmEtranMain
       end
     end
     object cxTabSheet2: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = #1053#1077' '#1079#1072#1075#1088#1091#1078#1077#1085#1085#1099#1077' '#1087#1077#1088#1080#1086#1076#1099
       ImageIndex = 3
-      ExplicitTop = 30
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Splitter1: TSplitter
         Left = 0
-        Top = 363
-        Width = 1171
-        Height = 6
+        Top = 236
+        Width = 925
+        Height = 5
         Cursor = crVSplit
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
         Align = alBottom
         Color = 8421631
         ParentColor = False
+        ExplicitTop = 290
+        ExplicitWidth = 937
       end
       object Panel1: TPanel
         Left = 0
-        Top = 369
-        Width = 1171
-        Height = 265
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Top = 241
+        Width = 925
+        Height = 212
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 0
         object cxGrid3: TcxGrid
           Left = 0
           Top = 0
-          Width = 1171
-          Height = 265
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Width = 925
+          Height = 212
           Align = alClient
           TabOrder = 0
           LookAndFeel.Kind = lfUltraFlat
@@ -481,9 +397,6 @@ object fmEtranMain: TfmEtranMain
                 Column = cxGridDBBandedTableView3query_error_id
               end>
             DataController.Summary.SummaryGroups = <>
-            FilterRow.SeparatorWidth = 8
-            FixedDataRows.SeparatorWidth = 8
-            NewItemRow.SeparatorWidth = 8
             OptionsData.CancelOnExit = False
             OptionsData.Deleting = False
             OptionsData.DeletingConfirmation = False
@@ -491,32 +404,25 @@ object fmEtranMain: TfmEtranMain
             OptionsData.Inserting = False
             OptionsSelection.MultiSelect = True
             OptionsSelection.InvertSelect = False
-            OptionsView.NavigatorOffset = 63
-            OptionsView.FixedColumnSeparatorWidth = 3
             OptionsView.Footer = True
             OptionsView.GroupByBox = False
-            OptionsView.IndicatorWidth = 15
             OptionsView.BandHeaders = False
-            OptionsView.FixedBandSeparatorWidth = 3
-            Preview.LeftIndent = 25
-            Preview.RightIndent = 6
-            RowLayout.MinValueWidth = 100
             Bands = <
               item
               end>
             object cxGridDBBandedTableView3query_error_id: TcxGridDBBandedColumn
               Caption = #8470' '#1079#1072#1087#1080#1089#1080
               DataBinding.FieldName = 'query_error_id'
-              MinWidth = 25
-              Width = 125
+              DataBinding.IsNullValueType = True
+              Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 0
               Position.RowIndex = 0
             end
             object cxGridDBBandedTableView3query_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'query_id'
-              MinWidth = 25
-              Width = 125
+              DataBinding.IsNullValueType = True
+              Width = 100
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
@@ -524,8 +430,8 @@ object fmEtranMain: TfmEtranMain
             object cxGridDBBandedTableView3set_server: TcxGridDBBandedColumn
               Caption = #1057#1077#1088#1074#1077#1088#1085#1086#1077' '#1089#1086#1086#1073#1097#1077#1085#1080#1077
               DataBinding.FieldName = 'set_server'
-              MinWidth = 25
-              Width = 125
+              DataBinding.IsNullValueType = True
+              Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 1
               Position.RowIndex = 0
@@ -533,8 +439,8 @@ object fmEtranMain: TfmEtranMain
             object cxGridDBBandedTableView3error_date: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072
               DataBinding.FieldName = 'error_date'
-              MinWidth = 25
-              Width = 125
+              DataBinding.IsNullValueType = True
+              Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 2
               Position.RowIndex = 0
@@ -542,8 +448,8 @@ object fmEtranMain: TfmEtranMain
             object cxGridDBBandedTableView3error_cod: TcxGridDBBandedColumn
               Caption = #1050#1086#1076
               DataBinding.FieldName = 'error_cod'
-              MinWidth = 25
-              Width = 125
+              DataBinding.IsNullValueType = True
+              Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 3
               Position.RowIndex = 0
@@ -551,8 +457,8 @@ object fmEtranMain: TfmEtranMain
             object cxGridDBBandedTableView3error_name: TcxGridDBBandedColumn
               Caption = #1054#1096#1080#1073#1082#1072
               DataBinding.FieldName = 'error_name'
-              MinWidth = 25
-              Width = 145
+              DataBinding.IsNullValueType = True
+              Width = 116
               Position.BandIndex = 0
               Position.ColIndex = 4
               Position.RowIndex = 0
@@ -560,8 +466,8 @@ object fmEtranMain: TfmEtranMain
             object cxGridDBBandedTableView3error_param: TcxGridDBBandedColumn
               Caption = #1054#1087#1080#1089#1072#1085#1080#1077
               DataBinding.FieldName = 'error_param'
-              MinWidth = 25
-              Width = 291
+              DataBinding.IsNullValueType = True
+              Width = 233
               Position.BandIndex = 0
               Position.ColIndex = 5
               Position.RowIndex = 0
@@ -575,12 +481,8 @@ object fmEtranMain: TfmEtranMain
       object cxGrid2: TcxGrid
         Left = 0
         Top = 0
-        Width = 1171
-        Height = 363
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 925
+        Height = 236
         Align = alClient
         TabOrder = 1
         LookAndFeel.Kind = lfUltraFlat
@@ -597,9 +499,6 @@ object fmEtranMain: TfmEtranMain
               Column = cxGridDBBandedTableView2query_id
             end>
           DataController.Summary.SummaryGroups = <>
-          FilterRow.SeparatorWidth = 8
-          FixedDataRows.SeparatorWidth = 8
-          NewItemRow.SeparatorWidth = 8
           OptionsData.CancelOnExit = False
           OptionsData.Deleting = False
           OptionsData.DeletingConfirmation = False
@@ -607,24 +506,17 @@ object fmEtranMain: TfmEtranMain
           OptionsData.Inserting = False
           OptionsSelection.MultiSelect = True
           OptionsSelection.InvertSelect = False
-          OptionsView.NavigatorOffset = 63
-          OptionsView.FixedColumnSeparatorWidth = 3
           OptionsView.Footer = True
           OptionsView.GroupByBox = False
-          OptionsView.IndicatorWidth = 15
           OptionsView.BandHeaders = False
-          OptionsView.FixedBandSeparatorWidth = 3
-          Preview.LeftIndent = 25
-          Preview.RightIndent = 6
-          RowLayout.MinValueWidth = 100
           Bands = <
             item
             end>
           object cxGridDBBandedTableView2query_id: TcxGridDBBandedColumn
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'query_id'
-            MinWidth = 25
-            Width = 89
+            DataBinding.IsNullValueType = True
+            Width = 71
             Position.BandIndex = 0
             Position.ColIndex = 0
             Position.RowIndex = 0
@@ -632,8 +524,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView2connect_id: TcxGridDBBandedColumn
             Caption = #8470' '#1079#1072#1087#1080#1089#1080' '#1089#1086#1077#1076#1080#1085#1077#1085#1080#1103
             DataBinding.FieldName = 'connect_id'
-            MinWidth = 25
-            Width = 83
+            DataBinding.IsNullValueType = True
+            Width = 66
             Position.BandIndex = 0
             Position.ColIndex = 1
             Position.RowIndex = 0
@@ -641,8 +533,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView2period_begin: TcxGridDBBandedColumn
             Caption = #1053#1072#1095#1072#1083#1086
             DataBinding.FieldName = 'period_begin'
-            MinWidth = 25
-            Width = 138
+            DataBinding.IsNullValueType = True
+            Width = 110
             Position.BandIndex = 0
             Position.ColIndex = 4
             Position.RowIndex = 0
@@ -650,8 +542,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView2period_end: TcxGridDBBandedColumn
             Caption = #1054#1082#1086#1085#1095#1072#1085#1080#1077
             DataBinding.FieldName = 'period_end'
-            MinWidth = 25
-            Width = 136
+            DataBinding.IsNullValueType = True
+            Width = 109
             Position.BandIndex = 0
             Position.ColIndex = 5
             Position.RowIndex = 0
@@ -659,8 +551,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView2etran_login: TcxGridDBBandedColumn
             Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100' '#1069#1058#1056#1040#1053
             DataBinding.FieldName = 'etran_login'
-            MinWidth = 25
-            Width = 125
+            DataBinding.IsNullValueType = True
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 6
             Position.RowIndex = 0
@@ -668,8 +560,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView2db_users_name: TcxGridDBBandedColumn
             Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100' '#1041#1044
             DataBinding.FieldName = 'db_users_name'
-            MinWidth = 25
-            Width = 125
+            DataBinding.IsNullValueType = True
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 7
             Position.RowIndex = 0
@@ -677,8 +569,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView2date_enter: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1074#1074#1086#1076#1072
             DataBinding.FieldName = 'date_enter'
-            MinWidth = 25
-            Width = 125
+            DataBinding.IsNullValueType = True
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 8
             Position.RowIndex = 0
@@ -686,8 +578,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView2doc_type_name: TcxGridDBBandedColumn
             Caption = #1044#1086#1082#1091#1084#1077#1085#1090
             DataBinding.FieldName = 'doc_type_name'
-            MinWidth = 25
-            Width = 125
+            DataBinding.IsNullValueType = True
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 3
             Position.RowIndex = 0
@@ -695,8 +587,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView2users_group_name: TcxGridDBBandedColumn
             Caption = #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1103
             DataBinding.FieldName = 'users_group_name'
-            MinWidth = 25
-            Width = 125
+            DataBinding.IsNullValueType = True
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 2
             Position.RowIndex = 0
@@ -708,48 +600,36 @@ object fmEtranMain: TfmEtranMain
       end
     end
     object cxTabSheet3: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = #1053#1077' '#1079#1072#1075#1088#1091#1078#1077#1085#1085#1099#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1099
       ImageIndex = 4
-      ExplicitTop = 30
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Splitter2: TSplitter
         Left = 0
-        Top = 363
-        Width = 1171
-        Height = 6
+        Top = 236
+        Width = 925
+        Height = 5
         Cursor = crVSplit
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
         Align = alBottom
         Color = 8421631
         ParentColor = False
+        ExplicitTop = 290
+        ExplicitWidth = 937
       end
       object Panel2: TPanel
         Left = 0
-        Top = 369
-        Width = 1171
-        Height = 265
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Top = 241
+        Width = 925
+        Height = 212
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 0
         object cxGrid7: TcxGrid
           Left = 0
           Top = 0
-          Width = 1171
-          Height = 265
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Width = 925
+          Height = 212
           Align = alClient
           TabOrder = 0
           LookAndFeel.Kind = lfUltraFlat
@@ -765,9 +645,6 @@ object fmEtranMain: TfmEtranMain
                 Column = cxGridDBBandedTableView7query_error_id
               end>
             DataController.Summary.SummaryGroups = <>
-            FilterRow.SeparatorWidth = 8
-            FixedDataRows.SeparatorWidth = 8
-            NewItemRow.SeparatorWidth = 8
             OptionsData.CancelOnExit = False
             OptionsData.Deleting = False
             OptionsData.DeletingConfirmation = False
@@ -775,24 +652,17 @@ object fmEtranMain: TfmEtranMain
             OptionsData.Inserting = False
             OptionsSelection.MultiSelect = True
             OptionsSelection.InvertSelect = False
-            OptionsView.NavigatorOffset = 63
-            OptionsView.FixedColumnSeparatorWidth = 3
             OptionsView.Footer = True
             OptionsView.GroupByBox = False
-            OptionsView.IndicatorWidth = 15
             OptionsView.BandHeaders = False
-            OptionsView.FixedBandSeparatorWidth = 3
-            Preview.LeftIndent = 25
-            Preview.RightIndent = 6
-            RowLayout.MinValueWidth = 100
             Bands = <
               item
               end>
             object cxGridDBBandedTableView7query_error_id: TcxGridDBBandedColumn
               Caption = #8470' '#1079#1072#1087#1080#1089#1080
               DataBinding.FieldName = 'query_error_id'
-              MinWidth = 25
-              Width = 125
+              DataBinding.IsNullValueType = True
+              Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 0
               Position.RowIndex = 0
@@ -800,8 +670,8 @@ object fmEtranMain: TfmEtranMain
             object cxGridDBBandedTableView7query_id: TcxGridDBBandedColumn
               Caption = #8470' '#1079#1072#1087#1080#1089#1080' '
               DataBinding.FieldName = 'query_id'
-              MinWidth = 25
-              Width = 125
+              DataBinding.IsNullValueType = True
+              Width = 100
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
@@ -809,8 +679,8 @@ object fmEtranMain: TfmEtranMain
             object cxGridDBBandedTableView7set_server: TcxGridDBBandedColumn
               Caption = #1057#1077#1088#1074#1077#1088#1085#1086#1077' '#1089#1086#1086#1073#1097#1077#1085#1080#1077
               DataBinding.FieldName = 'set_server'
-              MinWidth = 25
-              Width = 125
+              DataBinding.IsNullValueType = True
+              Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 1
               Position.RowIndex = 0
@@ -818,8 +688,8 @@ object fmEtranMain: TfmEtranMain
             object cxGridDBBandedTableView7error_date: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072
               DataBinding.FieldName = 'error_date'
-              MinWidth = 25
-              Width = 125
+              DataBinding.IsNullValueType = True
+              Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 2
               Position.RowIndex = 0
@@ -827,8 +697,8 @@ object fmEtranMain: TfmEtranMain
             object cxGridDBBandedTableView7error_cod: TcxGridDBBandedColumn
               Caption = #1050#1086#1076
               DataBinding.FieldName = 'error_cod'
-              MinWidth = 25
-              Width = 125
+              DataBinding.IsNullValueType = True
+              Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 3
               Position.RowIndex = 0
@@ -836,8 +706,8 @@ object fmEtranMain: TfmEtranMain
             object cxGridDBBandedTableView7error_name: TcxGridDBBandedColumn
               Caption = #1054#1096#1080#1073#1082#1072
               DataBinding.FieldName = 'error_name'
-              MinWidth = 25
-              Width = 191
+              DataBinding.IsNullValueType = True
+              Width = 153
               Position.BandIndex = 0
               Position.ColIndex = 4
               Position.RowIndex = 0
@@ -845,8 +715,8 @@ object fmEtranMain: TfmEtranMain
             object cxGridDBBandedTableView7error_param: TcxGridDBBandedColumn
               Caption = #1054#1087#1080#1089#1072#1085#1080#1077
               DataBinding.FieldName = 'error_param'
-              MinWidth = 25
-              Width = 388
+              DataBinding.IsNullValueType = True
+              Width = 310
               Position.BandIndex = 0
               Position.ColIndex = 5
               Position.RowIndex = 0
@@ -860,12 +730,8 @@ object fmEtranMain: TfmEtranMain
       object cxGrid4: TcxGrid
         Left = 0
         Top = 0
-        Width = 1171
-        Height = 363
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 925
+        Height = 236
         Align = alClient
         TabOrder = 1
         LookAndFeel.Kind = lfUltraFlat
@@ -882,9 +748,6 @@ object fmEtranMain: TfmEtranMain
               Column = cxGridDBBandedTableView6query_docs_id
             end>
           DataController.Summary.SummaryGroups = <>
-          FilterRow.SeparatorWidth = 8
-          FixedDataRows.SeparatorWidth = 8
-          NewItemRow.SeparatorWidth = 8
           OptionsData.CancelOnExit = False
           OptionsData.Deleting = False
           OptionsData.DeletingConfirmation = False
@@ -892,24 +755,17 @@ object fmEtranMain: TfmEtranMain
           OptionsData.Inserting = False
           OptionsSelection.MultiSelect = True
           OptionsSelection.InvertSelect = False
-          OptionsView.NavigatorOffset = 63
-          OptionsView.FixedColumnSeparatorWidth = 3
           OptionsView.Footer = True
           OptionsView.GroupByBox = False
-          OptionsView.IndicatorWidth = 15
           OptionsView.BandHeaders = False
-          OptionsView.FixedBandSeparatorWidth = 3
-          Preview.LeftIndent = 25
-          Preview.RightIndent = 6
-          RowLayout.MinValueWidth = 100
           Bands = <
             item
             end>
           object cxGridDBBandedTableView6query_docs_id: TcxGridDBBandedColumn
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'query_docs_id'
-            MinWidth = 25
-            Width = 125
+            DataBinding.IsNullValueType = True
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 0
             Position.RowIndex = 0
@@ -917,8 +773,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView6query_id: TcxGridDBBandedColumn
             Caption = #8470' '#1079#1072#1087#1080#1089#1080' '#1087#1077#1088#1080#1086#1076#1072
             DataBinding.FieldName = 'query_id'
-            MinWidth = 25
-            Width = 125
+            DataBinding.IsNullValueType = True
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 1
             Position.RowIndex = 0
@@ -926,8 +782,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView6doc_id: TcxGridDBBandedColumn
             Caption = 'ID '#1076#1086#1082#1091#1084#1077#1085#1090#1072
             DataBinding.FieldName = 'doc_id'
-            MinWidth = 25
-            Width = 125
+            DataBinding.IsNullValueType = True
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 4
             Position.RowIndex = 0
@@ -935,8 +791,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView6etran_login: TcxGridDBBandedColumn
             Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100' '#1069#1058#1056#1040#1053
             DataBinding.FieldName = 'etran_login'
-            MinWidth = 25
-            Width = 146
+            DataBinding.IsNullValueType = True
+            Width = 117
             Position.BandIndex = 0
             Position.ColIndex = 5
             Position.RowIndex = 0
@@ -944,8 +800,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView6db_users_name: TcxGridDBBandedColumn
             Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100' '#1041#1044
             DataBinding.FieldName = 'db_users_name'
-            MinWidth = 25
-            Width = 166
+            DataBinding.IsNullValueType = True
+            Width = 133
             Position.BandIndex = 0
             Position.ColIndex = 6
             Position.RowIndex = 0
@@ -953,8 +809,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView6users_group_name: TcxGridDBBandedColumn
             Caption = #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1103
             DataBinding.FieldName = 'users_group_name'
-            MinWidth = 25
-            Width = 125
+            DataBinding.IsNullValueType = True
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 2
             Position.RowIndex = 0
@@ -962,8 +818,8 @@ object fmEtranMain: TfmEtranMain
           object cxGridDBBandedTableView6doc_type_name: TcxGridDBBandedColumn
             Caption = #1044#1086#1082#1091#1084#1077#1085#1090
             DataBinding.FieldName = 'doc_type_name'
-            MinWidth = 25
-            Width = 205
+            DataBinding.IsNullValueType = True
+            Width = 164
             Position.BandIndex = 0
             Position.ColIndex = 3
             Position.RowIndex = 0
@@ -974,158 +830,403 @@ object fmEtranMain: TfmEtranMain
         end
       end
     end
-    object cxTabSheet4: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = #1056#1072#1089#1089#1090#1086#1103#1085#1080#1077
-      ImageIndex = 5
-      ExplicitTop = 30
-      object Memo1: TMemo
-        Left = 0
-        Top = 0
-        Width = 1171
-        Height = 634
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        Align = alClient
-        TabOrder = 0
-      end
-    end
     object cxTabSheet5: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = #1040#1074#1090#1086#1084#1072#1090#1080#1095#1077#1089#1082#1072#1103' '#1086#1090#1087#1088#1072#1074#1082#1072' '#1085#1072#1082#1083#1072#1076#1085#1099#1093
+      Caption = #1055#1086#1076#1087#1080#1089#1072#1085#1080#1077
       ImageIndex = 6
-      ExplicitTop = 30
-      object Memo2: TMemo
-        Left = 0
-        Top = 71
-        Width = 1171
-        Height = 299
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        Align = alClient
-        Lines.Strings = (
-          '')
-        ScrollBars = ssBoth
-        TabOrder = 0
+      DesignSize = (
+        925
+        453)
+      object Label11: TLabel
+        Left = 8
+        Top = 182
+        Width = 123
+        Height = 13
+        Caption = #1055#1086#1089#1083#1077#1076#1085#1080#1077' 10 '#1079#1072#1087#1088#1086#1089#1086#1074':'
       end
-      object Memo3: TMemo
-        Left = 0
-        Top = 370
-        Width = 1171
-        Height = 264
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        Align = alBottom
-        Lines.Strings = (
-          '')
-        ScrollBars = ssBoth
+      object Label3: TLabel
+        Left = 8
+        Top = 45
+        Width = 162
+        Height = 13
+        Caption = #1040#1082#1090#1080#1074#1085#1099#1077' '#1089#1086#1077#1076#1080#1085#1077#1085#1080#1103' (TCP/IP):'
+      end
+      object Label4: TLabel
+        Left = 231
+        Top = 45
+        Width = 165
+        Height = 13
+        Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1080' '#1089#1086#1077#1076#1080#1085#1077#1085#1080#1103' '#1089' '#1069#1058#1056#1040#1053':'
+      end
+      object dxBevel1: TdxBevel
+        Left = 231
+        Top = 63
+        Width = 688
+        Height = 113
+        Anchors = [akLeft, akTop, akRight]
+        LookAndFeel.NativeStyle = False
+        Shape = dxbsFrame
+        ExplicitWidth = 463
+      end
+      object Label5: TLabel
+        Left = 8
+        Top = 8
+        Width = 149
+        Height = 25
+        Caption = 'DataSnap Server'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -19
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        Font.Quality = fqAntialiased
+        ParentFont = False
+      end
+      object Bevel1: TBevel
+        Left = 8
+        Top = 39
+        Width = 911
+        Height = 9
+        Anchors = [akLeft, akTop, akRight]
+        Shape = bsTopLine
+        ExplicitWidth = 686
+      end
+      object Label6: TLabel
+        Left = 240
+        Top = 74
+        Width = 121
+        Height = 13
+        Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100' '#1040#1057#1059'-'#1040#1057#1059
+      end
+      object Label7: TLabel
+        Left = 240
+        Top = 95
+        Width = 97
+        Height = 13
+        Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100' '#1069#1062#1055
+      end
+      object Label8: TLabel
+        Left = 240
+        Top = 116
+        Width = 111
+        Height = 13
+        Caption = #1040#1076#1088#1077#1089' '#1089#1077#1088#1074#1077#1088#1072' '#1069#1058#1056#1040#1053
+      end
+      object Label10: TLabel
+        Left = 240
+        Top = 137
+        Width = 101
+        Height = 13
+        Caption = #1053#1086#1084#1077#1088' '#1089#1077#1088#1090#1080#1092#1080#1082#1072#1090#1072
+      end
+      object Label12: TLabel
+        Left = 377
+        Top = 137
+        Width = 125
+        Height = 15
+        Caption = #1040#1076#1088#1077#1089' '#1089#1077#1088#1074#1077#1088#1072' '#1069#1058#1056#1040#1053
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label9: TLabel
+        Left = 377
+        Top = 116
+        Width = 125
+        Height = 15
+        Caption = #1040#1076#1088#1077#1089' '#1089#1077#1088#1074#1077#1088#1072' '#1069#1058#1056#1040#1053
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label13: TLabel
+        Left = 377
+        Top = 95
+        Width = 111
+        Height = 15
+        Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100' '#1069#1062#1055
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label14: TLabel
+        Left = 377
+        Top = 74
+        Width = 134
+        Height = 15
+        Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100' '#1040#1057#1059'-'#1040#1057#1059
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object cxGrid8: TcxGrid
+        Left = 8
+        Top = 200
+        Width = 909
+        Height = 238
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        TabOrder = 0
+        object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
+          PopupMenu = dxBarPopupMenu1
+          Navigator.Buttons.CustomButtons = <>
+          ScrollbarAnnotations.CustomAnnotations = <>
+          DataController.DataSource = DS_Query
+          DataController.Filter.Options = [fcoCaseInsensitive]
+          DataController.Filter.Active = True
+          DataController.Summary.DefaultGroupSummaryItems = <>
+          DataController.Summary.FooterSummaryItems = <>
+          DataController.Summary.SummaryGroups = <>
+          DataController.Summary.Options = [soMultipleSelectedRecords]
+          OptionsCustomize.ColumnsQuickCustomization = True
+          OptionsData.CancelOnExit = False
+          OptionsData.Deleting = False
+          OptionsData.DeletingConfirmation = False
+          OptionsData.Editing = False
+          OptionsData.Inserting = False
+          OptionsSelection.MultiSelect = True
+          OptionsView.GroupByBox = False
+          OptionsView.HeaderFilterButtonShowMode = fbmButton
+          OptionsView.BandHeaders = False
+          Bands = <
+            item
+            end>
+          object cxGrid1DBBandedTableView1id: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'id'
+            Width = 100
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid1DBBandedTableView1query_date: TcxGridDBBandedColumn
+            Caption = #1044#1072#1090#1072' '#1079#1072#1087#1088#1086#1089#1072
+            DataBinding.FieldName = 'query_date'
+            Width = 97
+            Position.BandIndex = 0
+            Position.ColIndex = 0
+            Position.RowIndex = 0
+          end
+          object cxGrid1DBBandedTableView1query_ip: TcxGridDBBandedColumn
+            Caption = 'IP '#1072#1076#1088#1077#1089
+            DataBinding.FieldName = 'query_ip'
+            Width = 156
+            Position.BandIndex = 0
+            Position.ColIndex = 1
+            Position.RowIndex = 0
+          end
+          object cxGrid1DBBandedTableView1query_type: TcxGridDBBandedColumn
+            Caption = #1047#1072#1087#1088#1086#1089
+            DataBinding.FieldName = 'query_type'
+            Width = 143
+            Position.BandIndex = 0
+            Position.ColIndex = 2
+            Position.RowIndex = 0
+          end
+          object cxGrid1DBBandedTableView1query_etran_task: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'query_etran_task'
+            Width = 100
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid1DBBandedTableView1query_etran_result: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'query_etran_result'
+            Width = 100
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid1DBBandedTableView1query_result: TcxGridDBBandedColumn
+            Caption = #1056#1077#1079#1091#1083#1100#1090#1072#1090
+            DataBinding.FieldName = 'query_result'
+            Width = 72
+            Position.BandIndex = 0
+            Position.ColIndex = 3
+            Position.RowIndex = 0
+          end
+          object cxGrid1DBBandedTableView1query_error_message: TcxGridDBBandedColumn
+            Caption = #1054#1096#1080#1073#1082#1072
+            DataBinding.FieldName = 'query_error_message'
+            Width = 98
+            Position.BandIndex = 0
+            Position.ColIndex = 4
+            Position.RowIndex = 0
+          end
+          object cxGrid1DBBandedTableView1query_duration: TcxGridDBBandedColumn
+            Caption = #1042#1088#1077#1084#1103' ('#1084#1089')'
+            DataBinding.FieldName = 'query_duration'
+            Width = 80
+            Position.BandIndex = 0
+            Position.ColIndex = 5
+            Position.RowIndex = 0
+          end
+        end
+        object cxGrid1Level1: TcxGridLevel
+          GridView = cxGrid1DBBandedTableView1
+        end
+      end
+      object ListBox1: TListBox
+        Left = 8
+        Top = 63
+        Width = 217
+        Height = 113
+        Ctl3D = False
+        ItemHeight = 13
+        ParentCtl3D = False
         TabOrder = 1
       end
-      object Panel3: TPanel
-        Left = 0
-        Top = 0
-        Width = 1171
-        Height = 71
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        Align = alTop
-        BevelInner = bvRaised
-        BevelOuter = bvLowered
+      object cxButton4: TcxButton
+        Left = 792
+        Top = 80
+        Width = 117
+        Height = 25
+        Anchors = [akTop, akRight]
+        Caption = #1058#1077#1089#1090' '#1087#1086#1076#1087#1080#1089#1080
+        LookAndFeel.Kind = lfOffice11
+        LookAndFeel.NativeStyle = False
+        OptionsImage.Glyph.SourceDPI = 96
+        OptionsImage.Glyph.Data = {
+          424D360400000000000036000000280000001000000010000000010020000000
+          0000000000007412000074120000000000000000000000000000000000000000
+          0000504236D85E5348F7332A22A912110E3D000000000000000019171350332B
+          21AA5C4E42F94C3D2FDC00000000000000000000000000000000000000000000
+          0000544B41C2D6C8B8FFD3C5B8FF807265FF110F0D321D1916547F7062FFD2C3
+          B5FFD4C4B4FF514337D30000000000000000000000000202020A382C21AA4A3E
+          34D865574CF9C8B9A9FFD1C0AFFFBDAC9AFF67594DF566594CF8C0AFA0FFD2C0
+          B0FFC6B5A5FF635549F8493D33D7312920920202020A3E3228B185786DFFDCCE
+          C0FFD8C8B8FFC6B6A5FFC2B2A1FFD9C8B8FF887563FF928479FFB6A797FFC2B1
+          A1FFC6B6A6FFD8C9B9FFDACCBDFF83776CFF372D2498090909113B3732745E51
+          44E9B8A99AFFD2C2B2FFE0CFBEFFEDDDCCFFB1A08FFF998679FFB9AA9BFFE0CF
+          BFFFD2C2B0FFB6A797FF62544AE0342C24830808080E00000000000000000806
+          0611706354EDF5E3D2FFF5E3D2FFC6B7A6FFAC9B8DFF917C6DFFB6A496FFEDDB
+          C9FFF5E3D3FF6C5E51E90505040E000000000000000000000000000000000000
+          0000100F0D1B8A7662FFA18F7DFFAC9B8AFF8D7B7BFF7B6B79FF8C7C86FF9987
+          80FF846F5AFF1917152B00000000000000000000000000000000000000000000
+          00000402195A413763FF352A79FF040776FF091782FF0E1D87FF102089FF1927
+          94FF25257DFF00002CAE00000000000000000000000000000000000000000006
+          215B0C1161FD121D93FF183294FF2F50B1FF3050B7FF2747B1FF3F5EC2FF4360
+          BFFF0B2188FF0A1269FF00021037000000000000000000000000000000000012
+          51D32643AFFF2846A7FF2E4CABFF6782D1FF8299DBFF8098DBFF768FE6FF2A48
+          B1FF1F3898FF041D80FF00114BC1000000000000000000000000000000000012
+          50CF11309CFF415DB8FF748DD6FF556FC9FF4E6AC3FF415CBCFF2D4BB2FF6D88
+          D2FF173196FF032085FF001252D1000000000000000000000000000000000007
+          215700176BFD4562C6FF485EB6FF526CC6FF4D68C3FF4C65C2FF4D65C2FF5470
+          C5FF122993FF052284FF001250CD000000000000000000000000000000000000
+          0000000A349C2C4BACFF2E46A9FF4A62BBFF4762BFFF4761BFFF4A64C1FF283F
+          91FF0D248EFF04217CFF000E3EA1000000000000000000000000000000000000
+          00000002091B001663F86984DAFF33499CFF253C93FF1B3292FF233A94FF2E41
+          97FF1B39A1FF001760F30000030D000000000000000000000000000000000000
+          000000000000030D288C1F3B81FF5978D1FF3D5AC1FF2F4AB4FF2D47B1FF2F4E
+          B1FF0D287BFF020E2D9200000000000000000000000000000000000000000000
+          00000000000000000003040D2585041540E1071E57FC0A1E57FB061849E60513
+          37C7030C227F00000106000000000000000000000000}
         TabOrder = 2
-        object Label4: TLabel
-          Left = 15
-          Top = 8
-          Width = 192
-          Height = 19
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = #1057#1083#1077#1076#1091#1102#1097#1072#1103' '#1086#1090#1087#1088#1072#1074#1082#1072':'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-        end
+        OnClick = cxButton4Click
+      end
+      object cxButton1: TcxButton
+        Left = 792
+        Top = 111
+        Width = 117
+        Height = 25
+        Anchors = [akTop, akRight]
+        Caption = #1058#1077#1089#1090' '#1079#1072#1087#1088#1086#1089
+        LookAndFeel.Kind = lfOffice11
+        LookAndFeel.NativeStyle = False
+        OptionsImage.Glyph.SourceDPI = 96
+        OptionsImage.Glyph.Data = {
+          424D360400000000000036000000280000001000000010000000010020000000
+          0000000000007412000074120000000000000000000000000000000000000000
+          0000504236D85E5348F7332A22A912110E3D000000000000000019171350332B
+          21AA5C4E42F94C3D2FDC00000000000000000000000000000000000000000000
+          0000544B41C2D6C8B8FFD3C5B8FF807265FF110F0D321D1916547F7062FFD2C3
+          B5FFD4C4B4FF514337D30000000000000000000000000202020A382C21AA4A3E
+          34D865574CF9C8B9A9FFD1C0AFFFBDAC9AFF67594DF566594CF8C0AFA0FFD2C0
+          B0FFC6B5A5FF635549F8493D33D7312920920202020A3E3228B185786DFFDCCE
+          C0FFD8C8B8FFC6B6A5FFC2B2A1FFD9C8B8FF887563FF928479FFB6A797FFC2B1
+          A1FFC6B6A6FFD8C9B9FFDACCBDFF83776CFF372D2498090909113B3732745E51
+          44E9B8A99AFFD2C2B2FFE0CFBEFFEDDDCCFFB1A08FFF998679FFB9AA9BFFE0CF
+          BFFFD2C2B0FFB6A797FF62544AE0342C24830808080E00000000000000000806
+          0611706354EDF5E3D2FFF5E3D2FFC6B7A6FFAC9B8DFF917C6DFFB6A496FFEDDB
+          C9FFF5E3D3FF6C5E51E90505040E000000000000000000000000000000000000
+          0000100F0D1B8A7662FFA18F7DFFAC9B8AFF8D7B7BFF7B6B79FF8C7C86FF9987
+          80FF846F5AFF1917152B00000000000000000000000000000000000000000000
+          00000402195A413763FF352A79FF040776FF091782FF0E1D87FF102089FF1927
+          94FF25257DFF00002CAE00000000000000000000000000000000000000000006
+          215B0C1161FD121D93FF183294FF2F50B1FF3050B7FF2747B1FF3F5EC2FF4360
+          BFFF0B2188FF0A1269FF00021037000000000000000000000000000000000012
+          51D32643AFFF2846A7FF2E4CABFF6782D1FF8299DBFF8098DBFF768FE6FF2A48
+          B1FF1F3898FF041D80FF00114BC1000000000000000000000000000000000012
+          50CF11309CFF415DB8FF748DD6FF556FC9FF4E6AC3FF415CBCFF2D4BB2FF6D88
+          D2FF173196FF032085FF001252D1000000000000000000000000000000000007
+          215700176BFD4562C6FF485EB6FF526CC6FF4D68C3FF4C65C2FF4D65C2FF5470
+          C5FF122993FF052284FF001250CD000000000000000000000000000000000000
+          0000000A349C2C4BACFF2E46A9FF4A62BBFF4762BFFF4761BFFF4A64C1FF283F
+          91FF0D248EFF04217CFF000E3EA1000000000000000000000000000000000000
+          00000002091B001663F86984DAFF33499CFF253C93FF1B3292FF233A94FF2E41
+          97FF1B39A1FF001760F30000030D000000000000000000000000000000000000
+          000000000000030D288C1F3B81FF5978D1FF3D5AC1FF2F4AB4FF2D47B1FF2F4E
+          B1FF0D287BFF020E2D9200000000000000000000000000000000000000000000
+          00000000000000000003040D2585041540E1071E57FC0A1E57FB061849E60513
+          37C7030C227F00000106000000000000000000000000}
+        TabOrder = 3
+        OnClick = cxButton1Click
       end
     end
   end
   object dxStatusBar1: TdxStatusBar
     Left = 0
-    Top = 821
-    Width = 1171
-    Height = 25
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
+    Top = 603
+    Width = 925
+    Height = 20
     Panels = <>
     PaintStyle = stpsOffice11
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -14
+    Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
   end
   object Panel7: TPanel
     Left = 0
-    Top = 84
-    Width = 1171
-    Height = 74
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
+    Top = 67
+    Width = 925
+    Height = 59
     Align = alTop
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 6
     object Label1: TLabel
-      Left = 15
-      Top = 8
-      Width = 94
-      Height = 19
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 12
+      Top = 6
+      Width = 74
+      Height = 16
       Caption = #1057#1086#1089#1090#1086#1103#1085#1080#1077':'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -16
+      Font.Height = -13
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label2: TLabel
-      Left = 115
-      Top = 8
-      Width = 115
-      Height = 19
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 92
+      Top = 6
+      Width = 92
+      Height = 16
       Caption = #1053#1077' '#1079#1072#1087#1091#1097#1077#1085#1086'.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -16
+      Font.Height = -13
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
@@ -1134,7 +1235,7 @@ object fmEtranMain: TfmEtranMain
   object dxBarManager1: TdxBarManager
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -15
+    Font.Height = -12
     Font.Name = 'Segoe UI'
     Font.Style = []
     Categories.Strings = (
@@ -1155,11 +1256,11 @@ object fmEtranMain: TfmEtranMain
     UseSystemFont = True
     Left = 808
     Top = 216
-    PixelsPerInch = 120
+    PixelsPerInch = 96
     DockControlHeights = (
       0
       0
-      84
+      67
       0)
     object dxBarManager1Bar1: TdxBar
       Caption = #1054#1089#1085#1086#1074#1085#1086#1077' '#1084#1077#1085#1102
@@ -1194,7 +1295,7 @@ object fmEtranMain: TfmEtranMain
       CaptionButtons = <>
       DockedDockingStyle = dsTop
       DockedLeft = 0
-      DockedTop = 40
+      DockedTop = 25
       DockingStyle = dsTop
       FloatLeft = 899
       FloatTop = 8
@@ -1223,15 +1324,6 @@ object fmEtranMain: TfmEtranMain
           BeginGroup = True
           Visible = True
           ItemName = 'dxBarButton5'
-        end
-        item
-          BeginGroup = True
-          Visible = True
-          ItemName = 'dxBarButton6'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton7'
         end>
       OneOnRow = True
       Row = 1
@@ -1328,21 +1420,6 @@ object fmEtranMain: TfmEtranMain
       Visible = ivAlways
       ImageIndex = 20
       OnClick = dxBarButton16Click
-    end
-    object dxBarButton6: TdxBarButton
-      Caption = #1047#1072#1087#1088#1086#1089' '#1089#1087#1088#1072#1074#1086#1095#1085#1080#1082#1086#1074
-      Category = 0
-      Hint = #1047#1072#1087#1088#1086#1089' '#1089#1087#1088#1072#1074#1086#1095#1085#1080#1082#1086#1074
-      Visible = ivNever
-      ImageIndex = 11
-      OnClick = dxBarButton6Click
-    end
-    object dxBarButton7: TdxBarButton
-      Caption = 'New Button'
-      Category = 0
-      Hint = 'New Button'
-      Visible = ivNever
-      OnClick = dxBarButton7Click
     end
   end
   object cxImageList_normal: TcxImageList
@@ -8524,7 +8601,7 @@ object fmEtranMain: TfmEtranMain
     UseOwnFont = False
     Left = 808
     Top = 248
-    PixelsPerInch = 120
+    PixelsPerInch = 96
   end
   object EtranConnect: TADOConnection
     KeepConnection = False
@@ -8697,12 +8774,174 @@ object fmEtranMain: TfmEtranMain
     Left = 288
     Top = 510
   end
-  object ServerSocket1: TServerSocket
-    Active = False
-    Port = 7496
-    ServerType = stNonBlocking
-    OnClientRead = ServerSocket1ClientRead
-    Left = 526
-    Top = 456
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 10000
+    OnTimer = Timer1Timer
+    Left = 86
+    Top = 175
+  end
+  object TrayIcon1: TTrayIcon
+    OnClick = TrayIcon1Click
+    Left = 82
+    Top = 114
+  end
+  object cxImageList1: TcxImageList
+    SourceDPI = 96
+    FormatVersion = 1
+    DesignInfo = 9699714
+    ImageInfo = <
+      item
+        Image.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000000000030000
+          00100000001A0000001A0000001A0000001A00000017000000110000000B0000
+          0007000000070000000700000007000000070000000700000007000000050000
+          002000000033001A0074014600CC001A00740000002E00000022000000150000
+          000E0000004E000000C90000004E0000002D000000C900000040000000000000
+          00000119005C024A00CC30DA1FFF024A00CC0119005C00000000000000000000
+          0000000000C300000000000000C300000000000000C30000001E000000000123
+          005C024E00CC35D324FF22CB11FF32D221FF024E00CC0123005C000000000000
+          0000010101BD00000000010101BD00000000010101BD0000001D0226005C0452
+          00CC3CCB2BFF22BC11FF22BC11FF22BC11FF36C725FF045200CC0226005C0000
+          000000000042010101BA0000004200000021010101BA0000001C065801CD56CC
+          47FF55CB45FF3BBC2AFF22AD11FF39BA29FF4EC63FFF4CC53DFF055700CC0000
+          000000000000000000000000000000000000000000000000000005450099065D
+          00CC034F00C847B738FF22A011FF32AF21FF034F00C8065D00CC054500990000
+          00000000003C010101B70000002000000040010101B700000040000000000000
+          0000086200CC49B43AFF229911FF35AC24FF086200CC00000000000000000000
+          00000000001C010101B500000000010101B500000000010101B5000000000000
+          0000096800CC5ECA4FFF35AC24FF3FB62EFF096800CC00000000000000000000
+          00000000001B010101B300000000010101B300000000010101B3000000000000
+          00000A6E00CC64CF55FF44BB33FF53CA42FF0A6E00CC00000000000000000000
+          00000000003A010101B2000000000000003F010101B20000003F000000000000
+          00000C7200CC66D156FF44BB33FF55CC44FF0C7200CC00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000C6C00B85EBF51E740AC31E751BC41E70C6D00B900000000000000000000
+          00000000003E010101AF0000003E0000001F010101AF00000031000000000000
+          00000A5900924F9C43B7388D2CB6439937B70A59009200000000000000000000
+          0000010101AD00000000010101AD00000000010101AD0000001A000000000000
+          000008400066396F327F2A65227E326D2A7E0840006500000000000000000000
+          0000010101AC00000000010101AC00000000010101AC0000001A000000000000
+          00000526003A22401E481B3D16491E4019490526003B00000000000000000000
+          00000000003C010101AB0000003C0000001E010101AB0000001A000000000000
+          00000212001B101E0E210D1D0B220F1F0C220212001B00000000000000000000
+          0000000000000000000000000000000000000000000000000000}
+      end
+      item
+        Image.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000000000030000
+          00100000001A0000001A0000001A0000001A00000017000000110000000B0000
+          0007000000070000000700000007000000070000000700000007000000050000
+          00200000003300000071000000C7000000710000002E00000022000000150000
+          000E0000004E000000C90000004E0000002D000000C900000040000000000000
+          000000000054010101BC49DCECFF010101BC0000005400000000000000000000
+          0000000000C300000000000000C300000000000000C30000001E000000000101
+          014E010101AF4CD9E8FF3BD4E5FF48D7E7FF010101AF0101014E000000000000
+          0000010101BD00000000010101BD00000000010101BD0000001D0101014C0101
+          01A951D6E5FF33CCDDFF33CCDDFF33CCDDFF46D2E2FF010101A90101014C0000
+          000000000042010101BA0000004200000021010101BA0000001C030505A77BDE
+          E9FF78DDE9FF51D1DFFF2CC5D6FF4ED0DEFF6DD9E5FF6BD8E5FF010101A50000
+          00000000000000000000000000000000000000000000000000000101017A0202
+          02A2010101B361D2DEFF26BFD0FF3CC7D7FF010101B3020202A20101017A0000
+          00000000003C010101B70000002000000040010101B700000040000000000000
+          00000202029F63D1DEFF22BBCCFF3FC7D6FF0202029F00000000000000000000
+          00000000001C010101B500000000010101B500000000010101B5000000000000
+          00000202029B89E4F0FF47CEDFFF53D0DFFF0202029B00000000000000000000
+          00000000001B010101B300000000010101B300000000010101B3000000000000
+          00000202029895E9F5FF67DEEFFF7DE5F4FF0202029800000000000000000000
+          00000000003A010101B2000000000000003F010101B20000003F000000000000
+          00000202029699EBF7FF6BE0F1FF83E7F6FF0202029600000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000020202848FD7E2E766CDDCE77ED3E1E70202028500000000000000000000
+          00000000003E010101AF0000003E0000001F010101AF00000031000000000000
+          00000202026775ACB4B755A4B0B668A9B3B70202026700000000000000000000
+          0000010101AD00000000010101AD00000000010101AD0000001A000000000000
+          00000101014754787E7F3E737C7E4B767D7E0101014600000000000000000000
+          0000010101AC00000000010101AC00000000010101AC0000001A000000000000
+          00000101012831454848264448492D4549490101012800000000000000000000
+          00000000003C010101AB0000003C0000001E010101AB0000001A000000000000
+          0000000000121720212112202222152022220000001200000000000000000000
+          0000000000000000000000000000000000000000000000000000}
+      end
+      item
+        Image.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000000000030000
+          00100000001A0000001A0000001A0000001A00000017000000110000000B0000
+          0007000000070000000700000007000000070000000700000007000000050000
+          00200000003300001A74000046CC00001A740000002E00000022000000150000
+          000E0000004E000000C90000004E0000002D000000C900000040000000000000
+          00000000195C00004ACC2222DDFF00004ACC0000195C00000000000000000000
+          0000000000C300000000000000C300000000000000C30000001E000000000000
+          235C00004ECC2828D6FF1111CBFF2525D5FF00004ECC0000235C000000000000
+          0000010101BD00000000010101BD00000000010101BD0000001D0000265C0000
+          52CC3030D1FF1111BCFF1111BCFF1111BCFF2929CBFF000052CC0000265C0000
+          000000000042010101BA0000004200000021010101BA0000001C010159CD4D4D
+          D2FF4B4BD1FF2D2DBEFF1111ADFF2B2BBCFF4343CAFF4242C9FF000057CC0000
+          0000000000000000000000000000000000000000000000000000000045990000
+          5DCC00005DCC3A3ABAFF1111A0FF2424B2FF00005DCC00005DCC000045990000
+          00000000003C010101B70000002000000040010101B700000040000000000000
+          0000000062CC3E3EB8FF111199FF2727AFFF000062CC00000000000000000000
+          00000000001C010101B500000000010101B500000000010101B5000000000000
+          0000000068CC5555D7FF2626B6FF3333BEFF000068CC00000000000000000000
+          00000000001B010101B300000000010101B300000000010101B3000000000000
+          000000006ECC5F5FE2FF3C3CD2FF4D4DDFFF00006ECC00000000000000000000
+          00000000003A010101B2000000000000003F010101B20000003F000000000000
+          0000000072CC6565E6FF4343D7FF5454E4FF000072CC00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000006CB86161D4E74444C7E75252D3E700006DB900000000000000000000
+          00000000003E010101AF0000003E0000001F010101AF00000031000000000000
+          0000000059925050ABB73B3BA1B64646AAB70000599200000000000000000000
+          0000010101AD00000000010101AD00000000010101AD0000001A000000000000
+          0000000040663A3A797F2C2C727E3333777E0000406500000000000000000000
+          0000010101AC00000000010101AC00000000010101AC0000001A000000000000
+          00000000263A222245481C1C43491F1F46490000263B00000000000000000000
+          00000000003C010101AB0000003C0000001E010101AB0000001A000000000000
+          00000000121B101020210D0D20220F0F21220000121B00000000000000000000
+          0000000000000000000000000000000000000000000000000000}
+      end>
+  end
+  object DS_Query: TDataSource
+    DataSet = ClientDS_Query
+    Left = 784
+    Top = 535
+  end
+  object ClientDS_Query: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 712
+    Top = 543
+    object ClientDS_Queryid: TAutoIncField
+      FieldName = 'id'
+    end
+    object ClientDS_Queryquery_date: TDateTimeField
+      FieldName = 'query_date'
+    end
+    object ClientDS_Queryquery_ip: TStringField
+      FieldName = 'query_ip'
+    end
+    object ClientDS_Queryquery_type: TStringField
+      FieldName = 'query_type'
+    end
+    object ClientDS_Queryquery_etran_task: TStringField
+      FieldName = 'query_etran_task'
+      Size = 6000
+    end
+    object ClientDS_Queryquery_etran_result: TStringField
+      FieldName = 'query_etran_result'
+      Size = 6000
+    end
+    object ClientDS_Queryquery_result: TBooleanField
+      FieldName = 'query_result'
+    end
+    object ClientDS_Queryquery_error_message: TStringField
+      FieldName = 'query_error_message'
+      Size = 200
+    end
+    object ClientDS_Queryquery_duration: TIntegerField
+      FieldName = 'query_duration'
+    end
   end
 end

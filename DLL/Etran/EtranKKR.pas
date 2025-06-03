@@ -27,7 +27,9 @@ uses
   dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
   dxSkinVisualStudio2013Light,
   cxDataControllerConditionalFormattingRulesManagerDialog, System.ImageList,
-  cxImageList, dxSkinTheBezier, dxDateRanges, dxSkinOffice2019Colorful;
+  cxImageList, dxSkinTheBezier, dxDateRanges, dxSkinOffice2019Colorful,
+  dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray,
+  dxSkinOffice2019White, dxSkinWXI, dxScrollbarAnnotations;
 
 type
   TfmEtranKKR = class(TForm)
@@ -255,10 +257,6 @@ type
     sp_KKR_agent_sum_get: TADOStoredProc;
     dxBarButton39: TdxBarButton;
     dxBarButton40: TdxBarButton;
-    cxPageControl2: TcxPageControl;
-    cxTabSheet4: TcxTabSheet;
-    cxTabSheet5: TcxTabSheet;
-    cxTabSheet6: TcxTabSheet;
     cxGridDBBandedTableView3kkrPayerOrgELS: TcxGridDBBandedColumn;
     cxGridDBBandedTableView3Column2: TcxGridDBBandedColumn;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -924,11 +922,6 @@ begin
   sp_KKR_debet_get.Parameters.Refresh;
   sp_KKR_debet_get.Parameters.ParamByName('@date_begin').Value := Fdate1;
   sp_KKR_debet_get.Parameters.ParamByName('@date_end'  ).Value := Fdate2;
-  case cxPageControl2.ActivePageIndex of
-    0: sp_KKR_debet_get.Parameters.ParamByName('@els_cod'  ).Value := '1004653067';
-    1: sp_KKR_debet_get.Parameters.ParamByName('@els_cod'  ).Value := '1006059161';
-    2: sp_KKR_debet_get.Parameters.ParamByName('@els_cod'  ).Value := '1006062218';
-  end;
   sp_KKR_debet_get.Open;
 
 
@@ -936,11 +929,6 @@ begin
   sp_KKR_credit_get.Parameters.Refresh;
   sp_KKR_credit_get.Parameters.ParamByName('@date_begin').Value := Fdate1;
   sp_KKR_credit_get.Parameters.ParamByName('@date_end'  ).Value := Fdate2;
-  case cxPageControl2.ActivePageIndex of
-    0: sp_KKR_credit_get.Parameters.ParamByName('@els_cod'  ).Value := '1004653067';
-    1: sp_KKR_credit_get.Parameters.ParamByName('@els_cod'  ).Value := '1006059161';
-    2: sp_KKR_credit_get.Parameters.ParamByName('@els_cod'  ).Value := '1006062218';
-  end;
   sp_KKR_credit_get.Open;
 
 
@@ -948,33 +936,18 @@ begin
   sp_KKR_saldo_get.Parameters.Refresh;
   sp_KKR_saldo_get.Parameters.ParamByName('@date_begin').Value := Fdate1;
   sp_KKR_saldo_get.Parameters.ParamByName('@date_end'  ).Value := Fdate2;
-  case cxPageControl2.ActivePageIndex of
-    0: sp_KKR_saldo_get.Parameters.ParamByName('@els_cod'  ).Value := '1004653067';
-    1: sp_KKR_saldo_get.Parameters.ParamByName('@els_cod'  ).Value := '1006059161';
-    2: sp_KKR_saldo_get.Parameters.ParamByName('@els_cod'  ).Value := '1006062218';
-  end;
   sp_KKR_saldo_get.Open;
 
   sp_KKR_transfer_get.Close;
   sp_KKR_transfer_get.Parameters.Refresh;
   sp_KKR_transfer_get.Parameters.ParamByName('@date_begin').Value := Fdate1;
   sp_KKR_transfer_get.Parameters.ParamByName('@date_end'  ).Value := Fdate2;
-  case cxPageControl2.ActivePageIndex of
-    0: sp_KKR_transfer_get.Parameters.ParamByName('@els_cod'  ).Value := '1004653067';
-    1: sp_KKR_transfer_get.Parameters.ParamByName('@els_cod'  ).Value := '1006059161';
-    2: sp_KKR_transfer_get.Parameters.ParamByName('@els_cod'  ).Value := '1006062218';
-  end;
   sp_KKR_transfer_get.Open;
 
   sp_KKR_agent_sum_get.Close;
   sp_KKR_agent_sum_get.Parameters.Refresh;
   sp_KKR_agent_sum_get.Parameters.ParamByName('@date_begin').Value := Fdate1;
   sp_KKR_agent_sum_get.Parameters.ParamByName('@date_end'  ).Value := Fdate2;
-  case cxPageControl2.ActivePageIndex of
-    0: sp_KKR_agent_sum_get.Parameters.ParamByName('@els_cod'  ).Value := '1004653067';
-    1: sp_KKR_agent_sum_get.Parameters.ParamByName('@els_cod'  ).Value := '1006059161';
-    2: sp_KKR_agent_sum_get.Parameters.ParamByName('@els_cod'  ).Value := '1006062218';
-  end;
   sp_KKR_agent_sum_get.Open;
 
   Screen.Cursor := crDefault;

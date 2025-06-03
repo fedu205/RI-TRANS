@@ -2,34 +2,33 @@ object fmECPRepairContract: TfmECPRepairContract
   Left = 0
   Top = 0
   Caption = #1044#1086#1075#1086#1074#1086#1088#1099' '#1085#1072' '#1088#1077#1084#1086#1085#1090
-  ClientHeight = 623
-  ClientWidth = 988
+  ClientHeight = 498
+  ClientWidth = 790
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -13
+  Font.Height = -10
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
-  PixelsPerInch = 120
-  TextHeight = 16
+  TextHeight = 12
   object cxGrid1: TcxGrid
     Left = 0
     Top = 26
-    Width = 988
-    Height = 597
+    Width = 790
+    Height = 472
+    Margins.Left = 2
+    Margins.Top = 2
+    Margins.Right = 2
+    Margins.Bottom = 2
     Align = alClient
     TabOrder = 4
     LookAndFeel.Kind = lfUltraFlat
-    ExplicitLeft = 328
-    ExplicitTop = 120
-    ExplicitWidth = 250
-    ExplicitHeight = 200
     object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
       PopupMenu = dxBarPopupMenu1
       OnKeyPress = cxGrid1DBBandedTableView1KeyPress
       Navigator.Buttons.CustomButtons = <>
+      ScrollbarAnnotations.CustomAnnotations = <>
       OnCustomDrawCell = cxGrid1DBBandedTableView1CustomDrawCell
       OnFocusedItemChanged = cxGrid1DBBandedTableView1FocusedItemChanged
       DataController.DataSource = DS_RepairContract
@@ -54,7 +53,7 @@ object fmECPRepairContract: TfmECPRepairContract
       OptionsView.Footer = True
       OptionsView.GroupByBox = False
       OptionsView.HeaderFilterButtonShowMode = fbmButton
-      OptionsView.HeaderHeight = 35
+      OptionsView.HeaderHeight = 28
       OptionsView.BandHeaders = False
       OnCustomDrawColumnHeader = cxGrid1DBBandedTableView1CustomDrawColumnHeader
       OnCustomDrawFooterCell = cxGrid1DBBandedTableView1CustomDrawColumnHeader
@@ -64,8 +63,10 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1repair_contract_id: TcxGridDBBandedColumn
         Caption = #8470' '#1079#1072#1087#1080#1089#1080
         DataBinding.FieldName = 'repair_contract_id'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = -1
         Position.ColIndex = -1
         Position.RowIndex = -1
@@ -73,8 +74,10 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1ContractID: TcxGridDBBandedColumn
         Caption = 'ID '#1076#1086#1075#1086#1074#1086#1088#1072
         DataBinding.FieldName = 'ContractID'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 0
         Position.RowIndex = 0
@@ -82,16 +85,20 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1ContractNum: TcxGridDBBandedColumn
         Caption = #1053#1086#1084#1077#1088' '#1076#1086#1075#1086#1074#1086#1088#1072
         DataBinding.FieldName = 'ContractNum'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 1
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1ctrStateID: TcxGridDBBandedColumn
         DataBinding.FieldName = 'ctrStateID'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = -1
         Position.ColIndex = -1
         Position.RowIndex = -1
@@ -99,8 +106,10 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1ctrState: TcxGridDBBandedColumn
         Caption = #1057#1086#1089#1090#1086#1103#1085#1080#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
         DataBinding.FieldName = 'ctrState'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 2
         Position.RowIndex = 0
@@ -108,8 +117,10 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1ContractDateBegin: TcxGridDBBandedColumn
         Caption = #1044#1072#1090#1072' '#1085#1072#1095#1072#1083#1072' '#1087#1077#1088#1080#1086#1076#1072' '#1076#1077#1081#1089#1090#1074#1080#1103' '#1076#1086#1075#1086#1074#1086#1088#1072
         DataBinding.FieldName = 'ContractDateBegin'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 3
         Position.RowIndex = 0
@@ -117,16 +128,20 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1ContractDateEnd: TcxGridDBBandedColumn
         Caption = #1044#1072#1090#1072' '#1082#1086#1085#1094#1072' '#1087#1077#1088#1080#1086#1076#1072' '#1076#1077#1081#1089#1090#1074#1080#1103' '#1076#1086#1075#1086#1074#1086#1088#1072
         DataBinding.FieldName = 'ContractDateEnd'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 4
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1CarOwnerID: TcxGridDBBandedColumn
         DataBinding.FieldName = 'CarOwnerID'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = -1
         Position.ColIndex = -1
         Position.RowIndex = -1
@@ -134,8 +149,10 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1CarOwnerName: TcxGridDBBandedColumn
         Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1086#1088#1075#1072#1085#1080#1079#1072#1094#1080#1080' '#1074#1083#1072#1076#1077#1083#1100#1094#1072' '#1074#1072#1075#1086#1085#1086#1074
         DataBinding.FieldName = 'CarOwnerName'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 5
         Position.RowIndex = 0
@@ -143,8 +160,10 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1CarOwnerINN: TcxGridDBBandedColumn
         Caption = #1048#1053#1053' '#1086#1088#1075#1072#1085#1080#1079#1072#1094#1080#1080' '#1074#1083#1072#1076#1077#1083#1100#1094#1072' '#1074#1072#1075#1086#1085#1086#1074
         DataBinding.FieldName = 'CarOwnerINN'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 6
         Position.RowIndex = 0
@@ -152,16 +171,20 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1CarOwnerOKPO: TcxGridDBBandedColumn
         Caption = #1054#1050#1055#1054' '#1086#1088#1075#1072#1085#1080#1079#1072#1094#1080#1080' '#1074#1083#1072#1076#1077#1083#1100#1094#1072' '#1074#1072#1075#1086#1085#1086#1074
         DataBinding.FieldName = 'CarOwnerOKPO'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 7
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1CLorgID: TcxGridDBBandedColumn
         DataBinding.FieldName = 'CLorgID'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = -1
         Position.ColIndex = -1
         Position.RowIndex = -1
@@ -169,8 +192,10 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1CLorgName: TcxGridDBBandedColumn
         Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1086#1088#1075#1072#1085#1080#1079#1072#1094#1080#1080' '#1082#1083#1080#1077#1085#1090#1072
         DataBinding.FieldName = 'CLorgName'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 8
         Position.RowIndex = 0
@@ -178,8 +203,10 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1CLorgINN: TcxGridDBBandedColumn
         Caption = #1048#1053#1053' '#1086#1088#1075#1072#1085#1080#1079#1072#1094#1080#1080' '#1082#1083#1080#1077#1085#1090#1072
         DataBinding.FieldName = 'CLorgINN'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 9
         Position.RowIndex = 0
@@ -187,16 +214,20 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1CLorgOKPO: TcxGridDBBandedColumn
         Caption = #1054#1050#1055#1054' '#1086#1088#1075#1072#1085#1080#1079#1072#1094#1080#1080' '#1082#1083#1080#1077#1085#1090#1072
         DataBinding.FieldName = 'CLorgOKPO'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 10
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1VRPorgID: TcxGridDBBandedColumn
         DataBinding.FieldName = 'VRPorgID'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = -1
         Position.ColIndex = -1
         Position.RowIndex = -1
@@ -204,8 +235,10 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1VRPorgName: TcxGridDBBandedColumn
         Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1086#1088#1075#1072#1085#1080#1079#1072#1094#1080#1080' '#1088#1077#1084#1086#1085#1090#1085#1086#1075#1086' '#1087#1088#1077#1076#1087#1088#1080#1103#1090#1080#1103
         DataBinding.FieldName = 'VRPorgName'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 11
         Position.RowIndex = 0
@@ -213,8 +246,10 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1VRPorgINN: TcxGridDBBandedColumn
         Caption = #1048#1053#1053' '#1086#1088#1075#1072#1085#1080#1079#1072#1094#1080#1080' '#1088#1077#1084#1086#1085#1090#1085#1086#1075#1086' '#1087#1088#1077#1076#1087#1088#1080#1103#1090#1080#1103
         DataBinding.FieldName = 'VRPorgINN'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 12
         Position.RowIndex = 0
@@ -222,8 +257,10 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1VROKPO: TcxGridDBBandedColumn
         Caption = #1054#1050#1055#1054' '#1086#1088#1075#1072#1085#1080#1079#1072#1094#1080#1080' '#1088#1077#1084#1086#1085#1090#1085#1086#1075#1086' '#1087#1088#1077#1076#1087#1088#1080#1103#1090#1080#1103
         DataBinding.FieldName = 'VROKPO'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 13
         Position.RowIndex = 0
@@ -231,8 +268,10 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1trStationCode: TcxGridDBBandedColumn
         Caption = #1050#1086#1076' '#1089#1090#1072#1085#1094#1080#1080' '#1087#1088#1080#1084#1099#1082#1072#1085#1080#1103
         DataBinding.FieldName = #1089'trStationCode'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 14
         Position.RowIndex = 0
@@ -240,16 +279,20 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1trStationName: TcxGridDBBandedColumn
         Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1089#1090#1072#1085#1094#1080#1080' '#1087#1088#1080#1084#1099#1082#1072#1085#1080#1103
         DataBinding.FieldName = #1089'trStationName'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 15
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1RW_ID: TcxGridDBBandedColumn
         DataBinding.FieldName = 'RW_ID'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = -1
         Position.ColIndex = -1
         Position.RowIndex = -1
@@ -257,16 +300,20 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1RW_ShortName: TcxGridDBBandedColumn
         Caption = #1050#1088#1072#1090#1082#1086#1077' '#1085#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1076#1086#1088#1086#1075#1080
         DataBinding.FieldName = 'RW_ShortName'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 16
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1WagTypeID: TcxGridDBBandedColumn
         DataBinding.FieldName = 'WagTypeID'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = -1
         Position.ColIndex = -1
         Position.RowIndex = -1
@@ -274,8 +321,10 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1WagTypeName: TcxGridDBBandedColumn
         Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1088#1086#1076#1072' '#1074#1072#1075#1086#1085#1072
         DataBinding.FieldName = 'WagTypeName'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 17
         Position.RowIndex = 0
@@ -283,8 +332,10 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1WagCount: TcxGridDBBandedColumn
         Caption = #1050#1086#1083#1080#1095#1077#1089#1090#1074#1086' '#1074#1072#1075#1086#1085#1086#1074
         DataBinding.FieldName = 'WagCount'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 18
         Position.RowIndex = 0
@@ -292,8 +343,10 @@ object fmECPRepairContract: TfmECPRepairContract
       object cxGrid1DBBandedTableView1vrpMonitorSign: TcxGridDBBandedColumn
         Caption = #1055#1086#1076#1082#1083#1102#1095#1077#1085' '#1082' '#1084#1086#1085#1080#1090#1086#1088#1080#1085#1075#1091' '#1042#1056#1055
         DataBinding.FieldName = 'vrpMonitorSign'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 100
+        MinWidth = 16
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 19
         Position.RowIndex = 0
@@ -7633,7 +7686,9 @@ object fmECPRepairContract: TfmECPRepairContract
     Kind = lfOffice11
     NativeStyle = False
     ScrollbarMode = sbmClassic
+    ScrollMode = scmClassic
     SkinName = 'Caramel'
+    RenderMode = rmGDIPlus
     Left = 816
     Top = 8
   end
@@ -7641,7 +7696,9 @@ object fmECPRepairContract: TfmECPRepairContract
     Kind = lfOffice11
     NativeStyle = False
     ScrollbarMode = sbmClassic
+    ScrollMode = scmClassic
     SkinName = 'Caramel'
+    RenderMode = rmGDIPlus
     UseSkins = False
     Left = 848
     Top = 8

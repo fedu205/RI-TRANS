@@ -908,10 +908,6 @@ type
     cxGridDBBandedTableView10freightGTDNumber: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1freightGTDNumber: TcxGridDBBandedColumn;
     cxGridDBBandedTableView25Column1: TcxGridDBBandedColumn;
-    cxPageControl1: TcxPageControl;
-    cxTabSheet2: TcxTabSheet;
-    cxTabSheet15: TcxTabSheet;
-    cxTabSheet16: TcxTabSheet;
     dxBarSubItem17: TdxBarSubItem;
     dxBarButton84: TdxBarButton;
     dxBarButton85: TdxBarButton;
@@ -1106,11 +1102,6 @@ begin
   sp_invoice_GET.Parameters.ParamByName('@date_begin').Value := Fdate1;
   sp_invoice_GET.Parameters.ParamByName('@date_end'  ).Value := Fdate2;
   sp_invoice_GET.Parameters.ParamByName('@num_vagon' ).Value := iif(Fnum_vagon = -9, null, Fnum_vagon);
-  case cxPageControl1.ActivePageIndex of
-    0: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1004653067';
-    1: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1006059161';
-    2: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1006062218';
-  end;
   if open_query = True then begin
     sp_invoice_GET.Open;
   end;
@@ -1144,11 +1135,6 @@ begin
     sp_invoice_GET.Parameters.ParamByName('@date_begin').Value := Fdate1;
     sp_invoice_GET.Parameters.ParamByName('@date_end'  ).Value := Fdate2;
     sp_invoice_GET.Parameters.ParamByName('@num_vagon' ).Value := iif(Fnum_vagon = -9, null, Fnum_vagon);
-    case cxPageControl1.ActivePageIndex of
-      0: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1004653067';
-      1: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1006059161';
-      2: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1006062218';
-    end;
     sp_invoice_GET.Open;
 
     if cxGrid1DBBandedTableView1.DataController.LocateByKey(Q.FieldByName('invoice_id').AsInteger) = False then begin
@@ -1228,11 +1214,6 @@ begin
   sp_invoice_GET.Parameters.ParamByName('@date_begin').Value := Fdate1;
   sp_invoice_GET.Parameters.ParamByName('@date_end'  ).Value := Fdate2;
   sp_invoice_GET.Parameters.ParamByName('@num_vagon' ).Value := iif(Fnum_vagon = -9, null, Fnum_vagon);
-  case cxPageControl1.ActivePageIndex of
-    0: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1004653067';
-    1: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1006059161';
-    2: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1006062218';
-  end;
   sp_invoice_GET.Open;
 
   Screen.Cursor := crDefault;
@@ -1701,11 +1682,6 @@ begin
     sp_invoice_GET.Parameters.ParamByName('@date_begin').Value := Fdate1;
     sp_invoice_GET.Parameters.ParamByName('@date_end'  ).Value := Fdate2;
     sp_invoice_GET.Parameters.ParamByName('@num_vagon' ).Value := iif(Fnum_vagon = -9, null, Fnum_vagon);
-    case cxPageControl1.ActivePageIndex of
-      0: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1004653067';
-      1: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1006059161';
-      2: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1006062218';
-    end;
     sp_invoice_GET.Open;
 
     Screen.Cursor := crDefault;
@@ -1741,11 +1717,6 @@ begin
   sp_invoice_GET.Parameters.ParamByName('@date_begin').Value := Fdate1;
   sp_invoice_GET.Parameters.ParamByName('@date_end'  ).Value := Fdate2;
   sp_invoice_GET.Parameters.ParamByName('@num_vagon' ).Value := iif(Fnum_vagon = -9, null, Fnum_vagon);
-    case cxPageControl1.ActivePageIndex of
-      0: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1004653067';
-      1: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1006059161';
-      2: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1006062218';
-    end;
   sp_invoice_GET.Open;
 
   Screen.Cursor := crDefault;
@@ -1765,11 +1736,7 @@ begin
   sp_invoice_GET.Parameters.ParamByName('@date_begin').Value := Fdate1;
   sp_invoice_GET.Parameters.ParamByName('@date_end'  ).Value := Fdate2;
   sp_invoice_GET.Parameters.ParamByName('@num_vagon' ).Value := iif(Fnum_vagon = -9, null, Fnum_vagon);
-    case cxPageControl1.ActivePageIndex of
-      0: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1004653067';
-      1: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1006059161';
-      2: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1006062218';
-    end;
+
   sp_invoice_GET.Open;
 
   Screen.Cursor := crDefault;
@@ -1970,11 +1937,6 @@ begin
   sp_invoice_GET.Parameters.ParamByName('@date_begin').Value := Fdate1;
   sp_invoice_GET.Parameters.ParamByName('@date_end'  ).Value := Fdate2;
   sp_invoice_GET.Parameters.ParamByName('@num_vagon' ).Value := iif(Fnum_vagon = -9, null, Fnum_vagon);
-    case cxPageControl1.ActivePageIndex of
-      0: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1004653067';
-      1: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1006059161';
-      2: sp_invoice_GET.Parameters.ParamByName('@els_cod').Value := '1006062218';
-    end;
   sp_invoice_GET.Open;
 end;
 

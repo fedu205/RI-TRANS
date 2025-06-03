@@ -28,7 +28,7 @@ uses
   dxSkinXmas2008Blue, dxSkinscxPCPainter, dxSkinsdxBarPainter, cxImageList,
   cxDataControllerConditionalFormattingRulesManagerDialog, dxDateRanges, dxSkinTheBezier, dxSkinOffice2019Colorful,
   dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray,
-  dxSkinOffice2019White, dxScrollbarAnnotations, dxCore;
+  dxSkinOffice2019White, dxScrollbarAnnotations, dxCore, dxSkinWXI;
 
 type
   TfmECPOtstClaim = class(TForm)
@@ -174,7 +174,7 @@ begin
 
   Fusr_pwd := usr_pwd;
   Fusers_group_cod := users_group_cod;
-  if Fusers_group_cod =  '0' then begin login := 'Etran_GRU'; db_name := 'lis_etran'; end;
+  if Fusers_group_cod =  '0' then begin login := 'Etran_rtr'; db_name := 'lis_etran'; end;
 //  if Fusers_group_cod =  '1' then begin login := 'Etran_KHT'; db_name := 'lis_etran'; end;
 //  if Fusers_group_cod =  '3' then begin login := 'Etran_PRV'; db_name := 'lis_etran'; end;
 //  if Fusers_group_cod =  '5' then begin login := 'Etran_STS'; db_name := 'lis_etran'; end;

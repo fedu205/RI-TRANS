@@ -2,33 +2,26 @@ object fmECPOtstClaim: TfmECPOtstClaim
   Left = 0
   Top = 0
   Caption = #1047#1072#1103#1074#1082#1080' '#1085#1072' '#1086#1090#1089#1090#1086#1081
-  ClientHeight = 775
-  ClientWidth = 1181
+  ClientHeight = 620
+  ClientWidth = 945
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -14
+  Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
   OnClose = FormClose
   OnDestroy = FormDestroy
-  PixelsPerInch = 120
-  TextHeight = 17
+  TextHeight = 13
   object cxGrid1: TcxGrid
     Left = 0
-    Top = 32
-    Width = 1181
-    Height = 743
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
+    Top = 26
+    Width = 945
+    Height = 594
     Align = alClient
     TabOrder = 4
     LookAndFeel.Kind = lfUltraFlat
     LookAndFeel.ScrollbarMode = sbmClassic
-    ExplicitTop = 33
-    ExplicitHeight = 742
     object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
       PopupMenu = dxBarPopupMenu1
       OnDblClick = dxBarButton2Click
@@ -55,9 +48,6 @@ object fmECPOtstClaim: TfmECPOtstClaim
         end>
       DataController.Summary.SummaryGroups = <>
       DataController.Summary.Options = [soMultipleSelectedRecords]
-      FilterRow.SeparatorWidth = 8
-      FixedDataRows.SeparatorWidth = 8
-      NewItemRow.SeparatorWidth = 8
       OptionsCustomize.ColumnsQuickCustomization = True
       OptionsData.CancelOnExit = False
       OptionsData.Deleting = False
@@ -65,18 +55,12 @@ object fmECPOtstClaim: TfmECPOtstClaim
       OptionsData.Editing = False
       OptionsData.Inserting = False
       OptionsSelection.MultiSelect = True
-      OptionsView.NavigatorOffset = 63
-      OptionsView.FixedColumnSeparatorWidth = 3
       OptionsView.Footer = True
       OptionsView.GroupByBox = False
       OptionsView.HeaderFilterButtonShowMode = fbmButton
-      OptionsView.HeaderHeight = 44
+      OptionsView.HeaderHeight = 35
       OptionsView.IndicatorWidth = 15
       OptionsView.BandHeaders = False
-      OptionsView.FixedBandSeparatorWidth = 3
-      Preview.LeftIndent = 25
-      Preview.RightIndent = 6
-      RowLayout.MinValueWidth = 100
       OnCustomDrawColumnHeader = cxGrid1DBBandedTableView1CustomDrawColumnHeader
       OnCustomDrawFooterCell = cxGrid1DBBandedTableView1CustomDrawColumnHeader
       Bands = <
@@ -85,18 +69,18 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1etran_ecp_otst_id: TcxGridDBBandedColumn
         Caption = #8470' '#1079#1072#1087#1080#1089#1080
         DataBinding.FieldName = 'etran_ecp_otst_id'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 125
+        Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 0
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1RW_Id: TcxGridDBBandedColumn
         DataBinding.FieldName = 'RW_Id'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 125
+        Width = 100
         Position.BandIndex = -1
         Position.ColIndex = -1
         Position.RowIndex = -1
@@ -104,9 +88,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1RW_name: TcxGridDBBandedColumn
         Caption = #1044#1086#1088#1086#1075#1072
         DataBinding.FieldName = 'RW_name'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 125
+        Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 2
         Position.RowIndex = 0
@@ -114,9 +98,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1ClOKPO: TcxGridDBBandedColumn
         Caption = #1054#1050#1055#1054' '#1050#1083#1080#1077#1085#1090#1072
         DataBinding.FieldName = 'ClOKPO'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 125
+        Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 3
         Position.RowIndex = 0
@@ -124,9 +108,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1ContractNum: TcxGridDBBandedColumn
         Caption = #8470' '#1076#1086#1075#1086#1074#1086#1088#1072' '#1085#1072' '#1086#1090#1089#1090#1086#1081
         DataBinding.FieldName = 'ContractNum'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 125
+        Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 4
         Position.RowIndex = 0
@@ -134,9 +118,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1Contract_Id: TcxGridDBBandedColumn
         Caption = #1048#1076#1077#1085#1090#1080#1092#1080#1082#1072#1090#1086#1088' '#1076#1086#1075#1086#1074#1086#1088#1072' '#1085#1072' '#1086#1090#1089#1090#1086#1081
         DataBinding.FieldName = 'Contract_Id'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 125
+        Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 5
         Position.RowIndex = 0
@@ -144,9 +128,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1OtstOtpravka_NumOtp: TcxGridDBBandedColumn
         Caption = #1053#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080
         DataBinding.FieldName = 'OtstOtpravka_NumOtp'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 125
+        Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 6
         Position.RowIndex = 0
@@ -154,9 +138,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1OtstOtpravka_otprStationCode: TcxGridDBBandedColumn
         Caption = #1050#1086#1076' '#1089#1090#1072#1085#1094#1080#1080' '#1086#1090#1087#1088#1072#1074#1083#1077#1085#1080#1103
         DataBinding.FieldName = 'OtstOtpravka_otprStationCode'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 125
+        Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 7
         Position.RowIndex = 0
@@ -164,9 +148,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1OtstOtpravka_otprStationName: TcxGridDBBandedColumn
         Caption = #1057#1090#1072#1085#1094#1080#1103' '#1086#1090#1087#1088#1072#1074#1083#1077#1085#1080#1103
         DataBinding.FieldName = 'OtstOtpravka_otprStationName'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 125
+        Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 8
         Position.RowIndex = 0
@@ -174,9 +158,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1OtstOtpravka_otstStationCode: TcxGridDBBandedColumn
         Caption = #1050#1086#1076' '#1089#1090#1072#1085#1094#1080#1080' '#1086#1090#1089#1090#1086#1103
         DataBinding.FieldName = 'OtstOtpravka_otstStationCode'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 125
+        Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 9
         Position.RowIndex = 0
@@ -184,9 +168,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1OtstOtpravka_otstStationName: TcxGridDBBandedColumn
         Caption = #1057#1090#1072#1085#1094#1080#1103' '#1086#1090#1089#1090#1086#1103
         DataBinding.FieldName = 'OtstOtpravka_otstStationName'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 125
+        Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 10
         Position.RowIndex = 0
@@ -194,9 +178,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1OtstOtpravka_DateOtstBegin: TcxGridDBBandedColumn
         Caption = #1044#1072#1090#1072' '#1085#1072#1095#1072#1083#1072' '#1086#1090#1089#1090#1086#1103
         DataBinding.FieldName = 'OtstOtpravka_DateOtstBegin'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 125
+        Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 11
         Position.RowIndex = 0
@@ -204,9 +188,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1OtstOtpravka_DateOtstEnd: TcxGridDBBandedColumn
         Caption = #1044#1072#1090#1072' '#1086#1082#1086#1085#1095#1072#1085#1080#1103' '#1086#1090#1089#1090#1086#1103
         DataBinding.FieldName = 'OtstOtpravka_DateOtstEnd'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 125
+        Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 12
         Position.RowIndex = 0
@@ -214,9 +198,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1OtstOtpravka_KolWag: TcxGridDBBandedColumn
         Caption = #1050#1086#1083#1080#1095#1077#1089#1090#1074#1086' '#1074#1072#1075#1086#1085#1086#1074
         DataBinding.FieldName = 'OtstOtpravka_KolWag'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 125
+        Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 13
         Position.RowIndex = 0
@@ -224,9 +208,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1OtstOtpravka_Skidka: TcxGridDBBandedColumn
         Caption = #1057#1082#1080#1076#1082#1072
         DataBinding.FieldName = 'OtstOtpravka_Skidka'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 125
+        Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 14
         Position.RowIndex = 0
@@ -234,9 +218,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1OtstOtpravka_Wags: TcxGridDBBandedColumn
         Caption = #1053#1086#1084#1077#1088#1072' '#1074#1072#1075#1086#1085#1086#1074
         DataBinding.FieldName = 'OtstOtpravka_Wags'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 125
+        Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 15
         Position.RowIndex = 0
@@ -244,9 +228,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1OtstOtpravka_SelUslWag: TcxGridDBBandedColumn
         Caption = #1055#1088#1080#1079#1085#1072#1082' '#1091#1089#1083#1086#1074#1085#1099#1093' '#1074#1072#1075#1086#1085#1086#1074
         DataBinding.FieldName = 'OtstOtpravka_SelUslWag'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 125
+        Width = 100
         Position.BandIndex = 0
         Position.ColIndex = 16
         Position.RowIndex = 0
@@ -254,9 +238,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1FIO_users_create: TcxGridDBBandedColumn
         Caption = #1054#1090#1074#1077#1090#1089#1090#1074#1077#1085#1085#1099#1081
         DataBinding.FieldName = 'FIO_users_create'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 100
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 17
         Position.RowIndex = 0
@@ -264,9 +248,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1FIO_users_send: TcxGridDBBandedColumn
         Caption = #1054#1090#1087#1088#1072#1074#1080#1083
         DataBinding.FieldName = 'FIO_users_send'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 100
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 18
         Position.RowIndex = 0
@@ -274,9 +258,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1date_send: TcxGridDBBandedColumn
         Caption = #1044#1072#1090#1072' '#1086#1090#1087#1088#1072#1074#1082#1080
         DataBinding.FieldName = 'date_send'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 100
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 19
         Position.RowIndex = 0
@@ -284,9 +268,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1set_error: TcxGridDBBandedColumn
         Caption = #1054#1096#1080#1073#1082#1072
         DataBinding.FieldName = 'set_error'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 100
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 20
         Position.RowIndex = 0
@@ -294,9 +278,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1date_enter: TcxGridDBBandedColumn
         Caption = #1044#1072#1090#1072' '#1089#1086#1079#1076#1072#1085#1080#1103
         DataBinding.FieldName = 'date_enter'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 100
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 21
         Position.RowIndex = 0
@@ -304,9 +288,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1DocNum: TcxGridDBBandedColumn
         Caption = #1053#1086#1084#1077#1088' '#1079#1072#1103#1082#1080
         DataBinding.FieldName = 'DocNum'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 100
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 1
         Position.RowIndex = 0
@@ -314,9 +298,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1Doc_ID: TcxGridDBBandedColumn
         Caption = #8470' '#1079#1072#1087#1080#1089#1080' '#1069#1058#1056#1040#1053
         DataBinding.FieldName = 'Doc_ID'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 100
+        Width = 80
         Position.BandIndex = 0
         Position.ColIndex = 22
         Position.RowIndex = 0
@@ -324,9 +308,9 @@ object fmECPOtstClaim: TfmECPOtstClaim
       object cxGrid1DBBandedTableView1date_viza: TcxGridDBBandedColumn
         Caption = #1044#1072#1090#1072' '#1087#1086#1076#1072#1095#1080' '#1085#1072' '#1089#1086#1075#1083#1072#1089#1086#1074#1072#1085#1080#1077
         DataBinding.FieldName = 'date_viza'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        MinWidth = 25
-        Width = 113
+        Width = 90
         Position.BandIndex = 0
         Position.ColIndex = 23
         Position.RowIndex = 0
@@ -360,7 +344,7 @@ object fmECPOtstClaim: TfmECPOtstClaim
   object dxBarManager1: TdxBarManager
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -15
+    Font.Height = -12
     Font.Name = 'Segoe UI'
     Font.Style = []
     Categories.Strings = (
@@ -377,11 +361,11 @@ object fmECPOtstClaim: TfmECPOtstClaim
     UseSystemFont = True
     Left = 784
     Top = 8
-    PixelsPerInch = 120
+    PixelsPerInch = 96
     DockControlHeights = (
       0
       0
-      32
+      26
       0)
     object dxBarManager1Bar1: TdxBar
       Caption = 'Custom 1'
@@ -7620,12 +7604,12 @@ object fmECPOtstClaim: TfmECPOtstClaim
   object cxStyleRepository1: TcxStyleRepository
     Left = 688
     Top = 8
-    PixelsPerInch = 120
+    PixelsPerInch = 96
     object cxStyle1: TcxStyle
       AssignedValues = [svFont]
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -14
+      Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
     end
@@ -7633,7 +7617,7 @@ object fmECPOtstClaim: TfmECPOtstClaim
       AssignedValues = [svFont]
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -14
+      Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
     end
@@ -7737,6 +7721,6 @@ object fmECPOtstClaim: TfmECPOtstClaim
     UseOwnFont = False
     Left = 296
     Top = 216
-    PixelsPerInch = 120
+    PixelsPerInch = 96
   end
 end

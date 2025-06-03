@@ -2,55 +2,41 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
   Left = 0
   Top = 0
   Caption = #1053#1072#1082#1083#1072#1076#1085#1072#1103' '#1089#1088#1072#1079#1091' '#1085#1072' '#1087#1086#1075#1088#1091#1079#1082#1091
-  ClientHeight = 941
-  ClientWidth = 1195
+  ClientHeight = 753
+  ClientWidth = 956
   Color = clBtnFace
-  Constraints.MinHeight = 975
-  Constraints.MinWidth = 1200
+  Constraints.MinHeight = 780
+  Constraints.MinWidth = 960
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -14
+  Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
   OnClose = FormClose
   OnDestroy = FormDestroy
-  PixelsPerInch = 120
-  TextHeight = 17
+  TextHeight = 13
   object cxPageControl1: TcxPageControl
     Left = 0
-    Top = 651
-    Width = 1195
-    Height = 248
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
+    Top = 521
+    Width = 956
+    Height = 198
     Align = alClient
     TabOrder = 1
     Properties.ActivePage = cxTabSheet4
     Properties.CustomButtons.Buttons = <>
     LookAndFeel.Kind = lfUltraFlat
-    ClientRectBottom = 248
-    ClientRectRight = 1195
-    ClientRectTop = 29
+    ClientRectBottom = 198
+    ClientRectRight = 956
+    ClientRectTop = 24
     object cxTabSheet1: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = #1043#1088#1091#1079#1099
       ImageIndex = 0
-      ExplicitTop = 30
-      ExplicitHeight = 218
+      ExplicitTop = 23
+      ExplicitHeight = 175
       object Splitter1: TSplitter
-        Left = 786
+        Left = 629
         Top = 0
-        Width = 4
-        Height = 218
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Height = 174
         Align = alRight
         Color = 8421631
         ParentColor = False
@@ -58,12 +44,8 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
       object cxGrid1: TcxGrid
         Left = 0
         Top = 0
-        Width = 786
-        Height = 218
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 629
+        Height = 174
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfUltraFlat
@@ -85,9 +67,6 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             end>
           DataController.Summary.SummaryGroups = <>
           DataController.Summary.Options = [soMultipleSelectedRecords]
-          FilterRow.SeparatorWidth = 8
-          FixedDataRows.SeparatorWidth = 8
-          NewItemRow.SeparatorWidth = 8
           OptionsCustomize.ColumnsQuickCustomization = True
           OptionsData.CancelOnExit = False
           OptionsData.Deleting = False
@@ -95,17 +74,11 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           OptionsData.Editing = False
           OptionsData.Inserting = False
           OptionsSelection.MultiSelect = True
-          OptionsView.NavigatorOffset = 63
-          OptionsView.FixedColumnSeparatorWidth = 3
           OptionsView.Footer = True
           OptionsView.GroupByBox = False
           OptionsView.HeaderFilterButtonShowMode = fbmButton
           OptionsView.IndicatorWidth = 15
           OptionsView.BandHeaders = False
-          OptionsView.FixedBandSeparatorWidth = 3
-          Preview.LeftIndent = 25
-          Preview.RightIndent = 6
-          RowLayout.MinValueWidth = 100
           Bands = <
             item
             end>
@@ -113,8 +86,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'id'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 88
+            Width = 70
             Position.BandIndex = 0
             Position.ColIndex = 0
             Position.RowIndex = 0
@@ -123,8 +95,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1043#1088#1091#1079' '#1045#1058#1057#1053#1043
             DataBinding.FieldName = 'freightName'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 1
             Position.RowIndex = 0
@@ -133,8 +104,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1043#1088#1091#1079' '#1045#1058#1057#1053#1043' ('#1082#1086#1076')'
             DataBinding.FieldName = 'freightCode'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 2
             Position.RowIndex = 0
@@ -144,8 +114,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'freightExactName'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 3
             Position.RowIndex = 0
@@ -153,8 +122,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGrid1DBBandedTableView1freightGNGID: TcxGridDBBandedColumn
             DataBinding.FieldName = 'freightGNGID'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -162,8 +130,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGrid1DBBandedTableView1freightGNGID2001: TcxGridDBBandedColumn
             DataBinding.FieldName = 'freightGNGID2001'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -172,8 +139,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1043#1088#1091#1079' '#1043#1053#1043' ('#1082#1086#1076')'
             DataBinding.FieldName = 'freightGNGCode'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 4
             Position.RowIndex = 0
@@ -182,8 +148,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1044#1086#1087'. '#1089#1074#1077#1076#1077#1085#1080#1103' '#1086' '#1075#1088#1091#1079#1077
             DataBinding.FieldName = 'freightAdditional'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 5
             Position.RowIndex = 0
@@ -191,8 +156,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGrid1DBBandedTableView1freightPackTypeID: TcxGridDBBandedColumn
             DataBinding.FieldName = 'freightPackTypeID'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -202,8 +166,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'freightPocketCount'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 6
             Position.RowIndex = 0
@@ -213,8 +176,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'freightPackageCount'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 7
             Position.RowIndex = 0
@@ -223,8 +185,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1052#1072#1089#1089#1072' '#1075#1088#1091#1079#1072
             DataBinding.FieldName = 'freightWeight'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 8
             Position.RowIndex = 0
@@ -234,8 +195,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'freightWeightStdGross'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 9
             Position.RowIndex = 0
@@ -245,8 +205,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'freightWeightStdNet'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 10
             Position.RowIndex = 0
@@ -256,8 +215,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'freightMaxLength'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 11
             Position.RowIndex = 0
@@ -267,8 +225,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'freightMaxWidth'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 12
             Position.RowIndex = 0
@@ -278,8 +235,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'freightMaxHeight'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 13
             Position.RowIndex = 0
@@ -289,8 +245,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'freightSendersMark'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 14
             Position.RowIndex = 0
@@ -298,8 +253,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGrid1DBBandedTableView1freightDangerSignID: TcxGridDBBandedColumn
             DataBinding.FieldName = 'freightDangerSignID'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -307,8 +261,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGrid1DBBandedTableView1freightDangerID: TcxGridDBBandedColumn
             DataBinding.FieldName = 'freightDangerID'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -317,8 +270,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1040#1074#1072#1088#1080#1081#1085#1072#1103' '#1082#1072#1088#1090#1072
             DataBinding.FieldName = 'freightAccidentCard'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 15
             Position.RowIndex = 0
@@ -326,8 +278,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGrid1DBBandedTableView1freightAccidentCardID: TcxGridDBBandedColumn
             DataBinding.FieldName = 'freightAccidentCardID'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -338,26 +289,18 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
         end
       end
       object Panel5: TPanel
-        Left = 790
+        Left = 632
         Top = 0
-        Width = 405
-        Height = 218
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 324
+        Height = 174
         Align = alRight
         BevelOuter = bvNone
         TabOrder = 1
         object cxGrid12: TcxGrid
           Left = 0
           Top = 0
-          Width = 405
-          Height = 218
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Width = 324
+          Height = 174
           Align = alClient
           TabOrder = 0
           LookAndFeel.Kind = lfUltraFlat
@@ -379,9 +322,6 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               end>
             DataController.Summary.SummaryGroups = <>
             DataController.Summary.Options = [soMultipleSelectedRecords]
-            FilterRow.SeparatorWidth = 8
-            FixedDataRows.SeparatorWidth = 8
-            NewItemRow.SeparatorWidth = 8
             OptionsCustomize.ColumnsQuickCustomization = True
             OptionsData.CancelOnExit = False
             OptionsData.Deleting = False
@@ -389,17 +329,11 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             OptionsData.Editing = False
             OptionsData.Inserting = False
             OptionsSelection.MultiSelect = True
-            OptionsView.NavigatorOffset = 63
-            OptionsView.FixedColumnSeparatorWidth = 3
             OptionsView.Footer = True
             OptionsView.GroupByBox = False
             OptionsView.HeaderFilterButtonShowMode = fbmButton
             OptionsView.IndicatorWidth = 15
             OptionsView.BandHeaders = False
-            OptionsView.FixedBandSeparatorWidth = 3
-            Preview.LeftIndent = 25
-            Preview.RightIndent = 6
-            RowLayout.MinValueWidth = 100
             Bands = <
               item
               end>
@@ -407,8 +341,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Caption = #8470' '#1079#1072#1087#1080#1089#1080
               DataBinding.FieldName = 'id'
               HeaderAlignmentVert = vaTop
-              MinWidth = 25
-              Width = 125
+              Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 0
               Position.RowIndex = 0
@@ -416,8 +349,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             object cxGridDBBandedTableView11invFreight_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'invFreight_id'
               HeaderAlignmentVert = vaTop
-              MinWidth = 25
-              Width = 125
+              Width = 100
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
@@ -425,8 +357,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             object cxGridDBBandedTableView11clsTranspClauseID: TcxGridDBBandedColumn
               DataBinding.FieldName = 'clsTranspClauseID'
               HeaderAlignmentVert = vaTop
-              MinWidth = 25
-              Width = 125
+              Width = 100
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
@@ -435,8 +366,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Caption = #1054#1090#1084#1077#1090#1082#1072
               DataBinding.FieldName = 'clsTranspClauseName'
               HeaderAlignmentVert = vaTop
-              MinWidth = 25
-              Width = 125
+              Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 1
               Position.RowIndex = 0
@@ -445,8 +375,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Caption = #1047#1072#1084#1077#1095#1072#1085#1080#1077
               DataBinding.FieldName = 'clsCustomText'
               HeaderAlignmentVert = vaTop
-              MinWidth = 25
-              Width = 125
+              Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 2
               Position.RowIndex = 0
@@ -459,23 +388,15 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
       end
     end
     object cxTabSheet7: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = #1042#1072#1075#1086#1085#1099
       ImageIndex = 6
-      ExplicitTop = 30
-      ExplicitHeight = 218
+      ExplicitTop = 23
+      ExplicitHeight = 175
       object cxGrid10: TcxGrid
         Left = 0
         Top = 0
-        Width = 1195
-        Height = 218
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 956
+        Height = 174
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfUltraFlat
@@ -498,9 +419,6 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             end>
           DataController.Summary.SummaryGroups = <>
           DataController.Summary.Options = [soMultipleSelectedRecords]
-          FilterRow.SeparatorWidth = 8
-          FixedDataRows.SeparatorWidth = 8
-          NewItemRow.SeparatorWidth = 8
           OptionsCustomize.ColumnsQuickCustomization = True
           OptionsData.CancelOnExit = False
           OptionsData.Deleting = False
@@ -508,17 +426,11 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           OptionsData.Editing = False
           OptionsData.Inserting = False
           OptionsSelection.MultiSelect = True
-          OptionsView.NavigatorOffset = 63
-          OptionsView.FixedColumnSeparatorWidth = 3
           OptionsView.Footer = True
           OptionsView.GroupByBox = False
           OptionsView.HeaderFilterButtonShowMode = fbmButton
           OptionsView.IndicatorWidth = 15
           OptionsView.BandHeaders = False
-          OptionsView.FixedBandSeparatorWidth = 3
-          Preview.LeftIndent = 25
-          Preview.RightIndent = 6
-          RowLayout.MinValueWidth = 100
           Bands = <
             item
             end>
@@ -526,8 +438,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'id'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 88
+            Width = 70
             Position.BandIndex = 0
             Position.ColIndex = 0
             Position.RowIndex = 0
@@ -537,8 +448,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carClaimId'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 1
             Position.RowIndex = 0
@@ -548,8 +458,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carClaimOtprNom'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 2
             Position.RowIndex = 0
@@ -559,8 +468,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carClaimPodNum'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 3
             Position.RowIndex = 0
@@ -568,8 +476,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView9carTypeID: TcxGridDBBandedColumn
             DataBinding.FieldName = 'carTypeID'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -578,8 +485,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1053#1086#1084#1077#1088' '#1074#1072#1075#1086#1085#1072
             DataBinding.FieldName = 'carNumber'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 4
             Position.RowIndex = 0
@@ -588,8 +494,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1057#1090#1088#1072#1085#1072'-'#1089#1086#1073#1089#1090#1074#1077#1085#1085#1080#1082' ('#1082#1086#1076')'
             DataBinding.FieldName = 'carOwnerCountryCode'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 7
             Position.RowIndex = 0
@@ -597,8 +502,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView9carOwnerTypeID: TcxGridDBBandedColumn
             DataBinding.FieldName = 'carOwnerTypeID'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -606,8 +510,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView9carOwnerID: TcxGridDBBandedColumn
             DataBinding.FieldName = 'carOwnerID'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -616,8 +519,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1057#1086#1073#1089#1090#1074#1077#1085#1085#1080#1082' '#1054#1050#1055#1054
             DataBinding.FieldName = 'carOwnerOKPO'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 8
             Position.RowIndex = 0
@@ -626,8 +528,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1057#1086#1073#1089#1090#1074#1077#1085#1085#1080#1082
             DataBinding.FieldName = 'carOwnerName'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 9
             Position.RowIndex = 0
@@ -635,8 +536,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView9carTenantID: TcxGridDBBandedColumn
             DataBinding.FieldName = 'carTenantID'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -648,8 +548,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Properties.DisplayFormat = '#,##0.00'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 10
             Position.RowIndex = 0
@@ -660,8 +559,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0.00'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 11
             Position.RowIndex = 0
@@ -672,8 +570,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0.00'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 12
             Position.RowIndex = 0
@@ -684,8 +581,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0.00'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 13
             Position.RowIndex = 0
@@ -695,8 +591,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carFreightGNGCode'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 14
             Position.RowIndex = 0
@@ -705,8 +600,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carFreightGNGID2001'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -717,8 +611,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0.000'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 15
             Position.RowIndex = 0
@@ -730,8 +623,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Properties.DisplayFormat = '#,##0.000'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 16
             Position.RowIndex = 0
@@ -743,8 +635,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Properties.DisplayFormat = '#,##0.000'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 17
             Position.RowIndex = 0
@@ -756,8 +647,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Properties.DisplayFormat = '#,##0.000'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 18
             Position.RowIndex = 0
@@ -769,8 +659,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Properties.DisplayFormat = '#,##0.000'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 19
             Position.RowIndex = 0
@@ -780,8 +669,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carAddDevWithGoods'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 20
             Position.RowIndex = 0
@@ -790,8 +678,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1056#1072#1085#1077#1077' '#1087#1077#1088#1077#1074#1086#1079#1080#1074#1096#1080#1081#1089#1103' '#1075#1088#1091#1079' ('#1082#1086#1076')'
             DataBinding.FieldName = 'carPriorFreightCode'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 199
+            Width = 159
             Position.BandIndex = 0
             Position.ColIndex = 5
             Position.RowIndex = 0
@@ -799,8 +686,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView9carPriorFreightName: TcxGridDBBandedColumn
             Caption = #1056#1072#1085#1077#1077' '#1087#1077#1088#1077#1074#1086#1079#1080#1074#1096#1080#1081#1089#1103' '#1075#1088#1091#1079
             DataBinding.FieldName = 'carPriorFreightName'
-            MinWidth = 25
-            Width = 199
+            Width = 159
             Position.BandIndex = 0
             Position.ColIndex = 6
             Position.RowIndex = 0
@@ -810,8 +696,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carOutsizeCode'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 21
             Position.RowIndex = 0
@@ -821,8 +706,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carFrameWeight'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 22
             Position.RowIndex = 0
@@ -832,8 +716,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carFrameWagNum'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 23
             Position.RowIndex = 0
@@ -843,8 +726,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carTopHeight'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 24
             Position.RowIndex = 0
@@ -854,8 +736,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carMainShtabQuantity'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 25
             Position.RowIndex = 0
@@ -865,8 +746,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carMainShtabHeight'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 26
             Position.RowIndex = 0
@@ -876,8 +756,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carHeadShtabQuantity'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 27
             Position.RowIndex = 0
@@ -887,8 +766,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carLiquidTemperature'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 28
             Position.RowIndex = 0
@@ -898,8 +776,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carLiquidHeight'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 29
             Position.RowIndex = 0
@@ -909,8 +786,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carLiquidDensity'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 30
             Position.RowIndex = 0
@@ -918,10 +794,10 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView9carLiquidVolume: TcxGridDBBandedColumn
             Caption = #1054#1073#1098#1077#1084
             DataBinding.FieldName = 'carLiquidVolume '
+            DataBinding.IsNullValueType = True
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 31
             Position.RowIndex = 0
@@ -930,8 +806,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1058#1080#1087' '#1094#1080#1089#1090#1077#1088#1085#1099
             DataBinding.FieldName = 'carTankType'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 32
             Position.RowIndex = 0
@@ -941,8 +816,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carRefNum'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 33
             Position.RowIndex = 0
@@ -952,8 +826,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carRefCount'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 34
             Position.RowIndex = 0
@@ -963,8 +836,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carRolls'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 35
             Position.RowIndex = 0
@@ -974,8 +846,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carConnectCode'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 36
             Position.RowIndex = 0
@@ -985,8 +856,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'carIsCover'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 37
             Position.RowIndex = 0
@@ -995,8 +865,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #8470' '#1079#1072#1087#1080#1089#1080' '#1088#1077#1081#1089#1072' '#1080#1079' '#1076#1080#1089#1083#1086#1082#1072#1094#1080#1080
             DataBinding.FieldName = 'fact_track_trip_id'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 38
             Position.RowIndex = 0
@@ -1004,8 +873,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView9index_train: TcxGridDBBandedColumn
             Caption = #1048#1085#1076#1077#1082#1089' '#1087#1086#1077#1079#1076#1072
             DataBinding.FieldName = 'index_train'
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 39
             Position.RowIndex = 0
@@ -1013,7 +881,6 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView9contract_id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'contract_id'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -1022,8 +889,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1050#1083#1080#1077#1085#1090
             DataBinding.FieldName = 'firm_customer_name'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 100
+            Width = 80
             Position.BandIndex = 0
             Position.ColIndex = 40
             Position.RowIndex = 0
@@ -1031,8 +897,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView9fact_track_node_end_cod: TcxGridDBBandedColumn
             Caption = #1057#1090'. '#1085#1072#1079#1085'. '#1076#1080#1089#1083#1086#1082#1072#1094#1080#1103' ('#1050#1086#1076')'
             DataBinding.FieldName = 'fact_track_node_end_cod'
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 41
             Position.RowIndex = 0
@@ -1040,8 +905,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView9fact_track_node_end_name: TcxGridDBBandedColumn
             Caption = #1057#1090'. '#1085#1072#1079#1085'. '#1076#1080#1089#1083#1086#1082#1072#1094#1080#1103
             DataBinding.FieldName = 'fact_track_node_end_name'
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 42
             Position.RowIndex = 0
@@ -1053,23 +917,15 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
       end
     end
     object cxTabSheet2: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = #1052#1072#1088#1096#1088#1091#1090' '#1089#1083#1077#1076#1086#1074#1072#1085#1080#1103
       ImageIndex = 1
-      ExplicitTop = 30
-      ExplicitHeight = 218
+      ExplicitTop = 23
+      ExplicitHeight = 175
       object cxGrid9: TcxGrid
         Left = 0
         Top = 0
-        Width = 1195
-        Height = 218
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 956
+        Height = 174
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfUltraFlat
@@ -1091,9 +947,6 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             end>
           DataController.Summary.SummaryGroups = <>
           DataController.Summary.Options = [soMultipleSelectedRecords]
-          FilterRow.SeparatorWidth = 8
-          FixedDataRows.SeparatorWidth = 8
-          NewItemRow.SeparatorWidth = 8
           OptionsCustomize.ColumnsQuickCustomization = True
           OptionsData.CancelOnExit = False
           OptionsData.Deleting = False
@@ -1101,17 +954,11 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           OptionsData.Editing = False
           OptionsData.Inserting = False
           OptionsSelection.MultiSelect = True
-          OptionsView.NavigatorOffset = 63
-          OptionsView.FixedColumnSeparatorWidth = 3
           OptionsView.Footer = True
           OptionsView.GroupByBox = False
           OptionsView.HeaderFilterButtonShowMode = fbmButton
           OptionsView.IndicatorWidth = 15
           OptionsView.BandHeaders = False
-          OptionsView.FixedBandSeparatorWidth = 3
-          Preview.LeftIndent = 25
-          Preview.RightIndent = 6
-          RowLayout.MinValueWidth = 100
           Bands = <
             item
             end>
@@ -1119,8 +966,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'id'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 88
+            Width = 70
             Position.BandIndex = 0
             Position.ColIndex = 0
             Position.RowIndex = 0
@@ -1130,8 +976,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'distCountryCode'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 1
             Position.RowIndex = 0
@@ -1140,8 +985,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1057#1090#1072#1085#1094#1080#1103' ('#1082#1086#1076')'
             DataBinding.FieldName = 'distStationCode'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 2
             Position.RowIndex = 0
@@ -1151,8 +995,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'distPortCode'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 4
             Position.RowIndex = 0
@@ -1162,8 +1005,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'distLoadWay'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 5
             Position.RowIndex = 0
@@ -1171,8 +1013,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView8distTrackTypeID: TcxGridDBBandedColumn
             DataBinding.FieldName = 'distTrackTypeID'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -1180,8 +1021,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView8distTranspTypeID: TcxGridDBBandedColumn
             DataBinding.FieldName = 'distTranspTypeID'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -1190,8 +1030,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1050#1088#1072#1090#1095#1072#1081#1096#1077#1077' '#1088#1072#1089#1089#1090#1086#1103#1085#1080#1077
             DataBinding.FieldName = 'distMinWay'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 190
+            Width = 152
             Position.BandIndex = 0
             Position.ColIndex = 6
             Position.RowIndex = 0
@@ -1201,8 +1040,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'distRecipOKPO'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 7
             Position.RowIndex = 0
@@ -1212,8 +1050,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'distRecipName'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 8
             Position.RowIndex = 0
@@ -1223,8 +1060,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'distRecipAddress'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 9
             Position.RowIndex = 0
@@ -1234,8 +1070,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'distPayerCode'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 10
             Position.RowIndex = 0
@@ -1245,8 +1080,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'distPayerName'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 11
             Position.RowIndex = 0
@@ -1256,8 +1090,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'distFRWSubCode'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 12
             Position.RowIndex = 0
@@ -1267,8 +1100,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'distSign'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 13
             Position.RowIndex = 0
@@ -1278,8 +1110,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'distCountryName'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 14
             Position.RowIndex = 0
@@ -1288,8 +1119,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1057#1090#1072#1085#1094#1080#1103
             DataBinding.FieldName = 'distStationName'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 3
             Position.RowIndex = 0
@@ -1299,8 +1129,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'distPortName'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 15
             Position.RowIndex = 0
@@ -1310,8 +1139,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'distTrackTypeName'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 16
             Position.RowIndex = 0
@@ -1321,8 +1149,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             DataBinding.FieldName = 'distTranspTypeName'
             Visible = False
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 17
             Position.RowIndex = 0
@@ -1331,8 +1158,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1060#1072#1082#1090#1080#1095#1077#1089#1082#1080#1081' '#1087#1077#1088#1077#1074#1086#1079#1095#1080#1082
             DataBinding.FieldName = 'distCarrierName'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 208
+            Width = 166
             Position.BandIndex = 0
             Position.ColIndex = 18
             Position.RowIndex = 0
@@ -1341,8 +1167,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1057#1090#1088#1072#1085#1072' '#1080#1085#1092#1088#1072#1089#1090#1088#1091#1082#1090#1091#1088#1099
             DataBinding.FieldName = 'distStationCountryName'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 176
+            Width = 141
             Position.BandIndex = 0
             Position.ColIndex = 19
             Position.RowIndex = 0
@@ -1354,23 +1179,15 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
       end
     end
     object cxTabSheet3: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1099#1077' '#1086#1090#1084#1077#1090#1082#1080
       ImageIndex = 2
-      ExplicitTop = 30
-      ExplicitHeight = 218
+      ExplicitTop = 23
+      ExplicitHeight = 175
       object cxGrid8: TcxGrid
         Left = 0
         Top = 0
-        Width = 1195
-        Height = 218
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 956
+        Height = 174
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfUltraFlat
@@ -1392,9 +1209,6 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             end>
           DataController.Summary.SummaryGroups = <>
           DataController.Summary.Options = [soMultipleSelectedRecords]
-          FilterRow.SeparatorWidth = 8
-          FixedDataRows.SeparatorWidth = 8
-          NewItemRow.SeparatorWidth = 8
           OptionsCustomize.ColumnsQuickCustomization = True
           OptionsData.CancelOnExit = False
           OptionsData.Deleting = False
@@ -1402,17 +1216,11 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           OptionsData.Editing = False
           OptionsData.Inserting = False
           OptionsSelection.MultiSelect = True
-          OptionsView.NavigatorOffset = 63
-          OptionsView.FixedColumnSeparatorWidth = 3
           OptionsView.Footer = True
           OptionsView.GroupByBox = False
           OptionsView.HeaderFilterButtonShowMode = fbmButton
           OptionsView.IndicatorWidth = 15
           OptionsView.BandHeaders = False
-          OptionsView.FixedBandSeparatorWidth = 3
-          Preview.LeftIndent = 25
-          Preview.RightIndent = 6
-          RowLayout.MinValueWidth = 100
           Bands = <
             item
             end>
@@ -1420,8 +1228,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'id'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 0
             Position.RowIndex = 0
@@ -1429,8 +1236,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView7spcTranspClauseID: TcxGridDBBandedColumn
             DataBinding.FieldName = 'spcTranspClauseID'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -1439,8 +1245,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1047#1072#1084#1077#1095#1072#1085#1080#1077
             DataBinding.FieldName = 'spcCustomText'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 275
+            Width = 220
             Position.BandIndex = 0
             Position.ColIndex = 1
             Position.RowIndex = 0
@@ -1449,8 +1254,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1054#1090#1084#1077#1090#1082#1072
             DataBinding.FieldName = 'spcTranspClauseName'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 323
+            Width = 258
             Position.BandIndex = 0
             Position.ColIndex = 2
             Position.RowIndex = 0
@@ -1459,8 +1263,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1053#1086#1084#1077#1088
             DataBinding.FieldName = 'spcNumber'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 3
             Position.RowIndex = 0
@@ -1469,8 +1272,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1044#1072#1090#1072
             DataBinding.FieldName = 'spcDate'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 4
             Position.RowIndex = 0
@@ -1479,8 +1281,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1053#1086#1084#1077#1088' '#1079#1072#1103#1074#1082#1080' '#1085#1072' '#1086#1090#1089#1090#1086#1081
             DataBinding.FieldName = 'spcClaimNumber'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 100
+            Width = 80
             Position.BandIndex = 0
             Position.ColIndex = 5
             Position.RowIndex = 0
@@ -1489,8 +1290,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1053#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080' '
             DataBinding.FieldName = 'spcNumOtp'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 100
+            Width = 80
             Position.BandIndex = 0
             Position.ColIndex = 6
             Position.RowIndex = 0
@@ -1502,23 +1302,15 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
       end
     end
     object cxTabSheet4: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = #1055#1088#1080#1083#1072#1075#1072#1077#1084#1099#1077' '#1080' '#1087#1088#1077#1076#1098#1103#1074#1083#1103#1077#1084#1099#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1099
       ImageIndex = 3
-      ExplicitTop = 30
-      ExplicitHeight = 218
+      ExplicitTop = 23
+      ExplicitHeight = 175
       object cxGrid7: TcxGrid
         Left = 0
         Top = 0
-        Width = 1195
-        Height = 218
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 956
+        Height = 174
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfUltraFlat
@@ -1540,9 +1332,6 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             end>
           DataController.Summary.SummaryGroups = <>
           DataController.Summary.Options = [soMultipleSelectedRecords]
-          FilterRow.SeparatorWidth = 8
-          FixedDataRows.SeparatorWidth = 8
-          NewItemRow.SeparatorWidth = 8
           OptionsCustomize.ColumnsQuickCustomization = True
           OptionsData.CancelOnExit = False
           OptionsData.Deleting = False
@@ -1550,17 +1339,11 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           OptionsData.Editing = False
           OptionsData.Inserting = False
           OptionsSelection.MultiSelect = True
-          OptionsView.NavigatorOffset = 63
-          OptionsView.FixedColumnSeparatorWidth = 3
           OptionsView.Footer = True
           OptionsView.GroupByBox = False
           OptionsView.HeaderFilterButtonShowMode = fbmButton
           OptionsView.IndicatorWidth = 15
           OptionsView.BandHeaders = False
-          OptionsView.FixedBandSeparatorWidth = 3
-          Preview.LeftIndent = 25
-          Preview.RightIndent = 6
-          RowLayout.MinValueWidth = 100
           Bands = <
             item
             end>
@@ -1568,8 +1351,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'id'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 0
             Position.RowIndex = 0
@@ -1577,8 +1359,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView6docTypeID: TcxGridDBBandedColumn
             DataBinding.FieldName = 'docTypeID'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -1587,8 +1368,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1044#1086#1082#1091#1084#1077#1085#1090
             DataBinding.FieldName = 'docTypeName'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 1
             Position.RowIndex = 0
@@ -1597,8 +1377,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #8470' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
             DataBinding.FieldName = 'docNumber'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 2
             Position.RowIndex = 0
@@ -1607,8 +1386,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1044#1072#1090#1072' '#1074#1099#1076#1072#1095#1080
             DataBinding.FieldName = 'docDate'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 3
             Position.RowIndex = 0
@@ -1617,8 +1395,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = 'C'#1088#1086#1082' '#1090#1088#1072#1085#1089#1087#1086#1088#1090#1072#1073#1077#1083#1100#1085#1086#1089#1090#1080
             DataBinding.FieldName = 'dayCount'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 4
             Position.RowIndex = 0
@@ -1626,8 +1403,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView6DocumentID: TcxGridDBBandedColumn
             Caption = #8470' '#1079#1072#1087#1080#1089#1080' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
             DataBinding.FieldName = 'DocumentID'
-            MinWidth = 25
-            Width = 100
+            Width = 80
             Position.BandIndex = 0
             Position.ColIndex = 5
             Position.RowIndex = 0
@@ -1639,23 +1415,15 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
       end
     end
     object cxTabSheet5: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = #1055#1077#1088#1077#1074#1086#1079#1086#1095#1085#1099#1077' '#1089#1088#1077#1076#1089#1090#1074#1072
       ImageIndex = 4
-      ExplicitTop = 30
-      ExplicitHeight = 218
+      ExplicitTop = 23
+      ExplicitHeight = 175
       object cxGrid6: TcxGrid
         Left = 0
         Top = 0
-        Width = 1195
-        Height = 218
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 956
+        Height = 174
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfUltraFlat
@@ -1676,9 +1444,6 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             end>
           DataController.Summary.SummaryGroups = <>
           DataController.Summary.Options = [soMultipleSelectedRecords]
-          FilterRow.SeparatorWidth = 8
-          FixedDataRows.SeparatorWidth = 8
-          NewItemRow.SeparatorWidth = 8
           OptionsCustomize.ColumnsQuickCustomization = True
           OptionsData.CancelOnExit = False
           OptionsData.Deleting = False
@@ -1686,17 +1451,11 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           OptionsData.Editing = False
           OptionsData.Inserting = False
           OptionsSelection.MultiSelect = True
-          OptionsView.NavigatorOffset = 63
-          OptionsView.FixedColumnSeparatorWidth = 3
           OptionsView.Footer = True
           OptionsView.GroupByBox = False
           OptionsView.HeaderFilterButtonShowMode = fbmButton
           OptionsView.IndicatorWidth = 15
           OptionsView.BandHeaders = False
-          OptionsView.FixedBandSeparatorWidth = 3
-          Preview.LeftIndent = 25
-          Preview.RightIndent = 6
-          RowLayout.MinValueWidth = 100
           Bands = <
             item
             end>
@@ -1704,8 +1463,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'id'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 0
             Position.RowIndex = 0
@@ -1713,8 +1471,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView5devTypeID: TcxGridDBBandedColumn
             DataBinding.FieldName = 'devTypeID'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -1723,8 +1480,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1058#1080#1087' '#1087#1077#1088#1077#1074#1086#1079#1086#1095#1085#1086#1075#1086' '#1087#1088#1080#1089#1087#1086#1089#1086#1073#1083#1077#1085#1080#1103
             DataBinding.FieldName = 'devTypeName'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 1
             Position.RowIndex = 0
@@ -1733,8 +1489,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1053#1086#1084#1077#1088
             DataBinding.FieldName = 'devNumber'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 2
             Position.RowIndex = 0
@@ -1743,8 +1498,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1057#1090#1088#1072#1085#1072'-'#1089#1086#1073#1089#1090#1074#1077#1085#1085#1080#1082' ('#1082#1086#1076')'
             DataBinding.FieldName = 'devOwnerCountryCode'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 3
             Position.RowIndex = 0
@@ -1752,8 +1506,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView5devOwnerTypeID: TcxGridDBBandedColumn
             DataBinding.FieldName = 'devOwnerTypeID'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -1762,8 +1515,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1057#1086#1073#1089#1090#1074#1077#1085#1085#1080#1082' '#1054#1050#1055#1054
             DataBinding.FieldName = 'devOwnerOKPO'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 4
             Position.RowIndex = 0
@@ -1772,8 +1524,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1057#1086#1073#1089#1090#1074#1077#1085#1085#1080#1082
             DataBinding.FieldName = 'devOwnerName'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 5
             Position.RowIndex = 0
@@ -1782,8 +1533,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1050#1086#1083#1080#1095#1077#1089#1090#1074#1086
             DataBinding.FieldName = 'devQuantity'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 6
             Position.RowIndex = 0
@@ -1792,8 +1542,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1055#1086#1076#1083#1077#1078#1080#1090' '#1074#1086#1079#1074#1088#1072#1090#1091
             DataBinding.FieldName = 'devReturn'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 7
             Position.RowIndex = 0
@@ -1802,8 +1551,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1057#1090#1088#1072#1085#1072'-'#1089#1086#1073#1089#1090#1074#1077#1085#1085#1080#1082
             DataBinding.FieldName = 'devOwnerCountryName'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 8
             Position.RowIndex = 0
@@ -1812,8 +1560,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1058#1080#1087' '#1089#1086#1073#1089#1090#1074#1077#1085#1085#1086#1089#1090#1080
             DataBinding.FieldName = 'devOwnerTypeName'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 9
             Position.RowIndex = 0
@@ -1825,23 +1572,15 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
       end
     end
     object cxTabSheet6: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = #1050#1086#1085#1090#1077#1081#1085#1077#1088#1099
       ImageIndex = 5
-      ExplicitTop = 30
-      ExplicitHeight = 218
+      ExplicitTop = 23
+      ExplicitHeight = 175
       object cxGrid11: TcxGrid
         Left = 0
         Top = 0
-        Width = 1195
-        Height = 218
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 956
+        Height = 174
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfUltraFlat
@@ -1863,9 +1602,6 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             end>
           DataController.Summary.SummaryGroups = <>
           DataController.Summary.Options = [soMultipleSelectedRecords]
-          FilterRow.SeparatorWidth = 8
-          FixedDataRows.SeparatorWidth = 8
-          NewItemRow.SeparatorWidth = 8
           OptionsCustomize.ColumnsQuickCustomization = True
           OptionsData.CancelOnExit = False
           OptionsData.Deleting = False
@@ -1873,17 +1609,11 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           OptionsData.Editing = False
           OptionsData.Inserting = False
           OptionsSelection.MultiSelect = True
-          OptionsView.NavigatorOffset = 63
-          OptionsView.FixedColumnSeparatorWidth = 3
           OptionsView.Footer = True
           OptionsView.GroupByBox = False
           OptionsView.HeaderFilterButtonShowMode = fbmButton
           OptionsView.IndicatorWidth = 15
           OptionsView.BandHeaders = False
-          OptionsView.FixedBandSeparatorWidth = 3
-          Preview.LeftIndent = 25
-          Preview.RightIndent = 6
-          RowLayout.MinValueWidth = 100
           Bands = <
             item
             end>
@@ -1891,8 +1621,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'id'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 0
             Position.RowIndex = 0
@@ -1901,8 +1630,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1053#1086#1084#1077#1088' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1072
             DataBinding.FieldName = 'contNumber'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 1
             Position.RowIndex = 0
@@ -1911,8 +1639,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1053#1086#1084#1077#1088' '#1074#1072#1075#1086#1085#1072
             DataBinding.FieldName = 'contCarOrder'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 2
             Position.RowIndex = 0
@@ -1921,8 +1648,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1058#1086#1085#1085#1072#1078#1085#1086#1089#1090#1100' '#1082#1086#1085#1090'.'
             DataBinding.FieldName = 'contTonnage'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 3
             Position.RowIndex = 0
@@ -1931,8 +1657,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1058#1080#1087' '#1082#1088#1091#1087#1085#1086#1090#1086#1085#1085#1072#1078#1085#1086#1075#1086' '#1082#1086#1085#1090
             DataBinding.FieldName = 'contTypeBig'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 4
             Position.RowIndex = 0
@@ -1941,8 +1666,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1056#1072#1079#1084#1077#1088' '#1082#1088#1091#1087#1085#1086#1090#1086#1085#1085#1072#1078#1085#1086#1075#1086' '#1082#1086#1085#1090
             DataBinding.FieldName = 'contSizeBig'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 5
             Position.RowIndex = 0
@@ -1951,8 +1675,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1052#1072#1089#1089#1099' '#1074' '#1082#1075': '#1090#1072#1088#1099
             DataBinding.FieldName = 'contWeightDep'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 6
             Position.RowIndex = 0
@@ -1961,8 +1684,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1052#1072#1089#1089#1099' '#1074' '#1082#1075': '#1085#1077#1090#1090#1086
             DataBinding.FieldName = 'contWeightNet'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 7
             Position.RowIndex = 0
@@ -1971,8 +1693,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1050#1086#1083#1080#1095#1077#1089#1090#1074#1086' '#1084#1077#1089#1090
             DataBinding.FieldName = 'contPlacesCount'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 8
             Position.RowIndex = 0
@@ -1981,8 +1702,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1054#1073#1098#1077#1084
             DataBinding.FieldName = 'contVolume'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 9
             Position.RowIndex = 0
@@ -1991,8 +1711,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1057#1090#1088#1072#1085#1072'-'#1089#1086#1073#1089#1090#1074#1077#1085#1085#1080#1082' ('#1082#1086#1076')'
             DataBinding.FieldName = 'contOwnerCountryCode'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 10
             Position.RowIndex = 0
@@ -2001,8 +1720,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1057#1090#1088#1072#1085#1072'-'#1089#1086#1073#1089#1090#1074#1077#1085#1085#1080#1082
             DataBinding.FieldName = 'contOwnerCountryName'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 11
             Position.RowIndex = 0
@@ -2010,8 +1728,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView10contOwnerTypeID: TcxGridDBBandedColumn
             DataBinding.FieldName = 'contOwnerTypeID'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -2020,8 +1737,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1058#1080#1087' '#1089#1086#1073#1089#1090#1074#1077#1085#1085#1086#1089#1090#1080
             DataBinding.FieldName = 'contOwnerTypeName'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 12
             Position.RowIndex = 0
@@ -2029,8 +1745,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView10contOwnerId: TcxGridDBBandedColumn
             DataBinding.FieldName = 'contOwnerId'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -2039,8 +1754,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1057#1086#1073#1089#1090#1074#1077#1085#1085#1080#1082' '#1054#1050#1055#1054
             DataBinding.FieldName = 'contOwnerOKPO'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 13
             Position.RowIndex = 0
@@ -2049,8 +1763,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1057#1086#1073#1089#1090#1074#1077#1085#1085#1080#1082
             DataBinding.FieldName = 'contOwnerName'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 14
             Position.RowIndex = 0
@@ -2062,23 +1775,15 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
       end
     end
     object cxTabSheet8: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = #1056#1077#1072#1083#1100#1085#1099#1081' '#1074#1077#1089' '#1075#1088#1091#1079#1072
       ImageIndex = 7
-      ExplicitTop = 30
-      ExplicitHeight = 218
+      ExplicitTop = 23
+      ExplicitHeight = 175
       object cxGrid5: TcxGrid
         Left = 0
         Top = 0
-        Width = 1195
-        Height = 218
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 956
+        Height = 174
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfUltraFlat
@@ -2100,9 +1805,6 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             end>
           DataController.Summary.SummaryGroups = <>
           DataController.Summary.Options = [soMultipleSelectedRecords]
-          FilterRow.SeparatorWidth = 8
-          FixedDataRows.SeparatorWidth = 8
-          NewItemRow.SeparatorWidth = 8
           OptionsCustomize.ColumnsQuickCustomization = True
           OptionsData.CancelOnExit = False
           OptionsData.Deleting = False
@@ -2110,25 +1812,18 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           OptionsData.Editing = False
           OptionsData.Inserting = False
           OptionsSelection.MultiSelect = True
-          OptionsView.NavigatorOffset = 63
-          OptionsView.FixedColumnSeparatorWidth = 3
           OptionsView.Footer = True
           OptionsView.GroupByBox = False
           OptionsView.HeaderFilterButtonShowMode = fbmButton
           OptionsView.IndicatorWidth = 15
           OptionsView.BandHeaders = False
-          OptionsView.FixedBandSeparatorWidth = 3
-          Preview.LeftIndent = 25
-          Preview.RightIndent = 6
-          RowLayout.MinValueWidth = 100
           Bands = <
             item
             end>
           object cxGridDBBandedTableView4id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'id'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 0
             Position.RowIndex = 0
@@ -2137,8 +1832,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1043#1088#1091#1079' '#1045#1058#1057#1053#1043' ('#1082#1086#1076')'
             DataBinding.FieldName = 'freightCode'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 1
             Position.RowIndex = 0
@@ -2147,8 +1841,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1043#1088#1091#1079' '#1045#1058#1057#1053#1043
             DataBinding.FieldName = 'freightName'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 2
             Position.RowIndex = 0
@@ -2157,8 +1850,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1055#1083#1072#1085#1086#1074#1099#1081' '#1074#1077#1089
             DataBinding.FieldName = 'freightWeight'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 3
             Position.RowIndex = 0
@@ -2167,8 +1859,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1056#1077#1072#1083#1100#1085#1099#1081' '#1074#1077#1089
             DataBinding.FieldName = 'freightRealWeight'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 4
             Position.RowIndex = 0
@@ -2180,23 +1871,15 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
       end
     end
     object cxTabSheet9: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = #1058#1072#1088#1080#1092#1085#1099#1077' '#1086#1090#1084#1077#1090#1082#1080' '#1079#1072' '#1086#1090#1087#1088#1072#1074#1082#1091
       ImageIndex = 8
-      ExplicitTop = 30
-      ExplicitHeight = 218
+      ExplicitTop = 23
+      ExplicitHeight = 175
       object cxGrid4: TcxGrid
         Left = 0
         Top = 0
-        Width = 1195
-        Height = 218
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 956
+        Height = 174
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfUltraFlat
@@ -2218,9 +1901,6 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             end>
           DataController.Summary.SummaryGroups = <>
           DataController.Summary.Options = [soMultipleSelectedRecords]
-          FilterRow.SeparatorWidth = 8
-          FixedDataRows.SeparatorWidth = 8
-          NewItemRow.SeparatorWidth = 8
           OptionsCustomize.ColumnsQuickCustomization = True
           OptionsData.CancelOnExit = False
           OptionsData.Deleting = False
@@ -2228,17 +1908,11 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           OptionsData.Editing = False
           OptionsData.Inserting = False
           OptionsSelection.MultiSelect = True
-          OptionsView.NavigatorOffset = 63
-          OptionsView.FixedColumnSeparatorWidth = 3
           OptionsView.Footer = True
           OptionsView.GroupByBox = False
           OptionsView.HeaderFilterButtonShowMode = fbmButton
           OptionsView.IndicatorWidth = 15
           OptionsView.BandHeaders = False
-          OptionsView.FixedBandSeparatorWidth = 3
-          Preview.LeftIndent = 25
-          Preview.RightIndent = 6
-          RowLayout.MinValueWidth = 100
           Bands = <
             item
             end>
@@ -2246,8 +1920,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'id'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 0
             Position.RowIndex = 0
@@ -2255,8 +1928,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView3transpClauseId: TcxGridDBBandedColumn
             DataBinding.FieldName = 'transpClauseId'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -2265,8 +1937,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1054#1090#1084#1077#1090#1082#1072
             DataBinding.FieldName = 'transpClauseName'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 1
             Position.RowIndex = 0
@@ -2275,8 +1946,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1047#1072#1084#1077#1095#1072#1085#1080#1077
             DataBinding.FieldName = 'transpClauseCustomText'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 2
             Position.RowIndex = 0
@@ -2288,23 +1958,15 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
       end
     end
     object cxTabSheet10: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = #1054#1089#1086#1073#1099#1077' '#1091#1089#1083#1086#1074#1080#1103
       ImageIndex = 9
-      ExplicitTop = 30
-      ExplicitHeight = 218
+      ExplicitTop = 23
+      ExplicitHeight = 175
       object cxGrid3: TcxGrid
         Left = 0
         Top = 0
-        Width = 1195
-        Height = 218
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 956
+        Height = 174
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfUltraFlat
@@ -2326,9 +1988,6 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             end>
           DataController.Summary.SummaryGroups = <>
           DataController.Summary.Options = [soMultipleSelectedRecords]
-          FilterRow.SeparatorWidth = 8
-          FixedDataRows.SeparatorWidth = 8
-          NewItemRow.SeparatorWidth = 8
           OptionsCustomize.ColumnsQuickCustomization = True
           OptionsData.CancelOnExit = False
           OptionsData.Deleting = False
@@ -2336,25 +1995,18 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           OptionsData.Editing = False
           OptionsData.Inserting = False
           OptionsSelection.MultiSelect = True
-          OptionsView.NavigatorOffset = 63
-          OptionsView.FixedColumnSeparatorWidth = 3
           OptionsView.Footer = True
           OptionsView.GroupByBox = False
           OptionsView.HeaderFilterButtonShowMode = fbmButton
           OptionsView.IndicatorWidth = 15
           OptionsView.BandHeaders = False
-          OptionsView.FixedBandSeparatorWidth = 3
-          Preview.LeftIndent = 25
-          Preview.RightIndent = 6
-          RowLayout.MinValueWidth = 100
           Bands = <
             item
             end>
           object cxGridDBBandedTableView2id: TcxGridDBBandedColumn
             DataBinding.FieldName = 'id'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 0
             Position.RowIndex = 0
@@ -2362,8 +2014,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           object cxGridDBBandedTableView2cndClauseId: TcxGridDBBandedColumn
             DataBinding.FieldName = 'cndClauseId'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
@@ -2372,8 +2023,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1054#1089#1086#1073#1072#1103' '#1086#1090#1084#1077#1090#1082#1072
             DataBinding.FieldName = 'cndClauseName'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 1
             Position.RowIndex = 0
@@ -2382,8 +2032,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1047#1072#1084#1077#1095#1072#1085#1080#1077
             DataBinding.FieldName = 'cndClauseCustomText'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 2
             Position.RowIndex = 0
@@ -2392,8 +2041,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1043#1088#1091#1079' '#1087#1086' '#1045#1058#1057#1053#1043' ('#1082#1086#1076')'
             DataBinding.FieldName = 'cndFreightCode'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 3
             Position.RowIndex = 0
@@ -2402,8 +2050,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1043#1088#1091#1079' '#1087#1086' '#1045#1058#1057#1053#1043
             DataBinding.FieldName = 'cndFreightName'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 4
             Position.RowIndex = 0
@@ -2415,23 +2062,15 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
       end
     end
     object cxTabSheet11: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = #1055#1088#1086#1074#1086#1076#1085#1080#1082#1080' '#1085#1072' '#1085#1072#1082#1083#1072#1076#1085#1091#1102
       ImageIndex = 10
-      ExplicitTop = 30
-      ExplicitHeight = 218
+      ExplicitTop = 23
+      ExplicitHeight = 175
       object cxGrid2: TcxGrid
         Left = 0
         Top = 0
-        Width = 1195
-        Height = 218
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 956
+        Height = 174
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfUltraFlat
@@ -2453,9 +2092,6 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             end>
           DataController.Summary.SummaryGroups = <>
           DataController.Summary.Options = [soMultipleSelectedRecords]
-          FilterRow.SeparatorWidth = 8
-          FixedDataRows.SeparatorWidth = 8
-          NewItemRow.SeparatorWidth = 8
           OptionsCustomize.ColumnsQuickCustomization = True
           OptionsData.CancelOnExit = False
           OptionsData.Deleting = False
@@ -2463,17 +2099,11 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           OptionsData.Editing = False
           OptionsData.Inserting = False
           OptionsSelection.MultiSelect = True
-          OptionsView.NavigatorOffset = 63
-          OptionsView.FixedColumnSeparatorWidth = 3
           OptionsView.Footer = True
           OptionsView.GroupByBox = False
           OptionsView.HeaderFilterButtonShowMode = fbmButton
           OptionsView.IndicatorWidth = 15
           OptionsView.BandHeaders = False
-          OptionsView.FixedBandSeparatorWidth = 3
-          Preview.LeftIndent = 25
-          Preview.RightIndent = 6
-          RowLayout.MinValueWidth = 100
           Bands = <
             item
             end>
@@ -2481,8 +2111,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #8470' '#1079#1072#1087#1080#1089#1080
             DataBinding.FieldName = 'id'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 0
             Position.RowIndex = 0
@@ -2491,8 +2120,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1060#1048#1054' '#1087#1088#1086#1074#1086#1076#1085#1080#1082#1072
             DataBinding.FieldName = 'guideFIO'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 1
             Position.RowIndex = 0
@@ -2501,8 +2129,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1057#1077#1088#1080#1103' '#1087#1072#1089#1087#1086#1088#1090#1072
             DataBinding.FieldName = 'guidePassportSer'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 2
             Position.RowIndex = 0
@@ -2511,8 +2138,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1053#1086#1084#1077#1088' '#1087#1072#1089#1087#1086#1088#1090#1072
             DataBinding.FieldName = 'guidePassportNum'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 3
             Position.RowIndex = 0
@@ -2521,8 +2147,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             Caption = #1053#1086#1084#1077#1088' '#1082#1086#1084#1072#1085#1076#1080#1088#1086#1074#1086#1095#1085#1086#1075#1086' '#1091#1076#1086#1089#1090#1086#1074#1077#1088#1077#1085#1080#1103
             DataBinding.FieldName = 'guideWarrantNum'
             HeaderAlignmentVert = vaTop
-            MinWidth = 25
-            Width = 125
+            Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 4
             Position.RowIndex = 0
@@ -2536,29 +2161,21 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
   end
   object Panel4: TPanel
     Left = 0
-    Top = 899
-    Width = 1195
-    Height = 42
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
+    Top = 719
+    Width = 956
+    Height = 34
     Align = alBottom
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 2
     DesignSize = (
-      1195
-      42)
+      956
+      34)
     object BitBtn2: TBitBtn
-      Left = 989
-      Top = 5
-      Width = 94
-      Height = 31
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 791
+      Top = 4
+      Width = 75
+      Height = 25
       Anchors = [akTop, akRight]
       Caption = 'OK'
       Glyph.Data = {
@@ -2617,14 +2234,10 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
       OnClick = BitBtn2Click
     end
     object BitBtn1: TBitBtn
-      Left = 1090
-      Top = 5
-      Width = 94
-      Height = 31
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 872
+      Top = 4
+      Width = 75
+      Height = 25
       Anchors = [akTop, akRight]
       Cancel = True
       Caption = 'Cancel'
@@ -2684,14 +2297,10 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
       OnClick = BitBtn1Click
     end
     object BitBtn3: TBitBtn
-      Left = 825
-      Top = 5
-      Width = 156
-      Height = 31
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 660
+      Top = 4
+      Width = 125
+      Height = 25
       Anchors = [akTop, akRight]
       Caption = #1057#1086#1075#1083#1072#1089#1086#1074#1072#1090#1100
       Enabled = False
@@ -2755,38 +2364,26 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
   object cxPageControl2: TcxPageControl
     Left = 0
     Top = 0
-    Width = 1195
-    Height = 651
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
+    Width = 956
+    Height = 521
     Align = alTop
     TabOrder = 0
     Properties.ActivePage = cxTabSheet12
     Properties.CustomButtons.Buttons = <>
     LookAndFeel.Kind = lfUltraFlat
-    ClientRectBottom = 651
-    ClientRectRight = 1195
-    ClientRectTop = 29
+    ClientRectBottom = 521
+    ClientRectRight = 956
+    ClientRectTop = 24
     object cxTabSheet12: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = #1054#1089#1085#1086#1074#1085#1099#1077' '#1087#1072#1088#1072#1084#1077#1090#1088#1099
       ImageIndex = 0
-      ExplicitTop = 30
-      ExplicitHeight = 621
+      ExplicitTop = 23
+      ExplicitHeight = 498
       object GridPanel1: TGridPanel
         Left = 0
         Top = 0
-        Width = 1195
-        Height = 621
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 956
+        Height = 497
         Align = alClient
         BevelOuter = bvNone
         ColumnCollection = <
@@ -2815,319 +2412,242 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
         object Panel1: TPanel
           Left = 0
           Top = 0
-          Width = 596
-          Height = 621
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Width = 477
+          Height = 497
           Align = alClient
           BevelInner = bvRaised
           BevelOuter = bvLowered
           TabOrder = 0
           object cxGroupBox2: TcxGroupBox
-            Left = 3
-            Top = 3
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Left = 2
+            Top = 2
             Align = alTop
             Caption = ' '#1055#1072#1088#1072#1084#1077#1090#1088#1099' '#1085#1072#1082#1083#1072#1076#1085#1086#1081' '
-            PanelStyle.CaptionIndent = 3
             ParentFont = False
             Style.Font.Charset = DEFAULT_CHARSET
             Style.Font.Color = clWindowText
-            Style.Font.Height = -14
+            Style.Font.Height = -11
             Style.Font.Name = 'Tahoma'
             Style.Font.Style = [fsBold]
             Style.IsFontAssigned = True
             TabOrder = 0
             DesignSize = (
-              593
-              492)
-            Height = 492
-            Width = 593
+              474
+              394)
+            Height = 394
+            Width = 474
             object Label1: TLabel
-              Left = 10
-              Top = 25
-              Width = 168
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 20
+              Width = 151
+              Height = 13
               Caption = #1048#1044' '#1085#1072#1082#1083#1072#1076#1086#1081'.....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label2: TLabel
-              Left = 10
-              Top = 53
-              Width = 184
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 42
+              Width = 168
+              Height = 13
               Caption = #1048#1044' '#1082#1083#1080#1077#1085#1090#1072'...........................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label3: TLabel
-              Left = 10
-              Top = 80
-              Width = 181
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 64
+              Width = 160
+              Height = 13
               Caption = #1058#1080#1087' '#1085#1072#1082#1083#1072#1076#1085#1086#1081'.....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label5: TLabel
-              Left = 10
-              Top = 108
-              Width = 173
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 86
+              Width = 154
+              Height = 13
               Caption = #1042#1080#1076' '#1086#1090#1087#1088#1072#1074#1082#1080'.....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label6: TLabel
-              Left = 10
-              Top = 135
-              Width = 173
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 108
+              Width = 157
+              Height = 13
               Caption = #1058#1080#1087' '#1073#1083#1072#1085#1082#1072'.........................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label13: TLabel
-              Left = 10
-              Top = 206
-              Width = 194
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 165
+              Width = 154
+              Height = 13
               Caption = #1043#1088#1091#1079#1086#1086#1090#1087#1088#1072#1074#1080#1090#1077#1083#1100'...............'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = [fsBold]
               ParentFont = False
             end
             object Label14: TLabel
-              Left = 10
-              Top = 233
-              Width = 174
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 186
+              Width = 167
+              Height = 13
               Caption = #1040#1076#1088#1077#1089'..................................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label15: TLabel
-              Left = 10
-              Top = 261
-              Width = 173
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 209
+              Width = 166
+              Height = 13
               Caption = #1058#1043#1053#1051'...................................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label16: TLabel
-              Left = 326
-              Top = 261
-              Width = 117
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 261
+              Top = 209
+              Width = 110
+              Height = 13
               Caption = #1054#1050#1055#1054'....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label7: TLabel
-              Left = 10
-              Top = 305
-              Width = 187
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 244
+              Width = 148
+              Height = 13
               Caption = #1043#1088#1091#1079#1086#1087#1086#1083#1091#1095#1072#1090#1077#1083#1100'...............'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = [fsBold]
               ParentFont = False
             end
             object Label8: TLabel
-              Left = 10
-              Top = 333
-              Width = 174
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 266
+              Width = 167
+              Height = 13
               Caption = #1040#1076#1088#1077#1089'..................................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label9: TLabel
-              Left = 10
-              Top = 360
-              Width = 173
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 288
+              Width = 166
+              Height = 13
               Caption = #1058#1043#1053#1051'...................................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label17: TLabel
-              Left = 326
-              Top = 360
-              Width = 149
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 261
+              Top = 288
+              Width = 142
+              Height = 13
               Caption = #1054#1050#1055#1054'............................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label40: TLabel
-              Left = 10
-              Top = 163
-              Width = 240
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 130
+              Width = 211
+              Height = 13
               Caption = #1042#1080#1076' '#1075#1088#1091#1079#1086#1074#1099#1093' '#1088#1072#1073#1086#1090'...........................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label26: TLabel
-              Left = 10
-              Top = 403
-              Width = 185
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 322
+              Width = 142
+              Height = 13
               Caption = #1055#1083#1072#1090#1077#1083#1100#1097#1080#1082'.......................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = [fsBold]
               ParentFont = False
             end
             object Label27: TLabel
-              Left = 10
-              Top = 430
-              Width = 246
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 344
+              Width = 224
+              Height = 13
               Caption = #1050#1086#1076' '#1087#1083#1072#1090#1077#1083#1100#1097#1080#1082#1072'.................................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object cxButtonEdit2: TcxButtonEdit
               Tag = 1
-              Left = 164
-              Top = 128
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 102
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -3171,7 +2691,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit2PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -3180,18 +2700,14 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 4
-              ExplicitWidth = 417
-              Width = 419
+              Width = 335
             end
             object cxButtonEdit1: TcxButtonEdit
               Tag = 1
-              Left = 164
-              Top = 100
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 80
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -3235,7 +2751,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit1PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -3244,18 +2760,14 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 3
-              ExplicitWidth = 261
-              Width = 263
+              Width = 211
             end
             object cxButtonEdit6: TcxButtonEdit
               Tag = 1
-              Left = 164
-              Top = 73
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 58
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -3299,7 +2811,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit6PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -3308,23 +2820,19 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 2
-              ExplicitWidth = 261
-              Width = 263
+              Width = 211
             end
             object cxTextEdit2: TcxTextEdit
-              Left = 164
-              Top = 45
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 36
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.Color = clBtnFace
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = [fsBold]
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -3333,24 +2841,20 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 1
-              ExplicitWidth = 161
-              Width = 163
+              Width = 131
             end
             object cxTextEdit1: TcxTextEdit
-              Left = 164
-              Top = 18
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 14
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.ReadOnly = True
               Style.Color = clBtnFace
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = [fsBold]
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -3359,18 +2863,14 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 0
-              ExplicitWidth = 161
-              Width = 163
+              Width = 131
             end
             object cxButtonEdit8: TcxButtonEdit
               Tag = 1
-              Left = 164
-              Top = 199
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 159
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -3414,7 +2914,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit8PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -3423,22 +2923,18 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 6
-              ExplicitWidth = 417
-              Width = 419
+              Width = 335
             end
             object cxTextEdit6: TcxTextEdit
-              Left = 164
-              Top = 226
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 181
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -3447,21 +2943,17 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 7
-              ExplicitWidth = 417
-              Width = 419
+              Width = 335
             end
             object cxTextEdit7: TcxTextEdit
-              Left = 164
-              Top = 254
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 203
               ParentFont = False
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -3470,21 +2962,18 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 8
-              Width = 159
+              Width = 127
             end
             object cxTextEdit8: TcxTextEdit
-              Left = 414
-              Top = 254
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 331
+              Top = 203
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -3493,22 +2982,18 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 9
-              ExplicitWidth = 167
-              Width = 169
+              Width = 135
             end
             object cxTextEdit9: TcxTextEdit
-              Left = 414
-              Top = 353
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 331
+              Top = 282
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -3517,21 +3002,17 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 13
-              ExplicitWidth = 167
-              Width = 169
+              Width = 135
             end
             object cxTextEdit5: TcxTextEdit
-              Left = 164
-              Top = 353
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 282
               ParentFont = False
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -3540,21 +3021,18 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 12
-              Width = 159
+              Width = 127
             end
             object cxTextEdit4: TcxTextEdit
-              Left = 164
-              Top = 325
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 260
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -3563,18 +3041,14 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 11
-              ExplicitWidth = 417
-              Width = 419
+              Width = 335
             end
             object cxButtonEdit3: TcxButtonEdit
               Tag = 1
-              Left = 164
-              Top = 298
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 238
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -3618,7 +3092,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit3PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -3627,18 +3101,14 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 10
-              ExplicitWidth = 417
-              Width = 419
+              Width = 335
             end
             object cxButtonEdit17: TcxButtonEdit
               Tag = 1
-              Left = 164
-              Top = 155
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 124
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -3682,7 +3152,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit17PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -3691,18 +3161,14 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 5
-              ExplicitWidth = 417
-              Width = 419
+              Width = 335
             end
             object cxButtonEdit16: TcxButtonEdit
               Tag = 1
-              Left = 164
-              Top = 395
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 316
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -3745,7 +3211,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit16PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -3754,23 +3220,19 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 14
-              ExplicitWidth = 417
-              Width = 419
+              Width = 335
             end
             object cxTextEdit14: TcxTextEdit
-              Left = 164
-              Top = 423
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 338
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.OnChange = cxTextEdit14PropertiesChange
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -3779,100 +3241,77 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 15
-              ExplicitWidth = 132
-              Width = 134
+              Width = 107
             end
           end
           object cxGroupBox4: TcxGroupBox
             Left = 2
-            Top = 494
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Top = 396
             Align = alTop
             Caption = ' '#1047#1072#1103#1074#1082#1072'  '
-            PanelStyle.CaptionIndent = 3
             ParentFont = False
             Style.Font.Charset = DEFAULT_CHARSET
             Style.Font.Color = clWindowText
-            Style.Font.Height = -14
+            Style.Font.Height = -11
             Style.Font.Name = 'Tahoma'
             Style.Font.Style = [fsBold]
             Style.IsFontAssigned = True
             TabOrder = 1
-            ExplicitLeft = 3
-            ExplicitTop = 495
-            ExplicitWidth = 591
+            ExplicitTop = 395
             DesignSize = (
-              593
-              115)
-            Height = 115
-            Width = 593
+              474
+              92)
+            Height = 92
+            Width = 474
             object Label12: TLabel
-              Left = 10
-              Top = 79
-              Width = 159
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 63
+              Width = 144
+              Height = 13
               Caption = #1043#1088#1072#1092'. '#1087#1086#1076#1072#1095'....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label11: TLabel
-              Left = 10
-              Top = 51
-              Width = 186
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 41
+              Width = 162
+              Height = 13
               Caption = #1053#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080'....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label10: TLabel
-              Left = 10
-              Top = 24
-              Width = 145
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 19
+              Width = 133
+              Height = 13
               Caption = #1048#1044' '#1079#1072#1103#1074#1082#1080'....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object cxTextEdit33: TcxTextEdit
-              Left = 164
-              Top = 44
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 35
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -3881,22 +3320,18 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 1
-              ExplicitWidth = 161
-              Width = 163
+              Width = 131
             end
             object cxTextEdit34: TcxTextEdit
-              Left = 164
-              Top = 71
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 57
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -3905,18 +3340,14 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 2
-              ExplicitWidth = 161
-              Width = 163
+              Width = 131
             end
             object cxButtonEdit4: TcxButtonEdit
               Tag = 1
-              Left = 164
-              Top = 16
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 13
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -3959,7 +3390,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit4PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -3968,246 +3399,187 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 0
-              ExplicitWidth = 261
-              Width = 263
+              Width = 211
             end
           end
         end
         object Panel2: TPanel
-          Left = 597
+          Left = 478
           Top = 0
-          Width = 598
-          Height = 622
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Width = 478
+          Height = 497
           Align = alClient
           BevelInner = bvRaised
           BevelOuter = bvLowered
           TabOrder = 1
-          ExplicitLeft = 596
-          ExplicitWidth = 599
-          ExplicitHeight = 621
+          ExplicitHeight = 498
           object cxGroupBox6: TcxGroupBox
-            Left = 3
-            Top = 3
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Left = 2
+            Top = 2
             Align = alTop
             Caption = ' '#1052#1072#1088#1096#1088#1091#1090' '
-            PanelStyle.CaptionIndent = 3
             ParentFont = False
             Style.Font.Charset = DEFAULT_CHARSET
             Style.Font.Color = clWindowText
-            Style.Font.Height = -14
+            Style.Font.Height = -11
             Style.Font.Name = 'Tahoma'
             Style.Font.Style = [fsBold]
             Style.IsFontAssigned = True
             TabOrder = 0
             DesignSize = (
-              594
-              373)
-            Height = 373
-            Width = 594
+              474
+              299)
+            Height = 299
+            Width = 474
             object Label18: TLabel
-              Left = 10
-              Top = 25
-              Width = 163
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 20
+              Width = 144
+              Height = 13
               Caption = #1057#1090#1088#1072#1085#1072' '#1086#1090#1087#1088'....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label19: TLabel
-              Left = 10
-              Top = 53
-              Width = 156
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 42
+              Width = 138
+              Height = 13
               Caption = #1055#1091#1085#1082#1090' '#1086#1090#1087#1088'....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label21: TLabel
-              Left = 10
-              Top = 80
-              Width = 171
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 64
+              Width = 150
+              Height = 13
               Caption = #1057#1090#1072#1085#1094#1080#1103' '#1086#1090#1087#1088'....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label23: TLabel
-              Left = 10
-              Top = 135
-              Width = 164
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 108
+              Width = 145
+              Height = 13
               Caption = #1055'. '#1087#1091#1090#1100' '#1086#1090#1087#1088'....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label31: TLabel
-              Left = 10
-              Top = 169
-              Width = 160
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 135
+              Width = 143
+              Height = 13
               Caption = #1057#1090#1088#1072#1085#1072' '#1085#1072#1079#1085'....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label32: TLabel
-              Left = 10
-              Top = 196
-              Width = 153
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 157
+              Width = 137
+              Height = 13
               Caption = #1055#1091#1085#1082#1090' '#1085#1072#1079#1085'....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label34: TLabel
-              Left = 10
-              Top = 224
-              Width = 168
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 179
+              Width = 149
+              Height = 13
               Caption = #1057#1090#1072#1085#1094#1080#1103' '#1085#1072#1079#1085'....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label35: TLabel
-              Left = 10
-              Top = 251
-              Width = 161
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 201
+              Width = 144
+              Height = 13
               Caption = #1055'. '#1087#1091#1090#1100' '#1085#1072#1079#1085'....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label75: TLabel
-              Left = 10
-              Top = 108
-              Width = 163
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 86
+              Width = 144
+              Height = 13
               Caption = #1044#1086#1088#1086#1075#1072' '#1086#1090#1087#1088'....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label76: TLabel
-              Left = 10
-              Top = 279
-              Width = 160
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 223
+              Width = 143
+              Height = 13
               Caption = #1044#1086#1088#1086#1075#1072' '#1085#1072#1079#1085'....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label77: TLabel
-              Left = 10
-              Top = 316
-              Width = 181
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 253
+              Width = 157
+              Height = 13
               Caption = #1056#1072#1089#1089#1090#1086#1103#1085#1080#1077' ('#1082#1084')...................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object cxButtonEdit10: TcxButtonEdit
               Tag = 1
-              Left = 470
-              Top = 73
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 375
+              Top = 58
               Anchors = [akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -4251,7 +3623,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit12PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -4260,16 +3632,14 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 5
-              Width = 114
+              ExplicitLeft = 376
+              Width = 91
             end
             object cxButtonEdit12: TcxButtonEdit
-              Left = 164
-              Top = 73
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 58
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -4313,7 +3683,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit12PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -4322,17 +3692,15 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 4
-              Width = 305
+              ExplicitWidth = 244
+              Width = 243
             end
             object cxButtonEdit14: TcxButtonEdit
               Tag = 1
-              Left = 470
-              Top = 161
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 375
+              Top = 129
               Anchors = [akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -4376,7 +3744,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit22PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -4385,17 +3753,15 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 8
-              Width = 114
+              ExplicitLeft = 376
+              Width = 91
             end
             object cxButtonEdit15: TcxButtonEdit
               Tag = 1
-              Left = 470
-              Top = 18
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 375
+              Top = 14
               Anchors = [akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -4439,7 +3805,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit9PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -4448,16 +3814,14 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 1
-              Width = 114
+              ExplicitLeft = 376
+              Width = 91
             end
             object cxButtonEdit22: TcxButtonEdit
-              Left = 164
-              Top = 161
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 129
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -4501,7 +3865,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit22PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -4510,16 +3874,14 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 7
-              Width = 305
+              ExplicitWidth = 244
+              Width = 243
             end
             object cxButtonEdit25: TcxButtonEdit
-              Left = 164
-              Top = 216
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 173
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -4563,7 +3925,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit25PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -4572,17 +3934,15 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 11
-              Width = 305
+              ExplicitWidth = 244
+              Width = 243
             end
             object cxButtonEdit26: TcxButtonEdit
               Tag = 1
-              Left = 470
-              Top = 216
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 375
+              Top = 173
               Anchors = [akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -4626,7 +3986,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit25PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -4635,16 +3995,14 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 12
-              Width = 114
+              ExplicitLeft = 376
+              Width = 91
             end
             object cxButtonEdit9: TcxButtonEdit
-              Left = 164
-              Top = 18
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 14
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -4688,7 +4046,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit9PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -4697,21 +4055,19 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 0
-              Width = 305
+              ExplicitWidth = 244
+              Width = 243
             end
             object cxTextEdit10: TcxTextEdit
-              Left = 164
-              Top = 128
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 102
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -4720,21 +4076,19 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 6
-              Width = 420
+              ExplicitWidth = 336
+              Width = 335
             end
             object cxTextEdit11: TcxTextEdit
-              Left = 164
-              Top = 45
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 36
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -4743,21 +4097,19 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 2
-              Width = 305
+              ExplicitWidth = 244
+              Width = 243
             end
             object cxTextEdit12: TcxTextEdit
-              Left = 164
-              Top = 244
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 195
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -4766,21 +4118,19 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 13
-              Width = 420
+              ExplicitWidth = 336
+              Width = 335
             end
             object cxTextEdit13: TcxTextEdit
-              Left = 470
-              Top = 45
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 375
+              Top = 36
               Anchors = [akTop, akRight]
               ParentFont = False
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -4789,21 +4139,19 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 3
-              Width = 114
+              ExplicitLeft = 376
+              Width = 91
             end
             object cxTextEdit20: TcxTextEdit
-              Left = 470
-              Top = 189
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 375
+              Top = 151
               Anchors = [akTop, akRight]
               ParentFont = False
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -4812,21 +4160,19 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 10
-              Width = 114
+              ExplicitLeft = 376
+              Width = 91
             end
             object cxTextEdit21: TcxTextEdit
-              Left = 164
-              Top = 189
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 151
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -4835,23 +4181,21 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 9
-              Width = 305
+              ExplicitWidth = 244
+              Width = 243
             end
             object cxTextEdit42: TcxTextEdit
-              Left = 164
-              Top = 100
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 80
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.ReadOnly = True
               Style.Color = clBtnFace
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = [fsBold]
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -4860,23 +4204,21 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 14
-              Width = 210
+              ExplicitWidth = 168
+              Width = 167
             end
             object cxTextEdit43: TcxTextEdit
-              Left = 164
-              Top = 271
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 217
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.ReadOnly = True
               Style.Color = clBtnFace
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = [fsBold]
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -4885,23 +4227,21 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 15
-              Width = 210
+              ExplicitWidth = 168
+              Width = 167
             end
             object cxTextEdit44: TcxTextEdit
-              Left = 164
-              Top = 309
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 247
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.ReadOnly = True
               Style.Color = clBtnFace
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = [fsBold]
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -4910,23 +4250,21 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 16
-              Width = 90
+              ExplicitWidth = 72
+              Width = 71
             end
             object cxTextEdit45: TcxTextEdit
-              Left = 376
-              Top = 100
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 300
+              Top = 80
               Anchors = [akTop, akRight]
               ParentFont = False
               Properties.ReadOnly = True
               Style.Color = clBtnFace
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = [fsBold]
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -4935,23 +4273,21 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 17
-              Width = 93
+              ExplicitLeft = 301
+              Width = 74
             end
             object cxTextEdit46: TcxTextEdit
-              Left = 376
-              Top = 271
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 300
+              Top = 217
               Anchors = [akTop, akRight]
               ParentFont = False
               Properties.ReadOnly = True
               Style.Color = clBtnFace
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = [fsBold]
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -4960,163 +4296,127 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 18
-              Width = 93
+              ExplicitLeft = 301
+              Width = 74
             end
           end
           object cxGroupBox3: TcxGroupBox
             Left = 2
-            Top = 375
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Top = 301
             Align = alTop
             Caption = ' '#1055#1072#1088#1072#1084#1077#1090#1088#1099' '#1085#1072#1082#1083#1072#1076#1085#1086#1081'  '
-            PanelStyle.CaptionIndent = 3
             ParentFont = False
             Style.Font.Charset = DEFAULT_CHARSET
             Style.Font.Color = clWindowText
-            Style.Font.Height = -14
+            Style.Font.Height = -11
             Style.Font.Name = 'Tahoma'
             Style.Font.Style = [fsBold]
             Style.IsFontAssigned = True
             TabOrder = 1
-            ExplicitLeft = 3
-            ExplicitTop = 376
-            ExplicitWidth = 593
+            ExplicitTop = 300
+            ExplicitWidth = 475
             DesignSize = (
-              594
-              234)
-            Height = 234
-            Width = 594
+              474
+              187)
+            Height = 187
+            Width = 474
             object Label22: TLabel
-              Left = 10
-              Top = 30
-              Width = 209
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 24
+              Width = 188
+              Height = 13
               Caption = #1052#1077#1089#1090#1086' '#1086#1087#1083#1072#1090#1099'.............................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label24: TLabel
-              Left = 10
-              Top = 56
-              Width = 199
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 45
+              Width = 177
+              Height = 13
               Caption = #1060#1086#1088#1084#1072' '#1086#1087#1083#1072#1090#1099'..........................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label46: TLabel
-              Left = 10
-              Top = 138
-              Width = 203
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 110
+              Width = 179
+              Height = 13
               Caption = #1055#1083#1072#1085'. '#1088#1086#1076' '#1074#1072#1075#1086#1085#1086#1074'.....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label48: TLabel
-              Left = 10
-              Top = 165
-              Width = 226
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 132
+              Width = 196
+              Height = 13
               Caption = #1055#1083#1072#1085'. '#1090#1080#1087' '#1089#1086#1073'. '#1074#1072#1075#1086#1085#1072'.....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label47: TLabel
-              Left = 10
-              Top = 193
-              Width = 246
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 154
+              Width = 218
+              Height = 13
               Caption = #1055#1083#1072#1085'. '#1082#1086#1083'-'#1074#1086' '#1074#1072#1075#1086#1085#1086#1074'...........................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label30: TLabel
-              Left = 10
-              Top = 111
-              Width = 211
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 89
+              Width = 183
+              Height = 13
               Caption = #1057#1082#1086#1088#1086#1089#1090#1100' '#1086#1090#1087#1088#1072#1074#1082#1080'.....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label45: TLabel
-              Left = 10
-              Top = 84
-              Width = 183
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 67
+              Width = 161
+              Height = 13
               Caption = #1054#1090#1074#1077#1090#1089#1090#1074#1077#1085#1085#1099#1081'....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object cxButtonEdit18: TcxButtonEdit
               Tag = 1
-              Left = 164
-              Top = 20
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 16
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -5160,7 +4460,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit18PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -5169,17 +4469,15 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 0
-              Width = 302
+              ExplicitWidth = 242
+              Width = 241
             end
             object cxButtonEdit13: TcxButtonEdit
               Tag = 1
-              Left = 164
-              Top = 48
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 38
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -5223,7 +4521,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit13PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -5232,17 +4530,15 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 1
-              Width = 302
+              ExplicitWidth = 242
+              Width = 241
             end
             object cxButtonEdit30: TcxButtonEdit
               Tag = 1
-              Left = 164
-              Top = 130
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 104
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -5286,7 +4582,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit30PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -5295,17 +4591,15 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 4
-              Width = 302
+              ExplicitWidth = 242
+              Width = 241
             end
             object cxButtonEdit29: TcxButtonEdit
               Tag = 1
-              Left = 164
-              Top = 158
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 126
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -5349,7 +4643,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit29PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -5358,21 +4652,19 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 5
-              Width = 302
+              ExplicitWidth = 242
+              Width = 241
             end
             object cxTextEdit28: TcxTextEdit
-              Left = 164
-              Top = 185
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 148
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -5381,17 +4673,15 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 6
-              Width = 132
+              ExplicitWidth = 106
+              Width = 105
             end
             object cxButtonEdit21: TcxButtonEdit
               Tag = 1
-              Left = 164
-              Top = 103
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 82
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -5435,7 +4725,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Properties.OnButtonClick = cxButtonEdit21PropertiesButtonClick
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -5444,21 +4734,19 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 3
-              Width = 302
+              ExplicitWidth = 242
+              Width = 241
             end
             object cxTextEdit19: TcxTextEdit
-              Left = 164
-              Top = 75
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 60
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.LookAndFeel.Kind = lfUltraFlat
@@ -5467,31 +4755,25 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               StyleDisabled.LookAndFeel.Kind = lfUltraFlat
               StyleFocused.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
               TabOrder = 2
-              Width = 417
+              ExplicitWidth = 334
+              Width = 333
             end
           end
         end
       end
     end
     object cxTabSheet13: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = #1044#1086#1087#1086#1083#1085#1080#1090#1077#1083#1100#1085#1099#1077' '#1087#1072#1088#1072#1084#1077#1090#1088#1099
       ImageIndex = 1
-      ExplicitTop = 30
-      ExplicitHeight = 621
+      ExplicitTop = 23
+      ExplicitHeight = 498
       object GridPanel2: TGridPanel
         Left = 0
         Top = 0
-        Width = 1195
-        Height = 621
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 956
+        Height = 497
         Align = alClient
         BevelOuter = bvNone
         ColumnCollection = <
@@ -5520,153 +4802,115 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
         object Panel6: TPanel
           Left = 0
           Top = 0
-          Width = 598
-          Height = 621
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Width = 478
+          Height = 497
           Align = alClient
           BevelInner = bvRaised
           BevelOuter = bvLowered
           TabOrder = 0
           object cxGroupBox9: TcxGroupBox
-            Left = 3
-            Top = 3
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Left = 2
+            Top = 2
             Align = alTop
             Caption = ' '#1055#1083#1072#1085#1080#1088#1086#1074#1072#1085#1080#1077' '
-            PanelStyle.CaptionIndent = 3
             ParentFont = False
             Style.Font.Charset = DEFAULT_CHARSET
             Style.Font.Color = clWindowText
-            Style.Font.Height = -14
+            Style.Font.Height = -11
             Style.Font.Name = 'Tahoma'
             Style.Font.Style = [fsBold]
             Style.IsFontAssigned = True
             TabOrder = 0
             DesignSize = (
-              594
-              175)
-            Height = 175
-            Width = 594
+              475
+              140)
+            Height = 140
+            Width = 475
             object Label49: TLabel
-              Left = 10
-              Top = 28
-              Width = 190
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 22
+              Width = 164
+              Height = 13
               Caption = #1043#1088#1091#1079#1086#1087#1086#1076'. '#1082#1086#1085#1090'. ('#1090')................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label50: TLabel
-              Left = 10
-              Top = 55
-              Width = 207
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 44
+              Width = 180
+              Height = 13
               Caption = #1056#1072#1079#1084#1077#1088' '#1082#1088#1091#1087'. '#1082#1086#1085#1090'. ....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label51: TLabel
-              Left = 10
-              Top = 110
-              Width = 194
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 88
+              Width = 172
+              Height = 13
               Caption = #1058#1080#1087' '#1089#1086#1073'. '#1082#1086#1085#1090'. ........................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label52: TLabel
-              Left = 10
-              Top = 83
-              Width = 200
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 66
+              Width = 174
+              Height = 13
               Caption = #1050#1086#1083#1080#1095#1077#1089#1090#1074#1086' '#1082#1086#1085#1090'. ....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label54: TLabel
-              Left = 10
-              Top = 138
-              Width = 203
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 110
+              Width = 183
+              Height = 13
               Caption = #1044#1072#1090#1072' '#1087#1086#1075#1088#1091#1079#1082#1080'...........................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object cxTextEdit29: TcxTextEdit
-              Left = 164
-              Top = 75
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 60
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 2
-              ExplicitWidth = 420
-              Width = 421
+              Width = 337
             end
             object cxButtonEdit31: TcxButtonEdit
               Tag = 1
-              Left = 164
-              Top = 103
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 82
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -5711,400 +4955,301 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 3
-              ExplicitWidth = 420
-              Width = 421
+              Width = 337
             end
             object cxTextEdit31: TcxTextEdit
-              Left = 164
-              Top = 20
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 16
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 0
-              ExplicitWidth = 420
-              Width = 421
+              Width = 337
             end
             object cxTextEdit32: TcxTextEdit
-              Left = 164
-              Top = 48
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 38
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 1
-              ExplicitWidth = 420
-              Width = 421
+              Width = 337
             end
             object cxDateEdit1: TcxDateEdit
-              Left = 164
-              Top = 130
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 104
               Anchors = [akLeft, akTop, akRight]
               Style.BorderStyle = ebsUltraFlat
               Style.Shadow = False
               Style.TextStyle = []
               TabOrder = 4
-              ExplicitWidth = 420
-              Width = 421
+              Width = 337
             end
           end
           object cxGroupBox5: TcxGroupBox
             Left = 2
-            Top = 177
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Top = 142
             Align = alTop
             Caption = ' '#1055#1088#1086#1095#1077#1077' '
-            PanelStyle.CaptionIndent = 3
             ParentFont = False
             Style.Font.Charset = DEFAULT_CHARSET
             Style.Font.Color = clWindowText
-            Style.Font.Height = -14
+            Style.Font.Height = -11
             Style.Font.Name = 'Tahoma'
             Style.Font.Style = [fsBold]
             Style.IsFontAssigned = True
             TabOrder = 1
-            ExplicitLeft = 3
-            ExplicitTop = 178
-            ExplicitWidth = 592
             DesignSize = (
-              594
-              403)
-            Height = 403
-            Width = 594
+              475
+              322)
+            Height = 322
+            Width = 475
             object Label28: TLabel
-              Left = 10
-              Top = 24
-              Width = 254
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 19
+              Width = 230
+              Height = 13
               Caption = #1055#1083#1072#1090#1077#1083#1100#1097#1080#1082' '#1089#1095#1077#1090'...................................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label29: TLabel
-              Left = 10
-              Top = 51
-              Width = 242
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 41
+              Width = 219
+              Height = 13
               Caption = #1055#1083#1072#1090#1077#1083#1100#1097#1080#1082' '#1073#1072#1085#1082'................................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label38: TLabel
-              Left = 10
-              Top = 80
-              Width = 219
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 64
+              Width = 191
+              Height = 13
               Caption = #1055#1086#1076#1082#1086#1076' '#1101#1082#1089#1087#1077#1076#1080#1090#1086#1088#1072'.....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label41: TLabel
-              Left = 10
-              Top = 109
-              Width = 198
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 87
+              Width = 175
+              Height = 13
               Caption = #1050#1086#1076' '#1080#1089#1082#1083'. '#1090#1072#1088#1080#1092#1072'.....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label43: TLabel
-              Left = 10
-              Top = 161
-              Width = 240
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 129
+              Width = 208
+              Height = 13
               Caption = #1054#1073#1098#1103#1074#1083'. '#1094#1077#1085#1085#1086#1089#1090#1100' '#1075#1088#1091#1079#1072'.....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label64: TLabel
-              Left = 10
-              Top = 189
-              Width = 259
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 151
+              Width = 229
+              Height = 13
               Caption = #1060#1072#1082#1090#1080#1095#1077#1089#1082#1072#1103' '#1076#1072#1090#1072' '#1087#1086#1075#1088'...........................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label53: TLabel
-              Left = 10
-              Top = 134
-              Width = 229
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 107
+              Width = 198
+              Height = 13
               Caption = #1055#1083#1072#1085'. '#1085#1077#1075#1072#1073#1072#1088#1080#1090#1085#1086#1089#1090#1100'.....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label36: TLabel
-              Left = 10
-              Top = 216
-              Width = 224
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 173
+              Width = 194
+              Height = 13
               Caption = #1057#1090#1088#1072#1085#1072' '#1085#1072#1079#1085'. ('#1087#1086#1088#1086#1078'.)....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label37: TLabel
-              Left = 10
-              Top = 244
-              Width = 232
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 195
+              Width = 200
+              Height = 13
               Caption = #1057#1090#1072#1085#1094#1080#1103' '#1085#1072#1079#1085'. ('#1087#1086#1088#1086#1078'.)....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object cxDateEdit2: TcxDateEdit
-              Left = 164
-              Top = 181
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 145
               Anchors = [akLeft, akTop, akRight]
               Style.BorderStyle = ebsUltraFlat
               Style.Shadow = False
               Style.TextStyle = []
               TabOrder = 6
-              ExplicitWidth = 419
-              Width = 420
+              Width = 336
             end
             object cxTextEdit15: TcxTextEdit
-              Left = 164
-              Top = 16
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 13
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 0
-              ExplicitWidth = 419
-              Width = 420
+              Width = 336
             end
             object cxTextEdit16: TcxTextEdit
-              Left = 164
-              Top = 44
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 35
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 1
-              ExplicitWidth = 419
-              Width = 420
+              Width = 336
             end
             object cxTextEdit17: TcxTextEdit
-              Left = 164
-              Top = 71
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 57
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 2
-              ExplicitWidth = 419
-              Width = 420
+              Width = 336
             end
             object cxTextEdit26: TcxTextEdit
-              Left = 164
-              Top = 99
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 79
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 3
-              ExplicitWidth = 419
-              Width = 420
+              Width = 336
             end
             object cxTextEdit27: TcxTextEdit
-              Left = 164
-              Top = 154
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 123
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 5
-              ExplicitWidth = 419
-              Width = 420
+              Width = 336
             end
             object cxTextEdit30: TcxTextEdit
-              Left = 164
-              Top = 126
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 101
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 4
-              ExplicitWidth = 419
-              Width = 420
+              Width = 336
             end
             object cxButtonEdit27: TcxButtonEdit
-              Left = 164
-              Top = 209
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 167
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -6149,22 +5294,17 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 7
-              ExplicitWidth = 304
-              Width = 305
+              Width = 244
             end
             object cxButtonEdit28: TcxButtonEdit
-              Left = 164
-              Top = 236
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 189
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -6209,23 +5349,18 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 9
-              ExplicitWidth = 304
-              Width = 305
+              Width = 244
             end
             object cxButtonEdit34: TcxButtonEdit
               Tag = 1
-              Left = 470
-              Top = 209
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 376
+              Top = 167
               Anchors = [akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -6270,23 +5405,18 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 8
-              ExplicitLeft = 469
-              Width = 114
+              Width = 91
             end
             object cxButtonEdit35: TcxButtonEdit
               Tag = 1
-              Left = 470
-              Top = 236
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 376
+              Top = 189
               Anchors = [akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -6331,334 +5461,258 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 10
-              ExplicitLeft = 469
-              Width = 114
+              Width = 91
             end
           end
         end
         object Panel7: TPanel
-          Left = 598
+          Left = 479
           Top = 0
-          Width = 597
-          Height = 622
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Width = 477
+          Height = 497
           Align = alClient
           BevelInner = bvRaised
           BevelOuter = bvLowered
           TabOrder = 1
-          ExplicitHeight = 621
+          ExplicitLeft = 478
+          ExplicitWidth = 478
+          ExplicitHeight = 498
           object cxGroupBox1: TcxGroupBox
-            Left = 3
-            Top = 3
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Left = 2
+            Top = 2
             Align = alTop
             Caption = ' '#1055#1088#1086#1095#1077#1077' '
-            PanelStyle.CaptionIndent = 3
             ParentFont = False
             Style.Font.Charset = DEFAULT_CHARSET
             Style.Font.Color = clWindowText
-            Style.Font.Height = -14
+            Style.Font.Height = -11
             Style.Font.Name = 'Tahoma'
             Style.Font.Style = [fsBold]
             Style.IsFontAssigned = True
             TabOrder = 0
             DesignSize = (
-              593
-              578)
-            Height = 578
-            Width = 593
+              473
+              463)
+            Height = 463
+            Width = 473
             object Label44: TLabel
-              Left = 10
-              Top = 31
-              Width = 247
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 25
+              Width = 217
+              Height = 13
               Caption = #1055#1086#1075#1088#1091#1079#1082#1072' '#1089#1088#1077#1076#1089#1090#1074#1072#1084#1080'...........................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label20: TLabel
-              Left = 10
-              Top = 84
-              Width = 149
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 67
+              Width = 132
+              Height = 13
               Caption = #1055#1086#1088#1090' '#1086#1090#1087#1088'....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label4: TLabel
-              Left = 10
-              Top = 195
-              Width = 178
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 156
+              Width = 153
+              Height = 13
               Caption = #1053#1086#1084#1077#1088' '#1085#1072#1082#1083#1072#1076#1085#1086#1081'................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label39: TLabel
-              Left = 10
-              Top = 169
-              Width = 242
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 135
+              Width = 215
+              Height = 13
               Caption = #1055#1086#1076#1082#1086#1076' '#1082#1086#1085#1090#1088#1072#1075#1077#1085#1090#1072'...........................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label33: TLabel
-              Left = 10
-              Top = 111
-              Width = 149
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 89
+              Width = 132
+              Height = 13
               Caption = #1055#1086#1088#1090' '#1087#1088#1080#1073'....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label25: TLabel
-              Left = 10
-              Top = 140
-              Width = 226
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 112
+              Width = 198
+              Height = 13
               Caption = #1050#1086#1076' '#1076#1086#1088'. '#1087#1083#1072#1090#1077#1083#1100#1097#1080#1082#1072'....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label55: TLabel
-              Left = 10
-              Top = 223
-              Width = 218
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 178
+              Width = 190
+              Height = 13
               Caption = #1057#1087#1086#1089#1086#1073' '#1074#1079#1074#1077#1096#1080#1074#1072#1085#1080#1103'.....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label56: TLabel
-              Left = 10
-              Top = 250
-              Width = 221
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 200
+              Width = 196
+              Height = 13
               Caption = #1050#1077#1084' '#1087#1088#1086#1074#1086#1076#1080#1083#1086#1089#1100'...........................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label57: TLabel
-              Left = 10
-              Top = 278
-              Width = 210
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 222
+              Width = 183
+              Height = 13
               Caption = #1055#1086#1075#1088#1077#1096#1085#1086#1089#1090#1100' '#1074#1077#1089#1086#1074'.....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label58: TLabel
-              Left = 10
-              Top = 305
-              Width = 219
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 244
+              Width = 186
+              Height = 13
               Caption = #1055#1088#1080#1079#1085#1072#1082' '#1087#1088#1086#1074#1077#1088#1082#1080' '#1090#1072#1088#1099'................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label61: TLabel
-              Left = 10
-              Top = 333
-              Width = 211
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 266
+              Width = 183
+              Height = 13
               Caption = #1044#1086#1082'. '#1087#1086' '#1088#1072#1079#1084#1077#1097#1077#1085#1080#1102'...................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label60: TLabel
-              Left = 10
-              Top = 359
-              Width = 214
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 287
+              Width = 191
+              Height = 13
               Caption = #1043#1083#1072#1074#1072' '#1088#1072#1079#1084#1077#1097#1077#1085#1080#1103'........................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label62: TLabel
-              Left = 10
-              Top = 386
-              Width = 228
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 309
+              Width = 199
+              Height = 13
               Caption = #1055#1072#1088#1072#1075#1088#1072#1092' '#1088#1072#1079#1084#1077#1097#1077#1085#1080#1103'.....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label63: TLabel
-              Left = 10
-              Top = 414
-              Width = 234
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 331
+              Width = 209
+              Height = 13
               Caption = #1056#1072#1079#1076#1077#1083' '#1088#1072#1079#1084#1077#1097#1077#1085#1080#1103'...........................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label65: TLabel
-              Left = 10
-              Top = 441
-              Width = 224
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 353
+              Width = 195
+              Height = 13
               Caption = #1058#1077#1093'. '#1091#1089#1083'. '#1088#1072#1079#1084#1077#1097#1077#1085#1080#1103'.....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object Label59: TLabel
-              Left = 10
-              Top = 59
-              Width = 223
-              Height = 17
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 8
+              Top = 47
+              Width = 195
+              Height = 13
               Caption = #1054#1090#1074#1077#1090'. '#1079#1072' '#1088#1072#1079#1084#1077#1097#1077#1085#1080#1077'....................'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -14
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
             end
             object cxButtonEdit19: TcxButtonEdit
               Tag = 1
-              Left = 164
-              Top = 21
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 17
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -6703,21 +5757,18 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 0
-              Width = 415
+              ExplicitWidth = 332
+              Width = 331
             end
             object cxButtonEdit11: TcxButtonEdit
-              Left = 164
-              Top = 76
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 61
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -6762,22 +5813,19 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 2
-              Width = 300
+              ExplicitWidth = 240
+              Width = 239
             end
             object cxButtonEdit23: TcxButtonEdit
               Tag = 1
-              Left = 465
-              Top = 76
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 371
+              Top = 61
               Anchors = [akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -6822,62 +5870,53 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 3
-              Width = 114
+              ExplicitLeft = 372
+              Width = 91
             end
             object cxTextEdit3: TcxTextEdit
-              Left = 164
-              Top = 186
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 149
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 8
-              Width = 415
+              ExplicitWidth = 332
+              Width = 331
             end
             object cxTextEdit18: TcxTextEdit
-              Left = 164
-              Top = 159
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 127
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 7
-              Width = 415
+              ExplicitWidth = 332
+              Width = 331
             end
             object cxButtonEdit33: TcxButtonEdit
               Tag = 1
-              Left = 465
-              Top = 104
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 371
+              Top = 83
               Anchors = [akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -6922,21 +5961,18 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 5
-              Width = 114
+              ExplicitLeft = 372
+              Width = 91
             end
             object cxButtonEdit24: TcxButtonEdit
-              Left = 164
-              Top = 104
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 83
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -6981,42 +6017,36 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 4
-              Width = 300
+              ExplicitWidth = 240
+              Width = 239
             end
             object cxTextEdit41: TcxTextEdit
-              Left = 164
-              Top = 131
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 105
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 6
-              Width = 415
+              ExplicitWidth = 332
+              Width = 331
             end
             object cxButtonEdit7: TcxButtonEdit
               Tag = 1
-              Left = 164
-              Top = 214
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 171
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -7061,22 +6091,19 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 9
-              Width = 415
+              ExplicitWidth = 332
+              Width = 331
             end
             object cxButtonEdit5: TcxButtonEdit
               Tag = 1
-              Left = 164
-              Top = 241
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 193
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -7121,42 +6148,36 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 10
-              Width = 415
+              ExplicitWidth = 332
+              Width = 331
             end
             object cxTextEdit38: TcxTextEdit
-              Left = 164
-              Top = 269
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 215
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 11
-              Width = 415
+              ExplicitWidth = 332
+              Width = 331
             end
             object cxButtonEdit32: TcxButtonEdit
               Tag = 1
-              Left = 164
-              Top = 296
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 237
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -7201,22 +6222,19 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 12
-              Width = 415
+              ExplicitWidth = 332
+              Width = 331
             end
             object cxButtonEdit20: TcxButtonEdit
               Tag = 1
-              Left = 164
-              Top = 324
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 259
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Properties.Buttons = <
@@ -7261,461 +6279,362 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 13
-              Width = 415
+              ExplicitWidth = 332
+              Width = 331
             end
             object cxTextEdit39: TcxTextEdit
-              Left = 164
-              Top = 351
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 281
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 14
-              Width = 415
+              ExplicitWidth = 332
+              Width = 331
             end
             object cxTextEdit37: TcxTextEdit
-              Left = 164
-              Top = 379
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 303
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 15
-              Width = 415
+              ExplicitWidth = 332
+              Width = 331
             end
             object cxTextEdit35: TcxTextEdit
-              Left = 164
-              Top = 406
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 325
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 16
-              Width = 415
+              ExplicitWidth = 332
+              Width = 331
             end
             object cxTextEdit40: TcxTextEdit
-              Left = 164
-              Top = 434
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 347
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 17
-              Width = 415
+              ExplicitWidth = 332
+              Width = 331
             end
             object cxTextEdit36: TcxTextEdit
-              Left = 164
-              Top = 49
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 131
+              Top = 39
               Anchors = [akLeft, akTop, akRight]
               ParentFont = False
               Style.BorderStyle = ebsUltraFlat
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -14
+              Style.Font.Height = -11
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.Shadow = False
               Style.IsFontAssigned = True
               TabOrder = 1
-              Width = 415
+              ExplicitWidth = 332
+              Width = 331
             end
           end
         end
       end
     end
     object cxTabSheet14: TcxTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = #1055#1072#1088#1072#1084#1077#1090#1088#1099' '#1079#1072#1075#1086#1090#1086#1074#1082#1080
       ImageIndex = 2
-      ExplicitTop = 30
-      ExplicitHeight = 621
+      ExplicitTop = 23
+      ExplicitHeight = 498
       object cxGroupBox7: TcxGroupBox
         Left = 0
         Top = 0
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
         Align = alClient
-        PanelStyle.CaptionIndent = 3
         TabOrder = 0
         DesignSize = (
-          1195
-          622)
-        Height = 622
-        Width = 1195
+          956
+          497)
+        Height = 497
+        Width = 956
         object Label71: TLabel
-          Left = 20
-          Top = 316
-          Width = 246
-          Height = 17
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 16
+          Top = 253
+          Width = 224
+          Height = 13
           Caption = #1050#1086#1076' '#1087#1083#1072#1090#1077#1083#1100#1097#1080#1082#1072'.................................'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -14
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentFont = False
         end
         object Label70: TLabel
-          Left = 20
-          Top = 289
-          Width = 185
-          Height = 17
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 16
+          Top = 231
+          Width = 142
+          Height = 13
           Caption = #1055#1083#1072#1090#1077#1083#1100#1097#1080#1082'.......................'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -14
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
         end
         object Label69: TLabel
-          Left = 340
-          Top = 254
-          Width = 149
-          Height = 17
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 272
+          Top = 203
+          Width = 142
+          Height = 13
           Caption = #1054#1050#1055#1054'............................'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -14
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentFont = False
         end
         object Label68: TLabel
-          Left = 20
-          Top = 254
-          Width = 173
-          Height = 17
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 16
+          Top = 203
+          Width = 166
+          Height = 13
           Caption = #1058#1043#1053#1051'...................................'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -14
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentFont = False
         end
         object Label67: TLabel
-          Left = 20
-          Top = 226
-          Width = 174
-          Height = 17
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 16
+          Top = 181
+          Width = 167
+          Height = 13
           Caption = #1040#1076#1088#1077#1089'..................................'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -14
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentFont = False
         end
         object Label66: TLabel
-          Left = 20
-          Top = 199
-          Width = 187
-          Height = 17
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 16
+          Top = 159
+          Width = 148
+          Height = 13
           Caption = #1043#1088#1091#1079#1086#1087#1086#1083#1091#1095#1072#1090#1077#1083#1100'...............'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -14
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
         end
         object Label42: TLabel
-          Left = 20
-          Top = 74
-          Width = 231
-          Height = 17
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 16
+          Top = 59
+          Width = 180
+          Height = 13
           Caption = #1057#1090#1072#1085#1094#1080#1103' '#1085#1072#1079#1085#1072#1095#1077#1085#1080#1103'....................'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -14
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
         end
         object Label72: TLabel
-          Left = 20
-          Top = 353
-          Width = 192
-          Height = 17
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 16
+          Top = 282
+          Width = 149
+          Height = 13
           Caption = #1058#1080#1087' '#1079#1072#1075#1086#1090#1086#1074#1082#1080'......................'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -14
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
         end
         object Label73: TLabel
-          Left = 20
-          Top = 513
-          Width = 217
-          Height = 17
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 16
+          Top = 410
+          Width = 164
+          Height = 13
           Caption = #1050#1083#1080#1077#1085#1090'.........................................'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -14
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
           Visible = False
         end
         object Label74: TLabel
-          Left = 20
-          Top = 19
-          Width = 182
-          Height = 17
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 16
+          Top = 15
+          Width = 144
+          Height = 13
           Caption = #1057#1088#1086#1095#1085#1072#1103' '#1087#1077#1088#1077#1074#1086#1079#1082#1072'..........'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -14
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
         end
         object Label78: TLabel
-          Left = 20
-          Top = 44
-          Width = 187
-          Height = 17
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 16
+          Top = 35
+          Width = 152
+          Height = 13
           Caption = #1052#1072#1088#1096#1088#1091#1090#1085#1072#1103' '#1086#1090#1087#1088#1072#1074#1082#1072'......'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -14
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
         end
         object Label79: TLabel
-          Left = 20
-          Top = 568
-          Width = 211
-          Height = 17
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 16
+          Top = 454
+          Width = 173
+          Height = 13
           Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1047#1055#1059' "'#1047#1072#1082#1088#1091#1090#1082#1072'"......'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -14
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
         end
         object Label80: TLabel
-          Left = 20
-          Top = 540
-          Width = 360
-          Height = 17
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 16
+          Top = 432
+          Width = 282
+          Height = 13
           Caption = #1044#1086#1075#1086#1074#1086#1088' '#1085#1072' '#1088#1077#1084#1086#1085#1090'/'#1087#1088#1086#1084#1099#1074#1082#1091'..................................'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -14
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
         end
         object Label81: TLabel
-          Left = 340
-          Top = 164
-          Width = 117
-          Height = 17
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 272
+          Top = 131
+          Width = 110
+          Height = 13
           Caption = #1054#1050#1055#1054'....................'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -14
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentFont = False
         end
         object Label82: TLabel
-          Left = 20
-          Top = 164
-          Width = 173
-          Height = 17
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 16
+          Top = 131
+          Width = 166
+          Height = 13
           Caption = #1058#1043#1053#1051'...................................'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -14
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentFont = False
         end
         object Label83: TLabel
-          Left = 20
-          Top = 135
-          Width = 174
-          Height = 17
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 16
+          Top = 108
+          Width = 167
+          Height = 13
           Caption = #1040#1076#1088#1077#1089'..................................'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -14
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentFont = False
         end
         object Label84: TLabel
-          Left = 20
-          Top = 109
-          Width = 194
-          Height = 17
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 16
+          Top = 87
+          Width = 154
+          Height = 13
           Caption = #1043#1088#1091#1079#1086#1086#1090#1087#1088#1072#1074#1080#1090#1077#1083#1100'...............'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -14
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
         end
         object cxTextEdit25: TcxTextEdit
-          Left = 191
-          Top = 309
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 153
+          Top = 247
           ParentFont = False
           Properties.ReadOnly = True
           Style.BorderStyle = ebsUltraFlat
           Style.Color = clWindow
           Style.Font.Charset = DEFAULT_CHARSET
           Style.Font.Color = clWindowText
-          Style.Font.Height = -14
+          Style.Font.Height = -11
           Style.Font.Name = 'Tahoma'
           Style.Font.Style = [fsBold]
           Style.Shadow = False
           Style.IsFontAssigned = True
           TabOrder = 0
-          Width = 153
+          Width = 122
         end
         object cxButtonEdit39: TcxButtonEdit
           Tag = 1
-          Left = 191
-          Top = 281
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 153
+          Top = 225
           Anchors = [akLeft, akTop, akRight]
           ParentFont = False
           Properties.Buttons = <
@@ -7759,35 +6678,27 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           Style.BorderStyle = ebsUltraFlat
           Style.Font.Charset = DEFAULT_CHARSET
           Style.Font.Color = clWindowText
-          Style.Font.Height = -14
+          Style.Font.Height = -11
           Style.Font.Name = 'Tahoma'
           Style.Font.Style = []
           Style.Shadow = False
           Style.IsFontAssigned = True
           TabOrder = 1
-          Width = 993
+          Width = 794
         end
         object cxTextEdit23: TcxTextEdit
-          Left = 191
-          Top = 246
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 153
+          Top = 197
           ParentFont = False
           Properties.ReadOnly = False
           Style.BorderStyle = ebsUltraFlat
           Style.Color = clWindow
           TabOrder = 2
-          Width = 143
+          Width = 114
         end
         object cxTextEdit22: TcxTextEdit
-          Left = 191
-          Top = 219
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 153
+          Top = 175
           Anchors = [akLeft, akTop, akRight]
           ParentFont = False
           Properties.ReadOnly = False
@@ -7795,22 +6706,18 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           Style.Color = clWindow
           Style.Font.Charset = DEFAULT_CHARSET
           Style.Font.Color = clWindowText
-          Style.Font.Height = -14
+          Style.Font.Height = -11
           Style.Font.Name = 'Tahoma'
           Style.Font.Style = [fsBold]
           Style.Shadow = False
           Style.IsFontAssigned = True
           TabOrder = 3
-          Width = 993
+          Width = 794
         end
         object cxButtonEdit38: TcxButtonEdit
           Tag = 1
-          Left = 191
-          Top = 191
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 153
+          Top = 153
           Anchors = [akLeft, akTop, akRight]
           ParentFont = False
           Properties.Buttons = <
@@ -7857,42 +6764,34 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           Style.BorderStyle = ebsUltraFlat
           Style.Font.Charset = DEFAULT_CHARSET
           Style.Font.Color = clWindowText
-          Style.Font.Height = -14
+          Style.Font.Height = -11
           Style.Font.Name = 'Tahoma'
           Style.Font.Style = []
           Style.Shadow = False
           Style.IsFontAssigned = True
           TabOrder = 4
-          Width = 993
+          Width = 794
         end
         object cxTextEdit24: TcxTextEdit
-          Left = 420
-          Top = 246
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 336
+          Top = 197
           ParentFont = False
           Properties.ReadOnly = False
           Style.BorderStyle = ebsUltraFlat
           Style.Color = clWindow
           Style.Font.Charset = DEFAULT_CHARSET
           Style.Font.Color = clWindowText
-          Style.Font.Height = -14
+          Style.Font.Height = -11
           Style.Font.Name = 'Tahoma'
           Style.Font.Style = [fsBold]
           Style.Shadow = False
           Style.IsFontAssigned = True
           TabOrder = 5
-          Width = 173
+          Width = 138
         end
         object cxButtonEdit36: TcxButtonEdit
-          Left = 191
-          Top = 66
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 153
+          Top = 53
           Anchors = [akLeft, akTop, akRight]
           ParentFont = False
           Properties.Buttons = <
@@ -7937,22 +6836,18 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           Style.BorderStyle = ebsUltraFlat
           Style.Font.Charset = DEFAULT_CHARSET
           Style.Font.Color = clWindowText
-          Style.Font.Height = -14
+          Style.Font.Height = -11
           Style.Font.Name = 'Tahoma'
           Style.Font.Style = []
           Style.Shadow = False
           Style.IsFontAssigned = True
           TabOrder = 6
-          Width = 865
+          Width = 692
         end
         object cxButtonEdit37: TcxButtonEdit
           Tag = 1
-          Left = 1064
-          Top = 66
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 851
+          Top = 53
           Anchors = [akTop, akRight]
           ParentFont = False
           Properties.Buttons = <
@@ -7997,21 +6892,17 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           Style.BorderStyle = ebsUltraFlat
           Style.Font.Charset = DEFAULT_CHARSET
           Style.Font.Color = clWindowText
-          Style.Font.Height = -14
+          Style.Font.Height = -11
           Style.Font.Name = 'Tahoma'
           Style.Font.Style = []
           Style.Shadow = False
           Style.IsFontAssigned = True
           TabOrder = 7
-          Width = 120
+          Width = 96
         end
         object cxRadioGroup1: TcxRadioGroup
-          Left = 20
-          Top = 378
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 16
+          Top = 302
           Anchors = [akLeft, akTop, akRight]
           Caption = ' '#1054#1092#1086#1088#1084#1083#1077#1085#1080#1077' '
           Properties.Items = <
@@ -8030,17 +6921,13 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
             end>
           ItemIndex = 0
           TabOrder = 8
-          Height = 123
-          Width = 1164
+          Height = 99
+          Width = 931
         end
         object cxButtonEdit40: TcxButtonEdit
           Tag = -9
-          Left = 191
-          Top = 505
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 153
+          Top = 404
           Anchors = [akLeft, akTop, akRight]
           ParentFont = False
           Properties.Buttons = <
@@ -8085,46 +6972,34 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           Style.BorderStyle = ebsUltraFlat
           Style.Font.Charset = DEFAULT_CHARSET
           Style.Font.Color = clWindowText
-          Style.Font.Height = -14
+          Style.Font.Height = -11
           Style.Font.Name = 'Tahoma'
           Style.Font.Style = []
           Style.Shadow = False
           Style.IsFontAssigned = True
           TabOrder = 9
           Visible = False
-          Width = 988
+          Width = 790
         end
         object cxCheckBox1: TcxCheckBox
-          Left = 195
-          Top = 10
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 156
+          Top = 8
           Style.BorderStyle = ebsUltraFlat
           TabOrder = 10
         end
         object cxCheckBox2: TcxCheckBox
-          Left = 195
-          Top = 38
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 156
+          Top = 30
           Style.BorderStyle = ebsUltraFlat
           TabOrder = 11
         end
         object cxLookupComboBox1: TcxLookupComboBox
-          Left = 191
-          Top = 344
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 153
+          Top = 275
           ParentShowHint = False
           Properties.DropDownListStyle = lsFixedList
           Properties.DropDownRows = 30
-          Properties.DropDownWidth = 875
+          Properties.DropDownWidth = 700
           Properties.KeyFieldNames = 'id'
           Properties.ListColumns = <
             item
@@ -8144,63 +7019,47 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           Style.Color = 13041663
           Style.Shadow = False
           TabOrder = 12
-          Width = 430
+          Width = 344
         end
         object cxCheckBox3: TcxCheckBox
-          Left = 233
-          Top = 561
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 186
+          Top = 449
           Style.BorderStyle = ebsUltraFlat
           TabOrder = 13
         end
         object cxTextEdit47: TcxTextEdit
-          Left = 259
-          Top = 533
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 207
+          Top = 426
           ParentFont = False
           Properties.ReadOnly = False
           Style.BorderStyle = ebsUltraFlat
           Style.Color = clWindow
           Style.Font.Charset = DEFAULT_CHARSET
           Style.Font.Color = clWindowText
-          Style.Font.Height = -14
+          Style.Font.Height = -11
           Style.Font.Name = 'Tahoma'
           Style.Font.Style = [fsBold]
           Style.Shadow = False
           Style.TextStyle = []
           Style.IsFontAssigned = True
           TabOrder = 14
-          Width = 255
+          Width = 204
         end
         object cxDateEdit3: TcxDateEdit
-          Left = 516
-          Top = 533
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 413
+          Top = 426
           Style.BorderStyle = ebsUltraFlat
           Style.Shadow = False
           TabOrder = 15
-          Width = 152
+          Width = 121
         end
         object cxTextEdit48: TcxTextEdit
-          Left = 420
-          Top = 156
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 336
+          Top = 125
           ParentFont = False
           Style.Font.Charset = DEFAULT_CHARSET
           Style.Font.Color = clWindowText
-          Style.Font.Height = -14
+          Style.Font.Height = -11
           Style.Font.Name = 'Tahoma'
           Style.Font.Style = []
           Style.LookAndFeel.Kind = lfUltraFlat
@@ -8209,20 +7068,17 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           StyleDisabled.LookAndFeel.Kind = lfUltraFlat
           StyleFocused.LookAndFeel.Kind = lfUltraFlat
           StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
           TabOrder = 16
-          Width = 173
+          Width = 138
         end
         object cxTextEdit49: TcxTextEdit
-          Left = 191
-          Top = 156
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 153
+          Top = 125
           ParentFont = False
           Style.Font.Charset = DEFAULT_CHARSET
           Style.Font.Color = clWindowText
-          Style.Font.Height = -14
+          Style.Font.Height = -11
           Style.Font.Name = 'Tahoma'
           Style.Font.Style = []
           Style.LookAndFeel.Kind = lfUltraFlat
@@ -8231,21 +7087,18 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           StyleDisabled.LookAndFeel.Kind = lfUltraFlat
           StyleFocused.LookAndFeel.Kind = lfUltraFlat
           StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
           TabOrder = 17
-          Width = 143
+          Width = 114
         end
         object cxTextEdit50: TcxTextEdit
-          Left = 191
-          Top = 129
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 153
+          Top = 103
           Anchors = [akLeft, akTop, akRight]
           ParentFont = False
           Style.Font.Charset = DEFAULT_CHARSET
           Style.Font.Color = clWindowText
-          Style.Font.Height = -14
+          Style.Font.Height = -11
           Style.Font.Name = 'Tahoma'
           Style.Font.Style = []
           Style.LookAndFeel.Kind = lfUltraFlat
@@ -8254,17 +7107,14 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           StyleDisabled.LookAndFeel.Kind = lfUltraFlat
           StyleFocused.LookAndFeel.Kind = lfUltraFlat
           StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
           TabOrder = 18
-          Width = 993
+          Width = 794
         end
         object cxButtonEdit41: TcxButtonEdit
           Tag = 1
-          Left = 191
-          Top = 101
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 153
+          Top = 81
           Anchors = [akLeft, akTop, akRight]
           ParentFont = False
           Properties.Buttons = <
@@ -8308,7 +7158,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           Properties.OnButtonClick = cxButtonEdit41PropertiesButtonClick
           Style.Font.Charset = DEFAULT_CHARSET
           Style.Font.Color = clWindowText
-          Style.Font.Height = -14
+          Style.Font.Height = -11
           Style.Font.Name = 'Tahoma'
           Style.Font.Style = []
           Style.LookAndFeel.Kind = lfUltraFlat
@@ -8317,8 +7167,9 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
           StyleDisabled.LookAndFeel.Kind = lfUltraFlat
           StyleFocused.LookAndFeel.Kind = lfUltraFlat
           StyleHot.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
           TabOrder = 19
-          Width = 993
+          Width = 794
         end
       end
     end
@@ -8927,7 +7778,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
   object dxBarManager1: TdxBarManager
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -15
+    Font.Height = -12
     Font.Name = 'Segoe UI'
     Font.Style = []
     Categories.Strings = (
@@ -8942,7 +7793,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
     UseSystemFont = True
     Left = 840
     Top = 440
-    PixelsPerInch = 120
+    PixelsPerInch = 96
     object dxBarButton2: TdxBarButton
       Caption = #1044#1086#1073#1072#1074#1080#1090#1100
       Category = 0
@@ -9033,7 +7884,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
     UseOwnFont = False
     Left = 144
     Top = 608
-    PixelsPerInch = 120
+    PixelsPerInch = 96
   end
   object DS_invGuide: TDataSource
     DataSet = Client_invGuide
@@ -9099,7 +7950,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
     UseOwnFont = False
     Left = 424
     Top = 544
-    PixelsPerInch = 120
+    PixelsPerInch = 96
   end
   object dxBarPopupMenu3: TdxBarPopupMenu
     Tag = 2
@@ -9125,7 +7976,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
     UseOwnFont = False
     Left = 424
     Top = 576
-    PixelsPerInch = 120
+    PixelsPerInch = 96
   end
   object dxBarPopupMenu4: TdxBarPopupMenu
     Tag = 3
@@ -9151,7 +8002,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
     UseOwnFont = False
     Left = 424
     Top = 608
-    PixelsPerInch = 120
+    PixelsPerInch = 96
   end
   object dxBarPopupMenu5: TdxBarPopupMenu
     Tag = 4
@@ -9177,7 +8028,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
     UseOwnFont = False
     Left = 280
     Top = 544
-    PixelsPerInch = 120
+    PixelsPerInch = 96
   end
   object dxBarPopupMenu6: TdxBarPopupMenu
     Tag = 5
@@ -9203,7 +8054,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
     UseOwnFont = False
     Left = 280
     Top = 576
-    PixelsPerInch = 120
+    PixelsPerInch = 96
   end
   object dxBarPopupMenu7: TdxBarPopupMenu
     Tag = 6
@@ -9229,7 +8080,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
     UseOwnFont = False
     Left = 280
     Top = 608
-    PixelsPerInch = 120
+    PixelsPerInch = 96
   end
   object dxBarPopupMenu8: TdxBarPopupMenu
     Tag = 7
@@ -9255,7 +8106,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
     UseOwnFont = False
     Left = 560
     Top = 544
-    PixelsPerInch = 120
+    PixelsPerInch = 96
   end
   object DS_invCar: TDataSource
     DataSet = Client_invCar
@@ -9304,7 +8155,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
     UseOwnFont = False
     Left = 144
     Top = 544
-    PixelsPerInch = 120
+    PixelsPerInch = 96
   end
   object dxBarPopupMenu10: TdxBarPopupMenu
     Tag = 9
@@ -9330,7 +8181,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
     UseOwnFont = False
     Left = 560
     Top = 576
-    PixelsPerInch = 120
+    PixelsPerInch = 96
   end
   object DS_invCont: TDataSource
     DataSet = Client_invCont
@@ -9361,7 +8212,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
     UseOwnFont = False
     Left = 144
     Top = 576
-    PixelsPerInch = 120
+    PixelsPerInch = 96
   end
   object dxBarPopupMenu12: TdxBarPopupMenu
     Tag = 20
@@ -9387,7 +8238,7 @@ object fmECPInvoiceToViza: TfmECPInvoiceToViza
     UseOwnFont = False
     Left = 752
     Top = 584
-    PixelsPerInch = 120
+    PixelsPerInch = 96
   end
   object DS_freightCLS: TDataSource
     DataSet = Client_freightCLS

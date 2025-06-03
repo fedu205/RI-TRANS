@@ -98,8 +98,11 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <BT_BuildType>Debug</BT_BuildType>
-        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppDPIAwarenessMode>PerMonitor</AppDPIAwarenessMode>
+        <VerInfo_MajorVer>1</VerInfo_MajorVer>
+        <VerInfo_Release>0</VerInfo_Release>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
@@ -108,16 +111,30 @@
         <DCCReference Include="EtranMain.pas">
             <Form>fmEtranMain</Form>
         </DCCReference>
-        <DCCReference Include="SOAP.pas"/>
         <DCCReference Include="EtrUtils.pas"/>
         <DCCReference Include="EtranConnectDB.pas">
             <Form>fmEtranConnectDB</Form>
         </DCCReference>
         <DCCReference Include="ThreadEtran.pas"/>
-        <DCCReference Include="ThreadCheck.pas"/>
-        <DCCReference Include="EtrNSI.pas">
-            <Form>fmEtrNSI</Form>
+        <DCCReference Include="ECPServerContainer.pas">
+            <Form>fmECPServerContainer</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
         </DCCReference>
+        <DCCReference Include="ECPServerMethods.pas">
+            <Form>fmECPServerMethods</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDSServerModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="CAPICOM_TLB.pas"/>
+        <DCCReference Include="ECPServerUtils.pas"/>
+        <DCCReference Include="TSPCOM_TLB.pas"/>
+        <DCCReference Include="Wcrypt2.pas"/>
+        <DCCReference Include="ECPTestSign.pas">
+            <Form>fmECPTestSign</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="fmECPServerMethodsClient.pas"/>
         <DCCReference Include="IEtranSysservice.pas"/>
         <None Include="RES_ETRAN\sp_query_create.txt"/>
         <None Include="RES_ETRAN\sp_query_docs_get.txt"/>
@@ -176,6 +193,10 @@
                     <VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
                     <VersionInfoKeys Name="Comments"/>
                 </VersionInfoKeys>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k280.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp280.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
             </Delphi.Personality>
             <Platforms>
                 <Platform value="Win32">True</Platform>
@@ -183,10 +204,40 @@
             </Platforms>
             <Deployment Version="4">
                 <DeployFile LocalName="GetETRAN3.exe" Configuration="Debug" Class="ProjectOutput"/>
+                <DeployFile LocalName="GetETRAN3.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>GetETRAN3.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="RES_ETRAN\sp_query_create.txt" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="RES_ETRAN\sp_query_create.txt" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="RES_ETRAN\sp_query_docs_get.txt" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="RES_ETRAN\sp_query_docs_get.txt" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="RES_ETRAN\sp_query_get.txt" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="RES_ETRAN\sp_query_get.txt" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="RES_ETRAN\sp_query_save_new.txt" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="RES_ETRAN\sp_query_save_new.txt" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployClass Name="AdditionalDebugSymbols">
                     <Platform Name="iOSSimulator">
                         <Operation>1</Operation>

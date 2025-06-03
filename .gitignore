@@ -23,3 +23,5 @@ Thumbs.db
 DLL/Etran/GetETRAN4/
 *._Temp
 /Utils/FactFilesLoad/Win32
+/DLL/Etran/__GetETRAN
+/Binn/__recovery

@@ -48,11 +48,9 @@ object fmEtranConnectDB: TfmEtranConnectDB
     33E1333333B3333333623333330800000000000000000000000000000000C027
     000000010000000100000008000000080000000100000001000000070000000F
     0000000F0000000F0000000F0000000F0000000F0000000FFFFFC03FFFFF}
-  OldCreateOrder = False
   Position = poMainFormCenter
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
@@ -230,7 +228,7 @@ object fmEtranConnectDB: TfmEtranConnectDB
       Properties.EchoMode = eemPassword
       Style.Shadow = True
       TabOrder = 1
-      Text = 'cjnhfkjubcnbrf'
+      Text = '14remTTetran'
       Width = 139
     end
     object cxTextEdit1: TcxTextEdit
@@ -247,7 +245,7 @@ object fmEtranConnectDB: TfmEtranConnectDB
       Top = 64
       Style.Shadow = True
       TabOrder = 2
-      Text = 'GURU\MSSQL'
+      Text = '10.244.252.10'
       Width = 139
     end
     object cxTextEdit4: TcxTextEdit

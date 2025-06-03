@@ -1,17 +1,17 @@
 DECLARE @query_id int,
-		@connect_id int,
-		@users_id int,
-		@period_begin datetime,
+		@connect_id int, 
+		@users_id int, 
+		@period_begin datetime, 
 		@period_end datetime,
 		@object_id	int,
 		@connect_period_begin datetime,
 		@connect_period_end	datetime,
 		@set_check bit
 
-
+	
 SELECT	connect_id, db_users_id, read_first_date, read_interval, read_doc_type_id
 		INTO #connect
-FROM	etran_connect_new
+FROM	etran_connect_new 
 WHERE	set_load = 1
 
 SELECT		connect_id, max(query_id) as last_query_id
@@ -20,53 +20,40 @@ FROM		etran_query_new
 GROUP BY	connect_id
 
 
-
-
-
 BEGIN TRY
 	BEGIN TRANSACTION
 
 	DECLARE cur_create_period CURSOR FOR
-			--SELECT * FROM
-			--(	SELECT	#connect.connect_id, #connect.db_users_id,
-			--			--isnull(isnull(etran_query_new.oper_date,etran_query_new.period_end), read_first_date) period_begin,
-			--			dateadd(hh, case when read_doc_type_id = 110 then -2 else 0 end, isnull(isnull(etran_query_new.oper_date,etran_query_new.period_end), read_first_date)) period_begin,
-			--			dateadd(mi, read_interval, isnull(isnull(etran_query_new.oper_date,etran_query_new.period_end), read_first_date)) period_end
-			--	FROM	#connect
-			--			left join #query on #query.connect_id = #connect.connect_id
-			--			left join etran_query_new on #query.last_query_id = etran_query_new.query_id
-			--	WHERE	(query_xml is not null) or (etran_query_new.query_id is null)
-			--) x1
-			--WHERE period_end < getdate()
-			SELECT connect_id, db_users_id, period_begin, period_end FROM
-			(	SELECT	#connect.connect_id, #connect.db_users_id,
-						isnull(isnull(etran_query_new.oper_date,etran_query_new.period_end), read_first_date) period_begin,
-						dateadd(mi, read_interval, isnull(isnull(etran_query_new.oper_date,etran_query_new.period_end), read_first_date)) period_end,
-						etran_query_new.query_date_load
+			SELECT * FROM 
+			(	SELECT	#connect.connect_id, #connect.db_users_id, 
+						--isnull(isnull(etran_query_new.oper_date,etran_query_new.period_end), read_first_date) period_begin,
+						dateadd(hh, case when read_doc_type_id = 110 then -2 else 0 end, isnull(isnull(etran_query_new.oper_date,etran_query_new.period_end), read_first_date)) period_begin,
+						dateadd(mi, read_interval, isnull(isnull(etran_query_new.oper_date,etran_query_new.period_end), read_first_date)) period_end
 				FROM	#connect
 						left join #query on #query.connect_id = #connect.connect_id
 						left join etran_query_new on #query.last_query_id = etran_query_new.query_id
 				WHERE	(query_xml is not null) or (etran_query_new.query_id is null)
-			) x1
-			WHERE period_end < getdate() --and dateadd(minute, 10, query_date_load) < getdate()
+			) x1 
+			WHERE period_end < getdate()
+
 
 	OPEN cur_create_period
 	FETCH NEXT FROM cur_create_period INTO @connect_id, @users_id, @period_begin, @period_end
 
 	WHILE @@FETCH_STATUS = 0 BEGIN
-		SELECT	@connect_period_begin =	read_first_date,
+		SELECT	@connect_period_begin =	read_first_date, 
 				@connect_period_end	  = dateadd(mi, read_interval, read_first_date)
-		FROM	etran_connect_new
+		FROM	etran_connect_new 
 		WHERE	connect_id = @connect_id
 
 		IF @connect_period_begin > @period_begin BEGIN
 			SET @period_begin = @connect_period_begin
 			SET @period_end   = @connect_period_end
 		END
-
-		--print	right('    ' + cast(@connect_id as varchar),8) + ':' +
-		--		convert(varchar, @period_begin, 112) + ':' +
-		--		convert(varchar, @period_end, 112)
+		
+		print	right('    ' + cast(@connect_id as varchar),8) + ':' +  
+				convert(varchar, @period_begin, 112) + ':' + 
+				convert(varchar, @period_end, 112)
 
 		SELECT @object_id = object_id FROM etran_object_base WHERE object_physic_name = 'ETRAN_QUERY_NEW'
 		INSERT INTO etran_global_id ( object_id,  users_owner_id,  date_enter, global_color)
@@ -95,4 +82,3 @@ END CATCH
 
 DROP TABLE #connect
 DROP TABLE #query
-

@@ -32,7 +32,7 @@ uses
   dxSkinTheBezier, cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox,
   dxDateRanges, dxSkinsForm, dxSkinOffice2019Colorful, dxSkinBasic,
   dxSkinOffice2019Black, dxSkinOffice2019DarkGray, dxSkinOffice2019White,
-  dxScrollbarAnnotations;
+  dxScrollbarAnnotations, dxSkinWXI, dxCoreGraphics;
 
 type
   TfmECPInvoiceToViza = class(TForm)
@@ -914,7 +914,7 @@ begin
 
   if users_group_cod = '12' then begin login := 'Etran_HOL'; db_name := 'lis_etran'; end;
 
-  if users_group_cod =  '0' then begin login := 'Etran_GRU'; db_name := 'lis_etran'; end;
+  if users_group_cod =  '0' then begin login := 'Etran_rtr'; db_name := 'lis_etran'; end;
   if users_group_cod =  '1' then begin login := 'Etran_KHT'; db_name := 'lis_etran'; end;
   if users_group_cod =  '3' then begin login := 'Etran_PRV'; db_name := 'lis_etran'; end;
   if users_group_cod =  '5' then begin login := 'Etran_STS'; db_name := 'lis_etran'; end;
@@ -972,7 +972,7 @@ begin
 
   if users_group_cod = '12' then begin login := 'Etran_HOL'; db_name := 'lis_etran'; end;
 
-  if users_group_cod =  '0' then begin login := 'Etran_GRU'; db_name := 'lis_etran'; end;
+  if users_group_cod =  '0' then begin login := 'Etran_rtr'; db_name := 'lis_etran'; end;
 //  if users_group_cod =  '1' then begin login := 'Etran_KHT'; db_name := 'lis_etran'; end;
 //  if users_group_cod =  '3' then begin login := 'Etran_PRV'; db_name := 'lis_etran'; end;
 //  if users_group_cod =  '5' then begin login := 'Etran_STS'; db_name := 'lis_etran'; end;

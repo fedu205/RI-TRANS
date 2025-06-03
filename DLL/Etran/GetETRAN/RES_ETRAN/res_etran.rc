@@ -1,4 +1,4 @@
-sp_query_create RCDATA "D:\Project\SFH\GURU\DLL\Etran\GetETRAN\RES_ETRAN\sp_query_create.txt"
-sp_query_docs_get RCDATA "D:\Project\SFH\GURU\DLL\Etran\GetETRAN\RES_ETRAN\sp_query_docs_get.txt"
-sp_query_get RCDATA "D:\Project\SFH\GURU\DLL\Etran\GetETRAN\RES_ETRAN\sp_query_get.txt"
-sp_query_save_new RCDATA "D:\Project\SFH\GURU\DLL\Etran\GetETRAN\RES_ETRAN\sp_query_save_new.txt"
+sp_query_create RCDATA "D:\Project\SFH\NKK\DLL\Etran\GetETRAN\RES_ETRAN\sp_query_create.txt"
+sp_query_docs_get RCDATA "D:\Project\SFH\nkk\DLL\Etran\GetETRAN\RES_ETRAN\sp_query_docs_get.txt"
+sp_query_get RCDATA "D:\Project\SFH\nkk\DLL\Etran\GetETRAN\RES_ETRAN\sp_query_get.txt"
+sp_query_save_new RCDATA "D:\Project\SFH\nkk\DLL\Etran\GetETRAN\RES_ETRAN\sp_query_save_new.txt"

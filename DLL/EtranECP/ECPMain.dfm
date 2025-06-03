@@ -709,9 +709,9 @@ object fmECPMain: TfmECPMain
               StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
               StyleHot.LookAndFeel.Kind = lfUltraFlat
               StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+              StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+              StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
               TabOrder = 0
-              ExplicitWidth = 934
-              ExplicitHeight = 377
               Height = 387
               Width = 945
             end
@@ -720,9 +720,6 @@ object fmECPMain: TfmECPMain
             Caption = #1048#1089#1090#1086#1088#1080#1103' '#1074#1072#1075#1086#1085#1072
             ImageIndex = 1
             TabVisible = False
-            ExplicitTop = 23
-            ExplicitWidth = 946
-            ExplicitHeight = 388
             object cxGrid2: TcxGrid
               Left = 0
               Top = 26
@@ -1641,16 +1638,12 @@ object fmECPMain: TfmECPMain
               Height = 26
               Align = dalTop
               BarManager = dxBarManager1
-              ExplicitWidth = 946
             end
           end
           object cxTabSheet5: TcxTabSheet
             Caption = #1056#1077#1081#1089#1099' '#1074#1072#1075#1086#1085#1072
             ImageIndex = 2
             TabVisible = False
-            ExplicitTop = 23
-            ExplicitWidth = 946
-            ExplicitHeight = 388
             object cxGrid5: TcxGrid
               Left = 0
               Top = 26
@@ -2014,7 +2007,6 @@ object fmECPMain: TfmECPMain
               Height = 26
               Align = dalTop
               BarManager = dxBarManager1
-              ExplicitWidth = 946
             end
           end
         end
@@ -2044,6 +2036,7 @@ object fmECPMain: TfmECPMain
               Caption = #1043#1088#1091#1079#1099
               ImageIndex = 0
               ExplicitTop = 23
+              ExplicitWidth = 0
               ExplicitHeight = 388
               object cxGrid7: TcxGrid
                 Left = 0
@@ -2164,6 +2157,7 @@ object fmECPMain: TfmECPMain
               Caption = #1042#1072#1075#1086#1085#1099
               ImageIndex = 1
               ExplicitTop = 23
+              ExplicitWidth = 0
               ExplicitHeight = 388
               object cxGrid10: TcxGrid
                 Left = 0
@@ -2274,6 +2268,7 @@ object fmECPMain: TfmECPMain
               Caption = #1052#1072#1088#1096#1088#1091#1090' '#1089#1083#1077#1076#1086#1074#1072#1085#1080#1103
               ImageIndex = 2
               ExplicitTop = 23
+              ExplicitWidth = 0
               ExplicitHeight = 388
               object cxGrid9: TcxGrid
                 Left = 0
@@ -2365,6 +2360,7 @@ object fmECPMain: TfmECPMain
               Caption = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1099#1077' '#1086#1090#1084#1077#1090#1082#1080
               ImageIndex = 3
               ExplicitTop = 23
+              ExplicitWidth = 0
               ExplicitHeight = 388
               object cxGrid8: TcxGrid
                 Left = 0

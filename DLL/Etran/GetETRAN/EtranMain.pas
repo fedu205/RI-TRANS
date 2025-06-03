@@ -8,7 +8,7 @@ uses
   cxContainer, cxEdit, cxLabel, dxGDIPlusClasses, ExtCtrls, DB, DBClient,
   cxStyles, cxCustomData, cxFilter, cxData, cxDataStorage, cxDBData,
   cxGridCustomTableView, cxGridTableView, cxGridDBTableView, cxGridLevel,
-  cxGridCustomView, cxGrid, ADODB, cxGridBandedTableView, ThreadCheck,
+  cxGridCustomView, cxGrid, ADODB, cxGridBandedTableView,
   cxGridDBBandedTableView, cxTextEdit, cxImageComboBox, dxmdaset, DateUtils,
   cxProgressBar, ThreadEtran, cxLookAndFeels, cxLookAndFeelPainters, EtrUtils, ComCtrls,
   dxStatusBar, StrUtils, ScktComp, dxSkinsCore, dxSkinBlack, dxSkinBlue,
@@ -29,8 +29,10 @@ uses
   dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
   dxSkinVisualStudio2013Light, System.ImageList, cxImageList, dxSkinTheBezier,
   dxDateRanges, cxDataControllerConditionalFormattingRulesManagerDialog,
-  dxSkinOffice2019Colorful, dxSkinBasic, dxSkinOffice2019Black,
-  dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxScrollbarAnnotations;
+  dxSkinOffice2019Colorful, dxSkinBasic, dxSkinOffice2019Black, IniFiles,
+  dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxScrollbarAnnotations,
+  WinSock,  IdTCPConnection, Datasnap.DSTCPServerTransport, dxBevel, Vcl.Menus, cxButtons, Soap.InvokeRegistry, System.Net.URLClient, Soap.Rio,
+  Soap.SOAPHTTPClient, dxSkinWXI;
 
 type
   TfmEtranMain = class(TForm)
@@ -169,16 +171,50 @@ type
     cxGridDBBandedTableView3error_cod: TcxGridDBBandedColumn;
     cxGridDBBandedTableView3error_name: TcxGridDBBandedColumn;
     cxGridDBBandedTableView3error_param: TcxGridDBBandedColumn;
-    dxBarButton6: TdxBarButton;
-    dxBarButton7: TdxBarButton;
-    ServerSocket1: TServerSocket;
-    cxTabSheet4: TcxTabSheet;
-    Memo1: TMemo;
     cxTabSheet5: TcxTabSheet;
-    Memo2: TMemo;
-    Memo3: TMemo;
-    Panel3: TPanel;
+    Timer1: TTimer;
+    TrayIcon1: TTrayIcon;
+    cxImageList1: TcxImageList;
+    DS_Query: TDataSource;
+    ClientDS_Query: TClientDataSet;
+    ClientDS_Queryid: TAutoIncField;
+    ClientDS_Queryquery_date: TDateTimeField;
+    ClientDS_Queryquery_ip: TStringField;
+    ClientDS_Queryquery_type: TStringField;
+    ClientDS_Queryquery_etran_task: TStringField;
+    ClientDS_Queryquery_etran_result: TStringField;
+    ClientDS_Queryquery_result: TBooleanField;
+    ClientDS_Queryquery_error_message: TStringField;
+    ClientDS_Queryquery_duration: TIntegerField;
+    cxGrid8: TcxGrid;
+    cxGrid1DBBandedTableView1: TcxGridDBBandedTableView;
+    cxGrid1DBBandedTableView1id: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1query_date: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1query_ip: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1query_type: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1query_etran_task: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1query_etran_result: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1query_result: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1query_error_message: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1query_duration: TcxGridDBBandedColumn;
+    cxGrid1Level1: TcxGridLevel;
+    Label11: TLabel;
+    ListBox1: TListBox;
+    Label3: TLabel;
     Label4: TLabel;
+    dxBevel1: TdxBevel;
+    Label5: TLabel;
+    Bevel1: TBevel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label10: TLabel;
+    Label12: TLabel;
+    Label9: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
+    cxButton4: TcxButton;
+    cxButton1: TcxButton;
     procedure dxBarButton3Click(Sender: TObject);
     procedure cxPageControl1Change(Sender: TObject);
     procedure dxBarButton2Click(Sender: TObject);
@@ -196,15 +232,26 @@ type
       Sender: TcxCustomGridTableView; APrevFocusedRecord,
       AFocusedRecord: TcxCustomGridRecord;
       ANewItemRecordFocusingChanged: Boolean);
-    procedure dxBarButton6Click(Sender: TObject);
-    procedure dxBarButton7Click(Sender: TObject);
-    procedure ServerSocket1ClientRead(Sender: TObject;
-      Socket: TCustomWinSocket);
+    procedure TrayIcon1Click(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure Timer1Timer(Sender: TObject);
+    procedure cxButton4Click(Sender: TObject);
+    procedure cxButton1Click(Sender: TObject);
   private
     procedure MessageReceiver(var msg: TMessage); message MY_MESSAGE;
   public
+    Fetran_users        : string;
+    Fetran_password     : string;
+    Fetran_ecp_users    : string;
+    Fetran_ecp_password : string;
+    Fetran_ip           : string;
+    Fservice_name       : string;
+    Fcert_num           : string;
+    Fservice_port       : string;
+
+    FImageIndex : integer;
+    FClose : boolean;
     ThreadEtran2 : TThreadEtran2;
-    FThreadCheck : TThreadCheck;
     Fset_run : boolean;
     Fset_db_connect : boolean;
     Fconnect_string : string;
@@ -215,6 +262,20 @@ type
     procedure RefreshButton();
     procedure ConnectChangeStatus(connect_id: integer; set_status: integer);
     procedure ConnectChangeProgress(connect_id: integer; cnt_doc: integer; progress: integer);
+
+    function  GetLocalIP(): string;
+    procedure AddConnectionToList(Conn: TIdTCPConnection; Channel: TDSTCPChannel);
+    procedure SaveLog(inf_thread_name: string; inf_caption: string; inf_text: string; inf_result_id: integer; inf_cod: string);
+
+  published
+    property _GetEtranUsers       : string read Fetran_users;
+    property _GetEtranPassword    : string read Fetran_password;
+    property _GetEtranECPUsers    : string read Fetran_ecp_users;
+    property _GetEtranECPPassword : string read Fetran_ecp_password;
+    property _GetEtranIP          : string read Fetran_ip;
+    property _GetServiceName      : string read Fservice_name;
+    property _GetCertNum          : string read Fcert_num;
+    property _GetConnectString    : string read Fconnect_string;
   end;
 
 var
@@ -222,9 +283,71 @@ var
 
 implementation
 
-uses EtranConnectDB, EtrNSI, SOAP;
+uses EtranConnectDB, ECPServerContainer, ECPTestSign, ECPServerUtils, IEtranSysservice;
 
 {$R *.dfm}
+
+
+procedure TfmEtranMain.SaveLog(inf_thread_name: string; inf_caption: string; inf_text: string; inf_result_id: integer; inf_cod: string);
+var log_file : TFileStream;
+    log_path : string;
+      s_save : RawByteString;
+   file_name : string;
+begin
+//  log_path  := ExtractFilePath(ParamStr(0)) + 'Log\';
+//  file_name := log_path + 'log_' + FormatDateTime('yyyymmdd', Now()) + '.csv';
+//
+//  if not FileExists(file_name) then
+//    log_file := TFileStream.Create(file_name, fmCreate)
+//  else
+//    log_file := TFileStream.Create(file_name, fmOpenReadWrite);
+//
+//  s_save :=  FormatDateTime('dd.mm.yyyy hh:nn:ss.zzz', Now) + ';' + inf_thread_name + ';' + inf_caption + ';' + inf_text + ';' + IntToStr(inf_result_id) + ';' + inf_cod + ';' + #10;
+//
+//  log_file.Seek(0, soFromEnd);
+//  log_file.WriteBuffer(Pointer(s_save)^, Length(s_save));
+//  log_file.Free;
+//
+//  if (inf_result_id = 0) and (inf_thread_name = 'ThreadFTP') then begin
+//    Fset_error_FTP := True;
+//    LoadImage(cxImageList_Status, 13, cxImage1);
+//  end;
+end;
+
+function TfmEtranMain.GetLocalIP(): string;
+const WSVer = $101;
+var
+  wsaData: TWSAData;
+  P: PHostEnt;
+  Buf: array [0..127] of Char;
+begin
+  Result := '';
+  if WSAStartup(WSVer, wsaData) = 0 then begin
+    if GetHostName(@Buf, 128) = 0 then begin
+      P := GetHostByName(@Buf);
+      if P <> nil then Result := iNet_ntoa(PInAddr(p^.h_addr_list^)^);
+    end;
+    WSACleanup;
+  end;
+end;
+
+procedure TfmEtranMain.AddConnectionToList(Conn: TIdTCPConnection; Channel: TDSTCPChannel);
+begin
+  if (Conn <> nil) and (Channel <> nil) and (Channel.ChannelInfo <> nil) and (Channel.ChannelInfo.ClientInfo.IpAddress <> EmptyStr) then
+    ListBox1.Items.AddObject(Channel.ChannelInfo.ClientInfo.IpAddress + ':' + Channel.ChannelInfo.ClientInfo.ClientPort, Channel)
+  else
+    ListBox1.Items.AddObject('Channel is missing proper ClientInfo.', Conn);
+end;
+
+
+procedure TfmEtranMain.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+begin
+  if not FClose then begin
+    TrayIcon1.Visible := True;
+    fmEtranMain.Hide;
+    CanClose := False;
+  end;
+end;
 
 procedure TfmEtranMain.FormCreate(Sender: TObject);
 begin
@@ -237,187 +360,7 @@ begin
   ClientDS_Error.CreateDataSet;
   ClientDS_Error.LogChanges := False;
 
-  ServerSocket1.Active := True;
-end;
-
-procedure TfmEtranMain.ServerSocket1ClientRead(Sender: TObject; Socket: TCustomWinSocket);
-var
-        msg : WideString;
-        buf : array [0..412872] of Byte;
-    buf_len : integer;
-    str_temp, str : string;
-    dist : integer;
-   ECP, TSP : WideString;
- send_query : WideString;
-      s_save : RawByteString;
-begin
-  buf_len := Socket.ReceiveLength;
-  Socket.ReceiveBuf(buf,buf_len);
-  buf[buf_len] := 0;
-  msg := PAnsiChar(@buf);
-
-//  Memo1.Lines.Clear;
-  if LeftStr(msg,4) = 'DIST' then begin
-//    Memo1.Lines.Add(msg);
-    send_query := '<getCalcDistance version="1.0"><distance><distStationCode value="' + Copy(msg,  6, 6) + '"/></distance><distance><distStationCode value="' + Copy(msg, 13, 6) + '"/></distance><useMod11/></getCalcDistance>';
-
-    GetIEtranSys(False,'http://12.0.0.2:8092/EtranServer/EtranLR.dll/soap').GetBlock('абашин', 'etran_gru', send_query, ECP, TSP);
-//    Memo1.Lines.Add(send_query);
-    str := send_query;
-    dist := 0;
-    while Pos('<distMinWay value="',str) <> 0 do begin
-      str      := RightStr(str, Length(str)-Pos('<distMinWay value="',str)-18);
-      str_temp := LeftStr(str, Pos('"',str)-1);
-      dist := dist + StrToIntDef(str_temp,0);
-    end;
-//    Memo1.Lines.Add(IntToStr(dist));
-    msg := IntToStr(dist);
-    Socket.SendText(RightStr('0000000000' + IntToStr(Length(msg)),10) + ':' + msg);
-  end;
-
-
-//  if LeftStr(msg,3) = 'ECP' then begin
-//    try
-//      RichEdit1.Lines.Add('ECP');
-//      if RichEdit1.Lines.Count > 10 then RichEdit1.Lines.Clear;
-
-//      msg := RightStr(msg, Length(msg) - 3);
-//      FIO_users := Trim(LeftStr(msg, 20));
-//      msg := RightStr(msg, Length(msg) - 20);
-//
-//      connect := TADOConnection.Create(nil);
-//      connect.ConnectionString := 'Persist Security Info=True;Provider=SQLOLEDB.1;Password=cjnhfkjubcnbrf;Persist Security Info=True;User ID=sa;Initial Catalog=lis_etran;Data Source=lis;';
-//      connect.KeepConnection := False;
-//      connect.LoginPrompt := False;
-//      connect.Connected := True;
-//
-//
-//      Q := TADOQuery.Create(nil);
-//      Q.Connection := connect;
-//      Q.SQL.Add('SELECT etran_ecp_xml, users_owner_id FROM etran_ecp inner join etran_global_id on etran_ecp.etran_ecp_id = etran_global_id.global_id WHERE etran_ecp_id = ' + msg);
-//      Q.Open;
-//      if Q.RecordCount = 0 then begin
-//        Q.SQL.Clear;
-//        Q.SQL.Add('SELECT	etran_ecp_xml, users_owner_id FROM etran_claim_ecp inner join etran_global_id on etran_claim_ecp.etran_ecp_claim_id = etran_global_id.global_id WHERE etran_ecp_claim_id = ' + msg);
-//        Q.Open;
-//        set_invoice := False;
-//        set_claim   := True;
-//      end else begin
-//        set_invoice := True;
-//        set_claim   := False;
-//      end;
-//
-//      send_query     := Q.FieldByName('etran_ecp_xml').AsString;
-//      users_owner_id := Q.FieldByName('users_owner_id').AsInteger;
-//      Q.Free;
-//
-//
-//      if users_owner_id = 1 then
-//        s_save := #13#10 + FormatDateTime('dd.mm.yyyy hh:nn:ss', Now()) + ';http://12.0.0.2:8092/EtranServer/EtranLR.dll/soap;ВасильевМВ;Ufpghjv7;' + send_query;
-//
-//      if users_owner_id = 15 then
-//        s_save := #13#10 + FormatDateTime('dd.mm.yyyy hh:nn:ss', Now()) + ';http://12.0.0.2:8092/EtranServer/EtranLR.dll/soap;mendel3;NfkfyjdfNU02;' + send_query;
-//
-//      if not FileExists('c:\ETRAN_ECP_LOG\log_ecp' + FormatDateTime('yyyymmdd', Now()) + '.csv') then
-//        log_file := TFileStream.Create('c:\ETRAN_ECP_LOG\log_ecp' + FormatDateTime('yyyymmdd', Now()) + '.csv', fmCreate)
-//      else
-//        log_file := TFileStream.Create('c:\ETRAN_ECP_LOG\log_ecp' + FormatDateTime('yyyymmdd', Now()) + '.csv', fmOpenReadWrite);
-//
-//      log_file.Seek(0, soFromEnd);
-//      log_file.WriteBuffer(Pointer(s_save)^, Length(s_save));
-//      log_file.Free;
-//
-//
-//      if users_owner_id = 1 then
-//        GetIEtranSys(False,'http://12.0.0.2:8092/EtranServer/EtranLR.dll/soap').GetBlock('ВасильевМВ', 'Ufpghjv6', send_query, ECP, TSP);
-//
-//      if users_owner_id = 15 then
-//        GetIEtranSys(False,'http://12.0.0.2:8092/EtranServer/EtranLR.dll/soap').GetBlock('mendel3', 'NfkfyjdfNU02', send_query, ECP, TSP);
-//
-//      s_save := ';Ok';
-//      if not FileExists('c:\ETRAN_ECP_LOG\log_ecp' + FormatDateTime('yyyymmdd', Now()) + '.csv') then
-//        log_file := TFileStream.Create('c:\ETRAN_ECP_LOG\log_ecp' + FormatDateTime('yyyymmdd', Now()) + '.csv', fmCreate)
-//      else
-//        log_file := TFileStream.Create('c:\ETRAN_ECP_LOG\log_ecp' + FormatDateTime('yyyymmdd', Now()) + '.csv', fmOpenReadWrite);
-//
-//      log_file.Seek(0, soFromEnd);
-//      log_file.WriteBuffer(Pointer(s_save)^, Length(s_save));
-//      log_file.Free;
-//
-//      send_query := ReplaceStr(send_query, '&#', '');
-//
-//      if set_invoice = True then begin
-//        sp_etran_ecp_modify := TADOStoredProc.Create(nil);
-//        sp_etran_ecp_modify.Connection := connect;
-//        sp_etran_ecp_modify.ProcedureName := 'sp_etran_ecp_modify';
-//        sp_etran_ecp_modify.Parameters.Refresh;
-//        sp_etran_ecp_modify.Parameters.ParamByName('@etran_ecp_id').Value := StrToInt(msg);
-//        sp_etran_ecp_modify.Parameters.ParamByName('@type_action' ).Value := 3;
-//        sp_etran_ecp_modify.Parameters.ParamByName('@date_send'   ).Value := Now;
-//        sp_etran_ecp_modify.Parameters.ParamByName('@etran_ecp_reply_xml').Value := send_query;
-//        sp_etran_ecp_modify.Parameters.ParamByName('@FIO_users_send').Value := FIO_users;
-//        sp_etran_ecp_modify.ExecProc;
-//      end;
-//
-//      if set_claim = True then begin
-//        sp_etran_ecp_modify := TADOStoredProc.Create(nil);
-//        sp_etran_ecp_modify.Connection := connect;
-//        sp_etran_ecp_modify.ProcedureName := 'sp_etran_ecp_claim_modify';
-//        sp_etran_ecp_modify.Parameters.Refresh;
-//        sp_etran_ecp_modify.Parameters.ParamByName('@etran_ecp_claim_id').Value := StrToInt(msg);
-//        sp_etran_ecp_modify.Parameters.ParamByName('@type_action' ).Value := 3;
-//        sp_etran_ecp_modify.Parameters.ParamByName('@date_send'   ).Value := Now;
-//        sp_etran_ecp_modify.Parameters.ParamByName('@etran_ecp_reply_xml').Value := send_query;
-//        sp_etran_ecp_modify.Parameters.ParamByName('@FIO_users_send').Value := FIO_users;
-//        sp_etran_ecp_modify.ExecProc;
-//      end;
-//
-//      msg := 'ok';
-//      connect.Free;
-//      sp_etran_ecp_modify.Free;
-//    except
-//      on E: Exception do begin
-//        msg := E.Message;
-//        connect.Free;
-//        Q.Free;
-//      end;
-//    end;
-//  end else begin
-//    try
-//      RichEdit1.Lines.Add('NoECP');
-//      if RichEdit1.Lines.Count > 10 then RichEdit1.Lines.Clear;
-//
-//      s_save := #13#10 + FormatDateTime('dd.mm.yyyy hh:nn:ss', Now()) + ';http://12.0.0.2:8092/EtranServer/EtranLR.dll/soap;абашинu;etran_sfh;' + msg;
-//      if not FileExists('c:\ETRAN_ECP_LOG\log_ecp' + FormatDateTime('yyyymmdd', Now()) + '.csv') then
-//        log_file := TFileStream.Create('c:\ETRAN_ECP_LOG\log_ecp' + FormatDateTime('yyyymmdd', Now()) + '.csv', fmCreate)
-//      else
-//        log_file := TFileStream.Create('c:\ETRAN_ECP_LOG\log_ecp' + FormatDateTime('yyyymmdd', Now()) + '.csv', fmOpenReadWrite);
-//
-//      log_file.Seek(0, soFromEnd);
-//      log_file.WriteBuffer(Pointer(s_save)^, Length(s_save));
-//      log_file.Free;
-//
-//      GetIEtranSys(False,'http://12.0.0.2:8092/EtranServer/EtranLR.dll/soap').GetBlock('абашин', 'etran_sfh', msg, ECP, TSP);
-//
-//      s_save := ';Ok';
-//      if not FileExists('c:\ETRAN_ECP_LOG\log_ecp' + FormatDateTime('yyyymmdd', Now()) + '.csv') then
-//        log_file := TFileStream.Create('c:\ETRAN_ECP_LOG\log_ecp' + FormatDateTime('yyyymmdd', Now()) + '.csv', fmCreate)
-//      else
-//        log_file := TFileStream.Create('c:\ETRAN_ECP_LOG\log_ecp' + FormatDateTime('yyyymmdd', Now()) + '.csv', fmOpenReadWrite);
-//
-//      log_file.Seek(0, soFromEnd);
-//      log_file.WriteBuffer(Pointer(s_save)^, Length(s_save));
-//      log_file.Free;
-//
-//      msg := ReplaceStr(msg    ,'&#','');
-//    except
-//      on E: Exception do begin
-//        msg := E.Message;
-//      end;
-//    end;
-//  end;
-
-//  Socket.SendText(RightStr('0000000000' + IntToStr(Length(msg)),10) + ':' + msg);
+//  ServerSocket1.Active := True;
 end;
 
 procedure TfmEtranMain.SetPanelCaption(str_status: string; color: TColor);
@@ -434,6 +377,7 @@ begin
 end;
 
 procedure TfmEtranMain.SetParam();
+var ini : TIniFile;
 begin
   if Fset_db_connect = False then begin
     Caption := '03 Загрузка информации [not-connect]...';
@@ -451,8 +395,70 @@ begin
   end;
   RefreshButton();
   RefreshConnect();
+
+
+    // Загружаем настройки
+  ini := TIniFile.Create(ExtractFilePath(Application.ExeName) + 'Config.ini');
+
+  Fetran_users        := ini.ReadString('ETRAN', 'etran_users',        '');
+  Fetran_password     := ini.ReadString('ETRAN', 'etran_password',     '');
+  Fetran_ecp_users    := ini.ReadString('ETRAN', 'etran_ecp_users',    '');
+  Fetran_ecp_password := ini.ReadString('ETRAN', 'etran_ecp_password', '');
+  Fetran_ip           := ini.ReadString('ETRAN', 'etran_ip', 'http://10.248.35.14:8092/AppServer/IEtranSysservice');
+  Fservice_name       := ini.ReadString('ETRAN', 'service_name', 'RI');
+  Fservice_port       := ini.ReadString('ETRAN', 'service_port', '7450');
+  Fcert_num           := ini.ReadString('ETRAN', 'cert_num', '');
+
+  Fetran_users        := 'ЛУНКНИКО0756';
+  Fetran_password     := 'Ritrans0756&&';
+  Fetran_ecp_users    := 'ЛУНКНИКО0756';
+  Fetran_ecp_password := 'Ritrans0756&&';
+  Fcert_num           := '03 80BF A4BA 99B4 C880 EF11 A219 51E6 5761';
+//                          0380 BFA4 BA99 B4C8 80EF 11A2 1951 E657 61
+
+  fmECPServerContainer.DSTCPServerTransport1.Port := StrToInt(Fservice_port);
+  fmECPServerContainer.DSServer1.Start;
+
+  Label5.Caption := 'DataSnap Server (IP:' + GetLocalIP + ', Port:' + IntToStr(fmECPServerContainer.DSTCPServerTransport1.Port) + ') ' + Fservice_name;
+
+  ini.Free;
+
+  Label14.Caption := Fetran_users;
+  Label13.Caption := Fetran_ecp_users;
+  Label9.Caption := Fetran_ip;
+  Label12.Caption := Fcert_num;
+
+  ClientDS_Query.CreateDataSet;
+  ClientDS_Query.LogChanges := False;
 end;
 
+
+procedure TfmEtranMain.Timer1Timer(Sender: TObject);
+begin
+  Timer1.Enabled := False;
+  if Fset_run = False then begin
+    ThreadEtran2 := TThreadEtran2.Create(Fconnect_string);
+    Fset_run := True;
+    RefreshButton();
+    TrayIcon1.Visible := True;
+    fmEtranMain.Hide;
+  end;
+end;
+
+procedure TfmEtranMain.TrayIcon1Click(Sender: TObject);
+begin
+  TrayIcon1.Visible := False;
+  Application.Restore;
+
+  //сбрасываем признак сворачивания
+  if fmEtranMain.WindowState = wsMinimized then fmEtranMain.WindowState := wsNormal;
+
+  //Отображаем окно
+  fmEtranMain.Visible:=true;
+
+  //Принудительно устанавливаем окно поверх остальных
+  SetForegroundWindow(Application.Handle);
+end;
 
 procedure TfmEtranMain.RefreshButton();
 begin
@@ -470,6 +476,55 @@ procedure TfmEtranMain.RefreshConnect();
 begin
 end;
 
+
+procedure TfmEtranMain.cxButton1Click(Sender: TObject);
+var   query_xml : string;
+            res : boolean;
+            ver : string;
+      error_cod : string;
+  message_error : string;
+begin
+  try
+    try
+      query_xml := '<test version="1.0"></test>';
+
+      ShowMessage(fmEtranMain._GetEtranIP);
+      ShowMessage(fmEtranMain._GetEtranUsers);
+      ShowMessage(fmEtranMain._GetEtranPassword);
+      ShowMessage(query_xml);
+      ShowMessage(message_error);
+
+      res := GetEtran(fmEtranMain._GetEtranIP, fmEtranMain._GetEtranUsers, fmEtranMain._GetEtranPassword, query_xml, message_error);
+
+      if res = True then begin
+        res := CheckEtranXML(query_xml, message_error, error_cod);
+        if res = True then begin
+           ver := 'Работает. Версия №' + ParserEtranVersion(query_xml);
+        end else begin
+          ver := 'Ошибка ЭТРАН (1):' + message_error;
+        end;
+      end else begin
+        ver := 'Ошибка ЭТРАН (2):' + message_error;
+      end;
+
+    except
+      on E: Exception do begin
+        res := False;
+        message_error := E.Message;
+        ver := 'Ошибка ЛИС:' + E.Message;
+      end;
+    end;
+  finally
+  end;
+
+  ShowMessage(ver);
+end;
+
+procedure TfmEtranMain.cxButton4Click(Sender: TObject);
+begin
+  fmECPTestSign := TfmECPTestSign.Create(Application);
+  fmECPTestSign.ShowModal;
+end;
 
 procedure TfmEtranMain.cxGridDBBandedTableView2FocusedRecordChanged(
   Sender: TcxCustomGridTableView; APrevFocusedRecord,
@@ -587,92 +642,18 @@ begin
 end;
 
 procedure TfmEtranMain.dxBarButton5Click(Sender: TObject);
+var str_password : string;
 begin
-  Close;
-end;
-
-
-procedure TfmEtranMain.dxBarButton6Click(Sender: TObject);
-begin
-  fmEtrNSI := TfmEtrNSI.Create(Application);
-  fmEtrNSI.ShowModal;
-end;
-
-procedure TfmEtranMain.dxBarButton7Click(Sender: TObject);
-var connect : TADOConnection;
-    Q , Q2 : TADOQuery;
-    ECP, TSP : WideString;
-    send_query : WideString;
-    d1,d2 : TDateTime;
-begin
-  connect := TADOConnection.Create(nil);
-  connect.ConnectionString := 'Persist Security Info=True;Provider=SQLOLEDB.1;Password=cjnhfkjubcnbrf;Persist Security Info=True;User ID=sa;Initial Catalog=xxx;Data Source=srv-lis;';
-  connect.KeepConnection := False;
-  connect.LoginPrompt := False;
-
-  Q := TADOQuery.Create(nil);
-  Q.Connection := connect;
-
-  Q2 := TADOQuery.Create(nil);
-  Q2.Connection := connect;
-
-  Q.SQL.Add('SELECT * FROM _ETRAN_DOCS WHERE data_xml is null ORDER BY id');
-  Q.Open;
-  while not Q.Eof do begin
-
-//    d1 := Q.FieldByName('period_begin').AsDateTime;
-//    d2 := Q.FieldByName('period_end').AsDateTime;
-//
-//    d1 := IncMinute(d1, -2);
-//    d2 := IncMinute(d2,  2);
-//
-//    send_query := '<invoiceStatus version="1.0"><fromDate value="' + FormatDateTime('dd.mm.yyyy hh:nn', d1) + '"/><toDate value="' + FormatDateTime('dd.mm.yyyy hh:nn', d2) + '"/><useSender/><usePayer/><useRecip/><useOwnerCar/><useAll/></invoiceStatus>';
-//
-//    GetIEtranSys(False,'http://11.0.0.4:8092/EtranServer/EtranLR.dll/soap').GetBlock('абашин', 'etran_sfh', send_query, ECP, TSP);
-//
-//
-//    Q2.SQL.Clear;
-//    Q2.SQL.Add('UPDATE _etran_query');
-//    Q2.SQL.Add('SET data_xml = ''' + send_query + '''');
-//    Q2.SQL.Add('WHERE id = ' + Q.FieldByName('id').AsString);
-//    Q2.ExecSQL;
-
-
-
-    send_query := '<getInvoice version="1.0"><invoiceID value="' + Q.FieldByName('doc_id').AsString + '"/><useMod11/></getInvoice>';
-    GetIEtranSys(False,'http://11.0.0.4:8092/EtranServer/EtranLR.dll/soap').GetBlock('абашин', 'etran_gru', send_query, ECP, TSP);
-
-
-    send_query := ReplaceStr(send_query, '&#1', '');
-    send_query := ReplaceStr(send_query, '&#2', '');
-    send_query := ReplaceStr(send_query, '&#3', '');
-    send_query := ReplaceStr(send_query, '&#4', '');
-    send_query := ReplaceStr(send_query, '&#5', '');
-    send_query := ReplaceStr(send_query, '&#6', '');
-    send_query := ReplaceStr(send_query, '&#7', '');
-    send_query := ReplaceStr(send_query, '&#8', '');
-    send_query := ReplaceStr(send_query, '&#9', '');
-
-
-
-    Q2.SQL.Clear;
-    Q2.SQL.Add('UPDATE _ETRAN_DOCS');
-    Q2.SQL.Add('SET data_xml = ''' + send_query + '''');
-    Q2.SQL.Add('WHERE id = ' + Q.FieldByName('id').AsString);
-    Q2.ExecSQL;
-
-
-
-    Q.Next;
+  FClose := False;
+  if InputQuery('Введите пароль (NKK)', 'Введите "NKK"', str_password) then begin
+    if LowerCase(str_password) = 'nkk' then begin
+      FClose := True;
+      fmECPServerContainer.DSServer1.Stop;
+      Close;
+    end;
   end;
-
-
-  Q2.Free;
-  Q.Free;
-  connect.Free;
-
-
 end;
+
 
 procedure TfmEtranMain.MessageReceiver(var msg: TMessage);
 begin
