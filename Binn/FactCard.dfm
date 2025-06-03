@@ -155,7 +155,6 @@ object fmFactCard: TfmFactCard
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 0
-    ExplicitTop = 566
     DesignSize = (
       449
       37)
@@ -173,7 +172,7 @@ object fmFactCard: TfmFactCard
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
+        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -257,7 +256,7 @@ object fmFactCard: TfmFactCard
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
+        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -334,20 +333,18 @@ object fmFactCard: TfmFactCard
     Height = 561
     Align = alClient
     TabOrder = 1
-    Properties.ActivePage = cxTabSheet1
+    Properties.ActivePage = cxTabSheet2
     Properties.CustomButtons.Buttons = <>
     LookAndFeel.Kind = lfUltraFlat
     LookAndFeel.NativeStyle = False
     LookAndFeel.ScrollbarMode = sbmClassic
     LookAndFeel.SkinName = ''
-    ExplicitHeight = 566
     ClientRectBottom = 561
     ClientRectRight = 449
     ClientRectTop = 24
     object cxTabSheet1: TcxTabSheet
       Caption = #1054#1073#1097#1080#1077
       ImageIndex = 0
-      ExplicitHeight = 542
       object Panel1: TPanel
         Left = 0
         Top = 0
@@ -498,6 +495,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           OnClick = cxCheckBox_is_datprClick
         end
@@ -523,6 +524,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Width = 217
         end
@@ -548,6 +553,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Width = 29
         end
@@ -580,6 +589,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Width = 113
         end
@@ -611,6 +624,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Width = 113
         end
@@ -636,6 +653,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Width = 113
         end
@@ -658,6 +679,9 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 6
           Width = 113
         end
@@ -682,6 +706,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 7
           Width = 113
         end
@@ -706,6 +734,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 8
           Width = 113
         end
@@ -730,6 +762,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 9
           Width = 113
         end
@@ -754,6 +790,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 10
           Transparent = True
           Visible = False
@@ -780,6 +820,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 11
           Transparent = True
           Visible = False
@@ -805,6 +849,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 12
           Transparent = True
           Visible = False
@@ -830,6 +878,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 13
           Transparent = True
           Visible = False
@@ -855,6 +907,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 14
           Transparent = True
           Visible = False
@@ -880,6 +936,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 15
           Transparent = True
           Visible = False
@@ -905,6 +965,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 16
           Transparent = True
           Visible = False
@@ -930,6 +994,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 17
           Transparent = True
           Visible = False
@@ -976,6 +1044,10 @@ object fmFactCard: TfmFactCard
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.Kind = lfOffice11
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 0
             Transparent = True
             OnClick = cxCheckBox_calc_weight_checkClick
@@ -1002,6 +1074,10 @@ object fmFactCard: TfmFactCard
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.Kind = lfOffice11
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 1
             Width = 86
           end
@@ -1027,6 +1103,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 18
           Transparent = True
           Visible = False
@@ -1052,6 +1132,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 20
           Transparent = True
           Visible = False
@@ -1115,6 +1199,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 22
           Transparent = True
           Visible = False
@@ -1145,6 +1233,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 24
           OnClick = cxCheckBox_is_date_readyClick
         end
@@ -1169,6 +1261,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 25
           Width = 113
         end
@@ -1193,6 +1289,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 26
           Transparent = True
           Visible = False
@@ -1223,6 +1323,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 27
           OnClick = cxCheckBox_is_date_deliveryClick
         end
@@ -1245,6 +1349,9 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 28
           Width = 113
         end
@@ -1269,6 +1376,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 29
           Transparent = True
           Visible = False
@@ -1292,6 +1403,9 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 23
           Width = 113
         end
@@ -1399,7 +1513,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -1453,6 +1567,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Width = 225
         end
@@ -1471,7 +1589,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -1525,6 +1643,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Width = 225
         end
@@ -1542,7 +1664,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -1596,6 +1718,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Width = 94
         end
@@ -1613,7 +1739,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -1667,6 +1793,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Width = 94
         end
@@ -1684,7 +1814,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -1738,6 +1868,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Width = 94
         end
@@ -1756,7 +1890,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -1810,6 +1944,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Width = 183
         end
@@ -1828,7 +1966,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -1882,6 +2020,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 6
           Width = 183
         end
@@ -1899,7 +2041,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -1953,6 +2095,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 7
           Width = 94
         end
@@ -1970,7 +2116,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -2024,6 +2170,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 8
           Width = 94
         end
@@ -2042,7 +2192,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -2096,6 +2246,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 9
           Width = 225
         end
@@ -2114,7 +2268,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -2168,6 +2322,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 10
           Width = 225
         end
@@ -2185,7 +2343,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -2239,6 +2397,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 11
           Width = 94
         end
@@ -2257,7 +2419,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -2311,6 +2473,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 12
           Width = 94
         end
@@ -2328,7 +2494,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -2382,6 +2548,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 13
           Width = 225
         end
@@ -2399,7 +2569,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -2453,6 +2623,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 14
           Width = 225
         end
@@ -2471,7 +2645,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -2525,6 +2699,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 15
           Width = 94
         end
@@ -2542,7 +2720,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -2596,6 +2774,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 16
           Width = 225
         end
@@ -2614,7 +2796,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -2668,6 +2850,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 17
           Width = 94
         end
@@ -2693,6 +2879,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 18
           Transparent = True
           Visible = False
@@ -2719,6 +2909,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 19
           Transparent = True
           Visible = False
@@ -2745,6 +2939,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 20
           Transparent = True
           Visible = False
@@ -2771,6 +2969,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 21
           Transparent = True
           Visible = False
@@ -2797,6 +2999,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 22
           Transparent = True
           Visible = False
@@ -2823,6 +3029,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 23
           Transparent = True
           Visible = False
@@ -2849,6 +3059,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 24
           Transparent = True
           Visible = False
@@ -2875,6 +3089,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 25
           Transparent = True
           Visible = False
@@ -2901,6 +3119,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 26
           Transparent = True
           Visible = False
@@ -2946,7 +3168,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -3000,6 +3222,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 28
           Width = 225
         end
@@ -3018,7 +3244,7 @@ object fmFactCard: TfmFactCard
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -3072,6 +3298,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 29
           Width = 94
         end
@@ -3097,6 +3327,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 30
           Transparent = True
           Visible = False
@@ -3169,6 +3403,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Width = 140
         end
@@ -3193,6 +3431,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Width = 101
         end
@@ -3217,6 +3459,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Width = 140
         end
@@ -3237,6 +3483,9 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.Kind = lfUltraFlat
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Transparent = True
           Visible = False
@@ -3258,6 +3507,9 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.Kind = lfUltraFlat
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Transparent = True
           Visible = False
@@ -3279,6 +3531,9 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.Kind = lfUltraFlat
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Transparent = True
           Visible = False
@@ -3313,6 +3568,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 7
           Width = 101
         end
@@ -3333,6 +3592,9 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.Kind = lfUltraFlat
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 6
           Transparent = True
           Visible = False
@@ -3347,7 +3609,6 @@ object fmFactCard: TfmFactCard
         BevelInner = bvRaised
         BevelOuter = bvLowered
         TabOrder = 3
-        ExplicitHeight = 55
         object Panel7: TPanel
           Left = 7
           Top = 6
@@ -3390,6 +3651,10 @@ object fmFactCard: TfmFactCard
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 0
           end
         end
@@ -3410,6 +3675,9 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.Kind = lfUltraFlat
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Transparent = True
           Visible = False
@@ -3449,6 +3717,10 @@ object fmFactCard: TfmFactCard
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 0
           end
         end
@@ -3469,6 +3741,9 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.Kind = lfUltraFlat
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Transparent = True
           Visible = False
@@ -3508,6 +3783,10 @@ object fmFactCard: TfmFactCard
             StyleHot.LookAndFeel.NativeStyle = False
             StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
             StyleHot.LookAndFeel.SkinName = 'Coffee'
+            StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+            StyleReadOnly.LookAndFeel.NativeStyle = False
+            StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+            StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
             TabOrder = 0
           end
         end
@@ -3528,6 +3807,9 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.Kind = lfUltraFlat
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Transparent = True
           Visible = False
@@ -3537,7 +3819,6 @@ object fmFactCard: TfmFactCard
     object cxTabSheet2: TcxTabSheet
       Caption = #1055#1088#1086#1095#1077#1077
       ImageIndex = 1
-      ExplicitHeight = 542
       object Panel3: TPanel
         Left = 0
         Top = 106
@@ -3606,6 +3887,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Width = 313
         end
@@ -3632,6 +3917,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Width = 313
         end
@@ -3657,6 +3946,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Width = 172
         end
@@ -3682,6 +3975,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Transparent = True
           Visible = False
@@ -3749,6 +4046,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Width = 313
         end
@@ -3774,6 +4075,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Transparent = True
           Visible = False
@@ -3799,6 +4104,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Width = 172
         end
@@ -3823,6 +4132,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Transparent = True
           Visible = False
@@ -3849,6 +4162,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Transparent = True
           Visible = False
@@ -3875,6 +4192,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Width = 313
         end
@@ -3899,6 +4220,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 6
           Width = 172
         end
@@ -3923,6 +4248,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 7
           Transparent = True
           Visible = False
@@ -3937,7 +4266,6 @@ object fmFactCard: TfmFactCard
         BevelInner = bvRaised
         BevelOuter = bvLowered
         TabOrder = 2
-        ExplicitTop = 291
         DesignSize = (
           449
           64)
@@ -3972,6 +4300,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Height = 52
           Width = 313
@@ -3998,6 +4330,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Transparent = True
           Visible = False
@@ -4073,6 +4409,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Width = 94
         end
@@ -4097,6 +4437,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Transparent = True
           Visible = False
@@ -4125,6 +4469,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Width = 345
         end
@@ -4150,6 +4498,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Transparent = True
           Visible = False
@@ -4175,6 +4527,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Width = 94
         end
@@ -4199,6 +4555,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Transparent = True
           Visible = False
@@ -4238,6 +4598,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 6
           Width = 345
         end
@@ -4251,8 +4615,6 @@ object fmFactCard: TfmFactCard
         BevelInner = bvRaised
         BevelOuter = bvLowered
         TabOrder = 4
-        ExplicitTop = 355
-        ExplicitHeight = 187
         DesignSize = (
           449
           181)
@@ -4287,8 +4649,11 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
-          ExplicitHeight = 175
           Height = 169
           Width = 313
         end
@@ -4314,6 +4679,10 @@ object fmFactCard: TfmFactCard
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Transparent = True
           Visible = False

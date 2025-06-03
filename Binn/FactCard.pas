@@ -15,7 +15,8 @@ uses
   dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic,
   dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters, dxSkinValentine,
   dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, Vcl.Menus, cxButtons,
-  dxSkinOffice2019Colorful, dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI;
+  dxSkinOffice2019Colorful, dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI,
+  dxCoreGraphics;
 
 type
   TfmFactCard = class(TForm)
@@ -709,7 +710,10 @@ begin
             19: str_update := str_update + ' nds='              +iif(ClientDataSet1.FieldByName('nds'              ).IsNull , 'null', FloatToStr(ClientDataSet1.FieldByName('nds').AsFloat))+',';
             20: str_update := str_update + ' currency_id='      +iif(ClientDataSet1.FieldByName('currency_id'      ).IsNull , 'null', IntToStr(ClientDataSet1.FieldByName('currency_id').AsInteger))+',';
             21: str_update := str_update + ' add_collection='   +iif(ClientDataSet1.FieldByName('add_collection'   ).IsNull , 'null', FloatToStr(ClientDataSet1.FieldByName('add_collection').AsFloat))+',';
-            22: str_update := str_update + ' firm_info_id='     +iif(ClientDataSet1.FieldByName('firm_info_id'     ).IsNull , 'null', IntToStr(ClientDataSet1.FieldByName('firm_info_id').AsInteger))+',';
+            22: begin
+                  str_update := str_update + ' firm_info_id='     +iif(ClientDataSet1.FieldByName('firm_info_id'     ).IsNull , 'null', IntToStr(ClientDataSet1.FieldByName('firm_info_id').AsInteger))+',';
+                  str_update_etran := str_update_etran + ' firm_info_id='     +iif(ClientDataSet1.FieldByName('firm_info_id'     ).IsNull , 'null', IntToStr(ClientDataSet1.FieldByName('firm_info_id').AsInteger))+',';
+                end;
             23: str_update := str_update + ' set_main='         +iif(ClientDataSet1.FieldByName('set_main'         ).Value  , '1', '0')+',';
             24: str_update := str_update + ' state_begin_id='   +iif(ClientDataSet1.FieldByName('state_begin_id'   ).IsNull , 'null', IntToStr(ClientDataSet1.FieldByName('state_begin_id').AsInteger))+',';
             25: str_update := str_update + ' state_end_id='     +iif(ClientDataSet1.FieldByName('state_end_id'     ).IsNull , 'null', IntToStr(ClientDataSet1.FieldByName('state_end_id').AsInteger))+',';
