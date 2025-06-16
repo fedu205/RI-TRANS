@@ -264,6 +264,7 @@ type
     dxBarButton57: TdxBarButton;
     dxBarButton60: TdxBarButton;
     dxBarButton73: TdxBarButton;
+    dxBarButton76: TdxBarButton;
     procedure dxBarButton61Click(Sender: TObject);
     procedure dxBarButton58Click(Sender: TObject);
     procedure dxBarSubItem15Popup(Sender: TObject);
@@ -1578,11 +1579,6 @@ begin
   fmLoadFact.SetConnection(Lis, usr_pwd);
   fmLoadFact._LoadToFactInc(TComponent(Sender).Tag, TdxBarButton(Sender).Description);
   if fmLoadFact.ShowModal = mrOk then begin
-
-
-
-
-
     file_name := fmLoadFact._GetFileName;
 
     bln := False;
