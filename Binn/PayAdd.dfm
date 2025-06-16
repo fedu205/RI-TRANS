@@ -940,6 +940,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Text = #1055#1083'. '#8470' --------'
       Width = 304
@@ -977,6 +980,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 2
       Width = 94
     end
@@ -1009,6 +1015,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 4
       Width = 94
     end
@@ -1034,6 +1043,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 3
       Width = 140
     end
@@ -1060,6 +1072,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 5
       Width = 140
     end
@@ -1082,6 +1097,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
       Width = 105
     end
@@ -1114,6 +1132,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 6
       Width = 304
     end
@@ -1139,6 +1160,8 @@ object fmPayAdd: TfmPayAdd
       StyleFocused.LookAndFeel.SkinName = 'Coffee'
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
     end
     object CheckBox1: TcxCheckBox
@@ -1153,6 +1176,8 @@ object fmPayAdd: TfmPayAdd
       StyleFocused.LookAndFeel.SkinName = 'Coffee'
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
     end
     object cxCheckBox1: TcxCheckBox
@@ -1168,6 +1193,8 @@ object fmPayAdd: TfmPayAdd
       StyleFocused.LookAndFeel.SkinName = 'Coffee'
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 3
     end
     object cxDateEdit2: TcxDateEdit
@@ -1190,6 +1217,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 2
       Width = 105
     end
@@ -1240,6 +1270,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Width = 297
     end
@@ -1262,6 +1295,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
       Width = 103
     end
@@ -1284,6 +1320,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 2
       Width = 289
     end
@@ -1491,6 +1530,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Height = 47
       Width = 400
@@ -1605,6 +1647,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Text = '0,00'
       Width = 100
@@ -1674,6 +1719,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
       Text = '0,00'
       Width = 100
@@ -1743,6 +1791,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 2
       Text = '0,00'
       Width = 100
@@ -1812,6 +1863,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 3
       Text = '0,00'
       Width = 100
@@ -1858,6 +1912,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Text = '0'
       Width = 164
@@ -1880,6 +1937,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
       Text = '0'
       Width = 164
@@ -1904,6 +1964,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 2
       Width = 81
     end
@@ -1957,6 +2020,9 @@ object fmPayAdd: TfmPayAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Width = 390
     end

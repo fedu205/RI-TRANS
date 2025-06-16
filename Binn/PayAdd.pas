@@ -16,7 +16,7 @@ uses
   dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinValentine, dxSkinVisualStudio2013Blue,
   dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxSkinTheBezier, cxButtons,
   dxSkinOffice2019Colorful, dxSkinBasic, dxSkinOffice2019Black,
-  dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI;
+  dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI, dxCoreGraphics;
 
 type
   TfmPayAdd = class(TForm)
@@ -452,6 +452,7 @@ begin
 end;
 
 end.
+
 
 
 
