@@ -607,7 +607,6 @@ type
     dxBarButton4: TdxBarButton;
     cxGrid1DBBandedTableView1etran_invTypeName: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1etran_invTypeID: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1brief_distance: TcxGridDBBandedColumn;
     procedure dxBarButton6Click(Sender: TObject);
     procedure N18Click(Sender: TObject);
     procedure N40Click(Sender: TObject);

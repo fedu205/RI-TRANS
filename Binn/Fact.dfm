@@ -272,7 +272,6 @@ object fmFact: TfmFact
             item
               Format = '#,##0'
               Kind = skSum
-              Column = cxGrid1DBBandedTableView1brief_distance
             end>
           DataController.Summary.SummaryGroups = <
             item
@@ -1911,17 +1910,6 @@ object fmFact: TfmFact
             Position.BandIndex = -1
             Position.ColIndex = -1
             Position.RowIndex = -1
-          end
-          object cxGrid1DBBandedTableView1brief_distance: TcxGridDBBandedColumn
-            Caption = #1056#1072#1089#1089#1090#1086#1103#1085#1080#1077' ('#1069#1058#1056#1040#1053'), '#1082#1084
-            DataBinding.FieldName = 'brief_distance'
-            DataBinding.IsNullValueType = True
-            PropertiesClassName = 'TcxCurrencyEditProperties'
-            Properties.DisplayFormat = '#,##0'
-            Width = 100
-            Position.BandIndex = 0
-            Position.ColIndex = 122
-            Position.RowIndex = 0
           end
         end
         object cxGrid1Level1: TcxGridLevel
