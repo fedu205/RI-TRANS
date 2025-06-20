@@ -1,27 +1,23 @@
-unit ActsOption;
+п»їunit ActsOption;
 
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, cxGraphics, cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxStyles,
-  cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit, DB, cxDBData, cxGridCustomView,
-  cxGridCustomTableView, cxGridTableView, cxGridBandedTableView, cxGridDBBandedTableView,
-  cxClasses, cxGridLevel, cxGrid, StdCtrls, Buttons, ExtCtrls, cxPC, ADODB, Default, cxCheckBox,
-  cxPropertiesStore, DBClient, cxContainer, cxTextEdit, cxMaskEdit, cxDropDownEdit, cxCalendar,
-  cxButtonEdit, cxMemo, dxGDIPlusClasses, dxGDIPlusAPI, dxSkinsCore, dxSkinBlack, dxSkinBlue, dxSkinBlueprint,
-  dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide, dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle,
-  dxSkinFoggy, dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian, dxSkinLiquidSky,
-  dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis, dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
-  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver, dxSkinOffice2010Black,
-  dxSkinOffice2010Blue, dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
-  dxSkinOffice2013White, dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus, dxSkinSilver,
-  dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine,
-  dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxSkinscxPCPainter, dxBarBuiltInMenu, cxNavigator, ComCtrls,
-  dxCore, cxDateUtils, System.StrUtils, cxLabel, cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox,
-  Vcl.Menus, cxButtons, System.DateUtils,
-  cxDataControllerConditionalFormattingRulesManagerDialog, dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinTheBezier, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
-  dxSkinVisualStudio2013Light, dxDateRanges;
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, ADODB, Default,
+  Dialogs, Menus, DB, StdCtrls, Buttons, ExtCtrls, DBClient, ComCtrls,
+  cxGraphics, cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxStyles, cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit, cxDBData,
+  cxGridCustomView, cxGridCustomTableView, cxGridTableView, cxGridBandedTableView, cxGridDBBandedTableView, cxClasses, cxGridLevel, cxGrid, cxPC,
+  cxCheckBox, cxPropertiesStore, cxContainer, cxTextEdit, cxMaskEdit, cxDropDownEdit, cxCalendar, cxButtonEdit, cxMemo, dxGDIPlusClasses,
+  dxGDIPlusAPI, dxSkinsCore, dxSkinBlack, dxSkinBlue, dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide,
+  dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy, dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis, dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White, dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic,
+  dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinsDefaultPainters,
+  dxSkinValentine, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxSkinscxPCPainter, dxBarBuiltInMenu, cxNavigator, dxCore, cxDateUtils,
+  cxLabel, cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, cxButtons, dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinTheBezier,
+  dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxDateRanges, dxScrollbarAnnotations, dxCoreGraphics, dxSkinBasic, dxSkinOffice2019Black,
+  dxSkinOffice2019Colorful, dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI;
 
 type
   TfmActsOption = class(TForm)
@@ -120,13 +116,13 @@ type
     FCnn : TADOConnection;
     Facts_cod : string;
     Fstr_users_id : string;
-      // Список ID пользователей (для self company (consolidate option))
-      // Если у сотрудника нет права создания консолидированных отчетов, то = users_id
-      // Если список не задан, то так же считаем, что = users_id
+      // РЎРїРёСЃРѕРє ID РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ (РґР»СЏ self company (consolidate option))
+      // Р•СЃР»Рё Сѓ СЃРѕС‚СЂСѓРґРЅРёРєР° РЅРµС‚ РїСЂР°РІР° СЃРѕР·РґР°РЅРёСЏ РєРѕРЅСЃРѕР»РёРґРёСЂРѕРІР°РЅРЅС‹С… РѕС‚С‡РµС‚РѕРІ, С‚Рѕ = users_id
+      // Р•СЃР»Рё СЃРїРёСЃРѕРє РЅРµ Р·Р°РґР°РЅ, С‚Рѕ С‚Р°Рє Р¶Рµ СЃС‡РёС‚Р°РµРј, С‡С‚Рѕ = users_id
     Fstr_self_company_name : string;
-      // Только для отображения собственных организаций
-      // Если у сотрудника нет права создания консолидированных отчетов, то Собственная всегда одна (не смотря на настройки)
-      // Если список не задан, то так же считаем, что собственная одна
+      // РўРѕР»СЊРєРѕ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃРѕР±СЃС‚РІРµРЅРЅС‹С… РѕСЂРіР°РЅРёР·Р°С†РёР№
+      // Р•СЃР»Рё Сѓ СЃРѕС‚СЂСѓРґРЅРёРєР° РЅРµС‚ РїСЂР°РІР° СЃРѕР·РґР°РЅРёСЏ РєРѕРЅСЃРѕР»РёРґРёСЂРѕРІР°РЅРЅС‹С… РѕС‚С‡РµС‚РѕРІ, С‚Рѕ РЎРѕР±СЃС‚РІРµРЅРЅР°СЏ РІСЃРµРіРґР° РѕРґРЅР° (РЅРµ СЃРјРѕС‚СЂСЏ РЅР° РЅР°СЃС‚СЂРѕР№РєРё)
+      // Р•СЃР»Рё СЃРїРёСЃРѕРє РЅРµ Р·Р°РґР°РЅ, С‚Рѕ С‚Р°Рє Р¶Рµ СЃС‡РёС‚Р°РµРј, С‡С‚Рѕ СЃРѕР±СЃС‚РІРµРЅРЅР°СЏ РѕРґРЅР°
 
     Fsave : boolean;
     Fpage : integer;
@@ -149,8 +145,7 @@ function CreateWndActsOption(AppHand: THandle; acts_cod : string; conn : TADOCon
 //function CreateWndActsOption(AppHand: THandle; acts_cod : string; usr_pwd: PUser_pwd): variant; export;
 
 implementation
-
-uses Raznoe, ActsOptionParam, ActsOptionList;
+  uses Raznoe, ActsOptionParam, ActsOptionList, DateUtils, StrUtils;
 
 {$R *.dfm}
 
@@ -161,7 +156,7 @@ begin
   try
     fmActsOption := TfmActsOption.Create(acts_cod, conn, usr_pwd, date_begin, date_end, type_date);
     //fmActsOption := TfmActsOption.Create(acts_cod, usr_pwd);
-    //-- изменить по мере необходимости возвращаемых параметров
+    //-- РёР·РјРµРЅРёС‚СЊ РїРѕ РјРµСЂРµ РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё РІРѕР·РІСЂР°С‰Р°РµРјС‹С… РїР°СЂР°РјРµС‚СЂРѕРІ
     if  fmActsOption.ShowModal = mrOk then
       result := VarArrayOf([True, fmActsOption.GetBeginDate, fmActsOption.GetEndDate])
     else
@@ -174,8 +169,8 @@ end;
 constructor TfmActsOption.Create(acts_cod : string; conn : TADOConnection; usr_pwd: PUser_pwd; date_begin, date_end: TDateTime; type_date : integer);
 //constructor TfmActsOption.Create(acts_cod : string; usr_pwd: PUser_pwd);
 
-// type_date: 1 = Период, 2,4 = Период мес, 3 = Месяц, 5,6 = Дата
-//            0 или меньше = пусто
+// type_date: 1 = РџРµСЂРёРѕРґ, 2,4 = РџРµСЂРёРѕРґ РјРµСЃ, 3 = РњРµСЃСЏС†, 5,6 = Р”Р°С‚Р°
+//            0 РёР»Рё РјРµРЅСЊС€Рµ = РїСѓСЃС‚Рѕ
 var Q : TADOQuery;
     i : integer;
 begin
@@ -196,7 +191,7 @@ begin
   Fstr_users_id := IntToStr(usr_pwd.users_id);
   Fstr_self_company_name := '';
 
-  // начиная с декабря открываем следующий год
+  // РЅР°С‡РёРЅР°СЏ СЃ РґРµРєР°Р±СЂСЏ РѕС‚РєСЂС‹РІР°РµРј СЃР»РµРґСѓСЋС‰РёР№ РіРѕРґ
   cxComboBox3.Properties.Items.Clear;
   cxComboBox4.Properties.Items.Clear;
   cxComboBox6.Properties.Items.Clear;
@@ -206,8 +201,8 @@ begin
     cxComboBox6.Properties.Items.Add(IntToStr(i));
   end;
 
-// type_date: 1 = Период, 2,4 = Период мес, 3 = Месяц, 5,6 = Дата
-//            0 или меньше = пусто
+// type_date: 1 = РџРµСЂРёРѕРґ, 2,4 = РџРµСЂРёРѕРґ РјРµСЃ, 3 = РњРµСЃСЏС†, 5,6 = Р”Р°С‚Р°
+//            0 РёР»Рё РјРµРЅСЊС€Рµ = РїСѓСЃС‚Рѕ
   case type_date of
     1 : begin
       cxPageControl2.ActivePageIndex := 0;
@@ -236,7 +231,7 @@ begin
   end;
 
   cxPageControl1.ActivePage := cxTabSheet1;
-  // Фактически это не используется - Общие настройки не задаются
+  // Р¤Р°РєС‚РёС‡РµСЃРєРё СЌС‚Рѕ РЅРµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ - РћР±С‰РёРµ РЅР°СЃС‚СЂРѕР№РєРё РЅРµ Р·Р°РґР°СЋС‚СЃСЏ
 //  if (Fusr_pwd.user_func.Locate('func_name', 'set_acts_option_default', [])) then begin
 //    cxTabSheet2.Enabled := True;
 //    cxTabSheet2.TabVisible := True;
@@ -276,7 +271,7 @@ var SP : TADOStoredProc;
     i : integer;
 begin
   if not Fsave then begin
-    if Application.MessageBox(PWideChar(VarToStr(iif(Fpage = 0, 'Личные', 'Общие')) + ' настройки были изменены' + #10 + 'Сохранить изменения перед переключением настроек?'), 'Винмание', MB_YESNO or MB_ICONQUESTION) = ID_YES then
+    if Application.MessageBox(PWideChar(VarToStr(iif(Fpage = 0, 'Р›РёС‡РЅС‹Рµ', 'РћР±С‰РёРµ')) + ' РЅР°СЃС‚СЂРѕР№РєРё Р±С‹Р»Рё РёР·РјРµРЅРµРЅС‹' + #10 + 'РЎРѕС…СЂР°РЅРёС‚СЊ РёР·РјРµРЅРµРЅРёСЏ РїРµСЂРµРґ РїРµСЂРµРєР»СЋС‡РµРЅРёРµРј РЅР°СЃС‚СЂРѕРµРє?'), 'Р’РёРЅРјР°РЅРёРµ', MB_YESNO or MB_ICONQUESTION) = ID_YES then
       BitBtn2Click(nil);
   end;
 
@@ -299,13 +294,13 @@ begin
   Client_ActsOption.LogChanges := False;
   while not SP.Eof do begin
     Client_ActsOption.Append;
-    // цикл по списку полей Client_ActsOption исключая первое поле (id)
+    // С†РёРєР» РїРѕ СЃРїРёСЃРєСѓ РїРѕР»РµР№ Client_ActsOption РёСЃРєР»СЋС‡Р°СЏ РїРµСЂРІРѕРµ РїРѕР»Рµ (id)
     for i := 1 to Client_ActsOption.Fields.Count - 1 do begin
       Client_ActsOption.Fields[i].Value := SP.FieldByName(Client_ActsOption.Fields[i].FieldName).Value;
     end;
     Client_ActsOption.Post;
 
-    // список собственных организаций
+    // СЃРїРёСЃРѕРє СЃРѕР±СЃС‚РІРµРЅРЅС‹С… РѕСЂРіР°РЅРёР·Р°С†РёР№
     if SP.FieldByName('option_type').AsString = 'self company (consolidate option)' then begin
       Fstr_users_id := SP.FieldByName('option_value').AsString;
       Q := TADOQuery.Create(nil);
@@ -356,7 +351,7 @@ begin
   Q.Connection := FCnn;
   Q.SQL.Add('select * from users where users_id = ' + cxGrid1DBBandedTableView1users_id.DataBinding.Field.AsString);
   Q.Open;
-  // Открываем форму с коннектом той организации, к которой привязан параметр
+  // РћС‚РєСЂС‹РІР°РµРј С„РѕСЂРјСѓ СЃ РєРѕРЅРЅРµРєС‚РѕРј С‚РѕР№ РѕСЂРіР°РЅРёР·Р°С†РёРё, Рє РєРѕС‚РѕСЂРѕР№ РїСЂРёРІСЏР·Р°РЅ РїР°СЂР°РјРµС‚СЂ
   _cnn := TADOConnection.Create(nil);
   _cnn.ConnectionString := 'Persist Security Info=True;Provider=SQLOLEDB.1;User ID=' + Q.FieldByName('users_name').AsString + ';Password=' + Fusr_pwd^.user_pass + ';Initial Catalog=' + Fusr_pwd^.catalog + ';Data Source=' + Fusr_pwd^.server+';';
   _cnn.KeepConnection   := False;
@@ -390,14 +385,14 @@ var _fmAL : TfmActsOptionList;
     user_name : string;
     i : integer;
 begin
-  // найдеи имя пользователя без постфикса
+  // РЅР°Р№РґРµРё РёРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ Р±РµР· РїРѕСЃС‚С„РёРєСЃР°
   user_name := Fusr_pwd.user_name;
   user_name := ReverseString(user_name);
   user_name := RightStr(user_name, Length(user_name) - Pos('_', user_name));
   user_name := ReverseString(user_name);
-  // консолидированный отчет - необходимо выбрать СОбственные организации
+  // РєРѕРЅСЃРѕР»РёРґРёСЂРѕРІР°РЅРЅС‹Р№ РѕС‚С‡РµС‚ - РЅРµРѕР±С…РѕРґРёРјРѕ РІС‹Р±СЂР°С‚СЊ РЎРћР±СЃС‚РІРµРЅРЅС‹Рµ РѕСЂРіР°РЅРёР·Р°С†РёРё
   sql := '';
-  sql := sql + 'select users_id as ''№ Записи'', inf_obj_name as ''Собственная организация'' ';
+  sql := sql + 'select users_id as ''в„– Р—Р°РїРёСЃРё'', inf_obj_name as ''РЎРѕР±СЃС‚РІРµРЅРЅР°СЏ РѕСЂРіР°РЅРёР·Р°С†РёСЏ'' ';
   sql := sql + 'from users ';
   sql := sql + 'left join inf_obj on users_group_id = inf_obj_id ';
   sql := sql + 'where users_name in (''' + user_name + ''', ''' + user_name + ''' + ''_'' + inf_obj_name_full)';
@@ -405,7 +400,7 @@ begin
   _fmAL := TfmActsOptionList.Create(
     sql,
     cxGrid1DBBandedTableView1option_value.DataBinding.Field.AsString,
-    'Выбранные собственные организации',
+    'Р’С‹Р±СЂР°РЅРЅС‹Рµ СЃРѕР±СЃС‚РІРµРЅРЅС‹Рµ РѕСЂРіР°РЅРёР·Р°С†РёРё',
     FCnn
     );
 
@@ -415,7 +410,7 @@ begin
     Client_ActsOption.FieldByName('set_default').Value := False;
     Client_ActsOption.Post;
 
-    // список собственных организаций
+    // СЃРїРёСЃРѕРє СЃРѕР±СЃС‚РІРµРЅРЅС‹С… РѕСЂРіР°РЅРёР·Р°С†РёР№
     Fstr_users_id := _fmAL._GetList;
     Q := TADOQuery.Create(nil);
     Q.Connection := FCnn;
@@ -433,10 +428,10 @@ begin
     end;
     Q.Free;
 
-    // После изменения списка организаций - загрузим опции и сравним их с уже существующими
-    // Лишние Удалим, Тех что не хватает - добавим
-    // те опции что есть оставим без изменения, т.к. они уже могут быть заменены пользователем
-    // ключ для проверки у нас составной (acts_option_id + users_id)
+    // РџРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ СЃРїРёСЃРєР° РѕСЂРіР°РЅРёР·Р°С†РёР№ - Р·Р°РіСЂСѓР·РёРј РѕРїС†РёРё Рё СЃСЂР°РІРЅРёРј РёС… СЃ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёРјРё
+    // Р›РёС€РЅРёРµ РЈРґР°Р»РёРј, РўРµС… С‡С‚Рѕ РЅРµ С…РІР°С‚Р°РµС‚ - РґРѕР±Р°РІРёРј
+    // С‚Рµ РѕРїС†РёРё С‡С‚Рѕ РµСЃС‚СЊ РѕСЃС‚Р°РІРёРј Р±РµР· РёР·РјРµРЅРµРЅРёСЏ, С‚.Рє. РѕРЅРё СѓР¶Рµ РјРѕРіСѓС‚ Р±С‹С‚СЊ Р·Р°РјРµРЅРµРЅС‹ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј
+    // РєР»СЋС‡ РґР»СЏ РїСЂРѕРІРµСЂРєРё Сѓ РЅР°СЃ СЃРѕСЃС‚Р°РІРЅРѕР№ (acts_option_id + users_id)
     SP := TADOStoredProc.Create(nil);
     SP.Connection := FCnn;
     SP.ProcedureName := 'sp_acts_option_modify';
@@ -444,15 +439,15 @@ begin
 
     SP.Parameters.ParamByName('@type_action').Value := iif(cxPageControl1.ActivePageIndex = 0, 'Get Users Option', 'Get Default Option');
     SP.Parameters.ParamByName('@acts_cod').Value := Facts_cod;
-    // Передадим список пользователей (Организаций) с которыми мы собираемся работать
-    // по этому списку будут подгружены данные по параметрам зависящим от Собственной (консолидация)
+    // РџРµСЂРµРґР°РґРёРј СЃРїРёСЃРѕРє РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ (РћСЂРіР°РЅРёР·Р°С†РёР№) СЃ РєРѕС‚РѕСЂС‹РјРё РјС‹ СЃРѕР±РёСЂР°РµРјСЃСЏ СЂР°Р±РѕС‚Р°С‚СЊ
+    // РїРѕ СЌС‚РѕРјСѓ СЃРїРёСЃРєСѓ Р±СѓРґСѓС‚ РїРѕРґРіСЂСѓР¶РµРЅС‹ РґР°РЅРЅС‹Рµ РїРѕ РїР°СЂР°РјРµС‚СЂР°Рј Р·Р°РІРёСЃСЏС‰РёРј РѕС‚ РЎРѕР±СЃС‚РІРµРЅРЅРѕР№ (РєРѕРЅСЃРѕР»РёРґР°С†РёСЏ)
     SP.Parameters.ParamByName('@str_users_id').Value := Fstr_users_id;
 
     SP.Open;
 
     Client_ActsOption.DisableControls;
 
-    // Сначала удалим лишнии
+    // РЎРЅР°С‡Р°Р»Р° СѓРґР°Р»РёРј Р»РёС€РЅРёРё
     Client_ActsOption.First;
     while not Client_ActsOption.Eof do begin
       if not SP.Locate('acts_option_id;users_id', VarArrayOf([Client_ActsOption.FieldByName('acts_option_id').Value, Client_ActsOption.FieldByName('users_id').Value]), []) then
@@ -461,12 +456,12 @@ begin
         Client_ActsOption.Next;
     end;
 
-    // Добавим недостающие
+    // Р”РѕР±Р°РІРёРј РЅРµРґРѕСЃС‚Р°СЋС‰РёРµ
     SP.First;
     while not SP.Eof do begin
       if not Client_ActsOption.Locate('acts_option_id;users_id', VarArrayOf([SP.FieldByName('acts_option_id').Value, SP.FieldByName('users_id').Value]), []) then begin
         Client_ActsOption.Append;
-        // цикл по списку полей Client_ActsOption исключая первое поле (id)
+        // С†РёРєР» РїРѕ СЃРїРёСЃРєСѓ РїРѕР»РµР№ Client_ActsOption РёСЃРєР»СЋС‡Р°СЏ РїРµСЂРІРѕРµ РїРѕР»Рµ (id)
         for i := 1 to Client_ActsOption.Fields.Count - 1 do begin
           Client_ActsOption.Fields[i].Value := SP.FieldByName(Client_ActsOption.Fields[i].FieldName).Value;
         end;
@@ -491,7 +486,7 @@ begin
   Client_ActsOption.FieldByName('set_default').Value := False;
   Client_ActsOption.Post;
 
-  // Отображаем редактор, т.к. после Пересчета он был закрыт, из-за чего возникает ошибка по окончании данной процедуры
+  // РћС‚РѕР±СЂР°Р¶Р°РµРј СЂРµРґР°РєС‚РѕСЂ, С‚.Рє. РїРѕСЃР»Рµ РџРµСЂРµСЃС‡РµС‚Р° РѕРЅ Р±С‹Р» Р·Р°РєСЂС‹С‚, РёР·-Р·Р° С‡РµРіРѕ РІРѕР·РЅРёРєР°РµС‚ РѕС€РёР±РєР° РїРѕ РѕРєРѕРЅС‡Р°РЅРёРё РґР°РЅРЅРѕР№ РїСЂРѕС†РµРґСѓСЂС‹
   cxGrid1DBBandedTableView1.Controller.EditingController.ShowEdit;
 end;
 
@@ -503,11 +498,11 @@ end;
 procedure TfmActsOption.cxGrid1DBBandedTableView1option_valueGetDisplayText(Sender: TcxCustomGridTableItem; ARecord: TcxCustomGridRecord; var AText: string);
 begin
   if VarToStr(ARecord.Values[cxGrid1DBBandedTableView1option_type.Index]) = 'list' then begin
-//    AText := '(список)';
+//    AText := '(СЃРїРёСЃРѕРє)';
 //    if VarToStr(ARecord.Values[cxGrid1DBBandedTableView1option_value.Index]) = '' then
-//      AText := '(пусто)';
+//      AText := '(РїСѓСЃС‚Рѕ)';
   end else if VarToStr(ARecord.Values[cxGrid1DBBandedTableView1option_type.Index]) = 'lookup' then begin
-    // Если форма еще не полностью инициирована, отображение не важно, но вызывает ошибку
+    // Р•СЃР»Рё С„РѕСЂРјР° РµС‰Рµ РЅРµ РїРѕР»РЅРѕСЃС‚СЊСЋ РёРЅРёС†РёРёСЂРѕРІР°РЅР°, РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ РЅРµ РІР°Р¶РЅРѕ, РЅРѕ РІС‹Р·С‹РІР°РµС‚ РѕС€РёР±РєСѓ
     if not Assigned(Query_Lookup.Connection) then
       exit;
 
@@ -518,9 +513,9 @@ begin
 
     AText := VarToStr(Query_Lookup.Lookup(Query_Lookup.Fields[0].FieldName, ARecord.Values[cxGrid1DBBandedTableView1option_value.Index], Query_Lookup.Fields[1].FieldName));
   end else if VarToStr(ARecord.Values[cxGrid1DBBandedTableView1option_type.Index]) = 'bool' then begin
-    AText := 'Да';
+    AText := 'Р”Р°';
     if VarToStr(ARecord.Values[cxGrid1DBBandedTableView1option_value.Index]) = '0' then
-      AText := 'Нет';
+      AText := 'РќРµС‚';
   end else if VarToStr(ARecord.Values[cxGrid1DBBandedTableView1option_type.Index]) = 'self company (consolidate option)' then begin
     AText := Fstr_self_company_name;
   end;
@@ -558,7 +553,7 @@ begin
   Client_ActsOption.FieldByName('set_default').Value := False;
   Client_ActsOption.Post;
 
-  // Отображаем редактор, т.к. после Пересчета он был закрыт, из-за чего возникает ошибка по окончании данной процедуры
+  // РћС‚РѕР±СЂР°Р¶Р°РµРј СЂРµРґР°РєС‚РѕСЂ, С‚.Рє. РїРѕСЃР»Рµ РџРµСЂРµСЃС‡РµС‚Р° РѕРЅ Р±С‹Р» Р·Р°РєСЂС‹С‚, РёР·-Р·Р° С‡РµРіРѕ РІРѕР·РЅРёРєР°РµС‚ РѕС€РёР±РєР° РїРѕ РѕРєРѕРЅС‡Р°РЅРёРё РґР°РЅРЅРѕР№ РїСЂРѕС†РµРґСѓСЂС‹
   cxGrid1DBBandedTableView1.Controller.EditingController.ShowEdit;
 end;
 

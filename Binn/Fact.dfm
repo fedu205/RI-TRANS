@@ -1920,9 +1920,6 @@ object fmFact: TfmFact
     object cxTabSheet3: TcxTabSheet
       Caption = #1054#1073#1086#1088#1086#1090' '#1074#1072#1075#1086#1085#1072
       ImageIndex = 91
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object cxGrid3: TcxGrid
         Left = 0
         Top = 0
@@ -4303,9 +4300,6 @@ object fmFact: TfmFact
     object cxTabSheet5: TcxTabSheet
       Caption = #1055#1086#1082#1072#1079#1072#1090#1077#1083#1080' '#1088#1072#1073#1086#1090#1099' '#1087#1072#1088#1082#1072
       ImageIndex = 157
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Splitter2: TSplitter
         Left = 499
         Top = 0
@@ -5073,11 +5067,6 @@ object fmFact: TfmFact
         item
           BeginGroup = True
           Visible = True
-          ItemName = 'dxBarButton3'
-        end
-        item
-          BeginGroup = True
-          Visible = True
           ItemName = 'dxBarSubItem1'
         end
         item
@@ -5089,6 +5078,11 @@ object fmFact: TfmFact
           BeginGroup = True
           Visible = True
           ItemName = 'dxBarButton21'
+        end
+        item
+          BeginGroup = True
+          Visible = True
+          ItemName = 'dxBarButton3'
         end>
       NotDocking = [dsNone, dsLeft, dsTop, dsRight, dsBottom]
       OldName = #1052#1077#1085#1102
@@ -5126,8 +5120,10 @@ object fmFact: TfmFact
       Caption = #1055#1086#1080#1089#1082
       Category = 0
       Hint = #1055#1086#1080#1089#1082
+      Style = fmMain.cxStyle_Bold
       Visible = ivAlways
       ImageIndex = 41
+      PaintStyle = psCaptionGlyph
       OnClick = ToolButton12Click
     end
     object dxBarButton_LoadDBF: TdxBarButton

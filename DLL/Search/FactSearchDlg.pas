@@ -15,7 +15,7 @@ uses
   dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine,
   dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, ComCtrls, dxCore, cxDateUtils, cxClasses, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
   dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinscxPCPainter, dxBarBuiltInMenu, cxPC,
-  dxSkinTheBezier, Menus, cxButtons, dxSkinOffice2019Colorful;
+  dxSkinTheBezier, Menus, cxButtons, dxSkinOffice2019Colorful, dxCoreGraphics;
 
 type
   TfmFactSearchDlg = class(TForm)

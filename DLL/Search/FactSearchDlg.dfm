@@ -367,6 +367,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 0
         Width = 120
       end
@@ -438,6 +442,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 2
         Width = 120
       end
@@ -510,6 +518,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 1
         Width = 120
       end
@@ -582,6 +594,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 3
         Width = 120
       end
@@ -653,6 +669,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 4
         Width = 120
       end
@@ -725,6 +745,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 5
         Width = 120
       end
@@ -797,6 +821,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 6
         Width = 120
       end
@@ -868,6 +896,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 7
         Width = 120
       end
@@ -965,6 +997,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 0
         Width = 120
       end
@@ -1037,6 +1073,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 1
         Width = 120
       end
@@ -1109,6 +1149,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 2
         Width = 120
       end
@@ -1180,6 +1224,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 3
         Width = 120
       end
@@ -1381,6 +1429,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 0
         Width = 248
       end
@@ -1483,6 +1535,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 1
         Width = 157
       end
@@ -1511,6 +1567,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 4
         Width = 89
       end
@@ -1546,6 +1606,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfOffice11
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 0
       end
       object cxCheckBox5: TcxCheckBox
@@ -1570,6 +1634,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfOffice11
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 1
       end
     end
@@ -1659,6 +1727,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 0
         Width = 242
       end
@@ -1704,6 +1776,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 0
         Width = 175
       end
@@ -1797,6 +1873,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 1
         Width = 212
       end
@@ -1895,6 +1975,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 0
         Width = 120
       end
@@ -1966,6 +2050,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 1
         Width = 120
       end
@@ -2038,6 +2126,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 2
         Width = 120
       end
@@ -2110,6 +2202,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 3
         Width = 120
       end
@@ -2161,6 +2257,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 1
         Width = 249
       end
@@ -2190,6 +2290,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 0
         OnExit = cxComboBox2Exit
         Width = 247
@@ -2244,6 +2348,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 0
         Width = 308
       end
@@ -2277,6 +2385,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 2
         Width = 178
       end
@@ -2370,6 +2482,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 2
         OnExit = cxDateEdit1Exit
         Width = 110
@@ -2399,6 +2515,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 3
         OnExit = cxDateEdit1Exit
         Width = 110
@@ -2431,6 +2551,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 4
         OnExit = cxDateEdit1Exit
         Width = 110
@@ -2463,6 +2587,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 5
         OnExit = cxDateEdit1Exit
         Width = 110
@@ -2493,6 +2621,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 6
         OnExit = cxDateEdit1Exit
         Width = 110
@@ -2523,6 +2655,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 7
         OnExit = cxDateEdit1Exit
         Width = 110
@@ -2561,6 +2697,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfOffice11
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 0
       end
       object cxComboBox1: TcxComboBox
@@ -2593,6 +2733,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 1
         Width = 255
       end
@@ -2660,6 +2804,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Height = 216
           Width = 181
@@ -2707,6 +2855,10 @@ object fmFactSearchDlg: TfmFactSearchDlg
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Height = 300
           Width = 181
@@ -2726,9 +2878,6 @@ object fmFactSearchDlg: TfmFactSearchDlg
     object cxTabSheet2: TcxTabSheet
       Caption = #1055#1086' '#8470#1079#1072#1087'.'#1092#1072#1082#1090
       ImageIndex = 1
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Panel11: TPanel
         Left = 0
         Top = 570
@@ -2761,6 +2910,8 @@ object fmFactSearchDlg: TfmFactSearchDlg
           StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.Kind = lfUltraFlat
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
           TabOrder = 0
           Height = 553
           Width = 181
