@@ -796,6 +796,9 @@ object fmContract: TfmContract
         object cxTabSheet4: TcxTabSheet
           Caption = #1047#1072#1082#1088#1099#1090#1099#1077' '#1087#1077#1088#1080#1086#1076#1099' '#1076#1083#1103' '#1076#1086#1075#1086#1074#1086#1088#1072
           ImageIndex = 0
+          ExplicitTop = 0
+          ExplicitWidth = 0
+          ExplicitHeight = 0
           object cxGrid2: TcxGrid
             Left = 0
             Top = 0
@@ -1152,10 +1155,14 @@ object fmContract: TfmContract
       object cxTabSheet2: TcxTabSheet
         Caption = #1044#1086#1075#1086#1074#1086#1088#1099' '#1089' '#1087#1086#1076#1088#1103#1076#1095#1080#1082#1072#1084#1080
         ImageIndex = 1
+        ExplicitTop = 0
+        ExplicitWidth = 0
       end
       object cxTabSheet3: TcxTabSheet
         Caption = #1044#1086#1075#1086#1074#1086#1088#1099' '#1040#1076#1084#1080#1085#1080#1089#1090#1088#1072#1094#1080#1080
         ImageIndex = 2
+        ExplicitTop = 0
+        ExplicitWidth = 0
       end
     end
   end
@@ -1433,6 +1440,9 @@ object fmContract: TfmContract
     object cxTabSheet32: TcxTabSheet
       Caption = #1057#1074#1103#1079#1072#1085#1085#1099#1077' '#1076#1086#1075#1086#1074#1086#1088#1099' 1'#1057
       ImageIndex = 130
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid3: TcxGrid
         Left = 0
         Top = 0
@@ -1690,6 +1700,9 @@ object fmContract: TfmContract
     object cxTabSheet6: TcxTabSheet
       Caption = #1053#1086#1088#1084#1072#1090#1080#1074#1099' '#1087#1088#1086#1089#1090#1086#1077#1074
       ImageIndex = 124
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid6: TcxGrid
         Left = 0
         Top = 0

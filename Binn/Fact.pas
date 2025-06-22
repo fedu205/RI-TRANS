@@ -4,21 +4,19 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, Default,
-  StdCtrls, Buttons, ExtCtrls, ADODB, Menus, ComCtrls, cxPropertiesStore, cxGridCustomTableView, cxGridTableView, Variants,
-  cxGridBandedTableView, cxGridDBBandedTableView, cxClasses, cxControls, cxGridCustomView, cxGridLevel, cxGrid, cxGraphics, Db,
-  cxStyles, cxCustomData, cxFilter, cxData, cxDataStorage, cxDBData, cxCurrencyEdit, cxLookAndFeelPainters, cxButtons,
-  cxLabel, cxContainer, dxGDIPlusClasses, cxCalendar, cxEdit, cxCheckBox, dxBar, dxSkinsCore, dxSkinBlack, dxSkinBlue,
+  StdCtrls, ExtCtrls, ADODB, Menus, ComCtrls, DBClient, Db, Variants,
+  cxPropertiesStore, cxGridCustomTableView, cxGridTableView, cxGridBandedTableView, cxGridDBBandedTableView, cxClasses, cxControls,
+  cxGridCustomView, cxGridLevel, cxGrid, cxGraphics, cxStyles, cxCustomData, cxFilter, cxData, cxDataStorage, cxDBData, cxCurrencyEdit,
+  cxLookAndFeelPainters, cxButtons, cxLabel, cxContainer, dxGDIPlusClasses, cxCalendar, cxEdit, cxCheckBox, dxBar, dxSkinsCore, dxSkinBlack,
   dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkroom, dxSkinDarkSide, dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle,
   dxSkinFoggy, dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian, dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin,
   dxSkinMetropolis, dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black, dxSkinOffice2007Blue, dxSkinOffice2007Green,
-  dxSkinOffice2007Pink, dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue, dxSkinOffice2010Silver,
+  dxSkinOffice2007Pink, dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue, dxSkinOffice2010Silver, dxSkinBlue,
   dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
   dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringtime, dxSkinStardust,
   dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters, dxSkinValentine, dxSkinVisualStudio2013Blue,
   dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxBarBuiltInMenu,
-  cxLookAndFeels, dxDateRanges, cxColorComboBox, Datasnap.DBClient, cxDataControllerConditionalFormattingRulesManagerDialog,
-  cxSplitter, cxPC, XMLDoc, XMLIntf, XSBuiltIns, DateUtils, cxNavigator, dxSkinOffice2019Colorful,
-  dxScrollbarAnnotations, dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI;
+  cxLookAndFeels, dxDateRanges, cxColorComboBox, cxSplitter, cxPC, XMLDoc, XMLIntf, XSBuiltIns, cxNavigator, dxScrollbarAnnotations;
 
 type
   TfmFact = class(TForm)
@@ -734,7 +732,7 @@ var
 implementation
 
 uses
-    Main, Raznoe, FactCard, Filter, Period, LoadFact, Other, ComObj, Math, ShellApi, StrUtils,
+    Main, Raznoe, FactCard, Filter, Period, LoadFact, Other, ComObj, Math, ShellApi, StrUtils, DateUtils,
     cxGridDBTableView, AgreeFactInc, FactTrack, ZFTOScore, PlanClient, FactSum, Agree2, Clipbrd;
 
 {$R *.DFM}
@@ -3519,6 +3517,8 @@ begin
 
   dt := Now;
   if Assigned(ClientDS) then begin
+    dxBarButton3.Caption := FormatDateTime('dd.mm.yy', ClientDS.FieldByName('date1').AsDatetime) + ' - ' + FormatDateTime('dd.mm.yy', ClientDS.FieldByName('date2').AsDatetime);
+
     sp_fact_GET.Parameters.Refresh;
     sp_fact_GET.Parameters.ParamByName('@set_date_from_to'   ).Value := ClientDS.FieldByName('set_date_from_to').Value;
     sp_fact_GET.Parameters.ParamByName('@set_date_delivery'  ).Value := ClientDS.FieldByName('set_date_delivery').Value;

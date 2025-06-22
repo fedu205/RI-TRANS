@@ -3,13 +3,11 @@
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Vcl.Graphics, Controls, Forms, Dialogs,
-  Menus, StdCtrls, ExtCtrls, Db, ADODB, ImgList, ComCtrls,
-  ToolWin, Default, cxGridCustomTableView, cxGridTableView, cxGridBandedTableView,
-  cxGridDBBandedTableView, cxClasses, cxControls, cxGridCustomView, cxGridLevel, cxGrid,
-  cxPropertiesStore, cxStyles, cxCustomData, cxGraphics, cxFilter, cxData, cxDataStorage,
-  cxDBData, cxCheckBox, cxCalendar, cxPC, dxBar, Variants, ComObj, StrUtils,
-  cxDBLookupComboBox, ShellAPI, cxCurrencyEdit, cxLookAndFeels, cxLookAndFeelPainters, cxContainer,
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, Default,
+  Menus, StdCtrls, ExtCtrls, Db, ADODB, ImgList, ComCtrls, DBClient, Variants, ImageList,
+  cxGridCustomTableView, cxGridTableView, cxGridBandedTableView, cxGridDBBandedTableView, cxClasses, cxControls, cxGridCustomView, cxGridLevel,
+  cxGrid, cxPropertiesStore, cxStyles, cxCustomData, cxGraphics, cxFilter, cxData, cxDataStorage, cxDBData, cxCheckBox, cxCalendar, cxPC, dxBar,
+  cxDBLookupComboBox, cxCurrencyEdit, cxLookAndFeels, cxLookAndFeelPainters, cxContainer, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
   cxGroupBox, cxEdit, dxSkinsCore, dxSkinBlack, dxSkinBlue, dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide,
   dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy, dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
   dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis, dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
@@ -17,11 +15,8 @@ uses
   dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White, dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic,
   dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinsDefaultPainters,
   dxSkinValentine, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxSkinscxPCPainter, cxNavigator, dxBarBuiltInMenu, dxSkinsdxBarPainter,
-  DBClient, Registry, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
-  dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
-  dxSkinVisualStudio2013Light, System.ImageList, cxImageList, DateUtils,
-  cxDataControllerConditionalFormattingRulesManagerDialog, cxGridDBDataDefinitions,
-  dxDateRanges, dxSkinTheBezier, dxSkinOffice2019Colorful, dxScrollbarAnnotations;
+  dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, cxImageList, cxGridDBDataDefinitions, dxDateRanges,
+  dxSkinTheBezier, dxScrollbarAnnotations;
 
 type
   TfmContract = class(TForm)
@@ -389,7 +384,7 @@ var
   fmContract: TfmContract;
 
 implementation
-     uses ContractAdd, Main, Raznoe, Filter, Other, Period, ContractCloseAdd, Raznoe1C;
+     uses ContractAdd, Main, Raznoe, Filter, Other, Period, ContractCloseAdd, Raznoe1C, DateUtils, Registry, ComObj, StrUtils, ShellAPI;
 {$R *.DFM}
 
 constructor TfmContract.CreateDLL(AOwner: TApplication; flag: boolean; type_contract: byte; usr_pwd_lis: PUser_pwd; usr_pwd_docs: PUser_pwd);

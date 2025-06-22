@@ -12,10 +12,8 @@ object fmActsOption: TfmActsOption
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object cxPageControl1: TcxPageControl
     Left = 0
@@ -210,6 +208,7 @@ object fmActsOption: TfmActsOption
     LookAndFeel.ScrollbarMode = sbmClassic
     object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
       Navigator.Buttons.CustomButtons = <>
+      ScrollbarAnnotations.CustomAnnotations = <>
       OnFocusedItemChanged = cxGrid1DBBandedTableView1FocusedItemChanged
       DataController.DataSource = DS_ActsOption
       DataController.DetailKeyFieldNames = 'id'
@@ -403,6 +402,8 @@ object fmActsOption: TfmActsOption
     StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
     StyleHot.LookAndFeel.Kind = lfUltraFlat
     StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+    StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+    StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
     TabOrder = 5
     Visible = False
     Width = 121
@@ -622,6 +623,9 @@ object fmActsOption: TfmActsOption
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
           TabOrder = 3
           Text = #1089#1077#1085#1090#1103#1073#1088#1100
           Width = 73
@@ -665,6 +669,9 @@ object fmActsOption: TfmActsOption
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
           TabOrder = 4
           Text = '2001'
           Width = 53
@@ -808,6 +815,9 @@ object fmActsOption: TfmActsOption
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
           TabOrder = 7
           Text = #1089#1077#1085#1090#1103#1073#1088#1100
           Width = 73
@@ -851,6 +861,9 @@ object fmActsOption: TfmActsOption
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
           TabOrder = 8
           Text = '2001'
           Width = 53

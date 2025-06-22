@@ -12,10 +12,8 @@ object fmFactIncCard: TfmFactIncCard
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poDefault
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel_SelfFactData: TPanel
     Left = 0
@@ -352,7 +350,7 @@ object fmFactIncCard: TfmFactIncCard
       Sections = <
         item
           Alignment = taCenter
-          Text = #1044#1077#1073#1080#1083#1099
+          Text = #1054#1087#1077#1088'. '#1060#1072#1082#1090
           Width = 220
         end>
     end
@@ -371,6 +369,7 @@ object fmFactIncCard: TfmFactIncCard
       LookAndFeel.SkinName = ''
       object btvAdd_Collection_Items: TcxGridDBTableView
         Navigator.Buttons.CustomButtons = <>
+        ScrollbarAnnotations.CustomAnnotations = <>
         DataController.Summary.DefaultGroupSummaryItems = <>
         DataController.Summary.FooterSummaryItems = <>
         DataController.Summary.SummaryGroups = <>
@@ -378,28 +377,34 @@ object fmFactIncCard: TfmFactIncCard
         object btvAdd_Collection_ItemsADD_VID_NAME: TcxGridDBColumn
           Caption = #1042#1080#1076' '#1076#1086#1087'.'#1089#1073#1086#1088#1072
           DataBinding.FieldName = 'ADD_VID_NAME'
+          DataBinding.IsNullValueType = True
           Width = 75
         end
         object btvAdd_Collection_ItemsADD_SUM: TcxGridDBColumn
           Caption = #1057#1091#1084#1084#1072
           DataBinding.FieldName = 'ADD_SUM'
+          DataBinding.IsNullValueType = True
         end
         object btvAdd_Collection_ItemsBRIEF_NAME: TcxGridDBColumn
           Caption = #1042#1072#1083#1102#1090#1072
           DataBinding.FieldName = 'BRIEF_NAME'
+          DataBinding.IsNullValueType = True
         end
         object btvAdd_Collection_ItemsSUM_IN_SHAPING_RATE_CURRENCY: TcxGridDBColumn
           Caption = #1042' '#1074#1072#1083#1102#1090#1077' '#1087#1086#1076#1088'.'
           DataBinding.FieldName = 'sum_in_shaping_rate_currency'
+          DataBinding.IsNullValueType = True
           Width = 93
         end
         object btvAdd_Collection_ItemsADD_TYPE_NAME: TcxGridDBColumn
           Caption = #1058#1080#1087
           DataBinding.FieldName = 'ADD_TYPE_NAME'
+          DataBinding.IsNullValueType = True
         end
         object btvAdd_Collection_ItemsADD_COMMENT: TcxGridDBColumn
           Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
           DataBinding.FieldName = 'ADD_COMMENT'
+          DataBinding.IsNullValueType = True
         end
       end
       object cxGrid_AddCollectionLevel1: TcxGridLevel

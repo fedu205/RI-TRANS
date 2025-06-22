@@ -1,23 +1,21 @@
-unit FactIncCard;
+п»їunit FactIncCard;
 
 interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, ADODB, StdCtrls, Mask, DBCtrls, Buttons, Variants,
-  cxControls, cxContainer, cxEdit, cxTextEdit, cxDBEdit, cxPropertiesStore,
-  ExtCtrls, cxStyles, cxCustomData, cxGraphics, cxFilter, cxData, cxDataStorage,
-  cxDBData, cxGridLevel, cxClasses, cxGridCustomView, cxGridCustomTableView,
-  cxGridTableView, cxGridDBTableView, cxGrid, DBClient, cxMaskEdit,
-  cxDropDownEdit, cxLookupEdit, cxDBLookupEdit, cxDBExtLookupComboBox,
-  cxButtonEdit, cxSplitter, cxLookAndFeels, cxLookAndFeelPainters, cxHeader, dxSkinsCore, dxSkinBlack, dxSkinBlue, dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee,
+  Db, ADODB, StdCtrls, Mask, DBCtrls, Buttons, Variants, ExtCtrls, DBClient,
+  cxControls, cxContainer, cxEdit, cxTextEdit, cxDBEdit, cxPropertiesStore, cxStyles, cxCustomData, cxGraphics, cxFilter, cxData, cxDataStorage,
+  cxDBData, cxGridLevel, cxClasses, cxGridCustomView, cxGridCustomTableView, cxGridTableView, cxGridDBTableView, cxGrid, cxMaskEdit, dxSkinCoffee,
+  cxDropDownEdit, cxLookupEdit, cxDBLookupEdit, cxDBExtLookupComboBox, dxSkinXmas2008Blue, cxNavigator, dxDateRanges, dxScrollbarAnnotations,
+  cxButtonEdit, cxSplitter, cxLookAndFeels, cxLookAndFeelPainters, cxHeader, dxSkinsCore, dxSkinBlack, dxSkinBlue, dxSkinBlueprint, dxSkinCaramel,
   dxSkinDarkroom, dxSkinDarkSide, dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy, dxSkinGlassOceans, dxSkinHighContrast, dxSkinLilian,
   dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis, dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black, dxSkinOffice2007Blue,
   dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue, dxSkinOffice2010Silver,
   dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinOffice2019Colorful,
   dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringtime, dxSkinStardust, dxSkinSummer2008,
   dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters, dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
-  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, cxNavigator, dxDateRanges;
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint;
 
 type
   TfmFactIncCard = class(TForm)
@@ -430,6 +428,7 @@ begin
   Query_FactIncFull.Parameters.ParamByName('fact_inc_id').Value := Dataset.FieldByName('fact_inc_id').AsInteger;
   Query_FactIncFull.Open;
   Screen.Cursor := crDefault;
+
   SpeedButton2.Down := true;
   SwitchTo_P;
   FSelfFactDataSet := Dataset;
@@ -442,7 +441,7 @@ var  shaping_rate_currency_id : integer;
      Bargain_Date             : TDateTime;
      exch1, exch2             : double;
 begin
-  // получаем валюту сделки
+  // РїРѕР»СѓС‡Р°РµРј РІР°Р»СЋС‚Сѓ СЃРґРµР»РєРё
   qShaping_Rate := TADOQuery.Create(nil);
   qShaping_Rate.Connection := fmMain.Lis;
   qShaping_Rate.SQL.Text := 'SELECT currency_id, bargain_date_period, exchange_USD_val, exchange_CHF_val, exchange_EUR_val FROM view_shaping_rate WHERE shaping_rate_id = ' + IntToStr(shaping_rate_id);
@@ -451,7 +450,7 @@ begin
   shaping_rate_currency_id := qShaping_Rate.FieldByName('currency_id').AsInteger;
   Bargain_Date := qShaping_Rate.FieldByName('bargain_date_period').AsDateTime;
 
-  if qShaping_Rate.FieldByName('exchange_USD_val').IsNull then begin // средний курс
+  if qShaping_Rate.FieldByName('exchange_USD_val').IsNull then begin // СЃСЂРµРґРЅРёР№ РєСѓСЂСЃ
     case shaping_rate_currency_id of
       1 : exch1 := GetExchangeNew(1, Bargain_Date, fmMain.Lis);
       3 : exch1 := 1;
@@ -464,7 +463,7 @@ begin
       5 : exch2 := GetExchangeNew(5, Bargain_Date, fmMain.Lis);
       6 : exch2 := GetExchangeNew(6, Bargain_Date, fmMain.Lis);
     end;
-  end else begin // Курсы пробиты в подрядчике
+  end else begin // РљСѓСЂСЃС‹ РїСЂРѕР±РёС‚С‹ РІ РїРѕРґСЂСЏРґС‡РёРєРµ
     case shaping_rate_currency_id of
       1 : exch1 := qShaping_Rate.FieldByName('exchange_USD_val').AsFloat;
       3 : exch1 := 1;
@@ -498,7 +497,7 @@ begin
   Action := caFree;
 end;
 
-procedure TfmFactIncCard.ShowFactInfo; // подключить для показа информацию по факту
+procedure TfmFactIncCard.ShowFactInfo; // РїРѕРґРєР»СЋС‡РёС‚СЊ РґР»СЏ РїРѕРєР°Р·Р° РёРЅС„РѕСЂРјР°С†РёСЋ РїРѕ С„Р°РєС‚Сѓ
 var  FldCnt, RecCnt : integer;
                   T : TComponent;
             fact_id : integer;
@@ -513,14 +512,14 @@ begin
   Q_Fact := TAdoQuery.Create(nil);
   DS_Fact := TDataSource.Create(nil);
 
-  // извлекаем одну запись по данному факту (fact_id)
+  // РёР·РІР»РµРєР°РµРј РѕРґРЅСѓ Р·Р°РїРёСЃСЊ РїРѕ РґР°РЅРЅРѕРјСѓ С„Р°РєС‚Сѓ (fact_id)
   Q_Fact := TADOQuery.Create(nil);
   Q_Fact.Connection := fmMain.Lis;
   Q_Fact.SQL.Text := 'SELECT * FROM view_bargain_fact WHERE fact_id = ' + IntToStr(fact_id);
   Q_Fact.Open;
-  DS_Fact.DataSet := Q_Fact; // нужен TDataSource для привязки видимых полей в форме
+  DS_Fact.DataSet := Q_Fact; // РЅСѓР¶РµРЅ TDataSource РґР»СЏ РїСЂРёРІСЏР·РєРё РІРёРґРёРјС‹С… РїРѕР»РµР№ РІ С„РѕСЂРјРµ
 
-  // расстановка видимых данных в соответствии с полями запроса
+  // СЂР°СЃСЃС‚Р°РЅРѕРІРєР° РІРёРґРёРјС‹С… РґР°РЅРЅС‹С… РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё СЃ РїРѕР»СЏРјРё Р·Р°РїСЂРѕСЃР°
   for FldCnt := 0 to Q_Fact.FieldCount - 1 do begin
     T := FindComponent('cxDBTextEdit_qFact_'+Q_Fact.Fields[FldCnt].FieldName);
     if not Assigned(T) then Continue;
@@ -530,16 +529,16 @@ begin
     end;
   end;
 
-  // вывод списка ставок по загрузке
-  // возможно список не понадобится в форме или расчете, но пока оставил
+  // РІС‹РІРѕРґ СЃРїРёСЃРєР° СЃС‚Р°РІРѕРє РїРѕ Р·Р°РіСЂСѓР·РєРµ
+  // РІРѕР·РјРѕР¶РЅРѕ СЃРїРёСЃРѕРє РЅРµ РїРѕРЅР°РґРѕР±РёС‚СЃСЏ РІ С„РѕСЂРјРµ РёР»Рё СЂР°СЃС‡РµС‚Рµ, РЅРѕ РїРѕРєР° РѕСЃС‚Р°РІРёР»
   with Query_ListRate.Parameters do begin
     ParamByName('rate_id').Value       := Q_Fact.FieldByName('bargain_id').Value;
     ParamByName('type_tools_id').Value := Q_Fact.FieldByName('type_kontener').Value;
     ParamByName('attr_self').Value     := Q_Fact.FieldByName('attr_self').Value;
   end;
   Query_ListRate.Open;
-  // расстановка видимых данных в соответствии с полями FSelfFactDataset, взятыми
-  // из вызывающей формы AgreeFactInc
+  // СЂР°СЃСЃС‚Р°РЅРѕРІРєР° РІРёРґРёРјС‹С… РґР°РЅРЅС‹С… РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё СЃ РїРѕР»СЏРјРё FSelfFactDataset, РІР·СЏС‚С‹РјРё
+  // РёР· РІС‹Р·С‹РІР°СЋС‰РµР№ С„РѕСЂРјС‹ AgreeFactInc
   FSelfFactDataSource := TDataSource.Create(nil);
   FSelfFactDataSource.DataSet := FSelfFactDataset;
   for FldCnt := 0 to FSelfFactDataset.FieldCount - 1 do begin
@@ -554,7 +553,7 @@ begin
       (T as TcxDBButtonEdit).DataBinding.DataField := FSelfFactDataset.Fields[FldCnt].FieldName;
     end;
   end;
-  // извлечение Дополнительных сборов по оплате проезда + сначала нужно найти shapig_rate_id
+  // РёР·РІР»РµС‡РµРЅРёРµ Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… СЃР±РѕСЂРѕРІ РїРѕ РѕРїР»Р°С‚Рµ РїСЂРѕРµР·РґР° + СЃРЅР°С‡Р°Р»Р° РЅСѓР¶РЅРѕ РЅР°Р№С‚Рё shapig_rate_id
   Q_ShapingRate := TADOQuery.Create(nil);
   DS_ShapingRate := TDataSource.Create(nil);
   DS_ShapingRate.DataSet := Q_ShapingRate;
@@ -573,31 +572,32 @@ begin
       (T as TcxDBTextEdit).DataBinding.DataField := Q_ShapingRate.Fields[FldCnt].FieldName;
     end;
   end;
-  // извлечение Дополнительных сборов по оплате проезда
-  FAddCollection := TAdoQuery.Create(nil);
-  FAddCollection.Connection := fmMain.Lis;
-  FAddCollection.SQL.Text := 'SELECT *, CAST(1.0001 AS MONEY) AS sum_in_shaping_rate_currency' +
-                             ' FROM view_add_collection WHERE (client_agent = 1) AND (add_rate_id = '
-                             + IntToStr(shaping_rate_id) + ')';
-  FAddCollection.Open;
 
-  Client_AddCollection.CreateDataSet;
-  Client_AddCollection.Open;
-  Client_AddCollection.ReadOnly := false;
-  for RecCnt := 0 to FAddCollection.RecordCount - 1 do begin
-    Client_AddCollection.Append;
-    for FldCnt := 0 to Client_AddCollection.FieldCount - 1 do // копирование значений одноименных полей
-      Client_AddCollection.Fields[FldCnt].Value := FAddCollection.FieldByName(Client_AddCollection.Fields[FldCnt].FieldName).Value;
-    Add_Currency_id := FAddCollection.FieldByName('add_currency_id').AsInteger;
-    Add_Sum := FAddCollection.FieldByName('add_sum').AsCurrency;
-    Client_AddCollection['sum_in_shaping_rate_currency'] := ConvertToShapingRateCurrency(shaping_rate_id, add_currency_Id, add_sum);
-    Client_AddCollection.Post;
-    FAddCollection.Next;
-  end;
-  FAddCollectionDataSource := TDataSource.Create(nil);
-  FAddCollectionDataSource.DataSet := Client_AddCollection;
-  btvAdd_Collection_Items.DataController.DataSource := FAddCollectionDataSource;
-  Client_AddCollection.ReadOnly := true;
+  // РёР·РІР»РµС‡РµРЅРёРµ Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… СЃР±РѕСЂРѕРІ РїРѕ РѕРїР»Р°С‚Рµ РїСЂРѕРµР·РґР°
+//  FAddCollection := TAdoQuery.Create(nil);
+//  FAddCollection.Connection := fmMain.Lis;
+//  FAddCollection.SQL.Text := 'SELECT *, CAST(1.0001 AS MONEY) AS sum_in_shaping_rate_currency' +
+//                             ' FROM view_add_collection WHERE (client_agent = 1) AND (add_rate_id = '
+//                             + IntToStr(shaping_rate_id) + ')';
+//  FAddCollection.Open;
+//
+//  Client_AddCollection.CreateDataSet;
+//  Client_AddCollection.Open;
+//  Client_AddCollection.ReadOnly := false;
+//  for RecCnt := 0 to FAddCollection.RecordCount - 1 do begin
+//    Client_AddCollection.Append;
+//    for FldCnt := 0 to Client_AddCollection.FieldCount - 1 do // РєРѕРїРёСЂРѕРІР°РЅРёРµ Р·РЅР°С‡РµРЅРёР№ РѕРґРЅРѕРёРјРµРЅРЅС‹С… РїРѕР»РµР№
+//      Client_AddCollection.Fields[FldCnt].Value := FAddCollection.FieldByName(Client_AddCollection.Fields[FldCnt].FieldName).Value;
+//    Add_Currency_id := FAddCollection.FieldByName('add_currency_id').AsInteger;
+//    Add_Sum := FAddCollection.FieldByName('add_sum').AsCurrency;
+//    Client_AddCollection['sum_in_shaping_rate_currency'] := ConvertToShapingRateCurrency(shaping_rate_id, add_currency_Id, add_sum);
+//    Client_AddCollection.Post;
+//    FAddCollection.Next;
+//  end;
+//  FAddCollectionDataSource := TDataSource.Create(nil);
+//  FAddCollectionDataSource.DataSet := Client_AddCollection;
+//  btvAdd_Collection_Items.DataController.DataSource := FAddCollectionDataSource;
+//  Client_AddCollection.ReadOnly := true;
 
   Q_Fact.Free;
   Screen.Cursor := crDefault;
@@ -616,17 +616,17 @@ var exApp,exWkb, exWks : variant;
 begin
   Screen.Cursor := crHourglass;
   fmOther.Show;
-  fmOther.Label1.Caption := 'Проверка ставок по загрузке вагонов/контейнеров...';
+  fmOther.Label1.Caption := 'РџСЂРѕРІРµСЂРєР° СЃС‚Р°РІРѕРє РїРѕ Р·Р°РіСЂСѓР·РєРµ РІР°РіРѕРЅРѕРІ/РєРѕРЅС‚РµР№РЅРµСЂРѕРІ...';
   fmOther.Repaint;
 
-  fmOther.Label1.Caption := 'Запуск сервера автоматизации...';
+  fmOther.Label1.Caption := 'Р—Р°РїСѓСЃРє СЃРµСЂРІРµСЂР° Р°РІС‚РѕРјР°С‚РёР·Р°С†РёРё...';
   fmOther.Repaint;
   exApp := CreateOleObject('Excel.Application');
   exWkb := exApp.Workbooks.Add;
   exWks := exApp.ActiveWorkbook.WorkSheets[1];
   exWks.Columns['A:C'].ColumnWidth := 16;
 //  exApp.Visible := True;
-  exWks.Range['B1'] := 'Отпр'; exWks.Range['C1'] := 'Приб';
+  exWks.Range['B1'] := 'РћС‚РїСЂ'; exWks.Range['C1'] := 'РџСЂРёР±';
   for i:=0 to 79 do
     for j:=0 to ComponentCount-1 do begin
       if (Components[j] is TLabel) AND (TLabel(Components[j]).Tag=i) then
@@ -660,7 +660,7 @@ begin
 end;
 
 
-procedure TfmFactIncCard.SwitchTo_P; // переключить в прибытие
+procedure TfmFactIncCard.SwitchTo_P; // РїРµСЂРµРєР»СЋС‡РёС‚СЊ РІ РїСЂРёР±С‹С‚РёРµ
 var i : integer;
 begin
   for i:=0 to ComponentCount-1 do
@@ -670,7 +670,7 @@ begin
       TcxDBTextEdit(Components[i]).DataBinding.DataField := StringReplace(TcxDBTextEdit(Components[i]).DataBinding.DataField, 'o_', 'p_', []);
 end;
 
-procedure TfmFactIncCard.SwitchTo_O; // переключить в отправление
+procedure TfmFactIncCard.SwitchTo_O; // РїРµСЂРµРєР»СЋС‡РёС‚СЊ РІ РѕС‚РїСЂР°РІР»РµРЅРёРµ
 var i : integer;
 begin
   for i:=0 to ComponentCount-1 do

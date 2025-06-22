@@ -1,37 +1,25 @@
-unit BargainRate;
+Ôªøunit BargainRate;
 
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, cxGraphics, cxControls, cxLookAndFeels, cxLookAndFeelPainters,
-  cxContainer, cxEdit, StdCtrls, Buttons, cxTextEdit, cxMaskEdit,
-  cxDropDownEdit, cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, ExtCtrls,
-  DB, ADODB, cxCurrencyEdit, cxCheckBox, cxPC, cxMemo, DBClient, Default,
-  dxSkinsCore, dxSkinsDefaultPainters, dxSkinscxPCPainter, dxBarBuiltInMenu,
-  Menus, cxButtons, ImgList, ShellAPI, Raznoe, dxSkinBlack, dxSkinBlue,
-  dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide,
-  dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
-  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
-  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
-  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
-  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
-  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
-  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
-  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
-  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
-  dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
-  dxSkinTheAsphaltWorld, dxSkinValentine, dxSkinVisualStudio2013Blue,
-  dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010,
-  dxSkinWhiteprint, dxSkinXmas2008Blue, System.ImageList, cxImageList, dxSkinTheBezier, dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019Colorful, dxSkinOffice2019DarkGray,
-  dxSkinOffice2019White, dxSkinWXI;
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Default,
+  Dialogs, ImageList, StdCtrls, DB, ADODB, DBClient, ExtCtrls, Menus, ImgList,
+  cxGraphics, cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit, cxTextEdit, cxMaskEdit, cxDropDownEdit, cxLookupEdit,
+  cxDBLookupEdit, cxDBLookupComboBox, cxCurrencyEdit, cxCheckBox, cxPC, cxMemo, dxSkinsCore, dxSkinsDefaultPainters, dxSkinscxPCPainter,
+  dxBarBuiltInMenu, cxButtons, dxSkinBlack, dxSkinBlue, dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide,
+  dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy, dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis, dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
+  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
+  dxSkinTheAsphaltWorld, dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010,
+  dxSkinWhiteprint, dxSkinXmas2008Blue, cxImageList, dxSkinTheBezier;
 
 type
   TfmBargainRate = class(TForm)
     Panel9: TPanel;
     Panel4: TPanel;
-    BitBtn2: TBitBtn;
-    BitBtn1: TBitBtn;
     Query_TypeTools: TADOQuery;
     DS_TypeTools: TDataSource;
     Query_AttrSelf: TADOQuery;
@@ -89,11 +77,13 @@ type
     DS_AddService: TDataSource;
     cxButton1: TcxButton;
     cxImageList1: TcxImageList;
-    procedure BitBtn1Click(Sender: TObject);
-    procedure BitBtn2Click(Sender: TObject);
+    cxButton2: TcxButton;
+    cxButton3: TcxButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure cxCheckBox1PropertiesEditValueChanged(Sender: TObject);
     procedure cxButton1Click(Sender: TObject);
+    procedure cxButton2Click(Sender: TObject);
+    procedure cxButton3Click(Sender: TObject);
   private
     Ftype_kontener      : integer;
     Ftype_kontener_name : string;
@@ -170,6 +160,7 @@ var
 function CreateWndBargainRate(AppHand: THandle; connect: TADOConnection; bargain_id: integer; usr_pwd: PUser_pwd; set_rate: boolean; set_param: boolean): variant; export;
 
 implementation
+  uses ShellAPI, Raznoe;
 
 {$R *.dfm}
 
@@ -319,7 +310,14 @@ begin
   Action := caFree;
 end;
 
-procedure TfmBargainRate.BitBtn1Click(Sender: TObject);
+procedure TfmBargainRate.cxButton1Click(Sender: TObject);
+begin
+  if Fdoc_cod <> 0 then begin
+    ShellExecute(HWND(nil), 'open', PChar(GetDocBlob(Fconnect, Fdoc_cod, 5)), nil, nil, SW_SHOWNORMAL);
+  end;
+end;
+
+procedure TfmBargainRate.cxButton2Click(Sender: TObject);
 begin
   if cxTabSheet2.TabVisible = True then begin
     if Fadd_id <> -9 then begin
@@ -370,16 +368,9 @@ begin
   end;
 end;
 
-procedure TfmBargainRate.BitBtn2Click(Sender: TObject);
+procedure TfmBargainRate.cxButton3Click(Sender: TObject);
 begin
   Close;
-end;
-
-procedure TfmBargainRate.cxButton1Click(Sender: TObject);
-begin
-  if Fdoc_cod <> 0 then begin
-    ShellExecute(HWND(nil), 'open', PChar(GetDocBlob(Fconnect, Fdoc_cod, 5)), nil, nil, SW_SHOWNORMAL);
-  end;
 end;
 
 procedure TfmBargainRate.cxCheckBox1PropertiesEditValueChanged(Sender: TObject);
@@ -387,7 +378,7 @@ begin
   if cxCheckBox1.Checked = True then begin
     cxCurrencyEdit2.EditValue := null;
     cxCurrencyEdit2.Properties.ReadOnly := True;
-    cxCurrencyEdit2.Text := '(Î˛·ÓÈ ‚ÂÒ)';
+    cxCurrencyEdit2.Text := '(–ª—é–±–æ–π –≤–µ—Å)';
     cxCurrencyEdit2.Enabled := False;
     cxCurrencyEdit2.Style.Color := clBtnFace;
     cxCurrencyEdit2.Style.Font.Style := [fsBold];
@@ -481,7 +472,7 @@ begin
     Query_AttrSelf.SQL.Add('SELECT attr_self, attr_self_name FROM view_attr_self');
   end else begin
     Query_TypeTools.SQL.Clear;
-    Query_TypeTools.SQL.Add('SELECT inf_obj_id = -9, type_inf_id = 21, inf_obj_name = ''(¬ÒÂ ‚‡„ÓÌ˚)'', inf_obj_cod = ''-9''');
+    Query_TypeTools.SQL.Add('SELECT inf_obj_id = -9, type_inf_id = 21, inf_obj_name = ''(–í—Å–µ –≤–∞–≥–æ–Ω—ã)'', inf_obj_cod = ''-9''');
     Query_TypeTools.SQL.Add('UNION');
     Query_TypeTools.SQL.Add('SELECT inf_obj_id, type_inf_id, inf_obj_name, inf_obj_cod');
     Query_TypeTools.SQL.Add('FROM inf_obj');
@@ -489,7 +480,7 @@ begin
     Query_TypeTools.SQL.Add('ORDER BY inf_obj_name');
 
     Query_AttrSelf.SQL.Clear;
-    Query_AttrSelf.SQL.Add('SELECT attr_self = -9, attr_self_name = ''(¬ÒÂ ÒÚ‡‚ÍË)''');
+    Query_AttrSelf.SQL.Add('SELECT attr_self = -9, attr_self_name = ''(–í—Å–µ —Å—Ç–∞–≤–∫–∏)''');
     Query_AttrSelf.SQL.Add('UNION');
     Query_AttrSelf.SQL.Add('SELECT attr_self, attr_self_name FROM view_attr_self');
   end;
