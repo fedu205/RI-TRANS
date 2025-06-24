@@ -959,6 +959,7 @@ type
     cxGrid7DBBandedTableView1shaping_rate_id: TcxGridDBBandedColumn;
     SP_FactClient: TADOStoredProc;
     cxGrid2DBBandedTableView1distance: TcxGridDBBandedColumn;
+    dxBarButton169: TdxBarButton;
     procedure dxBarButton25Click(Sender: TObject);
     procedure dxBarButton21Click(Sender: TObject);
     procedure dxBarButton19Click(Sender: TObject);
@@ -1173,6 +1174,7 @@ type
     procedure dxBarButton84Click(Sender: TObject);
     procedure dxBarButton92Click(Sender: TObject);
     procedure dxBarButton93Click(Sender: TObject);
+    procedure dxBarButton169Click(Sender: TObject);
   private
     Fcalc_flag     : boolean;
     index_MenuItem : integer;
@@ -6675,6 +6677,31 @@ begin
   VarClear(exWks); VarClear(exWkb); VarClear(exApp);
 end;
 
+
+procedure TfmAgree2.dxBarButton169Click(Sender: TObject);
+var SP : TADOStoredProc;
+begin
+  if DeleteFrahtCard(cxGrid1DBBandedTableView1bargain_id.DataBinding.Field.AsInteger, Fconnect) = False then Exit;
+
+  Screen.Cursor := crHourglass;
+
+  try
+    SP := TADOStoredProc.Create(nil);
+    SP.Connection := Fconnect;
+    SP.ProcedureName := 'sp_fact_etran_change';
+    SP.Parameters.ParamByName('@bargain_id').Value := cxGrid1DBBandedTableView1bargain_id.DataBinding.Field.AsInteger;
+    SP.ExecProc;
+  except
+  end;
+
+  ShowTextMessage('Обновление данных...', False);
+  RefreshQueryGrid(cxGrid1DBBandedTableView1, 'bargain_id');
+  RefreshQueryGrid(cxGrid2DBBandedTableView1, 'fact_id');
+  ShowTextMessage;
+
+  Screen.Cursor := crDefault;
+
+end;
 
 procedure TfmAgree2.dxBarButton127Click(Sender: TObject);
 var
