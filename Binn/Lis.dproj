@@ -355,6 +355,10 @@
             <Form>fmEffectSPSAdd</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="FactIncAdd.pas">
+            <Form>fmFactIncAdd</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

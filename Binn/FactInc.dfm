@@ -1857,6 +1857,14 @@ object fmFactInc: TfmFactInc
       ImageIndex = 2
       OnClick = dxBarButton6Click
     end
+    object dxBarButton5: TdxBarButton
+      Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1090#1100'...'
+      Category = 0
+      Hint = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1090#1100
+      Visible = ivAlways
+      ImageIndex = 1
+      OnClick = dxBarButton5Click
+    end
     object N1: TdxBarButton
       Caption = #1055#1072#1088#1072#1084#1077#1090#1088#1099' '#1092#1072#1082#1090#1072'...'
       Category = 1
@@ -2031,6 +2039,10 @@ object fmFactInc: TfmFactInc
       item
         Visible = True
         ItemName = 'N1'
+      end
+      item
+        Visible = True
+        ItemName = 'dxBarButton5'
       end
       item
         BeginGroup = True

@@ -242,6 +242,7 @@ type
     dxBarButton6: TdxBarButton;
     cxGrid1DBBandedTableView1FIO_users: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1date_period_finance_name: TcxGridDBBandedColumn;
+    dxBarButton5: TdxBarButton;
     procedure dxBarButton4Click(Sender: TObject);
     procedure N18Click(Sender: TObject);
     procedure N17Click(Sender: TObject);
@@ -279,6 +280,7 @@ type
     procedure dxBarButton_ReportClientClick(Sender: TObject);
     procedure dxBarButton6Click(Sender: TObject);
     procedure dxBarButton8Click(Sender: TObject);
+    procedure dxBarButton5Click(Sender: TObject);
   private
     Fstr_fact_inc_id  : string;
     Ftype_self        : integer;
@@ -301,7 +303,7 @@ var
 
 implementation
     uses Main, Raznoe, Filter, SHellApi, Other, ComObj, FactIncCard, cxGridDBTableView, AgreeFactInc,
-          Period, ZFTOScore, DateUtils, Agree2;
+          Period, ZFTOScore, DateUtils, Agree2, FactIncAdd;
 {$R *.DFM}
 
 constructor TfmFactInc.Create(AOwner: TApplication; flag: boolean);
@@ -466,6 +468,15 @@ begin
     Sp_Fact_Inc_Copy_To_Fact.Free;
     ShowTextMessage;
     Screen.Cursor := crDefault;
+  end;
+end;
+
+procedure TfmFactInc.dxBarButton5Click(Sender: TObject);
+begin
+  fmFactIncAdd := TfmFactIncAdd.Create(Application);
+  fmFactIncAdd._SetUpdate := cxGrid1DBBandedTableView1fact_inc_id.DataBinding.Field.AsString;
+  if fmFactIncAdd.ShowModal = mrOk then begin
+    RefreshQueryGrid(cxGrid1DBBandedTableView1, 'fact_inc_id', cxGrid1DBBandedTableView1fact_inc_id.DataBinding.Field.AsInteger);
   end;
 end;
 

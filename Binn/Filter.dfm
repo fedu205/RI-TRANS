@@ -156,7 +156,7 @@ object fmFilter: TfmFilter
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
+        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -240,7 +240,7 @@ object fmFilter: TfmFilter
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
+        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -408,8 +408,10 @@ object fmFilter: TfmFilter
         item
         end>
       object cxGrid1DBBandedTableView1Column1: TcxGridDBBandedColumn
+        Caption = #8470' '#1079#1072#1087#1080#1089#1080
         DataBinding.FieldName = 'id'
         DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
         Width = 60
         Position.BandIndex = 0
         Position.ColIndex = 0
@@ -419,6 +421,7 @@ object fmFilter: TfmFilter
         Caption = #1050#1086#1076
         DataBinding.FieldName = 'cod'
         DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
         Width = 107
         Position.BandIndex = 0
         Position.ColIndex = 1
@@ -428,6 +431,7 @@ object fmFilter: TfmFilter
         Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077
         DataBinding.FieldName = 'name'
         DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
         Width = 230
         Position.BandIndex = 0
         Position.ColIndex = 2

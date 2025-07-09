@@ -82,7 +82,8 @@ uses
   EDOXMLUniTrDoc820 in 'EDOXMLUniTrDoc820.pas',
   Raznoe1C in 'Raznoe1C.pas',
   EffectSPS in 'EffectSPS.pas' {fmEffectSPS},
-  EffectSPSAdd in 'EffectSPSAdd.pas' {fmEffectSPSAdd};
+  EffectSPSAdd in 'EffectSPSAdd.pas' {fmEffectSPSAdd},
+  FactIncAdd in 'FactIncAdd.pas' {fmFactIncAdd};
 
 {fmFactTrack}
 
@@ -166,8 +167,8 @@ begin
       if v[0]<>-9 then begin
         Application.Title := 'Logistics Information System';
         Application.CreateForm(TfmMain, fmMain);
-        Application.CreateForm(TfmOther, fmOther);
-        fmMain.SetPar(v);
+  Application.CreateForm(TfmOther, fmOther);
+  fmMain.SetPar(v);
         if global_id <> -9 then
           fmMain.SetGlobalId(global_id);
       end;
