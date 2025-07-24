@@ -3,36 +3,21 @@
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxGraphics, cxControls, cxLookAndFeels,
-  cxLookAndFeelPainters, cxContainer, cxEdit, dxSkinsCore, dxSkinBlack,
-  dxSkinBlue, dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom,
-  dxSkinDarkSide, dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
-  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
-  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
-  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
-  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
-  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
-  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
-  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
-  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
-  dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
-  dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine,
-  dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
-  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
-  dxSkinXmas2008Blue, cxCurrencyEdit, cxDropDownEdit, Vcl.StdCtrls,
-  cxButtonEdit, cxTextEdit, cxMaskEdit, cxLookupEdit, cxDBLookupEdit,
-  cxDBLookupComboBox, cxLabel, cxGroupBox, Vcl.ExtCtrls, dxSkinscxPCPainter,
-  dxBarBuiltInMenu, cxPC, cxCheckBox, Vcl.Buttons, Data.DB, Data.Win.ADODB,
-  System.ImageList, Vcl.ImgList, Vcl.Menus, cxButtons, cxClasses,
-  cxPropertiesStore, DateUtils, Raznoe, dxScreenTip, dxCustomHint, cxHint,
-  cxStyles, cxCustomData, cxFilter, cxData, cxDataStorage, cxNavigator,
-  cxDBData, cxGridLevel, cxGridCustomView, cxGridCustomTableView,
-  cxGridTableView, cxGridDBTableView, cxGrid, Datasnap.DBClient, Default,
-  cxGridBandedTableView, cxGridDBBandedTableView, dxSkinsdxBarPainter, dxBar,
-  cxMemo, cxRadioGroup, cxDataControllerConditionalFormattingRulesManagerDialog, dxSkinTheBezier, dxDateRanges, dxSkinOffice2019Colorful, dxScrollbarAnnotations,
-  cxCalendar, dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray, dxSkinOffice2019White,
-  dxSkinWXI;
+  Windows, Messages, SysUtils, Forms, Dialogs, Variants, Classes, Graphics, Default,
+  Controls, StdCtrls, ExtCtrls, DB, ADODB, Buttons, ImageList, ImgList, Menus, DBClient,
+  cxGraphics, cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit, dxSkinsCore, dxSkinBlack, dxSkinBlue, dxSkinBlueprint,
+  dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide, dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,  dxSkinGlassOceans,
+  dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian, dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis, dxSkinMetropolisDark,
+  dxSkinMoneyTwins, dxSkinOffice2007Black, dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver,
+  dxSkinOffice2010Black, dxSkinOffice2010Blue, dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White,
+  dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus, dxSkinSilver,
+  dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine, dxSkinVisualStudio2013Blue,
+  dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, cxCurrencyEdit, cxDropDownEdit,
+  cxButtonEdit, cxTextEdit, cxMaskEdit, cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, cxLabel, cxGroupBox, dxSkinscxPCPainter,
+  dxBarBuiltInMenu, cxPC, cxCheckBox,  cxButtons, cxClasses, cxPropertiesStore, dxScreenTip, dxCustomHint, cxHint, cxStyles, cxCustomData,
+  cxFilter, cxData, cxDataStorage, cxNavigator, cxDBData, cxGridLevel, cxGridCustomView, cxGridCustomTableView, cxGridTableView,
+  cxGridDBTableView, cxGrid, cxGridBandedTableView, cxGridDBBandedTableView, dxSkinsdxBarPainter, dxBar, cxMemo, cxRadioGroup, dxSkinTheBezier,
+  dxDateRanges, dxScrollbarAnnotations, cxCalendar, dxCoreGraphics;
 
 type
   TfmAgreeAdd2 = class(TForm)
@@ -443,10 +428,10 @@ var
   fmAgreeAdd2: TfmAgreeAdd2;
 
 implementation
-
+  uses main, Raznoe, Filter, ShapeRateAdd2, Contract, Firm, DateUtils ;
 {$R *.dfm}
 
-uses main, Filter, ShapeRateAdd2, Contract, Firm;
+
 
 constructor TfmAgreeAdd2.CreateDLL(AOwner: TApplication; usr_pwd_lis: PUser_pwd);
 begin
@@ -804,11 +789,6 @@ begin
   _SetDateService := Q.FieldByName('date_period_service').Value;
   _SetDateFinance := Q.FieldByName('date_period_finance').Value;
 
-//  if Q.FieldByName('type_contract').AsInteger = 0 then cxButton1.Down := True;
-//  if Q.FieldByName('type_contract').AsInteger = 1 then cxButton3.Down := True;
-//  if Q.FieldByName('type_contract').AsInteger = 2 then cxButton4.Down := True;
-//
-//  Ftype_contract := Q.FieldByName('type_contract').Value;
   Query_Client.Connection := Fconnect;
   Query_Client.Close;
   Query_Client.Parameters.ParamByName('date_current').Value  := _GetDatePeriod;
@@ -994,6 +974,12 @@ begin
   end;
 
   CalcSum;
+
+  cxCurrencyEdit3.EditValue  := Q.FieldByName('quantity').Value;
+  cxCurrencyEdit15.EditValue := Q.FieldByName('quantity_units').Value;
+//  cxCurrencyEdit16.EditValue := Q.FieldByName('').Value;
+
+
   sp_shaping_rate_get.Free;
   Q.Free;
   Screen.Cursor := crDefault;

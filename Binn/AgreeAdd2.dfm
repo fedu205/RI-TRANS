@@ -12,6 +12,141 @@ object fmAgreeAdd2: TfmAgreeAdd2
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  Icon.Data = {
+    0000010001002020000001002000A81000001600000028000000200000004000
+    0000010020000000000080100000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000100000
+    0080000000BF00000080000000105E2A00200090CA9F1095CBFF0090CADF0090
+    CA60000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000151412BFAFA5
+    9BFFAFA69DFF0A0400FF10272CDF117FA7FF30ABD6FFEEEEECFFBED7DEFF2FA0
+    CCFF0090CABF0090CA3000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    000000000000000000000000000000000000000000000B050060C1AC99FFFFE7
+    D0FFFFECDAFF4F7179FF009DD5FF00D1EBFF20FDFBFF20DBFDFF44C6FFFFDFEA
+    F5FF8FC2D5FF1095CBFF0090CA80000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000025100080FFDBB8FFFFD8
+    B1FFF4D8BEFF176B86FF00D3EDFF00FFFFFF00FFFFFF00DCFFFFA0D5FFFF5BB7
+    FFFF8FCFF0FFCFE1E7FF2FA0CDFF0091CCBF0091CC1000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000301600203718009F3E1C00FFC7AA91FFEACD
+    B0FF715336FF0596CDFF00EFFAFF00FBFFFF00FAFFFF00EEFFFF20C6FFFF7BD8
+    FFFF00ACDFFF40B6DCFFDFF0F3FF6FB9D4FF0093CEEF0093CE30000000000000
+    00000000000000000000000000000000000000000030000000AF0000009F0000
+    002000000000251100202B13009F341700FF4F2504FF81430DFF682F02FF5444
+    2AFF0D93C3FF00C5ECFF00F5FFFF00F4FFFF00F4FFFF00E9FFFF00CCFFFF00CC
+    FFFF00CCFFFF00B6E9FF10A3D2FF9FD8EFFF8FCBE1FF0095D0BF000000000000
+    000000000000000000000000000000000020665E56EFBFB8B1FF564D45FF1208
+    00EF200E009F281200FF452204FF935015FFCC782DFFD28541FF6F7863FF00AA
+    E5FF00D3F4FF00EFFFFF00EEFFFF0DE5EFFF0DE5EFFF3EBFAFFFBD6A10FF599F
+    8FFF00CCFFFF00CCFFFF00C6F9FF24B1F2FF78C4FFFF0098D3FF000000000000
+    0000000000000000000000000000261D179FFFE2C5FFFFE6CEFF957F6DFF2E14
+    00FF402005FF91521AFFCE7E34FFE5B991FFFCF6F1FFFFE1C5FF40ADCDFF00D9
+    F9FF00E9FFFF00E8FFFF65A780FFBB6A10FF31C5BFFF5F9D80FFC05A00FFC45E
+    00FF957C40FF19BFDFFF00CCFFFF0DC6FFFF75C9F5FF009BD7CF000000000000
+    0000000000000000000000000000614C3ABFFFD3A7FFFFD7B0FF87603EFF9959
+    1EFFD1833AFFE6B990FFFCF3EBFFFFFCF8FFFFFCF9FFFFDFC2FF40AFCFFF00A2
+    D7FF31B4B6FF9F7730FFBF5900FFB95300FF21D0DFFF8A7A50FFB54F00FFB953
+    00FFBD5700FFC25C00FF629580FF00CCFFFF00C9FDFF009EDAEF000000000000
+    0000000000000000000004020010331700EFA98464FFD19A67FFD08035FFE1AB
+    78FFFCEFE2FFFFF7EFFFFFF8F0FFFFF8F0FFFFF8F1FFFFDDBDFF40B1D1FF5F8B
+    78FFBB5500FFB54F00FFAF4900FFA94300FF3DE3FFFFB56F40FFAA4400FFAE48
+    00FFB24C00FFB75100FFBB5500FF9B6E30FF24B7CFFF00A6E2FF000000000000
+    000000000000000000002215088076491FFFCC8039FFE3AD79FFF9E3CFFFFFF2
+    E5FFFFF3E6FFFFF3E7FFFFF3E7FFFFF4E8FFFFF4E9FFFFDAB8FF40B3D3FF8564
+    3CFFAC4600FFA53F00FF9F3900FF884920FF80E9FFFF9B3500FF9F3900FFA33D
+    00FFA84200FFAC4600FFB04A00FFB54F00FFAD5A10FF00ABE7FF000000000000
+    0000D78F4810D68D4680D68B44EFE5AE7AFFFAE0C7FFFFEEDBFFFFEEDCFFFFEE
+    DDFFFFEFDEFFFFEFDFFFFFEFDFFFFFF0E0FFFFF0E1FFFFDDBDFF40B4D5FF7959
+    3DFF9D3700FF9A3400FF993300FF49979FFFBFF3FFFF8F3E10FF993300FF9A34
+    00FF9D3700FFA13B00FFA53F00FFAA4400FF995920FF00A7E5FF000000000000
+    0000D8914BAFE4AB73FFFADDBFFFFFE9D2FFFFE9D3FFFFE9D3FFFFEAD4FFFFEA
+    D5FFFFEBD5FFFFEBD6FFFFEBD7FFFFECD8FFFFECD9FFFFEAD6FF50B6CEFF7354
+    3EFF993300FF735940FF86B9BFFF9FF4FFFF60F3FFFFD2E3DFFFB36640FF9933
+    00FF993300FF993300FF9B3500FF9F3900FF666B5AFF00AAE9BF000000000000
+    0000DA944FBFF6CFAAFFFFE4C9FFFFE5CAFFFFE5CBFFFFE5CBFFFFE6CCFFFFE6
+    CDFFFFE6CDFFFFE7CEFFFFE7CFFFFFE8CFFFFFE8D0FFFFF7EFFF80B5B5FF269C
+    BEFF66B3BFFF80F3FFFF40F3FFFF00ECFFFF00E9FFFF00E7FFFF70F0FFFFAFBB
+    AFFF964B20FF993300FF993300FF993300FF3A8295FF00ADEC8F000000000000
+    0000DB9752BFF6CDA4FFFFE0C1FFFFE1C1FFFFE1C2FFFFE1C3FFFFE2C4FFFFE2
+    C5FFFFE2C5FFFFE3C6FFFFE3C7FFFFE4C7FFFFE4C8FFFFF3E7FFBFC0ABFF20C5
+    FFFF20D9FFFF00ECFFFF00ECFFFF00EAFFFF00E7FFFF00E4FFFF00E1FFFF10E0
+    FFFF80EEFFFF9C9580FF8F3E10FF8F3E10FF0AACE2FF00B0EF30000000000000
+    0000DC9A56BFF6CB9FFFFFDCB9FFFFDDB9FFFFDDBAFFFFDDBBFFFFDEBBFFFFDE
+    BCFFFFDEBDFFFFDFBEFFFFDFBFFFFFE0BFFFFFE0C0FFFFEFE0FFFFC08DFFDFAD
+    7AFF60B6C5FF00C0FFFF00D4FFFF00E4FFFF00E4FFFF00E1FFFF00DFFFFF00DC
+    FFFF00D9FFFF20DBFFFF63D2DFFF1DA9CAFF00B4F4BF00000000000000000000
+    0000DE9D5ACFFFD8B0FFFFD8B0FFFFD8B1FFFFD9B2FFFFD9B3FFFFDAB3FFFFDA
+    B4FFFFDAB5FFFFDBB5FFFFDBB6FFFFDBB7FFFFDCB8FFFFF0E0FFFFCA9FFFFFA9
+    64FFFFA964FFDFAB77FF60B5C4FF00BDFFFF00CBFFFF00DBFFFF00DCFFFF00D9
+    FFFF00D7FFFF00CEFEFF00BFFBFF00B8F9DF00B7F82000000000000000000000
+    0000DF9F5EFFFFD4A8FFFFD4A8FFFFD4A9FFFFD5AAFFFFD5AAFFFFD5ABFFFFD6
+    ACFFFFD6ADFFFFD7AEFFFFD7AEFFFFD7AFFFFFE4C9FFFFF5ECFFFFF2E6FFFFE9
+    D8FFFFBD89FFFFA661FFFFA660FFDFA974FF70B3B9FF10BCF5FF00C8FFFF00CC
+    FFFF00C0FFFF00BCFEDF00BBFC60000000000000000000000000000000000000
+    0000E1A362FFFFCF9FFFFFD0A0FFFFD0A1FFFFD1A2FFFFD1A2FFFFD1A3FFFFD2
+    A4FFFFD2A4FFFFD2A5FFFFE1C3FFFFF4EAFFFFF2E6FFFFEFDFFFFFE6CCFFFFD9
+    B3FFFFECD9FFFFE9D7FFFFB67CFFFFA45DFFFFA45DFFEFA567FF8AA89DFF5AA2
+    A8DF00BDFF500000000000000000000000000000000000000000000000000000
+    0000E2A565FFFFCC99FFFFCC9AFFFFCC9AFFFFCD9AFFFFCD9BFFFFCD9BFFFFD1
+    A2FFFFE4C8FFFFF3E6FFFFE6CCFFFFD2A6FFFFCC99FFFFCC99FFFFD2A6FFFFE9
+    D2FFFFE6CCFFFFD6ACFFFFE6CCFFFFD6B5FFFFAF71FFFFA35CFFF4964FFFD47F
+    37BF000000000000000000000000000000000000000000000000000000000000
+    0000E4A869FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFD2A6FFFFE6CCFFFFE9
+    D2FFFFD9B3FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFCC
+    99FFFFCF9FFFFFE2C6FFFFE6CCFFFFD2A6FFFFDFBFFFFFD4B0FFF59D5BFFD582
+    3ABF000000000000000000000000000000000000000000000000000000000000
+    0000E5AB6DFFFFCC99FFFFCC99FFFFD9B3FFFFDCBAFFFFE0C0FFFFCC99FFFFCC
+    99FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFCC
+    99FFFFCC99FFFFCC99FFFFCC99FFFFDCB9FFFFDFBFFFFDD2A7FFE9A363FFD78E
+    47AF000000000000000000000000000000000000000000000000000000000000
+    0000EBB478FFFFDFBFFFFFE4C8FFFFD5AAFFFFCD9BFFFFCC99FFFFCC99FFFFCC
+    99FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFCC
+    99FFFFCC99FFFFCC99FFFFCC99FFF4BB83FFE6A667FFD9934EFFD8914CAFD891
+    4A20000000000000000000000000000000000000000000000000000000000000
+    0000E8B174EFEFBA81FFF6C38EFFFDCB98FFFFCC99FFFFCC99FFFFCC99FFFFCC
+    99FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFCC
+    99FFF5BE86FFEAAE71FFDF9D5BFFDC9855CFDB975260DA965110000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    000000000000E8B27660E8B174AFE7B073FFEEB87EFFF6C18AFFFDCA96FFFFCC
+    99FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFFCC99FFFAC58FFFEEB57AFFE4A6
+    67FFDF9F5DCFDE9E5B70DE9C5920000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000E8B17510E8B17460E7B073AFE8B175FFF0BA
+    80FFF7C38CFFFFCC99FFFCC893FFF3BD85FFE7AC6EFFE2A666DFE2A5648FE1A3
+    6230000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000E7B17410E7B0
+    7370E7AF72CFE6AE71FFE6AD6FEFE5AB6D9FE4AA6B3000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    000000000000000000000000000000000000000000000000000000000000FFFF
+    FFFFFFFFFFFFFFFE007FFFFE001FFFFC000FFFFC0003FFF00001F8400001F000
+    0001F0000001F0000001E0000001E00000018000000180000001800000018000
+    000180000003800000038000000F8000003F8000007F8000007F8000007F8000
+    007F800001FFC0000FFFF0007FFFFE03FFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   OnClose = FormClose
   OnDestroy = FormDestroy
   TextHeight = 13
@@ -41,7 +176,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
+        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -125,7 +260,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
+        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -944,6 +1079,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfOffice11
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 0
         Height = 176
         Width = 875
@@ -1064,6 +1203,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Width = 422
     end
@@ -1096,6 +1239,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
       Width = 422
     end
@@ -1128,6 +1275,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 2
       Width = 195
     end
@@ -1160,6 +1311,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 3
       Width = 186
     end
@@ -1207,6 +1362,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 9
       Width = 147
     end
@@ -1264,6 +1423,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 10
           Transparent = True
         end
@@ -1322,6 +1485,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Text = #1057#1077#1085#1090#1103#1073#1088#1100
           Width = 75
@@ -1349,6 +1516,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Width = 57
         end
@@ -1389,6 +1560,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Text = #1054#1082#1090#1103#1073#1088#1100
           Width = 75
@@ -1416,6 +1591,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Width = 57
         end
@@ -1457,6 +1636,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Width = 75
         end
@@ -1483,6 +1666,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Width = 57
         end
@@ -1522,6 +1709,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 6
           Width = 133
         end
@@ -1593,7 +1784,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
+                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -1650,6 +1841,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Width = 213
         end
@@ -1669,7 +1864,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
+                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -1726,6 +1921,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Width = 213
         end
@@ -1745,7 +1944,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
+                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -1802,6 +2001,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Width = 114
         end
@@ -1821,7 +2024,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
+                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -1878,6 +2081,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Width = 114
         end
@@ -1891,7 +2098,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
           OptionsImage.Glyph.SourceDPI = 96
           OptionsImage.Glyph.Data = {
             424DC60A00000000000036000000280000001A0000001A000000010020000000
-            00000000000074120000741200000000000000000000FF00FF00FF00FF00FF00
+            000000000000C40E0000C40E00000000000000000000FF00FF00FF00FF00FF00
             FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
             FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
             FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
@@ -2003,6 +2210,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 9
           Width = 74
         end
@@ -2030,6 +2241,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 10
           Width = 74
         end
@@ -2093,6 +2308,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 8
           Transparent = True
         end
@@ -2110,7 +2329,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                0000000000007412000074120000000000000000000000808000008080000080
+                000000000000C40E0000C40E0000000000000000000000808000008080000080
                 8000008080000080800000808000008080000080800000808000008080000080
                 8000000000FF000000FF000000FF565656FF565656FF00808000008080000080
                 8000008080000080800000808000008080000080800000808000008080000000
@@ -2151,7 +2370,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
+                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -2211,6 +2430,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Width = 311
         end
@@ -2228,7 +2451,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                0000000000007412000074120000000000000000000000808000008080000080
+                000000000000C40E0000C40E0000000000000000000000808000008080000080
                 8000008080000080800000808000008080000080800000808000008080000080
                 8000000000FF000000FF000000FF565656FF565656FF00808000008080000080
                 8000008080000080800000808000008080000080800000808000008080000000
@@ -2269,7 +2492,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
+                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -2326,6 +2549,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Width = 122
         end
@@ -2353,6 +2580,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Width = 109
         end
@@ -2370,7 +2601,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
+                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -2426,6 +2657,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Width = 258
         end
@@ -2444,7 +2679,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
+                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -2500,6 +2735,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 4
           Width = 122
         end
@@ -2527,6 +2766,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 5
           Width = 109
         end
@@ -2544,7 +2787,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                0000000000007412000074120000000000000000000000808000008080000080
+                000000000000C40E0000C40E0000000000000000000000808000008080000080
                 8000008080000080800000808000008080000080800000808000008080000080
                 8000000000FF000000FF000000FF565656FF565656FF00808000008080000080
                 8000008080000080800000808000008080000080800000808000008080000000
@@ -2585,7 +2828,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
+                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -2641,6 +2884,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 6
           Width = 433
         end
@@ -2659,7 +2906,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                0000000000007412000074120000000000000000000000808000008080000080
+                000000000000C40E0000C40E0000000000000000000000808000008080000080
                 8000008080000080800000808000008080000080800000808000008080000080
                 8000000000FF000000FF000000FF565656FF565656FF00808000008080000080
                 8000008080000080800000808000008080000080800000808000008080000000
@@ -2700,7 +2947,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
+                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -2756,6 +3003,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 7
           Width = 109
         end
@@ -2781,6 +3032,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 9
           Transparent = True
         end
@@ -2817,6 +3072,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 10
           Width = 175
         end
@@ -2859,6 +3118,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 14
           Width = 109
         end
@@ -2909,7 +3172,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
+                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -2966,6 +3229,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Width = 487
         end
@@ -2985,7 +3252,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
               Glyph.SourceDPI = 96
               Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
+                000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
                 C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -3042,6 +3309,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Width = 487
         end
@@ -3251,6 +3522,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfOffice11
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 0
         Width = 177
       end
@@ -3286,6 +3561,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfOffice11
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 1
         Width = 177
       end
@@ -3321,6 +3600,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfOffice11
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 2
         Width = 177
       end
@@ -3357,6 +3640,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfOffice11
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 3
         Width = 95
       end
@@ -3368,7 +3655,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
         Properties.Alignment.Horz = taRightJustify
         Properties.DecimalPlaces = 0
         Properties.DisplayFormat = '#,##0'
-        Properties.ReadOnly = True
+        Properties.ReadOnly = False
         Style.BorderStyle = ebsOffice11
         Style.Font.Charset = DEFAULT_CHARSET
         Style.Font.Color = clWindowText
@@ -3393,6 +3680,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfOffice11
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 4
         Width = 95
       end
@@ -3404,7 +3695,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
         Properties.Alignment.Horz = taRightJustify
         Properties.DecimalPlaces = 3
         Properties.DisplayFormat = '#,##0.000'
-        Properties.ReadOnly = True
+        Properties.ReadOnly = False
         Style.BorderStyle = ebsOffice11
         Style.Font.Charset = DEFAULT_CHARSET
         Style.Font.Color = clWindowText
@@ -3429,6 +3720,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfOffice11
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 5
         Width = 95
       end
@@ -3462,6 +3757,10 @@ object fmAgreeAdd2: TfmAgreeAdd2
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfOffice11
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 6
         Width = 80
       end
@@ -3632,7 +3931,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
       Header.Glyph.SourceDPI = 96
       Header.Glyph.Data = {
         424D760200000000000036000000280000000C0000000C000000010020000000
-        0000000000007412000074120000000000000000000000000000000000000303
+        000000000000C40E0000C40E0000000000000000000000000000000000000303
         161D070754700B0B88B70D0DADEA0D0DABEA0A0A85B7070651700202151D0000
         0000000000000000000007072D39101088B01213C3FF1010C0FF0F0EBEFF0E0E
         BDFF0E0EBBFF0D0EB9FF09097FB004042939000000000505181D16168CB01B1B
@@ -3659,7 +3958,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
       Header.Glyph.SourceDPI = 96
       Header.Glyph.Data = {
         424D760200000000000036000000280000000C0000000C000000010020000000
-        000000000000741200007412000000000000000000001840768E1543B4EF061D
+        000000000000C40E0000C40E000000000000000000001840768E1543B4EF061D
         AEFF0618AAFF0714A7FF0711A4FF070FA2FF070C9FFF060A9DFF06089CFF0529
         A2EF032C6C8E1950BDEF4CB6EDFF57DFFFFF4ADAFFFF3ED6FFFF32D3FFFF28CE
         FFFF1CCBFFFF14C7FFFF0BC3FFFF0593E7FF062AA4EF1B59C3EF56BCEFFF64E4
@@ -3685,7 +3984,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
       Header.Glyph.SourceDPI = 96
       Header.Glyph.Data = {
         424D760200000000000036000000280000000C0000000C000000010020000000
-        000000000000741200007412000000000000000000000000000000000000180E
+        000000000000C40E0000C40E000000000000000000000000000000000000180E
         031D5B330B70945312B7BA6817EAB86718EA8E4F13B756310C70160D041D0000
         00000000000000000000311B0539945310B0D57617FFD27417FFCF7318FFCC72
         19FFCA7119FFC76F1AFF874D13B02C190739000000001A0F031D995510B0DC7A
@@ -3711,7 +4010,7 @@ object fmAgreeAdd2: TfmAgreeAdd2
       Header.Glyph.SourceDPI = 96
       Header.Glyph.Data = {
         424D760200000000000036000000280000000C0000000C000000010020000000
-        000000000000741200007412000000000000000000002DABC7FE1195B3FF1095
+        000000000000C40E0000C40E000000000000000000002DABC7FE1195B3FF1095
         B4FF0F94B4FF0F94B4FF0F94B4FF0F94B4FF0F94B4FF1095B4FF1095B4FF1195
         B3FF36B3CEFF37BDD9FE1DC1E5FF18C5F0FF14C2F0FF14C2F0FF0A6F8BFF0B6F
         8AFF16C3F0FF18C5F0FF1AC6F1FF1BBFE4FF44BDD8FF2771819A29BCDAFF24CD
