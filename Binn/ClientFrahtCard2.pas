@@ -17,7 +17,7 @@ uses
   cxGrid, Data.Win.ADODB, cxCalendar, cxGridChartView, cxCustomPivotGrid, cxDBPivotGrid, Vcl.ExtCtrls, dxmdaset, cxPivotGridCustomDataSet,
   cxPivotGridDrillDownDataSet, cxPivotGridChartConnection, cxCheckBox, cxContainer, Vcl.Menus, Vcl.StdCtrls, cxButtons, cxButtonEdit, cxTextEdit,
   cxMaskEdit, cxDropDownEdit, cxCheckComboBox, Datasnap.DBClient, ComObj, dxSkinTheBezier,
-  cxPropertiesStore, cxColorComboBox, dxDateRanges, dxSkinOffice2019Colorful, cxExportPivotGridLink, dxScrollbarAnnotations;
+  cxPropertiesStore, cxColorComboBox, dxDateRanges, dxSkinOffice2019Colorful, cxExportPivotGridLink, dxScrollbarAnnotations, dxCoreGraphics;
 
 type
   TfmClientFrahtCard2 = class(TForm)
@@ -768,7 +768,6 @@ type
     cxGrid13DBBandedTableView1firm_self_agent_name: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1firm_customer_agent_name: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1contract_agent_date_begin: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1set_return: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1set_self_rate: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1service_type: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1shaping_rate_count: TcxGridDBBandedColumn;
@@ -779,26 +778,15 @@ type
     cxGrid13DBBandedTableView1agent_amount_fact_calc: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1agent_amount_units_fact: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1agent_sum_fact_real: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1agent_sum_fact_NDS_real: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1agent_sum_fact_notNDS_real: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1agent_sum_fact: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1agent_sum_fact_NDS: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1agent_sum_fact_notNDS: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1agent_sum_fact_RUB: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1agent_NDS_RUB: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1agent_notNDS_RUB: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1brief_name: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1node_begin_name: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1node_end_name: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1state_begin_name: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1state_end_name: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1agreement_name: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1kargoETSNG_name: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1kargoETSNG_group_name: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1budget_name: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1ed_izm_name: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1subdivision_name: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1return_name: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1shaping_rate_nds_name: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1date_enter: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1global_color: TcxGridDBBandedColumn;
@@ -811,19 +799,11 @@ type
     cxGrid13DBBandedTableView1bargain_cod: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1five_days_zfto_name: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1contract_agent_id: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1vested_remainder: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1zfto_sum_fact: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1calc_profit: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1calc_profit_USD: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1agreement_note: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1rod_vagon_name: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1shaping_rate_comment: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1agent_comment: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1bargain_note: TcxGridDBBandedColumn;
     cxGrid13DBBandedTableView1shaping_rate_note: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1bargain_node_begin_name: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1bargain_node_end_name: TcxGridDBBandedColumn;
-    cxGrid13DBBandedTableView1bargain_kargoETSNG_name: TcxGridDBBandedColumn;
     cxGrid13Level1: TcxGridLevel;
     Panel10: TPanel;
     cxCheckComboBox7: TcxCheckComboBox;

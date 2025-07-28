@@ -65,7 +65,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
     Height = 660
     Align = alClient
     TabOrder = 4
-    Properties.ActivePage = cxTabSheet3
+    Properties.ActivePage = cxTabSheet11
     Properties.CustomButtons.Buttons = <>
     Properties.Images = fmMain.cxImageList1
     LookAndFeel.Kind = lfUltraFlat
@@ -80,9 +80,6 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
       Tag = 7
       Caption = #1050#1086#1084#1080#1089#1089#1080#1103
       ImageIndex = 93
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object cxGrid10: TcxGrid
         Left = 0
         Top = 0
@@ -1215,9 +1212,6 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
     object cxTabSheet2: TcxTabSheet
       Caption = #1050#1083#1080#1077#1085#1090#1099
       ImageIndex = 22
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object cxGrid3: TcxGrid
         Left = 0
         Top = 33
@@ -2265,6 +2259,10 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Width = 283
         end
@@ -2349,6 +2347,10 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Width = 38
         end
@@ -2404,9 +2406,6 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
       Tag = 1
       Caption = #1057#1091#1073#1087#1086#1076#1088#1103#1076#1095#1080#1082#1080
       ImageIndex = 40
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object cxGrid1: TcxGrid
         Left = 0
         Top = 33
@@ -3485,6 +3484,10 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Width = 283
         end
@@ -3569,6 +3572,10 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Width = 38
         end
@@ -3624,9 +3631,6 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
       Tag = 8
       Caption = #1057#1091#1073#1087#1086#1076#1088#1103#1076#1095#1080#1082#1080' ('#1057#1074#1077#1088#1082#1072')'
       ImageIndex = 40
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object cxGrid13: TcxGrid
         Left = 0
         Top = 33
@@ -3644,6 +3648,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
         LookAndFeel.NativeStyle = False
         LookAndFeel.ScrollbarMode = sbmClassic
         LookAndFeel.SkinName = 'Office2007Black'
+        ExplicitLeft = -108
         object cxGrid13DBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = dxBarPopupMenu_13
           OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -3690,22 +3695,18 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             item
               Format = '#,##0.00'
               Kind = skSum
-              Column = cxGrid13DBBandedTableView1agent_sum_fact_NDS_real
             end
             item
               Format = '#,##0.00'
               Kind = skSum
-              Column = cxGrid13DBBandedTableView1agent_sum_fact
             end
             item
               Format = '#,##0.00'
               Kind = skSum
-              Column = cxGrid13DBBandedTableView1agent_sum_fact_NDS
             end
             item
               Format = '#,##0.00'
               Kind = skSum
-              Column = cxGrid13DBBandedTableView1agent_sum_fact_notNDS
             end
             item
               Format = '#,##0.00'
@@ -3725,12 +3726,10 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             item
               Format = '#,##0.00'
               Kind = skSum
-              Column = cxGrid13DBBandedTableView1agent_sum_fact_notNDS_real
             end
             item
               Format = '#,##0.00'
               Kind = skSum
-              Column = cxGrid13DBBandedTableView1calc_profit_USD
             end
             item
               Format = '#,##0.00'
@@ -3745,7 +3744,6 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             item
               Format = '#,##0.00'
               Kind = skSum
-              Column = cxGrid13DBBandedTableView1vested_remainder
             end>
           DataController.Summary.SummaryGroups = <>
           DataController.Summary.Options = [soMultipleSelectedRecords]
@@ -3824,7 +3822,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 8
+            Position.ColIndex = 7
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1bargain_correct_group: TcxGridDBBandedColumn
@@ -3854,7 +3852,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 6
+            Position.ColIndex = 5
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1firm_self_agent_name: TcxGridDBBandedColumn
@@ -3864,7 +3862,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 7
+            Position.ColIndex = 6
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1firm_customer_agent_name: TcxGridDBBandedColumn
@@ -3874,7 +3872,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 5
+            Position.ColIndex = 4
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1contract_agent_date_begin: TcxGridDBBandedColumn
@@ -3887,16 +3885,6 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             Position.ColIndex = 24
             Position.RowIndex = 0
           end
-          object cxGrid13DBBandedTableView1set_return: TcxGridDBBandedColumn
-            Caption = #1042#1086#1079#1084#1077#1097#1077#1085#1080#1077
-            DataBinding.FieldName = 'set_return'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
-            Width = 80
-            Position.BandIndex = 0
-            Position.ColIndex = 26
-            Position.RowIndex = 0
-          end
           object cxGrid13DBBandedTableView1set_self_rate: TcxGridDBBandedColumn
             Caption = #1057#1086#1073#1089#1090#1074#1077#1085#1085#1099#1077' '#1088#1072#1089#1093#1086#1076#1099
             DataBinding.FieldName = 'set_self_rate'
@@ -3904,7 +3892,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 27
+            Position.ColIndex = 26
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1service_type: TcxGridDBBandedColumn
@@ -3925,7 +3913,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 28
+            Position.ColIndex = 27
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1shaping_rate_sum: TcxGridDBBandedColumn
@@ -3937,7 +3925,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 30
+            Position.ColIndex = 28
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1service_type_name: TcxGridDBBandedColumn
@@ -3957,7 +3945,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 31
+            Position.ColIndex = 29
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1type_calc_sum_name: TcxGridDBBandedColumn
@@ -3968,7 +3956,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             Styles.Content = fmMain.cxStyle_AgreeFact
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 33
+            Position.ColIndex = 32
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1agent_amount_fact_calc: TcxGridDBBandedColumn
@@ -3981,7 +3969,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             Styles.Content = fmMain.cxStyle_AgreeFact
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 10
+            Position.ColIndex = 9
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1agent_amount_units_fact: TcxGridDBBandedColumn
@@ -3994,7 +3982,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             Styles.Content = fmMain.cxStyle_AgreeFact
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 11
+            Position.ColIndex = 10
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1agent_sum_fact_real: TcxGridDBBandedColumn
@@ -4007,72 +3995,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             Styles.Content = fmMain.cxStyle_AgreeFact
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 12
-            Position.RowIndex = 0
-          end
-          object cxGrid13DBBandedTableView1agent_sum_fact_NDS_real: TcxGridDBBandedColumn
-            Caption = #1060'. '#1089#1091#1084#1084#1072' '#1053#1044#1057
-            DataBinding.FieldName = 'agent_sum_fact_NDS_real'
-            DataBinding.IsNullValueType = True
-            PropertiesClassName = 'TcxCurrencyEditProperties'
-            Properties.DisplayFormat = '#,##0.00'
-            HeaderAlignmentVert = vaTop
-            Styles.Content = fmMain.cxStyle_AgreeFact
-            Width = 80
-            Position.BandIndex = 0
-            Position.ColIndex = 34
-            Position.RowIndex = 0
-          end
-          object cxGrid13DBBandedTableView1agent_sum_fact_notNDS_real: TcxGridDBBandedColumn
-            Caption = #1060'. '#1089#1091#1084#1084#1072' '#1073#1077#1079' '#1053#1044#1057
-            DataBinding.FieldName = 'agent_sum_fact_notNDS_real'
-            DataBinding.IsNullValueType = True
-            PropertiesClassName = 'TcxCurrencyEditProperties'
-            Properties.DisplayFormat = '#,##0.00'
-            HeaderAlignmentVert = vaTop
-            Styles.Content = fmMain.cxStyle_AgreeFact
-            Width = 80
-            Position.BandIndex = 0
-            Position.ColIndex = 35
-            Position.RowIndex = 0
-          end
-          object cxGrid13DBBandedTableView1agent_sum_fact: TcxGridDBBandedColumn
-            Caption = #1060'. '#1089#1091#1084#1084#1072' USD'
-            DataBinding.FieldName = 'agent_sum_fact'
-            DataBinding.IsNullValueType = True
-            PropertiesClassName = 'TcxCurrencyEditProperties'
-            Properties.DisplayFormat = '#,##0.00'
-            HeaderAlignmentVert = vaTop
-            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
-            Width = 80
-            Position.BandIndex = 0
-            Position.ColIndex = 14
-            Position.RowIndex = 0
-          end
-          object cxGrid13DBBandedTableView1agent_sum_fact_NDS: TcxGridDBBandedColumn
-            Caption = #1060'. '#1089#1091#1084#1084#1072' '#1053#1044#1057' USD'
-            DataBinding.FieldName = 'agent_sum_fact_NDS'
-            DataBinding.IsNullValueType = True
-            PropertiesClassName = 'TcxCurrencyEditProperties'
-            Properties.DisplayFormat = '#,##0.00'
-            HeaderAlignmentVert = vaTop
-            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
-            Width = 80
-            Position.BandIndex = 0
-            Position.ColIndex = 36
-            Position.RowIndex = 0
-          end
-          object cxGrid13DBBandedTableView1agent_sum_fact_notNDS: TcxGridDBBandedColumn
-            Caption = #1060'. '#1089#1091#1084#1084#1072' '#1073#1077#1079' '#1053#1044#1057' USD'
-            DataBinding.FieldName = 'agent_sum_fact_notNDS'
-            DataBinding.IsNullValueType = True
-            PropertiesClassName = 'TcxCurrencyEditProperties'
-            Properties.DisplayFormat = '#,##0.00'
-            HeaderAlignmentVert = vaTop
-            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
-            Width = 80
-            Position.BandIndex = 0
-            Position.ColIndex = 37
+            Position.ColIndex = 11
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1agent_sum_fact_RUB: TcxGridDBBandedColumn
@@ -4085,7 +4008,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod_RUB
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 15
+            Position.ColIndex = 13
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1agent_NDS_RUB: TcxGridDBBandedColumn
@@ -4098,7 +4021,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod_RUB
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 38
+            Position.ColIndex = 14
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1agent_notNDS_RUB: TcxGridDBBandedColumn
@@ -4111,7 +4034,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod_RUB
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 39
+            Position.ColIndex = 15
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1brief_name: TcxGridDBBandedColumn
@@ -4119,13 +4042,14 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             DataBinding.FieldName = 'brief_name'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
-            Width = 80
+            Styles.Content = fmMain.cxStyle_AgreeFact
+            Width = 47
             Position.BandIndex = 0
-            Position.ColIndex = 13
+            Position.ColIndex = 12
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1node_begin_name: TcxGridDBBandedColumn
-            Caption = #1057#1090'. '#1086#1090#1087#1088#1072#1074#1083#1077#1085#1080#1103
+            Caption = #1057#1090'. '#1054#1090#1087#1088
             DataBinding.FieldName = 'node_begin_name'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
@@ -4135,43 +4059,13 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1node_end_name: TcxGridDBBandedColumn
-            Caption = #1057#1090'. '#1085#1072#1079#1085#1072#1095#1077#1085#1080#1103
+            Caption = #1057#1090'. '#1053#1072#1079#1085'.'
             DataBinding.FieldName = 'node_end_name'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0
             Position.ColIndex = 17
-            Position.RowIndex = 0
-          end
-          object cxGrid13DBBandedTableView1state_begin_name: TcxGridDBBandedColumn
-            Caption = #1057#1090#1088'. '#1086#1090#1087#1088#1072#1074#1083#1077#1085#1080#1103
-            DataBinding.FieldName = 'state_begin_name'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
-            Width = 80
-            Position.BandIndex = 0
-            Position.ColIndex = 40
-            Position.RowIndex = 0
-          end
-          object cxGrid13DBBandedTableView1state_end_name: TcxGridDBBandedColumn
-            Caption = #1057#1090#1088'. '#1085#1072#1079#1085#1072#1095#1077#1085#1080#1103
-            DataBinding.FieldName = 'state_end_name'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
-            Width = 80
-            Position.BandIndex = 0
-            Position.ColIndex = 41
-            Position.RowIndex = 0
-          end
-          object cxGrid13DBBandedTableView1agreement_name: TcxGridDBBandedColumn
-            Caption = #1055#1088#1080#1083#1086#1078#1077#1085#1080#1077
-            DataBinding.FieldName = 'agreement_name'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
-            Width = 80
-            Position.BandIndex = 0
-            Position.ColIndex = 42
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1kargoETSNG_name: TcxGridDBBandedColumn
@@ -4191,17 +4085,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 43
-            Position.RowIndex = 0
-          end
-          object cxGrid13DBBandedTableView1budget_name: TcxGridDBBandedColumn
-            Caption = #1041#1102#1076#1078#1077#1090
-            DataBinding.FieldName = 'budget_name'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
-            Width = 80
-            Position.BandIndex = 0
-            Position.ColIndex = 4
+            Position.ColIndex = 33
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1ed_izm_name: TcxGridDBBandedColumn
@@ -4211,27 +4095,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 44
-            Position.RowIndex = 0
-          end
-          object cxGrid13DBBandedTableView1subdivision_name: TcxGridDBBandedColumn
-            Caption = #1042#1080#1076' '#1076#1077#1103#1090#1077#1083#1100#1085#1086#1089#1090#1080
-            DataBinding.FieldName = 'subdivision_name'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
-            Width = 80
-            Position.BandIndex = 0
-            Position.ColIndex = 45
-            Position.RowIndex = 0
-          end
-          object cxGrid13DBBandedTableView1return_name: TcxGridDBBandedColumn
-            Caption = #1058#1080#1087' '#1074#1086#1079#1084#1077#1097#1077#1085#1080#1103
-            DataBinding.FieldName = 'return_name'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
-            Width = 80
-            Position.BandIndex = 0
-            Position.ColIndex = 46
+            Position.ColIndex = 34
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1shaping_rate_nds_name: TcxGridDBBandedColumn
@@ -4241,7 +4105,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 47
+            Position.ColIndex = 35
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1date_enter: TcxGridDBBandedColumn
@@ -4251,7 +4115,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 48
+            Position.ColIndex = 42
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1global_color: TcxGridDBBandedColumn
@@ -4270,7 +4134,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 9
+            Position.ColIndex = 8
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1currency_id: TcxGridDBBandedColumn
@@ -4287,7 +4151,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             HeaderAlignmentVert = vaTop
             Width = 100
             Position.BandIndex = 0
-            Position.ColIndex = 29
+            Position.ColIndex = 30
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1bargain_firm_customer_name: TcxGridDBBandedColumn
@@ -4307,7 +4171,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             HeaderAlignmentVert = vaTop
             Width = 100
             Position.BandIndex = 0
-            Position.ColIndex = 32
+            Position.ColIndex = 31
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1set_bargain_block: TcxGridDBBandedColumn
@@ -4337,7 +4201,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 49
+            Position.ColIndex = 36
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1contract_agent_id: TcxGridDBBandedColumn
@@ -4347,18 +4211,6 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             Position.ColIndex = -1
             Position.RowIndex = -1
           end
-          object cxGrid13DBBandedTableView1vested_remainder: TcxGridDBBandedColumn
-            Caption = #1055#1077#1088#1077#1093#1086#1076#1103#1097#1080#1081' '#1086#1089#1090#1072#1090#1086#1082
-            DataBinding.FieldName = 'vested_remainder'
-            DataBinding.IsNullValueType = True
-            PropertiesClassName = 'TcxCurrencyEditProperties'
-            Properties.DisplayFormat = '#,##0.00'
-            HeaderAlignmentVert = vaTop
-            Width = 80
-            Position.BandIndex = 0
-            Position.ColIndex = 50
-            Position.RowIndex = 0
-          end
           object cxGrid13DBBandedTableView1zfto_sum_fact: TcxGridDBBandedColumn
             Caption = #1056#1072#1089#1093#1086#1076#1099' '#1087#1086#1076#1088#1103#1076#1095#1080#1082#1072
             DataBinding.FieldName = 'zfto_sum_fact'
@@ -4367,9 +4219,9 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             Properties.DisplayFormat = '#,##0.00'
             HeaderAlignmentVert = vaTop
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
-            Width = 80
+            Width = 84
             Position.BandIndex = 0
-            Position.ColIndex = 51
+            Position.ColIndex = 37
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1calc_profit: TcxGridDBBandedColumn
@@ -4382,30 +4234,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Profitt
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 52
-            Position.RowIndex = 0
-          end
-          object cxGrid13DBBandedTableView1calc_profit_USD: TcxGridDBBandedColumn
-            Caption = #1055#1088#1080#1073#1099#1083#1100' USD'
-            DataBinding.FieldName = 'calc_profit_USD'
-            DataBinding.IsNullValueType = True
-            PropertiesClassName = 'TcxCurrencyEditProperties'
-            Properties.DisplayFormat = '#,##0.00'
-            HeaderAlignmentVert = vaTop
-            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Profitt
-            Width = 80
-            Position.BandIndex = 0
-            Position.ColIndex = 53
-            Position.RowIndex = 0
-          end
-          object cxGrid13DBBandedTableView1agreement_note: TcxGridDBBandedColumn
-            Caption = #1055#1088#1080#1083#1086#1078#1077#1085#1080#1077' ('#1088#1091#1095#1085#1086#1081' '#1074#1074#1086#1076')'
-            DataBinding.FieldName = 'agreement_note'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
-            Width = 80
-            Position.BandIndex = 0
-            Position.ColIndex = 54
+            Position.ColIndex = 38
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1rod_vagon_name: TcxGridDBBandedColumn
@@ -4415,7 +4244,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 55
+            Position.ColIndex = 39
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1shaping_rate_comment: TcxGridDBBandedColumn
@@ -4425,27 +4254,7 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
-            Position.ColIndex = 56
-            Position.RowIndex = 0
-          end
-          object cxGrid13DBBandedTableView1agent_comment: TcxGridDBBandedColumn
-            Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077' '#1087#1086#1076#1088#1103#1076#1095#1080#1082#1072' '#1060#1050
-            DataBinding.FieldName = 'agent_comment'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
-            Width = 66
-            Position.BandIndex = 0
-            Position.ColIndex = 57
-            Position.RowIndex = 0
-          end
-          object cxGrid13DBBandedTableView1bargain_note: TcxGridDBBandedColumn
-            Caption = #1055#1077#1088#1077#1074#1086#1079#1082#1072': '#1087#1088#1080#1084#1077#1095#1072#1085#1080#1077
-            DataBinding.FieldName = 'bargain_note'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
-            Width = 80
-            Position.BandIndex = 0
-            Position.ColIndex = 58
+            Position.ColIndex = 40
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1shaping_rate_note: TcxGridDBBandedColumn
@@ -4455,47 +4264,17 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 59
-            Position.RowIndex = 0
-          end
-          object cxGrid13DBBandedTableView1bargain_node_begin_name: TcxGridDBBandedColumn
-            Caption = #1055#1077#1088#1077#1074#1086#1079#1082#1072': '#1057#1090'. '#1086#1090#1087#1088'.'
-            DataBinding.FieldName = 'bargain_node_begin_name'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
-            Width = 80
-            Position.BandIndex = 0
-            Position.ColIndex = 60
-            Position.RowIndex = 0
-          end
-          object cxGrid13DBBandedTableView1bargain_node_end_name: TcxGridDBBandedColumn
-            Caption = #1055#1077#1088#1077#1074#1086#1079#1082#1072': '#1057#1090'. '#1085#1072#1079#1085'.'
-            DataBinding.FieldName = 'bargain_node_end_name'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
-            Width = 80
-            Position.BandIndex = 0
-            Position.ColIndex = 61
-            Position.RowIndex = 0
-          end
-          object cxGrid13DBBandedTableView1bargain_kargoETSNG_name: TcxGridDBBandedColumn
-            Caption = #1055#1077#1088#1077#1074#1086#1079#1082#1072': '#1043#1088#1091#1079' '#1045#1058#1057#1053#1043
-            DataBinding.FieldName = 'bargain_kargoETSNG_name'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
-            Width = 80
-            Position.BandIndex = 0
-            Position.ColIndex = 62
+            Position.ColIndex = 41
             Position.RowIndex = 0
           end
           object cxGrid13DBBandedTableView1users_color: TcxGridDBBandedColumn
-            Caption = #1062#1074#1077#1090' '#1087#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1103
+            Caption = #1062#1074#1077#1090
             DataBinding.FieldName = 'users_color'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 80
             Position.BandIndex = 0
-            Position.ColIndex = 63
+            Position.ColIndex = 43
             Position.RowIndex = 0
           end
         end
@@ -4554,11 +4333,15 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
-          Width = 283
+          Width = 377
         end
         object cxButtonEdit10: TcxButtonEdit
-          Left = 288
+          Left = 382
           Top = 5
           TabStop = False
           Properties.Buttons = <
@@ -4638,11 +4421,15 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Width = 38
         end
         object cxButton7: TcxButton
-          Left = 332
+          Left = 440
           Top = 4
           Width = 111
           Height = 23
@@ -4693,9 +4480,6 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
       Tag = 2
       Caption = #1040#1085#1072#1083#1080#1090#1080#1082#1072' '#1087#1086' '#1091#1089#1083#1091#1075#1072#1084
       ImageIndex = 174
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object cxSplitter3: TcxSplitter
         Left = 0
         Top = 413
@@ -5213,9 +4997,6 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
       Tag = 3
       Caption = #1042#1072#1075#1086#1085#1099' ('#1055#1077#1088#1077#1074#1086#1079#1082#1080')'
       ImageIndex = 23
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object cxGrid4: TcxGrid
         Left = 0
         Top = 33
@@ -5892,6 +5673,10 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Width = 283
         end
@@ -5976,6 +5761,10 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Width = 38
         end
@@ -6045,6 +5834,10 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Text = #1042#1072#1075#1086#1085#1099': ('#1042#1089#1077')'
           Width = 283
@@ -6101,9 +5894,6 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
       Tag = 4
       Caption = #1042#1072#1075#1086#1085#1099' ('#1044#1086#1093#1086#1076'-'#1056#1072#1089#1093#1086#1076')'
       ImageIndex = 142
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Panel5: TPanel
         Left = 0
         Top = 0
@@ -6155,6 +5945,10 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Width = 283
         end
@@ -6239,6 +6033,10 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 1
           Width = 38
         end
@@ -6308,6 +6106,10 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Text = #1042#1072#1075#1086#1085#1099': ('#1042#1089#1077')'
           Width = 283
@@ -7401,6 +7203,10 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Width = 283
         end
@@ -7485,6 +7291,10 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = ''
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = ''
           TabOrder = 1
           Width = 38
         end
@@ -7554,6 +7364,10 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Text = #1042#1072#1075#1086#1085#1099': ('#1042#1089#1077')'
           Width = 283
@@ -7610,9 +7424,6 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
       Tag = 6
       Caption = #1042#1072#1075#1086#1085#1099' ('#1087#1086#1083#1085#1072#1103' '#1080#1085#1092'.)'
       ImageIndex = 166
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Panel7: TPanel
         Left = 0
         Top = 0
@@ -7688,6 +7499,10 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
           Text = #1042#1072#1075#1086#1085#1099': ('#1042#1089#1077')'
           Width = 283
@@ -7780,6 +7595,10 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 2
           Width = 283
         end
@@ -7864,6 +7683,10 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 3
           Width = 38
         end
@@ -8424,9 +8247,6 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
     object cxTabSheet9: TcxTabSheet
       Tag = 9
       Caption = #1059#1089#1083#1091#1075#1080' '#1082#1083#1080#1077#1085#1090#1072#1084
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object cxGrid11: TcxGrid
         Left = 0
         Top = 0
@@ -9192,9 +9012,6 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
     object cxTabSheet10: TcxTabSheet
       Tag = 10
       Caption = #1059#1089#1083#1091#1075#1080' '#1087#1086#1076#1088#1103#1076#1095#1080#1082#1086#1074
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object cxGrid12: TcxGrid
         Left = 0
         Top = 0

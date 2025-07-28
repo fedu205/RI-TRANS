@@ -28,9 +28,7 @@ uses
   dxSpreadSheetCoreStyles, dxSpreadSheetCoreStrs, dxSpreadSheetClasses, dxSpreadSheetContainers, dxSpreadSheetFormulas,
   dxSpreadSheetFunctions, dxSpreadSheetStyles, dxSpreadSheetGraphics, dxSpreadSheetPrinting, dxSpreadSheetTypes, dxDateRanges,
   dxSpreadSheetHyperlinks, dxSpreadSheetUtils, dxSpreadSheetFormattedTextUtils, dxScrollbarAnnotations, cxButtons, cxPC,
-  dxSpreadSheetConditionalFormatting, dxSpreadSheetConditionalFormattingRules,
-  dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019Colorful,
-  dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI, dxCoreGraphics;
+  dxSpreadSheetConditionalFormatting, dxSpreadSheetConditionalFormattingRules, dxCoreGraphics;
 
 
 type
@@ -272,13 +270,13 @@ begin
     cxLookupComboBox2.EditValue := Query_Scene.FieldByName('scene_id').AsInteger;
 
   // закрываем возможность редактирования сценариев (оставляем только админу)
-  if LeftStr(Fusr_pwd.user_name, 6) <> 'admin_' then begin
-    cxGrid1.PopupMenu := nil;
-    cxGrid1DBBandedTableView1.OptionsData.Editing := False;
-
-    cxGrid2.PopupMenu := nil;
-    cxGrid2DBBandedTableView1.OptionsData.Editing := False;
-  end;
+//  if LeftStr(Fusr_pwd.user_name, 6) <> 'admin_' then begin
+//    cxGrid1.PopupMenu := nil;
+//    cxGrid1DBBandedTableView1.OptionsData.Editing := False;
+//
+//    cxGrid2.PopupMenu := nil;
+//    cxGrid2DBBandedTableView1.OptionsData.Editing := False;
+//  end;
 
 
 end;
