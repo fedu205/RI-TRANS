@@ -4426,7 +4426,7 @@ begin
 
         Client_Vagon.FieldByName('OwnerOkpoName'            ).Value := exWks.Range['CI' + IntToStr(cnt)].Value;
         Client_Vagon.FieldByName('OwnerOkpo'                ).Value := exWks.Range['CJ' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('copper_calibration'       ).Value := exWks.Range['DF' + IntToStr(cnt)].Value;
+        Client_Vagon.FieldByName('copper_calibration'       ).Value := exWks.Range['DH' + IntToStr(cnt)].Value;
 
         Client_Vagon.FieldByName('rod_vagon_cod'           ).Value := CopyCod(exWks.Range['C' + IntToStr(cnt)].Value);
         Client_Vagon.FieldByName('road_begin_cod'          ).Value := CopyCod(exWks.Range['G' + IntToStr(cnt)].Value);

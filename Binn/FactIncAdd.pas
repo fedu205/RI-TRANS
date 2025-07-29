@@ -67,6 +67,7 @@ type
       AButtonIndex: Integer);
     procedure cxButton3Click(Sender: TObject);
     procedure cxButton1Click(Sender: TObject);
+    procedure cxCheckBox1PropertiesChange(Sender: TObject);
   private
     Fstr_fact_inc_id : string;
     Fsto, Fsto_name, Fstn, Fstn_name, Fgruz, Fgruz_name : string;
@@ -137,6 +138,20 @@ begin
 
   end else begin
 
+    cxCheckBox1.Visible := True;
+    cxCheckBox2.Visible := True;
+    cxCheckBox3.Visible := True;
+
+    cxButtonEdit1.Enabled := False;
+    cxButtonEdit2.Enabled := False;
+    cxButtonEdit3.Enabled := False;
+    cxButtonEdit4.Enabled := False;
+    cxButtonEdit5.Enabled := False;
+    cxButtonEdit6.Enabled := False;
+
+    cxTextEdit1.Enabled := False;
+    cxTextEdit2.Enabled := False;
+    cxTextEdit3.Enabled := False;
   end;
 
 
@@ -190,6 +205,9 @@ begin
   sp.ProcedureName := 'sp_FactInc_modify';
   sp.Parameters.Refresh;
   sp.Parameters.ParamByName('@str_fact_inc_id').Value := Fstr_fact_inc_id;
+  sp.Parameters.ParamByName('@set_sto'  ).Value := iif(cxCheckBox1.Visible, cxCheckBox1.Checked, true);
+  sp.Parameters.ParamByName('@set_stn'  ).Value := iif(cxCheckBox2.Visible, cxCheckBox2.Checked, true);
+  sp.Parameters.ParamByName('@set_gruz' ).Value := iif(cxCheckBox3.Visible, cxCheckBox3.Checked, true);
   sp.Parameters.ParamByName('@sto'      ).Value := Fsto;
   sp.Parameters.ParamByName('@sto_name' ).Value := Fsto_name;
   sp.Parameters.ParamByName('@stn'      ).Value := Fstn;
@@ -350,6 +368,16 @@ begin
         cxButtonEdit5.Text := Fgruz_name;
     end;
   end;
+end;
+
+procedure TfmFactIncAdd.cxCheckBox1PropertiesChange(Sender: TObject);
+begin
+  cxButtonEdit1.Enabled := cxCheckBox1.Checked;
+  cxButtonEdit2.Enabled := cxCheckBox1.Checked;
+  cxButtonEdit3.Enabled := cxCheckBox2.Checked;
+  cxButtonEdit4.Enabled := cxCheckBox2.Checked;
+  cxButtonEdit5.Enabled := cxCheckBox3.Checked;
+  cxButtonEdit6.Enabled := cxCheckBox3.Checked;
 end;
 
 end.

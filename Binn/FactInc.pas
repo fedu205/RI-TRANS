@@ -472,9 +472,15 @@ begin
 end;
 
 procedure TfmFactInc.dxBarButton5Click(Sender: TObject);
+var           i : integer;
+    str_fact_inc_id : string;
 begin
+  for i := 0 to cxGrid1DBBandedTableView1.Controller.SelectedRowCount - 1 do
+    str_fact_inc_id := str_fact_inc_id + ',' + IntToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1fact_inc_id.Index]);
+  Delete(str_fact_inc_id, 1, 1);
+
   fmFactIncAdd := TfmFactIncAdd.Create(Application);
-  fmFactIncAdd._SetUpdate := cxGrid1DBBandedTableView1fact_inc_id.DataBinding.Field.AsString;
+  fmFactIncAdd._SetUpdate := str_fact_inc_id;
   if fmFactIncAdd.ShowModal = mrOk then begin
     RefreshQueryGrid(cxGrid1DBBandedTableView1, 'fact_inc_id', cxGrid1DBBandedTableView1fact_inc_id.DataBinding.Field.AsInteger);
   end;

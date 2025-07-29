@@ -21,8 +21,6 @@ object fmFactIncAdd: TfmFactIncAdd
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 0
-    ExplicitTop = 396
-    ExplicitWidth = 449
     DesignSize = (
       443
       37)
@@ -108,7 +106,6 @@ object fmFactIncAdd: TfmFactIncAdd
       OptionsImage.NumGlyphs = 2
       TabOrder = 0
       OnClick = cxButton1Click
-      ExplicitLeft = 277
     end
     object cxButton3: TcxButton
       Left = 358
@@ -193,7 +190,6 @@ object fmFactIncAdd: TfmFactIncAdd
       OptionsImage.NumGlyphs = 2
       TabOrder = 1
       OnClick = cxButton3Click
-      ExplicitLeft = 364
     end
   end
   object Panel5: TPanel
@@ -205,10 +201,6 @@ object fmFactIncAdd: TfmFactIncAdd
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 1
-    ExplicitLeft = 8
-    ExplicitTop = 456
-    ExplicitWidth = 609
-    ExplicitHeight = 239
     DesignSize = (
       443
       96)
@@ -696,6 +688,7 @@ object fmFactIncAdd: TfmFactIncAdd
       Tag = 1
       Left = 419
       Top = 11
+      Properties.OnChange = cxCheckBox1PropertiesChange
       Style.LookAndFeel.Kind = lfOffice11
       Style.LookAndFeel.NativeStyle = False
       Style.LookAndFeel.ScrollbarMode = sbmClassic
@@ -789,7 +782,6 @@ object fmFactIncAdd: TfmFactIncAdd
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 2
-    ExplicitWidth = 609
     DesignSize = (
       443
       65)
@@ -864,7 +856,6 @@ object fmFactIncAdd: TfmFactIncAdd
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
-      ExplicitWidth = 284
       Width = 248
     end
     object cxTextEdit1: TcxTextEdit
