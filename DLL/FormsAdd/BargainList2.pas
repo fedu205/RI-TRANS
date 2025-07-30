@@ -17,9 +17,8 @@ uses
   dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld,
   dxSkinsDefaultPainters, dxSkinValentine, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxSkinscxPCPainter, cxNavigator, dxBarBuiltInMenu,
   dxSkinsdxBarPainter, dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
-  dxSkinVisualStudio2013Light,  cxImageList, cxCheckBox, cxRadioGroup, cxButtonEdit, cxGridDBTableView, dxDateRanges, dxSkinOffice2019Colorful,
-  cxDataControllerConditionalFormattingRulesManagerDialog, dxSkinTheBezier, dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray,
-  dxSkinWXI, dxCoreGraphics;
+  dxSkinVisualStudio2013Light,  cxImageList, cxCheckBox, cxRadioGroup, cxButtonEdit, cxGridDBTableView, dxDateRanges,  dxSkinTheBezier,
+  dxCoreGraphics;
 
 
 type
@@ -770,6 +769,8 @@ begin
 
   Panel4.Visible := True;
   Splitter3.Visible := True;
+
+  WindowState := TWindowState.wsMaximized;
 
   Screen.Cursor := crDefault;
 end;
