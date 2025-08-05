@@ -18,7 +18,8 @@ uses
   dxSkinsDefaultPainters, dxSkinValentine, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxSkinscxPCPainter, cxNavigator, dxBarBuiltInMenu,
   dxSkinsdxBarPainter, dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
   dxSkinVisualStudio2013Light,  cxImageList, cxCheckBox, cxRadioGroup, cxButtonEdit, cxGridDBTableView, dxDateRanges,  dxSkinTheBezier,
-  dxCoreGraphics;
+  dxCoreGraphics, dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019Colorful,
+  dxSkinOffice2019DarkGray, dxSkinWXI;
 
 
 type
@@ -3331,12 +3332,15 @@ begin
   ClientDS2.First;
   while not ClientDS2.Eof do begin
     if not ClientDS.Locate('type_kontener;attr_self', VarArrayOf([ClientDS2['type_kontener'], ClientDS2['attr_self']]), []) then begin
-      cnt_rate := cnt_rate + 1;
 
-      ClientDS.Append;
-      ClientDS['type_kontener'] := ClientDS2['type_kontener'];
-      ClientDS['attr_self']   := ClientDS2['attr_self'];
-      ClientDS.Post;
+      if ClientDS2['type_kontener'] <> null then begin
+        cnt_rate := cnt_rate + 1;
+
+        ClientDS.Append;
+        ClientDS['type_kontener'] := ClientDS2['type_kontener'];
+        ClientDS['attr_self'    ] := ClientDS2['attr_self'];
+        ClientDS.Post;
+      end;
     end;
     ClientDS2.Next;
   end;
