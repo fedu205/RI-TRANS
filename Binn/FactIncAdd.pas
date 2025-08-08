@@ -1,30 +1,20 @@
-unit FactIncAdd;
+п»їunit FactIncAdd;
 
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, dxSkinsCore, dxSkinBasic, dxSkinBlack,
-  dxSkinBlue, dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom,
-  dxSkinDarkSide, dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
-  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
-  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
-  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
-  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
-  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
-  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
-  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
-  dxSkinOffice2019Black, dxSkinOffice2019Colorful, dxSkinOffice2019DarkGray,
-  dxSkinOffice2019White, dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic,
-  dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringTime, dxSkinStardust,
-  dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinValentine,
-  dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
-  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinWXI,
-  dxSkinXmas2008Blue, cxGraphics, cxLookAndFeels, cxLookAndFeelPainters,
-  Vcl.Menus, Vcl.StdCtrls, cxButtons, Vcl.ExtCtrls, cxControls, cxContainer,
-  cxEdit, dxCoreGraphics, Vcl.ComCtrls, Vcl.ToolWin, cxCheckBox, cxTextEdit,
-  cxMaskEdit, cxButtonEdit, Raznoe, Main, Filter, Data.DB, Data.Win.ADODB,
-  cxClasses, cxPropertiesStore;
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, Dialogs, Menus, StdCtrls, ComCtrls, ExtCtrls, DB, ADODB,
+  dxSkinsCore, dxSkinBlack, dxSkinBlue, dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide, dxSkinDevExpressDarkStyle,
+  dxSkinDevExpressStyle, dxSkinFoggy, dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian, dxSkinLiquidSky, dxSkinLondonLiquidSky,
+  dxSkinMcSkin, dxSkinMetropolis, dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black, dxSkinOffice2007Blue, dxSkinOffice2007Green,
+  dxSkinOffice2007Pink, dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue, dxSkinOffice2010Silver, dxSkinOffice2013DarkGray,
+  dxSkinOffice2013LightGray, dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic,
+  dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, cxClasses, cxPropertiesStore, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
+  dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light,
+  dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, cxGraphics, cxLookAndFeels, cxLookAndFeelPainters, cxButtons, cxControls, cxContainer,
+  cxEdit, dxCoreGraphics, cxCheckBox, cxTextEdit, cxMaskEdit, cxButtonEdit;
+
 
 type
   TfmFactIncAdd = class(TForm)
@@ -84,7 +74,7 @@ var
   fmFactIncAdd: TfmFactIncAdd;
 
 implementation
-
+  uses Raznoe, Main, Filter;
 {$R *.dfm}
 
 constructor TfmFactIncAdd.Create(AOwner: TApplication);
@@ -168,7 +158,7 @@ var new_str : string;
 begin
   table_name := LowerCase(table_name);
 
-  if InputQuery('Поиск', caption_name, new_str) then begin
+  if InputQuery('РџРѕРёСЃРє', caption_name, new_str) then begin
     Q := TADOQuery.Create(nil);
     Q.Connection := fmMain.Lis;
     Q.SQL.Add('SELECT inf_obj_id, inf_obj_name, inf_obj_cod');
@@ -233,7 +223,7 @@ var
 begin
   case AButtonIndex of
     0 : begin
-      if FindInfObj('Шаблон поиска станции по названию:', 'inf_obj_node', False, id, cod, name) then begin
+      if FindInfObj('РЁР°Р±Р»РѕРЅ РїРѕРёСЃРєР° СЃС‚Р°РЅС†РёРё РїРѕ РЅР°Р·РІР°РЅРёСЋ:', 'inf_obj_node', False, id, cod, name) then begin
         Fsto       := cod;
         Fsto_name  := name;
         cxButtonEdit2.Text := Fsto;
@@ -257,7 +247,7 @@ var
 begin
   case AButtonIndex of
     0 : begin
-      if FindInfObj('Шаблон поиска станции по коду:', 'inf_obj_node', True, id, cod, name) then begin
+      if FindInfObj('РЁР°Р±Р»РѕРЅ РїРѕРёСЃРєР° СЃС‚Р°РЅС†РёРё РїРѕ РєРѕРґСѓ:', 'inf_obj_node', True, id, cod, name) then begin
         Fsto       := cod;
         Fsto_name  := name;
         cxButtonEdit2.Text := Fsto;
@@ -281,7 +271,7 @@ var
 begin
   case AButtonIndex of
     0 : begin
-      if FindInfObj('Шаблон поиска станции по названию:', 'inf_obj_node', False, id, cod, name) then begin
+      if FindInfObj('РЁР°Р±Р»РѕРЅ РїРѕРёСЃРєР° СЃС‚Р°РЅС†РёРё РїРѕ РЅР°Р·РІР°РЅРёСЋ:', 'inf_obj_node', False, id, cod, name) then begin
         Fstn       := cod;
         Fstn_name  := name;
         cxButtonEdit4.Text := Fstn;
@@ -305,7 +295,7 @@ var
 begin
   case AButtonIndex of
     0 : begin
-      if FindInfObj('Шаблон поиска станции по коду:', 'inf_obj_node', True, id, cod, name) then begin
+      if FindInfObj('РЁР°Р±Р»РѕРЅ РїРѕРёСЃРєР° СЃС‚Р°РЅС†РёРё РїРѕ РєРѕРґСѓ:', 'inf_obj_node', True, id, cod, name) then begin
         Fstn       := cod;
         Fstn_name  := name;
         cxButtonEdit4.Text := Fstn;
@@ -330,7 +320,7 @@ var
 begin
   case AButtonIndex of
     0 : begin
-      if FindInfObj('Шаблон поиска груза по названию:', 'inf_obj_etsng', False, id, cod, name) then begin
+      if FindInfObj('РЁР°Р±Р»РѕРЅ РїРѕРёСЃРєР° РіСЂСѓР·Р° РїРѕ РЅР°Р·РІР°РЅРёСЋ:', 'inf_obj_etsng', False, id, cod, name) then begin
         Fgruz      := cod;
         Fgruz_name := name;
         cxButtonEdit6.Text := Fgruz;
@@ -354,7 +344,7 @@ var
 begin
   case AButtonIndex of
     0 : begin
-      if FindInfObj('Шаблон поиска груза по коду:', 'inf_obj_etsng', False, id, cod, name) then begin
+      if FindInfObj('РЁР°Р±Р»РѕРЅ РїРѕРёСЃРєР° РіСЂСѓР·Р° РїРѕ РєРѕРґСѓ:', 'inf_obj_etsng', False, id, cod, name) then begin
         Fgruz      := cod;
         Fgruz_name := name;
         cxButtonEdit6.Text := Fgruz;

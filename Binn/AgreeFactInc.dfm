@@ -978,6 +978,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Caption = #8470' '#1074#1072#1075'.'
         DataBinding.FieldName = 'num_vagon_F'
         DataBinding.IsNullValueType = True
+        Styles.Content = fmMain.cxStyle_Bold
         Width = 64
         Position.BandIndex = 0
         Position.ColIndex = 0
@@ -1135,6 +1136,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Caption = #8470' '#1074#1072#1075'.'
         DataBinding.FieldName = 'num_vagon_Z'
         DataBinding.IsNullValueType = True
+        Styles.Content = fmMain.cxStyle_Bold
         Width = 78
         Position.BandIndex = 2
         Position.ColIndex = 2
@@ -1824,6 +1826,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
       Visible = ivAlways
       AllowAllUp = True
       ButtonStyle = bsChecked
+      Down = True
       OnClick = N18Click
     end
     object RUB_to_USD: TdxBarButton
@@ -1926,8 +1929,8 @@ object fmAgreeFactInc: TfmAgreeFactInc
         ItemName = 'N26'
       end>
     UseOwnFont = False
-    Left = 274
-    Top = 341
+    Left = 91
+    Top = 248
     PixelsPerInch = 96
   end
   object SP_AgreeFactInc_Sverka: TADOStoredProc

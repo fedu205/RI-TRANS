@@ -1,10 +1,11 @@
 object fmFactIncAdd: TfmFactIncAdd
   Left = 0
   Top = 0
-  Caption = 'fmFactIncAdd'
+  Caption = #1043#1088#1091#1087#1087#1086#1074#1072#1103' '#1086#1087#1077#1088#1072#1094#1080#1103
   ClientHeight = 198
-  ClientWidth = 443
+  ClientWidth = 364
   Color = clBtnFace
+  Constraints.MinWidth = 380
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -15,17 +16,18 @@ object fmFactIncAdd: TfmFactIncAdd
   object Panel2: TPanel
     Left = 0
     Top = 161
-    Width = 443
+    Width = 364
     Height = 37
     Align = alBottom
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 0
+    ExplicitWidth = 443
     DesignSize = (
-      443
+      364
       37)
     object cxButton1: TcxButton
-      Left = 271
+      Left = 192
       Top = 6
       Width = 76
       Height = 25
@@ -38,7 +40,7 @@ object fmFactIncAdd: TfmFactIncAdd
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
+        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -106,9 +108,10 @@ object fmFactIncAdd: TfmFactIncAdd
       OptionsImage.NumGlyphs = 2
       TabOrder = 0
       OnClick = cxButton1Click
+      ExplicitLeft = 271
     end
     object cxButton3: TcxButton
-      Left = 358
+      Left = 279
       Top = 6
       Width = 76
       Height = 25
@@ -122,7 +125,7 @@ object fmFactIncAdd: TfmFactIncAdd
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
+        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -190,19 +193,21 @@ object fmFactIncAdd: TfmFactIncAdd
       OptionsImage.NumGlyphs = 2
       TabOrder = 1
       OnClick = cxButton3Click
+      ExplicitLeft = 358
     end
   end
   object Panel5: TPanel
     Left = 0
     Top = 65
-    Width = 443
+    Width = 364
     Height = 96
     Align = alClient
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 1
+    ExplicitWidth = 443
     DesignSize = (
-      443
+      364
       96)
     object Label8: TLabel
       Left = 5
@@ -233,7 +238,7 @@ object fmFactIncAdd: TfmFactIncAdd
     end
     object cxButtonEdit2: TcxButtonEdit
       Tag = 26
-      Left = 319
+      Left = 240
       Top = 8
       Anchors = [akTop, akRight]
       Properties.Buttons = <
@@ -245,7 +250,7 @@ object fmFactIncAdd: TfmFactIncAdd
           Glyph.SourceDPI = 96
           Glyph.Data = {
             424D360400000000000036000000280000001000000010000000010020000000
-            00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
+            000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
             C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
             C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
             C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -304,6 +309,7 @@ object fmFactIncAdd: TfmFactIncAdd
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
+      ExplicitLeft = 319
       Width = 94
     end
     object cxButtonEdit1: TcxButtonEdit
@@ -321,7 +327,7 @@ object fmFactIncAdd: TfmFactIncAdd
           Glyph.SourceDPI = 96
           Glyph.Data = {
             424D360400000000000036000000280000001000000010000000010020000000
-            00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
+            000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
             C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
             C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
             C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -380,7 +386,8 @@ object fmFactIncAdd: TfmFactIncAdd
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
-      Width = 226
+      ExplicitWidth = 226
+      Width = 147
     end
     object cxButtonEdit3: TcxButtonEdit
       Tag = 27
@@ -397,7 +404,7 @@ object fmFactIncAdd: TfmFactIncAdd
           Glyph.SourceDPI = 96
           Glyph.Data = {
             424D360400000000000036000000280000001000000010000000010020000000
-            00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
+            000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
             C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
             C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
             C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -456,11 +463,12 @@ object fmFactIncAdd: TfmFactIncAdd
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 2
-      Width = 226
+      ExplicitWidth = 226
+      Width = 147
     end
     object cxButtonEdit4: TcxButtonEdit
       Tag = 27
-      Left = 319
+      Left = 240
       Top = 33
       Anchors = [akTop, akRight]
       Properties.Buttons = <
@@ -472,7 +480,7 @@ object fmFactIncAdd: TfmFactIncAdd
           Glyph.SourceDPI = 96
           Glyph.Data = {
             424D360400000000000036000000280000001000000010000000010020000000
-            00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
+            000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
             C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
             C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
             C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -531,6 +539,7 @@ object fmFactIncAdd: TfmFactIncAdd
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 3
+      ExplicitLeft = 319
       Width = 94
     end
     object cxButtonEdit5: TcxButtonEdit
@@ -547,7 +556,7 @@ object fmFactIncAdd: TfmFactIncAdd
           Glyph.SourceDPI = 96
           Glyph.Data = {
             424D360400000000000036000000280000001000000010000000010020000000
-            00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
+            000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
             C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
             C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
             C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -606,11 +615,12 @@ object fmFactIncAdd: TfmFactIncAdd
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 4
-      Width = 226
+      ExplicitWidth = 226
+      Width = 147
     end
     object cxButtonEdit6: TcxButtonEdit
       Tag = 31
-      Left = 319
+      Left = 240
       Top = 58
       HelpContext = 1
       Anchors = [akTop, akRight]
@@ -623,7 +633,7 @@ object fmFactIncAdd: TfmFactIncAdd
           Glyph.SourceDPI = 96
           Glyph.Data = {
             424D360400000000000036000000280000001000000010000000010020000000
-            00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
+            000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
             C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
             C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
             C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -682,12 +692,14 @@ object fmFactIncAdd: TfmFactIncAdd
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 5
+      ExplicitLeft = 319
       Width = 94
     end
     object cxCheckBox1: TcxCheckBox
       Tag = 1
-      Left = 419
+      Left = 340
       Top = 11
+      Anchors = [akTop, akRight]
       Properties.OnChange = cxCheckBox1PropertiesChange
       Style.LookAndFeel.Kind = lfOffice11
       Style.LookAndFeel.NativeStyle = False
@@ -713,11 +725,14 @@ object fmFactIncAdd: TfmFactIncAdd
       TabOrder = 6
       Transparent = True
       Visible = False
+      ExplicitLeft = 419
     end
     object cxCheckBox2: TcxCheckBox
       Tag = 1
-      Left = 419
+      Left = 340
       Top = 36
+      Anchors = [akTop, akRight]
+      Properties.OnChange = cxCheckBox1PropertiesChange
       Style.LookAndFeel.Kind = lfOffice11
       Style.LookAndFeel.NativeStyle = False
       Style.LookAndFeel.ScrollbarMode = sbmClassic
@@ -742,11 +757,14 @@ object fmFactIncAdd: TfmFactIncAdd
       TabOrder = 7
       Transparent = True
       Visible = False
+      ExplicitLeft = 419
     end
     object cxCheckBox3: TcxCheckBox
       Tag = 1
-      Left = 419
+      Left = 340
       Top = 61
+      Anchors = [akTop, akRight]
+      Properties.OnChange = cxCheckBox1PropertiesChange
       Style.LookAndFeel.Kind = lfOffice11
       Style.LookAndFeel.NativeStyle = False
       Style.LookAndFeel.ScrollbarMode = sbmClassic
@@ -771,19 +789,21 @@ object fmFactIncAdd: TfmFactIncAdd
       TabOrder = 8
       Transparent = True
       Visible = False
+      ExplicitLeft = 419
     end
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 443
+    Width = 364
     Height = 65
     Align = alTop
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 2
+    ExplicitWidth = 443
     DesignSize = (
-      443
+      364
       65)
     object Label3: TLabel
       Left = 5
@@ -856,7 +876,8 @@ object fmFactIncAdd: TfmFactIncAdd
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
-      Width = 248
+      ExplicitWidth = 248
+      Width = 169
     end
     object cxTextEdit1: TcxTextEdit
       Tag = 1

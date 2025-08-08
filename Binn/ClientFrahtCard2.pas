@@ -3336,10 +3336,17 @@ begin
 end;
 
 procedure TfmClientFrahtCard2.dxBarButton52Click(Sender: TObject);
+var            i : integer;
+  str_bargain_id : string;
 begin
   cxGridChange;
 
-  fmAgreeFactInc := TfmAgreeFactInc.Create(Application, FView.GetColumnByFieldName('bargain_id').DataBinding.Field.AsInteger);
+  str_bargain_id := '';
+  for i := 0 to cxGrid13DBBandedTableView1.Controller.SelectedRecordCount - 1 do
+    str_bargain_id := str_bargain_id + ', ' + IntToStr(cxGrid13DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid13DBBandedTableView1.GetColumnByFieldName('bargain_id').Index]);
+  Delete(str_bargain_id, 1, 2);
+
+  fmAgreeFactInc := TfmAgreeFactInc.Create(Application, str_bargain_id);
   if fmAgreeFactInc.SetFrahtFact() = mrOk then
     fmAgreeFactInc.ShowModal
   else

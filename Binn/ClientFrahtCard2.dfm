@@ -80,6 +80,9 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
       Tag = 7
       Caption = #1050#1086#1084#1080#1089#1089#1080#1103
       ImageIndex = 93
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid10: TcxGrid
         Left = 0
         Top = 0
@@ -1212,6 +1215,9 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
     object cxTabSheet2: TcxTabSheet
       Caption = #1050#1083#1080#1077#1085#1090#1099
       ImageIndex = 22
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid3: TcxGrid
         Left = 0
         Top = 33
@@ -2406,6 +2412,9 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
       Tag = 1
       Caption = #1057#1091#1073#1087#1086#1076#1088#1103#1076#1095#1080#1082#1080
       ImageIndex = 40
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid1: TcxGrid
         Left = 0
         Top = 33
@@ -3648,7 +3657,6 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
         LookAndFeel.NativeStyle = False
         LookAndFeel.ScrollbarMode = sbmClassic
         LookAndFeel.SkinName = 'Office2007Black'
-        ExplicitLeft = -108
         object cxGrid13DBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = dxBarPopupMenu_13
           OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -4480,6 +4488,9 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
       Tag = 2
       Caption = #1040#1085#1072#1083#1080#1090#1080#1082#1072' '#1087#1086' '#1091#1089#1083#1091#1075#1072#1084
       ImageIndex = 174
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxSplitter3: TcxSplitter
         Left = 0
         Top = 413
@@ -4997,6 +5008,9 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
       Tag = 3
       Caption = #1042#1072#1075#1086#1085#1099' ('#1055#1077#1088#1077#1074#1086#1079#1082#1080')'
       ImageIndex = 23
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid4: TcxGrid
         Left = 0
         Top = 33
@@ -5894,6 +5908,9 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
       Tag = 4
       Caption = #1042#1072#1075#1086#1085#1099' ('#1044#1086#1093#1086#1076'-'#1056#1072#1089#1093#1086#1076')'
       ImageIndex = 142
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Panel5: TPanel
         Left = 0
         Top = 0
@@ -6758,6 +6775,9 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
       Tag = 5
       Caption = #1040#1085#1072#1083#1080#1090#1080#1082#1072' '#1087#1086' '#1074#1072#1075#1086#1085#1072#1084
       ImageIndex = 157
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxDBPivotGrid2: TcxDBPivotGrid
         Left = 0
         Top = 33
@@ -7424,6 +7444,9 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
       Tag = 6
       Caption = #1042#1072#1075#1086#1085#1099' ('#1087#1086#1083#1085#1072#1103' '#1080#1085#1092'.)'
       ImageIndex = 166
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Panel7: TPanel
         Left = 0
         Top = 0
@@ -8247,6 +8270,9 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
     object cxTabSheet9: TcxTabSheet
       Tag = 9
       Caption = #1059#1089#1083#1091#1075#1080' '#1082#1083#1080#1077#1085#1090#1072#1084
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid11: TcxGrid
         Left = 0
         Top = 0
@@ -9012,6 +9038,9 @@ object fmClientFrahtCard2: TfmClientFrahtCard2
     object cxTabSheet10: TcxTabSheet
       Tag = 10
       Caption = #1059#1089#1083#1091#1075#1080' '#1087#1086#1076#1088#1103#1076#1095#1080#1082#1086#1074
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid12: TcxGrid
         Left = 0
         Top = 0
