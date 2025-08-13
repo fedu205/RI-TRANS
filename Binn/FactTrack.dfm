@@ -1450,6 +1450,9 @@ object fmFactTrack: TfmFactTrack
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.SkinName = ''
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.SkinName = ''
           TabOrder = 7
           Height = 17
           Width = 44
@@ -1490,6 +1493,9 @@ object fmFactTrack: TfmFactTrack
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.SkinName = ''
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.SkinName = ''
           TabOrder = 3
           Height = 17
           Width = 44
@@ -1537,6 +1543,9 @@ object fmFactTrack: TfmFactTrack
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.SkinName = ''
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.SkinName = ''
           TabOrder = 0
           Height = 17
           Width = 44
@@ -1577,6 +1586,9 @@ object fmFactTrack: TfmFactTrack
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.SkinName = ''
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.SkinName = ''
           TabOrder = 2
           Text = #1058#1077#1082#1089#1090
           Height = 17
@@ -1616,6 +1628,9 @@ object fmFactTrack: TfmFactTrack
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.SkinName = ''
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.SkinName = ''
           TabOrder = 1
           Height = 17
           Width = 44
@@ -1657,6 +1672,9 @@ object fmFactTrack: TfmFactTrack
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.SkinName = ''
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.SkinName = ''
           TabOrder = 5
           Height = 17
           Width = 44
@@ -1696,6 +1714,9 @@ object fmFactTrack: TfmFactTrack
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.SkinName = ''
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.SkinName = ''
           TabOrder = 6
           Height = 17
           Width = 44
@@ -1734,6 +1755,9 @@ object fmFactTrack: TfmFactTrack
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.SkinName = ''
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.SkinName = ''
           TabOrder = 4
           Height = 17
           Width = 44
@@ -1774,6 +1798,9 @@ object fmFactTrack: TfmFactTrack
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.SkinName = ''
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.SkinName = ''
           TabOrder = 8
           Height = 17
           Width = 44
@@ -1814,6 +1841,9 @@ object fmFactTrack: TfmFactTrack
           StyleHot.LookAndFeel.Kind = lfOffice11
           StyleHot.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.SkinName = ''
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.SkinName = ''
           TabOrder = 9
           Height = 17
           Width = 44
@@ -1860,9 +1890,6 @@ object fmFactTrack: TfmFactTrack
     object cxTabSheet2: TcxTabSheet
       Caption = #1056#1077#1081#1089#1099' '#1074#1072#1075#1086#1085#1072
       ImageIndex = 1
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 412
       object cxGrid3: TcxGrid
         Left = 0
         Top = 0
@@ -1883,7 +1910,6 @@ object fmFactTrack: TfmFactTrack
         LookAndFeel.NativeStyle = False
         LookAndFeel.ScrollbarMode = sbmClassic
         LookAndFeel.SkinName = 'Office2007Black'
-        ExplicitHeight = 412
         object cxGridDBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = Popup_TrackTrip
           OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -2364,9 +2390,6 @@ object fmFactTrack: TfmFactTrack
     object cxTabSheet5: TcxTabSheet
       Caption = #1055#1088#1086#1089#1090#1086#1080' '#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093
       ImageIndex = 2
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 412
       object cxGrid12: TcxGrid
         Left = 0
         Top = 0
@@ -2387,7 +2410,6 @@ object fmFactTrack: TfmFactTrack
         LookAndFeel.NativeStyle = False
         LookAndFeel.ScrollbarMode = sbmClassic
         LookAndFeel.SkinName = 'Office2007Black'
-        ExplicitHeight = 412
         object cxGrid12DBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = Popup_StayNode
           OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -4672,11 +4694,6 @@ object fmFactTrack: TfmFactTrack
         item
           BeginGroup = True
           Visible = True
-          ItemName = 'dxBarSubItem11'
-        end
-        item
-          BeginGroup = True
-          Visible = True
           ItemName = 'dxBarButton48'
         end>
       NotDocking = [dsNone, dsLeft, dsTop, dsRight, dsBottom]
@@ -4809,9 +4826,9 @@ object fmFactTrack: TfmFactTrack
         end>
     end
     object dxBarButton_Refresh: TdxBarButton
-      Caption = #1053#1086#1074#1072#1103' '#1082#1085#1086#1087#1082#1072
+      Caption = #1054#1073#1085#1086#1074#1080#1090#1100
       Category = 0
-      Hint = #1053#1086#1074#1072#1103' '#1082#1085#1086#1087#1082#1072
+      Hint = #1054#1073#1085#1086#1074#1080#1090#1100
       Visible = ivAlways
       ImageIndex = 5
       OnClick = Action_RefreshExecute
@@ -5555,52 +5572,6 @@ object fmFactTrack: TfmFactTrack
       ImageIndex = 58
       OnClick = dxBarButton78Click
     end
-    object dxBarSubItem11: TdxBarSubItem
-      Category = 0
-      Visible = ivAlways
-      ImageIndex = 166
-      ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'dxBarButton80'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton81'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton82'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton83'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton84'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton101'
-        end
-        item
-          BeginGroup = True
-          Visible = True
-          ItemName = 'dxBarButton112'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton113'
-        end
-        item
-          BeginGroup = True
-          Visible = True
-          ItemName = 'dxBarButton60'
-        end>
-      ItemOptions.ShowDescriptions = True
-      OnPopup = dxBarSubItem11Popup
-    end
     object dxBarButton801: TdxBarButton
       Caption = #1055#1086#1088#1086#1078#1085#1080#1077', '#1087#1086#1075#1088#1091#1079#1082#1072' '#1085#1072' '#1101#1082#1089#1087#1086#1088#1090' '#1079#1072#1087#1088#1077#1097#1077#1085#1072
       Category = 0
@@ -5620,33 +5591,6 @@ object fmFactTrack: TfmFactTrack
       Hint = #1057#1087#1088#1072#1074#1082#1072' '#1056#1060' '#1043#1088#1091#1079#1080#1103
       Visible = ivAlways
       ImageIndex = 166
-    end
-    object dxBarButton82: TdxBarButton
-      Caption = #1055#1086#1088#1086#1078#1085#1080#1077', '#1085#1077#1086#1073#1093#1086#1076#1080#1084#1086' '#1089#1088#1086#1095#1085#1086' '#1087#1086#1075#1088#1091#1079#1080#1090#1100
-      Category = 0
-      Hint = #1055#1086#1088#1086#1078#1085#1080#1077', '#1085#1077#1086#1073#1093#1086#1076#1080#1084#1086' '#1089#1088#1086#1095#1085#1086' '#1087#1086#1075#1088#1091#1079#1080#1090#1100
-      Visible = ivAlways
-      ButtonStyle = bsChecked
-      ImageIndex = 166
-      OnClick = dxBarButton82Click
-    end
-    object dxBarButton83: TdxBarButton
-      Caption = #1043#1088#1091#1078#1077#1085#1099#1077', '#1085#1077#1086#1073#1093#1086#1076#1080#1084#1086' '#1086#1090#1087#1088#1072#1074#1080#1090#1100' '#1074' '#1088#1077#1084#1086#1085#1090
-      Category = 0
-      Hint = #1043#1088#1091#1078#1077#1085#1099#1077', '#1085#1077#1086#1073#1093#1086#1076#1080#1084#1086' '#1086#1090#1087#1088#1072#1074#1080#1090#1100' '#1074' '#1088#1077#1084#1086#1085#1090
-      Visible = ivNever
-      ButtonStyle = bsChecked
-      ImageIndex = 166
-      OnClick = dxBarButton83Click
-    end
-    object dxBarButton84: TdxBarButton
-      Caption = #1047#1072#1087#1088#1077#1090' '#1082#1091#1088#1089#1080#1088#1086#1074#1072#1085#1080#1103
-      Category = 0
-      Hint = #1047#1072#1087#1088#1077#1090' '#1082#1091#1088#1089#1080#1088#1086#1074#1072#1085#1080#1103
-      Visible = ivAlways
-      ButtonStyle = bsChecked
-      ImageIndex = 166
-      OnClick = dxBarButton84Click
     end
     object dxBarButton89: TdxBarButton
       Caption = 
@@ -5709,24 +5653,6 @@ object fmFactTrack: TfmFactTrack
       ImageIndex = 17
       OnClick = dxBarButton96Click
     end
-    object dxBarButton81: TdxBarButton
-      Caption = #1055#1086#1088#1086#1078#1085#1080#1077', '#1087#1086#1075#1088#1091#1079#1082#1072' '#1087#1086' '#1056#1060' '#1079#1072#1087#1088#1077#1097#1077#1085#1072
-      Category = 0
-      Hint = #1055#1086#1088#1086#1078#1085#1080#1077', '#1087#1086#1075#1088#1091#1079#1082#1072' '#1087#1086' '#1056#1060' '#1079#1072#1087#1088#1077#1097#1077#1085#1072
-      Visible = ivAlways
-      ButtonStyle = bsChecked
-      ImageIndex = 166
-      OnClick = dxBarButton81Click
-    end
-    object dxBarButton80: TdxBarButton
-      Caption = #1055#1086#1088#1086#1078#1085#1080#1077', '#1087#1086#1075#1088#1091#1079#1082#1072' '#1085#1072' '#1101#1082#1089#1087#1086#1088#1090' '#1079#1072#1087#1088#1077#1097#1077#1085#1072
-      Category = 0
-      Hint = #1055#1086#1088#1086#1078#1085#1080#1077', '#1087#1086#1075#1088#1091#1079#1082#1072' '#1085#1072' '#1101#1082#1089#1087#1086#1088#1090' '#1079#1072#1087#1088#1077#1097#1077#1085#1072
-      Visible = ivAlways
-      ButtonStyle = bsChecked
-      ImageIndex = 166
-      OnClick = dxBarButton80Click
-    end
     object dxBarButton99: TdxBarButton
       Caption = 
         #1056#1072#1089#1082#1088#1072#1089#1080#1090#1100' '#1055#1086#1088#1086#1078#1085#1080#1077', '#1087#1086#1075#1088#1091#1079#1082#1072' '#1087#1086' '#1056#1060' '#1079#1072#1087#1088#1077#1097#1077#1085#1072'  (15'#1076'. '#1076#1086' '#1089#1083#1077#1076'. '#1087#1083 +
@@ -5747,15 +5673,6 @@ object fmFactTrack: TfmFactTrack
       Visible = ivNever
       ImageIndex = 3
       OnClick = dxBarButton100Click
-    end
-    object dxBarButton101: TdxBarButton
-      Caption = #1057#1072#1085#1082#1094#1080#1086#1085#1085#1099#1081' '#1079#1072#1087#1088#1077#1090
-      Category = 0
-      Hint = #1057#1072#1085#1082#1094#1080#1086#1085#1085#1099#1081' '#1079#1072#1087#1088#1077#1090
-      Visible = ivAlways
-      ButtonStyle = bsChecked
-      ImageIndex = 166
-      OnClick = dxBarButton101Click
     end
     object dxBarButton102: TdxBarButton
       Caption = 
@@ -5864,14 +5781,6 @@ object fmFactTrack: TfmFactTrack
       ImageIndex = 174
       OnClick = dxBarButton59Click
     end
-    object dxBarButton60: TdxBarButton
-      Tag = 1001
-      Caption = #1055#1088#1086#1089#1090#1086#1081' '#1074' '#1076#1074#1080#1078#1077#1085#1080#1080
-      Category = 0
-      Hint = #1055#1088#1086#1089#1090#1086#1081' '#1074' '#1076#1074#1080#1078#1077#1085#1080#1080
-      Visible = ivAlways
-      OnClick = dxBarButton60Click
-    end
     object dxBarButton63: TdxBarButton
       Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100' '#1085#1072#1089#1090#1088#1086#1081#1082#1091
       Category = 0
@@ -5938,26 +5847,6 @@ object fmFactTrack: TfmFactTrack
       Hint = #1042#1099#1074#1077#1089#1090#1080' '#1085#1072#1079#1074#1072#1085#1080#1103' '#1082#1086#1083#1086#1085#1086#1082
       Visible = ivAlways
       OnClick = dxBarButton111Click
-    end
-    object dxBarButton112: TdxBarButton
-      Caption = #1055#1088#1086#1089#1090#1086#1081' '#1085#1072' '#1089#1090'. '#1087#1086#1075#1088'./'#1074#1099#1075#1088'.'
-      Category = 0
-      Hint = #1086#1089#1090#1072#1074#1096#1077#1077#1089#1103' '#1088#1072#1089#1089#1090#1086#1103#1085#1080#1077' = 0 '#1080' '#1087#1088#1086#1089#1090#1086#1081' '#1085#1072' '#1089#1090#1072#1085#1094#1080#1080' >= 3 '
-      Visible = ivAlways
-      ButtonStyle = bsChecked
-      ImageIndex = 166
-      OnClick = dxBarButton112Click
-    end
-    object dxBarButton113: TdxBarButton
-      Caption = #1055#1088#1086#1089#1090#1086#1081' '#1074' '#1087#1091#1090#1080
-      Category = 0
-      Hint = 
-        #1086#1089#1090#1072#1074#1096#1077#1077#1089#1103' '#1088#1072#1089#1089#1090#1086#1103#1085#1080#1077' <> 0 '#1080' ('#1087#1088#1086#1089#1090#1086#1081' '#1085#1072' '#1089#1090#1072#1085#1094#1080#1080' >= 3 '#1080#1083#1080' '#1080#1084#1103' '#1086#1087 +
-        #1077#1088#1072#1094#1080#1080' '#1087#1086#1083#1085#1086#1077' ('#1074#1072#1075#1086#1085')  = '#1073#1088#1086#1089')'
-      Visible = ivAlways
-      ButtonStyle = bsChecked
-      ImageIndex = 166
-      OnClick = dxBarButton113Click
     end
     object dxBarSubItem6: TdxBarSubItem
       Caption = #1044#1077#1081#1089#1090#1074#1080#1103' '#1089' '#1076#1080#1089#1083#1086#1082#1072#1094#1080#1077#1081

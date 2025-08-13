@@ -63,9 +63,9 @@ object fmFactTrackDlg: TfmFactTrackDlg
   TextHeight = 13
   object Splitter1: TSplitter
     Left = 185
-    Top = 90
+    Top = 45
     Width = 2
-    Height = 224
+    Height = 269
     Color = 8421631
     ParentColor = False
     ExplicitLeft = 215
@@ -253,26 +253,29 @@ object fmFactTrackDlg: TfmFactTrackDlg
   end
   object Panel33: TPanel
     Left = 187
-    Top = 90
+    Top = 45
     Width = 225
-    Height = 224
+    Height = 269
     Align = alClient
     BevelInner = bvRaised
     BevelOuter = bvLowered
     Constraints.MinWidth = 80
     TabOrder = 1
+    ExplicitTop = 90
+    ExplicitHeight = 224
     object Panel10: TPanel
       Left = 2
-      Top = 192
+      Top = 222
       Width = 221
-      Height = 30
+      Height = 45
       Align = alBottom
       BevelInner = bvRaised
       BevelOuter = bvLowered
       TabOrder = 0
+      ExplicitTop = 177
       object cxCheckBox4: TcxCheckBox
-        Left = 108
-        Top = 6
+        Left = 16
+        Top = 3
         Caption = #1055#1086#1082#1072#1079#1072#1090#1100' '#1072#1088#1093#1080#1074
         Properties.Alignment = taLeftJustify
         Style.LookAndFeel.Kind = lfUltraFlat
@@ -292,21 +295,57 @@ object fmFactTrackDlg: TfmFactTrackDlg
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 0
+      end
+      object cxCheckBox3: TcxCheckBox
+        Left = 16
+        Top = 23
+        Caption = #1047#1072#1087#1086#1083#1085#1103#1090#1100' '#1082#1086#1083#1086#1085#1082#1091' '#171#1040#1088#1077#1085#1076#1072#1090#1086#1088#187
+        Properties.Alignment = taLeftJustify
+        Properties.MultiLine = True
+        Style.LookAndFeel.Kind = lfUltraFlat
+        Style.LookAndFeel.NativeStyle = False
+        Style.LookAndFeel.ScrollbarMode = sbmClassic
+        Style.LookAndFeel.SkinName = 'Coffee'
+        Style.Shadow = False
+        Style.TransparentBorder = False
+        StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+        StyleDisabled.LookAndFeel.NativeStyle = False
+        StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+        StyleFocused.LookAndFeel.Kind = lfUltraFlat
+        StyleFocused.LookAndFeel.NativeStyle = False
+        StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleFocused.LookAndFeel.SkinName = 'Coffee'
+        StyleHot.LookAndFeel.Kind = lfUltraFlat
+        StyleHot.LookAndFeel.NativeStyle = False
+        StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
+        TabOrder = 1
+        Width = 192
       end
     end
     object Panel3: TPanel
       Left = 2
       Top = 2
       Width = 221
-      Height = 190
+      Height = 220
       Align = alClient
       BevelInner = bvRaised
       BevelOuter = bvLowered
       TabOrder = 1
+      ExplicitHeight = 190
       DesignSize = (
         221
-        190)
+        220)
       object cxLabel11: TcxLabel
         Left = 6
         Top = 93
@@ -346,6 +385,9 @@ object fmFactTrackDlg: TfmFactTrackDlg
         StyleHot.LookAndFeel.Kind = lfOffice11
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfOffice11
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 0
         Width = 112
       end
@@ -368,6 +410,9 @@ object fmFactTrackDlg: TfmFactTrackDlg
         StyleHot.LookAndFeel.Kind = lfOffice11
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfOffice11
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 3
         Width = 112
       end
@@ -390,6 +435,9 @@ object fmFactTrackDlg: TfmFactTrackDlg
         StyleHot.LookAndFeel.Kind = lfOffice11
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfOffice11
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 4
         Width = 112
       end
@@ -412,124 +460,12 @@ object fmFactTrackDlg: TfmFactTrackDlg
         StyleHot.LookAndFeel.Kind = lfOffice11
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfOffice11
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 7
         Width = 112
       end
-    end
-  end
-  object Panel7: TPanel
-    Left = 0
-    Top = 45
-    Width = 412
-    Height = 45
-    Align = alTop
-    BevelInner = bvRaised
-    BevelOuter = bvLowered
-    TabOrder = 2
-    DesignSize = (
-      412
-      45)
-    object cxCheckBox1: TcxCheckBox
-      Left = 7
-      Top = 12
-      Caption = #1042#1072#1075#1086#1085#1099' '#1080#1079' '#1089#1087#1088#1072#1074#1086#1095#1085#1080#1082#1072'........'
-      Properties.Alignment = taLeftJustify
-      Style.LookAndFeel.Kind = lfUltraFlat
-      Style.LookAndFeel.NativeStyle = False
-      Style.LookAndFeel.ScrollbarMode = sbmClassic
-      Style.LookAndFeel.SkinName = 'Coffee'
-      Style.Shadow = False
-      StyleDisabled.LookAndFeel.Kind = lfUltraFlat
-      StyleDisabled.LookAndFeel.NativeStyle = False
-      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
-      StyleFocused.LookAndFeel.Kind = lfUltraFlat
-      StyleFocused.LookAndFeel.NativeStyle = False
-      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleFocused.LookAndFeel.SkinName = 'Coffee'
-      StyleHot.LookAndFeel.Kind = lfUltraFlat
-      StyleHot.LookAndFeel.NativeStyle = False
-      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleHot.LookAndFeel.SkinName = 'Coffee'
-      TabOrder = 0
-    end
-    object GroupBox9: TGroupBox
-      Left = 285
-      Top = 2
-      Width = 125
-      Height = 41
-      Align = alRight
-      Caption = #1047#1072#1087#1086#1083#1085#1103#1090#1100' '#1082#1086#1083#1086#1085#1082#1080
-      TabOrder = 1
-      object cxCheckBox3: TcxCheckBox
-        Left = 3
-        Top = 15
-        Caption = #171#1040#1088#1077#1085#1076#1072#1090#1086#1088#187
-        Properties.Alignment = taLeftJustify
-        Properties.MultiLine = True
-        Style.LookAndFeel.Kind = lfUltraFlat
-        Style.LookAndFeel.NativeStyle = False
-        Style.LookAndFeel.ScrollbarMode = sbmClassic
-        Style.LookAndFeel.SkinName = 'Coffee'
-        Style.Shadow = False
-        StyleDisabled.LookAndFeel.Kind = lfUltraFlat
-        StyleDisabled.LookAndFeel.NativeStyle = False
-        StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
-        StyleDisabled.LookAndFeel.SkinName = 'Coffee'
-        StyleFocused.LookAndFeel.Kind = lfUltraFlat
-        StyleFocused.LookAndFeel.NativeStyle = False
-        StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
-        StyleFocused.LookAndFeel.SkinName = 'Coffee'
-        StyleHot.LookAndFeel.Kind = lfUltraFlat
-        StyleHot.LookAndFeel.NativeStyle = False
-        StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
-        StyleHot.LookAndFeel.SkinName = 'Coffee'
-        TabOrder = 0
-        Width = 90
-      end
-    end
-    object cxCheckComboBox1: TcxCheckComboBox
-      Left = 152
-      Top = 10
-      Anchors = [akLeft, akTop, akRight]
-      Enabled = False
-      ParentFont = False
-      Properties.Delimiter = ','
-      Properties.EmptySelectionText = #1042#1099#1073#1077#1088#1080#1090#1077' '#1090#1080#1087' '#1087#1072#1088#1082#1072
-      Properties.DropDownRows = 30
-      Properties.EditValueFormat = cvfCaptions
-      Properties.Items = <
-        item
-        end
-        item
-        end
-        item
-        end>
-      Style.Font.Charset = DEFAULT_CHARSET
-      Style.Font.Color = clWindowText
-      Style.Font.Height = -11
-      Style.Font.Name = 'MS Sans Serif'
-      Style.Font.Style = []
-      Style.LookAndFeel.Kind = lfOffice11
-      Style.LookAndFeel.NativeStyle = False
-      Style.LookAndFeel.ScrollbarMode = sbmClassic
-      Style.LookAndFeel.SkinName = 'Coffee'
-      Style.Shadow = False
-      Style.IsFontAssigned = True
-      StyleDisabled.LookAndFeel.Kind = lfOffice11
-      StyleDisabled.LookAndFeel.NativeStyle = False
-      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
-      StyleFocused.LookAndFeel.Kind = lfOffice11
-      StyleFocused.LookAndFeel.NativeStyle = False
-      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleFocused.LookAndFeel.SkinName = 'Coffee'
-      StyleHot.LookAndFeel.Kind = lfOffice11
-      StyleHot.LookAndFeel.NativeStyle = False
-      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleHot.LookAndFeel.SkinName = 'Coffee'
-      TabOrder = 2
-      Width = 119
     end
   end
   object cxGroupBox3: TcxGroupBox
@@ -544,7 +480,7 @@ object fmFactTrackDlg: TfmFactTrackDlg
     StyleDisabled.LookAndFeel.Kind = lfUltraFlat
     StyleDisabled.LookAndFeel.NativeStyle = False
     StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
-    TabOrder = 3
+    TabOrder = 2
     DesignSize = (
       412
       45)
@@ -612,6 +548,10 @@ object fmFactTrackDlg: TfmFactTrackDlg
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Width = 191
     end
@@ -639,6 +579,10 @@ object fmFactTrackDlg: TfmFactTrackDlg
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
       Width = 86
     end
@@ -665,13 +609,17 @@ object fmFactTrackDlg: TfmFactTrackDlg
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 2
       Width = 86
     end
   end
   object cxGroupBox2: TcxGroupBox
     Left = 0
-    Top = 90
+    Top = 45
     Align = alLeft
     Caption = #1053#1086#1084#1077#1088#1072' '#1074#1072#1075#1086#1085#1086#1074
     Style.BorderStyle = ebs3D
@@ -681,36 +629,43 @@ object fmFactTrackDlg: TfmFactTrackDlg
     StyleDisabled.LookAndFeel.Kind = lfUltraFlat
     StyleDisabled.LookAndFeel.NativeStyle = False
     StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
-    TabOrder = 4
-    Height = 224
+    TabOrder = 3
+    ExplicitTop = 90
+    ExplicitHeight = 224
+    Height = 269
     Width = 185
     object Panel2: TPanel
       Left = 2
-      Top = 205
+      Top = 250
       Width = 181
       Height = 17
       Align = alBottom
       BevelOuter = bvNone
       Caption = #1050#1086#1083'-'#1074#1086': 0'
       TabOrder = 0
-      ExplicitLeft = 3
-      ExplicitTop = 198
-      ExplicitWidth = 179
+      ExplicitTop = 205
     end
     object cxMemo1: TcxMemo
       Left = 2
-      Top = 18
+      Top = 37
       Align = alClient
+      Enabled = False
+      Lines.Strings = (
+        '13253'
+        '54632465')
       Properties.OnChange = cxMemo1PropertiesChange
       Style.LookAndFeel.Kind = lfOffice11
       Style.LookAndFeel.NativeStyle = False
       Style.LookAndFeel.ScrollbarMode = sbmClassic
       Style.LookAndFeel.SkinName = 'Coffee'
       Style.Shadow = False
+      StyleDisabled.BorderStyle = ebsUltraFlat
+      StyleDisabled.Color = clCream
       StyleDisabled.LookAndFeel.Kind = lfOffice11
       StyleDisabled.LookAndFeel.NativeStyle = False
       StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
       StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleDisabled.TextColor = clCream
       StyleFocused.LookAndFeel.Kind = lfOffice11
       StyleFocused.LookAndFeel.NativeStyle = False
       StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
@@ -719,13 +674,50 @@ object fmFactTrackDlg: TfmFactTrackDlg
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
-      ExplicitLeft = 3
-      ExplicitTop = 16
-      ExplicitWidth = 179
-      ExplicitHeight = 182
-      Height = 187
+      ExplicitLeft = 8
+      ExplicitHeight = 168
+      Height = 213
       Width = 181
+    end
+    object cxCheckBox1: TcxCheckBox
+      Left = 2
+      Top = 18
+      Align = alTop
+      Caption = #1042#1072#1075#1086#1085#1099' '#1080#1079' '#1089#1087#1088#1072#1074#1086#1095#1085#1080#1082#1072
+      Properties.Alignment = taLeftJustify
+      Properties.OnChange = cxCheckBox1PropertiesChange
+      State = cbsChecked
+      Style.LookAndFeel.Kind = lfUltraFlat
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.ScrollbarMode = sbmClassic
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
+      Style.TransparentBorder = False
+      StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfUltraFlat
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfUltraFlat
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
+      TabOrder = 2
+      ExplicitLeft = 7
+      ExplicitTop = 12
+      ExplicitWidth = 173
     end
   end
   object cxGroupBox4: TcxGroupBox
@@ -740,7 +732,7 @@ object fmFactTrackDlg: TfmFactTrackDlg
     StyleDisabled.LookAndFeel.Kind = lfUltraFlat
     StyleDisabled.LookAndFeel.NativeStyle = False
     StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
-    TabOrder = 5
+    TabOrder = 4
     DesignSize = (
       412
       65)
@@ -823,6 +815,9 @@ object fmFactTrackDlg: TfmFactTrackDlg
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Width = 211
     end
@@ -890,6 +885,9 @@ object fmFactTrackDlg: TfmFactTrackDlg
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
       Width = 125
     end
@@ -957,6 +955,9 @@ object fmFactTrackDlg: TfmFactTrackDlg
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 2
       Width = 125
     end
@@ -1023,6 +1024,9 @@ object fmFactTrackDlg: TfmFactTrackDlg
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 3
       Width = 211
     end
@@ -1039,7 +1043,7 @@ object fmFactTrackDlg: TfmFactTrackDlg
     StyleDisabled.LookAndFeel.Kind = lfUltraFlat
     StyleDisabled.LookAndFeel.NativeStyle = False
     StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
-    TabOrder = 6
+    TabOrder = 5
     DesignSize = (
       412
       45)
@@ -1115,6 +1119,9 @@ object fmFactTrackDlg: TfmFactTrackDlg
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Width = 211
     end
@@ -1182,6 +1189,9 @@ object fmFactTrackDlg: TfmFactTrackDlg
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
       Width = 125
     end
@@ -1189,7 +1199,7 @@ object fmFactTrackDlg: TfmFactTrackDlg
   object cxPropertiesStore1: TcxPropertiesStore
     Components = <
       item
-        Component = cxCheckBox3
+        Component = cxCheckBox1
         Properties.Strings = (
           'Checked')
       end

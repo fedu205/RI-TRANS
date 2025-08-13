@@ -307,13 +307,9 @@ type
     dxBarButton78: TdxBarButton;
     dxBarButton79: TdxBarButton;
     SP_fact_track_stat_get: TADOStoredProc;
-    dxBarSubItem11: TdxBarSubItem;
     dxBarButton801: TdxBarButton;
     dxBarSubItem12: TdxBarSubItem;
     dxBarButton98: TdxBarButton;
-    dxBarButton82: TdxBarButton;
-    dxBarButton83: TdxBarButton;
-    dxBarButton84: TdxBarButton;
     dxBarButton89: TdxBarButton;
     dxBarButton90: TdxBarButton;
     dxBarButton91: TdxBarButton;
@@ -336,13 +332,10 @@ type
     Label8: TLabel;
     cxTextEdit8: TcxTextEdit;
     Label9: TLabel;
-    dxBarButton81: TdxBarButton;
     dxBarButton97: TdxBarButton;
-    dxBarButton80: TdxBarButton;
     dxBarButton99: TdxBarButton;
     cxGrid1DBBandedTableView1set_on_run: TcxGridDBBandedColumn;
     dxBarButton100: TdxBarButton;
-    dxBarButton101: TdxBarButton;
     dxBarButton102: TdxBarButton;
     dxBarSubItem16: TdxBarSubItem;
     cxGridDBBandedTableView1status_trip: TcxGridDBBandedColumn;
@@ -367,8 +360,6 @@ type
     cxGrid2DBBandedTableView1grpol_name: TcxGridDBBandedColumn;
     cxGrid3DBBandedTableView1grotpr_name: TcxGridDBBandedColumn;
     dxBarButton59: TdxBarButton;
-		
-dxBarButton60: TdxBarButton;
 
 cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     Label10: TLabel;
@@ -381,8 +372,6 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     dxBarButton109: TdxBarButton;
     dxBarButton110: TdxBarButton;
     dxBarButton111: TdxBarButton;
-    dxBarButton112: TdxBarButton;
-    dxBarButton113: TdxBarButton;
     dxBarSubItem6: TdxBarSubItem;
     dxBarButton120: TdxBarButton;
     dxBarButton121: TdxBarButton;
@@ -597,11 +586,6 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     procedure dxBarButton75Click(Sender: TObject);
     procedure dxBarButton76Click(Sender: TObject);
     procedure dxBarButton78Click(Sender: TObject);
-    procedure dxBarButton80Click(Sender: TObject);
-    procedure dxBarButton81Click(Sender: TObject);
-    procedure dxBarButton82Click(Sender: TObject);
-    procedure dxBarButton83Click(Sender: TObject);
-    procedure dxBarButton84Click(Sender: TObject);
     procedure dxBarButton90Click(Sender: TObject);
     procedure dxBarButton89Click(Sender: TObject);
     procedure dxBarButton91Click(Sender: TObject);
@@ -611,21 +595,16 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
 
     procedure cxGrid1DBBandedTableView1SelectionChanged(Sender: TcxCustomGridTableView);
     procedure dxBarButton99Click(Sender: TObject);
-    procedure dxBarSubItem11Popup(Sender: TObject);
     procedure dxBarButton100Click(Sender: TObject);
-    procedure dxBarButton101Click(Sender: TObject);
     procedure dxBarButton102Click(Sender: TObject);
     procedure dxBarButton104Click(Sender: TObject);
     procedure dxBarButton15Click(Sender: TObject);
     procedure dxBarButton59Click(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
-    procedure dxBarButton60Click(Sender: TObject);
     procedure dxBarButton105Click(Sender: TObject);
     procedure dxBarButton107Click(Sender: TObject);
     procedure dxBarButton110Click(Sender: TObject);
     procedure dxBarButton111Click(Sender: TObject);
-    procedure dxBarButton112Click(Sender: TObject);
-    procedure dxBarButton113Click(Sender: TObject);
     procedure cxGrid3DBBandedTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
     procedure dxBarButton120Click(Sender: TObject);
     procedure dxBarButton114Click(Sender: TObject);
@@ -1036,21 +1015,6 @@ begin
   finally
     SP.Free;
     ShowTextMessage('', True);
-  end;
-end;
-
-procedure TfmFactTrack.dxBarSubItem11Popup(Sender: TObject);
-begin
-  //cxGrid1DBBandedTableView1.DataController.Filter.Options.Caption :=
-  if not cxGrid1DBBandedTableView1.DataController.Filter.IsFiltering then begin
-    dxBarButton80.Down  := False;
-    dxBarButton81.Down  := False;
-    dxBarButton82.Down  := False;
-    dxBarButton83.Down  := False;
-    dxBarButton84.Down  := False;
-    dxBarButton101.Down := False;
-    dxBarButton112.Down := False;
-    dxBarButton113.Down := False;
   end;
 end;
 
@@ -1888,436 +1852,6 @@ begin
     FreeLibrary(handle);
   end;
 end;
-
-procedure TfmFactTrack.dxBarButton80Click(Sender: TObject);
-begin
-// 1 Порожние, погрузка на экспорт запрещена
-
-  dxBarButton81.Down  := False;
-  dxBarButton82.Down  := False;
-  dxBarButton83.Down  := False;
-  dxBarButton84.Down  := False;
-  dxBarButton101.Down := False;
-  dxBarButton112.Down := False;
-  dxBarButton113.Down := False;
-
-  if dxBarButton80.Down then begin
-    cxGrid1DBBandedTableView1.DataController.Filter.Clear;
-    cxGrid1DBBandedTableView1.DataController.Filter.Active := False;
-
-    Screen.Cursor := crHourglass;
-    cxGrid1DBBandedTableView1.DataController.DataSet.DisableControls;
-    with cxGrid1DBBandedTableView1.DataController.Filter do begin
-      Active := False;
-      Clear;
-      Options := Options + [fcoCaseInsensitive];
-      Root.BoolOperatorKind := fboOr;
-
-      with Root.AddItemList(fboAnd) do begin
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('rod_vagon_name'), foLike, '%хоппер-цементовоз%', '%хоппер-цементовоз%');
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('fact_weight'), foEqual, IntToStr(0), IntToStr(0)); //вес = 0
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foLessEqual, Date + 30, DateToStr(Date + 30));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foGreaterEqual, Date + 15, DateToStr(Date + 15));
-      end;
-
-      with Root.AddItemList(fboAnd) do begin
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('rod_vagon_name'), foLike, '%полувагон%', '%полувагон%');
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('fact_weight'), foEqual, IntToStr(0), IntToStr(0)); //вес = 0
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foLessEqual, Date + 30, DateToStr(Date + 30));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foGreaterEqual, Date + 15, DateToStr(Date + 15));
-      end;
-
-      with Root.AddItemList(fboAnd) do begin
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('rod_vagon_name'), foLike, '%цистерна%', '%цистерна%');
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('fact_weight'), foEqual, IntToStr(0), IntToStr(0)); //вес = 0
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foLessEqual, Date + 30, DateToStr(Date + 30));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foGreaterEqual, Date + 15, DateToStr(Date + 15));
-      end;
-
-
-
-      with Root.AddItemList(fboAnd) do begin
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('rod_vagon_name'), foLike, '%полувагон%', '%полувагон%');
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('fact_weight'), foEqual, IntToStr(0), IntToStr(0)); //вес = 0
-        //AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest'), foLessEqual, IntToStr(10000), IntToStr(10000));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest'), foLessEqual, IntToStr(5000), IntToStr(5000));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest'), foGreaterEqual, IntToStr(1500), IntToStr(1500));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest'), foNotEqual, NULL, 'не пусто');
-      end;
-
-      with Root.AddItemList(fboAnd) do begin
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('rod_vagon_name'), foLike, '%цистерна%', '%цистерна%');
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('fact_weight'), foEqual, IntToStr(0), IntToStr(0)); //вес = 0
-        //AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest'), foLessEqual, IntToStr(10000), IntToStr(10000));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest'), foLessEqual, IntToStr(5000), IntToStr(5000));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest'), foGreaterEqual, IntToStr(1500), IntToStr(1500));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest'), foNotEqual, NULL, 'не пусто');
-      end;
-      Active := True;
-    end;
-    cxGrid1DBBandedTableView1.DataController.DataSet.EnableControls;
-    Screen.Cursor := crDefault;
-  end else begin
-    cxGrid1DBBandedTableView1.DataController.Filter.Clear;
-    cxGrid1DBBandedTableView1.DataController.Filter.Active := False;
-  end;
-end;
-
-
-procedure TfmFactTrack.dxBarButton81Click(Sender: TObject);
-begin
-// 2 Порожние, погрузка по РФ запрещена
-
-  dxBarButton80.Down  := False;
-  dxBarButton82.Down  := False;
-  dxBarButton83.Down  := False;
-  dxBarButton84.Down  := False;
-  dxBarButton101.Down := False;
-  dxBarButton112.Down := False;
-  dxBarButton113.Down := False;
-
-  if dxBarButton81.Down then begin
-    cxGrid1DBBandedTableView1.DataController.Filter.Clear;
-    cxGrid1DBBandedTableView1.DataController.Filter.Active := False;
-
-    Screen.Cursor := crHourglass;
-    cxGrid1DBBandedTableView1.DataController.DataSet.DisableControls;
-    with cxGrid1DBBandedTableView1.DataController.Filter do begin
-      Active := False;
-      Clear;
-      Options := Options + [fcoCaseInsensitive];
-      Root.BoolOperatorKind := fboOr;
-      with Root.AddItemList(fboAnd) do begin
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('rod_vagon_name'), foLike, '%хоппер-цементовоз%', '%хоппер-цементовоз%');
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('fact_weight'), foEqual, IntToStr(0), IntToStr(0)); //вес = 0
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foLess, Date + 15, DateToStr(Date + 15));
-        //AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foGreaterEqual, Date , DateToStr(Date));
-        //AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foNotEqual, NULL, 'не пусто');
-      end;
-
-      with Root.AddItemList(fboAnd) do begin
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('rod_vagon_name'),   foLike, '%полувагон%', '%полувагон%');
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('fact_weight'), foEqual, IntToStr(0), IntToStr(0)); //вес = 0
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foLess, Date + 15, DateToStr(Date + 15));
-        //AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foGreaterEqual, Date , DateToStr(Date));
-        //AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foNotEqual, NULL, 'не пусто');
-      end;
-
-      with Root.AddItemList(fboAnd) do begin
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('rod_vagon_name'),   foLike, '%цистерна%', '%цистерна%');
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('fact_weight'), foEqual, IntToStr(0), IntToStr(0)); //вес = 0
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foLess, Date + 15, DateToStr(Date + 15));
-        //AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foGreaterEqual, Date , DateToStr(Date));
-        //AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foNotEqual, NULL, 'не пусто');
-      end;
-
-      with Root.AddItemList(fboAnd) do begin
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('rod_vagon_name'),   foLike, '%крытый%', '%крытый%');
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('fact_weight'), foEqual, IntToStr(0), IntToStr(0)); //вес = 0
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foLess, Date + 15, DateToStr(Date + 15));
-//        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foGreaterEqual, Date , DateToStr(Date));
-//AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foNotEqual, NULL, 'не пусто');
-      end;
-
-
-      with Root.AddItemList(fboAnd) do begin
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('rod_vagon_name'), foLike, '%полувагон%', '%полувагон%');
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('fact_weight'), foEqual, IntToStr(0), IntToStr(0)); //вес = 0
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest'), foLess, IntToStr(1500), IntToStr(1500));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest'), foNotEqual, NULL, 'не пусто');
-      end;
-
-      with Root.AddItemList(fboAnd) do begin
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('rod_vagon_name'), foLike, '%цистерна%', '%цистерна%');
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('fact_weight'), foEqual, IntToStr(0), IntToStr(0)); //вес = 0
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest'), foLess, IntToStr(1500), IntToStr(1500));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest'), foNotEqual, NULL, 'не пусто');
-      end;
-
-      with Root.AddItemList(fboAnd) do begin
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('rod_vagon_name'), foLike, '%крытый%', '%крытый%');
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('fact_weight'), foEqual, IntToStr(0), IntToStr(0)); //вес = 0
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest'), foLess, IntToStr(1500), IntToStr(1500));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest'), foNotEqual, NULL, 'не пусто');
-      end;
-      Active := True;
-    end;
-    cxGrid1DBBandedTableView1.DataController.DataSet.EnableControls;
-    Screen.Cursor := crDefault;
-  end else begin
-    cxGrid1DBBandedTableView1.DataController.Filter.Clear;
-    cxGrid1DBBandedTableView1.DataController.Filter.Active := False;
-  end;
-end;
-
-procedure TfmFactTrack.dxBarButton82Click(Sender: TObject);
-begin
-// 3 Порожние, необходимо срочно погрузить
-
-  dxBarButton80.Down  := False;
-  dxBarButton81.Down  := False;
-  dxBarButton83.Down  := False;
-  dxBarButton84.Down  := False;
-  dxBarButton101.Down := False;
-  dxBarButton112.Down := False;
-  dxBarButton113.Down := False;
-
-  if dxBarButton82.Down then begin
-    cxGrid1DBBandedTableView1.DataController.Filter.Clear;
-    cxGrid1DBBandedTableView1.DataController.Filter.Active := False;
-
-    Screen.Cursor := crHourglass;
-    cxGrid1DBBandedTableView1.DataController.DataSet.DisableControls;
-    with cxGrid1DBBandedTableView1.DataController.Filter do begin
-      Active := False;
-      Clear;
-      Options := Options + [fcoCaseInsensitive];
-      Root.BoolOperatorKind := fboAnd;
-
-      Root.AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('fact_weight'), foEqual, IntToStr(0), IntToStr(0)); //вес = 0
-      Root.AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foLessEqual, Date + 41, DateToStr(Date + 41));
-      Root.AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('next_date_repair'), foGreaterEqual, Date + 31, DateToStr(Date + 31));
-
-      Active := True;
-    end;
-    cxGrid1DBBandedTableView1.DataController.DataSet.EnableControls;
-    Screen.Cursor := crDefault;
-  end else begin
-    cxGrid1DBBandedTableView1.DataController.Filter.Clear;
-    cxGrid1DBBandedTableView1.DataController.Filter.Active := False;
-  end;
-end;
-
-procedure TfmFactTrack.dxBarButton83Click(Sender: TObject);
-begin
-// 4 Груженые, необходимо отправить в ремонт
-
-  dxBarButton80.Down  := False;
-  dxBarButton81.Down  := False;
-  dxBarButton82.Down  := False;
-  dxBarButton84.Down  := False;
-  dxBarButton101.Down := False;
-  dxBarButton112.Down := False;
-  dxBarButton113.Down := False;
-
-  if dxBarButton83.Down then begin
-    cxGrid1DBBandedTableView1.DataController.Filter.Clear;
-    cxGrid1DBBandedTableView1.DataController.Filter.Active := False;
-
-    Screen.Cursor := crHourglass;
-    cxGrid1DBBandedTableView1.DataController.DataSet.DisableControls;
-    with cxGrid1DBBandedTableView1.DataController.Filter do begin
-      Active := False;
-      Clear;
-      Options := Options + [fcoCaseInsensitive];
-      Root.BoolOperatorKind := fboOr;
-
-      with Root.AddItemList(fboAnd) do begin
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('rod_vagon_name'), foLike, '%хоппер-цементовоз%', '%хоппер-цементовоз%');
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('fact_weight'), foGreater, IntToStr(0), IntToStr(0));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest'), foNotEqual, NULL, 'не пусто');
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest_calc'), foLessEqual, IntToStr(5000), IntToStr(5000));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest_calc'), foNotEqual, NULL, 'не пусто');
-      end;
-
-      with Root.AddItemList(fboAnd) do begin
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('rod_vagon_name'), foLike, '%полувагон%', '%полувагон%');
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('fact_weight'), foGreater, IntToStr(0), IntToStr(0));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest'), foNotEqual, NULL, 'не пусто');
-        //AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest_calc'), foLessEqual, IntToStr(10000), IntToStr(10000));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest_calc'), foLessEqual, IntToStr(5000), IntToStr(5000));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest_calc'), foNotEqual, NULL, 'не пусто');
-      end;
-
-      with Root.AddItemList(fboAnd) do begin
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('rod_vagon_name'), foLike, '%цистерна%', '%цистерна%');
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('fact_weight'), foGreater, IntToStr(0), IntToStr(0));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest'), foNotEqual, NULL, 'не пусто');
-//        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest_calc'), foLessEqual, IntToStr(10000), IntToStr(10000));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest_calc'), foLessEqual, IntToStr(5000), IntToStr(5000));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest_calc'), foNotEqual, NULL, 'не пусто');
-      end;
-
-      with Root.AddItemList(fboAnd) do begin
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('rod_vagon_name'), foLike, '%крытый%', '%крытый%');
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('fact_weight'), foGreater, IntToStr(0), IntToStr(0));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest'), foNotEqual, NULL, 'не пусто');
-        //AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest_calc'), foLessEqual, IntToStr(10000), IntToStr(10000));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest_calc'), foLessEqual, IntToStr(5000), IntToStr(5000));
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('milage_rest_calc'), foNotEqual, NULL, 'не пусто');
-      end;
-
-      Active := True;
-    end;
-    cxGrid1DBBandedTableView1.DataController.DataSet.EnableControls;
-    Screen.Cursor := crDefault;
-  end else begin
-    cxGrid1DBBandedTableView1.DataController.Filter.Clear;
-    cxGrid1DBBandedTableView1.DataController.Filter.Active := False;
-  end;
-end;
-
-procedure TfmFactTrack.dxBarButton84Click(Sender: TObject);
-begin
-// 5 Запрет курсирования все кроме тех у кого "технического паспорта"
-
-  dxBarButton80.Down  := False;
-  dxBarButton81.Down  := False;
-  dxBarButton82.Down  := False;
-  dxBarButton83.Down  := False;
-  dxBarButton101.Down := False;
-  dxBarButton112.Down := False;
-  dxBarButton113.Down := False;
-
-  if dxBarButton84.Down then begin
-    cxGrid1DBBandedTableView1.DataController.Filter.Clear;
-    cxGrid1DBBandedTableView1.DataController.Filter.Active := False;
-
-    Screen.Cursor := crHourglass;
-    cxGrid1DBBandedTableView1.DataController.DataSet.DisableControls;
-    with cxGrid1DBBandedTableView1.DataController.Filter do begin
-      Active := False;
-      Clear;
-      Options := Options + [fcoCaseInsensitive];
-      Root.BoolOperatorKind := fboAnd;
-
-      Root.AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('quality_mark_name'), foNotEqual, 'Наличие технического паспорта', 'Наличие технического паспорта');
-      //Root.AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('quality_mark_name'), foNotEqual, NULL, 'не пусто');
-
-      Active := True;
-    end;
-    cxGrid1DBBandedTableView1.DataController.DataSet.EnableControls;
-    Screen.Cursor := crDefault;
-  end else begin
-    cxGrid1DBBandedTableView1.DataController.Filter.Clear;
-    cxGrid1DBBandedTableView1.DataController.Filter.Active := False;
-  end;
-end;
-
-
-procedure TfmFactTrack.dxBarButton101Click(Sender: TObject);
-begin
-// 6 Санкционный запрет
-
-  dxBarButton80.Down  := False;
-  dxBarButton81.Down  := False;
-  dxBarButton82.Down  := False;
-  dxBarButton83.Down  := False;
-  dxBarButton84.Down  := False;
-  dxBarButton112.Down := False;
-  dxBarButton113.Down := False;
-
-  if dxBarButton101.Down then begin
-    cxGrid1DBBandedTableView1.DataController.Filter.Clear;
-    cxGrid1DBBandedTableView1.DataController.Filter.Active := False;
-
-    Screen.Cursor := crHourglass;
-    cxGrid1DBBandedTableView1.DataController.DataSet.DisableControls;
-    with cxGrid1DBBandedTableView1.DataController.Filter do begin
-      Active := False;
-      Clear;
-      Options := Options + [fcoCaseInsensitive];
-      Root.BoolOperatorKind := fboAnd;
-
-      Root.AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('set_sanctions'), foNotEqual, Null, 'не пусто');
-
-      Active := True;
-    end;
-    cxGrid1DBBandedTableView1.DataController.DataSet.EnableControls;
-    Screen.Cursor := crDefault;
-  end else begin
-    cxGrid1DBBandedTableView1.DataController.Filter.Clear;
-    cxGrid1DBBandedTableView1.DataController.Filter.Active := False;
-  end;
-end;
-
-procedure TfmFactTrack.dxBarButton112Click(Sender: TObject);
-begin
-//оставшееся расстояние = 0 и простой на станции >= 3 Интер - Логистика
-
-//cod_operation_vagon_name  - операция вагон
-//count_stay                - простой
-//distance2                 - оставшиеся расстояние
-
-  dxBarButton80.Down  := False;
-  dxBarButton81.Down  := False;
-  dxBarButton82.Down  := False;
-  dxBarButton83.Down  := False;
-  dxBarButton84.Down  := False;
-  dxBarButton101.Down := False;
-  dxBarButton113.Down := False;
-
-  if dxBarButton112.Down then begin
-    cxGrid1DBBandedTableView1.DataController.Filter.Clear;
-    cxGrid1DBBandedTableView1.DataController.Filter.Active := False;
-
-    Screen.Cursor := crHourglass;
-    cxGrid1DBBandedTableView1.DataController.DataSet.DisableControls;
-    with cxGrid1DBBandedTableView1.DataController.Filter do begin
-      Active := False;
-      Clear;
-      Options := Options + [fcoCaseInsensitive];
-      Root.BoolOperatorKind := fboAnd;
-
-      Root.AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('distance2'),   foEqual,        IntToStr(0), '0');
-      Root.AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('count_stay'),  foGreaterEqual, IntToStr(3), '3');
-
-      Active := True;
-    end;
-    cxGrid1DBBandedTableView1.DataController.DataSet.EnableControls;
-    Screen.Cursor := crDefault;
-  end else begin
-    cxGrid1DBBandedTableView1.DataController.Filter.Clear;
-    cxGrid1DBBandedTableView1.DataController.Filter.Active := False;
-  end;
-end;
-
-procedure TfmFactTrack.dxBarButton113Click(Sender: TObject);
-begin
-//простой на станции >= 3 и имя операции полное (вагон)  = брос
-
-//cod_operation_vagon_name  - операция вагон
-//count_stay                - простой
-//distance2                 - оставшиеся расстояние
-
-  dxBarButton80.Down  := False;
-  dxBarButton81.Down  := False;
-  dxBarButton82.Down  := False;
-  dxBarButton83.Down  := False;
-  dxBarButton84.Down  := False;
-  dxBarButton101.Down := False;
-  dxBarButton112.Down := False;
-
-  if dxBarButton113.Down then begin
-    cxGrid1DBBandedTableView1.DataController.Filter.Clear;
-    cxGrid1DBBandedTableView1.DataController.Filter.Active := False;
-
-    Screen.Cursor := crHourglass;
-    cxGrid1DBBandedTableView1.DataController.DataSet.DisableControls;
-    with cxGrid1DBBandedTableView1.DataController.Filter do begin
-      Active := False;
-      Clear;
-      Options := Options + [fcoCaseInsensitive];
-      Root.BoolOperatorKind := fboAND;
-      with Root.AddItemList(fboAnd) do begin
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('distance2'),                foNotEqual,     IntToStr(0), '0');
-      end;
-
-      with Root.AddItemList(fboOr) do begin
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('count_stay'),               foGreaterEqual, IntToStr(3), '3');
-        AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('cod_operation_vagon_name'), foEqual,        'БРОС',      'БРОС');
-      end;
-
-      Active := True;
-    end;
-    cxGrid1DBBandedTableView1.DataController.DataSet.EnableControls;
-    Screen.Cursor := crDefault;
-  end else begin
-    cxGrid1DBBandedTableView1.DataController.Filter.Clear;
-    cxGrid1DBBandedTableView1.DataController.Filter.Active := False;
-  end;
-end;
-
 
 procedure TfmFactTrack.dxBarButton114Click(Sender: TObject);
 type
@@ -4868,63 +4402,6 @@ begin
     Action_RefreshExecute(nil);
     Application.MessageBox('Выполнение процедуры завершено.','Внимание', MB_ICONINFORMATION or MB_OK);
   end;
-
-end;
-
-procedure TfmFactTrack.dxBarButton60Click(Sender: TObject);
-var           SP : TADOStoredProc;
-               i : integer;
-   str_num_vagon : string;
-  list_num_vagon : array of string;
-               d : TDateTime;
-begin
-  Screen.Cursor := crHourglass;
-
-  fmMain.dxStatusBar1.Panels[3].Text := '';
-  d := Now();
-
-  SP := TADOStoredProc.Create(nil);
-  SP.Connection := fmMain.Lis;
-  SP.ProcedureName := 'sp_Report_traffic_managment';
-  SP.Parameters.Refresh;
-  SP.Parameters.ParamByName('@users_group_id').Value := usr_pwd.user_group_id;
-  SP.Parameters.ParamByName('@date_begin').Value := Date - 90;
-  SP.Parameters.ParamByName('@date_end').Value := Date + 1;
-  SP.Parameters.ParamByName('@type_report').Value := TComponent(Sender).Tag;
-  SP.Open;
-
-  if SP.RecordCount = 0 then begin
-      Application.MessageBox('Вагоны для построения фильтра не найдены.','Внимание', MB_ICONINFORMATION or MB_OK);
-      SP.Free;
-      Screen.Cursor := crDefault;
-      exit;
-  end;
-
-  str_num_vagon := '';
-  SetLength(list_num_vagon, SP.RecordCount);
-  for i:=0 to SP.RecordCount - 1 do begin
-    list_num_vagon[i] := SP.FieldByName('num_vagon').AsString;
-    str_num_vagon := str_num_vagon + ',' + SP.FieldByName('num_vagon').AsString;
-    SP.Next;
-  end;
-  Delete(str_num_vagon, 1, 1);
-
-//  cxGrid1DBBandedTableView1.DataController.DataSet.DisableControls;
-  with cxGrid1DBBandedTableView1.DataController.Filter do begin
-    Clear;
-    Options := Options + [fcoCaseInsensitive];
-    Root.BoolOperatorKind := fboOr;
-    BeginUpdate;
-    Root.AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('num_vagon'), foInList, list_num_vagon, str_num_vagon);
-    EndUpdate;
-    Active := True;
-  end;
-//  cxGrid1DBBandedTableView1.DataController.DataSet.EnableControls;
-
-  fmMain.dxStatusBar1.Panels[3].Text := IntToStr(SecondsBetween(Now(), d)) + ' сек.';
-
-  SP.Free;
-  Screen.Cursor := crDefault;
 
 end;
 

@@ -14,20 +14,15 @@ uses
   dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White, dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic,
   dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinsDefaultPainters,
   dxSkinValentine, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxCore, cxDateUtils, cxClasses, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
-  dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,  dxSkinVisualStudio2013Light, dxSkinTheBezier, cxButtons;
+  dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,  dxSkinVisualStudio2013Light, dxSkinTheBezier, cxButtons, dxCoreGraphics;
 
 type
   TfmFactTrackDlg = class(TForm)
     cxPropertiesStore1: TcxPropertiesStore;
     Panel1: TPanel;
     Panel33: TPanel;
-    Panel7: TPanel;
-    cxCheckBox1: TcxCheckBox;
-    GroupBox9: TGroupBox;
-    cxCheckBox3: TcxCheckBox;
     ADO_TrackSearch: TADOConnection;
     Query1: TADOQuery;
-    cxCheckComboBox1: TcxCheckComboBox;
     Splitter1: TSplitter;
     cxButton1: TcxButton;
     cxButton3: TcxButton;
@@ -62,6 +57,8 @@ type
     cxButtonEdit5: TcxButtonEdit;
     Label11: TLabel;
     cxButtonEdit6: TcxButtonEdit;
+    cxCheckBox1: TcxCheckBox;
+    cxCheckBox3: TcxCheckBox;
     procedure cxButtonEdit3PropertiesButtonClick(Sender: TObject;   AButtonIndex: Integer);
     procedure cxButtonEdit2PropertiesButtonClick(Sender: TObject;   AButtonIndex: Integer);
     procedure cxButtonEdit5PropertiesButtonClick(Sender: TObject;   AButtonIndex: Integer);
@@ -69,6 +66,7 @@ type
     procedure cxComboBox1PropertiesChange(Sender: TObject);
     procedure cxMemo1PropertiesChange(Sender: TObject);
     procedure cxButton1Click(Sender: TObject);
+    procedure cxCheckBox1PropertiesChange(Sender: TObject);
 
   private
     FQueryString   : string;
@@ -146,7 +144,6 @@ begin
     2 : begin
           cxCheckBox1.Checked := False;
           Panel3.Visible := False;
-          Panel7.Visible := False;
           Panel10.Visible := False;
           cxComboBox1.ItemIndex := 6;
           cxComboBox1.Enabled := False;
@@ -166,6 +163,11 @@ begin
 
 
   Screen.Cursor := 0;
+end;
+
+procedure TfmFactTrackDlg.cxCheckBox1PropertiesChange(Sender: TObject);
+begin
+  cxMemo1.Enabled := not cxCheckBox1.Checked;
 end;
 
 procedure TfmFactTrackDlg.cxComboBox1PropertiesChange(Sender: TObject);
@@ -267,13 +269,11 @@ begin
       FClientDS.FieldByName('set_archiv'    ).Value := cxCheckBox4.Checked;
       FClientDS.FieldByName('vagon_dic'     ).Value := cxCheckBox1.Checked;
       if cxCheckBox1.Checked then begin
-        FClientDS.FieldByName('type_park_id'  ).Value := iif((cxCheckComboBox1.EditValue = Null) or (cxCheckComboBox1.EditValue = ''), Null, GetDataFromCheckBox(cxCheckComboBox1, False));
         FClientDS.FieldByName('num_vagon'     ).Value := Null;
       end else begin
-        FClientDS.FieldByName('type_park_id'  ).Value := Null;
         FClientDS.FieldByName('num_vagon'     ).Value := iif(cxMemo1.EditValue = Null, Null, str_num_vagon);
       end;
-
+      FClientDS.FieldByName('type_park_id'  ).Value := Null;
       FClientDS.FieldValues['type_park_vagon'] := iif(VarIsNull(cxTextEdit1.EditValue), Null, Trim(cxTextEdit1.Text ));
       FClientDS.FieldValues['cod_operation_vagon_cod']  := iif(VarIsNull(cxTextEdit2.EditValue), Null, Trim(cxTextEdit2.Text));
       FClientDS.FieldValues['cod_operation_vagon_name'] := iif(VarIsNull(cxTextEdit3.EditValue), Null, Trim(cxTextEdit3.Text));
@@ -305,7 +305,6 @@ end;
 procedure TfmFactTrackDlg.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   StoreRegistryMemo(rgSave, '\Software\LIS1\cxMemo\FactTrackVagonDlg', cxMemo1);
-  StoreRegistryCheckComboBox(rgSave, '\Software\LIS1\cxCheckCombox\FactTrackVagonDlg', cxCheckComboBox1);
   Query1.Close;
   Action := caFree;
 end;
