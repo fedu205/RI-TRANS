@@ -959,7 +959,10 @@ cxGridDBBandedTableView : TcxGridDBBandedTableView;
                  v      : Variant;
                  str    : string;
 begin
-  cxGridDBBandedTableView := cxGrid1DBBandedTableView1;
+  case cxPageControl1.ActivePageIndex of
+    0 : cxGridDBBandedTableView := cxGrid1DBBandedTableView1;
+    1 : cxGridDBBandedTableView := cxGridDBBandedTableView1;
+  end;
 
   handle := LoadLibrary('dictionary.dll');
   @FDic := GetProcAddress(handle, 'CreateWndChoose');
@@ -982,6 +985,7 @@ begin
     Active := True;
   end;
   cxGridDBBandedTableView.DataController.DataSet.EnableControls;
+
   List.Free;
   Screen.Cursor := crDefault;
 end;
@@ -3294,7 +3298,7 @@ begin
 
               dxBarButton_Edit.Enabled := False;
               dxBarSubItem3.Enabled := False;
-              dxBarButton17.Enabled := False;
+//              dxBarButton17.Enabled := False;
 
               cxPageControl1.ActivePage := cxTabSheet2;
               DS_Trip.DataSet := sp_fact_track_stat_get;
