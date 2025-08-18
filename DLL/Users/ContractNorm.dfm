@@ -766,6 +766,10 @@ object fmContractNorm: TfmContractNorm
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Width = 339
     end
@@ -792,6 +796,10 @@ object fmContractNorm: TfmContractNorm
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
       Width = 339
     end
@@ -845,6 +853,10 @@ object fmContractNorm: TfmContractNorm
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 2
       Width = 105
     end
@@ -878,6 +890,10 @@ object fmContractNorm: TfmContractNorm
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 3
       Width = 105
     end
@@ -936,6 +952,10 @@ object fmContractNorm: TfmContractNorm
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 9
       Width = 50
     end
@@ -970,6 +990,10 @@ object fmContractNorm: TfmContractNorm
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 10
       Width = 81
     end
@@ -1006,6 +1030,10 @@ object fmContractNorm: TfmContractNorm
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 11
       Width = 81
     end
@@ -1040,6 +1068,10 @@ object fmContractNorm: TfmContractNorm
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 12
       Width = 64
     end
@@ -1073,8 +1105,46 @@ object fmContractNorm: TfmContractNorm
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 13
       Width = 64
+    end
+    object cxComboBox1: TcxComboBox
+      Left = 270
+      Top = 64
+      Properties.Items.Strings = (
+        #1087#1088#1080' '#1074#1099#1075#1088#1091#1079#1082#1077
+        #1087#1088#1080' '#1087#1086#1075#1088#1091#1079#1082#1077
+        #1087#1086#1075#1088#1091#1079#1082#1072'/'#1074#1099#1075#1088#1091#1079#1082#1072)
+      Style.HotTrack = False
+      Style.LookAndFeel.Kind = lfUltraFlat
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.ScrollbarMode = sbmClassic
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.ReadOnly = True
+      Style.Shadow = False
+      StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfUltraFlat
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfUltraFlat
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
+      TabOrder = 14
+      Text = #1087#1088#1080' '#1074#1099#1075#1088#1091#1079#1082#1077
+      Width = 157
     end
   end
   object Query_Currency: TADOQuery

@@ -281,6 +281,7 @@ type
     cxStyle1: TcxStyle;
     cxStyle_BlueBold: TcxStyle;
     cxStyle_ColorWhite: TcxStyle;
+    cxGrid6DBBandedTableView1norm_type_name: TcxGridDBBandedColumn;
     procedure FormDestroy(Sender: TObject);
     procedure dxBarButton7Click(Sender: TObject);
     procedure dxBarSubItem3Popup(Sender: TObject);
@@ -336,8 +337,7 @@ type
     procedure dxBarButton8Click(Sender: TObject);
     procedure dxBarButton50Click(Sender: TObject);
     procedure dxBarButton48Click(Sender: TObject);
-    procedure cxGrid6DBBandedTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridTableDataCellViewInfo;
-      var ADone: Boolean);
+    procedure cxGrid6DBBandedTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridTableDataCellViewInfo;  var ADone: Boolean);
   private
     Fcontract_id    : integer;
     Fstr_contract_id: string;
@@ -1218,10 +1218,15 @@ var
 begin
   handle := LoadLibrary('user.dll');
   @FNorm := GetProcAddress(handle, 'CreateWndContractNorm');
-  case TdxBarButton(Sender).Tag of
-    0 : v := FNorm(Application.Handle, -9, cxGrid1DBBandedTableView1contract_id.DataBinding.Field.AsInteger, Fconnect.ConnectionString);
-    1 : v := FNorm(Application.Handle, cxGrid6DBBandedTableView1contract_norm_id.DataBinding.Field.AsInteger, cxGrid1DBBandedTableView1contract_id.DataBinding.Field.AsInteger, Fconnect.ConnectionString);
-  end;
+  if (Sender is TdxBarButton) then
+    case TdxBarButton(Sender).Tag of
+      0 : v := FNorm(Application.Handle, -9, cxGrid1DBBandedTableView1contract_id.DataBinding.Field.AsInteger, Fconnect.ConnectionString);
+      1 : v := FNorm(Application.Handle, cxGrid6DBBandedTableView1contract_norm_id.DataBinding.Field.AsInteger, cxGrid1DBBandedTableView1contract_id.DataBinding.Field.AsInteger, Fconnect.ConnectionString);
+    end;
+
+  if (Sender is TcxGridSite) then
+    v := FNorm(Application.Handle, cxGrid6DBBandedTableView1contract_norm_id.DataBinding.Field.AsInteger, cxGrid1DBBandedTableView1contract_id.DataBinding.Field.AsInteger, Fconnect.ConnectionString);
+
   FreeLibrary(handle);
   RefreshQueryGrid(cxGrid1DBBandedTableView1, 'contract_id', cxGrid1DBBandedTableView1contract_id.DataBinding.Field.AsInteger);
 end;

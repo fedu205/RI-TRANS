@@ -796,9 +796,6 @@ object fmContract: TfmContract
         object cxTabSheet4: TcxTabSheet
           Caption = #1047#1072#1082#1088#1099#1090#1099#1077' '#1087#1077#1088#1080#1086#1076#1099' '#1076#1083#1103' '#1076#1086#1075#1086#1074#1086#1088#1072
           ImageIndex = 0
-          ExplicitTop = 0
-          ExplicitWidth = 0
-          ExplicitHeight = 0
           object cxGrid2: TcxGrid
             Left = 0
             Top = 0
@@ -1155,14 +1152,10 @@ object fmContract: TfmContract
       object cxTabSheet2: TcxTabSheet
         Caption = #1044#1086#1075#1086#1074#1086#1088#1099' '#1089' '#1087#1086#1076#1088#1103#1076#1095#1080#1082#1072#1084#1080
         ImageIndex = 1
-        ExplicitTop = 0
-        ExplicitWidth = 0
       end
       object cxTabSheet3: TcxTabSheet
         Caption = #1044#1086#1075#1086#1074#1086#1088#1099' '#1040#1076#1084#1080#1085#1080#1089#1090#1088#1072#1094#1080#1080
         ImageIndex = 2
-        ExplicitTop = 0
-        ExplicitWidth = 0
       end
     end
   end
@@ -1173,7 +1166,7 @@ object fmContract: TfmContract
     Height = 193
     Align = alBottom
     TabOrder = 5
-    Properties.ActivePage = cxTabSheet31
+    Properties.ActivePage = cxTabSheet6
     Properties.CustomButtons.Buttons = <>
     Properties.Images = cxImageList1
     LookAndFeel.Kind = lfUltraFlat
@@ -1440,9 +1433,6 @@ object fmContract: TfmContract
     object cxTabSheet32: TcxTabSheet
       Caption = #1057#1074#1103#1079#1072#1085#1085#1099#1077' '#1076#1086#1075#1086#1074#1086#1088#1099' 1'#1057
       ImageIndex = 130
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object cxGrid3: TcxGrid
         Left = 0
         Top = 0
@@ -1700,9 +1690,6 @@ object fmContract: TfmContract
     object cxTabSheet6: TcxTabSheet
       Caption = #1053#1086#1088#1084#1072#1090#1080#1074#1099' '#1087#1088#1086#1089#1090#1086#1077#1074
       ImageIndex = 124
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object cxGrid6: TcxGrid
         Left = 0
         Top = 0
@@ -1722,6 +1709,7 @@ object fmContract: TfmContract
         LookAndFeel.SkinName = 'Office2007Black'
         object cxGrid6DBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = dxBarPopup_Contract_Norm
+          OnDblClick = dxBarButton48Click
           OnKeyPress = cxGrid1DBBandedTableView1KeyPress
           Navigator.Buttons.CustomButtons = <>
           ScrollbarAnnotations.CustomAnnotations = <>
@@ -1870,6 +1858,16 @@ object fmContract: TfmContract
             Width = 70
             Position.BandIndex = 0
             Position.ColIndex = 7
+            Position.RowIndex = 0
+          end
+          object cxGrid6DBBandedTableView1norm_type_name: TcxGridDBBandedColumn
+            Caption = #1058#1080#1087' '#1087#1088#1086#1089#1090#1086#1103
+            DataBinding.FieldName = 'norm_type_name'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Width = 93
+            Position.BandIndex = 0
+            Position.ColIndex = 8
             Position.RowIndex = 0
           end
         end
@@ -9447,10 +9445,18 @@ object fmContract: TfmContract
         Value = Null
       end>
     SQL.Strings = (
-      'SELECT cn.*, cur.brief_name, i.inf_obj_name AS nds_name'
+      'SELECT cn.*,'
+      '  case cn.norm_type'
+      '  when 0 then '#39#1087#1088#1080' '#1074#1099#1075#1088#1091#1079#1082#1077#39
+      '  when 1 then '#39#1087#1088#1080' '#1087#1086#1075#1088#1091#1079#1082#1077#39#11
+      ''
+      '  when 2 then '#39#1087#1086#1075#1088#1091#1079#1082#1072'/'#1074#1099#1075#1088#1091#1079#1082#1072#39
+      '  end as norm_type_name,'
+      '  cur.brief_name,'
+      '  i.inf_obj_name AS nds_name'
       'FROM contract_norm cn'
-      'LEFT JOIN currency cur ON cur.currency_id = cn.currency_id'
-      'LEFT JOIN inf_obj i ON i.inf_obj_id = cn.nds_id'
+      '  LEFT JOIN currency cur ON cur.currency_id = cn.currency_id'
+      '  LEFT JOIN inf_obj i ON i.inf_obj_id = cn.nds_id'
       'WHERE contract_id = :contract_id')
     Left = 313
     Top = 472

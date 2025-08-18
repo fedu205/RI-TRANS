@@ -45,6 +45,7 @@ type
     cxLookupComboBox2: TcxLookupComboBox;
     cxLookupComboBox1: TcxLookupComboBox;
     cxPropertiesStore1: TcxPropertiesStore;
+    cxComboBox1: TcxComboBox;
     procedure cxButton1Click(Sender: TObject);
     procedure cxCurrencyEdit2PropertiesEditValueChanged(Sender: TObject);
   private
@@ -111,6 +112,8 @@ begin
   Query_NDS.Connection := Fconnect;
   Query_NDS.Open;
 
+  cxComboBox1.ItemIndex := 0;
+
   Screen.Cursor := crDefault;
 end;
 
@@ -169,6 +172,8 @@ begin
   cxLookupComboBox1.EditValue := Q.FieldByName('currency_id').Value;
   cxLookupComboBox2.EditValue := Q.FieldByName('nds_id').Value;
 
+  cxComboBox1.ItemIndex := Q.FieldByName('norm_type').AsInteger;
+
   Q.Free;
   Screen.Cursor := crDefault;
 end;
@@ -193,6 +198,7 @@ begin
   SP.Parameters.ParamByName('@norm_sum_with_nds'   ).Value := cxCurrencyEdit3.EditValue;
   SP.Parameters.ParamByName('@currency_id'         ).Value := cxLookupComboBox1.EditValue;
   SP.Parameters.ParamByName('@nds_id'              ).Value := cxLookupComboBox2.EditValue;
+  SP.Parameters.ParamByName('@norm_type'           ).Value := cxComboBox1.ItemIndex;
   SP.ExecProc;
 
   SP.Free;
