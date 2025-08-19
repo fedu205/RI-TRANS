@@ -166,7 +166,7 @@ object fmFactTrack: TfmFactTrack
     Height = 416
     Align = alClient
     TabOrder = 0
-    Properties.ActivePage = cxTabSheet1
+    Properties.ActivePage = cxTabSheet5
     Properties.CustomButtons.Buttons = <>
     LookAndFeel.Kind = lfUltraFlat
     LookAndFeel.NativeStyle = False
@@ -2446,7 +2446,6 @@ object fmFactTrack: TfmFactTrack
             item
               Format = '#,##0'
               Kind = skSum
-              Column = cxGrid12DBBandedTableView1days_stay_sum
             end>
           DataController.Summary.SummaryGroups = <
             item
@@ -2547,7 +2546,7 @@ object fmFactTrack: TfmFactTrack
             DataBinding.FieldName = 'num_vagon'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
-            Styles.Content = fmMain.cxStyle_Bold
+            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
             Width = 75
             Position.BandIndex = 0
             Position.ColIndex = 1
@@ -2558,6 +2557,7 @@ object fmFactTrack: TfmFactTrack
             DataBinding.FieldName = 'doc_number'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
+            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
             Width = 60
             Position.BandIndex = 0
             Position.ColIndex = 2
@@ -2572,21 +2572,10 @@ object fmFactTrack: TfmFactTrack
             Properties.SaveTime = False
             Properties.ShowTime = False
             HeaderAlignmentVert = vaTop
-            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
-            Width = 76
+            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Profitt
+            Width = 89
             Position.BandIndex = 0
             Position.ColIndex = 3
-            Position.RowIndex = 0
-          end
-          object cxGrid12DBBandedTableView1days_stay_begin: TcxGridDBBandedColumn
-            Caption = #1044#1085#1077#1081' '#1087#1088#1086#1089#1090#1086#1103' '#1085#1072' '#1057#1090'.'#1054#1090#1087#1088'.'
-            DataBinding.FieldName = 'days_stay_begin'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
-            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
-            Width = 66
-            Position.BandIndex = 0
-            Position.ColIndex = 5
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1date_otpr: TcxGridDBBandedColumn
@@ -2604,6 +2593,52 @@ object fmFactTrack: TfmFactTrack
             Position.ColIndex = 4
             Position.RowIndex = 0
           end
+          object cxGrid12DBBandedTableView1node_begin_name: TcxGridDBBandedColumn
+            Caption = #1057#1090'.'#1054#1090#1087#1088'.'
+            DataBinding.FieldName = 'node_begin_name'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
+            Width = 93
+            Position.BandIndex = 0
+            Position.ColIndex = 5
+            Position.RowIndex = 0
+          end
+          object cxGrid12DBBandedTableView1node_end_name: TcxGridDBBandedColumn
+            Caption = #1057#1090'.'#1053#1072#1079#1085'.'
+            DataBinding.FieldName = 'node_end_name'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
+            Width = 82
+            Position.BandIndex = 0
+            Position.ColIndex = 6
+            Position.RowIndex = 0
+          end
+          object cxGrid12DBBandedTableView1kargoETSNG_name: TcxGridDBBandedColumn
+            Caption = #1043#1088#1091#1079
+            DataBinding.FieldName = 'kargoETSNG_name'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
+            Width = 70
+            Position.BandIndex = 0
+            Position.ColIndex = 7
+            Position.RowIndex = 0
+          end
+          object cxGrid12DBBandedTableView1fact_weight: TcxGridDBBandedColumn
+            Caption = #1042#1077#1089', '#1090#1085'.'
+            DataBinding.FieldName = 'fact_weight'
+            DataBinding.IsNullValueType = True
+            PropertiesClassName = 'TcxCurrencyEditProperties'
+            Properties.DisplayFormat = '#,##0.000'
+            HeaderAlignmentVert = vaTop
+            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
+            Width = 43
+            Position.BandIndex = 0
+            Position.ColIndex = 8
+            Position.RowIndex = 0
+          end
           object cxGrid12DBBandedTableView1date_arrival: TcxGridDBBandedColumn
             Caption = #1044#1072#1090#1072' '#1087#1088#1080#1073'.'
             DataBinding.FieldName = 'date_arrival'
@@ -2613,10 +2648,10 @@ object fmFactTrack: TfmFactTrack
             Properties.SaveTime = False
             Properties.ShowTime = False
             HeaderAlignmentVert = vaTop
-            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Profitt
+            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
             Width = 77
             Position.BandIndex = 0
-            Position.ColIndex = 6
+            Position.ColIndex = 9
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1date_otpr_1: TcxGridDBBandedColumn
@@ -2631,7 +2666,18 @@ object fmFactTrack: TfmFactTrack
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Profitt
             Width = 87
             Position.BandIndex = 0
-            Position.ColIndex = 7
+            Position.ColIndex = 10
+            Position.RowIndex = 0
+          end
+          object cxGrid12DBBandedTableView1days_stay_begin: TcxGridDBBandedColumn
+            Caption = #1044#1085#1077#1081' '#1087#1088#1086#1089#1090#1086#1103' '#1085#1072' '#1057#1090'.'#1054#1090#1087#1088'.'
+            DataBinding.FieldName = 'days_stay_begin'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Styles.Content = fmMain.cxStyle_AgreeFactInc_Sum
+            Width = 76
+            Position.BandIndex = 0
+            Position.ColIndex = 11
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1days_stay_end: TcxGridDBBandedColumn
@@ -2641,115 +2687,90 @@ object fmFactTrack: TfmFactTrack
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0'
             HeaderAlignmentVert = vaTop
-            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Profitt
-            Width = 88
-            Position.BandIndex = 0
-            Position.ColIndex = 8
-            Position.RowIndex = 0
-          end
-          object cxGrid12DBBandedTableView1days_stay_sum: TcxGridDBBandedColumn
-            Caption = #1044#1085#1077#1081' '#1087#1088#1086#1089#1090#1086#1103' '#1085#1072' '#1089#1090'. '#1087#1086#1075#1088'/ '#1074#1099#1075#1088'., '#1089#1091#1090'.'
-            DataBinding.FieldName = 'days_stay_sum'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
             Styles.Content = fmMain.cxStyle_AgreeFactInc_Sum
-            Width = 113
-            Position.BandIndex = 0
-            Position.ColIndex = 9
-            Position.RowIndex = 0
-          end
-          object cxGrid12DBBandedTableView1node_begin_name: TcxGridDBBandedColumn
-            Caption = #1057#1090'.'#1054#1090#1087#1088'.'
-            DataBinding.FieldName = 'node_begin_name'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
-            Width = 93
-            Position.BandIndex = 0
-            Position.ColIndex = 10
-            Position.RowIndex = 0
-          end
-          object cxGrid12DBBandedTableView1node_begin_cod: TcxGridDBBandedColumn
-            Caption = #1057#1090'.'#1054#1090#1087#1088'. ('#1050#1086#1076')'
-            DataBinding.FieldName = 'node_begin_cod'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
-            Width = 60
-            Position.BandIndex = 0
-            Position.ColIndex = 11
-            Position.RowIndex = 0
-          end
-          object cxGrid12DBBandedTableView1node_end_name: TcxGridDBBandedColumn
-            Caption = #1057#1090'.'#1053#1072#1079#1085'.'
-            DataBinding.FieldName = 'node_end_name'
-            DataBinding.IsNullValueType = True
-            HeaderAlignmentVert = vaTop
-            Width = 82
+            Width = 88
             Position.BandIndex = 0
             Position.ColIndex = 12
             Position.RowIndex = 0
           end
-          object cxGrid12DBBandedTableView1node_end_cod: TcxGridDBBandedColumn
-            Caption = #1057#1090'.'#1053#1072#1079#1085'. ('#1050#1086#1076')'
-            DataBinding.FieldName = 'node_end_cod'
+          object cxGrid12DBBandedTableView1Column1: TcxGridDBBandedColumn
+            Caption = #1053#1086#1088#1084'. '#1085#1072' '#1055#1086#1075#1088#1091#1079#1082#1091
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
-            Width = 60
+            Width = 66
             Position.BandIndex = 0
             Position.ColIndex = 13
             Position.RowIndex = 0
           end
-          object cxGrid12DBBandedTableView1kargoETSNG_name: TcxGridDBBandedColumn
-            Caption = #1043#1088#1091#1079
-            DataBinding.FieldName = 'kargoETSNG_name'
+          object cxGrid12DBBandedTableView1Column2: TcxGridDBBandedColumn
+            Caption = #1053#1086#1088#1084'. '#1085#1072' '#1056#1072#1079#1075#1088#1091#1079#1082#1091
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
-            Width = 70
+            Width = 66
             Position.BandIndex = 0
             Position.ColIndex = 14
             Position.RowIndex = 0
           end
-          object cxGrid12DBBandedTableView1fact_weight: TcxGridDBBandedColumn
-            Caption = #1042#1077#1089', '#1090#1085'.'
-            DataBinding.FieldName = 'fact_weight'
+          object cxGrid12DBBandedTableView1Column3: TcxGridDBBandedColumn
+            Caption = #1057#1074#1077#1088#1093'.'#1085#1086#1088#1084'. '#1085#1072' '#1087#1086#1075#1088#1091#1079#1082#1077
             DataBinding.IsNullValueType = True
-            PropertiesClassName = 'TcxCurrencyEditProperties'
-            Properties.DisplayFormat = '#,##0.000'
             HeaderAlignmentVert = vaTop
-            Width = 43
+            Width = 79
             Position.BandIndex = 0
             Position.ColIndex = 15
             Position.RowIndex = 0
           end
-          object cxGrid12DBBandedTableView1node_operation_cod: TcxGridDBBandedColumn
-            Caption = #1057#1090'.'#1055#1088#1086#1089#1090#1086#1103' ('#1050#1086#1076')'
-            DataBinding.FieldName = 'node_operation_cod'
+          object cxGrid12DBBandedTableView1Column4: TcxGridDBBandedColumn
+            Caption = #1057#1074#1077#1088#1093'.'#1085#1086#1088#1084'. '#1085#1072' '#1074#1099#1075#1088#1091#1079#1082#1077
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
-            Width = 60
+            Width = 76
             Position.BandIndex = 0
             Position.ColIndex = 16
             Position.RowIndex = 0
           end
-          object cxGrid12DBBandedTableView1road_operation_name: TcxGridDBBandedColumn
-            Caption = #1044#1086#1088#1086#1075#1072' '#1087#1088#1086#1089#1090#1086#1103
-            DataBinding.FieldName = 'road_operation_name'
+          object cxGrid12DBBandedTableView1Column5: TcxGridDBBandedColumn
+            Caption = #1058#1072#1088#1080#1092' '#1085#1072' '#1087#1086#1075#1088#1091#1079#1082#1077
             DataBinding.IsNullValueType = True
+            PropertiesClassName = 'TcxCurrencyEditProperties'
+            Properties.DisplayFormat = '# ##0.00'
             HeaderAlignmentVert = vaTop
-            Width = 55
+            Width = 73
             Position.BandIndex = 0
             Position.ColIndex = 17
             Position.RowIndex = 0
           end
-          object cxGrid12DBBandedTableView1set_track_end: TcxGridDBBandedColumn
-            Caption = #1056#1077#1081#1089' '#1053#1045' '#1079#1072#1082#1086#1085#1095#1080#1083#1089#1103
-            DataBinding.FieldName = 'set_track_end'
+          object cxGrid12DBBandedTableView1Column6: TcxGridDBBandedColumn
+            Caption = #1058#1072#1088#1080#1092' '#1085#1072' '#1074#1099#1075#1088#1091#1079#1082#1077
             DataBinding.IsNullValueType = True
-            PropertiesClassName = 'TcxCheckBoxProperties'
-            Properties.NullStyle = nssUnchecked
+            PropertiesClassName = 'TcxCurrencyEditProperties'
+            Properties.DisplayFormat = '# ##0.00'
             HeaderAlignmentVert = vaTop
-            Width = 50
+            Width = 66
             Position.BandIndex = 0
             Position.ColIndex = 18
+            Position.RowIndex = 0
+          end
+          object cxGrid12DBBandedTableView1Column7: TcxGridDBBandedColumn
+            Caption = #1057#1091#1084#1084#1072' '#1087#1088#1086#1089#1090#1086#1103' '#1085#1072' '#1087#1086#1075#1088#1091#1079#1082#1077
+            DataBinding.IsNullValueType = True
+            PropertiesClassName = 'TcxCurrencyEditProperties'
+            Properties.DisplayFormat = '# ##0.00'
+            HeaderAlignmentVert = vaTop
+            Width = 66
+            Position.BandIndex = 0
+            Position.ColIndex = 19
+            Position.RowIndex = 0
+          end
+          object cxGrid12DBBandedTableView1Column8: TcxGridDBBandedColumn
+            Caption = #1057#1091#1084#1084#1072' '#1087#1088#1086#1089#1090#1086#1103' '#1085#1072' '#1074#1099#1075#1088#1091#1079#1082#1077
+            DataBinding.IsNullValueType = True
+            PropertiesClassName = 'TcxCurrencyEditProperties'
+            Properties.DisplayFormat = '# ##0.00'
+            HeaderAlignmentVert = vaTop
+            Width = 66
+            Position.BandIndex = 0
+            Position.ColIndex = 20
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1set_archive: TcxGridDBBandedColumn
@@ -2761,7 +2782,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 40
             Position.BandIndex = 0
-            Position.ColIndex = 19
+            Position.ColIndex = 21
             Position.RowIndex = 0
           end
         end
