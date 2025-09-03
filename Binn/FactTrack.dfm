@@ -2552,6 +2552,16 @@ object fmFactTrack: TfmFactTrack
             Position.ColIndex = 1
             Position.RowIndex = 0
           end
+          object cxGrid12DBBandedTableView1comment6: TcxGridDBBandedColumn
+            Caption = #1057#1086#1073#1089#1090#1074#1077#1085#1085#1080#1082' ('#1050#1086#1084#1084#1077#1085#1090'.6)'
+            DataBinding.FieldName = 'comment6'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Width = 80
+            Position.BandIndex = 0
+            Position.ColIndex = 2
+            Position.RowIndex = 0
+          end
           object cxGrid12DBBandedTableView1doc_number: TcxGridDBBandedColumn
             Caption = #8470' '#1085#1072#1082#1083#1072#1076#1085#1086#1081
             DataBinding.FieldName = 'doc_number'
@@ -2560,7 +2570,7 @@ object fmFactTrack: TfmFactTrack
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
             Width = 60
             Position.BandIndex = 0
-            Position.ColIndex = 2
+            Position.ColIndex = 3
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1date_arrival_1: TcxGridDBBandedColumn
@@ -2575,7 +2585,7 @@ object fmFactTrack: TfmFactTrack
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Profitt
             Width = 89
             Position.BandIndex = 0
-            Position.ColIndex = 3
+            Position.ColIndex = 4
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1date_otpr: TcxGridDBBandedColumn
@@ -2590,7 +2600,7 @@ object fmFactTrack: TfmFactTrack
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
             Width = 86
             Position.BandIndex = 0
-            Position.ColIndex = 4
+            Position.ColIndex = 5
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1node_begin_name: TcxGridDBBandedColumn
@@ -2601,7 +2611,7 @@ object fmFactTrack: TfmFactTrack
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
             Width = 93
             Position.BandIndex = 0
-            Position.ColIndex = 5
+            Position.ColIndex = 6
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1node_end_name: TcxGridDBBandedColumn
@@ -2612,7 +2622,7 @@ object fmFactTrack: TfmFactTrack
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
             Width = 82
             Position.BandIndex = 0
-            Position.ColIndex = 6
+            Position.ColIndex = 7
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1kargoETSNG_name: TcxGridDBBandedColumn
@@ -2623,7 +2633,7 @@ object fmFactTrack: TfmFactTrack
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
             Width = 70
             Position.BandIndex = 0
-            Position.ColIndex = 7
+            Position.ColIndex = 8
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1fact_weight: TcxGridDBBandedColumn
@@ -2636,7 +2646,7 @@ object fmFactTrack: TfmFactTrack
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
             Width = 43
             Position.BandIndex = 0
-            Position.ColIndex = 8
+            Position.ColIndex = 9
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1date_arrival: TcxGridDBBandedColumn
@@ -2651,7 +2661,7 @@ object fmFactTrack: TfmFactTrack
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod
             Width = 77
             Position.BandIndex = 0
-            Position.ColIndex = 9
+            Position.ColIndex = 10
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1date_otpr_1: TcxGridDBBandedColumn
@@ -2666,7 +2676,7 @@ object fmFactTrack: TfmFactTrack
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Profitt
             Width = 87
             Position.BandIndex = 0
-            Position.ColIndex = 10
+            Position.ColIndex = 11
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1days_stay_begin: TcxGridDBBandedColumn
@@ -2677,7 +2687,7 @@ object fmFactTrack: TfmFactTrack
             Styles.Content = fmMain.cxStyle_AgreeFactInc_Sum
             Width = 76
             Position.BandIndex = 0
-            Position.ColIndex = 11
+            Position.ColIndex = 12
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1days_stay_end: TcxGridDBBandedColumn
@@ -2690,7 +2700,7 @@ object fmFactTrack: TfmFactTrack
             Styles.Content = fmMain.cxStyle_AgreeFactInc_Sum
             Width = 88
             Position.BandIndex = 0
-            Position.ColIndex = 12
+            Position.ColIndex = 13
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1Column1: TcxGridDBBandedColumn
@@ -2699,7 +2709,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
-            Position.ColIndex = 13
+            Position.ColIndex = 14
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1Column2: TcxGridDBBandedColumn
@@ -2708,7 +2718,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
-            Position.ColIndex = 14
+            Position.ColIndex = 15
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1Column3: TcxGridDBBandedColumn
@@ -2717,7 +2727,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 79
             Position.BandIndex = 0
-            Position.ColIndex = 15
+            Position.ColIndex = 16
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1Column4: TcxGridDBBandedColumn
@@ -2726,7 +2736,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 76
             Position.BandIndex = 0
-            Position.ColIndex = 16
+            Position.ColIndex = 17
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1Column5: TcxGridDBBandedColumn
@@ -2737,7 +2747,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 73
             Position.BandIndex = 0
-            Position.ColIndex = 17
+            Position.ColIndex = 18
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1Column6: TcxGridDBBandedColumn
@@ -2748,7 +2758,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
-            Position.ColIndex = 18
+            Position.ColIndex = 19
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1Column7: TcxGridDBBandedColumn
@@ -2759,7 +2769,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
-            Position.ColIndex = 19
+            Position.ColIndex = 20
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1Column8: TcxGridDBBandedColumn
@@ -2770,7 +2780,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
-            Position.ColIndex = 20
+            Position.ColIndex = 21
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1set_archive: TcxGridDBBandedColumn
@@ -2782,7 +2792,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 40
             Position.BandIndex = 0
-            Position.ColIndex = 21
+            Position.ColIndex = 22
             Position.RowIndex = 0
           end
         end

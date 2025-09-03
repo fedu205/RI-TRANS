@@ -505,6 +505,7 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1Column6: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1Column7: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1Column8: TcxGridDBBandedColumn;
+    cxGrid12DBBandedTableView1comment6: TcxGridDBBandedColumn;
 
     procedure N4Click(Sender: TObject);
     procedure N2Click(Sender: TObject);
