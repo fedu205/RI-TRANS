@@ -874,7 +874,6 @@ object fmAgreeFactInc: TfmAgreeFactInc
       OnCustomDrawCell = cxGrid1DBBandedTableView1CustomDrawCell
       OnFocusedItemChanged = cxGrid1DBBandedTableView1FocusedItemChanged
       DataController.DataSource = DS_Sverka
-      DataController.Filter.AutoDataSetFilter = True
       DataController.Summary.DefaultGroupSummaryItems = <>
       DataController.Summary.FooterSummaryItems = <
         item
@@ -1935,7 +1934,6 @@ object fmAgreeFactInc: TfmAgreeFactInc
   end
   object SP_AgreeFactInc_Sverka: TADOStoredProc
     Connection = fmMain.Lis
-    Filtered = True
     ProcedureName = 'sp_AgreeFactInc_Sverka2;1'
     Parameters = <>
     Left = 93
