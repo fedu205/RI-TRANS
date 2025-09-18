@@ -2679,6 +2679,16 @@ object fmFactTrack: TfmFactTrack
             Position.ColIndex = 11
             Position.RowIndex = 0
           end
+          object cxGrid12DBBandedTableView1node_end_name_1: TcxGridDBBandedColumn
+            Caption = 'C'#1090'.'#1053#1072#1079#1085'. '#1089#1083#1077#1076'. '#1088#1077#1081#1089#1072
+            DataBinding.FieldName = 'node_end_name_1'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Width = 74
+            Position.BandIndex = 0
+            Position.ColIndex = 12
+            Position.RowIndex = 0
+          end
           object cxGrid12DBBandedTableView1days_stay_begin: TcxGridDBBandedColumn
             Caption = #1044#1085#1077#1081' '#1087#1088#1086#1089#1090#1086#1103' '#1085#1072' '#1057#1090'.'#1054#1090#1087#1088'.'
             DataBinding.FieldName = 'days_stay_begin'
@@ -2687,7 +2697,7 @@ object fmFactTrack: TfmFactTrack
             Styles.Content = fmMain.cxStyle_AgreeFactInc_Sum
             Width = 76
             Position.BandIndex = 0
-            Position.ColIndex = 12
+            Position.ColIndex = 13
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1days_stay_end: TcxGridDBBandedColumn
@@ -2700,7 +2710,51 @@ object fmFactTrack: TfmFactTrack
             Styles.Content = fmMain.cxStyle_AgreeFactInc_Sum
             Width = 88
             Position.BandIndex = 0
-            Position.ColIndex = 13
+            Position.ColIndex = 14
+            Position.RowIndex = 0
+          end
+          object cxGrid12DBBandedTableView1firm_customer_name: TcxGridDBBandedColumn
+            Caption = #1050#1086#1085#1090#1088#1072#1075#1077#1085#1090
+            DataBinding.FieldName = 'firm_customer_name'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod_RUB
+            Width = 66
+            Position.BandIndex = 0
+            Position.ColIndex = 15
+            Position.RowIndex = 0
+          end
+          object cxGrid12DBBandedTableView1contract_cod: TcxGridDBBandedColumn
+            Caption = #1044#1086#1075#1086#1074#1086#1088
+            DataBinding.FieldName = 'contract_cod'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod_RUB
+            Width = 66
+            Position.BandIndex = 0
+            Position.ColIndex = 16
+            Position.RowIndex = 0
+          end
+          object cxGrid12DBBandedTableView1contract_agree_cod: TcxGridDBBandedColumn
+            Caption = #8470' '#1087#1088#1080#1083#1086#1078#1077#1085#1080#1103
+            DataBinding.FieldName = 'contract_agree_cod'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod_RUB
+            Width = 66
+            Position.BandIndex = 0
+            Position.ColIndex = 17
+            Position.RowIndex = 0
+          end
+          object cxGrid12DBBandedTableView1contract_agree_date: TcxGridDBBandedColumn
+            Caption = #1044#1072#1090#1072' '#1087#1088#1080#1083#1086#1078#1077#1085#1080#1103
+            DataBinding.FieldName = 'contract_agree_date'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod_RUB
+            Width = 66
+            Position.BandIndex = 0
+            Position.ColIndex = 18
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1Column1: TcxGridDBBandedColumn
@@ -2709,7 +2763,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
-            Position.ColIndex = 14
+            Position.ColIndex = 19
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1Column2: TcxGridDBBandedColumn
@@ -2718,7 +2772,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
-            Position.ColIndex = 15
+            Position.ColIndex = 20
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1Column3: TcxGridDBBandedColumn
@@ -2727,7 +2781,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 79
             Position.BandIndex = 0
-            Position.ColIndex = 16
+            Position.ColIndex = 21
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1Column4: TcxGridDBBandedColumn
@@ -2736,7 +2790,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 76
             Position.BandIndex = 0
-            Position.ColIndex = 17
+            Position.ColIndex = 22
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1Column5: TcxGridDBBandedColumn
@@ -2747,7 +2801,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 73
             Position.BandIndex = 0
-            Position.ColIndex = 18
+            Position.ColIndex = 23
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1Column6: TcxGridDBBandedColumn
@@ -2758,7 +2812,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
-            Position.ColIndex = 19
+            Position.ColIndex = 24
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1Column7: TcxGridDBBandedColumn
@@ -2769,7 +2823,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
-            Position.ColIndex = 20
+            Position.ColIndex = 25
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1Column8: TcxGridDBBandedColumn
@@ -2780,7 +2834,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
-            Position.ColIndex = 21
+            Position.ColIndex = 26
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1set_archive: TcxGridDBBandedColumn
@@ -2792,7 +2846,17 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 40
             Position.BandIndex = 0
-            Position.ColIndex = 22
+            Position.ColIndex = 27
+            Position.RowIndex = 0
+          end
+          object cxGrid12DBBandedTableView1Column10: TcxGridDBBandedColumn
+            Caption = #1042#1080#1076' '#1076#1077#1103#1090#1077#1083#1100#1085#1086#1089#1090#1080
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod_RUB
+            Width = 66
+            Position.BandIndex = 0
+            Position.ColIndex = 28
             Position.RowIndex = 0
           end
         end
@@ -4149,6 +4213,22 @@ object fmFactTrack: TfmFactTrack
             Width = 100
             Position.BandIndex = 0
             Position.ColIndex = 111
+            Position.RowIndex = 0
+          end
+          object cxGrid2DBBandedTableView1file_load_name: TcxGridDBBandedColumn
+            Caption = #1060#1072#1081#1083' '#1079#1072#1075#1088#1091#1079#1082#1080
+            DataBinding.FieldName = 'file_load_name'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Width = 66
+            Position.BandIndex = 0
+            Position.ColIndex = 112
+            Position.RowIndex = 0
+          end
+          object cxGrid2DBBandedTableView1Column1: TcxGridDBBandedColumn
+            DataBinding.IsNullValueType = True
+            Position.BandIndex = 0
+            Position.ColIndex = 113
             Position.RowIndex = 0
           end
         end
