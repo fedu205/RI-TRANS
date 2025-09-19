@@ -2849,8 +2849,9 @@ object fmFactTrack: TfmFactTrack
             Position.ColIndex = 27
             Position.RowIndex = 0
           end
-          object cxGrid12DBBandedTableView1Column10: TcxGridDBBandedColumn
+          object cxGrid12DBBandedTableView1agreement_vid_activity: TcxGridDBBandedColumn
             Caption = #1042#1080#1076' '#1076#1077#1103#1090#1077#1083#1100#1085#1086#1089#1090#1080
+            DataBinding.FieldName = 'agreement_vid_activity'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Styles.Content = fmMain.cxStyle_ClientFrahtCard_Rashod_RUB
@@ -4805,6 +4806,11 @@ object fmFactTrack: TfmFactTrack
         item
           BeginGroup = True
           Visible = True
+          ItemName = 'dxBarSubItem1'
+        end
+        item
+          BeginGroup = True
+          Visible = True
           ItemName = 'dxBarButton48'
         end>
       NotDocking = [dsNone, dsLeft, dsTop, dsRight, dsBottom]
@@ -6032,6 +6038,26 @@ object fmFactTrack: TfmFactTrack
       ImageIndex = 123
       OnClick = dxBarButton2Click
     end
+    object dxBarSubItem1: TdxBarSubItem
+      Caption = #1047#1072#1075#1088#1091#1079#1082#1072
+      Category = 0
+      Visible = ivAlways
+      ImageIndex = 56
+      ShowCaption = False
+      ItemLinks = <
+        item
+          Visible = True
+          ItemName = 'dxBarButton1'
+        end>
+    end
+    object dxBarButton1: TdxBarButton
+      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' "'#1056#1077#1077#1089#1090#1088' '#1086#1090#1075#1088#1091#1079#1086#1082'"...'
+      Category = 0
+      Hint = #1047#1072#1075#1088#1091#1079#1080#1090#1100' "'#1056#1077#1077#1089#1090#1088' '#1086#1090#1075#1088#1091#1079#1086#1082'"'
+      Visible = ivAlways
+      ImageIndex = 8
+      OnClick = dxBarButton1Click
+    end
     object N12: TdxBarButton
       Caption = #1054#1090#1095#1105#1090' '#1087#1086' '#1074#1072#1075#1086#1085#1072#1084' (44)'
       Category = 1
@@ -6772,6 +6798,11 @@ object fmFactTrack: TfmFactTrack
     BarManager = dxBarManager1
     ItemLinks = <
       item
+        Visible = True
+        ItemName = 'dxBarButton1'
+      end
+      item
+        BeginGroup = True
         Visible = True
         ItemName = 'Excel3'
       end>

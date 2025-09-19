@@ -513,7 +513,9 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1contract_cod: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1contract_agree_cod: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1contract_agree_date: TcxGridDBBandedColumn;
-    cxGrid12DBBandedTableView1Column10: TcxGridDBBandedColumn;
+    cxGrid12DBBandedTableView1agreement_vid_activity: TcxGridDBBandedColumn;
+    dxBarSubItem1: TdxBarSubItem;
+    dxBarButton1: TdxBarButton;
 
     procedure N4Click(Sender: TObject);
     procedure N2Click(Sender: TObject);
@@ -627,6 +629,7 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     procedure cxGrid12DBBandedTableView1SelectionChanged(Sender: TcxCustomGridTableView);
     procedure dxBarButton2Click(Sender: TObject);
     procedure cxGrid12DBBandedTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
+    procedure dxBarButton1Click(Sender: TObject);
 
 
   private
@@ -5055,6 +5058,92 @@ begin
   end;
 end;
 
+
+procedure TfmFactTrack.dxBarButton1Click(Sender: TObject);
+var OpenDialog: TOpenDialog;
+    exApp, exWkb, exWks : OleVariant;
+    cnt, i, k : integer;
+    s, s1, s2 : string;
+    sp : TADOStoredProc;
+begin
+
+
+  OpenDialog := TOpenDialog.Create(nil);
+  OpenDialog.Filter     := 'Excel файлы|*.xls;*.xlsx';
+  OpenDialog.DefaultExt := 'xls';
+  if OpenDialog.Execute then begin
+    ShowTextMessage('Запуск сервера автоматизации...', False);
+    exApp := CreateOleObject('Excel.Application');
+    exWkb := exApp.Workbooks.Open(OpenDialog.FileName);
+    exWkb := exApp.ActiveWorkbook;
+    exWks := exWkb.WorkSheets[1];
+
+
+    sp := TADOStoredProc.Create(nil);
+    sp.Connection := fmMain.Lis;
+    sp.ProcedureName := 'sp_contract_track_load';
+    sp.Parameters.Refresh;
+
+    cnt := 0;
+    i   := 2;
+    while True do begin
+      if TVarData(exWks.Cells[i, 1].Value).VType = varEmpty then
+        break
+      else cnt := cnt + 1;
+      i := i + 1;
+    end;
+
+    i := 2;
+    for k:=0 to cnt-1 do begin
+      s := exWks.Cells[i + k, 3].Value;
+
+      s1 := LeftStr(s, Pos(' от ', s));
+      s2 := ReplaceStr(s, s1, '');
+
+      s1 := ReplaceStr(s1, '№', '');
+      s1 := Trim(s1);
+
+      s2 := ReplaceStr(s2, 'от', '');
+      s2 := ReplaceStr(s2, 'г.', '');
+      s2 := ReplaceStr(s2, ' января '   , '.01.');
+      s2 := ReplaceStr(s2, ' февраля '  , '.02.');
+      s2 := ReplaceStr(s2, ' марта '    , '.03.');
+      s2 := ReplaceStr(s2, ' апреля '   , '.04.');
+      s2 := ReplaceStr(s2, ' мая '      , '.05.');
+      s2 := ReplaceStr(s2, ' июня '     , '.06.');
+      s2 := ReplaceStr(s2, ' июля '     , '.07.');
+      s2 := ReplaceStr(s2, ' августа '  , '.08.');
+      s2 := ReplaceStr(s2, ' сентября ' , '.09.');
+      s2 := ReplaceStr(s2, ' октября '  , '.10.');
+      s2 := ReplaceStr(s2, ' ноября '   , '.11.');
+      s2 := ReplaceStr(s2, ' декабря '  , '.12.');
+      s2 := Trim(s2);
+
+
+
+      sp.Close;
+      sp.Parameters.Refresh;
+      sp.Parameters.ParamByName('@num_document'   ).Value := exWks.Cells[i + k, 1].Value;
+      sp.Parameters.ParamByName('@firm_name'      ).Value := exWks.Cells[i + k, 2].Value;
+      sp.Parameters.ParamByName('@contract_cod'   ).Value := s1;
+      sp.Parameters.ParamByName('@contract_date'  ).Value := StrToDate(s2);
+      sp.Parameters.ParamByName('@agreement_cod'  ).Value := exWks.Cells[i + k, 4].Value;
+      sp.Parameters.ParamByName('@agreement_date' ).Value := StrToDate(exWks.Cells[i + k, 5].Value);
+      sp.Parameters.ParamByName('@agreement_vid_activity' ).Value := exWks.Cells[i + k, 6].Value;
+      sp.ExecProc;
+
+      ShowTextMessage('Осталось '+IntToStr(cnt-k)+' строк...', False);
+    end;
+
+    sp.Free;
+    ShowTextMessage;
+    exApp.Quit;
+
+    Action_RefreshExecute(nil);
+  end;
+
+  OpenDialog.Free;
+end;
 
 procedure TfmFactTrack.dxBarButton29Click(Sender: TObject);
 var       i : Integer;
