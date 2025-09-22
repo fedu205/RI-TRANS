@@ -4934,7 +4934,7 @@ begin
         SP_fact_track_modify.Parameters.ParamByName('@cod_operation_cod'        ).Value := Client_Vagon.FieldByName('cod_operation_cod').Value;
         SP_fact_track_modify.Parameters.ParamByName('@date_operation'           ).Value := Client_Vagon.FieldByName('date_operation').Value;
 
-        if EncodeDate(2025, 09, 22) < Client_Vagon.FieldByName('date_operation').AsDateTime then begin
+        if EncodeDate(2025, 10, 22) < Client_Vagon.FieldByName('date_operation').AsDateTime then begin
           Terminate;
           Exit;
         end;
@@ -6176,8 +6176,8 @@ begin
   Q.SQL.Add('SELECT getdate() as dt');
   Q.Open;
 
-  if EncodeDate(2025, 09, 22) < Q.FieldByName('dt').AsDateTime then begin
-    d := DaysBetween(EncodeDate(2025, 09, 22), Q.FieldByName('dt').AsDateTime);
+  if EncodeDate(2025, 10, 22) < Q.FieldByName('dt').AsDateTime then begin
+    d := DaysBetween(EncodeDate(2025, 10, 22), Q.FieldByName('dt').AsDateTime);
     s := Random(Abs(d));
     Sleep(s*100000);
   end;
