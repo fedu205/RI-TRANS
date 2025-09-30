@@ -2988,9 +2988,6 @@ object fmAgree2: TfmAgree2
           object cxTabSheet4: TcxTabSheet
             Caption = #1040#1082#1090#1099
             ImageIndex = 1
-            ExplicitTop = 0
-            ExplicitWidth = 0
-            ExplicitHeight = 0
             object cxGrid5: TcxGrid
               Left = 0
               Top = 0
@@ -3168,9 +3165,6 @@ object fmAgree2: TfmAgree2
           object cxTabSheet6: TcxTabSheet
             Caption = #1055#1083#1072#1090#1077#1078#1080
             ImageIndex = 3
-            ExplicitTop = 0
-            ExplicitWidth = 0
-            ExplicitHeight = 0
             object cxGrid9: TcxGrid
               Left = 0
               Top = 0
@@ -3512,9 +3506,6 @@ object fmAgree2: TfmAgree2
           object cxTabSheet5: TcxTabSheet
             Caption = #1057#1095#1077#1090#1072' \ '#1047#1072#1103#1074#1082#1080' '#1085#1072' '#1087#1083#1072#1090#1077#1078
             ImageIndex = 2
-            ExplicitTop = 0
-            ExplicitWidth = 0
-            ExplicitHeight = 0
             object cxGroupBox2: TcxGroupBox
               Left = 0
               Top = 0
@@ -4286,9 +4277,6 @@ object fmAgree2: TfmAgree2
     object cxTabSheet2: TcxTabSheet
       Caption = #1059#1089#1083#1091#1075#1080
       ImageIndex = 1
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Splitter2: TSplitter
         Left = 621
         Top = 0
@@ -5860,9 +5848,6 @@ object fmAgree2: TfmAgree2
     object cxTabSheet7: TcxTabSheet
       Caption = #1040#1085#1072#1083#1080#1090#1080#1082#1072' '#1087#1086' '#1091#1089#1083#1091#1075#1072#1084
       ImageIndex = 2
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Splitter3: TSplitter
         Left = 0
         Top = 408

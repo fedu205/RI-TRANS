@@ -4703,7 +4703,7 @@ object fmFactCard: TfmFactCard
     SQL.Strings = (
       'SELECT distinct firm_customer, firm_customer_name'
       'FROM view_contract_rights '
-      'WHERE type_contract IN (0,1) and contract_set <> -1'
+      'WHERE type_contract IN (0,1) and isnull(contract_set,-1) <> -1'
       'ORDER BY firm_customer_name')
     Left = 266
     Top = 129

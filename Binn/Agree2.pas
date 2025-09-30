@@ -6689,6 +6689,7 @@ begin
     SP := TADOStoredProc.Create(nil);
     SP.Connection := Fconnect;
     SP.ProcedureName := 'sp_fact_etran_change';
+    SP.Parameters.Refresh;
     SP.Parameters.ParamByName('@bargain_id').Value := cxGrid1DBBandedTableView1bargain_id.DataBinding.Field.AsInteger;
     SP.ExecProc;
   except
