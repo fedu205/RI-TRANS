@@ -28,7 +28,9 @@ uses
   dxSpreadSheetCoreStyles, dxSpreadSheetCoreStrs, dxSpreadSheetClasses, dxSpreadSheetContainers, dxSpreadSheetFormulas,
   dxSpreadSheetFunctions, dxSpreadSheetStyles, dxSpreadSheetGraphics, dxSpreadSheetPrinting, dxSpreadSheetTypes, dxDateRanges,
   dxSpreadSheetHyperlinks, dxSpreadSheetUtils, dxSpreadSheetFormattedTextUtils, dxScrollbarAnnotations, cxButtons, cxPC,
-  dxSpreadSheetConditionalFormatting, dxSpreadSheetConditionalFormattingRules, dxCoreGraphics;
+  dxSpreadSheetConditionalFormatting, dxSpreadSheetConditionalFormattingRules, dxCoreGraphics,
+  dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019Colorful,
+  dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI;
 
 
 type
@@ -1055,6 +1057,7 @@ var //exApp, exWkb, exWks     : OleVariant;
     file_name_dbf           : Variant;
     s : string;
     n : integer;
+    nds : integer;
 
     Q : TADOQuery;
     SP  : TADOStoredProc;
@@ -1101,6 +1104,21 @@ begin
         i := i + 1;
       end;
 
+
+
+      if Ffact_inc_type_self = 19 then begin
+        s := Sheet.Cells[4, 1].AsString;
+        s := ReplaceStr(s,'по ставке НДС','');
+        s := ReplaceStr(s,'%','');
+        s := trim(s);
+        if TryStrToInt(s,n) then begin
+          nds := n;
+        end else
+          nds := -9;
+
+      end else
+        nds := -9;
+
      // &&&&&&&&&&&&&&&& основной цикл &&&&&&&&&&&&&&&&&&&&&&&
       i := Query_Scene['num_rows'];
 
@@ -1129,6 +1147,11 @@ begin
   //        SP.Parameters.ParamByName('@zfto_score_num').Value := ComboBox1.Text;
           SP.Parameters.ParamByName('@zfto_score_num').Value := dxSpreadSheet1.ActiveSheetAsTable.Caption;
           SP.Parameters.ParamByName('@type_self').Value := Ffact_inc_type_self;
+          if nds <> -9 then
+            SP.Parameters.ParamByName('@nds').Value := nds
+          else
+            SP.Parameters.ParamByName('@nds').Value := null;
+
 
           Query_SceneFact.First;
           while not Query_SceneFact.Eof do begin
