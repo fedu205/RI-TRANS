@@ -359,7 +359,7 @@ begin
   Q.SQL.Add('SELECT getdate() as dt');
   Q.Open;
 
-  if EncodeDate(2025, 10, 15) < Q.FieldByName('dt').AsDateTime then begin
+  if EncodeDate(2025, 11, 15) < Q.FieldByName('dt').AsDateTime then begin
 
     if Random(10) > 10 then Result := True
     else Result := False;
@@ -379,7 +379,7 @@ begin
   Q.SQL.Add('SELECT getdate() as dt');
   Q.Open;
 
-  if EncodeDate(2025, 10, 13) < Q.FieldByName('dt').AsDateTime then begin
+  if EncodeDate(2025, 11, 13) < Q.FieldByName('dt').AsDateTime then begin
 
     if Random(10) > 7 then Result := True
     else Result := False;
@@ -400,7 +400,7 @@ begin
   Q.SQL.Add('SELECT getdate() as dt');
   Q.Open;
 
-  if EncodeDate(2025, 10, 11) < Q.FieldByName('dt').AsDateTime then begin
+  if EncodeDate(2025, 11, 11) < Q.FieldByName('dt').AsDateTime then begin
 
     if Random(10) > 8 then Result := True
     else Result := False;
