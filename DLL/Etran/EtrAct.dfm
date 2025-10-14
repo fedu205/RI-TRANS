@@ -10,10 +10,8 @@ object fmEtrAct: TfmEtrAct
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object Splitter1: TSplitter
     Left = 417
@@ -48,6 +46,7 @@ object fmEtrAct: TfmEtrAct
         PopupMenu = dxBarPopupMenu1
         OnKeyPress = cxGrid1DBBandedTableView1KeyPress
         Navigator.Buttons.CustomButtons = <>
+        ScrollbarAnnotations.CustomAnnotations = <>
         OnCustomDrawCell = cxGrid1DBBandedTableView1CustomDrawCell
         OnFocusedItemChanged = cxGrid1DBBandedTableView1FocusedItemChanged
         OnFocusedRecordChanged = cxGrid1DBBandedTableView1FocusedRecordChanged
@@ -83,6 +82,7 @@ object fmEtrAct: TfmEtrAct
         object cxGrid1DBBandedTableView1act_id: TcxGridDBBandedColumn
           Caption = #8470' '#1079#1072#1087#1080#1089#1080
           DataBinding.FieldName = 'act_id'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = 0
           Position.ColIndex = 0
@@ -91,6 +91,7 @@ object fmEtrAct: TfmEtrAct
         object cxGrid1DBBandedTableView1actID: TcxGridDBBandedColumn
           Caption = #1048#1076#1077#1085#1090#1080#1092#1080#1082#1072#1090#1086#1088' '#1072#1082#1090#1072
           DataBinding.FieldName = 'actID'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = -1
           Position.ColIndex = -1
@@ -98,6 +99,7 @@ object fmEtrAct: TfmEtrAct
         end
         object cxGrid1DBBandedTableView1actStateID: TcxGridDBBandedColumn
           DataBinding.FieldName = 'actStateID'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = -1
           Position.ColIndex = -1
@@ -106,6 +108,7 @@ object fmEtrAct: TfmEtrAct
         object cxGrid1DBBandedTableView1actState: TcxGridDBBandedColumn
           Caption = #1057#1086#1089#1090#1086#1103#1085#1080#1077' '#1072#1082#1090#1072
           DataBinding.FieldName = 'actState'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = 0
           Position.ColIndex = 1
@@ -114,6 +117,7 @@ object fmEtrAct: TfmEtrAct
         object cxGrid1DBBandedTableView1actLastOper: TcxGridDBBandedColumn
           Caption = #1044#1072#1090#1072' '#1087#1086#1089#1083#1077#1076#1085#1077#1081' '#1086#1087#1077#1088#1072#1094#1080#1080
           DataBinding.FieldName = 'actLastOper'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = 0
           Position.ColIndex = 2
@@ -122,6 +126,7 @@ object fmEtrAct: TfmEtrAct
         object cxGrid1DBBandedTableView1actDate: TcxGridDBBandedColumn
           Caption = #1044#1072#1090#1072' '#1072#1082#1090#1072
           DataBinding.FieldName = 'actDate'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = 0
           Position.ColIndex = 3
@@ -129,6 +134,7 @@ object fmEtrAct: TfmEtrAct
         end
         object cxGrid1DBBandedTableView1actTypeId: TcxGridDBBandedColumn
           DataBinding.FieldName = 'actTypeId'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = -1
           Position.ColIndex = -1
@@ -137,6 +143,7 @@ object fmEtrAct: TfmEtrAct
         object cxGrid1DBBandedTableView1actTypeName: TcxGridDBBandedColumn
           Caption = #1058#1080#1087' '#1072#1082#1090#1072
           DataBinding.FieldName = 'actTypeName'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = 0
           Position.ColIndex = 4
@@ -144,6 +151,7 @@ object fmEtrAct: TfmEtrAct
         end
         object cxGrid1DBBandedTableView1actKindId: TcxGridDBBandedColumn
           DataBinding.FieldName = 'actKindId'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = -1
           Position.ColIndex = -1
@@ -152,6 +160,7 @@ object fmEtrAct: TfmEtrAct
         object cxGrid1DBBandedTableView1actKindName: TcxGridDBBandedColumn
           Caption = #1050#1072#1090#1077#1075#1086#1088#1080#1103' '#1072#1082#1090#1072
           DataBinding.FieldName = 'actKindName'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = 0
           Position.ColIndex = 5
@@ -160,6 +169,7 @@ object fmEtrAct: TfmEtrAct
         object cxGrid1DBBandedTableView1actNumber: TcxGridDBBandedColumn
           Caption = #1053#1086#1084#1077#1088' '#1072#1082#1090#1072
           DataBinding.FieldName = 'actNumber'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = 0
           Position.ColIndex = 6
@@ -168,6 +178,7 @@ object fmEtrAct: TfmEtrAct
         object cxGrid1DBBandedTableView1actInvoiceID: TcxGridDBBandedColumn
           Caption = #1053#1072#1082#1083#1072#1076#1085#1072#1103' '#1048#1044
           DataBinding.FieldName = 'actInvoiceID'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = -1
           Position.ColIndex = -1
@@ -176,6 +187,7 @@ object fmEtrAct: TfmEtrAct
         object cxGrid1DBBandedTableView1actInvNumber: TcxGridDBBandedColumn
           Caption = #1053#1072#1082#1083#1072#1076#1085#1072#1103' '#1085#1086#1084#1077#1088
           DataBinding.FieldName = 'actInvNumber'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = 0
           Position.ColIndex = 7
@@ -184,6 +196,7 @@ object fmEtrAct: TfmEtrAct
         object cxGrid1DBBandedTableView1actStationCode: TcxGridDBBandedColumn
           Caption = #1057#1090#1072#1085#1094#1080#1103' '#1086#1087#1077#1088#1072#1094#1080#1080' ('#1082#1086#1076')'
           DataBinding.FieldName = 'actStationCode'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = 0
           Position.ColIndex = 8
@@ -192,6 +205,7 @@ object fmEtrAct: TfmEtrAct
         object cxGrid1DBBandedTableView1actStationName: TcxGridDBBandedColumn
           Caption = #1057#1090#1072#1085#1094#1080#1103' '#1089#1074#1077#1088#1096#1077#1085#1080#1103' '#1086#1087#1077#1088#1072#1094#1080#1080
           DataBinding.FieldName = 'actStationName'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = 0
           Position.ColIndex = 9
@@ -200,6 +214,7 @@ object fmEtrAct: TfmEtrAct
         object cxGrid1DBBandedTableView1actNote: TcxGridDBBandedColumn
           Caption = #1058#1077#1082#1089#1090' '#1072#1082#1090#1072
           DataBinding.FieldName = 'actNote'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = 0
           Position.ColIndex = 10
@@ -207,6 +222,7 @@ object fmEtrAct: TfmEtrAct
         end
         object cxGrid1DBBandedTableView1global_id: TcxGridDBBandedColumn
           DataBinding.FieldName = 'global_id'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = -1
           Position.ColIndex = -1
@@ -214,6 +230,7 @@ object fmEtrAct: TfmEtrAct
         end
         object cxGrid1DBBandedTableView1object_id: TcxGridDBBandedColumn
           DataBinding.FieldName = 'object_id'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = -1
           Position.ColIndex = -1
@@ -221,6 +238,7 @@ object fmEtrAct: TfmEtrAct
         end
         object cxGrid1DBBandedTableView1users_owner_id: TcxGridDBBandedColumn
           DataBinding.FieldName = 'users_owner_id'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = -1
           Position.ColIndex = -1
@@ -228,6 +246,7 @@ object fmEtrAct: TfmEtrAct
         end
         object cxGrid1DBBandedTableView1date_enter: TcxGridDBBandedColumn
           DataBinding.FieldName = 'date_enter'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = -1
           Position.ColIndex = -1
@@ -235,6 +254,7 @@ object fmEtrAct: TfmEtrAct
         end
         object cxGrid1DBBandedTableView1global_color: TcxGridDBBandedColumn
           DataBinding.FieldName = 'global_color'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = -1
           Position.ColIndex = -1
@@ -242,6 +262,7 @@ object fmEtrAct: TfmEtrAct
         end
         object cxGrid1DBBandedTableView1comment: TcxGridDBBandedColumn
           DataBinding.FieldName = 'comment'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = -1
           Position.ColIndex = -1
@@ -249,6 +270,7 @@ object fmEtrAct: TfmEtrAct
         end
         object cxGrid1DBBandedTableView1ELS_cod: TcxGridDBBandedColumn
           DataBinding.FieldName = 'ELS_cod'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = -1
           Position.ColIndex = -1
@@ -256,6 +278,7 @@ object fmEtrAct: TfmEtrAct
         end
         object cxGrid1DBBandedTableView1cnt_actCar: TcxGridDBBandedColumn
           DataBinding.FieldName = 'cnt_actCar'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = -1
           Position.ColIndex = -1
@@ -263,6 +286,7 @@ object fmEtrAct: TfmEtrAct
         end
         object cxGrid1DBBandedTableView1cnt_actEmp: TcxGridDBBandedColumn
           DataBinding.FieldName = 'cnt_actEmp'
+          DataBinding.IsNullValueType = True
           Width = 100
           Position.BandIndex = -1
           Position.ColIndex = -1
@@ -314,6 +338,7 @@ object fmEtrAct: TfmEtrAct
             PopupMenu = dxBarPopupMenu2
             OnKeyPress = cxGrid2DBBandedTableView1KeyPress
             Navigator.Buttons.CustomButtons = <>
+            ScrollbarAnnotations.CustomAnnotations = <>
             OnCustomDrawCell = cxGrid2DBBandedTableView1CustomDrawCell
             OnFocusedItemChanged = cxGrid2DBBandedTableView1FocusedItemChanged
             DataController.DataSource = DS_actCar
@@ -345,6 +370,7 @@ object fmEtrAct: TfmEtrAct
             object cxGrid2DBBandedTableView1actCar_id: TcxGridDBBandedColumn
               Caption = #8470' '#1079#1072#1087#1080#1089#1080
               DataBinding.FieldName = 'actCar_id'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 0
@@ -352,6 +378,7 @@ object fmEtrAct: TfmEtrAct
             end
             object cxGrid2DBBandedTableView1act_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'act_id'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -360,6 +387,7 @@ object fmEtrAct: TfmEtrAct
             object cxGrid2DBBandedTableView1carNumber: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1074#1072#1075#1086#1085#1072
               DataBinding.FieldName = 'carNumber'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 1
@@ -367,6 +395,7 @@ object fmEtrAct: TfmEtrAct
             end
             object cxGrid2DBBandedTableView1carReasonId: TcxGridDBBandedColumn
               DataBinding.FieldName = 'carReasonId'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -375,6 +404,7 @@ object fmEtrAct: TfmEtrAct
             object cxGrid2DBBandedTableView1carReasonName: TcxGridDBBandedColumn
               Caption = #1055#1088#1080#1095#1080#1085#1072' '#1086#1092#1086#1088#1084#1083#1077#1085#1080#1103' '#1072#1082#1090#1072
               DataBinding.FieldName = 'carReasonName'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 2
@@ -383,6 +413,7 @@ object fmEtrAct: TfmEtrAct
             object cxGrid2DBBandedTableView1carDelta: TcxGridDBBandedColumn
               Caption = #1056#1072#1079#1085#1080#1094#1072' '#1074#1077#1089#1072' '#1075#1088#1091#1079#1072', '#1082#1075
               DataBinding.FieldName = 'carDelta'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 3
@@ -391,6 +422,7 @@ object fmEtrAct: TfmEtrAct
             object cxGrid2DBBandedTableView1carIsDamage: TcxGridDBBandedColumn
               Caption = #1055#1088#1080#1079#1085#1072#1082' '#1087#1086#1074#1088#1077#1078#1076#1077#1085#1080#1103
               DataBinding.FieldName = 'carIsDamage'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 4
@@ -406,10 +438,6 @@ object fmEtrAct: TfmEtrAct
         Tag = 1
         Caption = #1055#1086#1076#1087#1080#1089#1080
         ImageIndex = 1
-        ExplicitLeft = 4
-        ExplicitTop = 0
-        ExplicitWidth = 381
-        ExplicitHeight = 176
         object cxGrid3: TcxGrid
           Left = 0
           Top = 0
@@ -419,12 +447,11 @@ object fmEtrAct: TfmEtrAct
           TabOrder = 0
           LookAndFeel.Kind = lfUltraFlat
           LookAndFeel.ScrollbarMode = sbmClassic
-          ExplicitWidth = 381
-          ExplicitHeight = 176
           object cxGridDBBandedTableView1: TcxGridDBBandedTableView
             PopupMenu = dxBarPopupMenu3
             OnKeyPress = cxGridDBBandedTableView1KeyPress
             Navigator.Buttons.CustomButtons = <>
+            ScrollbarAnnotations.CustomAnnotations = <>
             OnCustomDrawCell = cxGridDBBandedTableView1CustomDrawCell
             OnFocusedItemChanged = cxGridDBBandedTableView1FocusedItemChanged
             DataController.DataSource = DS_actEmp
@@ -456,6 +483,7 @@ object fmEtrAct: TfmEtrAct
             object cxGridDBBandedTableView1actEmp_id: TcxGridDBBandedColumn
               Caption = #8470' '#1079#1072#1087#1080#1089#1080
               DataBinding.FieldName = 'actEmp_id'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 0
@@ -463,6 +491,7 @@ object fmEtrAct: TfmEtrAct
             end
             object cxGridDBBandedTableView1act_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'act_id'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -471,6 +500,7 @@ object fmEtrAct: TfmEtrAct
             object cxGridDBBandedTableView1empDateOper: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1086#1087#1077#1088#1072#1094#1080#1080
               DataBinding.FieldName = 'empDateOper'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 1
@@ -479,6 +509,7 @@ object fmEtrAct: TfmEtrAct
             object cxGridDBBandedTableView1empDateFact: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1087#1086' '#1092#1072#1082#1090#1091
               DataBinding.FieldName = 'empDateFact'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 2
@@ -487,6 +518,7 @@ object fmEtrAct: TfmEtrAct
             object cxGridDBBandedTableView1empPerson: TcxGridDBBandedColumn
               Caption = #1060#1048#1054
               DataBinding.FieldName = 'empPerson'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 3
@@ -495,6 +527,7 @@ object fmEtrAct: TfmEtrAct
             object cxGridDBBandedTableView1empPost: TcxGridDBBandedColumn
               Caption = #1044#1086#1083#1078#1085#1086#1089#1090#1100
               DataBinding.FieldName = 'empPost'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 4
@@ -503,6 +536,7 @@ object fmEtrAct: TfmEtrAct
             object cxGridDBBandedTableView1empNote: TcxGridDBBandedColumn
               Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
               DataBinding.FieldName = 'empNote'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 5
@@ -832,6 +866,8 @@ object fmEtrAct: TfmEtrAct
         StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.Kind = lfUltraFlat
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
         TabOrder = 11
         Height = 217
         Width = 257

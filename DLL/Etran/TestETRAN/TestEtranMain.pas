@@ -12,7 +12,8 @@ uses
 
 
   System.Types, Soap.XSBuiltIns, Soap.SOAPHTTPTrans, System.Net.URLClient, dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019Colorful,
-  dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI;
+  dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI, Vcl.Buttons,
+  ComObj, Datasnap.DBClient;
 
 type
   TForm1 = class(TForm)
@@ -58,6 +59,8 @@ type
     cxCheckBox1: TcxCheckBox;
     Button2: TButton;
     Button3: TButton;
+    BitBtn1: TBitBtn;
+    ClientDataSet1: TClientDataSet;
     procedure Button1Click(Sender: TObject);
     procedure cxButton9Click(Sender: TObject);
     procedure cxButton1Click(Sender: TObject);
@@ -66,6 +69,7 @@ type
     procedure Button2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -80,6 +84,108 @@ implementation
 uses TestSOAP;
 
 {$R *.dfm}
+
+procedure TForm1.BitBtn1Click(Sender: TObject);
+var OpenDialog: TOpenDialog;
+    exApp, exWkb, exWks : OleVariant;
+    cnt, i, k : integer;
+    s, s1, s2 : string;
+    ClientDS : TClientDataSet;
+begin
+
+
+  OpenDialog := TOpenDialog.Create(nil);
+  OpenDialog.Filter     := 'Excel файлы|*.xls;*.xlsx';
+  OpenDialog.DefaultExt := 'xls';
+  if OpenDialog.Execute then begin
+//    ShowTextMessage('Запуск сервера автоматизации...', False);
+
+    ClientDS := TClientDataSet.Create(nil);
+    ClientDS.FieldDefs.Add('id', ftAutoInc);
+    ClientDS.FieldDefs.Add('num_document', ftString, 500);
+    ClientDS.FieldDefs.Add('firm_name', ftString, 500);
+    ClientDS.FieldDefs.Add('contract_cod', ftString, 500);
+    ClientDS.FieldDefs.Add('contract_date', ftDateTime);
+    ClientDS.FieldDefs.Add('agreement_cod', ftString, 500);
+    ClientDS.FieldDefs.Add('agreement_date', ftDateTime);
+    ClientDS.CreateDataSet;
+    ClientDS.LogChanges := False;
+
+    exApp := CreateOleObject('Excel.Application');
+    exWkb := exApp.Workbooks.Open(OpenDialog.FileName);
+    exWkb := exApp.ActiveWorkbook;
+    exWks := exWkb.WorkSheets[1];
+
+    cnt := 0;
+    i   := 2;
+    while True do begin
+      if TVarData(exWks.Cells[i, 1].Value).VType = varEmpty then
+        break
+      else cnt := cnt + 1;
+      i := i + 1;
+    end;
+
+    i := 2;
+    cnt := 5;
+    for k:=0 to cnt-1 do begin
+      ClientDS.Append;
+      ClientDS.FieldByName('num_document'   ).Value := exWks.Cells[i + k, 1].Value;
+      ClientDS.FieldByName('firm_name'      ).Value := exWks.Cells[i + k, 2].Value;
+      s := exWks.Cells[i + k, 3].Value;
+
+      s1 := LeftStr(s, Pos(' от ', s));
+      s2 := ReplaceStr(s, s1, '');
+
+      s1 := ReplaceStr(s1, '№', '');
+      s1 := Trim(s1);
+
+      s2 := ReplaceStr(s2, 'от', '');
+      s2 := ReplaceStr(s2, 'г.', '');
+      s2 := ReplaceStr(s2, ' января '   , '.01.');
+      s2 := ReplaceStr(s2, ' февраля '  , '.02.');
+      s2 := ReplaceStr(s2, ' марта '    , '.03.');
+      s2 := ReplaceStr(s2, ' апреля '   , '.04.');
+      s2 := ReplaceStr(s2, ' мая '      , '.05.');
+      s2 := ReplaceStr(s2, ' июня '     , '.06.');
+      s2 := ReplaceStr(s2, ' июля '     , '.07.');
+      s2 := ReplaceStr(s2, ' августа '  , '.08.');
+      s2 := ReplaceStr(s2, ' сентября ' , '.09.');
+      s2 := ReplaceStr(s2, ' октября '  , '.10.');
+      s2 := ReplaceStr(s2, ' ноября '   , '.11.');
+      s2 := ReplaceStr(s2, ' декабря '  , '.12.');
+      s2 := Trim(s2);
+
+      ClientDS.FieldByName('contract_cod'   ).Value := s1;
+      ClientDS.FieldByName('contract_date'  ).Value := StrToDate(s2);
+
+      ClientDS.FieldByName('agreement_cod'  ).Value := exWks.Cells[i + k, 4].Value;
+      ClientDS.FieldByName('agreement_date' ).Value := StrToDate(exWks.Cells[i + k, 5].Value);
+      ClientDS.Post;
+
+//      sp_etran_ecp_cls_modify.Close;
+//      sp_etran_ecp_cls_modify.Parameters.Refresh;
+//      sp_etran_ecp_cls_modify.Parameters.ParamByName('@str_etran_ecp_id').Value := str_ecp_etran_id;
+//      sp_etran_ecp_cls_modify.Parameters.ParamByName('@carNumber'   ).Value := exWks.Cells[i + k, 2].Value; // Номер вагона
+//      sp_etran_ecp_cls_modify.Parameters.ParamByName('@sealMarks'   ).Value := exWks.Cells[i + k, 5].Value; // Контрольный знак
+//      sp_etran_ecp_cls_modify.Parameters.ParamByName('@sealTypeName').Value := exWks.Cells[i + k, 4].Value; // Тип;
+//      sp_etran_ecp_cls_modify.ExecProc;
+//
+//      ShowTextMessage('Осталось '+IntToStr(cnt-k)+' строк...', False);
+    end;
+
+
+    ShowMessage(ClientDS.XMLData);
+
+//    sp_etran_ecp_cls_modify.Free;
+//    ShowTextMessage;
+    exApp.Quit;
+//    ShowTextMessage('Осталось '+IntToStr(cnt)+' строк...', False);
+
+  end;
+
+  OpenDialog.Free;
+
+end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 var s1, s2, s3 : WideString;

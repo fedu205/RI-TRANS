@@ -10,31 +10,29 @@ object fmEtrClaim: TfmEtrClaim
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 13
   object cxSplitter2: TcxSplitter
     Left = 400
-    Top = 167
+    Top = 144
     Width = 5
-    Height = 588
+    Height = 611
     Control = Panel6
     Color = 8421631
     ParentColor = False
-    ExplicitTop = 144
-    ExplicitHeight = 611
+    ExplicitTop = 167
+    ExplicitHeight = 588
   end
   object Panel11: TPanel
     Left = 405
-    Top = 167
+    Top = 144
     Width = 799
-    Height = 588
+    Height = 611
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitTop = 144
-    ExplicitHeight = 611
+    ExplicitTop = 167
+    ExplicitHeight = 588
     object Panel49: TPanel
       Left = 0
       Top = 0
@@ -103,7 +101,7 @@ object fmEtrClaim: TfmEtrClaim
       object Panel33: TPanel
         Left = 0
         Top = 0
-        Width = 267
+        Width = 268
         Height = 100
         Align = alClient
         BevelEdges = [beBottom]
@@ -111,7 +109,7 @@ object fmEtrClaim: TfmEtrClaim
         BevelOuter = bvNone
         TabOrder = 0
         DesignSize = (
-          267
+          268
           98)
         object cxLabel18: TcxLabel
           Left = 6
@@ -171,7 +169,7 @@ object fmEtrClaim: TfmEtrClaim
         end
       end
       object Panel34: TPanel
-        Left = 267
+        Left = 268
         Top = 0
         Width = 266
         Height = 100
@@ -241,9 +239,9 @@ object fmEtrClaim: TfmEtrClaim
         end
       end
       object Panel35: TPanel
-        Left = 533
+        Left = 534
         Top = 0
-        Width = 266
+        Width = 265
         Height = 100
         Align = alClient
         BevelEdges = [beBottom]
@@ -251,7 +249,7 @@ object fmEtrClaim: TfmEtrClaim
         BevelOuter = bvNone
         TabOrder = 2
         DesignSize = (
-          266
+          265
           98)
         object cxLabel126: TcxLabel
           Left = 5
@@ -345,7 +343,7 @@ object fmEtrClaim: TfmEtrClaim
       object Panel36: TPanel
         Left = 0
         Top = 0
-        Width = 399
+        Width = 400
         Height = 103
         Align = alClient
         BevelEdges = [beBottom]
@@ -353,7 +351,7 @@ object fmEtrClaim: TfmEtrClaim
         BevelOuter = bvNone
         TabOrder = 0
         DesignSize = (
-          399
+          400
           101)
         object cxLabel174: TcxLabel
           Left = 6
@@ -407,9 +405,9 @@ object fmEtrClaim: TfmEtrClaim
         end
       end
       object Panel37: TPanel
-        Left = 399
+        Left = 400
         Top = 0
-        Width = 400
+        Width = 399
         Height = 103
         Align = alClient
         BevelEdges = [beBottom]
@@ -417,7 +415,7 @@ object fmEtrClaim: TfmEtrClaim
         BevelOuter = bvNone
         TabOrder = 1
         DesignSize = (
-          400
+          399
           101)
         object cxLabel177: TcxLabel
           Left = 5
@@ -547,7 +545,7 @@ object fmEtrClaim: TfmEtrClaim
       object Panel38: TPanel
         Left = 0
         Top = 0
-        Width = 399
+        Width = 400
         Height = 103
         Align = alClient
         BevelEdges = [beBottom]
@@ -555,7 +553,7 @@ object fmEtrClaim: TfmEtrClaim
         BevelOuter = bvNone
         TabOrder = 0
         DesignSize = (
-          399
+          400
           101)
         object cxLabel180: TcxLabel
           Left = 5
@@ -624,9 +622,9 @@ object fmEtrClaim: TfmEtrClaim
         end
       end
       object Panel39: TPanel
-        Left = 399
+        Left = 400
         Top = 0
-        Width = 400
+        Width = 399
         Height = 103
         Align = alClient
         BevelEdges = [beBottom]
@@ -634,7 +632,7 @@ object fmEtrClaim: TfmEtrClaim
         BevelOuter = bvNone
         TabOrder = 1
         DesignSize = (
-          400
+          399
           101)
         object cxLabel185: TcxLabel
           Left = 5
@@ -678,6 +676,8 @@ object fmEtrClaim: TfmEtrClaim
           StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.Kind = lfUltraFlat
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
           TabOrder = 4
           Height = 50
           Width = 394
@@ -692,7 +692,6 @@ object fmEtrClaim: TfmEtrClaim
       HotZoneClassName = 'TcxSimpleStyle'
       AlignSplitter = salTop
       Control = GridPanel1
-      ExplicitWidth = 8
     end
     object cxSplitter10: TcxSplitter
       Left = 0
@@ -702,7 +701,6 @@ object fmEtrClaim: TfmEtrClaim
       HotZoneClassName = 'TcxSimpleStyle'
       AlignSplitter = salTop
       Control = GridPanel9
-      ExplicitWidth = 8
     end
     object cxSplitter11: TcxSplitter
       Left = 0
@@ -712,39 +710,36 @@ object fmEtrClaim: TfmEtrClaim
       HotZoneClassName = 'TcxSimpleStyle'
       AlignSplitter = salTop
       Control = GridPanel10
-      ExplicitWidth = 8
     end
     object cxPageControl4: TcxPageControl
       Left = 0
       Top = 359
       Width = 799
-      Height = 229
+      Height = 252
       Align = alClient
       TabOrder = 7
       Properties.ActivePage = cxTabSheet2
       Properties.CustomButtons.Buttons = <>
       OnChange = cxPageControl4Change
       OnDrawTabEx = cxPageControl4DrawTabEx
-      ExplicitHeight = 252
-      ClientRectBottom = 229
+      ExplicitHeight = 229
+      ClientRectBottom = 252
       ClientRectRight = 799
       ClientRectTop = 24
       object cxTabSheet2: TcxTabSheet
         Tag = 1
         Caption = #1054#1090#1087#1088#1072#1074#1082#1080
         ImageIndex = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 228
+        ExplicitHeight = 205
         object Panel40: TPanel
           Left = 0
-          Top = 99
+          Top = 122
           Width = 799
           Height = 106
           Align = alBottom
           BevelOuter = bvNone
           TabOrder = 0
-          ExplicitTop = 122
+          ExplicitTop = 99
           object Panel41: TPanel
             Left = 0
             Top = 0
@@ -766,6 +761,7 @@ object fmEtrClaim: TfmEtrClaim
                 PopupMenu = dxBarPopupMenu1
                 OnKeyPress = cxGridDBBandedTableView20KeyPress
                 Navigator.Buttons.CustomButtons = <>
+                ScrollbarAnnotations.CustomAnnotations = <>
                 OnCustomDrawCell = cxGridDBBandedTableView20CustomDrawCell
                 OnFocusedItemChanged = cxGridDBBandedTableView20FocusedItemChanged
                 DataController.DataSource = DS_otprGraphPod
@@ -814,12 +810,14 @@ object fmEtrClaim: TfmEtrClaim
                   end>
                 object cxGridDBBandedTableView20otprStyk_id: TcxGridDBBandedColumn
                   DataBinding.FieldName = 'otprStyk_id'
+                  DataBinding.IsNullValueType = True
                   Position.BandIndex = -1
                   Position.ColIndex = -1
                   Position.RowIndex = -1
                 end
                 object cxGridDBBandedTableView20clmOtpr_id: TcxGridDBBandedColumn
                   DataBinding.FieldName = 'clmOtpr_id'
+                  DataBinding.IsNullValueType = True
                   Position.BandIndex = -1
                   Position.ColIndex = -1
                   Position.RowIndex = -1
@@ -827,6 +825,7 @@ object fmEtrClaim: TfmEtrClaim
                 object cxGridDBBandedTableView20gpPodNum: TcxGridDBBandedColumn
                   Caption = #8470' '#1087#1086#1076#1072#1095#1080
                   DataBinding.FieldName = 'gpPodNum'
+                  DataBinding.IsNullValueType = True
                   Position.BandIndex = 0
                   Position.ColIndex = 0
                   Position.RowIndex = 0
@@ -834,6 +833,7 @@ object fmEtrClaim: TfmEtrClaim
                 object cxGridDBBandedTableView20gpPodDate: TcxGridDBBandedColumn
                   Caption = #1044#1072#1090#1072' '#1087#1086#1076#1072#1095#1080
                   DataBinding.FieldName = 'gpPodDate'
+                  DataBinding.IsNullValueType = True
                   Width = 76
                   Position.BandIndex = 0
                   Position.ColIndex = 1
@@ -842,6 +842,7 @@ object fmEtrClaim: TfmEtrClaim
                 object cxGridDBBandedTableView20gpWeight: TcxGridDBBandedColumn
                   Caption = #1042#1077#1089' '#1075#1088#1091#1079#1072
                   DataBinding.FieldName = 'gpWeight'
+                  DataBinding.IsNullValueType = True
                   Width = 60
                   Position.BandIndex = 0
                   Position.ColIndex = 2
@@ -850,6 +851,7 @@ object fmEtrClaim: TfmEtrClaim
                 object cxGridDBBandedTableView20gpCarCount: TcxGridDBBandedColumn
                   Caption = #1050#1086#1083'-'#1074#1086' '#1074#1072#1075'.'
                   DataBinding.FieldName = 'gpCarCount'
+                  DataBinding.IsNullValueType = True
                   Position.BandIndex = 0
                   Position.ColIndex = 3
                   Position.RowIndex = 0
@@ -857,6 +859,7 @@ object fmEtrClaim: TfmEtrClaim
                 object cxGridDBBandedTableView20gpWeightRefuse: TcxGridDBBandedColumn
                   Caption = #1042#1077#1089' '#1075#1088#1091#1079#1072' '#1086#1090#1082#1072#1079#1072
                   DataBinding.FieldName = 'gpWeightRefuse'
+                  DataBinding.IsNullValueType = True
                   Width = 94
                   Position.BandIndex = 0
                   Position.ColIndex = 4
@@ -865,6 +868,7 @@ object fmEtrClaim: TfmEtrClaim
                 object cxGridDBBandedTableView20gpCarCountRefuse: TcxGridDBBandedColumn
                   Caption = #1050#1086#1083'-'#1074#1086' '#1074#1072#1075'. '#1086#1090#1082#1072#1079#1072
                   DataBinding.FieldName = 'gpCarCountRefuse'
+                  DataBinding.IsNullValueType = True
                   Position.BandIndex = 0
                   Position.ColIndex = 5
                   Position.RowIndex = 0
@@ -896,6 +900,7 @@ object fmEtrClaim: TfmEtrClaim
                 PopupMenu = dxBarPopupMenu2
                 OnKeyPress = cxGridDBBandedTableView21KeyPress
                 Navigator.Buttons.CustomButtons = <>
+                ScrollbarAnnotations.CustomAnnotations = <>
                 OnCustomDrawCell = cxGridDBBandedTableView21CustomDrawCell
                 OnFocusedItemChanged = cxGridDBBandedTableView21FocusedItemChanged
                 DataController.DataSource = DS_otprStyk
@@ -939,12 +944,14 @@ object fmEtrClaim: TfmEtrClaim
                   end>
                 object cxGridDBBandedTableView21otprStyk_id: TcxGridDBBandedColumn
                   DataBinding.FieldName = 'otprStyk_id'
+                  DataBinding.IsNullValueType = True
                   Position.BandIndex = -1
                   Position.ColIndex = -1
                   Position.RowIndex = -1
                 end
                 object cxGridDBBandedTableView21clmOtpr_id: TcxGridDBBandedColumn
                   DataBinding.FieldName = 'clmOtpr_id'
+                  DataBinding.IsNullValueType = True
                   Position.BandIndex = -1
                   Position.ColIndex = -1
                   Position.RowIndex = -1
@@ -952,6 +959,7 @@ object fmEtrClaim: TfmEtrClaim
                 object cxGridDBBandedTableView21stykStationCode: TcxGridDBBandedColumn
                   Caption = #1057#1090'. '#1089#1076#1072#1095#1080' '#1082#1086#1076
                   DataBinding.FieldName = 'stykStationCode'
+                  DataBinding.IsNullValueType = True
                   Width = 80
                   Position.BandIndex = 0
                   Position.ColIndex = 0
@@ -960,6 +968,7 @@ object fmEtrClaim: TfmEtrClaim
                 object cxGridDBBandedTableView21stykStationName: TcxGridDBBandedColumn
                   Caption = #1057#1090'. '#1089#1076#1072#1095#1080
                   DataBinding.FieldName = 'stykStationName'
+                  DataBinding.IsNullValueType = True
                   Width = 109
                   Position.BandIndex = 0
                   Position.ColIndex = 1
@@ -968,6 +977,7 @@ object fmEtrClaim: TfmEtrClaim
                 object cxGridDBBandedTableView21stykCountryName: TcxGridDBBandedColumn
                   Caption = #1057#1090#1088#1072#1085#1072
                   DataBinding.FieldName = 'stykCountryName'
+                  DataBinding.IsNullValueType = True
                   Width = 124
                   Position.BandIndex = 0
                   Position.ColIndex = 2
@@ -993,25 +1003,26 @@ object fmEtrClaim: TfmEtrClaim
           Left = 0
           Top = 0
           Width = 799
-          Height = 91
+          Height = 114
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
-          ExplicitHeight = 114
+          ExplicitHeight = 91
           object cxGrid16: TcxGrid
             Left = 0
             Top = 0
             Width = 799
-            Height = 91
+            Height = 114
             Align = alClient
             TabOrder = 0
             LookAndFeel.Kind = lfUltraFlat
             LookAndFeel.ScrollbarMode = sbmClassic
-            ExplicitHeight = 114
+            ExplicitHeight = 91
             object cxGridDBBandedTableView12: TcxGridDBBandedTableView
               PopupMenu = dxBarPopupMenu3
               OnKeyPress = cxGridDBBandedTableView12KeyPress
               Navigator.Buttons.CustomButtons = <>
+              ScrollbarAnnotations.CustomAnnotations = <>
               OnCustomDrawCell = cxGridDBBandedTableView12CustomDrawCell
               OnFocusedItemChanged = cxGridDBBandedTableView12FocusedItemChanged
               OnFocusedRecordChanged = cxGridDBBandedTableView12FocusedRecordChanged
@@ -1051,12 +1062,14 @@ object fmEtrClaim: TfmEtrClaim
                 end>
               object cxGridDBBandedTableView12clmOtpr_id: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'clmOtpr_id'
+                DataBinding.IsNullValueType = True
                 Position.BandIndex = -1
                 Position.ColIndex = -1
                 Position.RowIndex = -1
               end
               object cxGridDBBandedTableView12claim_id: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'claim_id'
+                DataBinding.IsNullValueType = True
                 Position.BandIndex = -1
                 Position.ColIndex = -1
                 Position.RowIndex = -1
@@ -1064,6 +1077,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprNom: TcxGridDBBandedColumn
                 Caption = #1053#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080
                 DataBinding.FieldName = 'otprNom'
+                DataBinding.IsNullValueType = True
                 Width = 56
                 Position.BandIndex = 0
                 Position.ColIndex = 0
@@ -1071,6 +1085,7 @@ object fmEtrClaim: TfmEtrClaim
               end
               object cxGridDBBandedTableView12otprTypeID: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'otprTypeID'
+                DataBinding.IsNullValueType = True
                 Position.BandIndex = -1
                 Position.ColIndex = -1
                 Position.RowIndex = -1
@@ -1078,6 +1093,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprTypeName: TcxGridDBBandedColumn
                 Caption = #1042#1080#1076' '#1086#1090#1087#1088#1072#1074#1082#1080
                 DataBinding.FieldName = 'otprTypeName'
+                DataBinding.IsNullValueType = True
                 Width = 78
                 Position.BandIndex = 0
                 Position.ColIndex = 3
@@ -1085,6 +1101,7 @@ object fmEtrClaim: TfmEtrClaim
               end
               object cxGridDBBandedTableView12otprRecipID: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'otprRecipID'
+                DataBinding.IsNullValueType = True
                 Position.BandIndex = -1
                 Position.ColIndex = -1
                 Position.RowIndex = -1
@@ -1092,6 +1109,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprRecipOKPO: TcxGridDBBandedColumn
                 Caption = #1043#1088#1091#1079#1086#1087#1086#1083#1091#1095#1072#1090#1077#1083#1100' '#1054#1050#1055#1054
                 DataBinding.FieldName = 'otprRecipOKPO'
+                DataBinding.IsNullValueType = True
                 Width = 96
                 Position.BandIndex = 0
                 Position.ColIndex = 4
@@ -1100,6 +1118,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprRecipName: TcxGridDBBandedColumn
                 Caption = #1043#1088#1091#1079#1086#1087#1086#1083#1091#1095#1072#1090#1077#1083#1100
                 DataBinding.FieldName = 'otprRecipName'
+                DataBinding.IsNullValueType = True
                 Width = 96
                 Position.BandIndex = 0
                 Position.ColIndex = 5
@@ -1108,6 +1127,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprToCountryCode: TcxGridDBBandedColumn
                 Caption = #1057#1090#1088'. '#1085#1072#1079'. '#1082#1086#1076
                 DataBinding.FieldName = 'otprToCountryCode'
+                DataBinding.IsNullValueType = True
                 Width = 59
                 Position.BandIndex = 0
                 Position.ColIndex = 6
@@ -1116,6 +1136,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprToCountryName: TcxGridDBBandedColumn
                 Caption = #1057#1090#1088'. '#1085#1072#1079'. '
                 DataBinding.FieldName = 'otprToCountryName'
+                DataBinding.IsNullValueType = True
                 Width = 78
                 Position.BandIndex = 0
                 Position.ColIndex = 7
@@ -1124,6 +1145,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprToStationCode: TcxGridDBBandedColumn
                 Caption = #1057#1090'. '#1085#1072#1079#1085'. '#1082#1086#1076
                 DataBinding.FieldName = 'otprToStationCode'
+                DataBinding.IsNullValueType = True
                 Width = 63
                 Position.BandIndex = 0
                 Position.ColIndex = 8
@@ -1132,6 +1154,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprToStationName: TcxGridDBBandedColumn
                 Caption = #1057#1090'. '#1085#1072#1079#1085'.'
                 DataBinding.FieldName = 'otprToStationName'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 9
@@ -1140,6 +1163,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprExitStationCode: TcxGridDBBandedColumn
                 Caption = #1057#1090'. '#1074#1099#1093'. '#1080#1079' '#1056#1060' '#1082#1086#1076
                 DataBinding.FieldName = 'otprExitStationCode'
+                DataBinding.IsNullValueType = True
                 Width = 87
                 Position.BandIndex = 0
                 Position.ColIndex = 10
@@ -1148,6 +1172,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprExitStationName: TcxGridDBBandedColumn
                 Caption = #1057#1090'. '#1074#1099#1093'. '#1080#1079' '#1056#1060
                 DataBinding.FieldName = 'otprExitStationName'
+                DataBinding.IsNullValueType = True
                 Width = 89
                 Position.BandIndex = 0
                 Position.ColIndex = 11
@@ -1155,6 +1180,7 @@ object fmEtrClaim: TfmEtrClaim
               end
               object cxGridDBBandedTableView12otprToPortID: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'otprToPortID'
+                DataBinding.IsNullValueType = True
                 Position.BandIndex = -1
                 Position.ColIndex = -1
                 Position.RowIndex = -1
@@ -1162,6 +1188,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprToPortCode: TcxGridDBBandedColumn
                 Caption = #1055#1086#1088#1090' '#1082#1086#1076
                 DataBinding.FieldName = 'otprToPortCode'
+                DataBinding.IsNullValueType = True
                 Width = 62
                 Position.BandIndex = 0
                 Position.ColIndex = 12
@@ -1170,6 +1197,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprToPortName: TcxGridDBBandedColumn
                 Caption = #1055#1086#1088#1090
                 DataBinding.FieldName = 'otprToPortName'
+                DataBinding.IsNullValueType = True
                 Width = 77
                 Position.BandIndex = 0
                 Position.ColIndex = 13
@@ -1178,6 +1206,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprToHolderCode: TcxGridDBBandedColumn
                 Caption = #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1103' '#1074' '#1087#1091#1085#1082#1090#1077' '#1087#1077#1088#1077#1074#1072#1083#1082#1080' '#1082#1086#1076
                 DataBinding.FieldName = 'otprToHolderCode'
+                DataBinding.IsNullValueType = True
                 Width = 129
                 Position.BandIndex = 0
                 Position.ColIndex = 14
@@ -1186,6 +1215,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprToHolderName: TcxGridDBBandedColumn
                 Caption = #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1103' '#1074' '#1087#1091#1085#1082#1090#1077' '#1087#1077#1088#1077#1074#1072#1083#1082#1080
                 DataBinding.FieldName = 'otprToHolderName'
+                DataBinding.IsNullValueType = True
                 Width = 133
                 Position.BandIndex = 0
                 Position.ColIndex = 15
@@ -1194,6 +1224,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprFreightCode: TcxGridDBBandedColumn
                 Caption = #1050#1086#1076' '#1045#1058#1057#1053#1043
                 DataBinding.FieldName = 'otprFreightCode'
+                DataBinding.IsNullValueType = True
                 Width = 68
                 Position.BandIndex = 0
                 Position.ColIndex = 16
@@ -1202,6 +1233,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprFreightName: TcxGridDBBandedColumn
                 Caption = #1045#1058#1057#1053#1043
                 DataBinding.FieldName = 'otprFreightName'
+                DataBinding.IsNullValueType = True
                 Width = 96
                 Position.BandIndex = 0
                 Position.ColIndex = 17
@@ -1209,6 +1241,7 @@ object fmEtrClaim: TfmEtrClaim
               end
               object cxGridDBBandedTableView12otprFreightGNGID2001: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'otprFreightGNGID2001'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = -1
                 Position.ColIndex = -1
@@ -1217,6 +1250,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprFreightGNGCode: TcxGridDBBandedColumn
                 Caption = #1050#1086#1076' '#1043#1053#1043
                 DataBinding.FieldName = 'otprFreightGNGCode'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 18
@@ -1225,6 +1259,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprFreightGNGName: TcxGridDBBandedColumn
                 Caption = #1043#1053#1043
                 DataBinding.FieldName = 'otprFreightGNGName'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 19
@@ -1233,6 +1268,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprFreightWeight: TcxGridDBBandedColumn
                 Caption = #1042#1077#1089' '#1075#1088#1091#1079#1072' '#1074' '#1090#1085'.'
                 DataBinding.FieldName = 'otprFreightWeight'
+                DataBinding.IsNullValueType = True
                 Width = 88
                 Position.BandIndex = 0
                 Position.ColIndex = 2
@@ -1240,6 +1276,7 @@ object fmEtrClaim: TfmEtrClaim
               end
               object cxGridDBBandedTableView12otprPackKindID: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'otprPackKindID'
+                DataBinding.IsNullValueType = True
                 Position.BandIndex = -1
                 Position.ColIndex = -1
                 Position.RowIndex = -1
@@ -1247,6 +1284,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprPackKindName: TcxGridDBBandedColumn
                 Caption = #1042#1080#1076' '#1091#1087#1072#1082#1086#1074#1082#1080
                 DataBinding.FieldName = 'otprPackKindName'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 20
@@ -1254,6 +1292,7 @@ object fmEtrClaim: TfmEtrClaim
               end
               object cxGridDBBandedTableView12otprFreightSpecID: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'otprFreightSpecID'
+                DataBinding.IsNullValueType = True
                 Position.BandIndex = -1
                 Position.ColIndex = -1
                 Position.RowIndex = -1
@@ -1261,6 +1300,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprFreightSpecName: TcxGridDBBandedColumn
                 Caption = #1054#1089#1086#1073#1077#1085#1085#1086#1089#1090#1100' '#1075#1088#1091#1079#1072
                 DataBinding.FieldName = 'otprFreightSpecName'
+                DataBinding.IsNullValueType = True
                 Width = 82
                 Position.BandIndex = 0
                 Position.ColIndex = 21
@@ -1268,6 +1308,7 @@ object fmEtrClaim: TfmEtrClaim
               end
               object cxGridDBBandedTableView12otprCarTypeID: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'otprCarTypeID'
+                DataBinding.IsNullValueType = True
                 Position.BandIndex = -1
                 Position.ColIndex = -1
                 Position.RowIndex = -1
@@ -1275,6 +1316,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprCarTypeName: TcxGridDBBandedColumn
                 Caption = #1042#1080#1076' '#1055#1057
                 DataBinding.FieldName = 'otprCarTypeName'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 22
@@ -1283,6 +1325,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprCarTypeCODE: TcxGridDBBandedColumn
                 Caption = #1053#1086#1074#1099#1081' '#1074#1080#1076' '#1055#1057' '#1082#1086#1076
                 DataBinding.FieldName = 'otprCarTypeCODE'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 23
@@ -1291,6 +1334,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprCarTypeCODEName: TcxGridDBBandedColumn
                 Caption = #1053#1086#1074#1099#1081' '#1074#1080#1076' '#1055#1057
                 DataBinding.FieldName = 'otprCarTypeCODEName'
+                DataBinding.IsNullValueType = True
                 Width = 97
                 Position.BandIndex = 0
                 Position.ColIndex = 24
@@ -1299,6 +1343,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprCarCount: TcxGridDBBandedColumn
                 Caption = #1050#1086#1083'-'#1074#1086' '#1074#1072#1075'.'
                 DataBinding.FieldName = 'otprCarCount'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 25
@@ -1307,6 +1352,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprCarAxles: TcxGridDBBandedColumn
                 Caption = #1054#1089#1085#1086#1089#1090#1100' '#1090#1088#1072#1085#1089#1087#1086#1088#1090#1077#1088#1086#1074
                 DataBinding.FieldName = 'otprCarAxles'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 26
@@ -1315,6 +1361,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprIxTariffCode: TcxGridDBBandedColumn
                 Caption = #1050#1086#1076' '#1080#1089#1082#1083'. '#1090#1072#1088#1080#1092#1072
                 DataBinding.FieldName = 'otprIxTariffCode'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 27
@@ -1323,6 +1370,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprIsFerry: TcxGridDBBandedColumn
                 Caption = #1055#1088#1080#1079#1085#1072#1082' '#1087#1072#1088#1086#1084#1072
                 DataBinding.FieldName = 'otprIsFerry'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 28
@@ -1331,6 +1379,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprTargetCode: TcxGridDBBandedColumn
                 Caption = #1055#1091#1085#1082#1090#1072' '#1085#1072#1079#1085#1072#1095#1077#1085#1080#1103' '#1082#1086#1076
                 DataBinding.FieldName = 'otprTargetCode'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 29
@@ -1339,6 +1388,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprTargetName: TcxGridDBBandedColumn
                 Caption = #1055#1091#1085#1082#1090#1072' '#1085#1072#1079#1085#1072#1095#1077#1085#1080#1103
                 DataBinding.FieldName = 'otprTargetName'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 30
@@ -1346,6 +1396,7 @@ object fmEtrClaim: TfmEtrClaim
               end
               object cxGridDBBandedTableView12otprOrgContID: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'otprOrgContID'
+                DataBinding.IsNullValueType = True
                 Position.BandIndex = -1
                 Position.ColIndex = -1
                 Position.RowIndex = -1
@@ -1353,6 +1404,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprOrgContOKPO: TcxGridDBBandedColumn
                 Caption = #1069#1082#1089#1087#1077#1076#1080#1090#1086#1088' '#1054#1050#1055#1054
                 DataBinding.FieldName = 'otprOrgContOKPO'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 31
@@ -1361,6 +1413,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprOrgContName: TcxGridDBBandedColumn
                 Caption = #1069#1082#1089#1087#1077#1076#1080#1090#1086#1088
                 DataBinding.FieldName = 'otprOrgContName'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 32
@@ -1368,6 +1421,7 @@ object fmEtrClaim: TfmEtrClaim
               end
               object cxGridDBBandedTableView12otprOrgContAddressID: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'otprOrgContAddressID'
+                DataBinding.IsNullValueType = True
                 Position.BandIndex = -1
                 Position.ColIndex = -1
                 Position.RowIndex = -1
@@ -1375,6 +1429,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprOrgContAddress: TcxGridDBBandedColumn
                 Caption = #1069#1082#1089#1087#1077#1076#1080#1090#1086#1088' '#1072#1076#1088#1077#1089
                 DataBinding.FieldName = 'otprOrgContAddress'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 33
@@ -1382,6 +1437,7 @@ object fmEtrClaim: TfmEtrClaim
               end
               object cxGridDBBandedTableView12otprCarContOwnerTypeID: TcxGridDBBandedColumn
                 DataBinding.FieldName = 'otprCarContOwnerTypeID'
+                DataBinding.IsNullValueType = True
                 Position.BandIndex = -1
                 Position.ColIndex = -1
                 Position.RowIndex = -1
@@ -1389,6 +1445,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprCarContOwnerTypeName: TcxGridDBBandedColumn
                 Caption = #1057#1055#1057
                 DataBinding.FieldName = 'otprCarContOwnerTypeName'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 34
@@ -1397,6 +1454,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprCarOwnerName: TcxGridDBBandedColumn
                 Caption = #1042#1083#1072#1076#1077#1083#1077#1094' '#1074#1072#1075#1086#1085#1086#1074
                 DataBinding.FieldName = 'otprCarOwnerName'
+                DataBinding.IsNullValueType = True
                 Width = 50
                 Position.BandIndex = 0
                 Position.ColIndex = 42
@@ -1405,6 +1463,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprContFoot: TcxGridDBBandedColumn
                 Caption = #1060#1091#1090#1086#1074#1086#1089#1090#1100' '#1076#1083#1103' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1086#1074
                 DataBinding.FieldName = 'otprContFoot'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 35
@@ -1413,6 +1472,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprContOwnerCountryID: TcxGridDBBandedColumn
                 Caption = '-1'
                 DataBinding.FieldName = 'otprContOwnerCountryID'
+                DataBinding.IsNullValueType = True
                 Position.BandIndex = -1
                 Position.ColIndex = -1
                 Position.RowIndex = -1
@@ -1420,6 +1480,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprContOwnerCountryCode: TcxGridDBBandedColumn
                 Caption = #1057#1090#1088#1072#1085#1072' '#1089#1086#1073#1089#1090#1074#1077#1085#1085#1080#1082' '#1082#1086#1076
                 DataBinding.FieldName = 'otprContOwnerCountryCode'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 36
@@ -1428,6 +1489,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprContOwnerCountryName: TcxGridDBBandedColumn
                 Caption = #1057#1090#1088#1072#1085#1072' '#1089#1086#1073#1089#1090#1074#1077#1085#1085#1080#1082
                 DataBinding.FieldName = 'otprContOwnerCountryName'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 37
@@ -1436,6 +1498,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprContPrefix: TcxGridDBBandedColumn
                 Caption = #1055#1088#1077#1092#1080#1082#1089' '#1082#1086#1085#1090#1077#1081#1085#1077#1088#1086#1074
                 DataBinding.FieldName = 'otprContPrefix'
+                DataBinding.IsNullValueType = True
                 Width = 64
                 Position.BandIndex = 0
                 Position.ColIndex = 38
@@ -1444,6 +1507,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprNote: TcxGridDBBandedColumn
                 Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
                 DataBinding.FieldName = 'otprNote'
+                DataBinding.IsNullValueType = True
                 Width = 73
                 Position.BandIndex = 0
                 Position.ColIndex = 39
@@ -1452,6 +1516,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprCorr: TcxGridDBBandedColumn
                 Caption = #1055#1088#1080#1079#1085#1072#1082' '#1082#1086#1088#1088#1077#1082#1090#1080#1088#1086#1074#1082#1080
                 DataBinding.FieldName = 'otprCorr'
+                DataBinding.IsNullValueType = True
                 Position.BandIndex = 0
                 Position.ColIndex = 40
                 Position.RowIndex = 0
@@ -1459,6 +1524,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprAmount: TcxGridDBBandedColumn
                 Caption = #1055#1088#1086#1074#1086#1079#1085#1086#1081' '#1087#1083#1072#1090#1077#1078
                 DataBinding.FieldName = 'otprAmount'
+                DataBinding.IsNullValueType = True
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = '#,##0.00'
                 Width = 122
@@ -1469,6 +1535,7 @@ object fmEtrClaim: TfmEtrClaim
               object cxGridDBBandedTableView12otprDistWay: TcxGridDBBandedColumn
                 Caption = #1056#1072#1089#1089#1095#1080#1090#1072#1085#1085#1086#1077' '#1088#1072#1089#1089#1090#1086#1103#1085#1080#1077
                 DataBinding.FieldName = 'otprDistWay'
+                DataBinding.IsNullValueType = True
                 Width = 78
                 Position.BandIndex = 0
                 Position.ColIndex = 41
@@ -1482,35 +1549,35 @@ object fmEtrClaim: TfmEtrClaim
         end
         object cxSplitter12: TcxSplitter
           Left = 0
-          Top = 91
-          Width = 8
+          Top = 114
+          Width = 799
           Height = 8
           HotZoneClassName = 'TcxSimpleStyle'
           AlignSplitter = salBottom
           Control = Panel40
-          ExplicitTop = 114
+          ExplicitTop = 91
         end
       end
       object cxTabSheet17: TcxTabSheet
         Tag = 2
         Caption = #1055#1083#1072#1090#1077#1083#1100#1097#1080#1082#1080
         ImageIndex = 1
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
+        ExplicitHeight = 205
         object cxGrid18: TcxGrid
           Left = 0
           Top = 0
           Width = 799
-          Height = 205
+          Height = 228
           Align = alClient
           TabOrder = 0
           LookAndFeel.Kind = lfUltraFlat
           LookAndFeel.ScrollbarMode = sbmClassic
+          ExplicitHeight = 205
           object cxGridDBBandedTableView15: TcxGridDBBandedTableView
             PopupMenu = dxBarPopupMenu4
             OnKeyPress = cxGridDBBandedTableView15KeyPress
             Navigator.Buttons.CustomButtons = <>
+            ScrollbarAnnotations.CustomAnnotations = <>
             OnCustomDrawCell = cxGridDBBandedTableView15CustomDrawCell
             OnFocusedItemChanged = cxGridDBBandedTableView15FocusedItemChanged
             DataController.Filter.Options = [fcoCaseInsensitive]
@@ -1541,18 +1608,21 @@ object fmEtrClaim: TfmEtrClaim
               end>
             object cxGridDBBandedTableView15clmPayer_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'clmPayer_id'
+              DataBinding.IsNullValueType = True
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
             end
             object cxGridDBBandedTableView15claim_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'claim_id'
+              DataBinding.IsNullValueType = True
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
             end
             object cxGridDBBandedTableView15payerTypeID: TcxGridDBBandedColumn
               DataBinding.FieldName = 'payerTypeID'
+              DataBinding.IsNullValueType = True
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
@@ -1560,6 +1630,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView15payerTypeName: TcxGridDBBandedColumn
               Caption = #1058#1080#1087' '#1087#1083#1072#1090#1077#1083#1100#1097#1080#1082#1072
               DataBinding.FieldName = 'payerTypeName'
+              DataBinding.IsNullValueType = True
               Width = 109
               Position.BandIndex = 0
               Position.ColIndex = 0
@@ -1567,6 +1638,7 @@ object fmEtrClaim: TfmEtrClaim
             end
             object cxGridDBBandedTableView15payerID: TcxGridDBBandedColumn
               DataBinding.FieldName = 'payerID'
+              DataBinding.IsNullValueType = True
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
@@ -1574,6 +1646,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView15payerCode: TcxGridDBBandedColumn
               Caption = #1055#1083#1072#1090#1077#1083#1100#1097#1080#1082' '#1082#1086#1076
               DataBinding.FieldName = 'payerCode'
+              DataBinding.IsNullValueType = True
               Width = 79
               Position.BandIndex = 0
               Position.ColIndex = 1
@@ -1582,6 +1655,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView15payerOKPO: TcxGridDBBandedColumn
               Caption = #1055#1083#1072#1090#1077#1083#1100#1097#1080#1082' '#1054#1050#1055#1054
               DataBinding.FieldName = 'payerOKPO'
+              DataBinding.IsNullValueType = True
               Width = 86
               Position.BandIndex = 0
               Position.ColIndex = 2
@@ -1590,6 +1664,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView15payerName: TcxGridDBBandedColumn
               Caption = #1055#1083#1072#1090#1077#1083#1100#1097#1080#1082
               DataBinding.FieldName = 'payerName'
+              DataBinding.IsNullValueType = True
               Width = 143
               Position.BandIndex = 0
               Position.ColIndex = 3
@@ -1598,6 +1673,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView15payerAddress: TcxGridDBBandedColumn
               Caption = #1055#1083#1072#1090#1077#1083#1100#1097#1080#1082' '#1072#1076#1088#1077#1089
               DataBinding.FieldName = 'payerAddress'
+              DataBinding.IsNullValueType = True
               Width = 234
               Position.BandIndex = 0
               Position.ColIndex = 4
@@ -1606,6 +1682,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView15payerCountryCode: TcxGridDBBandedColumn
               Caption = #1057#1090#1088'. '#1086#1090#1087#1088'. '#1082#1086#1076
               DataBinding.FieldName = 'payerCountryCode'
+              DataBinding.IsNullValueType = True
               Width = 61
               Position.BandIndex = 0
               Position.ColIndex = 5
@@ -1614,6 +1691,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView15payerCountryName: TcxGridDBBandedColumn
               Caption = #1057#1090#1088'. '#1086#1090#1087#1088'.'
               DataBinding.FieldName = 'payerCountryName'
+              DataBinding.IsNullValueType = True
               Width = 116
               Position.BandIndex = 0
               Position.ColIndex = 6
@@ -1629,22 +1707,22 @@ object fmEtrClaim: TfmEtrClaim
         Tag = 3
         Caption = #1057#1074#1103#1079#1072#1085#1085#1099#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1099
         ImageIndex = 2
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
+        ExplicitHeight = 205
         object cxGrid19: TcxGrid
           Left = 0
           Top = 0
           Width = 799
-          Height = 205
+          Height = 228
           Align = alClient
           TabOrder = 0
           LookAndFeel.Kind = lfUltraFlat
           LookAndFeel.ScrollbarMode = sbmClassic
+          ExplicitHeight = 205
           object cxGridDBBandedTableView16: TcxGridDBBandedTableView
             PopupMenu = dxBarPopupMenu5
             OnKeyPress = cxGridDBBandedTableView16KeyPress
             Navigator.Buttons.CustomButtons = <>
+            ScrollbarAnnotations.CustomAnnotations = <>
             OnCustomDrawCell = cxGridDBBandedTableView16CustomDrawCell
             OnFocusedItemChanged = cxGridDBBandedTableView16FocusedItemChanged
             DataController.Filter.Options = [fcoCaseInsensitive]
@@ -1675,12 +1753,14 @@ object fmEtrClaim: TfmEtrClaim
               end>
             object cxGridDBBandedTableView16clmDoc_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'clmDoc_id'
+              DataBinding.IsNullValueType = True
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
             end
             object cxGridDBBandedTableView16claim_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'claim_id'
+              DataBinding.IsNullValueType = True
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
@@ -1688,6 +1768,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView16docId: TcxGridDBBandedColumn
               Caption = 'ID '#1076#1086#1082#1091#1084#1077#1085#1090#1072
               DataBinding.FieldName = 'docId'
+              DataBinding.IsNullValueType = True
               Width = 108
               Position.BandIndex = 0
               Position.ColIndex = 0
@@ -1695,6 +1776,7 @@ object fmEtrClaim: TfmEtrClaim
             end
             object cxGridDBBandedTableView16docTypeID: TcxGridDBBandedColumn
               DataBinding.FieldName = 'docTypeID'
+              DataBinding.IsNullValueType = True
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
@@ -1702,6 +1784,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView16docType: TcxGridDBBandedColumn
               Caption = #1058#1080#1087' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
               DataBinding.FieldName = 'docType'
+              DataBinding.IsNullValueType = True
               Width = 193
               Position.BandIndex = 0
               Position.ColIndex = 1
@@ -1710,6 +1793,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView16docLink: TcxGridDBBandedColumn
               Caption = #1058#1080#1087' '#1089#1074#1103#1079#1080
               DataBinding.FieldName = 'docLink'
+              DataBinding.IsNullValueType = True
               Width = 147
               Position.BandIndex = 0
               Position.ColIndex = 2
@@ -1718,6 +1802,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView16docDate: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1089#1086#1079#1076#1072#1085#1080#1103
               DataBinding.FieldName = 'docDate'
+              DataBinding.IsNullValueType = True
               Width = 105
               Position.BandIndex = 0
               Position.ColIndex = 3
@@ -1733,22 +1818,22 @@ object fmEtrClaim: TfmEtrClaim
         Tag = 4
         Caption = #1061#1086#1076' '#1089#1086#1075#1083#1072#1089#1086#1074#1072#1085#1080#1103
         ImageIndex = 3
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
+        ExplicitHeight = 205
         object cxGrid20: TcxGrid
           Left = 0
           Top = 0
           Width = 799
-          Height = 205
+          Height = 228
           Align = alClient
           TabOrder = 0
           LookAndFeel.Kind = lfUltraFlat
           LookAndFeel.ScrollbarMode = sbmClassic
+          ExplicitHeight = 205
           object cxGridDBBandedTableView17: TcxGridDBBandedTableView
             PopupMenu = dxBarPopupMenu6
             OnKeyPress = cxGridDBBandedTableView17KeyPress
             Navigator.Buttons.CustomButtons = <>
+            ScrollbarAnnotations.CustomAnnotations = <>
             OnCustomDrawCell = cxGridDBBandedTableView17CustomDrawCell
             OnFocusedItemChanged = cxGridDBBandedTableView17FocusedItemChanged
             DataController.Filter.Options = [fcoCaseInsensitive]
@@ -1779,12 +1864,14 @@ object fmEtrClaim: TfmEtrClaim
               end>
             object cxGridDBBandedTableView17clmAgreement_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'clmAgreement_id'
+              DataBinding.IsNullValueType = True
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
             end
             object cxGridDBBandedTableView17claim_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'claim_id'
+              DataBinding.IsNullValueType = True
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
@@ -1792,6 +1879,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView17agrName: TcxGridDBBandedColumn
               Caption = #1057#1086#1075#1083#1072#1089#1086#1074#1072#1085#1080#1077
               DataBinding.FieldName = 'agrName'
+              DataBinding.IsNullValueType = True
               Width = 203
               Position.BandIndex = 0
               Position.ColIndex = 0
@@ -1799,6 +1887,7 @@ object fmEtrClaim: TfmEtrClaim
             end
             object cxGridDBBandedTableView17agrOrgId: TcxGridDBBandedColumn
               DataBinding.FieldName = 'agrOrgId'
+              DataBinding.IsNullValueType = True
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
@@ -1806,6 +1895,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView17agrOrgName: TcxGridDBBandedColumn
               Caption = #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1103
               DataBinding.FieldName = 'agrOrgName'
+              DataBinding.IsNullValueType = True
               Width = 115
               Position.BandIndex = 0
               Position.ColIndex = 1
@@ -1814,6 +1904,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView17agrState: TcxGridDBBandedColumn
               Caption = #1057#1086#1089#1090#1086#1103#1085#1080#1077
               DataBinding.FieldName = 'agrState'
+              DataBinding.IsNullValueType = True
               Width = 94
               Position.BandIndex = 0
               Position.ColIndex = 2
@@ -1822,6 +1913,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView17agrDate: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1089#1086#1075#1083#1072#1089#1086#1074#1072#1085#1080#1103
               DataBinding.FieldName = 'agrDate'
+              DataBinding.IsNullValueType = True
               Width = 93
               Position.BandIndex = 0
               Position.ColIndex = 3
@@ -1830,6 +1922,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView17agrRemark: TcxGridDBBandedColumn
               Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077' '
               DataBinding.FieldName = 'agrRemark'
+              DataBinding.IsNullValueType = True
               Width = 94
               Position.BandIndex = 0
               Position.ColIndex = 4
@@ -1838,6 +1931,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView17agrPost: TcxGridDBBandedColumn
               Caption = #1044#1086#1083#1078#1085#1086#1089#1090#1100' '#1089#1086#1075#1083#1072#1089#1086#1074#1072#1074#1096#1077#1075#1086
               DataBinding.FieldName = 'agrPost'
+              DataBinding.IsNullValueType = True
               Width = 169
               Position.BandIndex = 0
               Position.ColIndex = 5
@@ -1846,6 +1940,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView17agrPerson: TcxGridDBBandedColumn
               Caption = #1060#1048#1054' '#1089#1086#1075#1083#1072#1089#1086#1074#1072#1074#1096#1077#1075#1086
               DataBinding.FieldName = 'agrPerson'
+              DataBinding.IsNullValueType = True
               Width = 141
               Position.BandIndex = 0
               Position.ColIndex = 6
@@ -1861,22 +1956,22 @@ object fmEtrClaim: TfmEtrClaim
         Tag = 5
         Caption = #1053#1072#1082#1083#1072#1076#1085#1099#1077' '#1087#1086' '#1079#1072#1103#1074#1082#1077
         ImageIndex = 4
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
+        ExplicitHeight = 205
         object cxGrid21: TcxGrid
           Left = 0
           Top = 0
           Width = 799
-          Height = 205
+          Height = 228
           Align = alClient
           TabOrder = 0
           LookAndFeel.Kind = lfUltraFlat
           LookAndFeel.ScrollbarMode = sbmClassic
+          ExplicitHeight = 205
           object cxGridDBBandedTableView18: TcxGridDBBandedTableView
             PopupMenu = dxBarPopupMenu7
             OnKeyPress = cxGridDBBandedTableView18KeyPress
             Navigator.Buttons.CustomButtons = <>
+            ScrollbarAnnotations.CustomAnnotations = <>
             OnCustomDrawCell = cxGridDBBandedTableView18CustomDrawCell
             OnFocusedItemChanged = cxGridDBBandedTableView18FocusedItemChanged
             DataController.Filter.Options = [fcoCaseInsensitive]
@@ -1907,12 +2002,14 @@ object fmEtrClaim: TfmEtrClaim
               end>
             object cxGridDBBandedTableView18clmInv_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'clmInv_id'
+              DataBinding.IsNullValueType = True
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
             end
             object cxGridDBBandedTableView18claim_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'claim_id'
+              DataBinding.IsNullValueType = True
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
@@ -1920,6 +2017,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView18invOtprNom: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1086#1090#1087#1088#1072#1074#1082#1080
               DataBinding.FieldName = 'invOtprNom'
+              DataBinding.IsNullValueType = True
               Width = 61
               Position.BandIndex = 0
               Position.ColIndex = 0
@@ -1927,6 +2025,7 @@ object fmEtrClaim: TfmEtrClaim
             end
             object cxGridDBBandedTableView18invId: TcxGridDBBandedColumn
               DataBinding.FieldName = 'invId'
+              DataBinding.IsNullValueType = True
               Width = 64
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1935,6 +2034,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView18invNumber: TcxGridDBBandedColumn
               Caption = #1053#1086#1084#1077#1088' '#1085#1072#1082#1083#1072#1076#1085#1086#1081
               DataBinding.FieldName = 'invNumber'
+              DataBinding.IsNullValueType = True
               Width = 73
               Position.BandIndex = 0
               Position.ColIndex = 1
@@ -1942,6 +2042,7 @@ object fmEtrClaim: TfmEtrClaim
             end
             object cxGridDBBandedTableView18invStateID: TcxGridDBBandedColumn
               DataBinding.FieldName = 'invStateID'
+              DataBinding.IsNullValueType = True
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
@@ -1949,6 +2050,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView18invState: TcxGridDBBandedColumn
               Caption = #1058#1077#1082#1091#1097#1077#1077' '#1089#1086#1089#1090#1086#1103#1085#1080#1077' '#1085#1072#1082#1083#1072#1076#1085#1086#1081
               DataBinding.FieldName = 'invState'
+              DataBinding.IsNullValueType = True
               Width = 193
               Position.BandIndex = 0
               Position.ColIndex = 2
@@ -1957,6 +2059,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView18invCarCount: TcxGridDBBandedColumn
               Caption = #1050#1086#1083'-'#1074#1086' '#1074#1072#1075
               DataBinding.FieldName = 'invCarCount'
+              DataBinding.IsNullValueType = True
               Width = 52
               Position.BandIndex = 0
               Position.ColIndex = 3
@@ -1965,6 +2068,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView18invToStationCode: TcxGridDBBandedColumn
               Caption = #1057#1090'. '#1085#1072#1079'. '#1082#1086#1076
               DataBinding.FieldName = 'invToStationCode'
+              DataBinding.IsNullValueType = True
               Width = 60
               Position.BandIndex = 0
               Position.ColIndex = 4
@@ -1973,6 +2077,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView18invToStationName: TcxGridDBBandedColumn
               Caption = #1057#1090'. '#1085#1072#1079'.'
               DataBinding.FieldName = 'invToStationName'
+              DataBinding.IsNullValueType = True
               Width = 84
               Position.BandIndex = 0
               Position.ColIndex = 5
@@ -1981,6 +2086,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView18invDateReady: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1087#1088#1080#1085#1103#1090#1080#1103' '#1075#1088#1091#1079#1072' '#1082' '#1087#1077#1088#1077#1074#1086#1079#1082#1077
               DataBinding.FieldName = 'invDateReady'
+              DataBinding.IsNullValueType = True
               Width = 134
               Position.BandIndex = 0
               Position.ColIndex = 6
@@ -1996,22 +2102,22 @@ object fmEtrClaim: TfmEtrClaim
         Tag = 6
         Caption = #1048#1089#1090#1086#1088#1080#1103
         ImageIndex = 5
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
+        ExplicitHeight = 205
         object cxGrid17: TcxGrid
           Left = 0
           Top = 0
           Width = 799
-          Height = 205
+          Height = 228
           Align = alClient
           TabOrder = 0
           LookAndFeel.Kind = lfUltraFlat
           LookAndFeel.ScrollbarMode = sbmClassic
+          ExplicitHeight = 205
           object cxGridDBBandedTableView14: TcxGridDBBandedTableView
             PopupMenu = dxBarPopupMenu8
             OnKeyPress = cxGridDBBandedTableView14KeyPress
             Navigator.Buttons.CustomButtons = <>
+            ScrollbarAnnotations.CustomAnnotations = <>
             OnCustomDrawCell = cxGridDBBandedTableView14CustomDrawCell
             OnFocusedItemChanged = cxGridDBBandedTableView14FocusedItemChanged
             DataController.Filter.Options = [fcoCaseInsensitive]
@@ -2043,6 +2149,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedColumn1: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1086#1087#1077#1088#1072#1094#1080#1080
               DataBinding.FieldName = 'operDate'
+              DataBinding.IsNullValueType = True
               Width = 118
               Position.BandIndex = 0
               Position.ColIndex = 0
@@ -2051,6 +2158,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedColumn2: TcxGridDBBandedColumn
               Caption = #1054#1090#1095#1077#1090#1085#1072#1103' '#1076#1072#1090#1072
               DataBinding.FieldName = 'operFactDate'
+              DataBinding.IsNullValueType = True
               Width = 117
               Position.BandIndex = 0
               Position.ColIndex = 1
@@ -2058,6 +2166,7 @@ object fmEtrClaim: TfmEtrClaim
             end
             object cxGridDBBandedColumn3: TcxGridDBBandedColumn
               DataBinding.FieldName = 'operOrgId'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -2066,6 +2175,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedColumn4: TcxGridDBBandedColumn
               Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1086#1088#1075#1072#1085#1080#1079#1072#1094#1080#1080
               DataBinding.FieldName = 'operOrgName'
+              DataBinding.IsNullValueType = True
               Width = 93
               Position.BandIndex = 0
               Position.ColIndex = 2
@@ -2074,6 +2184,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedColumn5: TcxGridDBBandedColumn
               Caption = #1044#1086#1083#1078#1085#1086#1089#1090#1100' '#1087#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1103
               DataBinding.FieldName = 'operPost'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 3
@@ -2082,6 +2193,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedColumn6: TcxGridDBBandedColumn
               Caption = #1060#1048#1054' '#1087#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1103
               DataBinding.FieldName = 'operPerson'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 4
@@ -2090,6 +2202,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedColumn7: TcxGridDBBandedColumn
               Caption = #1054#1087#1077#1088#1072#1094#1080#1103
               DataBinding.FieldName = 'operText'
+              DataBinding.IsNullValueType = True
               Width = 109
               Position.BandIndex = 0
               Position.ColIndex = 5
@@ -2098,6 +2211,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedColumn8: TcxGridDBBandedColumn
               Caption = #1056#1077#1079#1091#1083#1100#1090#1072#1090' '#1086#1087#1077#1088#1072#1094#1080#1080
               DataBinding.FieldName = 'operResult'
+              DataBinding.IsNullValueType = True
               Width = 112
               Position.BandIndex = 0
               Position.ColIndex = 6
@@ -2106,6 +2220,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedColumn9: TcxGridDBBandedColumn
               Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
               DataBinding.FieldName = 'operRemark'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 7
@@ -2114,6 +2229,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedColumn10: TcxGridDBBandedColumn
               Caption = #1056#1072#1073#1086#1095#1077#1077' '#1084#1077#1089#1090#1086
               DataBinding.FieldName = 'operWorkPlace'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = 0
               Position.ColIndex = 8
@@ -2121,6 +2237,7 @@ object fmEtrClaim: TfmEtrClaim
             end
             object cxGridDBBandedColumn11: TcxGridDBBandedColumn
               DataBinding.FieldName = 'operOperID'
+              DataBinding.IsNullValueType = True
               Width = 100
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -2136,22 +2253,22 @@ object fmEtrClaim: TfmEtrClaim
         Tag = 7
         Caption = #1052#1072#1088#1096#1088#1091#1090#1085#1072#1103' '#1086#1090#1087#1088#1072#1074#1082#1072' '
         ImageIndex = 6
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
+        ExplicitHeight = 205
         object cxGrid22: TcxGrid
           Left = 0
           Top = 0
           Width = 799
-          Height = 205
+          Height = 228
           Align = alClient
           TabOrder = 0
           LookAndFeel.Kind = lfUltraFlat
           LookAndFeel.ScrollbarMode = sbmClassic
+          ExplicitHeight = 205
           object cxGridDBBandedTableView19: TcxGridDBBandedTableView
             PopupMenu = dxBarPopupMenu9
             OnKeyPress = cxGridDBBandedTableView19KeyPress
             Navigator.Buttons.CustomButtons = <>
+            ScrollbarAnnotations.CustomAnnotations = <>
             OnCustomDrawCell = cxGridDBBandedTableView19CustomDrawCell
             OnFocusedItemChanged = cxGridDBBandedTableView19FocusedItemChanged
             DataController.Filter.Options = [fcoCaseInsensitive]
@@ -2182,12 +2299,14 @@ object fmEtrClaim: TfmEtrClaim
               end>
             object cxGridDBBandedTableView19clmRoute_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'clmRoute_id'
+              DataBinding.IsNullValueType = True
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
             end
             object cxGridDBBandedTableView19claim_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'claim_id'
+              DataBinding.IsNullValueType = True
               Position.BandIndex = -1
               Position.ColIndex = -1
               Position.RowIndex = -1
@@ -2195,6 +2314,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView19routeDatePod: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1087#1086#1076#1072#1095#1080
               DataBinding.FieldName = 'routeDatePod'
+              DataBinding.IsNullValueType = True
               Width = 144
               Position.BandIndex = 0
               Position.ColIndex = 0
@@ -2203,6 +2323,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView19routeType: TcxGridDBBandedColumn
               Caption = #1042#1080#1076' '#1084#1072#1088#1096#1088#1091#1090#1072' '#1082#1086#1076
               DataBinding.FieldName = 'routeType'
+              DataBinding.IsNullValueType = True
               Width = 118
               Position.BandIndex = 0
               Position.ColIndex = 1
@@ -2211,6 +2332,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView19routeTypeName: TcxGridDBBandedColumn
               Caption = #1042#1080#1076' '#1084#1072#1088#1096#1088#1091#1090#1072
               DataBinding.FieldName = 'routeTypeName'
+              DataBinding.IsNullValueType = True
               Width = 121
               Position.BandIndex = 0
               Position.ColIndex = 2
@@ -2219,6 +2341,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView19routeStationCode: TcxGridDBBandedColumn
               Caption = #1057#1090'. '#1085#1072#1079#1085'. '#1082#1086#1076
               DataBinding.FieldName = 'routeStationCode'
+              DataBinding.IsNullValueType = True
               Width = 109
               Position.BandIndex = 0
               Position.ColIndex = 3
@@ -2227,6 +2350,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView19routeStationName: TcxGridDBBandedColumn
               Caption = #1057#1090'. '#1085#1072#1079#1085'.'
               DataBinding.FieldName = 'routeStationName'
+              DataBinding.IsNullValueType = True
               Width = 106
               Position.BandIndex = 0
               Position.ColIndex = 4
@@ -2235,6 +2359,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView19routeCount: TcxGridDBBandedColumn
               Caption = #1050#1086#1083'-'#1074#1086' '#1084#1072#1088#1096#1088#1091#1090#1086#1074
               DataBinding.FieldName = 'routeCount'
+              DataBinding.IsNullValueType = True
               Position.BandIndex = 0
               Position.ColIndex = 5
               Position.RowIndex = 0
@@ -2242,6 +2367,7 @@ object fmEtrClaim: TfmEtrClaim
             object cxGridDBBandedTableView19routeCarCount: TcxGridDBBandedColumn
               Caption = #1050#1086#1083'-'#1074#1086' '#1074#1072#1075#1086#1085#1086#1074
               DataBinding.FieldName = 'routeCarCount'
+              DataBinding.IsNullValueType = True
               Position.BandIndex = 0
               Position.ColIndex = 6
               Position.RowIndex = 0
@@ -2654,7 +2780,7 @@ object fmEtrClaim: TfmEtrClaim
         OptionsImage.Glyph.SourceDPI = 96
         OptionsImage.Glyph.Data = {
           424D362400000000000036000000280000003000000030000000010020000000
-          000000000000C40E0000C40E00000000000000000000FFFFFF00FFFFFF00FFFF
+          00000000000074120000741200000000000000000000FFFFFF00FFFFFF00FFFF
           FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
           FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
           FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
@@ -2958,28 +3084,29 @@ object fmEtrClaim: TfmEtrClaim
   end
   object Panel6: TPanel
     Left = 0
-    Top = 167
+    Top = 144
     Width = 400
-    Height = 588
+    Height = 611
     Align = alLeft
     BevelOuter = bvNone
     TabOrder = 4
-    ExplicitTop = 144
-    ExplicitHeight = 611
+    ExplicitTop = 167
+    ExplicitHeight = 588
     object cxGrid2: TcxGrid
       Left = 0
       Top = 0
       Width = 400
-      Height = 588
+      Height = 611
       Align = alClient
       TabOrder = 0
       LookAndFeel.Kind = lfUltraFlat
       LookAndFeel.ScrollbarMode = sbmClassic
-      ExplicitHeight = 611
+      ExplicitHeight = 588
       object cxGridDBBandedTableView1: TcxGridDBBandedTableView
         PopupMenu = dxBarPopupMenu10
         OnKeyPress = cxGridDBBandedTableView1KeyPress
         Navigator.Buttons.CustomButtons = <>
+        ScrollbarAnnotations.CustomAnnotations = <>
         OnCustomDrawCell = cxGridDBBandedTableView1CustomDrawCell
         OnFocusedItemChanged = cxGridDBBandedTableView1FocusedItemChanged
         OnFocusedRecordChanged = cxGridDBBandedTableView1FocusedRecordChanged
@@ -3022,6 +3149,8 @@ object fmEtrClaim: TfmEtrClaim
           end>
         object cxGridDBBandedTableView1xml_reply_id: TcxGridDBBandedColumn
           DataBinding.FieldName = 'xml_reply_id'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
           Position.BandIndex = -1
           Position.ColIndex = -1
           Position.RowIndex = -1
@@ -3029,6 +3158,8 @@ object fmEtrClaim: TfmEtrClaim
         object cxGridDBBandedTableView1claim_id: TcxGridDBBandedColumn
           Caption = #8470' '#1079#1072#1087#1080#1089#1080
           DataBinding.FieldName = 'claim_id'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
           Position.ColIndex = 10
@@ -3037,6 +3168,8 @@ object fmEtrClaim: TfmEtrClaim
         object cxGridDBBandedTableView1claimNumber: TcxGridDBBandedColumn
           Caption = #1053#1086#1084#1077#1088' '#1079#1072#1103#1074#1082#1080
           DataBinding.FieldName = 'claimNumber'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
           Width = 87
           Position.BandIndex = 0
           Position.ColIndex = 0
@@ -3045,6 +3178,8 @@ object fmEtrClaim: TfmEtrClaim
         object cxGridDBBandedTableView1claimState: TcxGridDBBandedColumn
           Caption = #1057#1086#1089#1090#1086#1103#1085#1080#1077
           DataBinding.FieldName = 'claimState'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
           Width = 103
           Position.BandIndex = 0
           Position.ColIndex = 1
@@ -3053,6 +3188,8 @@ object fmEtrClaim: TfmEtrClaim
         object cxGridDBBandedTableView1claimRegDate: TcxGridDBBandedColumn
           Caption = #1044#1072#1090#1072' '#1088#1077#1075#1080#1089#1090#1088#1072#1094#1080#1080
           DataBinding.FieldName = 'claimRegDate'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
           Width = 104
           Position.BandIndex = 0
           Position.ColIndex = 2
@@ -3061,6 +3198,8 @@ object fmEtrClaim: TfmEtrClaim
         object cxGridDBBandedTableView1clmStartDate: TcxGridDBBandedColumn
           Caption = #1053#1072#1095#1072#1083#1086' '#1087#1077#1088#1077#1074#1086#1079#1082#1080
           DataBinding.FieldName = 'clmStartDate'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
           Width = 106
           Position.BandIndex = 0
           Position.ColIndex = 3
@@ -3069,6 +3208,8 @@ object fmEtrClaim: TfmEtrClaim
         object cxGridDBBandedTableView1clmFinishDate: TcxGridDBBandedColumn
           Caption = #1054#1082#1086#1085#1095#1072#1085#1080#1077' '#1087#1077#1088#1077#1074#1086#1079#1082#1080
           DataBinding.FieldName = 'clmFinishDate'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
           Width = 122
           Position.BandIndex = 0
           Position.ColIndex = 4
@@ -3077,6 +3218,8 @@ object fmEtrClaim: TfmEtrClaim
         object cxGridDBBandedTableView1clmFromStationName: TcxGridDBBandedColumn
           Caption = #1057#1090'. '#1086#1090#1087#1088'.'
           DataBinding.FieldName = 'clmFromStationName'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
           Width = 84
           Position.BandIndex = 0
           Position.ColIndex = 5
@@ -3085,6 +3228,8 @@ object fmEtrClaim: TfmEtrClaim
         object cxGridDBBandedTableView1clmFreightGroupName: TcxGridDBBandedColumn
           Caption = #1043#1088#1091#1087#1087#1072' '#1075#1088#1091#1079#1072
           DataBinding.FieldName = 'clmFreightGroupName'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
           Width = 105
           Position.BandIndex = 0
           Position.ColIndex = 6
@@ -3093,6 +3238,8 @@ object fmEtrClaim: TfmEtrClaim
         object cxGridDBBandedTableView1otprToStationName: TcxGridDBBandedColumn
           Caption = #1057#1090'. '#1085#1072#1079#1085'.'
           DataBinding.FieldName = 'otprToStationName'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
           Width = 98
           Position.BandIndex = 0
           Position.ColIndex = 7
@@ -3101,6 +3248,8 @@ object fmEtrClaim: TfmEtrClaim
         object cxGridDBBandedTableView1otprFreightName: TcxGridDBBandedColumn
           Caption = #1043#1088#1091#1079' '#1045#1058#1057#1053#1043
           DataBinding.FieldName = 'otprFreightName'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
           Width = 90
           Position.BandIndex = 0
           Position.ColIndex = 8
@@ -3109,6 +3258,8 @@ object fmEtrClaim: TfmEtrClaim
         object cxGridDBBandedTableView1invNumber: TcxGridDBBandedColumn
           Caption = #1053#1086#1084#1077#1088' '#1085#1072#1082#1083#1072#1076#1085#1086#1081
           DataBinding.FieldName = 'invNumber'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
           Width = 109
           Position.BandIndex = 0
           Position.ColIndex = 9
@@ -3117,8 +3268,10 @@ object fmEtrClaim: TfmEtrClaim
         object cxGridDBBandedTableView1otprFreightWeight: TcxGridDBBandedColumn
           Caption = #1042#1077#1089
           DataBinding.FieldName = 'otprFreightWeight'
+          DataBinding.IsNullValueType = True
           PropertiesClassName = 'TcxCurrencyEditProperties'
           Properties.DisplayFormat = '#,##0'
+          HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
           Position.ColIndex = 11
@@ -3127,8 +3280,10 @@ object fmEtrClaim: TfmEtrClaim
         object cxGridDBBandedTableView1otprCarCount: TcxGridDBBandedColumn
           Caption = #1050#1086'-'#1074#1086' '#1074#1072#1075#1086#1085#1086#1074
           DataBinding.FieldName = 'otprCarCount'
+          DataBinding.IsNullValueType = True
           PropertiesClassName = 'TcxCurrencyEditProperties'
           Properties.DisplayFormat = '#,##0'
+          HeaderAlignmentVert = vaTop
           Width = 100
           Position.BandIndex = 0
           Position.ColIndex = 12
@@ -3137,6 +3292,7 @@ object fmEtrClaim: TfmEtrClaim
         object cxGridDBBandedTableView1ELS_cod: TcxGridDBBandedColumn
           Caption = #1045#1051#1057
           DataBinding.FieldName = 'ELS_cod'
+          DataBinding.IsNullValueType = True
           HeaderAlignmentVert = vaTop
           Width = 80
           Position.BandIndex = 0
@@ -3147,50 +3303,6 @@ object fmEtrClaim: TfmEtrClaim
       object cxGridLevel1: TcxGridLevel
         GridView = cxGridDBBandedTableView1
       end
-    end
-  end
-  object cxPageControl2: TcxPageControl
-    Left = 0
-    Top = 144
-    Width = 1204
-    Height = 23
-    Align = alTop
-    Font.Charset = RUSSIAN_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 5
-    Properties.ActivePage = cxTabSheet4
-    Properties.CustomButtons.Buttons = <>
-    Properties.Style = 2
-    LookAndFeel.Kind = lfUltraFlat
-    LookAndFeel.NativeStyle = False
-    LookAndFeel.ScrollbarMode = sbmClassic
-    LookAndFeel.SkinName = ''
-    OnChange = cxPageControl2Change
-    ExplicitTop = 173
-    ClientRectBottom = 25
-    ClientRectRight = 1204
-    ClientRectTop = 25
-    object cxTabSheet4: TcxTabSheet
-      Caption = #1043#1091#1088#1091
-      ImageIndex = 0
-      ExplicitTop = 0
-      ExplicitWidth = 1140
-    end
-    object cxTabSheet5: TcxTabSheet
-      Caption = #1040#1091#1088#1072' '#1054#1081#1083
-      ImageIndex = 1
-      ExplicitTop = 0
-      ExplicitWidth = 0
-    end
-    object cxTabSheet6: TcxTabSheet
-      Caption = #1056#1077#1089#1091#1088#1089' '#1058#1088#1077#1081#1076
-      ImageIndex = 2
-      ExplicitTop = 0
-      ExplicitWidth = 0
     end
   end
   object ADOEtran: TADOConnection
@@ -3289,8 +3401,7 @@ object fmEtrClaim: TfmEtrClaim
       
         'WHERE'#9'users_owner_id in (SELECT users2.users_id FROM etran_users' +
         ' users1 inner join etran_users users2 on users1.users_group_id =' +
-        ' users2.users_group_id WHERE users1.users_name = system_user)'
-      'AND etran_users.els_cod = '#39'1004653067'#39)
+        ' users2.users_group_id WHERE users1.users_name = system_user)')
     Left = 56
     Top = 288
   end

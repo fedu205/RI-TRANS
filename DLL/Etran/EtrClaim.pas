@@ -28,7 +28,9 @@ uses
   cxDateUtils, dxSkinsdxBarPainter, dxSkinOffice2016Colorful,
   dxSkinOffice2016Dark, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
   dxSkinVisualStudio2013Light, System.ImageList,
-  cxDataControllerConditionalFormattingRulesManagerDialog, cxImageList, dxSkinTheBezier, dxDateRanges, dxSkinOffice2019Colorful;
+  cxDataControllerConditionalFormattingRulesManagerDialog, cxImageList, dxSkinTheBezier, dxDateRanges, dxSkinOffice2019Colorful,
+  dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray,
+  dxSkinOffice2019White, dxSkinWXI, dxScrollbarAnnotations;
 
 type
   TfmEtrClaim = class(TForm)
@@ -457,10 +459,6 @@ type
     dxBarButton53: TdxBarButton;
     cxGridDBBandedTableView12otprCarOwnerName: TcxGridDBBandedColumn;
     cxGridDBBandedTableView1ELS_cod: TcxGridDBBandedColumn;
-    cxPageControl2: TcxPageControl;
-    cxTabSheet4: TcxTabSheet;
-    cxTabSheet5: TcxTabSheet;
-    cxTabSheet6: TcxTabSheet;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure cxGridDBBandedTableView12FocusedRecordChanged(
       Sender: TcxCustomGridTableView; APrevFocusedRecord,
@@ -637,7 +635,6 @@ type
       AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
     procedure cxGridDBBandedTableView19KeyPress(Sender: TObject; var Key: Char);
     procedure dxBarButton53Click(Sender: TObject);
-    procedure cxPageControl2Change(Sender: TObject);
   private
     Fusr_pwd         : PUser_pwd;
     Fusers_group_cod : string;
@@ -841,13 +838,6 @@ begin
     if set_ETRAN_clmInv  then Query_Claim.SQL.Add('INNER JOIN clminv  ON claim.claim_id = clminv.claim_id');
 
     Query_Claim.SQL.Add('WHERE  ' + str_filter + ' AND users_owner_id in (SELECT users2.users_id FROM etran_users users1 inner join etran_users users2 on users1.users_group_id = users2.users_group_id WHERE users1.users_name = system_user)');
-
-    case cxPageControl2.ActivePageIndex of
-      0: Query_Claim.SQL.Add('AND etran_users.els_cod = ''1004653067''');
-      1: Query_Claim.SQL.Add('AND etran_users.els_cod = ''1006059161''');
-      2: Query_Claim.SQL.Add('AND etran_users.els_cod = ''1006062218''');
-    end;
-
     Query_Claim.Open;
 
     Screen.Cursor := crDefault;
@@ -1085,22 +1075,6 @@ procedure TfmEtrClaim.cxGridDBBandedTableView20FocusedItemChanged(
   AFocusedItem: TcxCustomGridTableItem);
 begin
 	cxGridDBBandedTableView20.Painter.Invalidate;
-end;
-
-procedure TfmEtrClaim.cxPageControl2Change(Sender: TObject);
-begin
-  Screen.Cursor := crHourGlass;
-
-  Query_Claim.SQL.Strings[Query_Claim.SQL.Count-1] := '';
-  case cxPageControl2.ActivePageIndex of
-    0: Query_Claim.SQL.Add('AND etran_users.els_cod = ''1004653067''');
-    1: Query_Claim.SQL.Add('AND etran_users.els_cod = ''1006059161''');
-    2: Query_Claim.SQL.Add('AND etran_users.els_cod = ''1006062218''');
-  end;
-
-  Query_Claim.Open;
-
-  Screen.Cursor := crDefault;
 end;
 
 procedure TfmEtrClaim.cxPageControl4Change(Sender: TObject);
@@ -1438,13 +1412,6 @@ begin
       'inner join etran_users on etran_global_id.users_owner_id = etran_users.users_id ' +
       'WHERE convert(varchar(8),claimRegDate,112) between '+DateToSQL(period_begin)+' AND '+DateToSQL(period_end) +
       ' AND users_owner_id in (SELECT users2.users_id FROM etran_users users1 inner join etran_users users2 on users1.users_group_id = users2.users_group_id WHERE users1.users_name = system_user)');
-
-  case cxPageControl2.ActivePageIndex of
-    0: Query_Claim.SQL.Add('AND etran_users.els_cod = ''1004653067''');
-    1: Query_Claim.SQL.Add('AND etran_users.els_cod = ''1006059161''');
-    2: Query_Claim.SQL.Add('AND etran_users.els_cod = ''1006062218''');
-  end;
-
   Query_Claim.Open;
   cxDateEdit11.Date :=period_begin;
   cxDateEdit12.Date :=period_end;

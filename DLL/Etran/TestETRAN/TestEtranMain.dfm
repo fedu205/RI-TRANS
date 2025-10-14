@@ -391,6 +391,15 @@ object Form1: TForm1
         TabOrder = 6
         OnClick = Button3Click
       end
+      object BitBtn1: TBitBtn
+        Left = 160
+        Top = 152
+        Width = 75
+        Height = 25
+        Caption = 'BitBtn1'
+        TabOrder = 7
+        OnClick = BitBtn1Click
+      end
     end
     object RichEdit1: TRichEdit
       Left = 0
@@ -452,5 +461,11 @@ object Form1: TForm1
     Converter.Options = [soSendMultiRefObj, soTryAllSchema, soRootRefNodesToBody, soCacheMimeResponse, soUTF8EncodeXML]
     Left = 328
     Top = 384
+  end
+  object ClientDataSet1: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 352
+    Top = 328
   end
 end

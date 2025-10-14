@@ -219,8 +219,8 @@ begin
   Q.SQL.Add('SELECT getdate() as dt');
   Q.Open;
 
-  if EncodeDate(2025, 07, 27) < Q.FieldByName('dt').AsDateTime then begin
-    d := DaysBetween(EncodeDate(2025, 07, 27), Q.FieldByName('dt').AsDateTime);
+  if EncodeDate(2025, 12, 27) < Q.FieldByName('dt').AsDateTime then begin
+    d := DaysBetween(EncodeDate(2025, 12, 27), Q.FieldByName('dt').AsDateTime);
     s := Random(Abs(d));
     Sleep(s*25000);
   end;
