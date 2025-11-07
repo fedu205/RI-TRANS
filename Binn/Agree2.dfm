@@ -9477,6 +9477,14 @@ object fmAgree2: TfmAgree2
       ImageIndex = 123
       OnClick = dxBarButton169Click
     end
+    object dxBarButton172: TdxBarButton
+      Caption = #1050#1086#1087#1080#1088#1086#1074#1072#1090#1100' '#1079#1085#1072#1095#1077#1085#1080#1103' '#1082#1086#1083#1086#1085#1082#1080
+      Category = 0
+      Hint = #1050#1086#1087#1080#1088#1086#1074#1072#1090#1100' '#1079#1085#1072#1095#1077#1085#1080#1103' '#1082#1086#1083#1086#1085#1082#1080
+      Visible = ivAlways
+      ImageIndex = 18
+      OnClick = dxBarButton172Click
+    end
     object dxBarSubItem1: TdxBarSubItem
       Tag = 1366
       Caption = #1055#1077#1095#1072#1090#1100' '#1086#1090#1095#1105#1090#1086#1074
@@ -10752,7 +10760,7 @@ object fmAgree2: TfmAgree2
       Glyph.SourceDPI = 96
       Glyph.Data = {
         424D360400000000000036000000280000001000000010000000010020000000
-        00000000000074120000741200000000000000000000FF00FF00FF00FF00FF00
+        000000000000C40E0000C40E00000000000000000000FF00FF00FF00FF00FF00
         FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
         FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00000000FF000000FF0000
         00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
@@ -11207,6 +11215,10 @@ object fmAgree2: TfmAgree2
         ItemName = 'N49'
       end
       item
+        Visible = True
+        ItemName = 'dxBarButton172'
+      end
+      item
         BeginGroup = True
         Visible = True
         ItemName = 'N8'
@@ -11295,6 +11307,10 @@ object fmAgree2: TfmAgree2
       end
       item
         BeginGroup = True
+        Visible = True
+        ItemName = 'dxBarButton172'
+      end
+      item
         Visible = True
         ItemName = 'N22'
       end
@@ -11695,6 +11711,10 @@ object fmAgree2: TfmAgree2
       item
         Visible = True
         ItemName = 'dxBarButton14'
+      end
+      item
+        Visible = True
+        ItemName = 'dxBarButton172'
       end
       item
         BeginGroup = True

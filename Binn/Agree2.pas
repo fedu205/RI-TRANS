@@ -960,6 +960,7 @@ type
     SP_FactClient: TADOStoredProc;
     cxGrid2DBBandedTableView1distance: TcxGridDBBandedColumn;
     dxBarButton169: TdxBarButton;
+    dxBarButton172: TdxBarButton;
     procedure dxBarButton25Click(Sender: TObject);
     procedure dxBarButton21Click(Sender: TObject);
     procedure dxBarButton19Click(Sender: TObject);
@@ -1175,6 +1176,7 @@ type
     procedure dxBarButton92Click(Sender: TObject);
     procedure dxBarButton93Click(Sender: TObject);
     procedure dxBarButton169Click(Sender: TObject);
+    procedure dxBarButton172Click(Sender: TObject);
   private
     Fcalc_flag     : boolean;
     index_MenuItem : integer;
@@ -12710,6 +12712,15 @@ begin
 
   VarClear(v);
 
+end;
+
+procedure TfmAgree2.dxBarButton172Click(Sender: TObject);
+begin
+  case TdxBarButton(Sender).ClickItemLink.Owner.Owner.Tag of
+    1 : cxGridCopyCellsValue(cxGrid1DBBandedTableView1);
+    2 : cxGridCopyCellsValue(cxGrid2DBBandedTableView1);
+    3 : cxGridCopyCellsValue(cxGrid3DBBandedTableView1);
+  end;
 end;
 
 procedure TfmAgree2.dxBarButton173Click(Sender: TObject);

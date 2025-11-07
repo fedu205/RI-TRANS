@@ -485,7 +485,7 @@ object fmFactInc: TfmFactInc
           HeaderGlyph.SourceDPI = 96
           HeaderGlyph.Data = {
             424D360400000000000036000000280000001000000010000000010020000000
-            00000000000074120000741200000000000000000000FFFFFF00FFFFFF00FFFF
+            000000000000C40E0000C40E00000000000000000000FFFFFF00FFFFFF00FFFF
             FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
             FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
             FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
@@ -1865,6 +1865,14 @@ object fmFactInc: TfmFactInc
       ImageIndex = 1
       OnClick = dxBarButton5Click
     end
+    object dxBarButton7: TdxBarButton
+      Caption = #1050#1086#1087#1080#1088#1086#1074#1072#1090#1100' '#1079#1085#1072#1095#1077#1085#1080#1103' '#1082#1086#1083#1086#1085#1082#1080
+      Category = 0
+      Hint = #1050#1086#1087#1080#1088#1086#1074#1072#1090#1100' '#1079#1085#1072#1095#1077#1085#1080#1103' '#1082#1086#1083#1086#1085#1082#1080
+      Visible = ivAlways
+      ImageIndex = 18
+      OnClick = dxBarButton7Click
+    end
     object N1: TdxBarButton
       Caption = #1055#1072#1088#1072#1084#1077#1090#1088#1099' '#1092#1072#1082#1090#1072'...'
       Category = 1
@@ -2034,6 +2042,7 @@ object fmFactInc: TfmFactInc
     end
   end
   object PopupMenu1: TdxBarPopupMenu
+    Tag = 1
     BarManager = dxBarManager1
     ItemLinks = <
       item
@@ -2043,6 +2052,10 @@ object fmFactInc: TfmFactInc
       item
         Visible = True
         ItemName = 'dxBarButton5'
+      end
+      item
+        Visible = True
+        ItemName = 'dxBarButton7'
       end
       item
         BeginGroup = True

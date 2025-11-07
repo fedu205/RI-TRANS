@@ -70,10 +70,6 @@ type
     N6: TdxBarButton;
     N4: TdxBarButton;
     N22: TdxBarButton;
-    N23: TdxBarButton;
-    N24: TdxBarButton;
-    N25: TdxBarButton;
-    N10: TdxBarSubItem;
     N11: TdxBarButton;
     N14: TdxBarButton;
     Word2: TdxBarButton;
@@ -126,7 +122,6 @@ type
     procedure USD_to_RUBClick(Sender: TObject);
     procedure Excel3Click(Sender: TObject);
     procedure N22Click(Sender: TObject);
-    procedure N23Click(Sender: TObject);
     procedure dxBarButton3Click(Sender: TObject);
     procedure N28Click(Sender: TObject);
   private
@@ -281,9 +276,6 @@ begin
 
   cxGrid1DBBandedTableView1.DataController.DataSource := DS_Sverka;
 
-  N22.Caption := 'Номера вагонов (' + Query_Agree.FieldByName('firm_self_name').AsString + ')';
-  N23.Caption := 'Номера накладных (' + Query_Agree.FieldByName('firm_self_name').AsString + ')';
-
   if cxGrid1DBBandedTableView1.DataController.Summary.FooterSummaryValues[8] <> null then
     cxGrid1DBBandedTableView1.Bands[0].Caption := Query_Agree.FieldByName('firm_self_name').AsString + ' (' + IntToStr(cxGrid1DBBandedTableView1.DataController.Summary.FooterSummaryValues[8]) + ')'
   else
@@ -404,8 +396,6 @@ begin
   N2.Caption := 'Удалить запись ' + FLabel1;
   N6.Caption := 'Удалить лишние ' + FLabel1;
   N4.Caption := 'Удалить весь факт ' + FLabel1;
-  N24.Caption := 'Номера вагонов ' + FLabel1;
-  N25.Caption := 'Номера накладных ' + FLabel1;
   RUB_to_USD.Caption := 'Перевод RUB->Валюта (' + FLabel1 + ')';
   USD_to_RUB.Caption := 'Перевод Валюта->RUB (' + FLabel1 + ')';
 
@@ -426,7 +416,6 @@ begin
   N4.Enabled  := Fset_save;
   N6.Enabled  := Fset_save;
   N9.Enabled  := Fset_save;
-  N10.Enabled := Fset_save;
   N12.Enabled := Fset_save;
   N14.Enabled := Fset_save;
   N16.Enabled := Fset_save;
@@ -927,58 +916,10 @@ begin
 end;
 
 procedure TfmAgreeFactInc.N22Click(Sender: TObject);
-var        i : integer;
-         str : string;
-      buffer : PWideChar;
-    cxColumn : TcxGridDBBandedColumn;
-     clboard : TClipboard;
 begin
-  cxGrid1DBBandedTableView1.Controller.SelectedRows[0].Focused := True;
-  case Ftype_str of
-    1 : if TMenuItem(Sender).Tag = 0 then cxColumn := cxGrid1DBBandedTableView1num_vagon_F
-        else cxColumn := cxGrid1DBBandedTableView1num_vagon_Z;
-    2 : if TMenuItem(Sender).Tag = 0 then cxColumn := cxGrid1DBBandedTableView1num_konten_F
-        else cxColumn := cxGrid1DBBandedTableView1num_konten_Z;
+  case TdxBarButton(Sender).ClickItemLink.Owner.Owner.Tag of
+    1 : cxGridCopyCellsValue(cxGrid1DBBandedTableView1);
   end;
-  str := cxColumn.DataBinding.Field.AsString;
-  for i:=1 to cxGrid1DBBandedTableView1.Controller.SelectedRowCount-1 do begin
-    cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Focused := True;
-    str :=  str + ',' + cxColumn.DataBinding.Field.AsString;
-  end;
-  clboard := TClipboard.Create();
-  clboard.AsText := str;
-  clboard.Free;
-
-  SearchFactIncDlg(PWideChar(str), 1);
-
-end;
-
-procedure TfmAgreeFactInc.N23Click(Sender: TObject);
-var     i, j : integer;
-      str, s : string;
-      buffer : PWideChar;
-    cxColumn : TcxGridDBBandedColumn;
-     clboard : TClipboard;
-begin
-  case TMenuItem(Sender).Tag of
-    0 : cxColumn := cxGrid1DBBandedTableView1num_document_F;
-    1 : cxColumn := cxGrid1DBBandedTableView1num_document_Z;
-  end;
-
-  for i:=0 to cxGrid1DBBandedTableView1.Controller.SelectedRowCount-1 do begin
-    cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Focused := True;
-    if cxColumn.DataBinding.Field.AsString <> '' then begin
-      s := Copy(cxColumn.DataBinding.Field.AsString, Length(cxColumn.DataBinding.Field.AsString)-5, 6);
-      while s[1] = '0' do
-        Delete(s, 1, 1);
-      str := str + ',' + Copy(s, Length(s)-5, 6);
-    end;
-  end;
-  Delete(str, 1, 1);
-  clboard := TClipboard.Create();
-  clboard.AsText := str;
-  clboard.Free;
-  SearchFactIncDlg(PWideChar(str), 2);
 end;
 
 procedure TfmAgreeFactInc.N27Click(Sender: TObject);

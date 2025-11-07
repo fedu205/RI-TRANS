@@ -166,7 +166,7 @@ object fmFactTrack: TfmFactTrack
     Height = 416
     Align = alClient
     TabOrder = 0
-    Properties.ActivePage = cxTabSheet5
+    Properties.ActivePage = cxTabSheet2
     Properties.CustomButtons.Buttons = <>
     LookAndFeel.Kind = lfUltraFlat
     LookAndFeel.NativeStyle = False
@@ -1890,9 +1890,6 @@ object fmFactTrack: TfmFactTrack
     object cxTabSheet2: TcxTabSheet
       Caption = #1056#1077#1081#1089#1099' '#1074#1072#1075#1086#1085#1072
       ImageIndex = 1
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object cxGrid3: TcxGrid
         Left = 0
         Top = 0
@@ -5446,9 +5443,9 @@ object fmFactTrack: TfmFactTrack
       OnClick = dxBarButton12Click
     end
     object dxBarButton64: TdxBarButton
-      Caption = #1057#1082#1086#1087#1080#1088#1086#1074#1072#1090#1100' '#1074#1099#1073#1088#1072#1085#1085#1099#1077' '#1085#1086#1084#1077#1088#1072' '#1074#1072#1075#1086#1085#1086#1074
+      Caption = #1050#1086#1087#1080#1088#1086#1074#1072#1090#1100' '#1079#1085#1072#1095#1077#1085#1080#1103' '#1082#1086#1083#1086#1085#1082#1080
       Category = 0
-      Hint = #1057#1082#1086#1087#1080#1088#1086#1074#1072#1090#1100' '#1074#1099#1073#1088#1072#1085#1085#1099#1077' '#1085#1086#1084#1077#1088#1072' '#1074#1072#1075#1086#1085#1086#1074
+      Hint = #1050#1086#1087#1080#1088#1086#1074#1072#1090#1100' '#1079#1085#1072#1095#1077#1085#1080#1103' '#1082#1086#1083#1086#1085#1082#1080
       Visible = ivAlways
       ImageIndex = 18
       OnClick = dxBarButton64Click
@@ -6061,6 +6058,25 @@ object fmFactTrack: TfmFactTrack
       ImageIndex = 8
       OnClick = dxBarButton1Click
     end
+    object dxBarSubItem11: TdxBarSubItem
+      Caption = #1048#1079#1084#1077#1085#1080#1090#1100' '#1076#1072#1085#1085#1099#1077
+      Category = 0
+      Visible = ivAlways
+      ImageIndex = 115
+      ItemLinks = <
+        item
+          Visible = True
+          ItemName = 'dxBarButton6'
+        end>
+    end
+    object dxBarButton6: TdxBarButton
+      Caption = '"'#1044#1072#1090#1072' '#1087#1088#1080#1073'. '#1085#1072' '#1057#1090'.'#1054#1090#1087#1088'" - '#1080#1079' '#1069#1058#1056#1040#1053#1072
+      Category = 0
+      Hint = '"'#1044#1072#1090#1072' '#1087#1088#1080#1073'. '#1085#1072' '#1057#1090'.'#1054#1090#1087#1088'" - '#1080#1079' '#1069#1058#1056#1040#1053#1072
+      Visible = ivAlways
+      ImageIndex = 123
+      OnClick = dxBarButton6Click
+    end
     object N12: TdxBarButton
       Caption = #1054#1090#1095#1105#1090' '#1087#1086' '#1074#1072#1075#1086#1085#1072#1084' (44)'
       Category = 1
@@ -6555,6 +6571,10 @@ object fmFactTrack: TfmFactTrack
         ItemName = 'dxBarSubItem16'
       end
       item
+        Visible = True
+        ItemName = 'dxBarButton64'
+      end
+      item
         BeginGroup = True
         Visible = True
         ItemName = 'Excel3'
@@ -6755,6 +6775,10 @@ object fmFactTrack: TfmFactTrack
         ItemName = 'dxBarSubItem6'
       end
       item
+        Visible = True
+        ItemName = 'dxBarButton64'
+      end
+      item
         BeginGroup = True
         Visible = True
         ItemName = 'dxBarButton75'
@@ -6801,6 +6825,15 @@ object fmFactTrack: TfmFactTrack
     BarManager = dxBarManager1
     ItemLinks = <
       item
+        Visible = True
+        ItemName = 'dxBarSubItem11'
+      end
+      item
+        Visible = True
+        ItemName = 'dxBarButton64'
+      end
+      item
+        BeginGroup = True
         Visible = True
         ItemName = 'dxBarButton1'
       end

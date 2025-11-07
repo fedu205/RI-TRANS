@@ -325,7 +325,7 @@ function GetDBFIOUsers  (connect: TADOConnection): string;
 
 
 procedure ClientDSView(var ClientDS: TClientDataSet);
-
+procedure cxGridCopyCellsValue(cxGrid : TcxGridDBBandedTableView);
 
 function GetMainWindow(HWND: HWND; PID: DWORD): Boolean; stdcall;
 function RunLisDocs: Boolean;
@@ -345,7 +345,7 @@ procedure MonitorEventFormOpen(action_name, form_object: string; Conn: TADOConne
 
 implementation
         uses Other, ComObj, Period, Filter, Main, TariffSupportFunctions, WideStrings,
-            EDOXMLUniTrDoc, InvoiceScoreAdd, Agree2, EDOXMLUniTrDoc820;
+            EDOXMLUniTrDoc, InvoiceScoreAdd, Agree2, EDOXMLUniTrDoc820, Clipbrd;
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 
@@ -18654,5 +18654,23 @@ begin
 
 //  VarClear(exWks); VarClear(exWkb); VarClear(exApp);
 end;
+
+procedure cxGridCopyCellsValue(cxGrid : TcxGridDBBandedTableView);
+var str_cells : string;
+            i : integer;
+      clboard : TClipboard;
+begin
+  str_cells := '';
+
+  for i := 0 to cxGrid.Controller.SelectedRecordCount - 1 do begin
+    str_cells := str_cells + VarToStr(cxGrid.Controller.SelectedRecords[i].Values[cxGrid.VisibleColumns[cxGrid.Controller.FocusedItemIndex].Index]);
+    str_cells := str_cells + #13#10;
+  end;
+
+  clboard := TClipboard.Create;
+  clboard.AsText := str_cells;
+  clboard.Free;
+end;
+
 
 end.

@@ -899,8 +899,6 @@ object fmFirm: TfmFirm
         #1043#1088#1091#1079#1086#1086#1090#1087#1088#1072#1074#1080#1090#1077#1083#1080' / '#1075#1088#1091#1079#1086#1087#1086#1083#1091#1095#1072#1090#1077#1083#1080
         #1040#1076#1084#1080#1085#1080#1089#1090#1088#1072#1090#1080#1074#1085#1099#1077' '#1082#1086#1085#1090#1088#1072#1075#1077#1085#1090#1099)
       OnChange = cxTabControl1Change
-      ExplicitLeft = 4
-      ExplicitWidth = 915
       ClientRectBottom = 26
       ClientRectRight = 913
       ClientRectTop = 25
@@ -921,26 +919,26 @@ object fmFirm: TfmFirm
       Height = 238
       Align = alClient
       TabOrder = 0
-      Properties.ActivePage = cxTabSheet5
+      Properties.ActivePage = cxTabSheet1
       Properties.CustomButtons.Buttons = <>
+      Properties.Images = cxImageList1
       LookAndFeel.Kind = lfUltraFlat
       LookAndFeel.NativeStyle = False
       LookAndFeel.ScrollbarMode = sbmClassic
       OnChange = cxPageControl1Change
       ClientRectBottom = 238
       ClientRectRight = 921
-      ClientRectTop = 24
+      ClientRectTop = 25
       object cxTabSheet1: TcxTabSheet
         Caption = #1044#1086#1075#1086#1074#1086#1088#1099' '#1082#1086#1085#1090#1088#1072#1075#1077#1085#1090#1072
-        ImageIndex = 0
-        ExplicitTop = 22
-        ExplicitWidth = 922
-        ExplicitHeight = 216
+        ImageIndex = 71
+        ExplicitTop = 24
+        ExplicitHeight = 214
         object cxGrid2: TcxGrid
           Left = 0
           Top = 0
           Width = 921
-          Height = 214
+          Height = 213
           Align = alClient
           Font.Charset = RUSSIAN_CHARSET
           Font.Color = clWindowText
@@ -954,6 +952,7 @@ object fmFirm: TfmFirm
           LookAndFeel.NativeStyle = False
           LookAndFeel.ScrollbarMode = sbmClassic
           LookAndFeel.SkinName = 'Office2007Black'
+          ExplicitHeight = 214
           object cxGrid2DBBandedTableView1: TcxGridDBBandedTableView
             OnDblClick = cxGrid2DBBandedTableView1DblClick
             OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -1000,6 +999,7 @@ object fmFirm: TfmFirm
             object cxGrid2DBBandedTableView1contract_id: TcxGridDBBandedColumn
               Caption = #8470' '#1079#1072#1087#1080#1089#1080
               DataBinding.FieldName = 'contract_id'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 60
               Position.BandIndex = -1
@@ -1009,6 +1009,7 @@ object fmFirm: TfmFirm
             object cxGrid2DBBandedTableView1contract_cod: TcxGridDBBandedColumn
               Caption = #8470' '#1076#1086#1075#1086#1074#1086#1088#1072
               DataBinding.FieldName = 'contract_cod'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 73
               Position.BandIndex = 0
@@ -1017,6 +1018,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid2DBBandedTableView1type_contract: TcxGridDBBandedColumn
               DataBinding.FieldName = 'type_contract'
+              DataBinding.IsNullValueType = True
               Visible = False
               HeaderAlignmentVert = vaTop
               Width = 65
@@ -1027,6 +1029,7 @@ object fmFirm: TfmFirm
             object cxGrid2DBBandedTableView1type_contract_name: TcxGridDBBandedColumn
               Caption = #1050#1083#1080#1077#1085#1090'/'#1055#1086#1076#1088#1103#1076#1095#1080#1082
               DataBinding.FieldName = 'type_contract_name'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 107
               Position.BandIndex = 0
@@ -1036,6 +1039,7 @@ object fmFirm: TfmFirm
             object cxGrid2DBBandedTableView1date_begin: TcxGridDBBandedColumn
               Caption = #1053#1072#1095#1072#1083#1086
               DataBinding.FieldName = 'date_begin'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxDateEditProperties'
               Properties.ShowTime = False
               HeaderAlignmentVert = vaTop
@@ -1047,6 +1051,7 @@ object fmFirm: TfmFirm
             object cxGrid2DBBandedTableView1date_end: TcxGridDBBandedColumn
               Caption = #1050#1086#1085#1077#1094
               DataBinding.FieldName = 'date_end'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxDateEditProperties'
               Properties.ShowTime = False
               HeaderAlignmentVert = vaTop
@@ -1058,6 +1063,7 @@ object fmFirm: TfmFirm
             object cxGrid2DBBandedTableView1firm_self_name: TcxGridDBBandedColumn
               Caption = #1057#1086#1073#1089#1090#1074#1077#1085#1085#1072#1103
               DataBinding.FieldName = 'firm_self_name'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 133
               Position.BandIndex = 0
@@ -1067,6 +1073,7 @@ object fmFirm: TfmFirm
             object cxGrid2DBBandedTableView1firm_customer_name: TcxGridDBBandedColumn
               Caption = #1050#1086#1085#1090#1088#1072#1075#1077#1085#1090
               DataBinding.FieldName = 'firm_customer_name'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 158
               Position.BandIndex = 0
@@ -1076,6 +1083,7 @@ object fmFirm: TfmFirm
             object cxGrid2DBBandedTableView1note: TcxGridDBBandedColumn
               Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
               DataBinding.FieldName = 'note'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 65
               Position.BandIndex = 0
@@ -1085,6 +1093,7 @@ object fmFirm: TfmFirm
             object cxGrid2DBBandedTableView1FIO_users_owner: TcxGridDBBandedColumn
               Caption = #1054#1090#1074#1077#1090#1089#1090#1074#1077#1085#1085#1099#1081
               DataBinding.FieldName = 'FIO_users_owner'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 65
               Position.BandIndex = 0
@@ -1094,6 +1103,7 @@ object fmFirm: TfmFirm
             object cxGrid2DBBandedTableView1cnt_global_doc: TcxGridDBBandedColumn
               Caption = #1050#1086#1083'-'#1074#1086' '#1076#1086#1082'.'
               DataBinding.FieldName = 'cnt_global_doc'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = 0
               Position.ColIndex = 8
@@ -1102,6 +1112,7 @@ object fmFirm: TfmFirm
             object cxGrid2DBBandedTableView1date_enter: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1074#1074#1086#1076#1072
               DataBinding.FieldName = 'date_enter'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxDateEditProperties'
               Properties.ShowTime = False
               HeaderAlignmentVert = vaTop
@@ -1112,6 +1123,7 @@ object fmFirm: TfmFirm
             object cxGrid2DBBandedTableView1date_long: TcxGridDBBandedColumn
               Caption = #1055#1088#1086#1076#1083#1105#1085' '#1076#1086
               DataBinding.FieldName = 'date_long'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 65
               Position.BandIndex = -1
@@ -1120,6 +1132,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid2DBBandedTableView1global_color: TcxGridDBBandedColumn
               DataBinding.FieldName = 'global_color'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1127,6 +1140,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid2DBBandedTableView1rights: TcxGridDBBandedColumn
               DataBinding.FieldName = 'rights'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1141,15 +1155,14 @@ object fmFirm: TfmFirm
       object cxTabSheet2: TcxTabSheet
         Tag = 1
         Caption = #1040#1076#1088#1077#1089#1072
-        ImageIndex = 1
-        ExplicitTop = 22
-        ExplicitWidth = 922
-        ExplicitHeight = 216
+        ImageIndex = 86
+        ExplicitTop = 24
+        ExplicitHeight = 214
         object cxGrid3: TcxGrid
           Left = 0
           Top = 0
           Width = 921
-          Height = 214
+          Height = 213
           Align = alClient
           Font.Charset = RUSSIAN_CHARSET
           Font.Color = clWindowText
@@ -1162,6 +1175,7 @@ object fmFirm: TfmFirm
           LookAndFeel.NativeStyle = False
           LookAndFeel.ScrollbarMode = sbmClassic
           LookAndFeel.SkinName = 'Office2007Black'
+          ExplicitHeight = 214
           object cxGrid3DBBandedTableView1: TcxGridDBBandedTableView
             PopupMenu = dxBarPopupMenu3
             OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -1195,6 +1209,7 @@ object fmFirm: TfmFirm
               end>
             object cxGrid3DBBandedTableView1PrimaryKey: TcxGridDBBandedColumn
               DataBinding.FieldName = 'PrimaryKey'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1202,6 +1217,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid3DBBandedTableView1type_action: TcxGridDBBandedColumn
               DataBinding.FieldName = 'type_action'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1210,6 +1226,7 @@ object fmFirm: TfmFirm
             object cxGrid3DBBandedTableView1firm_contact_id: TcxGridDBBandedColumn
               Caption = #8470' '#1079#1072#1087#1080#1089#1080
               DataBinding.FieldName = 'firm_contact_id'
+              DataBinding.IsNullValueType = True
               Visible = False
               HeaderAlignmentVert = vaTop
               Position.BandIndex = 0
@@ -1218,6 +1235,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid3DBBandedTableView1firm_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'firm_id'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1225,6 +1243,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid3DBBandedTableView1type_contact_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'type_contact_id'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1233,6 +1252,7 @@ object fmFirm: TfmFirm
             object cxGrid3DBBandedTableView1type_contact_cod: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1082#1086#1085#1090#1072#1082#1090#1072
               DataBinding.FieldName = 'type_contact_cod'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = 0
               Position.ColIndex = 4
@@ -1241,6 +1261,7 @@ object fmFirm: TfmFirm
             object cxGrid3DBBandedTableView1type_contact_name: TcxGridDBBandedColumn
               Caption = #1058#1080#1087
               DataBinding.FieldName = 'type_contact_name'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 120
               Position.BandIndex = 0
@@ -1250,6 +1271,7 @@ object fmFirm: TfmFirm
             object cxGrid3DBBandedTableView1firm_contact_name: TcxGridDBBandedColumn
               Caption = #1040#1076#1088#1077#1089
               DataBinding.FieldName = 'firm_contact_name'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 240
               Position.BandIndex = 0
@@ -1259,6 +1281,7 @@ object fmFirm: TfmFirm
             object cxGrid3DBBandedTableView1date_begin: TcxGridDBBandedColumn
               Caption = #1055#1077#1088#1080#1086#1076' '#1089' ...'
               DataBinding.FieldName = 'date_begin'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxDateEditProperties'
               Properties.SaveTime = False
               Properties.ShowTime = False
@@ -1271,6 +1294,7 @@ object fmFirm: TfmFirm
             object cxGrid3DBBandedTableView1date_end: TcxGridDBBandedColumn
               Caption = #1055#1077#1088#1080#1086#1076' '#1087#1086' ...'
               DataBinding.FieldName = 'date_end'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxDateEditProperties'
               Properties.SaveTime = False
               Properties.ShowTime = False
@@ -1282,6 +1306,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid3DBBandedTableView1firm_contact_comment: TcxGridDBBandedColumn
               DataBinding.FieldName = 'firm_contact_comment'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1289,6 +1314,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid3DBBandedTableView1firm_contact_telefon: TcxGridDBBandedColumn
               DataBinding.FieldName = 'firm_contact_telefon'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1296,6 +1322,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid3DBBandedTableView1firm_contact_fax: TcxGridDBBandedColumn
               DataBinding.FieldName = 'firm_contact_fax'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1303,6 +1330,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid3DBBandedTableView1firm_contact_email: TcxGridDBBandedColumn
               DataBinding.FieldName = 'firm_contact_email'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1310,6 +1338,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid3DBBandedTableView1global_color: TcxGridDBBandedColumn
               DataBinding.FieldName = 'global_color'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1323,15 +1352,14 @@ object fmFirm: TfmFirm
       end
       object cxTabSheet6: TcxTabSheet
         Caption = #1058#1077#1083'./'#1060#1072#1082#1089'.'
-        ImageIndex = 5
-        ExplicitTop = 22
-        ExplicitWidth = 922
-        ExplicitHeight = 216
+        ImageIndex = 115
+        ExplicitTop = 24
+        ExplicitHeight = 214
         object cxGrid7: TcxGrid
           Left = 0
           Top = 0
           Width = 921
-          Height = 214
+          Height = 213
           Align = alClient
           Font.Charset = RUSSIAN_CHARSET
           Font.Color = clWindowText
@@ -1344,6 +1372,7 @@ object fmFirm: TfmFirm
           LookAndFeel.NativeStyle = False
           LookAndFeel.ScrollbarMode = sbmClassic
           LookAndFeel.SkinName = 'Office2007Black'
+          ExplicitHeight = 214
           object cxGrid7DBBandedTableView1: TcxGridDBBandedTableView
             PopupMenu = dxBarPopupMenu3
             OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -1376,6 +1405,7 @@ object fmFirm: TfmFirm
               end>
             object cxGridDBBandedColumn1: TcxGridDBBandedColumn
               DataBinding.FieldName = 'type_action'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1384,6 +1414,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedColumn2: TcxGridDBBandedColumn
               Caption = #8470' '#1079#1072#1087#1080#1089#1080
               DataBinding.FieldName = 'firm_contact_id'
+              DataBinding.IsNullValueType = True
               Visible = False
               HeaderAlignmentVert = vaTop
               Position.BandIndex = 0
@@ -1392,6 +1423,7 @@ object fmFirm: TfmFirm
             end
             object cxGridDBBandedColumn3: TcxGridDBBandedColumn
               DataBinding.FieldName = 'firm_id'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1399,6 +1431,7 @@ object fmFirm: TfmFirm
             end
             object cxGridDBBandedColumn4: TcxGridDBBandedColumn
               DataBinding.FieldName = 'type_contact_id'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1407,6 +1440,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedColumn5: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1082#1086#1085#1090#1072#1082#1090#1072
               DataBinding.FieldName = 'type_contact_cod'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 78
               Position.BandIndex = 0
@@ -1416,6 +1450,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedColumn6: TcxGridDBBandedColumn
               Caption = #1058#1080#1087
               DataBinding.FieldName = 'type_contact_name'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 120
               Position.BandIndex = 0
@@ -1425,6 +1460,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedColumn7: TcxGridDBBandedColumn
               Caption = #1060#1048#1054
               DataBinding.FieldName = 'firm_contact_name'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 150
               Position.BandIndex = -1
@@ -1434,6 +1470,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedColumn8: TcxGridDBBandedColumn
               Caption = #1055#1077#1088#1080#1086#1076' '#1089' ...'
               DataBinding.FieldName = 'date_begin'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxDateEditProperties'
               Properties.SaveTime = False
               Properties.ShowTime = False
@@ -1446,6 +1483,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedColumn9: TcxGridDBBandedColumn
               Caption = #1055#1077#1088#1080#1086#1076' '#1087#1086' ...'
               DataBinding.FieldName = 'date_end'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxDateEditProperties'
               Properties.SaveTime = False
               Properties.ShowTime = False
@@ -1458,6 +1496,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedColumn10: TcxGridDBBandedColumn
               Caption = #1054#1089#1085#1086#1074#1072#1085#1080#1077
               DataBinding.FieldName = 'firm_contact_comment'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 150
               Position.BandIndex = -1
@@ -1467,6 +1506,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedColumn11: TcxGridDBBandedColumn
               Caption = #1058#1077#1083#1077#1092#1086#1085
               DataBinding.FieldName = 'firm_contact_telefon'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 100
               Position.BandIndex = 0
@@ -1476,6 +1516,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedColumn12: TcxGridDBBandedColumn
               Caption = #1060#1072#1082#1089
               DataBinding.FieldName = 'firm_contact_fax'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 100
               Position.BandIndex = 0
@@ -1485,6 +1526,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedColumn13: TcxGridDBBandedColumn
               Caption = 'E-Mail'
               DataBinding.FieldName = 'firm_contact_email'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 100
               Position.BandIndex = 0
@@ -1493,6 +1535,7 @@ object fmFirm: TfmFirm
             end
             object cxGridDBBandedColumn14: TcxGridDBBandedColumn
               DataBinding.FieldName = 'PrimaryKey'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1500,6 +1543,7 @@ object fmFirm: TfmFirm
             end
             object cxGridDBBandedColumn15: TcxGridDBBandedColumn
               DataBinding.FieldName = 'global_color'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1508,6 +1552,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedColumn16: TcxGridDBBandedColumn
               Caption = #1042' '#1040#1082#1090
               DataBinding.FieldName = 'set_default'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxCheckBoxProperties'
               HeaderAlignmentVert = vaTop
               Width = 40
@@ -1518,6 +1563,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedColumn17: TcxGridDBBandedColumn
               Caption = #1044#1077#1085#1100' '#1088#1086#1078#1076#1077#1085#1080#1103
               DataBinding.FieldName = 'date_birthday'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxDateEditProperties'
               Properties.SaveTime = False
               Properties.ShowTime = False
@@ -1536,15 +1582,14 @@ object fmFirm: TfmFirm
       object cxTabSheet3: TcxTabSheet
         Tag = 2
         Caption = #1041#1072#1085#1082#1086#1074#1089#1082#1080#1077' '#1088#1077#1082#1074#1080#1079#1080#1090#1099
-        ImageIndex = 2
-        ExplicitTop = 22
-        ExplicitWidth = 922
-        ExplicitHeight = 216
+        ImageIndex = 78
+        ExplicitTop = 24
+        ExplicitHeight = 214
         object cxGrid4: TcxGrid
           Left = 0
           Top = 0
           Width = 921
-          Height = 214
+          Height = 213
           Align = alClient
           Font.Charset = RUSSIAN_CHARSET
           Font.Color = clWindowText
@@ -1557,6 +1602,7 @@ object fmFirm: TfmFirm
           LookAndFeel.NativeStyle = False
           LookAndFeel.ScrollbarMode = sbmClassic
           LookAndFeel.SkinName = 'Office2007Black'
+          ExplicitHeight = 214
           object cxGrid4DBBandedTableView1: TcxGridDBBandedTableView
             PopupMenu = dxBarPopupMenu3
             OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -1590,6 +1636,7 @@ object fmFirm: TfmFirm
               end>
             object cxGrid4DBBandedTableView1type_action: TcxGridDBBandedColumn
               DataBinding.FieldName = 'type_action'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1598,6 +1645,7 @@ object fmFirm: TfmFirm
             object cxGrid4DBBandedTableView1firm_contact_id: TcxGridDBBandedColumn
               Caption = #8470' '#1079#1072#1087#1080#1089#1080
               DataBinding.FieldName = 'firm_contact_id'
+              DataBinding.IsNullValueType = True
               Visible = False
               HeaderAlignmentVert = vaTop
               Position.BandIndex = 0
@@ -1606,6 +1654,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid4DBBandedTableView1firm_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'firm_id'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1613,6 +1662,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid4DBBandedTableView1type_contact_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'type_contact_id'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1621,6 +1671,7 @@ object fmFirm: TfmFirm
             object cxGrid4DBBandedTableView1type_contact_cod: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1082#1086#1085#1090#1072#1082#1090#1072
               DataBinding.FieldName = 'type_contact_cod'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = 0
               Position.ColIndex = 4
@@ -1628,6 +1679,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid4DBBandedTableView1type_contact_name: TcxGridDBBandedColumn
               DataBinding.FieldName = 'type_contact_name'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1636,6 +1688,7 @@ object fmFirm: TfmFirm
             object cxGrid4DBBandedTableView1firm_contact_name: TcxGridDBBandedColumn
               Caption = #1041#1072#1085#1082#1086#1074#1089#1082#1080#1077' '#1088#1077#1082#1074#1080#1079#1080#1090#1099
               DataBinding.FieldName = 'firm_contact_name'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxMemoProperties'
               HeaderAlignmentVert = vaTop
               Width = 206
@@ -1646,6 +1699,7 @@ object fmFirm: TfmFirm
             object cxGrid4DBBandedTableView1date_begin: TcxGridDBBandedColumn
               Caption = #1055#1077#1088#1080#1086#1076' '#1089' ...'
               DataBinding.FieldName = 'date_begin'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxDateEditProperties'
               Properties.SaveTime = False
               Properties.ShowTime = False
@@ -1658,6 +1712,7 @@ object fmFirm: TfmFirm
             object cxGrid4DBBandedTableView1date_end: TcxGridDBBandedColumn
               Caption = #1055#1077#1088#1080#1086#1076' '#1087#1086' ...'
               DataBinding.FieldName = 'date_end'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxDateEditProperties'
               Properties.SaveTime = False
               Properties.ShowTime = False
@@ -1669,6 +1724,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid4DBBandedTableView1firm_contact_comment: TcxGridDBBandedColumn
               DataBinding.FieldName = 'firm_contact_comment'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1676,6 +1732,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid4DBBandedTableView1firm_contact_telefon: TcxGridDBBandedColumn
               DataBinding.FieldName = 'firm_contact_telefon'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1683,6 +1740,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid4DBBandedTableView1firm_contact_fax: TcxGridDBBandedColumn
               DataBinding.FieldName = 'firm_contact_fax'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1690,6 +1748,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid4DBBandedTableView1firm_contact_email: TcxGridDBBandedColumn
               DataBinding.FieldName = 'firm_contact_email'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1697,6 +1756,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid4DBBandedTableView1PrimaryKey: TcxGridDBBandedColumn
               DataBinding.FieldName = 'PrimaryKey'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1704,6 +1764,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid4DBBandedTableView1global_color: TcxGridDBBandedColumn
               DataBinding.FieldName = 'global_color'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1718,15 +1779,14 @@ object fmFirm: TfmFirm
       object cxTabSheet4: TcxTabSheet
         Tag = 3
         Caption = #1050#1086#1085#1090#1072#1082#1090#1099
-        ImageIndex = 3
-        ExplicitTop = 22
-        ExplicitWidth = 922
-        ExplicitHeight = 216
+        ImageIndex = 88
+        ExplicitTop = 24
+        ExplicitHeight = 214
         object cxGrid5: TcxGrid
           Left = 0
           Top = 0
           Width = 921
-          Height = 214
+          Height = 213
           Align = alClient
           Font.Charset = RUSSIAN_CHARSET
           Font.Color = clWindowText
@@ -1739,6 +1799,7 @@ object fmFirm: TfmFirm
           LookAndFeel.NativeStyle = False
           LookAndFeel.ScrollbarMode = sbmClassic
           LookAndFeel.SkinName = 'Office2007Black'
+          ExplicitHeight = 214
           object cxGrid5DBBandedTableView1: TcxGridDBBandedTableView
             PopupMenu = dxBarPopupMenu3
             OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -1771,6 +1832,7 @@ object fmFirm: TfmFirm
               end>
             object cxGrid5DBBandedTableView1type_action: TcxGridDBBandedColumn
               DataBinding.FieldName = 'type_action'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1779,6 +1841,7 @@ object fmFirm: TfmFirm
             object cxGrid5DBBandedTableView1firm_contact_id: TcxGridDBBandedColumn
               Caption = #8470' '#1079#1072#1087#1080#1089#1080
               DataBinding.FieldName = 'firm_contact_id'
+              DataBinding.IsNullValueType = True
               Visible = False
               HeaderAlignmentVert = vaTop
               Position.BandIndex = 0
@@ -1787,6 +1850,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid5DBBandedTableView1firm_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'firm_id'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1794,6 +1858,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid5DBBandedTableView1type_contact_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'type_contact_id'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1802,6 +1867,7 @@ object fmFirm: TfmFirm
             object cxGrid5DBBandedTableView1type_contact_cod: TcxGridDBBandedColumn
               Caption = #1050#1086#1076' '#1082#1086#1085#1090#1072#1082#1090#1072
               DataBinding.FieldName = 'type_contact_cod'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = 0
               Position.ColIndex = 10
@@ -1810,6 +1876,7 @@ object fmFirm: TfmFirm
             object cxGrid5DBBandedTableView1type_contact_name: TcxGridDBBandedColumn
               Caption = #1058#1080#1087
               DataBinding.FieldName = 'type_contact_name'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 120
               Position.BandIndex = 0
@@ -1819,6 +1886,7 @@ object fmFirm: TfmFirm
             object cxGrid5DBBandedTableView1firm_contact_name: TcxGridDBBandedColumn
               Caption = #1060#1048#1054
               DataBinding.FieldName = 'firm_contact_name'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 150
               Position.BandIndex = 0
@@ -1828,6 +1896,7 @@ object fmFirm: TfmFirm
             object cxGrid5DBBandedTableView1date_begin: TcxGridDBBandedColumn
               Caption = #1055#1077#1088#1080#1086#1076' '#1089' ...'
               DataBinding.FieldName = 'date_begin'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxDateEditProperties'
               Properties.SaveTime = False
               Properties.ShowTime = False
@@ -1840,6 +1909,7 @@ object fmFirm: TfmFirm
             object cxGrid5DBBandedTableView1date_end: TcxGridDBBandedColumn
               Caption = #1055#1077#1088#1080#1086#1076' '#1087#1086' ...'
               DataBinding.FieldName = 'date_end'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxDateEditProperties'
               Properties.SaveTime = False
               Properties.ShowTime = False
@@ -1852,6 +1922,7 @@ object fmFirm: TfmFirm
             object cxGrid5DBBandedTableView1firm_contact_comment: TcxGridDBBandedColumn
               Caption = #1054#1089#1085#1086#1074#1072#1085#1080#1077
               DataBinding.FieldName = 'firm_contact_comment'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 150
               Position.BandIndex = 0
@@ -1861,6 +1932,7 @@ object fmFirm: TfmFirm
             object cxGrid5DBBandedTableView1firm_contact_telefon: TcxGridDBBandedColumn
               Caption = #1058#1077#1083#1077#1092#1086#1085
               DataBinding.FieldName = 'firm_contact_telefon'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 100
               Position.BandIndex = 0
@@ -1870,6 +1942,7 @@ object fmFirm: TfmFirm
             object cxGrid5DBBandedTableView1firm_contact_fax: TcxGridDBBandedColumn
               Caption = #1060#1072#1082#1089
               DataBinding.FieldName = 'firm_contact_fax'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 100
               Position.BandIndex = 0
@@ -1879,6 +1952,7 @@ object fmFirm: TfmFirm
             object cxGrid5DBBandedTableView1firm_contact_email: TcxGridDBBandedColumn
               Caption = 'E-Mail'
               DataBinding.FieldName = 'firm_contact_email'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 100
               Position.BandIndex = 0
@@ -1887,6 +1961,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid5DBBandedTableView1PrimaryKey: TcxGridDBBandedColumn
               DataBinding.FieldName = 'PrimaryKey'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1894,6 +1969,7 @@ object fmFirm: TfmFirm
             end
             object cxGrid5DBBandedTableView1global_color: TcxGridDBBandedColumn
               DataBinding.FieldName = 'global_color'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -1902,6 +1978,7 @@ object fmFirm: TfmFirm
             object cxGrid5DBBandedTableView1set_default: TcxGridDBBandedColumn
               Caption = #1042' '#1040#1082#1090
               DataBinding.FieldName = 'set_default'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxCheckBoxProperties'
               HeaderAlignmentVert = vaTop
               Width = 40
@@ -1912,6 +1989,7 @@ object fmFirm: TfmFirm
             object cxGrid5DBBandedTableView1date_birthday: TcxGridDBBandedColumn
               Caption = #1044#1077#1085#1100' '#1088#1086#1078#1076#1077#1085#1080#1103
               DataBinding.FieldName = 'date_birthday'
+              DataBinding.IsNullValueType = True
               PropertiesClassName = 'TcxDateEditProperties'
               Properties.SaveTime = False
               Properties.ShowTime = False
@@ -1930,15 +2008,14 @@ object fmFirm: TfmFirm
       object cxTabSheet5: TcxTabSheet
         Tag = -9
         Caption = #1057#1074#1103#1079#1072#1085#1085#1099#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1099
-        ImageIndex = 4
-        ExplicitTop = 22
-        ExplicitWidth = 922
-        ExplicitHeight = 216
+        ImageIndex = 67
+        ExplicitTop = 24
+        ExplicitHeight = 214
         object cxGrid6: TcxGrid
           Left = 0
           Top = 0
           Width = 921
-          Height = 214
+          Height = 213
           Align = alClient
           Font.Charset = RUSSIAN_CHARSET
           Font.Color = clWindowText
@@ -1951,8 +2028,7 @@ object fmFirm: TfmFirm
           LookAndFeel.NativeStyle = False
           LookAndFeel.ScrollbarMode = sbmClassic
           LookAndFeel.SkinName = 'Office2007Black'
-          ExplicitWidth = 922
-          ExplicitHeight = 216
+          ExplicitHeight = 214
           object cxGridDBBandedTableView1: TcxGridDBBandedTableView
             PopupMenu = dxBarPopupMenu4
             OnDblClick = dxBarButton21Click
@@ -1993,6 +2069,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedTableView1doc_id: TcxGridDBBandedColumn
               Caption = #8470' '#1079#1072#1087#1080#1089#1080
               DataBinding.FieldName = 'doc_id'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 100
               Position.BandIndex = 0
@@ -2002,6 +2079,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedTableView1doc_type_describe: TcxGridDBBandedColumn
               Caption = #1058#1080#1087' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
               DataBinding.FieldName = 'doc_type_describe'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 100
               Position.BandIndex = 0
@@ -2011,6 +2089,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedTableView1doc_describe: TcxGridDBBandedColumn
               Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
               DataBinding.FieldName = 'doc_describe'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 100
               Position.BandIndex = 0
@@ -2020,6 +2099,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedTableView1file_name: TcxGridDBBandedColumn
               Caption = #1060#1072#1081#1083
               DataBinding.FieldName = 'file_name'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 100
               Position.BandIndex = 0
@@ -2029,6 +2109,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedTableView1doc_location_FIO_users: TcxGridDBBandedColumn
               Caption = #1055#1086#1089#1090#1091#1087#1080#1083' '#1086#1090
               DataBinding.FieldName = 'doc_location_FIO_users'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 100
               Position.BandIndex = 0
@@ -2038,6 +2119,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedTableView1doc_image_date: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
               DataBinding.FieldName = 'doc_image_date'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 100
               Position.BandIndex = 0
@@ -2046,6 +2128,7 @@ object fmFirm: TfmFirm
             end
             object cxGridDBBandedTableView1doc_location_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'doc_location_id'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 100
               Position.BandIndex = -1
@@ -2055,6 +2138,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedTableView1doc_location_name: TcxGridDBBandedColumn
               Caption = #1052#1077#1089#1090#1086#1085#1072#1093#1086#1078#1076#1077#1085#1080#1077
               DataBinding.FieldName = 'doc_location_name'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 100
               Position.BandIndex = 0
@@ -2064,6 +2148,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedTableView1doc_location_date: TcxGridDBBandedColumn
               Caption = #1044#1072#1090#1072' '#1087#1088#1077#1076#1086#1089#1090#1072#1074#1083#1077#1085#1080#1103' '#1086#1088#1080#1075#1080#1085#1072#1083#1072
               DataBinding.FieldName = 'doc_location_date'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 100
               Position.BandIndex = 0
@@ -2073,6 +2158,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedTableView1sign_customer_name: TcxGridDBBandedColumn
               Caption = #1042#1080#1076' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
               DataBinding.FieldName = 'sign_customer_name'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 100
               Position.BandIndex = 0
@@ -2081,6 +2167,7 @@ object fmFirm: TfmFirm
             end
             object cxGridDBBandedTableView1doc_location_FIO_users_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'doc_location_FIO_users_id'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 100
               Position.BandIndex = -1
@@ -2089,6 +2176,7 @@ object fmFirm: TfmFirm
             end
             object cxGridDBBandedTableView1sign_customer_id: TcxGridDBBandedColumn
               DataBinding.FieldName = 'sign_customer_id'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 100
               Position.BandIndex = -1
@@ -2097,6 +2185,7 @@ object fmFirm: TfmFirm
             end
             object cxGridDBBandedTableView1doc_type_cod: TcxGridDBBandedColumn
               DataBinding.FieldName = 'doc_type_cod'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -2104,6 +2193,7 @@ object fmFirm: TfmFirm
             end
             object cxGridDBBandedTableView1global_color: TcxGridDBBandedColumn
               DataBinding.FieldName = 'global_color'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Position.BandIndex = -1
               Position.ColIndex = -1
@@ -2112,6 +2202,7 @@ object fmFirm: TfmFirm
             object cxGridDBBandedTableView1doc_cod: TcxGridDBBandedColumn
               Caption = #8470' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
               DataBinding.FieldName = 'doc_cod'
+              DataBinding.IsNullValueType = True
               HeaderAlignmentVert = vaTop
               Width = 100
               Position.BandIndex = 0
@@ -2144,8 +2235,6 @@ object fmFirm: TfmFirm
     LookAndFeel.NativeStyle = False
     LookAndFeel.ScrollbarMode = sbmClassic
     LookAndFeel.SkinName = 'Office2007Black'
-    ExplicitTop = 60
-    ExplicitHeight = 342
     object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
       OnDblClick = dxBarButton2Click
       OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -2205,6 +2294,7 @@ object fmFirm: TfmFirm
         Tag = 73682028
         Caption = #8470' '#1079#1072#1087#1080#1089#1080
         DataBinding.FieldName = 'firm_id'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 66
         Position.BandIndex = -1
@@ -2215,6 +2305,7 @@ object fmFirm: TfmFirm
         Tag = 75319104
         Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' ('#1082#1088#1072#1090#1082#1086#1077' '#1051#1048#1057')'
         DataBinding.FieldName = 'firm_name'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 178
         Position.BandIndex = 0
@@ -2224,6 +2315,7 @@ object fmFirm: TfmFirm
       object cxGrid1DBBandedTableView1firm_name_short: TcxGridDBBandedColumn
         Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' ('#1057#1086#1082#1088#1072#1097#1105#1085#1085#1086#1077' '#1092#1080#1088#1084#1077#1085#1085#1086#1077')'
         DataBinding.FieldName = 'firm_name_short'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 124
         Position.BandIndex = 0
@@ -2233,6 +2325,7 @@ object fmFirm: TfmFirm
       object cxGrid1DBBandedTableView1firm_name_full: TcxGridDBBandedColumn
         Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' ('#1055#1086#1083#1085#1086#1077' '#1092#1080#1088#1084#1077#1085#1085#1086#1077')'
         DataBinding.FieldName = 'firm_name_full'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 126
         Position.BandIndex = 0
@@ -2243,6 +2336,7 @@ object fmFirm: TfmFirm
         Tag = 72025268
         Caption = #1057#1086#1073#1089#1090#1074
         DataBinding.FieldName = 'type_self'
+        DataBinding.IsNullValueType = True
         PropertiesClassName = 'TcxCheckBoxProperties'
         Properties.DisplayChecked = #1057#1086#1073#1089#1090#1074
         Properties.DisplayUnchecked = #1055#1088#1086#1095#1080#1077
@@ -2256,6 +2350,7 @@ object fmFirm: TfmFirm
         Tag = 80759900
         Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
         DataBinding.FieldName = 'comment'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 85
         Position.BandIndex = 0
@@ -2266,6 +2361,7 @@ object fmFirm: TfmFirm
         Tag = 80790992
         Caption = #1050#1086#1076' '#1054#1050#1055#1054
         DataBinding.FieldName = 'cod_okpo'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 70
         Position.BandIndex = 0
@@ -2276,6 +2372,7 @@ object fmFirm: TfmFirm
         Tag = 122066324
         Caption = #1050#1086#1076
         DataBinding.FieldName = 'firm_cod'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 66
         Position.BandIndex = 0
@@ -2286,6 +2383,7 @@ object fmFirm: TfmFirm
         Tag = 122340752
         Caption = #1048#1053#1053
         DataBinding.FieldName = 'inn'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 89
         Position.BandIndex = 0
@@ -2295,6 +2393,7 @@ object fmFirm: TfmFirm
       object cxGrid1DBBandedTableView1FIO_users: TcxGridDBBandedColumn
         Caption = #1054#1090#1074#1077#1090#1089#1090#1074#1077#1085#1085#1099#1081
         DataBinding.FieldName = 'FIO_users'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 60
         Position.BandIndex = 0
@@ -2304,6 +2403,7 @@ object fmFirm: TfmFirm
       object cxGrid1DBBandedTableView1global_color: TcxGridDBBandedColumn
         Caption = #1062#1074#1077#1090
         DataBinding.FieldName = 'global_color'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 50
         Position.BandIndex = 0
@@ -2313,11 +2413,12 @@ object fmFirm: TfmFirm
       object cxGrid1DBBandedTableView1cnt_global_doc: TcxGridDBBandedColumn
         Caption = #1050#1086#1083'-'#1074#1086' '#1089#1074#1103#1079#1072#1085#1085#1099#1093' '#1076#1086#1082#1091#1084#1077#1085#1090#1086#1074
         DataBinding.FieldName = 'cnt_global_doc'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         HeaderGlyph.SourceDPI = 96
         HeaderGlyph.Data = {
           424D360400000000000036000000280000001000000010000000010020000000
-          00000000000074120000741200000000000000000000FFFFFF00FFFFFF00FFFF
+          000000000000C40E0000C40E00000000000000000000FFFFFF00FFFFFF00FFFF
           FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
           FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
           FF00FFFFFF00FFFFFF00DAD4CFFF644B37FF634935FF664C38FFC4BAB2FFFFFF
@@ -2360,6 +2461,7 @@ object fmFirm: TfmFirm
       object cxGrid1DBBandedTableView1cod_ogrn: TcxGridDBBandedColumn
         Caption = #1050#1086#1076' '#1054#1043#1056#1053
         DataBinding.FieldName = 'cod_ogrn'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 80
         Position.BandIndex = 0
@@ -2369,6 +2471,7 @@ object fmFirm: TfmFirm
       object cxGrid1DBBandedTableView1firm_property_name: TcxGridDBBandedColumn
         Caption = #1042#1080#1076' '#1088#1077#1075#1080#1089#1090#1088#1072#1094#1080#1080
         DataBinding.FieldName = 'firm_property_name'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 101
         Position.BandIndex = 0
@@ -2378,6 +2481,7 @@ object fmFirm: TfmFirm
       object cxGrid1DBBandedTableView1kpp: TcxGridDBBandedColumn
         Caption = #1050#1055#1055
         DataBinding.FieldName = 'kpp'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 60
         Position.BandIndex = 0
@@ -2387,6 +2491,7 @@ object fmFirm: TfmFirm
       object cxGrid1DBBandedTableView1grpol_name: TcxGridDBBandedColumn
         Caption = #1043#1088#1091#1079#1086#1087#1086#1083#1091#1095#1072#1090#1077#1083#1100
         DataBinding.FieldName = 'grpol_name'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 100
         Position.BandIndex = 0
@@ -2396,6 +2501,7 @@ object fmFirm: TfmFirm
       object cxGrid1DBBandedTableView1payer_name: TcxGridDBBandedColumn
         Caption = #1055#1083#1072#1090#1077#1083#1100#1097#1080#1082
         DataBinding.FieldName = 'payer_name'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 100
         Position.BandIndex = 0
@@ -2405,6 +2511,7 @@ object fmFirm: TfmFirm
       object cxGrid1DBBandedTableView1rzd_gropl_cod: TcxGridDBBandedColumn
         Caption = #1050#1086#1076' '#1087#1086#1083#1091#1095#1072#1090#1077#1083#1103' ('#1058#1043#1053#1051')'
         DataBinding.FieldName = 'rzd_gropl_cod'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 130
         Position.BandIndex = 0
@@ -2414,6 +2521,7 @@ object fmFirm: TfmFirm
       object cxGrid1DBBandedTableView1rzd_payer_cod: TcxGridDBBandedColumn
         Caption = #1050#1086#1076' '#1087#1083#1072#1090#1077#1083#1100#1097#1080#1082#1072' ('#1045#1051#1057')'
         DataBinding.FieldName = 'rzd_payer_cod'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 130
         Position.BandIndex = 0
@@ -2423,6 +2531,7 @@ object fmFirm: TfmFirm
       object cxGrid1DBBandedTableView1set_load_EDO: TcxGridDBBandedColumn
         Caption = #1047#1072#1075#1088#1091#1078#1072#1090#1100' '#1076#1086#1082'-'#1090#1099' '#1069#1044#1054
         DataBinding.FieldName = 'set_load_EDO'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 73
         Position.BandIndex = 0
@@ -2432,6 +2541,7 @@ object fmFirm: TfmFirm
       object cxGrid1DBBandedTableView1users_group_name: TcxGridDBBandedColumn
         Caption = #1050#1086#1084#1087#1072#1085#1080#1103
         DataBinding.FieldName = 'users_group_name'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 100
         Position.BandIndex = -1
@@ -2441,6 +2551,7 @@ object fmFirm: TfmFirm
       object cxGrid1DBBandedTableView1users_group_abbr: TcxGridDBBandedColumn
         Caption = #1050#1086#1076' '#1082#1086#1084#1087#1072#1085#1080#1080
         DataBinding.FieldName = 'users_group_abbr'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 100
         Position.BandIndex = -1
@@ -2449,6 +2560,7 @@ object fmFirm: TfmFirm
       end
       object cxGrid1DBBandedTableView1users_group_cod: TcxGridDBBandedColumn
         DataBinding.FieldName = 'users_group_cod'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 60
         Position.BandIndex = -1
@@ -2458,6 +2570,7 @@ object fmFirm: TfmFirm
       object cxGrid1DBBandedTableView1set_sanctions: TcxGridDBBandedColumn
         Caption = #1057#1072#1085#1082#1094#1080#1080
         DataBinding.FieldName = 'set_sanctions'
+        DataBinding.IsNullValueType = True
         PropertiesClassName = 'TcxCheckBoxProperties'
         Properties.NullStyle = nssUnchecked
         Properties.ValueGrayed = 'False'
@@ -2470,6 +2583,7 @@ object fmFirm: TfmFirm
       object cxGrid1DBBandedTableView1edo_id: TcxGridDBBandedColumn
         Caption = #1048#1076#1077#1085#1090#1080#1092#1080#1082#1072#1090#1086#1088' '#1069#1044#1054
         DataBinding.FieldName = 'edo_id'
+        DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 120
         Position.BandIndex = 0
@@ -2931,6 +3045,14 @@ object fmFirm: TfmFirm
       ImageIndex = 56
       OnClick = dxBarButton17Click
     end
+    object dxBarButton24: TdxBarButton
+      Caption = #1050#1086#1087#1080#1088#1086#1074#1072#1090#1100' '#1079#1085#1072#1095#1077#1085#1080#1103' '#1082#1086#1083#1086#1085#1082#1080
+      Category = 0
+      Hint = #1050#1086#1087#1080#1088#1086#1074#1072#1090#1100' '#1079#1085#1072#1095#1077#1085#1080#1103' '#1082#1086#1083#1086#1085#1082#1080
+      Visible = ivAlways
+      ImageIndex = 18
+      OnClick = dxBarButton24Click
+    end
     object dxBarSubItem4: TdxBarSubItem
       Caption = #1055#1077#1095#1072#1090#1100
       Category = 1
@@ -2963,6 +3085,10 @@ object fmFirm: TfmFirm
       item
         Visible = True
         ItemName = 'dxBarButton2'
+      end
+      item
+        Visible = True
+        ItemName = 'dxBarButton24'
       end
       item
         BeginGroup = True

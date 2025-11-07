@@ -1651,59 +1651,13 @@ object fmAgreeFactInc: TfmAgreeFactInc
       ImageIndex = 97
       OnClick = N2Click
     end
-    object N10: TdxBarSubItem
-      Caption = #1050#1086#1087#1080#1088#1086#1074#1072#1090#1100' '#1074' '#1073#1091#1092#1077#1088
+    object N22: TdxBarButton
+      Caption = #1050#1086#1087#1080#1088#1086#1074#1072#1090#1100' '#1079#1085#1072#1095#1077#1085#1080#1103' '#1082#1086#1083#1086#1085#1082#1080
       Category = 1
+      Hint = #1050#1086#1087#1080#1088#1086#1074#1072#1090#1100' '#1079#1085#1072#1095#1077#1085#1080#1103' '#1082#1086#1083#1086#1085#1082#1080
       Visible = ivAlways
       ImageIndex = 18
-      ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'N22'
-        end
-        item
-          Visible = True
-          ItemName = 'N23'
-        end
-        item
-          BeginGroup = True
-          Visible = True
-          ItemName = 'N24'
-        end
-        item
-          Visible = True
-          ItemName = 'N25'
-        end>
-    end
-    object N22: TdxBarButton
-      Caption = #1053#1086#1084#1077#1088#1072' '#1074#1072#1075#1086#1085#1086#1074' '#1057#1051#1045#1042#1040
-      Category = 1
-      Hint = #1053#1086#1084#1077#1088#1072' '#1074#1072#1075#1086#1085#1086#1074' '#1057#1051#1045#1042#1040
-      Visible = ivAlways
       OnClick = N22Click
-    end
-    object N23: TdxBarButton
-      Caption = #1053#1086#1084#1077#1088#1072' '#1085#1072#1082#1083#1072#1076#1085#1099#1093' '#1057#1051#1045#1042#1040
-      Category = 1
-      Hint = #1053#1086#1084#1077#1088#1072' '#1085#1072#1082#1083#1072#1076#1085#1099#1093' '#1057#1051#1045#1042#1040
-      Visible = ivAlways
-      OnClick = N23Click
-    end
-    object N24: TdxBarButton
-      Tag = 1
-      Caption = #1053#1086#1084#1077#1088#1072' '#1074#1072#1075#1086#1085#1086#1074' '#1057#1055#1056#1040#1042#1040
-      Category = 1
-      Hint = #1053#1086#1084#1077#1088#1072' '#1074#1072#1075#1086#1085#1086#1074' '#1057#1055#1056#1040#1042#1040
-      Visible = ivAlways
-      OnClick = N22Click
-    end
-    object N25: TdxBarButton
-      Tag = 1
-      Caption = #1053#1086#1084#1077#1088#1072' '#1085#1072#1082#1083#1072#1076#1085#1099#1093' '#1057#1055#1056#1040#1042#1040
-      Category = 1
-      Hint = #1053#1086#1084#1077#1088#1072' '#1085#1072#1082#1083#1072#1076#1085#1099#1093' '#1057#1055#1056#1040#1042#1040
-      Visible = ivAlways
-      OnClick = N23Click
     end
     object N11: TdxBarButton
       Tag = -9
@@ -1877,6 +1831,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
     end
   end
   object PopupMenu1: TdxBarPopupMenu
+    Tag = 1
     BarManager = dxBarManager1
     ItemLinks = <
       item
@@ -1903,7 +1858,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
       item
         BeginGroup = True
         Visible = True
-        ItemName = 'N10'
+        ItemName = 'N22'
       end
       item
         Visible = True

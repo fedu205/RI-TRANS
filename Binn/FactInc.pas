@@ -243,6 +243,7 @@ type
     cxGrid1DBBandedTableView1FIO_users: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1date_period_finance_name: TcxGridDBBandedColumn;
     dxBarButton5: TdxBarButton;
+    dxBarButton7: TdxBarButton;
     procedure dxBarButton4Click(Sender: TObject);
     procedure N18Click(Sender: TObject);
     procedure N17Click(Sender: TObject);
@@ -281,6 +282,7 @@ type
     procedure dxBarButton6Click(Sender: TObject);
     procedure dxBarButton8Click(Sender: TObject);
     procedure dxBarButton5Click(Sender: TObject);
+    procedure dxBarButton7Click(Sender: TObject);
   private
     Fstr_fact_inc_id  : string;
     Ftype_self        : integer;
@@ -545,6 +547,13 @@ begin
   Screen.Cursor := crDefault;
   SP.Free;
 
+end;
+
+procedure TfmFactInc.dxBarButton7Click(Sender: TObject);
+begin
+  case TdxBarButton(Sender).ClickItemLink.Owner.Owner.Tag of
+    1 : cxGridCopyCellsValue(cxGrid1DBBandedTableView1);
+  end;
 end;
 
 procedure TfmFactInc.dxBarButton8Click(Sender: TObject);

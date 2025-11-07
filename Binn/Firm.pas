@@ -226,6 +226,7 @@ type
     cxGrid7Level2: TcxGridLevel;
     cxGrid1DBBandedTableView1edo_id: TcxGridDBBandedColumn;
     dxBarButton17: TdxBarButton;
+    dxBarButton24: TdxBarButton;
     procedure dxBarPopupMenu1Popup(Sender: TObject);
     procedure cxPageControl1Change(Sender: TObject);
     procedure dxBarButton2Click(Sender: TObject);
@@ -261,6 +262,7 @@ type
     procedure dxBarButton23Click(Sender: TObject);
     procedure dxBarButton9Click(Sender: TObject);
     procedure dxBarButton17Click(Sender: TObject);
+    procedure dxBarButton24Click(Sender: TObject);
   private
     Ffirm_id, Ftype_self : integer;
     Ffirm_name           : string;
@@ -786,6 +788,13 @@ begin
 
 end;
 
+procedure TfmFirm.dxBarButton24Click(Sender: TObject);
+begin
+  case TdxBarButton(Sender).ClickItemLink.Owner.Owner.Tag of
+    1 : cxGridCopyCellsValue(cxGrid1DBBandedTableView1);
+  end;
+end;
+
 procedure TfmFirm.dxBarButton2Click(Sender: TObject);
 begin
   if not Query_Firm.Eof then begin
@@ -1003,3 +1012,4 @@ begin
 end;
 
 end.
+

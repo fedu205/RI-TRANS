@@ -516,6 +516,8 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1agreement_vid_activity: TcxGridDBBandedColumn;
     dxBarSubItem1: TdxBarSubItem;
     dxBarButton1: TdxBarButton;
+    dxBarSubItem11: TdxBarSubItem;
+    dxBarButton6: TdxBarButton;
 
     procedure N4Click(Sender: TObject);
     procedure N2Click(Sender: TObject);
@@ -630,6 +632,7 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     procedure dxBarButton2Click(Sender: TObject);
     procedure cxGrid12DBBandedTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
     procedure dxBarButton1Click(Sender: TObject);
+    procedure dxBarButton6Click(Sender: TObject);
 
 
   private
@@ -4623,21 +4626,13 @@ begin
 end;
 
 procedure TfmFactTrack.dxBarButton64Click(Sender: TObject);
-var str_num_vagon : string;
-    i : integer;
-    clboard : TClipboard;
 begin
-  str_num_vagon := '';
-
-  for i := 0 to cxGrid1DBBandedTableView1.Controller.SelectedRecordCount - 1 do begin
-    str_num_vagon := str_num_vagon + VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRecords[i].Values[cxGrid1DBBandedTableView1num_vagon.Index]);
-    str_num_vagon := str_num_vagon + #13#10;
+  case TdxBarButton(Sender).ClickItemLink.Owner.Owner.Tag of
+    1 : cxGridCopyCellsValue(cxGrid1DBBandedTableView1);
+    2 : cxGridCopyCellsValue(cxGrid2DBBandedTableView1);
+    4 : cxGridCopyCellsValue(cxGridDBBandedTableView1);
+    5 : cxGridCopyCellsValue(cxGrid12DBBandedTableView1);
   end;
-
-  clboard := TClipboard.Create;
-  clboard.AsText := str_num_vagon;
-  clboard.Free;
-
 end;
 
 procedure TfmFactTrack.dxBarButton65Click(Sender: TObject);
@@ -4849,6 +4844,12 @@ begin
   @FEtran := GetProcAddress(handle, 'CreateWndEtranECP');
   v := FEtran(Application.Handle, users_group_cod, usr_pwd, FIO_users, cxGridDBBandedTableView1etran_ecp_id.DataBinding.Field.AsInteger);
   FreeLibrary(handle);
+end;
+
+procedure TfmFactTrack.dxBarButton6Click(Sender: TObject);
+begin
+ // номер вагона и номер накладной
+
 end;
 
 procedure TfmFactTrack.dxBarButton21Click(Sender: TObject);

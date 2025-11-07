@@ -17,7 +17,8 @@ uses
   cxGrid, Data.Win.ADODB, cxCalendar, cxGridChartView, cxCustomPivotGrid, cxDBPivotGrid, Vcl.ExtCtrls, dxmdaset, cxPivotGridCustomDataSet,
   cxPivotGridDrillDownDataSet, cxPivotGridChartConnection, cxCheckBox, cxContainer, Vcl.Menus, Vcl.StdCtrls, cxButtons, cxButtonEdit, cxTextEdit,
   cxMaskEdit, cxDropDownEdit, cxCheckComboBox, Datasnap.DBClient, ComObj, dxSkinTheBezier,
-  cxPropertiesStore, cxColorComboBox, dxDateRanges, dxSkinOffice2019Colorful, cxExportPivotGridLink, dxScrollbarAnnotations, dxCoreGraphics;
+  cxPropertiesStore, cxColorComboBox, dxDateRanges, dxSkinOffice2019Colorful, cxExportPivotGridLink, dxScrollbarAnnotations, dxCoreGraphics, dxSkinBasic, dxSkinOffice2019Black,
+  dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI;
 
 type
   TfmClientFrahtCard2 = class(TForm)
@@ -848,6 +849,7 @@ type
     dxBarSubItem17: TdxBarSubItem;
     dxBarSeparator1: TdxBarSeparator;
     cxDBPivotGrid2firm_agent_name: TcxDBPivotGridField;
+    dxBarButton6: TdxBarButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure dxBarButton4Click(Sender: TObject);
     procedure dxBarButton5Click(Sender: TObject);
@@ -924,6 +926,7 @@ type
     procedure dxBarButton81Click(Sender: TObject);
     procedure dxBarButton105Click(Sender: TObject);
     procedure cxGrid1DBBandedTableView1DataControllerFilterChanged(Sender: TObject);
+    procedure dxBarButton6Click(Sender: TObject);
   private
     Fdate1, Fdate2 : TDateTime;
     Fusers_id      : integer;
@@ -3662,6 +3665,14 @@ begin
   @FRepBuh := GetProcAddress(handle, 'CreateWndFrahtBuhDlg');
   FRepBuh(Application.Handle, usr_pwd);
   FreeLibrary(handle);
+end;
+
+procedure TfmClientFrahtCard2.dxBarButton6Click(Sender: TObject);
+begin
+  case TdxBarButton(Sender).ClickItemLink.Owner.Owner.Tag of
+    10 : cxGridCopyCellsValue(cxGrid10DBBandedTableView1);
+    13 : cxGridCopyCellsValue(cxGrid13DBBandedTableView1);
+  end;
 end;
 
 procedure TfmClientFrahtCard2.dxBarButton72Click(Sender: TObject);
