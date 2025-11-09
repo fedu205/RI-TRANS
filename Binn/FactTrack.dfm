@@ -166,7 +166,7 @@ object fmFactTrack: TfmFactTrack
     Height = 416
     Align = alClient
     TabOrder = 0
-    Properties.ActivePage = cxTabSheet2
+    Properties.ActivePage = cxTabSheet5
     Properties.CustomButtons.Buttons = <>
     LookAndFeel.Kind = lfUltraFlat
     LookAndFeel.NativeStyle = False
@@ -4715,13 +4715,16 @@ object fmFactTrack: TfmFactTrack
       'Default'
       'Popup_ToExcel'
       'Popup_TrackVagon'
-      'Popup_Route')
+      'Popup_Route'
+      'Popup_Stay')
     Categories.ItemsVisibles = (
+      2
       2
       2
       2
       2)
     Categories.Visibles = (
+      True
       True
       True
       True
@@ -6050,32 +6053,45 @@ object fmFactTrack: TfmFactTrack
           ItemName = 'dxBarButton1'
         end>
     end
-    object dxBarButton1: TdxBarButton
-      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' "'#1056#1077#1077#1089#1090#1088' '#1086#1090#1075#1088#1091#1079#1086#1082'"...'
-      Category = 0
-      Hint = #1047#1072#1075#1088#1091#1079#1080#1090#1100' "'#1056#1077#1077#1089#1090#1088' '#1086#1090#1075#1088#1091#1079#1086#1082'"'
-      Visible = ivAlways
-      ImageIndex = 8
-      OnClick = dxBarButton1Click
-    end
     object dxBarSubItem11: TdxBarSubItem
       Caption = #1048#1079#1084#1077#1085#1080#1090#1100' '#1076#1072#1085#1085#1099#1077
-      Category = 0
+      Category = 4
       Visible = ivAlways
       ImageIndex = 115
       ItemLinks = <
         item
           Visible = True
           ItemName = 'dxBarButton6'
+        end
+        item
+          Visible = True
+          ItemName = 'dxBarButton8'
         end>
     end
     object dxBarButton6: TdxBarButton
       Caption = '"'#1044#1072#1090#1072' '#1087#1088#1080#1073'. '#1085#1072' '#1057#1090'.'#1054#1090#1087#1088'" - '#1080#1079' '#1069#1058#1056#1040#1053#1072
-      Category = 0
+      Category = 4
       Hint = '"'#1044#1072#1090#1072' '#1087#1088#1080#1073'. '#1085#1072' '#1057#1090'.'#1054#1090#1087#1088'" - '#1080#1079' '#1069#1058#1056#1040#1053#1072
       Visible = ivAlways
       ImageIndex = 123
       OnClick = dxBarButton6Click
+    end
+    object dxBarButton8: TdxBarButton
+      Tag = 2
+      Caption = '"'#1044#1072#1090#1072' '#1087#1088#1080#1073'. '#1085#1072' '#1057#1090'.'#1054#1090#1087#1088'" - '#1080#1079' '#1044#1080#1089#1083#1086#1082#1072#1094#1080#1080
+      Category = 4
+      Hint = '"'#1044#1072#1090#1072' '#1087#1088#1080#1073'. '#1085#1072' '#1057#1090'.'#1054#1090#1087#1088'" - '#1080#1079' '#1044#1080#1089#1083#1086#1082#1072#1094#1080#1080
+      Visible = ivAlways
+      ImageIndex = 147
+      OnClick = dxBarButton6Click
+    end
+    object dxBarButton1: TdxBarButton
+      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' "'#1056#1077#1077#1089#1090#1088' '#1086#1090#1075#1088#1091#1079#1086#1082'"...'
+      Category = 4
+      Hint = #1047#1072#1075#1088#1091#1079#1080#1090#1100' "'#1056#1077#1077#1089#1090#1088' '#1086#1090#1075#1088#1091#1079#1086#1082'"'
+      Visible = ivAlways
+      ImageIndex = 8
+      OnClick = dxBarButton1Click
     end
     object N12: TdxBarButton
       Caption = #1054#1090#1095#1105#1090' '#1087#1086' '#1074#1072#1075#1086#1085#1072#1084' (44)'

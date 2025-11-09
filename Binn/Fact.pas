@@ -4329,20 +4329,8 @@ begin
 end;
 
 procedure TfmFact.dxBarButton4Click(Sender: TObject);
-var str_cells : string;
-            i : integer;
-      clboard : TClipboard;
 begin
-  str_cells := '';
-
-  for i := 0 to cxGrid1DBBandedTableView1.Controller.SelectedRecordCount - 1 do begin
-    str_cells := str_cells + VarToStr(cxGrid1DBBandedTableView1.Controller.SelectedRecords[i].Values[cxGrid1DBBandedTableView1.VisibleColumns[cxGrid1DBBandedTableView1.Controller.FocusedItemIndex].Index]);
-    str_cells := str_cells + #13#10;
-  end;
-
-  clboard := TClipboard.Create;
-  clboard.AsText := str_cells;
-  clboard.Free;
+  cxGridCopyCellsValue(cxGrid1DBBandedTableView1);
 end;
 
 procedure TfmFact.dxBarButton7Click(Sender: TObject);

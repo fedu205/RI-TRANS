@@ -518,6 +518,7 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     dxBarButton1: TdxBarButton;
     dxBarSubItem11: TdxBarSubItem;
     dxBarButton6: TdxBarButton;
+    dxBarButton8: TdxBarButton;
 
     procedure N4Click(Sender: TObject);
     procedure N2Click(Sender: TObject);
@@ -4847,9 +4848,22 @@ begin
 end;
 
 procedure TfmFactTrack.dxBarButton6Click(Sender: TObject);
+var SP : TADOStoredProc;
 begin
  // номер вагона и номер накладной
+  SP := TADOStoredProc.Create(nil);
+  SP.Connection := fmMain.Lis;
+  SP.ProcedureName := 'sp_fact_track_trip_add_modify';
+  SP.Parameters.Refresh;
 
+  SP.Parameters.ParamByName('@type_action').Value := TdxBarButton(Sender).Tag;
+  SP.Parameters.ParamByName('@num_vagon').Value := cxGrid12DBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
+  SP.Parameters.ParamByName('@doc_number').Value := cxGrid12DBBandedTableView1doc_number.DataBinding.Field.AsString;
+  SP.Parameters.ParamByName('@field_name').Value := 'date_arrival_1';
+  SP.ExecProc;
+  SP.Free;
+
+  RefreshQueryGrid(cxGrid12DBBandedTableView1, 'fact_track_trip_id', cxGrid12DBBandedTableView1fact_track_trip_id.DataBinding.Field.AsInteger);
 end;
 
 procedure TfmFactTrack.dxBarButton21Click(Sender: TObject);
