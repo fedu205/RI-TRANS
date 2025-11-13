@@ -4629,7 +4629,7 @@ end;
 procedure TfmFactTrack.dxBarButton64Click(Sender: TObject);
 begin
   case TdxBarButton(Sender).ClickItemLink.Owner.Owner.Tag of
-    1 : cxGridCopyCellsValue(cxGrid1DBBandedTableView1);
+    1 : cxGridCopyCellsValue(cxGrid1DBBandedTableView1, cxGrid1DBBandedTableView1num_vagon.VisibleIndex);  //   Controller.FocusedItemIndex
     2 : cxGridCopyCellsValue(cxGrid2DBBandedTableView1);
     4 : cxGridCopyCellsValue(cxGridDBBandedTableView1);
     5 : cxGridCopyCellsValue(cxGrid12DBBandedTableView1);
@@ -5301,7 +5301,7 @@ begin
               Query_History.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
               Query_History.Parameters.ParamByName('date_begin'    ).Value := Fdate_history1;
               Query_History.Parameters.ParamByName('date_end'      ).Value := Fdate_history2;
-              Query_History.Parameters.ParamByName('set_group'     ).Value := iif(dxBarButton115.Down, 1, 0);
+//              Query_History.Parameters.ParamByName('set_group'     ).Value := iif(dxBarButton115.Down, 1, 0);
               Query_History.Open;
             end else begin
               // История: рейс

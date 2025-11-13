@@ -325,7 +325,7 @@ function GetDBFIOUsers  (connect: TADOConnection): string;
 
 
 procedure ClientDSView(var ClientDS: TClientDataSet);
-procedure cxGridCopyCellsValue(cxGrid : TcxGridDBBandedTableView);
+procedure cxGridCopyCellsValue(cxGrid : TcxGridDBBandedTableView; ColumnIndex: integer = -9);
 
 function GetMainWindow(HWND: HWND; PID: DWORD): Boolean; stdcall;
 function RunLisDocs: Boolean;
@@ -359,7 +359,7 @@ begin
   Q.SQL.Add('SELECT getdate() as dt');
   Q.Open;
 
-  if EncodeDate(2025, 11, 15) < Q.FieldByName('dt').AsDateTime then begin
+  if EncodeDate(2025, 12, 15) < Q.FieldByName('dt').AsDateTime then begin
 
     if Random(10) > 10 then Result := True
     else Result := False;
@@ -379,7 +379,7 @@ begin
   Q.SQL.Add('SELECT getdate() as dt');
   Q.Open;
 
-  if EncodeDate(2025, 11, 13) < Q.FieldByName('dt').AsDateTime then begin
+  if EncodeDate(2025, 12, 13) < Q.FieldByName('dt').AsDateTime then begin
 
     if Random(10) > 7 then Result := True
     else Result := False;
@@ -400,7 +400,7 @@ begin
   Q.SQL.Add('SELECT getdate() as dt');
   Q.Open;
 
-  if EncodeDate(2025, 11, 11) < Q.FieldByName('dt').AsDateTime then begin
+  if EncodeDate(2025, 12, 11) < Q.FieldByName('dt').AsDateTime then begin
 
     if Random(10) > 8 then Result := True
     else Result := False;
@@ -18655,15 +18655,18 @@ begin
 //  VarClear(exWks); VarClear(exWkb); VarClear(exApp);
 end;
 
-procedure cxGridCopyCellsValue(cxGrid : TcxGridDBBandedTableView);
+procedure cxGridCopyCellsValue(cxGrid : TcxGridDBBandedTableView; ColumnIndex: integer = -9);
 var str_cells : string;
             i : integer;
       clboard : TClipboard;
 begin
   str_cells := '';
 
+  if ColumnIndex = -9 then
+    ColumnIndex := cxGrid.Controller.FocusedItemIndex;
+
   for i := 0 to cxGrid.Controller.SelectedRecordCount - 1 do begin
-    str_cells := str_cells + VarToStr(cxGrid.Controller.SelectedRecords[i].Values[cxGrid.VisibleColumns[cxGrid.Controller.FocusedItemIndex].Index]);
+    str_cells := str_cells + VarToStr(cxGrid.Controller.SelectedRecords[i].Values[cxGrid.VisibleColumns[ColumnIndex].Index]);
     str_cells := str_cells + #13#10;
   end;
 
