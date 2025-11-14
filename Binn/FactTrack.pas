@@ -195,8 +195,29 @@ type
     Query_HistoryTrip: TADOQuery;
     DS_HistoryTrip: TDataSource;
     cxGrid5: TcxGrid;
+    cxGrid5DBBandedTableView1: TcxGridDBBandedTableView;
+    cxGrid5Level1: TcxGridLevel;
+    cxGrid5DBBandedTableView1fact_track_trip_id: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1num_vagon: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1date_otpr: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1date_arrival: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1users_group_id: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1node_begin_cod: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1node_begin_name: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1node_end_cod: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1node_end_name: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1kargoETSNG_cod: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1kargoETSNG_name: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1fact_weight: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1min_date_operation: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1max_date_operation: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1set_recalc_trip: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1grotpr_okpo: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1doc_number: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1idReis: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1set_warning: TcxGridDBBandedColumn;
+    cxGrid3: TcxGrid;
     cxGrid3DBBandedTableView1: TcxGridDBBandedTableView;
-    cxGridLevel3: TcxGridLevel;
     cxGrid3DBBandedTableView1fact_track_trip_id: TcxGridDBBandedColumn;
     cxGrid3DBBandedTableView1num_vagon: TcxGridDBBandedColumn;
     cxGrid3DBBandedTableView1date_otpr: TcxGridDBBandedColumn;
@@ -211,39 +232,18 @@ type
     cxGrid3DBBandedTableView1fact_weight: TcxGridDBBandedColumn;
     cxGrid3DBBandedTableView1min_date_operation: TcxGridDBBandedColumn;
     cxGrid3DBBandedTableView1max_date_operation: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1set_recalc_trip: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1note: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1vagon_id: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1next_date_repair: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1model_name: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1uchet_name: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1copper_calibration: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1capacity: TcxGridDBBandedColumn;
     cxGrid3DBBandedTableView1grotpr_okpo: TcxGridDBBandedColumn;
     cxGrid3DBBandedTableView1doc_number: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1idReis: TcxGridDBBandedColumn;
     cxGrid3DBBandedTableView1set_warning: TcxGridDBBandedColumn;
-    cxGrid3: TcxGrid;
-    cxGridDBBandedTableView1: TcxGridDBBandedTableView;
-    cxGridDBBandedTableView1fact_track_trip_id: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1num_vagon: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1date_otpr: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1date_arrival: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1users_group_id: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1node_begin_cod: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1node_begin_name: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1node_end_cod: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1node_end_name: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1kargoETSNG_cod: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1kargoETSNG_name: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1fact_weight: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1min_date_operation: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1max_date_operation: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1note: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1vagon_id: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1next_date_repair: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1model_name: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1uchet_name: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1copper_calibration: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1capacity: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1grotpr_okpo: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1doc_number: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1set_warning: TcxGridDBBandedColumn;
-    cxGridLevel1: TcxGridLevel;
-    dxBarPopupMenu3: TdxBarPopupMenu;
+    cxGrid3Level1: TcxGridLevel;
+    Popup_Trip: TdxBarPopupMenu;
     dxBarButton40: TdxBarButton;
     dxBarButton41: TdxBarButton;
     dxBarButton42: TdxBarButton;
@@ -251,9 +251,9 @@ type
     dxBarButton43: TdxBarButton;
     dxBarButton54: TdxBarButton;
     cxGrid1DBBandedTableView1comment11: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1instruction_cod: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1instruction_date: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1instruction_id: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1instruction_cod: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1instruction_date: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1instruction_id: TcxGridDBBandedColumn;
     dxBarButton61: TdxBarButton;
     ClientDataSet1: TClientDataSet;
     ClientDataSet1node_begin_id: TIntegerField;
@@ -266,8 +266,8 @@ type
     dxBarButton26: TdxBarButton;
     dxBarButton64: TdxBarButton;
     dxBarButton65: TdxBarButton;
-    cxGridDBBandedTableView1etran_ecp_id: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1etran_comment: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1etran_ecp_id: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1etran_comment: TcxGridDBBandedColumn;
     dxBarButton66: TdxBarButton;
     dxBarButton67: TdxBarButton;
     dxBarManager1Bar2: TdxBar;
@@ -284,14 +284,14 @@ type
     dxBarDockControl2: TdxBarDockControl;
     dxBarButton53: TdxBarButton;
     dxBarButton68: TdxBarButton;
-    dxBarPopupMenu2: TdxBarPopupMenu;
+    Popup_History: TdxBarPopupMenu;
     dxBarSubItem13: TdxBarSubItem;
     dxBarButton86: TdxBarButton;
     dxBarButton87: TdxBarButton;
     cxGrid2DBBandedTableView1etran_ecp_id: TcxGridDBBandedColumn;
     cxGrid2DBBandedTableView1etran_comment: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1etran_comment: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1etran_ecp_id: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1etran_comment: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1etran_ecp_id: TcxGridDBBandedColumn;
     dxBarButton69: TdxBarButton;
     dxBarButton70: TdxBarButton;
     dxBarButton71: TdxBarButton;
@@ -338,7 +338,7 @@ type
     dxBarButton100: TdxBarButton;
     dxBarButton102: TdxBarButton;
     dxBarSubItem16: TdxBarSubItem;
-    cxGridDBBandedTableView1status_trip: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1status_trip: TcxGridDBBandedColumn;
     dxBarSubItem17: TdxBarSubItem;
     dxBarButton104: TdxBarButton;
     cxTextEdit6: TcxTextEdit;
@@ -353,12 +353,12 @@ type
     cxGrid1DBBandedTableView1IsEmpty: TcxGridDBBandedColumn;
     dxBarButton15: TdxBarButton;
     dxBarButton58: TdxBarButton;
-    cxGridDBBandedTableView1grotpr_name: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1grotpr_name: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1grotpr_name: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1grpol_name: TcxGridDBBandedColumn;
     cxGrid2DBBandedTableView1grotpr_name: TcxGridDBBandedColumn;
     cxGrid2DBBandedTableView1grpol_name: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1grotpr_name: TcxGridDBBandedColumn;
+    cxGrid5DBBandedTableView1grotpr_name: TcxGridDBBandedColumn;
     dxBarButton59: TdxBarButton;
 
 cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
@@ -376,7 +376,7 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     dxBarButton120: TdxBarButton;
     dxBarButton121: TdxBarButton;
     cxGrid2DBBandedTableView1set_archive: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1next_type_repair_name: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1next_type_repair_name: TcxGridDBBandedColumn;
     dxBarButton114: TdxBarButton;
     cxGrid1DBBandedTableView1comment14: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1vagon_owner_comment: TcxGridDBBandedColumn;
@@ -389,8 +389,8 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     Panel2: TPanel;
     Label20: TLabel;
     Label11: TLabel;
-    cxGridDBBandedTableView1etran_date_ready: TcxGridDBBandedColumn;
-    cxGridDBBandedTableView1etran_date_delivery: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1etran_date_ready: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1etran_date_delivery: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1OwnerOkpoName: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1ArendOkpoName: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1time_otpr: TcxGridDBBandedColumn;
@@ -519,6 +519,37 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     dxBarSubItem11: TdxBarSubItem;
     dxBarButton6: TdxBarButton;
     dxBarButton8: TdxBarButton;
+    cxTabSheet6: TcxTabSheet;
+    cxGrid4: TcxGrid;
+    cxGrid4DBBandedTableView1: TcxGridDBBandedTableView;
+    cxGrid4DBBandedTableView1doc_id: TcxGridDBBandedColumn;
+    cxGrid4DBBandedTableView1doc_type_describe: TcxGridDBBandedColumn;
+    cxGrid4DBBandedTableView1doc_describe: TcxGridDBBandedColumn;
+    cxGrid4DBBandedTableView1file_name: TcxGridDBBandedColumn;
+    cxGrid4DBBandedTableView1doc_location_FIO_users: TcxGridDBBandedColumn;
+    cxGrid4DBBandedTableView1doc_image_date: TcxGridDBBandedColumn;
+    cxGrid4DBBandedTableView1doc_location_id: TcxGridDBBandedColumn;
+    cxGrid4DBBandedTableView1doc_location_name: TcxGridDBBandedColumn;
+    cxGrid4DBBandedTableView1doc_location_date: TcxGridDBBandedColumn;
+    cxGrid4DBBandedTableView1sign_customer_name: TcxGridDBBandedColumn;
+    cxGrid4DBBandedTableView1doc_location_FIO_users_id: TcxGridDBBandedColumn;
+    cxGrid4DBBandedTableView1sign_customer_id: TcxGridDBBandedColumn;
+    cxGrid4DBBandedTableView1doc_image_lzh: TcxGridDBBandedColumn;
+    cxGrid4DBBandedTableView1doc_type_cod: TcxGridDBBandedColumn;
+    cxGrid4DBBandedTableView1global_color: TcxGridDBBandedColumn;
+    cxGrid4DBBandedTableView1docs_id: TcxGridDBBandedColumn;
+    cxGrid4DBBandedTableView1docs_status_name: TcxGridDBBandedColumn;
+    cxGrid4DBBandedTableView1docs_date_agree: TcxGridDBBandedColumn;
+    cxGrid4DBBandedTableView1sign_self_name: TcxGridDBBandedColumn;
+    cxGrid4Level1: TcxGridLevel;
+    dxBarButton44: TdxBarButton;
+    DS_DocBlob: TDataSource;
+    Query_DocBlob: TADOQuery;
+    SP_DocBlob_Get: TADOStoredProc;
+    Popup_DocBlob: TdxBarPopupMenu;
+    dxBarButton55: TdxBarButton;
+    dxBarButton56: TdxBarButton;
+    dxBarSubItem14: TdxBarSubItem;
 
     procedure N4Click(Sender: TObject);
     procedure N2Click(Sender: TObject);
@@ -561,11 +592,11 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     procedure dxBarButton20Click(Sender: TObject);
     procedure dxBarButton21Click(Sender: TObject);
     procedure dxBarButton23Click(Sender: TObject);
-    procedure cxGridDBBandedTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
+    procedure cxGrid3DBBandedTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
     procedure dxBarButton45Click(Sender: TObject);
     procedure dxBarButton46Click(Sender: TObject);
     procedure dxBarButton47Click(Sender: TObject);
-    procedure cxGridDBBandedTableView1FocusedRecordChanged(Sender: TcxCustomGridTableView; APrevFocusedRecord, AFocusedRecord: TcxCustomGridRecord; ANewItemRecordFocusingChanged: Boolean);
+    procedure cxGrid3DBBandedTableView1FocusedRecordChanged(Sender: TcxCustomGridTableView; APrevFocusedRecord, AFocusedRecord: TcxCustomGridRecord; ANewItemRecordFocusingChanged: Boolean);
     procedure dxBarButton28Click(Sender: TObject);
     procedure dxBarButton29Click(Sender: TObject);
     procedure dxBarButton30Click(Sender: TObject);
@@ -621,7 +652,7 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     procedure dxBarButton107Click(Sender: TObject);
     procedure dxBarButton110Click(Sender: TObject);
     procedure dxBarButton111Click(Sender: TObject);
-    procedure cxGrid3DBBandedTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
+    procedure cxGrid5DBBandedTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
     procedure dxBarButton120Click(Sender: TObject);
     procedure dxBarButton114Click(Sender: TObject);
     procedure dxBarButton48Click(Sender: TObject);
@@ -695,6 +726,8 @@ begin
     1 : Caption := 'Дислокация вагонов (рейсы)';
     2 : Caption := 'Дислокация вагонов (простои на станциях)';
   end;
+  // связвнные докумменты
+  cxTabSheet6.TabVisible := False;
 
   if not LisCheck1(fmMain.Lis.ConnectionString) then begin
     fmMain.Lis.Connected := False;
@@ -714,8 +747,8 @@ begin
 
   StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid1DBBandedTableView1, 3);
   StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid2DBBandedTableView1);
-  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid3DBBandedTableView1, 3);
-  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGridDBBandedTableView1);
+  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid5DBBandedTableView1, 3);
+  StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid3DBBandedTableView1);
   StoreRegistryGrid(rgLoad,'\Software\Lis1\FactTrack_Grids', cxGrid12DBBandedTableView1);
 
   Fdate_history1 := IncMonth(Date, -1);
@@ -958,7 +991,7 @@ cxGridDBBandedTableView : TcxGridDBBandedTableView;
 begin
   case cxPageControl1.ActivePageIndex of
     0 : cxGridDBBandedTableView := cxGrid1DBBandedTableView1;
-    1 : cxGridDBBandedTableView := cxGridDBBandedTableView1;
+    1 : cxGridDBBandedTableView := cxGrid3DBBandedTableView1;
   end;
 
   handle := LoadLibrary('dictionary.dll');
@@ -1042,7 +1075,7 @@ begin
 
   case cxPageControl1.ActivePageIndex of
     0 : RefreshQueryGrid(cxGrid1DBBandedTableView1, 'fact_track_id', cxGrid1DBBandedTableView1fact_track_id.DataBinding.Field.AsInteger);
-    1 : RefreshQueryGrid(cxGridDBBandedTableView1, 'fact_track_trip_id');
+    1 : RefreshQueryGrid(cxGrid3DBBandedTableView1, 'fact_track_trip_id');
     2 : RefreshQueryGrid(cxGrid12DBBandedTableView1, 'fact_track_trip_id');
   end;
 end;
@@ -1365,7 +1398,7 @@ end;
 
 procedure TfmFactTrack.cxGrid1DBBandedTableView1SelectionChanged(Sender: TcxCustomGridTableView);
 begin
-  if (cxGridDBBandedTableView1.GroupedColumnCount = 0) then begin
+  if (cxGrid3DBBandedTableView1.GroupedColumnCount = 0) then begin
     cxPageControl2Change(cxPageControl2);
 
   end;
@@ -1410,7 +1443,7 @@ begin
   end;
 end;
 
-procedure TfmFactTrack.cxGrid3DBBandedTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
+procedure TfmFactTrack.cxGrid5DBBandedTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
 begin
   if AViewInfo.GridRecord.Selected or AViewInfo.GridRecord.Focused then begin
     ACanvas.Brush.Color := clNavy;
@@ -1419,10 +1452,10 @@ begin
   end;
 end;
 
-procedure TfmFactTrack.cxGridDBBandedTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas;AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
+procedure TfmFactTrack.cxGrid3DBBandedTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas;AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
 begin
-  if (AViewInfo.GridRecord.Values[cxGridDBBandedTableView1set_warning.Index] <> NULL) then begin
-    if (AViewInfo.GridRecord.Values[cxGridDBBandedTableView1set_warning.Index] = True) then begin
+  if (AViewInfo.GridRecord.Values[cxGrid3DBBandedTableView1set_warning.Index] <> NULL) then begin
+    if (AViewInfo.GridRecord.Values[cxGrid3DBBandedTableView1set_warning.Index] = True) then begin
       ACanvas.Font.Color := clRed;
     end;
   end;
@@ -1434,9 +1467,9 @@ begin
 	end;
 end;
 
-procedure TfmFactTrack.cxGridDBBandedTableView1FocusedRecordChanged(Sender: TcxCustomGridTableView; APrevFocusedRecord,AFocusedRecord: TcxCustomGridRecord; ANewItemRecordFocusingChanged: Boolean);
+procedure TfmFactTrack.cxGrid3DBBandedTableView1FocusedRecordChanged(Sender: TcxCustomGridTableView; APrevFocusedRecord,AFocusedRecord: TcxCustomGridRecord; ANewItemRecordFocusingChanged: Boolean);
 begin
-  if (cxGridDBBandedTableView1.GroupedColumnCount = 0) then begin
+  if (cxGrid3DBBandedTableView1.GroupedColumnCount = 0) then begin
     cxPageControl2Change(cxPageControl2);
   end;
 end;
@@ -1487,7 +1520,7 @@ var OpenDialog1  : TOpenDialog;
 begin
   case cxPageControl1.ActivePageIndex of
     0 : FView := cxGrid1DBBandedTableView1;
-    1 : FView := cxGridDBBandedTableView1;
+    1 : FView := cxGrid3DBBandedTableView1;
     2 : FView := cxGrid12DBBandedTableView1;
   end;
 
@@ -2430,7 +2463,7 @@ end;
 
 procedure TfmFactTrack.dxBarButton107Click(Sender: TObject);
 begin
-  UsersSettingModify(TComponent(Sender).Tag, TForm(self).Name, TcxControl(cxGridDBBandedTableView1), fmMain.Lis);
+  UsersSettingModify(TComponent(Sender).Tag, TForm(self).Name, TcxControl(cxGrid3DBBandedTableView1), fmMain.Lis);
 end;
 
 procedure TfmFactTrack.dxBarButton89Click(Sender: TObject);
@@ -2539,8 +2572,9 @@ begin
     1 : PrintcxGrid(cxGrid1DBBandedTableView1);
     2 : PrintcxGrid(cxGrid2DBBandedTableView1);
     3 : PrintcxGrid(cxGrid3DBBandedTableView1);
-    4 : PrintcxGrid(cxGridDBBandedTableView1);
-    5 : PrintcxGrid(cxGrid12DBBandedTableView1);
+    4 : PrintcxGrid(cxGrid4DBBandedTableView1);
+    5 : PrintcxGrid(cxGrid5DBBandedTableView1);
+   12 : PrintcxGrid(cxGrid12DBBandedTableView1);
   end;
 end;
 {$ENDREGION 'Печать таблицы в Excel'}
@@ -2555,13 +2589,13 @@ procedure TfmFactTrack.FormDestroy(Sender: TObject);
 begin
   StoreRegistryGrid(rgSave,'\Software\Lis1\FactTrack_Grids', cxGrid1DBBandedTableView1, 3);
   StoreRegistryGrid(rgSave,'\Software\Lis1\FactTrack_Grids', cxGrid2DBBandedTableView1);
+  StoreRegistryGrid(rgSave,'\Software\Lis1\FactTrack_Grids', cxGrid5DBBandedTableView1);
   StoreRegistryGrid(rgSave,'\Software\Lis1\FactTrack_Grids', cxGrid3DBBandedTableView1);
-  StoreRegistryGrid(rgSave,'\Software\Lis1\FactTrack_Grids', cxGridDBBandedTableView1);
   StoreRegistryGrid(rgSave,'\Software\Lis1\FactTrack_Grids', cxGrid12DBBandedTableView1);
 
 
   RestoreGroupedColumns(cxGrid1DBBandedTableView1);
-  RestoreGroupedColumns(cxGrid3DBBandedTableView1);
+  RestoreGroupedColumns(cxGrid5DBBandedTableView1);
 end;
 
 procedure TfmFactTrack.N2Click(Sender: TObject);
@@ -2874,6 +2908,11 @@ begin
               SP_StayByNode.Parameters.ParamByName('@kargoETSNG_cod').Value := iif(FClientDS.FieldByName('kargoETSNG_cod').AsString = '', Null, FClientDS.FieldByName('kargoETSNG_cod').AsString);
               SP_StayByNode.Parameters.ParamByName('@set_archive'   ).Value := FClientDS.FieldByName('set_archiv').AsBoolean;
               SP_StayByNode.Open;
+
+              dxBarButton_History.Down := True;
+              cxPageControl2.ActivePage := cxTabSheet4;
+              dxBarButton_HistoryClick(dxBarButton_History);
+              cxTabSheet6.TabVisible := True;
             end;
       end;
     end;
@@ -3570,12 +3609,12 @@ begin
 
   if Application.MessageBox('Вы точно уверены?', 'Внимание', MB_OKCANCEL) = IDOK then begin
     Screen.Cursor := -11;
-    for i := 0 to cxGrid3DBBandedTableView1.Controller.SelectedRowCount - 1 do begin
+    for i := 0 to cxGrid5DBBandedTableView1.Controller.SelectedRowCount - 1 do begin
       Screen.Cursor := crHourglass;
       SP.Parameters.Refresh;
       SP.Parameters.ParamByName('@type_action').Value := 0;
       SP.Parameters.ParamByName('@rec_type').Value := TComponent(Sender).Tag;
-      SP.Parameters.ParamByName('@fact_track_trip_id').Value := cxGrid3DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid3DBBandedTableView1.GetColumnByFieldName('fact_track_trip _id').Index];
+      SP.Parameters.ParamByName('@fact_track_trip_id').Value := cxGrid5DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid5DBBandedTableView1.GetColumnByFieldName('fact_track_trip _id').Index];
       try
        SP.ExecProc;
       except
@@ -3588,17 +3627,17 @@ end;
 
 procedure TfmFactTrack.dxBarButton45Click(Sender: TObject);
 begin
-	SetdxDBGridColumns(cxGridDBBandedTableView1);
+	SetdxDBGridColumns(cxGrid3DBBandedTableView1);
 end;
 
 procedure TfmFactTrack.dxBarButton46Click(Sender: TObject);
 begin
-	cxGridDBBandedTableView1.OptionsView.GroupByBox := not cxGridDBBandedTableView1.OptionsView.GroupByBox;
+	cxGrid3DBBandedTableView1.OptionsView.GroupByBox := not cxGrid3DBBandedTableView1.OptionsView.GroupByBox;
 end;
 
 procedure TfmFactTrack.dxBarButton47Click(Sender: TObject);
 begin
-	FiltercxGrid4ListID(cxGridDBBandedTableView1);
+	FiltercxGrid4ListID(cxGrid3DBBandedTableView1);
 end;
 
 procedure TfmFactTrack.dxBarButton48Click(Sender: TObject);
@@ -3810,10 +3849,10 @@ end;
 procedure TfmFactTrack.dxBarButton78Click(Sender: TObject);
 begin
   {Убрать / вернуть вагон в / из архив-а (рейсы)}
-  ExcludeSwitchVagon(cxGridDBBandedTableView1, cxGridDBBandedTableView1num_vagon.Index, 4, Sender);
+  ExcludeSwitchVagon(cxGrid3DBBandedTableView1, cxGrid3DBBandedTableView1num_vagon.Index, 4, Sender);
 
   {Пересчет рейсов (рейсы)}
-  TripRecalc(cxGridDBBandedTableView1, cxGridDBBandedTableView1num_vagon.Index);
+  TripRecalc(cxGrid3DBBandedTableView1, cxGrid3DBBandedTableView1num_vagon.Index);
 
   dxBarButton_Refresh.Click;
 end;
@@ -3830,7 +3869,7 @@ end;
 procedure TfmFactTrack.dxBarButton37Click(Sender: TObject);
 begin
   {Пересчет рейсов (рейсы)}
-  TripRecalc(cxGridDBBandedTableView1, cxGridDBBandedTableView1num_vagon.Index);
+  TripRecalc(cxGrid3DBBandedTableView1, cxGrid3DBBandedTableView1num_vagon.Index);
 
   dxBarButton_Refresh.Click;
 end;
@@ -3982,9 +4021,9 @@ begin
         end;
     1 : begin
           str_num_vagon := '-9';
-          for i:= 0 to cxGridDBBandedTableView1.Controller.SelectedRecordCount - 1 do begin
+          for i:= 0 to cxGrid3DBBandedTableView1.Controller.SelectedRecordCount - 1 do begin
             str_num_vagon := str_num_vagon + ',';
-            str_num_vagon := str_num_vagon + VarToStr(cxGridDBBandedTableView1.Controller.SelectedRows[i].Values[cxGridDBBandedTableView1num_vagon.Index]);
+            str_num_vagon := str_num_vagon + VarToStr(cxGrid3DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid3DBBandedTableView1num_vagon.Index]);
           end;
 
           Q_NSI := TADOQuery.Create(nil);
@@ -3997,16 +4036,16 @@ begin
           Q_NSI.Open;
 
           ShowTextMessage('Вывод в Excel...', False);
-          for i:=0 to cxGridDBBandedTableView1.Controller.SelectedRecordCount - 1 do begin
-            exWks.Range['B' + IntToStr(row_0)].Value := cxGridDBBandedTableView1.Controller.SelectedRows[i].Values[cxGridDBBandedTableView1num_vagon.Index];
-            exWks.Range['D' + IntToStr(row_0)].Value := VarToStr(cxGridDBBandedTableView1.Controller.SelectedRows[i].Values[cxGridDBBandedTableView1node_begin_name.Index]);
-            exWks.Range['I' + IntToStr(row_0)].Value := VarToStr(cxGridDBBandedTableView1.Controller.SelectedRows[i].Values[cxGridDBBandedTableView1node_end_name.Index]);
-            exWks.Range['M' + IntToStr(row_0)].Value := VarToStr(cxGridDBBandedTableView1.Controller.SelectedRows[i].Values[cxGridDBBandedTableView1kargoETSNG_name.Index]);
-            exWks.Range['N' + IntToStr(row_0)].Value := VarToStr(cxGridDBBandedTableView1.Controller.SelectedRows[i].Values[cxGridDBBandedTableView1fact_weight.Index]);
-            exWks.Range['R' + IntToStr(row_0)].Value := VarToStr(cxGridDBBandedTableView1.Controller.SelectedRows[i].Values[cxGridDBBandedTableView1doc_number.Index]);
+          for i:=0 to cxGrid3DBBandedTableView1.Controller.SelectedRecordCount - 1 do begin
+            exWks.Range['B' + IntToStr(row_0)].Value := cxGrid3DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid3DBBandedTableView1num_vagon.Index];
+            exWks.Range['D' + IntToStr(row_0)].Value := VarToStr(cxGrid3DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid3DBBandedTableView1node_begin_name.Index]);
+            exWks.Range['I' + IntToStr(row_0)].Value := VarToStr(cxGrid3DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid3DBBandedTableView1node_end_name.Index]);
+            exWks.Range['M' + IntToStr(row_0)].Value := VarToStr(cxGrid3DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid3DBBandedTableView1kargoETSNG_name.Index]);
+            exWks.Range['N' + IntToStr(row_0)].Value := VarToStr(cxGrid3DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid3DBBandedTableView1fact_weight.Index]);
+            exWks.Range['R' + IntToStr(row_0)].Value := VarToStr(cxGrid3DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid3DBBandedTableView1doc_number.Index]);
 
             //НСИ
-            if Q_NSI.Locate('num_vagon', cxGridDBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1num_vagon.Index] , []) then begin
+            if Q_NSI.Locate('num_vagon', cxGrid3DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1num_vagon.Index] , []) then begin
               exWks.Range['C' + IntToStr(row_0)].Value := OleVariant(iif(VarIsNull(Q_NSI.FieldByName('carTypeName').Value), '', Q_NSI.FieldByName('carTypeName').Value));
               exWks.Range['S' + IntToStr(row_0)].Value := OleVariant(iif(VarIsNull(Q_NSI.FieldByName('carOwnerName').Value), '', Q_NSI.FieldByName('carOwnerName').Value));
               exWks.Range['T' + IntToStr(row_0)].Value := OleVariant(iif(VarIsNull(Q_NSI.FieldByName('carArendatorName').Value), '', Q_NSI.FieldByName('carArendatorName').Value));
@@ -4021,7 +4060,7 @@ begin
             end;
 
             row_0 := row_0  + 1;
-            ShowTextMessage('Осталось ' + IntToStr(cxGridDBBandedTableView1.Controller.SelectedRecordCount - i) + ' вагонов...', False);
+            ShowTextMessage('Осталось ' + IntToStr(cxGrid3DBBandedTableView1.Controller.SelectedRecordCount - i) + ' вагонов...', False);
           end;
 
           Q_NSI.Free;
@@ -4631,7 +4670,7 @@ begin
   case TdxBarButton(Sender).ClickItemLink.Owner.Owner.Tag of
     1 : cxGridCopyCellsValue(cxGrid1DBBandedTableView1, cxGrid1DBBandedTableView1num_vagon.VisibleIndex);  //   Controller.FocusedItemIndex
     2 : cxGridCopyCellsValue(cxGrid2DBBandedTableView1);
-    4 : cxGridCopyCellsValue(cxGridDBBandedTableView1);
+    4 : cxGridCopyCellsValue(cxGrid3DBBandedTableView1);
     5 : cxGridCopyCellsValue(cxGrid12DBBandedTableView1);
   end;
 end;
@@ -4661,17 +4700,17 @@ begin
   ClientDS.CreateDataSet;
   ClientDS.LogChanges := False;
 
-  for i:=0 to cxGridDBBandedTableView1.Controller.SelectedRecordCount - 1 do begin
+  for i:=0 to cxGrid3DBBandedTableView1.Controller.SelectedRecordCount - 1 do begin
 
 
 
-    if cxGridDBBandedTableView1.Controller.SelectedRows[i].Values[cxGridDBBandedTableView1etran_ecp_id.Index] = null then begin
+    if cxGrid3DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid3DBBandedTableView1etran_ecp_id.Index] = null then begin
 
 
       Query.SQL.Clear;
       Query.SQL.Add('SELECT	top 1 *');
       Query.SQL.Add('FROM	fact_track_trip');
-      Query.SQL.Add('WHERE	num_vagon =' + IntToStr(cxGridDBBandedTableView1.Controller.SelectedRows[i].Values[cxGridDBBandedTableView1num_vagon.Index]));
+      Query.SQL.Add('WHERE	num_vagon =' + IntToStr(cxGrid3DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid3DBBandedTableView1num_vagon.Index]));
 //      Query.SQL.Add('		and users_group_id =' + IntToStr(usr_pwd.user_group_id));
       Query.SQL.Add('		and isnull(fact_weight,0) > 0');
       Query.SQL.Add('		and kargoETSNG_cod is not null');
@@ -4679,14 +4718,14 @@ begin
       Query.Open;
 
       ClientDS.Append;
-      ClientDS.FieldByName('fact_track_trip_id').Value := cxGridDBBandedTableView1.Controller.SelectedRows[i].Values[cxGridDBBandedTableView1fact_track_trip_id.Index];
-      ClientDS.FieldByName('num_vagon'         ).Value := cxGridDBBandedTableView1.Controller.SelectedRows[i].Values[cxGridDBBandedTableView1num_vagon.Index];
-      ClientDS.FieldByName('node_end_cod'      ).Value := cxGridDBBandedTableView1.Controller.SelectedRows[i].Values[cxGridDBBandedTableView1node_end_cod.Index];
+      ClientDS.FieldByName('fact_track_trip_id').Value := cxGrid3DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid3DBBandedTableView1fact_track_trip_id.Index];
+      ClientDS.FieldByName('num_vagon'         ).Value := cxGrid3DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid3DBBandedTableView1num_vagon.Index];
+      ClientDS.FieldByName('node_end_cod'      ).Value := cxGrid3DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid3DBBandedTableView1node_end_cod.Index];
       ClientDS.FieldByName('index_train'       ).Value := null;
       if Query.RecordCount > 0 then ClientDS.FieldByName('kargoETSNG_cod').Value := Query.FieldByName('kargoETSNG_cod').AsString;
       ClientDS.Post;
     end else begin
-      Application.MessageBox(PChar('Заготовка на вагон №' + VarToStr(cxGridDBBandedTableView1.Controller.SelectedRows[i].Values[cxGridDBBandedTableView1num_vagon.Index]) + ' уже создана!'), 'Внимание', MB_ICONWARNING or MB_OK);
+      Application.MessageBox(PChar('Заготовка на вагон №' + VarToStr(cxGrid3DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid3DBBandedTableView1num_vagon.Index]) + ' уже создана!'), 'Внимание', MB_ICONWARNING or MB_OK);
     end;
   end;
 
@@ -4710,7 +4749,7 @@ begin
   FreeLibrary(handle);
 
   if v[0] <> -9 then
-    RefreshQueryGrid(cxGridDBBandedTableView1, 'fact_track_trip_id');
+    RefreshQueryGrid(cxGrid3DBBandedTableView1, 'fact_track_trip_id');
 
   ClientDS.Free;
 end;
@@ -4729,7 +4768,7 @@ var
          ClientDS : TClientDataSet;
                 i : integer;
 begin
-  if cxGridDBBandedTableView1etran_ecp_id.DataBinding.Field.IsNull then begin
+  if cxGrid3DBBandedTableView1etran_ecp_id.DataBinding.Field.IsNull then begin
     Application.MessageBox(PChar('Заготовка не найдена!'), 'ОШИБКА', MB_ICONSTOP or MB_OK);
     Exit;
   end;
@@ -4750,11 +4789,11 @@ begin
 
   handle := LoadLibrary('etranECP.dll');
   @FEtran := GetProcAddress(handle, 'CreateWndEtranECPInvoiceToViza');
-  v := FEtran(Application.Handle, users_group_cod, usr_pwd, FIO_users, cxGridDBBandedTableView1etran_ecp_id.DataBinding.Field.AsInteger, nil);
+  v := FEtran(Application.Handle, users_group_cod, usr_pwd, FIO_users, cxGrid3DBBandedTableView1etran_ecp_id.DataBinding.Field.AsInteger, nil);
   FreeLibrary(handle);
 
   if v[0] <> -9 then
-    RefreshQueryGrid(cxGridDBBandedTableView1, 'fact_track_trip_id');
+    RefreshQueryGrid(cxGrid3DBBandedTableView1, 'fact_track_trip_id');
 end;
 
 procedure TfmFactTrack.dxBarButton67Click(Sender: TObject);
@@ -4770,7 +4809,7 @@ var
          ClientDS : TClientDataSet;
                 i : integer;
 begin
-  if cxGridDBBandedTableView1etran_ecp_id.DataBinding.Field.IsNull then begin
+  if cxGrid3DBBandedTableView1etran_ecp_id.DataBinding.Field.IsNull then begin
     Application.MessageBox(PChar('Заготовка не найдена!'), 'ОШИБКА', MB_ICONSTOP or MB_OK);
     Exit;
   end;
@@ -4791,10 +4830,10 @@ begin
 
   handle := LoadLibrary('etranECP.dll');
   @FEtran := GetProcAddress(handle, 'CreateWndEtranECPInvoiceDelete');
-  v := FEtran(users_group_cod, usr_pwd, cxGridDBBandedTableView1etran_ecp_id.DataBinding.Field.AsInteger);
+  v := FEtran(users_group_cod, usr_pwd, cxGrid3DBBandedTableView1etran_ecp_id.DataBinding.Field.AsInteger);
   FreeLibrary(handle);
 
-  RefreshQueryGrid(cxGridDBBandedTableView1, 'fact_track_trip_id');
+  RefreshQueryGrid(cxGrid3DBBandedTableView1, 'fact_track_trip_id');
 end;
 
 procedure TfmFactTrack.dxBarButton68Click(Sender: TObject);
@@ -4843,7 +4882,7 @@ begin
 
   handle := LoadLibrary('etranECP.dll');
   @FEtran := GetProcAddress(handle, 'CreateWndEtranECP');
-  v := FEtran(Application.Handle, users_group_cod, usr_pwd, FIO_users, cxGridDBBandedTableView1etran_ecp_id.DataBinding.Field.AsInteger);
+  v := FEtran(Application.Handle, users_group_cod, usr_pwd, FIO_users, cxGrid3DBBandedTableView1etran_ecp_id.DataBinding.Field.AsInteger);
   FreeLibrary(handle);
 end;
 
@@ -5012,13 +5051,13 @@ begin
       SP.Connection := fmMain.Lis;
       SP.ProcedureName := 'sp_fact_insert_from_fact_track';
       SP.Parameters.Refresh;
-      for i := 0 to cxGridDBBandedTableView1.Controller.SelectedRecordCount - 1 do begin
+      for i := 0 to cxGrid3DBBandedTableView1.Controller.SelectedRecordCount - 1 do begin
         SP.Close;
-        SP.Parameters.ParamByName('@fact_track_id').Value := cxGridDBBandedTableView1.Controller.SelectedRows[i].Values[cxGridDBBandedTableView1fact_track_trip_id.Index];
+        SP.Parameters.ParamByName('@fact_track_id').Value := cxGrid3DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid3DBBandedTableView1fact_track_trip_id.Index];
         SP.Parameters.ParamByName('@bargain_id').Value    := iif(bargain_id = -9, null, bargain_id);
         SP.Parameters.ParamByName('@type_action').Value   := 4;
         SP.ExecProc;
-        ShowTextMessage('Осталось '+IntToStr(cxGridDBBandedTableView1.Controller.SelectedRecordCount - i)+' записей...', False);
+        ShowTextMessage('Осталось '+IntToStr(cxGrid3DBBandedTableView1.Controller.SelectedRecordCount - i)+' записей...', False);
       end;
       ShowTextMessage('Обновление информации ...', False);
       ShowTextMessage('', True);
@@ -5275,7 +5314,7 @@ begin
       1 : begin
             if cxPageControl2.ActivePage = cxTabSheet3 then begin
               // История: вагон
-              Query_History.Parameters.ParamByName('num_vagon'     ).Value := cxGridDBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
+              Query_History.Parameters.ParamByName('num_vagon'     ).Value := cxGrid3DBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
               Query_History.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
               Query_History.Parameters.ParamByName('date_begin'    ).Value := Fdate_history1;
               Query_History.Parameters.ParamByName('date_end'      ).Value := Fdate_history2;
@@ -5283,7 +5322,7 @@ begin
               Query_History.Open;
             end else begin
               // История: рейс
-              Query_HistoryTrip.Parameters.ParamByName('num_vagon'     ).Value := cxGridDBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
+              Query_HistoryTrip.Parameters.ParamByName('num_vagon'     ).Value := cxGrid3DBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
               Query_HistoryTrip.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
               Query_HistoryTrip.Parameters.ParamByName('date_begin1'    ).Value := Fdate_trip1;
               Query_HistoryTrip.Parameters.ParamByName('date_end1'      ).Value := Fdate_trip2;
@@ -5303,16 +5342,20 @@ begin
               Query_History.Parameters.ParamByName('date_end'      ).Value := Fdate_history2;
 //              Query_History.Parameters.ParamByName('set_group'     ).Value := iif(dxBarButton115.Down, 1, 0);
               Query_History.Open;
-            end else begin
-              // История: рейс
+            end;
+            // история рейсов
+            if cxPageControl2.ActivePage = cxTabSheet4 then begin
               Query_HistoryTrip.Parameters.ParamByName('num_vagon'     ).Value := cxGrid12DBBandedTableView1num_vagon.DataBinding.Field.AsInteger;
               Query_HistoryTrip.Parameters.ParamByName('users_group_id').Value := usr_pwd.user_group_id;
-              Query_HistoryTrip.Parameters.ParamByName('date_begin1'    ).Value := Fdate_trip1;
-              Query_HistoryTrip.Parameters.ParamByName('date_end1'      ).Value := Fdate_trip2;
-              Query_HistoryTrip.Parameters.ParamByName('date_begin2'    ).Value := Fdate_trip1;
-              Query_HistoryTrip.Parameters.ParamByName('date_end2'      ).Value := Fdate_trip2;
+              Query_HistoryTrip.Parameters.ParamByName('date_begin'    ).Value := Fdate_trip1 - 30;
+              Query_HistoryTrip.Parameters.ParamByName('date_end'      ).Value := Fdate_trip2 + 30;
               Query_HistoryTrip.Open;
             end;
+            // связанные документы
+            if cxPageControl2.ActivePage = cxTabSheet6 then begin
+              Query_DocBlob.Close;
+            end;
+
           end;
 
 
