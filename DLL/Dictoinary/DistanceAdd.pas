@@ -21,7 +21,7 @@ uses
   dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinTheBezier,
   dxSkinsDefaultPainters, dxSkinValentine, dxSkinVisualStudio2013Blue,
   dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010,
-  dxSkinWhiteprint, dxSkinXmas2008Blue, cxClasses, cxPropertiesStore, cxCurrencyEdit, cxButtons, Menus;
+  dxSkinWhiteprint, dxSkinXmas2008Blue, cxClasses, cxPropertiesStore, cxCurrencyEdit, cxButtons, Menus, dxCoreGraphics;
 
 type
   TfmDistanceAdd = class(TForm)

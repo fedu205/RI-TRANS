@@ -12,9 +12,7 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel4: TPanel
     Left = 0
@@ -110,6 +108,10 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Width = 343
     end
@@ -238,6 +240,9 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 5
       Width = 305
     end
@@ -264,6 +269,9 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 6
       Width = 102
     end
@@ -417,7 +425,6 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 2
-    ExplicitTop = 134
     DesignSize = (
       532
       34)
@@ -464,6 +471,9 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Width = 241
     end
@@ -490,6 +500,10 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
       Width = 95
     end
@@ -503,7 +517,6 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 3
-    ExplicitTop = 168
     DesignSize = (
       532
       86)
@@ -595,6 +608,9 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Width = 373
     end
@@ -631,6 +647,10 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
       Width = 373
     end
@@ -657,6 +677,10 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 2
       Width = 101
     end
@@ -670,7 +694,6 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 4
-    ExplicitTop = 320
     object Label27: TLabel
       Left = 206
       Top = 12
@@ -709,6 +732,8 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
       StyleFocused.LookAndFeel.SkinName = 'Coffee'
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Width = 105
     end
@@ -736,6 +761,8 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
       StyleFocused.LookAndFeel.SkinName = 'Coffee'
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
       Width = 105
     end
@@ -749,7 +776,6 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 5
-    ExplicitTop = 254
     DesignSize = (
       532
       66)
@@ -804,6 +830,9 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Width = 109
     end
@@ -834,6 +863,9 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
       Width = 226
     end
@@ -862,6 +894,10 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 2
       Width = 226
     end
@@ -913,6 +949,10 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Height = 83
       Width = 528
@@ -927,8 +967,6 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 7
-    ExplicitTop = 356
-    ExplicitHeight = 120
     object cxGrid1: TcxGrid
       Left = 2
       Top = 2
@@ -938,12 +976,12 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
       TabOrder = 0
       LookAndFeel.Kind = lfUltraFlat
       LookAndFeel.ScrollbarMode = sbmClassic
-      ExplicitHeight = 116
       object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
         PopupMenu = dxBarPopupMenu1
         OnDblClick = dxBarButton6Click
         OnKeyPress = cxGrid1DBBandedTableView1KeyPress
         Navigator.Buttons.CustomButtons = <>
+        ScrollbarAnnotations.CustomAnnotations = <>
         OnCustomDrawCell = cxGrid1DBBandedTableView1CustomDrawCell
         OnFocusedItemChanged = cxGrid1DBBandedTableView1FocusedItemChanged
         DataController.DataSource = DS_Files
@@ -1050,7 +1088,6 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 8
-    ExplicitTop = 64
     DesignSize = (
       532
       35)
@@ -1105,6 +1142,10 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Width = 433
     end
@@ -1119,7 +1160,6 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
     BevelOuter = bvLowered
     TabOrder = 9
     Visible = False
-    ExplicitTop = 99
     DesignSize = (
       532
       35)
@@ -1201,6 +1241,10 @@ object fmDocBlobAddNew: TfmDocBlobAddNew
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
       Width = 404
     end

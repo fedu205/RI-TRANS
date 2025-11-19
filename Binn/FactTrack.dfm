@@ -2876,7 +2876,7 @@ object fmFactTrack: TfmFactTrack
     Constraints.MinHeight = 200
     TabOrder = 5
     Visible = False
-    Properties.ActivePage = cxTabSheet3
+    Properties.ActivePage = cxTabSheet6
     Properties.CustomButtons.Buttons = <>
     Properties.Images = fmMain.cxImageList1
     LookAndFeel.Kind = lfUltraFlat
@@ -2890,8 +2890,6 @@ object fmFactTrack: TfmFactTrack
     object cxTabSheet3: TcxTabSheet
       Caption = #1048#1089#1090#1086#1088#1080#1103' '#1074#1072#1075#1086#1085#1072
       ImageIndex = 147
-      ExplicitTop = 24
-      ExplicitHeight = 259
       object cxGrid2: TcxGrid
         Left = 0
         Top = 26
@@ -2912,7 +2910,6 @@ object fmFactTrack: TfmFactTrack
         LookAndFeel.NativeStyle = False
         LookAndFeel.ScrollbarMode = sbmClassic
         LookAndFeel.SkinName = 'Office2007Black'
-        ExplicitHeight = 233
         object cxGrid2DBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = Popup_History
           OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -4253,8 +4250,6 @@ object fmFactTrack: TfmFactTrack
     object cxTabSheet4: TcxTabSheet
       Caption = #1056#1077#1081#1089#1099' '#1074#1072#1075#1086#1085#1072
       ImageIndex = 142
-      ExplicitTop = 24
-      ExplicitHeight = 259
       object cxGrid5: TcxGrid
         Left = 0
         Top = 26
@@ -4275,7 +4270,6 @@ object fmFactTrack: TfmFactTrack
         LookAndFeel.NativeStyle = False
         LookAndFeel.ScrollbarMode = sbmClassic
         LookAndFeel.SkinName = 'Office2007Black'
-        ExplicitHeight = 233
         object cxGrid5DBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = Popup_Trip
           OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -4661,8 +4655,6 @@ object fmFactTrack: TfmFactTrack
     object cxTabSheet6: TcxTabSheet
       Caption = #1044#1086#1082#1091#1084#1077#1085#1090#1099
       ImageIndex = 67
-      ExplicitTop = 24
-      ExplicitHeight = 259
       object cxGrid4: TcxGrid
         Left = 0
         Top = 0
@@ -4680,8 +4672,6 @@ object fmFactTrack: TfmFactTrack
         LookAndFeel.NativeStyle = False
         LookAndFeel.ScrollbarMode = sbmClassic
         LookAndFeel.SkinName = 'Office2007Black'
-        ExplicitWidth = 965
-        ExplicitHeight = 168
         object cxGrid4DBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = Popup_DocBlob
           OnDblClick = dxBarButton17Click
@@ -5207,6 +5197,11 @@ object fmFactTrack: TfmFactTrack
         item
           Visible = True
           ItemName = 'dxBarButton97'
+        end
+        item
+          BeginGroup = True
+          Visible = True
+          ItemName = 'dxBarButton44'
         end>
     end
     object dxBarButton_Refresh: TdxBarButton
@@ -6316,57 +6311,15 @@ object fmFactTrack: TfmFactTrack
         item
           Visible = True
           ItemName = 'dxBarButton1'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton44'
         end>
     end
-    object dxBarButton55: TdxBarButton
-      Caption = #1055#1088#1086#1089#1084#1086#1090#1088' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
-      Category = 5
-      Hint = #1055#1088#1086#1089#1084#1086#1090#1088' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
+    object dxBarButton60: TdxBarButton
+      Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1087#1088#1077#1090#1077#1085#1079#1080#1102
+      Category = 0
+      Hint = #1044#1086#1073#1072#1074#1080#1090#1100' '#1087#1088#1077#1090#1077#1085#1079#1080#1102
       Visible = ivAlways
-      ImageIndex = 31
-    end
-    object dxBarButton56: TdxBarButton
-      Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100' '#1076#1086#1082#1091#1084#1077#1085#1090#1099
-      Category = 5
-      Hint = #1057#1086#1093#1088#1072#1085#1080#1090#1100' '#1076#1086#1082#1091#1084#1077#1085#1090#1099
-      Visible = ivAlways
-      ImageIndex = 56
-    end
-    object dxBarButton44: TdxBarButton
-      Caption = #1055#1088#1077#1090#1077#1085#1079#1080#1103' '#1087#1086' '#1087#1088#1086#1089#1090#1086#1103#1084
-      Category = 5
-      Hint = #1055#1088#1077#1090#1077#1085#1079#1080#1103' '#1087#1086' '#1087#1088#1086#1089#1090#1086#1103#1084
-      Visible = ivAlways
-      ImageIndex = 9
-    end
-    object dxBarSubItem14: TdxBarSubItem
-      Tag = 4
-      Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1080' '#1090#1072#1073#1083#1080#1094#1099
-      Category = 5
-      Visible = ivAlways
-      ImageIndex = 4
-      ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'N82'
-        end
-        item
-          Visible = True
-          ItemName = 'N83'
-        end
-        item
-          BeginGroup = True
-          Visible = True
-          ItemName = 'N14'
-        end
-        item
-          Visible = True
-          ItemName = 'N74'
-        end>
+      ImageIndex = 114
+      OnClick = dxBarButton60Click
     end
     object N12: TdxBarButton
       Caption = #1054#1090#1095#1105#1090' '#1087#1086' '#1074#1072#1075#1086#1085#1072#1084' (44)'
@@ -6727,6 +6680,54 @@ object fmFactTrack: TfmFactTrack
       Visible = ivAlways
       ImageIndex = 8
       OnClick = dxBarButton1Click
+    end
+    object dxBarButton55: TdxBarButton
+      Caption = #1055#1088#1086#1089#1084#1086#1090#1088' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
+      Category = 5
+      Hint = #1055#1088#1086#1089#1084#1086#1090#1088' '#1076#1086#1082#1091#1084#1077#1085#1090#1072
+      Visible = ivAlways
+      ImageIndex = 31
+    end
+    object dxBarButton56: TdxBarButton
+      Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100' '#1076#1086#1082#1091#1084#1077#1085#1090#1099
+      Category = 5
+      Hint = #1057#1086#1093#1088#1072#1085#1080#1090#1100' '#1076#1086#1082#1091#1084#1077#1085#1090#1099
+      Visible = ivAlways
+      ImageIndex = 56
+    end
+    object dxBarButton44: TdxBarButton
+      Tag = 143
+      Caption = #1055#1088#1077#1090#1077#1085#1079#1080#1103' '#1087#1086' '#1087#1088#1086#1089#1090#1086#1103#1084
+      Category = 5
+      Hint = #1055#1088#1077#1090#1077#1085#1079#1080#1103' '#1087#1086' '#1087#1088#1086#1089#1090#1086#1103#1084
+      Visible = ivAlways
+      ImageIndex = 9
+      OnClick = dxBarButton44Click
+    end
+    object dxBarSubItem14: TdxBarSubItem
+      Tag = 4
+      Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1080' '#1090#1072#1073#1083#1080#1094#1099
+      Category = 5
+      Visible = ivAlways
+      ImageIndex = 4
+      ItemLinks = <
+        item
+          Visible = True
+          ItemName = 'N82'
+        end
+        item
+          Visible = True
+          ItemName = 'N83'
+        end
+        item
+          BeginGroup = True
+          Visible = True
+          ItemName = 'N14'
+        end
+        item
+          Visible = True
+          ItemName = 'N74'
+        end>
     end
   end
   object Popup_TrackVagon: TdxBarPopupMenu
@@ -7553,6 +7554,11 @@ object fmFactTrack: TfmFactTrack
     BarManager = dxBarManager1
     ItemLinks = <
       item
+        Visible = True
+        ItemName = 'dxBarButton60'
+      end
+      item
+        BeginGroup = True
         Visible = True
         ItemName = 'dxBarButton55'
       end

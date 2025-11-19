@@ -1,4 +1,4 @@
-unit DocBlobAdd;
+п»їunit DocBlobAdd;
 
 interface
 
@@ -27,7 +27,7 @@ uses
   dxSkinsDefaultPainters, dxSkinValentine, dxSkinVS2010, dxSkinWhiteprint,
   dxSkinXmas2008Blue, dxCore, cxDateUtils, dxSkinOffice2016Colorful,
   dxSkinOffice2016Dark, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
-  dxSkinVisualStudio2013Light, dxSkinTheBezier;
+  dxSkinVisualStudio2013Light, dxSkinTheBezier, dxCoreGraphics;
 
 type
   TfmDocBlobAdd = class(TForm)
@@ -186,7 +186,7 @@ type
     procedure SetParamFromClientDS(ClientDS: TClientDataSet);
     procedure CheckContract(contract_id: integer);
   public
-    constructor Create(AOwner: TApplication; usr_pwd: PUser_pwd);
+    constructor Create(AOwner: TApplication; conn: TADOConnection);
   published
     property _SetDocType         : string  write SetDocType;
     property _SetDocFolderID     : integer write Fdoc_folder_id;
@@ -210,25 +210,21 @@ type
 var
   fmDocBlobAdd: TfmDocBlobAdd;
 
-function CreateWndDocAdd(AppHand: THandle; doc_id: integer; global_id: integer; doc_type_cod: string; ClientDS: TClientDataSet; usr_pwd: PUser_pwd):variant; export;
+function CreateWndDocAdd(AppHand: THandle; doc_id: integer; global_id: integer; doc_type_cod: string; ClientDS: TClientDataSet; conn: TADOConnection):variant; export;
 
 implementation
    uses DocBlob, Filter, Raznoe;
 {$R *.DFM}
 
-function CreateWndDocAdd(AppHand: THandle; doc_id: integer; global_id: integer; doc_type_cod: string; ClientDS: TClientDataSet; usr_pwd: PUser_pwd): variant;
+function CreateWndDocAdd(AppHand: THandle; doc_id: integer; global_id: integer; doc_type_cod: string; ClientDS: TClientDataSet; conn: TADOConnection): variant;
 var Connect : TADOConnection;
           Q : TADOQuery;
 begin
-  Connect := TADOConnection.Create(nil);
-  Connect.ConnectionString := 'Persist Security Info=True;Provider=SQLOLEDB.1;User ID='+usr_pwd^.user_name+';Password='+usr_pwd^.user_pass+';Initial Catalog='+usr_pwd^.catalog+';Data Source='+usr_pwd^.server+';';
-  Connect.KeepConnection   := False;
-  Connect.LoginPrompt      := False;
   try
-    fmDocBlobAdd := TfmDocBlobAdd.Create(Application, usr_pwd);
+    fmDocBlobAdd := TfmDocBlobAdd.Create(Application, conn);
 
     Q := TADOQuery.Create(nil);
-    Q.Connection := Connect;
+    Q.Connection := conn;
     Q.SQL.Add('SELECT	global_id, object_physic_name ');
     Q.SQL.Add('FROM	  global_id LEFT JOIN object_base ON global_id.object_id = object_base.object_id');
     Q.SQL.Add('WHERE	global_id = ' + IntToStr(global_id));
@@ -261,12 +257,11 @@ begin
   end;
 end;
 
-constructor TfmDocBlobAdd.Create(AOwner: TApplication; usr_pwd: PUser_pwd);
+constructor TfmDocBlobAdd.Create(AOwner: TApplication; conn: TADOConnection);
 begin
   inherited Create(AOwner);
   Screen.Cursor := crHourglass;
 
-  Fusr_pwd := usr_pwd;
   Fdoc_id        := -9;
   Fdoc_type_cod  := '';
   Fdoc_folder_id := -9;
@@ -284,12 +279,7 @@ begin
   Ffiles_name  := '';
   Ffiles_blob := TMemoryStream.Create;
 
-  FConnect := TADOConnection.Create(nil);
-  FConnect.ConnectionString := 'Persist Security Info=True;Provider=SQLOLEDB.1;User ID='+usr_pwd^.user_name+';Password='+usr_pwd^.user_pass+';Initial Catalog='+usr_pwd^.catalog+';Data Source='+usr_pwd^.server+';';
-  FConnect.KeepConnection   := False;
-  FConnect.LoginPrompt      := False;
-  FClientDS                 := nil;
-
+  FConnect := conn;
   Query_Firm.Connection          := FConnect;
   Query_Sign_Self.Connection     := FConnect;
   Query_Sign_Customer.Connection := FConnect;
@@ -416,7 +406,7 @@ begin
   Screen.Cursor := 0;
 end;
 
-//Выбор файла
+//Р’С‹Р±РѕСЂ С„Р°Р№Р»Р°
 procedure TfmDocBlobAdd.cxButton1Click(Sender: TObject);
 begin
   Screen.Cursor := -11;
@@ -463,7 +453,7 @@ var           v : Variant;
 begin
   if (OpenDialog1.Files.Count = 0) AND (Ftype_action = 0) then begin
     if (Ffiles_blob.Size = 0) then begin
-      Application.MessageBox('Не указан файл.', 'Внимание', MB_OK);
+      Application.MessageBox('РќРµ СѓРєР°Р·Р°РЅ С„Р°Р№Р».', 'Р’РЅРёРјР°РЅРёРµ', MB_OK);
       ModalResult := mrNone;
       Exit;
     end;
@@ -479,74 +469,74 @@ begin
 
 
   case IndexText(Fdoc_type_cod, ['1','2','3','7','8','9','10','11','12','13','14','15']) of
-   0: begin // Договор
+   0: begin // Р”РѕРіРѕРІРѕСЂ
         Fcontract_id    := iif(cxLookupComboBox16.EditValue = null, -9, cxLookupComboBox16.EditValue);
         if (Fcontract_id = -9) AND (cxLookupComboBox16.Enabled = True) then begin
           ModalResult := mrNone;
-          Application.MessageBox('Выберите договор!', 'Ошибка', MB_ICONWARNING or MB_OK);
+          Application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ РґРѕРіРѕРІРѕСЂ!', 'РћС€РёР±РєР°', MB_ICONWARNING or MB_OK);
           Exit;
         end;
 
       end;
-   1: begin // Приложение
+   1: begin // РџСЂРёР»РѕР¶РµРЅРёРµ
         Fcontract_id    := iif(cxLookupComboBox16.EditValue = null, -9, cxLookupComboBox16.EditValue);
         if (Fcontract_id = -9) AND (cxLookupComboBox16.Enabled = True) then begin
           ModalResult := mrNone;
-          Application.MessageBox('Выберите договор!', 'Ошибка', MB_ICONWARNING or MB_OK);
+          Application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ РґРѕРіРѕРІРѕСЂ!', 'РћС€РёР±РєР°', MB_ICONWARNING or MB_OK);
           Exit;
         end;
       end;
-   2: begin // Счет
+   2: begin // РЎС‡РµС‚
         Fcontract_id    := iif(cxLookupComboBox16.EditValue = null, -9, cxLookupComboBox16.EditValue);
         Finvoice_id     := iif(cxLookupComboBox28.EditValue = null, -9, cxLookupComboBox28.EditValue);
         if (Fcontract_id = -9) AND (cxLookupComboBox16.Enabled = True) then begin
           ModalResult := mrNone;
-          Application.MessageBox('Выберите договор!', 'Ошибка', MB_ICONWARNING or MB_OK);
+          Application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ РґРѕРіРѕРІРѕСЂ!', 'РћС€РёР±РєР°', MB_ICONWARNING or MB_OK);
           Exit;
         end;
 //        if Query_Contract.FieldByName('type_contract').AsInteger <> 1 then begin
 //          if (Finvoice_id = -9) AND (cxLookupComboBox28.Enabled = True) then begin
 //            ModalResult := mrNone;
-//            Application.MessageBox('Выберите счет!', 'Ошибка', MB_ICONWARNING or MB_OK);
+//            Application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ СЃС‡РµС‚!', 'РћС€РёР±РєР°', MB_ICONWARNING or MB_OK);
 //            Exit;
 //          end;
 //        end;
       end;
-   3: begin // Карточка контрагента
+   3: begin // РљР°СЂС‚РѕС‡РєР° РєРѕРЅС‚СЂР°РіРµРЅС‚Р°
         Ffirm_id        := iif(cxLookupComboBox6.EditValue = null, -9, cxLookupComboBox6.EditValue);
         if (Ffirm_id = -9) AND (cxLookupComboBox6.Enabled = True) then begin
           ModalResult := mrNone;
-          Application.MessageBox('Выберите контрагента!', 'Ошибка', MB_ICONWARNING or MB_OK);
+          Application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°!', 'РћС€РёР±РєР°', MB_ICONWARNING or MB_OK);
           Exit;
         end;
       end;
-   4: begin // Претензия к контрагенту
+   4: begin // РџСЂРµС‚РµРЅР·РёСЏ Рє РєРѕРЅС‚СЂР°РіРµРЅС‚Сѓ
         Fcontract_id    := iif(cxLookupComboBox16.EditValue = null, -9, cxLookupComboBox16.EditValue);
         Fpretenzia_id   := iif(cxLookupComboBox2.EditValue = null, -9, cxLookupComboBox2.EditValue);
         if (Fcontract_id = -9) AND (cxLookupComboBox16.Enabled = True) then begin
           ModalResult := mrNone;
-          Application.MessageBox('Выберите договор!', 'Ошибка', MB_ICONWARNING or MB_OK);
+          Application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ РґРѕРіРѕРІРѕСЂ!', 'РћС€РёР±РєР°', MB_ICONWARNING or MB_OK);
           Exit;
         end;
         if (Fpretenzia_id = -9) AND (cxLookupComboBox2.Enabled = True) then begin
           ModalResult := mrNone;
-          Application.MessageBox('Выберите претензию!', 'Ошибка', MB_ICONWARNING or MB_OK);
+          Application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ РїСЂРµС‚РµРЅР·РёСЋ!', 'РћС€РёР±РєР°', MB_ICONWARNING or MB_OK);
           Exit;
         end;
       end;
-   5: begin //Прочие
+   5: begin //РџСЂРѕС‡РёРµ
         Fcontract_id    := iif(cxLookupComboBox16.EditValue = null, -9, cxLookupComboBox16.EditValue);
         if (Fcontract_id = -9) AND (cxLookupComboBox16.Enabled = True) then begin
           ModalResult := mrNone;
-          Application.MessageBox('Выберите договор!', 'Ошибка', MB_ICONWARNING or MB_OK);
+          Application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ РґРѕРіРѕРІРѕСЂ!', 'РћС€РёР±РєР°', MB_ICONWARNING or MB_OK);
           Exit;
         end;
       end;
-   6: begin //Акты
+   6: begin //РђРєС‚С‹
         Fcontract_id    := iif(cxLookupComboBox16.EditValue = null, -9, cxLookupComboBox16.EditValue);
         if (Fcontract_id = -9) AND (cxLookupComboBox16.Enabled = True) then begin
           ModalResult := mrNone;
-          Application.MessageBox('Выберите договор!', 'Ошибка', MB_ICONWARNING or MB_OK);
+          Application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ РґРѕРіРѕРІРѕСЂ!', 'РћС€РёР±РєР°', MB_ICONWARNING or MB_OK);
           Exit;
         end;
 
@@ -560,48 +550,48 @@ begin
         Q.SQL.Add('AND contract_id =' + IntToStr(Fcontract_id));
         Q.Open;
         if Q.RecordCount > 0 then
-          Application.MessageBox('В модуле «Валютный контроль» документ перейдет в состояние «не отработан».', 'Ошибка', MB_ICONWARNING or MB_OK);
+          Application.MessageBox('Р’ РјРѕРґСѓР»Рµ В«Р’Р°Р»СЋС‚РЅС‹Р№ РєРѕРЅС‚СЂРѕР»СЊВ» РґРѕРєСѓРјРµРЅС‚ РїРµСЂРµР№РґРµС‚ РІ СЃРѕСЃС‚РѕСЏРЅРёРµ В«РЅРµ РѕС‚СЂР°Р±РѕС‚Р°РЅВ».', 'РћС€РёР±РєР°', MB_ICONWARNING or MB_OK);
         Q.Free;
 
       end;
-   7: begin //Техническая документация
+   7: begin //РўРµС…РЅРёС‡РµСЃРєР°СЏ РґРѕРєСѓРјРµРЅС‚Р°С†РёСЏ
         Fcontract_id    := iif(cxLookupComboBox16.EditValue = null, -9, cxLookupComboBox16.EditValue);
         if (Fcontract_id = -9) AND (cxLookupComboBox16.Enabled = True) then begin
           ModalResult := mrNone;
-          Application.MessageBox('Выберите договор!', 'Ошибка', MB_ICONWARNING or MB_OK);
+          Application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ РґРѕРіРѕРІРѕСЂ!', 'РћС€РёР±РєР°', MB_ICONWARNING or MB_OK);
           Exit;
         end;
       end;
-   8: begin //Доверенность
+   8: begin //Р”РѕРІРµСЂРµРЅРЅРѕСЃС‚СЊ
         Ffirm_id        := iif(cxLookupComboBox6.EditValue = null, -9, cxLookupComboBox6.EditValue);
         if (Ffirm_id = -9) AND (cxLookupComboBox6.Enabled = True) then begin
           ModalResult := mrNone;
-          Application.MessageBox('Выберите контрагента!', 'Ошибка', MB_ICONWARNING or MB_OK);
+          Application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°!', 'РћС€РёР±РєР°', MB_ICONWARNING or MB_OK);
           Exit;
         end;
       end;
-   9: begin //Письмо
+   9: begin //РџРёСЃСЊРјРѕ
         Ffirm_id        := iif(cxLookupComboBox6.EditValue = null, -9, cxLookupComboBox6.EditValue);
         Fcontract_id    := iif(cxLookupComboBox3.EditValue = null, -9, cxLookupComboBox3.EditValue);
         if (Ffirm_id = -9) AND (cxLookupComboBox6.Enabled = True) then begin
           ModalResult := mrNone;
-          Application.MessageBox('Выберите контрагента!', 'Ошибка', MB_ICONWARNING or MB_OK);
+          Application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°!', 'РћС€РёР±РєР°', MB_ICONWARNING or MB_OK);
           Exit;
         end;
       end;
-  10: begin //Ремонт вагонов
+  10: begin //Р РµРјРѕРЅС‚ РІР°РіРѕРЅРѕРІ
         Ffact_repair_id := iif(cxLookupComboBox1.EditValue = null, -9, cxLookupComboBox1.EditValue);
         if (Ffact_repair_id = -9) AND (cxLookupComboBox1.Enabled = True) then begin
           ModalResult := mrNone;
-          Application.MessageBox('Выберите контрагента!', 'Ошибка', MB_ICONWARNING or MB_OK);
+          Application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°!', 'РћС€РёР±РєР°', MB_ICONWARNING or MB_OK);
           Exit;
         end;
       end;
-  11: begin //СФ ЦФТО
+  11: begin //РЎР¤ Р¦Р¤РўРћ
         Fzfto_score_id := iif(cxLookupComboBox4.EditValue = null, -9, cxLookupComboBox4.EditValue);
         if (Fzfto_score_id = -9) AND (cxLookupComboBox4.Enabled = True) then begin
           ModalResult := mrNone;
-          Application.MessageBox('Выберите СФ ЦФТО!', 'Ошибка', MB_ICONWARNING or MB_OK);
+          Application.MessageBox('Р’С‹Р±РµСЂРёС‚Рµ РЎР¤ Р¦Р¤РўРћ!', 'РћС€РёР±РєР°', MB_ICONWARNING or MB_OK);
           Exit;
         end;
       end;
@@ -646,7 +636,7 @@ begin
 
       if OpenDialog1.Files.Count > 0 then begin
         for i:=0 to OpenDialog1.Files.Count - 1 do begin
-          // ----- при обновлении документа файл передаётся пустым, если он не изменялся --------
+          // ----- РїСЂРё РѕР±РЅРѕРІР»РµРЅРёРё РґРѕРєСѓРјРµРЅС‚Р° С„Р°Р№Р» РїРµСЂРµРґР°С‘С‚СЃСЏ РїСѓСЃС‚С‹Рј, РµСЃР»Рё РѕРЅ РЅРµ РёР·РјРµРЅСЏР»СЃСЏ --------
           SP_BLOB_modify.Close;
           SP_BLOB_modify.Parameters.ParamByName('@doc_image').LoadFromFile(OpenDialog1.Files.Strings[i], ftBlob);
           SP_BLOB_modify.Parameters.ParamByName('@file_name').Value := ShortFileName(ExtractFileName(OpenDialog1.Files.Strings[i]), 100);
@@ -654,14 +644,14 @@ begin
             SP_BLOB_modify.ExecProc;
             Fdoc_id := SP_BLOB_modify.Parameters.ParamByName('@doc_id').Value
           except on E: Exception do
-            Application.MessageBox(PChar(E.Message), 'Ошибка', MB_OK or MB_ICONERROR);
+            Application.MessageBox(PChar(E.Message), 'РћС€РёР±РєР°', MB_OK or MB_ICONERROR);
           end;
 
-          if Fdoc_id = -9 then Application.MessageBox('НЕВОЗМОЖНО ВСТАВИТЬ НОВЫЙ ДОКУМЕНТ (1)', 'Внимание', MB_OK);
+          if Fdoc_id = -9 then Application.MessageBox('РќР•Р’РћР—РњРћР–РќРћ Р’РЎРўРђР’РРўР¬ РќРћР’Р«Р™ Р”РћРљРЈРњР•РќРў (1)', 'Р’РЅРёРјР°РЅРёРµ', MB_OK);
         end;
         SP_BLOB_modify.Free;
       end else if Ffiles_blob.Size <> 0 then begin
-        // ----- при обновлении документа файл передаётся пустым, если он не изменялся --------
+        // ----- РїСЂРё РѕР±РЅРѕРІР»РµРЅРёРё РґРѕРєСѓРјРµРЅС‚Р° С„Р°Р№Р» РїРµСЂРµРґР°С‘С‚СЃСЏ РїСѓСЃС‚С‹Рј, РµСЃР»Рё РѕРЅ РЅРµ РёР·РјРµРЅСЏР»СЃСЏ --------
         SP_BLOB_modify.Close;
         SP_BLOB_modify.Parameters.ParamByName('@doc_image').LoadFromStream(Ffiles_blob, ftBlob);
         SP_BLOB_modify.Parameters.ParamByName('@file_name').Value := ShortFileName(Ffiles_name, 100);
@@ -670,10 +660,10 @@ begin
           SP_BLOB_modify.ExecProc;
           Fdoc_id := SP_BLOB_modify.Parameters.ParamByName('@doc_id').Value
         except on E: Exception do
-          Application.MessageBox(PChar(E.Message), 'Ошибка', MB_OK or MB_ICONERROR);
+          Application.MessageBox(PChar(E.Message), 'РћС€РёР±РєР°', MB_OK or MB_ICONERROR);
         end;
 
-        if Fdoc_id = -9 then Application.MessageBox('НЕВОЗМОЖНО ВСТАВИТЬ НОВЫЙ ДОКУМЕНТ (2)', 'Внимание', MB_OK);
+        if Fdoc_id = -9 then Application.MessageBox('РќР•Р’РћР—РњРћР–РќРћ Р’РЎРўРђР’РРўР¬ РќРћР’Р«Р™ Р”РћРљРЈРњР•РќРў (2)', 'Р’РЅРёРјР°РЅРёРµ', MB_OK);
 
         SP_BLOB_modify.Free;
       end else begin
@@ -683,10 +673,10 @@ begin
           SP_BLOB_modify.ExecProc;
           Fdoc_id := SP_BLOB_modify.Parameters.ParamByName('@doc_id').Value
         except on E: Exception do
-          Application.MessageBox(PChar(E.Message), 'Ошибка', MB_OK or MB_ICONERROR);
+          Application.MessageBox(PChar(E.Message), 'РћС€РёР±РєР°', MB_OK or MB_ICONERROR);
         end;
 
-        if Fdoc_id = -9 then Application.MessageBox('НЕВОЗМОЖНО ВСТАВИТЬ НОВЫЙ ДОКУМЕНТ (3)', 'Внимание', MB_OK);
+        if Fdoc_id = -9 then Application.MessageBox('РќР•Р’РћР—РњРћР–РќРћ Р’РЎРўРђР’РРўР¬ РќРћР’Р«Р™ Р”РћРљРЈРњР•РќРў (3)', 'Р’РЅРёРјР°РЅРёРµ', MB_OK);
         SP_BLOB_modify.Free;
       end;
 
@@ -783,7 +773,7 @@ begin
 
         except
           Q.Free;
-          Application.MessageBox('Ошибка загрузки библиотеки телефонного справочника.', 'Ошибка', MB_ICONERROR or MB_OK);
+          Application.MessageBox('РћС€РёР±РєР° Р·Р°РіСЂСѓР·РєРё Р±РёР±Р»РёРѕС‚РµРєРё С‚РµР»РµС„РѕРЅРЅРѕРіРѕ СЃРїСЂР°РІРѕС‡РЅРёРєР°.', 'РћС€РёР±РєР°', MB_ICONERROR or MB_OK);
         end;
       end;
     1 : begin
@@ -798,9 +788,9 @@ var            i : integer;
 begin
   case AButtonIndex of
     0 : begin
-        OpenDialog1.Filter := 'Все файлы|*.*';
+        OpenDialog1.Filter := 'Р’СЃРµ С„Р°Р№Р»С‹|*.*';
         OpenDialog1.DefaultExt := '';
-        // --- для ремонта вагонов --------
+        // --- РґР»СЏ СЂРµРјРѕРЅС‚Р° РІР°РіРѕРЅРѕРІ --------
         if Fdoc_type_cod = '14' then OpenDialog1.Options := OpenDialog1.Options + [ofAllowMultiSelect];
 
         if OpenDialog1.Execute then begin
@@ -825,14 +815,14 @@ begin
   end;
 
   case IndexText(Fdoc_type_cod, ['1','2','3','7','8','9','10','11','12','13','14','15']) of
-   2: begin // Счет
+   2: begin // РЎС‡РµС‚
         cxLookupComboBox28.EditValue := null;
         Query_Invoice.Close;
         Query_Invoice.Parameters.ParamByName('contract_id'  ).Value := cxLookupComboBox16.EditValue;
         Query_Invoice.Open;
         cxLookupComboBox28.EditValue := Query_Invoice.FieldByName('invoice_id').Value;
       end;
-   4: begin // Претензия к контрагенту
+   4: begin // РџСЂРµС‚РµРЅР·РёСЏ Рє РєРѕРЅС‚СЂР°РіРµРЅС‚Сѓ
         cxLookupComboBox2.EditValue := null;
         Query_Pretenzia.Close;
         Query_Pretenzia.Parameters.ParamByName('contract_id'  ).Value := cxLookupComboBox16.EditValue;
@@ -877,8 +867,8 @@ end;
 
 procedure TfmDocBlobAdd.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-  Ffiles_blob.Free;
-  FConnect.Free;
+//  Ffiles_blob.Free;
+//  FConnect.Free;
   Action := caFree;
 end;
 
@@ -931,10 +921,10 @@ begin
 
 
   case IndexText(Fdoc_type_cod, ['1','2','3','7','8','9','10','11','12','13','14','15']) of
-     0: begin // Договор
+     0: begin // Р”РѕРіРѕРІРѕСЂ
           Panel4.Visible := True;
 
-          // Открыть договор
+          // РћС‚РєСЂС‹С‚СЊ РґРѕРіРѕРІРѕСЂ
           Query_Contract.Close;
           Query_Contract.Parameters.ParamByName('date_end'     ).Value := Now;
           Query_Contract.Parameters.ParamByName('type_contract').Value := 0;
@@ -942,11 +932,11 @@ begin
           cxLookupComboBox16.EditValue := Query_Contract.FieldByName('contract_id').Value;
           cxTextEdit2.Text := Query_Contract.FieldByName('firm_customer').AsString;
         end;
-     1: begin // Приложение
+     1: begin // РџСЂРёР»РѕР¶РµРЅРёРµ
           Panel5.Visible := True;
           Panel4.Visible := True;
 
-          // Открыть договор
+          // РћС‚РєСЂС‹С‚СЊ РґРѕРіРѕРІРѕСЂ
           Query_Contract.Close;
           Query_Contract.Parameters.ParamByName('date_end'     ).Value := Now;
           Query_Contract.Parameters.ParamByName('type_contract').Value := 0;
@@ -954,11 +944,11 @@ begin
           cxLookupComboBox16.EditValue := Query_Contract.FieldByName('contract_id').Value;
           cxTextEdit2.Text := Query_Contract.FieldByName('firm_customer').AsString;
         end;
-     2: begin // Счет
+     2: begin // РЎС‡РµС‚
           Panel7.Visible := True;
           Panel4.Visible := True;
 
-          // Открыть договор
+          // РћС‚РєСЂС‹С‚СЊ РґРѕРіРѕРІРѕСЂ
           Query_Contract.Close;
           Query_Contract.Parameters.ParamByName('date_end'     ).Value := Now;
           Query_Contract.Parameters.ParamByName('type_contract').Value := 0;
@@ -966,17 +956,17 @@ begin
           cxLookupComboBox16.EditValue := Query_Contract.FieldByName('contract_id').Value;
           cxTextEdit2.Text := Query_Contract.FieldByName('firm_customer').AsString;
 
-          // Открыть счет
+          // РћС‚РєСЂС‹С‚СЊ СЃС‡РµС‚
           Query_Invoice.Close;
           Query_Invoice.Parameters.ParamByName('contract_id'  ).Value := cxLookupComboBox16.EditValue;
           Query_Invoice.Open;
           cxLookupComboBox28.EditValue := Query_Invoice.FieldByName('invoice_id').Value;
         end;
-     3: begin // Карточка контрагента
+     3: begin // РљР°СЂС‚РѕС‡РєР° РєРѕРЅС‚СЂР°РіРµРЅС‚Р°
           Panel11.Visible := True;
           Panel3.Visible  := True;
 
-          // Открыть контрагент
+          // РћС‚РєСЂС‹С‚СЊ РєРѕРЅС‚СЂР°РіРµРЅС‚
           Query_Firm.Parameters[0].Value := 0;
           Query_Firm.Parameters[1].Value := 1;
           Query_Firm.Parameters[2].Value := 3;
@@ -985,11 +975,11 @@ begin
           cxLookupComboBox6.EditValue := Query_Firm.FieldByName('firm_id').Value;
           cxTextEdit2.Text := Query_Firm.FieldByName('firm_id').AsString;
         end;
-     4: begin // Претензия к контрагенту
+     4: begin // РџСЂРµС‚РµРЅР·РёСЏ Рє РєРѕРЅС‚СЂР°РіРµРЅС‚Сѓ
           Panel6.Visible := True;
           Panel4.Visible := True;
 
-          // Открыть договор
+          // РћС‚РєСЂС‹С‚СЊ РґРѕРіРѕРІРѕСЂ
           Query_Contract.Close;
           Query_Contract.Parameters.ParamByName('date_end'     ).Value := Now;
           Query_Contract.Parameters.ParamByName('type_contract').Value := 0;
@@ -998,17 +988,17 @@ begin
 //          cxLookupComboBox16.EditValue := Query_Contract.FieldByName('contract_id').Value;
 //          cxTextEdit2.Text := Query_Contract.FieldByName('firm_customer').AsString;
 ////
-//          // Открыть претензию
+//          // РћС‚РєСЂС‹С‚СЊ РїСЂРµС‚РµРЅР·РёСЋ
 //          Query_Pretenzia.Close;
 //          Query_Pretenzia.Parameters.ParamByName('contract_id'  ).Value := cxLookupComboBox16.EditValue;
 //          Query_Pretenzia.Open;
 //          cxLookupComboBox2.EditValue := Query_Pretenzia.FieldByName('pretenzia_id').Value;
         end;
-     5: begin //Прочие
+     5: begin //РџСЂРѕС‡РёРµ
           Panel5.Visible := True;
           Panel4.Visible := True;
 
-          // Открыть договор
+          // РћС‚РєСЂС‹С‚СЊ РґРѕРіРѕРІРѕСЂ
           Query_Contract.Close;
           Query_Contract.Parameters.ParamByName('date_end'     ).Value := Now;
           Query_Contract.Parameters.ParamByName('type_contract').Value := 0;
@@ -1016,12 +1006,12 @@ begin
           cxLookupComboBox16.EditValue := Query_Contract.FieldByName('contract_id').Value;
           cxTextEdit2.Text := Query_Contract.FieldByName('firm_customer').AsString;
         end;
-     6: begin //Акты
+     6: begin //РђРєС‚С‹
           Panel9.Visible := True;
           Panel5.Visible := True;
           Panel4.Visible := True;
 
-          // Открыть договор
+          // РћС‚РєСЂС‹С‚СЊ РґРѕРіРѕРІРѕСЂ
           Query_Contract.Close;
           Query_Contract.Parameters.ParamByName('date_end'     ).Value := Now;
           Query_Contract.Parameters.ParamByName('type_contract').Value := 0;
@@ -1029,11 +1019,11 @@ begin
           cxLookupComboBox16.EditValue := Query_Contract.FieldByName('contract_id').Value;
           cxTextEdit2.Text := Query_Contract.FieldByName('firm_customer').AsString;
         end;
-     7: begin //Техническая документация
+     7: begin //РўРµС…РЅРёС‡РµСЃРєР°СЏ РґРѕРєСѓРјРµРЅС‚Р°С†РёСЏ
           Panel5.Visible := True;
           Panel4.Visible := True;
 
-          // Открыть договор
+          // РћС‚РєСЂС‹С‚СЊ РґРѕРіРѕРІРѕСЂ
           Query_Contract.Close;
           Query_Contract.Parameters.ParamByName('date_end'     ).Value := Now;
           Query_Contract.Parameters.ParamByName('type_contract').Value := 0;
@@ -1041,13 +1031,13 @@ begin
           cxLookupComboBox16.EditValue := Query_Contract.FieldByName('contract_id').Value;
           cxTextEdit2.Text := Query_Contract.FieldByName('firm_customer').AsString;
         end;
-     8: begin //Доверенность
+     8: begin //Р”РѕРІРµСЂРµРЅРЅРѕСЃС‚СЊ
           Panel5.Visible := True;
           Label7.Visible := True;
           cxDateEdit4.Visible := True;
           cxTextEdit4.Width := 163;
           Panel3.Visible := True;
-          // Открыть контрагент
+          // РћС‚РєСЂС‹С‚СЊ РєРѕРЅС‚СЂР°РіРµРЅС‚
           Query_Firm.Parameters[0].Value := 1;
           Query_Firm.Parameters[1].Value := 1;
           Query_Firm.Parameters[2].Value := 1;
@@ -1055,11 +1045,11 @@ begin
           Query_Firm.Open;
           cxLookupComboBox6.EditValue := Query_Firm.FieldByName('firm_id').Value;
         end;
-     9: begin //Письмо
+     9: begin //РџРёСЃСЊРјРѕ
           Panel5.Visible := True;
           Panel8.Visible := True;
           Panel3.Visible := True;
-          // Открыть контрагент
+          // РћС‚РєСЂС‹С‚СЊ РєРѕРЅС‚СЂР°РіРµРЅС‚
           Query_Firm.Parameters[0].Value := 0;
           Query_Firm.Parameters[1].Value := 1;
           Query_Firm.Parameters[2].Value := 3;
@@ -1067,13 +1057,13 @@ begin
           Query_Firm.Open;
           cxLookupComboBox6.EditValue := Query_Firm.FieldByName('firm_id').Value;
         end;
-    10: begin //Ремонт вагонов
+    10: begin //Р РµРјРѕРЅС‚ РІР°РіРѕРЅРѕРІ
           Panel2.Visible := True;
           Query_Repair.Open;
           cxLookupComboBox1.EditValue := Query_Repair.FieldByName('fact_repair_id').Value;
           cxTextEdit2.Text := Query_Repair.FieldByName('firm_customer').AsString;
         end;
-    11: begin //СФ ЦФТО
+    11: begin //РЎР¤ Р¦Р¤РўРћ
           Panel12.Visible := True;
           Panel14.Visible := False;
           Panel13.Visible := False;
@@ -1125,7 +1115,7 @@ begin
     end;
 
     case IndexText(Fdoc_type_cod, ['13']) of
-       0: begin // Письмо
+       0: begin // РџРёСЃСЊРјРѕ
           Q := TADOQuery.Create(nil);
           Q.Connection := FConnect;
           Q.SQL.Add('SELECT * FROM view_contract WHERE contract_id = ' + IntToStr(Fcontract_id));
@@ -1193,7 +1183,7 @@ begin
   cxCheckBox1.Visible := True;
   cxCheckBox2.Visible := True;
 
-  Caption := 'Групповая обработка документов [' + str_doc_id + ']';
+  Caption := 'Р“СЂСѓРїРїРѕРІР°СЏ РѕР±СЂР°Р±РѕС‚РєР° РґРѕРєСѓРјРµРЅС‚РѕРІ [' + str_doc_id + ']';
 end;
 
 procedure TfmDocBlobAdd.cxCheckBox1PropertiesEditValueChanged(Sender: TObject);

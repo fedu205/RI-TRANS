@@ -1,36 +1,22 @@
-unit DocBlobAddNew;
+Ôªøunit DocBlobAddNew;
 
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxGraphics, cxControls, cxLookAndFeels,
-  cxLookAndFeelPainters, cxContainer, cxEdit, dxSkinsCore, dxSkinBlack,
-  dxSkinBlue, dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom,
-  dxSkinDarkSide, dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
-  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
-  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
-  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
-  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
-  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
-  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
-  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
-  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
-  dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
-  dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine,
-  dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
-  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
-  dxSkinXmas2008Blue, Vcl.Menus, Vcl.ComCtrls, dxCore, cxDateUtils,
-  cxDropDownEdit, cxCalendar, cxTextEdit, Vcl.StdCtrls, cxButtons, cxMaskEdit,
-  cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, Vcl.ExtCtrls, Data.DB,
-  Data.Win.ADODB, Default, Raznoe, Datasnap.DBClient, StrUtils, Vcl.Buttons,
-  cxMemo, cxCheckBox, cxButtonEdit, cxStyles, dxSkinscxPCPainter, cxCustomData,
-  cxFilter, cxData, cxDataStorage, cxNavigator, cxDBData, cxGridCustomView,
-  cxGridCustomTableView, cxGridTableView, cxGridBandedTableView,
-  cxGridDBBandedTableView, cxClasses, cxGridLevel, cxGrid, dxSkinsdxBarPainter,
-  dxBar, System.ImageList, Vcl.ImgList, Other, cxPropertiesStore,
-  cxDataControllerConditionalFormattingRulesManagerDialog, cxImageList,
-  dxSkinTheBezier, dxDateRanges, dxSkinOffice2019Colorful;
+  Winapi.Windows, Messages, SysUtils, Variants, Classes, Graphics, Default,
+  StdCtrls, Controls, Forms, Dialogs, ImageList, ImgList, Menus, ComCtrls, ADODB, DBClient, ExtCtrls, DB, Buttons,
+  cxGraphics, cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit, dxSkinsCore, dxSkinBlack, dxSkinBlue, dxSkinBlueprint,
+  dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide, dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy, dxSkinGlassOceans,
+  dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian, dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis, dxSkinMetropolisDark,
+  dxSkinMoneyTwins, dxSkinOffice2007Black, dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver,
+  dxSkinOffice2010Black, dxSkinOffice2010Blue, dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White,
+  dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus, dxSkinSilver,
+  dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine, dxSkinVisualStudio2013Blue,
+  dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxCore, cxDateUtils, cxDropDownEdit,
+  cxCalendar, cxTextEdit, cxButtons, cxMaskEdit, cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, cxMemo, cxCheckBox, cxButtonEdit, cxStyles,
+  dxSkinscxPCPainter, cxCustomData,  cxFilter, cxData, cxDataStorage, cxNavigator, cxDBData, cxGridCustomView, cxGridCustomTableView, cxGridTableView,
+  cxGridBandedTableView, cxGridDBBandedTableView, cxClasses, cxGridLevel, cxGrid, dxSkinsdxBarPainter, dxBar, cxPropertiesStore, cxImageList,
+  dxSkinTheBezier, dxDateRanges, dxCoreGraphics, dxScrollbarAnnotations;
 
 type
   TfmDocBlobAddNew = class(TForm)
@@ -133,15 +119,9 @@ type
     procedure cxLookupComboBox16PropertiesEditValueChanged(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure cxGrid1DBBandedTableView1FilterOnChanged(Sender: TObject);
-    procedure cxGrid1DBBandedTableView1CustomDrawCell(
-      Sender: TcxCustomGridTableView; ACanvas: TcxCanvas;
-      AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
-    procedure cxGrid1DBBandedTableView1CustomDrawColumnHeader(
-      Sender: TcxGridTableView; ACanvas: TcxCanvas;
-      AViewInfo: TcxGridColumnHeaderViewInfo; var ADone: Boolean);
-    procedure cxGrid1DBBandedTableView1FocusedItemChanged(
-      Sender: TcxCustomGridTableView; APrevFocusedItem,
-      AFocusedItem: TcxCustomGridTableItem);
+    procedure cxGrid1DBBandedTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
+    procedure cxGrid1DBBandedTableView1CustomDrawColumnHeader(Sender: TcxGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridColumnHeaderViewInfo; var ADone: Boolean);
+    procedure cxGrid1DBBandedTableView1FocusedItemChanged(Sender: TcxCustomGridTableView; APrevFocusedItem,  AFocusedItem: TcxCustomGridTableItem);
     procedure cxGrid1DBBandedTableView1KeyPress(Sender: TObject; var Key: Char);
     procedure dxBarButton1Click(Sender: TObject);
     procedure dxBarButton2Click(Sender: TObject);
@@ -167,10 +147,13 @@ type
     procedure SetContractID(contract_id: integer);
     procedure SetFirmID(firm_id: integer);
     procedure SetZftoScoreID(zfto_score_id: integer);
+    procedure SetInvoiceID(zfto_score_id: integer);
+    procedure SetPretenziaID(zfto_score_id: integer);
+    procedure SetFactRepairID(zfto_score_id: integer);
 
     procedure SetUpdate(doc_id: integer);
   public
-    constructor Create(AOwner: TApplication; usr_pwd: PUser_pwd);
+    constructor Create(AOwner: TApplication; conn: TADOConnection);
   published
     property _GetDocId       : integer read Fdoc_id;
     property _SetDocType     : string  write SetDocType;
@@ -179,61 +162,98 @@ type
     property _SetContractID  : integer write SetContractID;
     property _SetFirmID      : integer write SetFirmID;
     property _SetZftoScoreID : integer write SetZftoScoreID;
+
+    property  _SetInvoiceID    : integer write SetInvoiceID;
+    property  _SetPretenziaID  : integer write SetPretenziaID;
+    property  _SetFactRepairID : integer write SetFactRepairID;
   end;
 
 var
   fmDocBlobAddNew: TfmDocBlobAddNew;
 
-function CreateWndDocAddNew(AppHand: THandle; doc_id: integer; global_id: integer; doc_type_cod: string; ClientDS: TClientDataSet; usr_pwd: PUser_pwd):variant; export;
+function CreateWndDocAddNew(AppHand: THandle; doc_id: integer; global_id: integer; doc_type_cod: string; ClientDS: TClientDataSet; conn: TADOConnection):variant; export;
 
 implementation
-
+   uses Raznoe, StrUtils, Other;
 {$R *.dfm}
 
-function CreateWndDocAddNew(AppHand: THandle; doc_id: integer; global_id: integer; doc_type_cod: string; ClientDS: TClientDataSet; usr_pwd: PUser_pwd): variant;
+function CreateWndDocAddNew(AppHand: THandle; doc_id: integer; global_id: integer; doc_type_cod: string; ClientDS: TClientDataSet; conn: TADOConnection): variant;
 var Connect : TADOConnection;
           Q : TADOQuery;
 begin
-//  Connect := TADOConnection.Create(nil);
-//  Connect.ConnectionString := 'Persist Security Info=True;Provider=SQLOLEDB.1;User ID='+usr_pwd^.user_name+';Password='+usr_pwd^.user_pass+';Initial Catalog='+usr_pwd^.catalog+';Data Source='+usr_pwd^.server+';';
-//  Connect.KeepConnection   := False;
-//  Connect.LoginPrompt      := False;
-//  try
-//    fmDocBlobAdd := TfmDocBlobAdd.Create(Application, usr_pwd);
-//
-//    Q := TADOQuery.Create(nil);
-//    Q.Connection := Connect;
-//    Q.SQL.Add('SELECT	global_id, object_physic_name ');
-//    Q.SQL.Add('FROM	  global_id LEFT JOIN object_base ON global_id.object_id = object_base.object_id');
-//    Q.SQL.Add('WHERE	global_id = ' + IntToStr(global_id));
-//    Q.Open;
-//
-//    fmDocBlobAdd._SetDocType := doc_type_cod;
-//    case IndexText(Q.FieldByName('object_physic_name').AsString, ['CONTRACT','FIRM','INVOICE','PRETENZIA','FACT_REPAIR','ZFTO_SCORE']) of
-//      0: fmDocBlobAdd._SetContractID   := global_id;
-//      1: fmDocBlobAdd._SetFirmID       := global_id;
-//      2: fmDocBlobAdd._SetInvoiceID    := global_id;
-//      3: fmDocBlobAdd._SetPretenziaID  := global_id;
-//      4: fmDocBlobAdd._SetFactRepairID := global_id;
-//      5: fmDocBlobAdd._SetZftoScoreID  := global_id;
-//    end;
-//    Q.Free;
-//
-//    if ClientDS <> nil then begin
-//      fmDocBlobAdd._SetParamFromClientDS := ClientDS;
-//    end;
-//
-//    if doc_id <> -9 then fmDocBlobAdd._SetUpdate := doc_id;
-//
-//    if fmDocBlobAdd.ShowModal = mrOk then begin
-//      result := VarArrayOf([fmDocBlobAdd._GetDocId]);
-//    end else begin
-//      result := VarArrayOf([-9]);
-//    end;
-//  finally
-//    fmDocBlobAdd.Free;
-//  end;
+  try
+    fmDocBlobAddNew := TfmDocBlobAddNew.Create(Application, conn);
+
+    Q := TADOQuery.Create(nil);
+    Q.Connection := conn;
+    Q.SQL.Add('SELECT	global_id, object_physic_name ');
+    Q.SQL.Add('FROM	  global_id LEFT JOIN object_base ON global_id.object_id = object_base.object_id');
+    Q.SQL.Add('WHERE	global_id = ' + IntToStr(global_id));
+    Q.Open;
+
+    fmDocBlobAddNew._SetDocType := doc_type_cod;
+    case IndexText(Q.FieldByName('object_physic_name').AsString, ['CONTRACT','FIRM','INVOICE','PRETENZIA','FACT_REPAIR','ZFTO_SCORE']) of
+      0: fmDocBlobAddNew._SetContractID   := global_id;
+      1: fmDocBlobAddNew._SetFirmID       := global_id;
+      2: fmDocBlobAddNew._SetInvoiceID    := global_id;
+      3: fmDocBlobAddNew._SetPretenziaID  := global_id;
+      4: fmDocBlobAddNew._SetFactRepairID := global_id;
+      5: fmDocBlobAddNew._SetZftoScoreID  := global_id;
+    end;
+    Q.Free;
+
+    if ClientDS <> nil then begin
+//      fmDocBlobAddNew._SetParamFromClientDS := ClientDS;
+    end;
+
+    if doc_id <> -9 then fmDocBlobAddNew._SetUpdate := doc_id;
+
+    if fmDocBlobAddNew.ShowModal = mrOk then begin
+      result := VarArrayOf([fmDocBlobAddNew._GetDocId]);
+    end else begin
+      result := VarArrayOf([-9]);
+    end;
+  finally
+    fmDocBlobAddNew.Free;
+  end;
 end;
+
+constructor TfmDocBlobAddNew.Create(AOwner: TApplication; conn: TADOConnection);
+begin
+  inherited Create(AOwner);
+  Screen.Cursor := crHourglass;
+
+  Fdoc_id        := -9;
+  Fdoc_type_cod  := '';
+  Fdoc_folder_id := -9;
+
+  Fcontract_id   := -9;
+  Fglobal_id     := -9;
+  Ffirm_id       := -9;
+
+  FConnect := conn;
+  Query_Contract.Connection      := FConnect;
+  Query_Sign_Self.Connection     := FConnect;
+  Query_Sign_Customer.Connection := FConnect;
+  Query_Location.Connection      := FConnect;
+  Query_Firm.Connection          := FConnect;
+  Query_ZFTO_SCORE.Connection    := FConnect;
+
+  Query_Sign_Customer.Open;
+  Query_Sign_Self.Open;
+  Query_Sign_Self.Locate('inf_obj_cod','003',[]);
+  cxLookupComboBox10.EditValue := Query_Sign_Self.FieldByName('inf_obj_id').Value;
+  Query_Sign_Customer.Locate('inf_obj_cod','003',[]);
+  cxLookupComboBox11.EditValue := Query_Sign_Customer.FieldByName('inf_obj_id').Value;
+  Query_Location.Open;
+
+  ClientDS_Files.CreateDataSet;
+  ClientDS_Files.LogChanges := False;
+
+
+  Screen.Cursor := crDefault;
+end;
+
 
 procedure TfmDocBlobAddNew.BitBtn2Click(Sender: TObject);
 var sp_BLOB_modify : TADOStoredProc;
@@ -276,46 +296,6 @@ begin
   sp_BLOB_modify.Free;
 end;
 
-constructor TfmDocBlobAddNew.Create(AOwner: TApplication; usr_pwd: PUser_pwd);
-begin
-  inherited Create(AOwner);
-  Screen.Cursor := crHourglass;
-
-  Fusr_pwd := usr_pwd;
-  Fdoc_id        := -9;
-  Fdoc_type_cod  := '';
-  Fdoc_folder_id := -9;
-
-  Fcontract_id   := -9;
-  Fglobal_id     := -9;
-  Ffirm_id       := -9;
-
-  FConnect := TADOConnection.Create(nil);
-  FConnect.ConnectionString := 'Persist Security Info=True;Provider=SQLOLEDB.1;User ID='+usr_pwd^.user_name+';Password='+usr_pwd^.user_pass+';Initial Catalog='+usr_pwd^.catalog+';Data Source='+usr_pwd^.server+';';
-  FConnect.KeepConnection   := False;
-  FConnect.LoginPrompt      := False;
-
-  Query_Contract.Connection      := FConnect;
-  Query_Sign_Self.Connection     := FConnect;
-  Query_Sign_Customer.Connection := FConnect;
-  Query_Location.Connection      := FConnect;
-  Query_Firm.Connection          := FConnect;
-  Query_ZFTO_SCORE.Connection    := FConnect;
-
-  Query_Sign_Customer.Open;
-  Query_Sign_Self.Open;
-  Query_Sign_Self.Locate('inf_obj_cod','003',[]);
-  cxLookupComboBox10.EditValue := Query_Sign_Self.FieldByName('inf_obj_id').Value;
-  Query_Sign_Customer.Locate('inf_obj_cod','003',[]);
-  cxLookupComboBox11.EditValue := Query_Sign_Customer.FieldByName('inf_obj_id').Value;
-  Query_Location.Open;
-
-  ClientDS_Files.CreateDataSet;
-  ClientDS_Files.LogChanges := False;
-
-
-  Screen.Cursor := crDefault;
-end;
 
 procedure TfmDocBlobAddNew.SetUpdate(doc_id: integer);
 var Q: TADOQuery;
@@ -372,13 +352,9 @@ begin
   Screen.Cursor :=  crDefault;
 end;
 
-procedure TfmDocBlobAddNew.SetZftoScoreID(zfto_score_id: integer);
+procedure TfmDocBlobAddNew.SetFactRepairID(zfto_score_id: integer);
 begin
-  Fzfto_score_id := zfto_score_id;
-  if Fzfto_score_id <> -9 then begin
-    cxCheckBox3.Checked := True;
-    cxLookupComboBox4.EditValue := iif(Fzfto_score_id = -9, null, Fzfto_score_id);
-  end;
+
 end;
 
 procedure TfmDocBlobAddNew.SetFirmID(firm_id: integer);
@@ -386,6 +362,25 @@ begin
   Ffirm_id := firm_id;
   if Ffirm_id <> -9 then begin
     cxLookupComboBox6.EditValue := iif(Ffirm_id = -9, null, Ffirm_id);
+  end;
+end;
+
+procedure TfmDocBlobAddNew.SetInvoiceID(zfto_score_id: integer);
+begin
+
+end;
+
+procedure TfmDocBlobAddNew.SetPretenziaID(zfto_score_id: integer);
+begin
+
+end;
+
+procedure TfmDocBlobAddNew.SetZftoScoreID(zfto_score_id: integer);
+begin
+  Fzfto_score_id := zfto_score_id;
+  if Fzfto_score_id <> -9 then begin
+    cxCheckBox3.Checked := True;
+    cxLookupComboBox4.EditValue := iif(Fzfto_score_id = -9, null, Fzfto_score_id);
   end;
 end;
 
@@ -432,7 +427,7 @@ procedure TfmDocBlobAddNew.SetDocType(doc_type_cod: string);
 begin
   Fdoc_type_cod := doc_type_cod;
   case IndexText(Fdoc_type_cod, ['18', '20']) of
-    0: begin // ¿ÍÚ ›÷œ
+    0: begin // –ê–∫—Ç –≠–¶–ü
           Panel3.Visible := False;
           Panel4.Visible := True;
           Query_Contract.Close;
@@ -442,7 +437,7 @@ begin
           cxLookupComboBox16.EditValue := Query_Contract.FieldByName('contract_id').Value;
           cxTextEdit2.Text := Query_Contract.FieldByName('firm_customer').AsString;
        end;
-    1: begin // —\Ù ›÷œ
+    1: begin // –°\—Ñ –≠–¶–ü
           Panel4.Visible := False;
           Panel3.Visible := True;
           Panel12.Visible := True;
@@ -537,14 +532,14 @@ begin
   end;
 
   case IndexText(Fdoc_type_cod, ['1','2','3','7','8','9','10','11','12','13','14','15']) of
-   2: begin // —˜ÂÚ
+   2: begin // –°—á–µ—Ç
 //        cxLookupComboBox28.EditValue := null;
 //        Query_Invoice.Close;
 //        Query_Invoice.Parameters.ParamByName('contract_id'  ).Value := cxLookupComboBox16.EditValue;
 //        Query_Invoice.Open;
 //        cxLookupComboBox28.EditValue := Query_Invoice.FieldByName('invoice_id').Value;
       end;
-   4: begin // œÂÚÂÌÁËˇ Í ÍÓÌÚ‡„ÂÌÚÛ
+   4: begin // –ü—Ä–µ—Ç–µ–Ω–∑–∏—è –∫ –∫–æ–Ω—Ç—Ä–∞–≥–µ–Ω—Ç—É
 //        cxLookupComboBox2.EditValue := null;
 //        Query_Pretenzia.Close;
 //        Query_Pretenzia.Parameters.ParamByName('contract_id'  ).Value := cxLookupComboBox16.EditValue;
@@ -576,13 +571,13 @@ var OpenDialog : TOpenDialog;
       file_age : LongInt;
 begin
   OpenDialog := TOpenDialog.Create(self);
-  OpenDialog.Filter := '¬ÒÂ Ù‡ÈÎ˚|*.*';
+  OpenDialog.Filter := '–í—Å–µ —Ñ–∞–π–ª—ã|*.*';
   OpenDialog.DefaultExt := '';
   OpenDialog.Options := [ofHideReadOnly, ofAllowMultiSelect, ofEnableSizing];
   if OpenDialog.Execute then begin
     Screen.Cursor := crHourglass;
     for i := 0 to OpenDialog.Files.Count - 1 do begin
-      ShowTextMessage('«‡„ÛÁÍ‡ Ù‡ÈÎÓ‚...' + #10 + 'ŒÒÚ‡ÎÓÒ¸ ' + IntToStr(OpenDialog.Files.Count - i) + ' ...', False);
+      ShowTextMessage('–ó–∞–≥—Ä—É–∑–∫–∞ —Ñ–∞–π–ª–æ–≤...' + #10 + '–û—Å—Ç–∞–ª–æ—Å—å ' + IntToStr(OpenDialog.Files.Count - i) + ' ...', False);
 
       file_age := FileAge(OpenDialog.Files.Strings[i]);
 
@@ -619,7 +614,7 @@ begin
     end;
 
   end else begin
-    Application.MessageBox('Õ≈“ ‘¿…À¿   ƒ¿ÕÕŒ… «¿œ»—»', '¬Õ»Ã¿Õ»≈', MB_OK);
+    Application.MessageBox('–ù–ï–¢ –§–ê–ô–õ–ê –ö –î–ê–ù–ù–û–ô –ó–ê–ü–ò–°–ò', '–í–ù–ò–ú–ê–ù–ò–ï', MB_OK);
   end;
 end;
 

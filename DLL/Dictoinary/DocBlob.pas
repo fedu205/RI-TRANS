@@ -617,7 +617,7 @@ end;
 procedure TfmDocBlob.dxBarButton1Click(Sender: TObject);
 begin
   if (cxGrid1DBBandedTableView2doc_type_cod.DataBinding.Field.AsString = '18') or (cxGrid1DBBandedTableView2doc_type_cod.DataBinding.Field.AsString = '20') then begin
-    fmDocBlobAddNew := TfmDocBlobAddNew.Create(Application, Fusr_pwd);
+    fmDocBlobAddNew := TfmDocBlobAddNew.Create(Application, ADOShablon);
     fmDocBlobAddNew._SetDocType := IntToStr(TNodeTag(cxTreeList1.FocusedNode.Data).doc_type_cod);
     fmDocBlobAddNew._SetDocFolderID := TNodeTag(cxTreeList1.FocusedNode.Data).doc_folder_id;
 
@@ -625,7 +625,7 @@ begin
       RefreshQueryGrid(cxGrid1DBBandedTableView2, 'doc_id', fmDocBlobAddNew._GetDocId);
 
   end else begin
-    fmDocBlobAdd := TfmDocBlobAdd.Create(Application, Fusr_pwd);
+    fmDocBlobAdd := TfmDocBlobAdd.Create(Application, ADOShablon);
     fmDocBlobAdd._SetDocType := IntToStr(TNodeTag(cxTreeList1.FocusedNode.Data).doc_type_cod);
     fmDocBlobAdd._SetDocFolderID := TNodeTag(cxTreeList1.FocusedNode.Data).doc_folder_id;
     case IndexText(Fobject_name, ['CONTRACT','FIRM','INVOICE','PRETENZIA','FACT_REPAIR','ZFTO_SCORE']) of
@@ -669,13 +669,13 @@ end;
 procedure TfmDocBlob.dxBarButton3Click(Sender: TObject);
 begin
   if (cxGrid1DBBandedTableView2doc_type_cod.DataBinding.Field.AsString = '18') or (cxGrid1DBBandedTableView2doc_type_cod.DataBinding.Field.AsString = '20') then begin
-    fmDocBlobAddNew := TfmDocBlobAddNew.Create(Application, Fusr_pwd);
+    fmDocBlobAddNew := TfmDocBlobAddNew.Create(Application, ADOShablon);
     fmDocBlobAddNew._SetUpdate := cxGrid1DBBandedTableView2doc_id.DataBinding.Field.AsInteger;
 
     if fmDocBlobAddNew.ShowModal = mrOk then
       RefreshQueryGrid(cxGrid1DBBandedTableView2, 'doc_id', fmDocBlobAddNew._GetDocId);
   end else begin
-    fmDocBlobAdd := TfmDocBlobAdd.Create(Application, Fusr_pwd);
+    fmDocBlobAdd := TfmDocBlobAdd.Create(Application, ADOShablon);
     fmDocBlobAdd._SetUpdate := cxGrid1DBBandedTableView2doc_id.DataBinding.Field.AsInteger;
     if fmDocBlobAdd.ShowModal = mrOK then
       RefreshQueryGrid(cxGrid1DBBandedTableView2, 'doc_id');
@@ -916,7 +916,7 @@ begin
     str_doc_id := str_doc_id + ',' + VarToStr(cxGrid1DBBandedTableView2.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView2doc_id.Index]);
   Delete(str_doc_id, 1, 1);
 
-  fmDocBlobAdd := TfmDocBlobAdd.Create(Application, Fusr_pwd);
+  fmDocBlobAdd := TfmDocBlobAdd.Create(Application, ADOShablon);
   fmDocBlobAdd._SetUpdate := cxGrid1DBBandedTableView2doc_id.DataBinding.Field.AsInteger;
   fmDocBlobAdd._SetGroupUpdate := str_doc_id;
   if fmDocBlobAdd.ShowModal = mrOK then

@@ -550,6 +550,7 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     dxBarButton55: TdxBarButton;
     dxBarButton56: TdxBarButton;
     dxBarSubItem14: TdxBarSubItem;
+    dxBarButton60: TdxBarButton;
 
     procedure N4Click(Sender: TObject);
     procedure N2Click(Sender: TObject);
@@ -665,6 +666,8 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     procedure cxGrid12DBBandedTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
     procedure dxBarButton1Click(Sender: TObject);
     procedure dxBarButton6Click(Sender: TObject);
+    procedure dxBarButton44Click(Sender: TObject);
+    procedure dxBarButton60Click(Sender: TObject);
 
 
   private
@@ -3625,6 +3628,57 @@ begin
   end;
 end;
 
+procedure TfmFactTrack.dxBarButton44Click(Sender: TObject);
+var
+    i             : integer;
+    wdApp         : Variant;
+    wdDoc         : Variant;
+    file_name     : string;
+    bookmark_name : string;
+    mask          : string;
+    Q             : TADOQuery;
+begin
+  Screen.Cursor := crDefault;
+
+  wdApp := CreateOleObject('Word.Application');
+
+  // Создание документа на основании шаблона
+  file_name := GetDocBlob(fmMain.Lis, TComponent(Sender).Tag, 9, True); // Поручение экспедитора.dot
+  wdDoc := wdApp.Documents.Add(file_name);
+  wdApp.DisplayAlerts := 0;
+
+  // Формируем документ
+  for i := 1 To wdDoc.Bookmarks.Count do begin
+    bookmark_name := wdDoc.BookMarks.Item(i).Name;
+
+    if Q.FindField(bookmark_name) <> nil then
+        if Q.FieldByName(bookmark_name).AsString <> null then begin
+          wdDoc.Bookmarks.Item(i).Range.InsertBefore(Q.FieldByName(bookmark_name).AsString);
+        end;
+
+    if (Q.FieldByName('type_orders_expedition').AsInteger = 1) then begin
+      // Если печатаем подрядчита, то меняем местами клиента и экспедитора
+      if bookmark_name = 'firm_customer_name_full' then bookmark_name := 'firm_self_name_full'
+      else if bookmark_name = 'firm_self_name_full' then bookmark_name := 'firm_customer_name_full';
+      if bookmark_name = 'firm_customer_address' then bookmark_name := 'firm_self_address'
+      else if bookmark_name = 'firm_self_address' then bookmark_name := 'firm_customer_address';
+    end;
+
+  end;
+
+  wdDoc.Fields.Update;
+
+  // Делаем Word видимым
+  wdApp.Visible := True;
+
+  // Чистим переменные
+  VarClear(wdApp);
+  VarClear(wdDoc);
+
+  Screen.Cursor := crDefault;
+
+end;
+
 procedure TfmFactTrack.dxBarButton45Click(Sender: TObject);
 begin
 	SetdxDBGridColumns(cxGrid3DBBandedTableView1);
@@ -4460,6 +4514,23 @@ begin
     Application.MessageBox('Выполнение процедуры завершено.','Внимание', MB_ICONINFORMATION or MB_OK);
   end;
 
+end;
+
+procedure TfmFactTrack.dxBarButton60Click(Sender: TObject);
+type
+  TFunc = function(AppHand: THandle; doc_id: integer; global_id: integer; doc_type_cod: string; ClientDS: TClientDataSet; conn: TADOConnection):variant;
+var
+  FBlobAdd : TFunc;
+    handle : THandle;
+         v : Variant;
+begin
+  handle := LoadLibrary('dictionary.dll');
+  @FBlobAdd := GetProcAddress(handle, 'CreateWndDocAdd');
+  v := FBlobAdd(Application.Handle, -9, -9, '5', nil, fmMain.Lis);
+  FreeLibrary(handle);
+
+  if v[0] <> -9 then
+    RefreshQueryGrid(cxGrid1DBBandedTableView1, 'vagon_id', cxGrid1DBBandedTableView1vagon_id.DataBinding.Field.AsInteger);
 end;
 
 procedure TfmFactTrack.dxBarButton61Click(Sender: TObject);

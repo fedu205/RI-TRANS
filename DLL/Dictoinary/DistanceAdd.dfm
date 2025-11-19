@@ -313,6 +313,11 @@ object fmDistanceAdd: TfmDistanceAdd
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.ScrollMode = scmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 2
       Width = 283
     end
@@ -387,6 +392,11 @@ object fmDistanceAdd: TfmDistanceAdd
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.ScrollMode = scmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Width = 283
     end
@@ -462,6 +472,11 @@ object fmDistanceAdd: TfmDistanceAdd
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.ScrollMode = scmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
       Width = 133
     end
@@ -537,6 +552,11 @@ object fmDistanceAdd: TfmDistanceAdd
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.ScrollMode = scmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 3
       Width = 133
     end
@@ -575,6 +595,11 @@ object fmDistanceAdd: TfmDistanceAdd
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.ScrollMode = scmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 4
       Width = 90
     end
@@ -613,6 +638,11 @@ object fmDistanceAdd: TfmDistanceAdd
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.ScrollMode = scmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 5
       Width = 90
     end
@@ -651,6 +681,11 @@ object fmDistanceAdd: TfmDistanceAdd
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.ScrollMode = scmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 6
       Width = 90
     end

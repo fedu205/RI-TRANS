@@ -1,28 +1,20 @@
-unit DocShablonAdd;
+Ôªøunit DocShablonAdd;
 
 interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, Default,
-  Db, ADODB, StdCtrls, ComCtrls, ToolWin, Menus, Variants, cxButtons,
-  cxEdit, cxControls, cxClasses, cxTextEdit, cxContainer, cxLabel, ExtCtrls,
-  cxPropertiesStore, cxMemo, cxButtonEdit, StrUtils, cxLookAndFeels, cxLookAndFeelPainters, cxPC, cxGraphics,
-  cxMaskEdit, cxCheckBox, dxBarBuiltInMenu, dxSkinsCore, dxSkinBlack,
-  dxSkinBlue, dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkroom,
-  dxSkinDarkSide, dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
-  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
-  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
-  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
-  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
-  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
-  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
-  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
-  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
-  dxSkinSilver, dxSkinSpringtime, dxSkinStardust, dxSkinSummer2008,
-  dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters,
-  dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
-  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
-  dxSkinXmas2008Blue, dxSkinOffice2019Colorful;
+  Db, ADODB, StdCtrls, ComCtrls, ToolWin, Menus, ExtCtrls, Variants,
+  cxButtons, cxEdit, cxControls, cxClasses, cxTextEdit, cxContainer, cxLabel,   cxPropertiesStore, cxMemo, cxButtonEdit, cxLookAndFeels,
+  cxLookAndFeelPainters, cxPC, cxGraphics, cxMaskEdit, cxCheckBox, dxBarBuiltInMenu, dxSkinsCore, dxSkinBlack, dxSkinBlue, dxSkinBlueprint,
+  dxSkinCaramel, dxSkinCoffee, dxSkinDarkroom, dxSkinDarkSide, dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy, dxSkinGlassOceans,
+  dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian, dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis, dxSkinMetropolisDark,
+  dxSkinMoneyTwins, dxSkinOffice2007Black, dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver,
+  dxSkinOffice2010Black, dxSkinOffice2010Blue, dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White,
+  dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus, dxSkinSilver,
+  dxSkinSpringtime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters, dxSkinValentine,
+  dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue,
+  dxSkinOffice2019Colorful, dxCoreGraphics;
 
 type
   TfmDocShablonAdd = class(TForm)
@@ -63,7 +55,7 @@ var
   fmDocShablonAdd: TfmDocShablonAdd;
 
 implementation
-   uses DocShablon, Filter, Raznoe;
+   uses DocShablon, Filter, StrUtils, Raznoe;
 {$R *.DFM}
 
 constructor TfmDocShablonAdd.Create(AOwner: TApplication; type_action: integer; doc_type_cod: integer);
@@ -93,14 +85,14 @@ begin
   cxTextEdit13.EditValue   := Q.FieldByName('doc_cod').Value;
   cxButtonEdit15.EditValue := Q.FieldByName('file_name').Value;
   cxCheckBox1.Checked := Q.FieldByName('users_group_id').IsNull;
-  cxCheckBox1.Caption := '¬Ë‰ËÏÓÒÚ¸: ' + Q.FieldByName('users_group_name').AsString;
+  cxCheckBox1.Caption := '–í–∏–¥–∏–º–æ—Å—Ç—å: ' + Q.FieldByName('users_group_name').AsString;
   Caption := Caption + ' [' + IntToStr(doc_id) + ']';
 
   Q.Free;
   Screen.Cursor := crDefault;
 end;
 
-//¬˚·Ó Ù‡ÈÎ‡
+//–í—ã–±–æ—Ä —Ñ–∞–π–ª–∞
 procedure TfmDocShablonAdd.cxButton1Click(Sender: TObject);
 var SP_BLOB_modify : TADOStoredProc;
 begin
@@ -132,14 +124,14 @@ begin
     SP_BLOB_modify.ExecProc;
   except
     on E : Exception do begin
-      Application.MessageBox(PChar(E.Message), '¬ÌËÏ‡ÌËÂ', MB_OK);
+      Application.MessageBox(PChar(E.Message), '–í–Ω–∏–º–∞–Ω–∏–µ', MB_OK);
       SP_BLOB_modify.Free;
       Screen.Cursor := crDefault;
     end;
   end;
 
   if SP_BLOB_modify.Parameters.ParamByName('@doc_id').Value = -9 then
-   Application.MessageBox('Õ≈¬Œ«ÃŒ∆ÕŒ ¬—“¿¬»“‹ ÕŒ¬€… ÿ¿¡ÀŒÕ', 'Œÿ»¡Œ◊ ¿', MB_OK)
+   Application.MessageBox('–ù–ï–í–û–ó–ú–û–ñ–ù–û –í–°–¢–ê–í–ò–¢–¨ –ù–û–í–´–ô –®–ê–ë–õ–û–ù', '–û–®–ò–ë–û–ß–ö–ê', MB_OK)
   else Fdoc_id := SP_BLOB_modify.Parameters.ParamByName('@doc_id').Value;
 
   SP_BLOB_modify.Free;
@@ -151,7 +143,7 @@ procedure TfmDocShablonAdd.cxButtonEdit1PropertiesButtonClick(Sender: TObject; A
 begin
   case AButtonIndex of
     0 : begin
-          OpenDialog1.Filter := '¬ÒÂ Ù‡ÈÎ˚|*.*';
+          OpenDialog1.Filter := '–í—Å–µ —Ñ–∞–π–ª—ã|*.*';
           OpenDialog1.DefaultExt := '';
           if OpenDialog1.Execute then
             cxButtonEdit15.Text := OpenDialog1.FileName;
@@ -164,13 +156,13 @@ procedure TfmDocShablonAdd.cxCheckBox1Click(Sender: TObject);
 var Q : TADOQuery;
 begin
   if cxCheckBox1.Checked then
-    cxCheckBox1.Caption := '¬Ë‰ËÏÓÒÚ¸: Œ·˘ËÈ'
+    cxCheckBox1.Caption := '–í–∏–¥–∏–º–æ—Å—Ç—å: –û–±—â–∏–π'
   else begin
     Q := TADOQuery.Create(nil);
     Q.Connection := fmDocShablon.ADOShablon;
     Q.SQL.Add('SELECT inf_obj_name FROM inf_obj WHERE inf_obj_id = ' + IntToStr(fmDocShablon.Fusr_pwd.user_group_id));
     Q.Open;
-    cxCheckBox1.Caption := '¬Ë‰ËÏÓÒÚ¸: ' + Q.FieldByName('inf_obj_name').AsString;
+    cxCheckBox1.Caption := '–í–∏–¥–∏–º–æ—Å—Ç—å: ' + Q.FieldByName('inf_obj_name').AsString;
     Q.Free;
   end;
 end;
