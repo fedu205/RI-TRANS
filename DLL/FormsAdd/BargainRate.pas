@@ -118,6 +118,7 @@ type
     procedure SetReadOnly(set_read_only: boolean);
     procedure SetParamList(str_list: TStringList);
     procedure SetAllRate(set_all_rate: boolean);
+    procedure SetAllAttrSelf(set_all_rate: boolean);
     procedure SetSelectAttrSelf(set_select_attr_self: boolean);
 
     procedure SetAddCollection(add_id: integer);
@@ -138,6 +139,7 @@ type
     property _GetDistPrev         : Boolean  read Fset_dist_prev;
 
     property _SetAllRate          : boolean write SetAllRate;
+    property _SetAllAttrSelf      : boolean write SetAllAttrSelf;
     property _SetParamList        : TStringList write SetParamList;
     property _SetTypeKontener     : integer  write SetTypeKontener;
     property _SetAttrSelf         : integer  write SetAttrSelf;
@@ -492,6 +494,23 @@ begin
   Query_AttrSelf.Open;
   cxLookupComboBox10.EditValue := Query_AttrSelf.FieldByName('attr_self').Value;
 end;
+
+procedure TfmBargainRate.SetAllAttrSelf(set_all_rate: boolean);
+begin
+  if set_all_rate = False then begin
+    Query_AttrSelf.SQL.Clear;
+    Query_AttrSelf.SQL.Add('SELECT attr_self, attr_self_name FROM view_attr_self');
+  end else begin
+    Query_AttrSelf.SQL.Clear;
+    Query_AttrSelf.SQL.Add('SELECT attr_self = -9, attr_self_name = ''(Все ставки)''');
+    Query_AttrSelf.SQL.Add('UNION');
+    Query_AttrSelf.SQL.Add('SELECT attr_self, attr_self_name FROM view_attr_self');
+  end;
+
+  Query_AttrSelf.Open;
+  cxLookupComboBox10.EditValue := Query_AttrSelf.FieldByName('attr_self').Value;
+end;
+
 
 procedure TfmBargainRate.SetSelectAttrSelf(set_select_attr_self: boolean);
 begin

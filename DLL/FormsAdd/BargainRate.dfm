@@ -628,6 +628,9 @@ object fmBargainRate: TfmBargainRate
     object cxTabSheet2: TcxTabSheet
       Caption = 'cxTabSheet2'
       ImageIndex = 1
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Panel5: TPanel
         Left = 0
         Top = 0

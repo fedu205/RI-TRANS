@@ -811,16 +811,17 @@ begin
   Client_list.Free;
 
 
-  if cnt_rate_delete > 10 then begin
-    res := Application.MessageBox('Удалить неиспользуемые ставки?', 'Внимание', MB_ICONQUESTION or MB_YESNOCANCEL);
-    if res = ID_CANCEL then Exit;
-
-    if res = ID_YES then set_rate_delete := True
-    else set_rate_delete := False;
-
-  end else begin
-    set_rate_delete := False;
-  end;
+//  if cnt_rate_delete > 10 then begin
+//    res := Application.MessageBox('Удалить неиспользуемые ставки?', 'Внимание', MB_ICONQUESTION or MB_YESNOCANCEL);
+//    if res = ID_CANCEL then Exit;
+//
+//    if res = ID_YES then set_rate_delete := True
+//    else set_rate_delete := False;
+//
+//  end else begin
+//    set_rate_delete := False;
+//  end;
+  set_rate_delete := False;
 
 
   ModalResult := mrOk;
@@ -1657,6 +1658,7 @@ end;
 
 procedure TfmBargainList2.dxBarButton16Click(Sender: TObject);
 var ClientDS: TClientDataSet;
+    Q : TADOQuery;
 begin
   ClientDS := TClientDataSet.Create(nil);
   ClientDS.Data := ClientDS_ListRate.Data;
@@ -1664,55 +1666,118 @@ begin
 
   fmBargainRate := TfmBargainRate.Create(Application, Fconnect, Fusr_pwd);
   fmBargainRate._SetSelectParam  := False;
+  fmBargainRate._SetAllAttrSelf  := True;
 
   ClientDS.Filter := '(type_tools_id<>null) and (attr_self<>null)';
   ClientDS.Filtered := True;
 
   ClientDS.Last;
-  if not ClientDS.FieldByName('type_tools_id').IsNull then
-    fmBargainRate._SetTypeKontener := ClientDS.FieldByName('type_tools_id').Value;
-
-  if not ClientDS.FieldByName('attr_self').IsNull then
-    fmBargainRate._SetAttrSelf     := ClientDS.FieldByName('attr_self').Value;
-
   if fmBargainRate.ShowModal = mrOk then begin
 
     if fmBargainRate._GetOneWeight = True then begin
-      if ClientDS.Locate('rate_id;type_tools_id;attr_self', VarArrayOf([cxGrid1DBBandedTableView1global_id.DataBinding.Field.AsInteger, fmBargainRate._GetTypeKontener, fmBargainRate._GetAttrSelf]), []) then begin
-        Application.MessageBox('Ставка уже добавлена!', 'Ошибка', MB_ICONSTOP or MB_OK);
-        ClientDS.Free;
-        Exit;
-      end;
+      if (fmBargainRate._GetAttrSelf <> -9) then
+        if ClientDS.Locate('rate_id;type_tools_id;attr_self', VarArrayOf([cxGrid1DBBandedTableView1global_id.DataBinding.Field.AsInteger, fmBargainRate._GetTypeKontener, fmBargainRate._GetAttrSelf]), []) then begin
+          Application.MessageBox('Ставка уже добавлена!', 'Ошибка', MB_ICONSTOP or MB_OK);
+          ClientDS.Free;
+          Exit;
+        end;
     end else begin
-      if ClientDS.Locate('rate_id;type_tools_id;attr_self;weight', VarArrayOf([cxGrid1DBBandedTableView1global_id.DataBinding.Field.AsInteger, fmBargainRate._GetTypeKontener, fmBargainRate._GetAttrSelf, fmBargainRate._GetWeight]), []) then begin
-        Application.MessageBox('Ставка уже добавлена!', 'Ошибка', MB_ICONSTOP or MB_OK);
-        ClientDS.Free;
-        Exit;
-      end;
-      if ClientDS.Locate('rate_id;type_tools_id;attr_self;set_one', VarArrayOf([cxGrid1DBBandedTableView1global_id.DataBinding.Field.AsInteger, fmBargainRate._GetTypeKontener, fmBargainRate._GetAttrSelf, True]), []) then begin
-        Application.MessageBox('Ставка уже добавлена!', 'Ошибка', MB_ICONSTOP or MB_OK);
-        ClientDS.Free;
-        Exit;
+      if (fmBargainRate._GetAttrSelf <> -9) then begin
+        if ClientDS.Locate('rate_id;type_tools_id;attr_self;weight', VarArrayOf([cxGrid1DBBandedTableView1global_id.DataBinding.Field.AsInteger, fmBargainRate._GetTypeKontener, fmBargainRate._GetAttrSelf, fmBargainRate._GetWeight]), []) then begin
+          Application.MessageBox('Ставка уже добавлена!', 'Ошибка', MB_ICONSTOP or MB_OK);
+          ClientDS.Free;
+          Exit;
+        end;
+        if ClientDS.Locate('rate_id;type_tools_id;attr_self;set_one', VarArrayOf([cxGrid1DBBandedTableView1global_id.DataBinding.Field.AsInteger, fmBargainRate._GetTypeKontener, fmBargainRate._GetAttrSelf, True]), []) then begin
+          Application.MessageBox('Ставка уже добавлена!', 'Ошибка', MB_ICONSTOP or MB_OK);
+          ClientDS.Free;
+          Exit;
+        end;
       end;
     end;
 
-    ClientDS_ListRate.Append;
-    ClientDS_ListRate.FieldByName('list_rate_id'    ).Value := null;
-    ClientDS_ListRate.FieldByName('rate_id'         ).Value := cxGrid1DBBandedTableView1global_id.DataBinding.Field.AsInteger;
-    if cxGrid1DBBandedTableView1service_type.DataBinding.Field.AsInteger = 0 then
-      ClientDS_ListRate.FieldByName('type_rate'       ).Value := 1
-    else
-      ClientDS_ListRate.FieldByName('type_rate'       ).Value := 2;
+    if (fmBargainRate._GetAttrSelf = -9) then begin
+      Q := TADOQuery.Create(nil);
+      Q.Connection := Fconnect;
+      Q.SQL.Add('SELECT attr_self, attr_self_name FROM view_attr_self');
+      Q.Open;
 
-    ClientDS_ListRate.FieldByName('weight'          ).Value := fmBargainRate._GetWeight;
-    ClientDS_ListRate.FieldByName('rate_val'        ).Value := fmBargainRate._GetRate;
-    ClientDS_ListRate.FieldByName('set_one'         ).Value := fmBargainRate._GetOneWeight;
-    ClientDS_ListRate.FieldByName('type_tools_id'   ).Value := fmBargainRate._GetTypeKontener;
-    ClientDS_ListRate.FieldByName('attr_self'       ).Value := fmBargainRate._GetAttrSelf;
-    ClientDS_ListRate.FieldByName('type_tools_name' ).Value := fmBargainRate._GetTypeKontenerName;
-    ClientDS_ListRate.FieldByName('attr_self_name'  ).Value := fmBargainRate._GetAttrSelfName;
-    ClientDS_ListRate.FieldByName('fact_id'         ).Value := null;
-    ClientDS_ListRate.Post;
+      Screen.Cursor := crHourglass;
+      ClientDS_ListRate.DisableControls;
+      Q.First;
+      while not Q.Eof do begin
+
+        if fmBargainRate._GetOneWeight = True then begin
+          if not ClientDS_ListRate.Locate('rate_id;type_tools_id;attr_self;set_one', VarArrayOf([cxGrid1DBBandedTableView1global_id.DataBinding.Field.AsInteger, fmBargainRate._GetTypeKontener, Q.FieldByName('attr_self').AsInteger, True]), []) then begin
+            ClientDS_ListRate.Append;
+            ClientDS_ListRate.FieldByName('list_rate_id'    ).Value := null;
+            ClientDS_ListRate.FieldByName('rate_id'         ).Value := cxGrid1DBBandedTableView1global_id.DataBinding.Field.AsInteger;
+            if cxGrid1DBBandedTableView1service_type.DataBinding.Field.AsInteger = 0 then
+              ClientDS_ListRate.FieldByName('type_rate'       ).Value := 1
+            else
+              ClientDS_ListRate.FieldByName('type_rate'       ).Value := 2;
+
+            ClientDS_ListRate.FieldByName('weight'          ).Value := fmBargainRate._GetWeight;
+            ClientDS_ListRate.FieldByName('rate_val'        ).Value := fmBargainRate._GetRate;
+            ClientDS_ListRate.FieldByName('set_one'         ).Value := fmBargainRate._GetOneWeight;
+            ClientDS_ListRate.FieldByName('type_tools_id'   ).Value := fmBargainRate._GetTypeKontener;
+            ClientDS_ListRate.FieldByName('attr_self'       ).Value := Q.FieldByName('attr_self').AsInteger;
+            ClientDS_ListRate.FieldByName('type_tools_name' ).Value := fmBargainRate._GetTypeKontenerName;
+            ClientDS_ListRate.FieldByName('attr_self_name'  ).Value := Q.FieldByName('attr_self_name').AsString;
+            ClientDS_ListRate.FieldByName('fact_id'         ).Value := null;
+            ClientDS_ListRate.Post;
+          end;
+        end else begin
+          if not ClientDS_ListRate.Locate('rate_id;type_tools_id;attr_self;weight', VarArrayOf([cxGrid1DBBandedTableView1global_id.DataBinding.Field.AsInteger, fmBargainRate._GetTypeKontener, Q.FieldByName('attr_self').AsInteger, fmBargainRate._GetWeight]), []) then begin
+            ClientDS_ListRate.Append;
+            ClientDS_ListRate.FieldByName('list_rate_id'    ).Value := null;
+            ClientDS_ListRate.FieldByName('rate_id'         ).Value := cxGrid1DBBandedTableView1global_id.DataBinding.Field.AsInteger;
+            if cxGrid1DBBandedTableView1service_type.DataBinding.Field.AsInteger = 0 then
+              ClientDS_ListRate.FieldByName('type_rate'       ).Value := 1
+            else
+              ClientDS_ListRate.FieldByName('type_rate'       ).Value := 2;
+
+            ClientDS_ListRate.FieldByName('weight'          ).Value := fmBargainRate._GetWeight;
+            ClientDS_ListRate.FieldByName('rate_val'        ).Value := fmBargainRate._GetRate;
+            ClientDS_ListRate.FieldByName('set_one'         ).Value := fmBargainRate._GetOneWeight;
+            ClientDS_ListRate.FieldByName('type_tools_id'   ).Value := fmBargainRate._GetTypeKontener;
+            ClientDS_ListRate.FieldByName('attr_self'       ).Value := Q.FieldByName('attr_self').AsInteger;
+            ClientDS_ListRate.FieldByName('type_tools_name' ).Value := fmBargainRate._GetTypeKontenerName;
+            ClientDS_ListRate.FieldByName('attr_self_name'  ).Value := Q.FieldByName('attr_self_name').AsString;
+            ClientDS_ListRate.FieldByName('fact_id'         ).Value := null;
+            ClientDS_ListRate.Post;
+          end;
+        end;
+
+
+
+
+        Q.Next;
+      end;
+      ClientDS_ListRate.EnableControls;
+      Screen.Cursor := crDefault;
+
+
+      Q.Free;
+    end else begin
+      ClientDS_ListRate.Append;
+      ClientDS_ListRate.FieldByName('list_rate_id'    ).Value := null;
+      ClientDS_ListRate.FieldByName('rate_id'         ).Value := cxGrid1DBBandedTableView1global_id.DataBinding.Field.AsInteger;
+      if cxGrid1DBBandedTableView1service_type.DataBinding.Field.AsInteger = 0 then
+        ClientDS_ListRate.FieldByName('type_rate'       ).Value := 1
+      else
+        ClientDS_ListRate.FieldByName('type_rate'       ).Value := 2;
+
+      ClientDS_ListRate.FieldByName('weight'          ).Value := fmBargainRate._GetWeight;
+      ClientDS_ListRate.FieldByName('rate_val'        ).Value := fmBargainRate._GetRate;
+      ClientDS_ListRate.FieldByName('set_one'         ).Value := fmBargainRate._GetOneWeight;
+      ClientDS_ListRate.FieldByName('type_tools_id'   ).Value := fmBargainRate._GetTypeKontener;
+      ClientDS_ListRate.FieldByName('attr_self'       ).Value := fmBargainRate._GetAttrSelf;
+      ClientDS_ListRate.FieldByName('type_tools_name' ).Value := fmBargainRate._GetTypeKontenerName;
+      ClientDS_ListRate.FieldByName('attr_self_name'  ).Value := fmBargainRate._GetAttrSelfName;
+      ClientDS_ListRate.FieldByName('fact_id'         ).Value := null;
+      ClientDS_ListRate.Post;
+    end;
     UpdateClientRate;
   end;
 

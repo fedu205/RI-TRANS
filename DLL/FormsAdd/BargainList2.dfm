@@ -1529,9 +1529,6 @@ object fmBargainList2: TfmBargainList2
         Caption = #1055#1072#1088#1072#1084#1077#1090#1088#1099' '#1087#1077#1088#1077#1074#1086#1079#1082#1080
         ImageIndex = 2
         TabVisible = False
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
       end
       object cxTabSheet4: TcxTabSheet
         Caption = #1055#1072#1088#1072#1084#1077#1090#1088#1099' '#1088#1072#1089#1095#1077#1090#1072
@@ -3516,9 +3513,6 @@ object fmBargainList2: TfmBargainList2
       object cxTabSheet2: TcxTabSheet
         Caption = #1060#1088#1072#1093#1090'. '#1082#1072#1088#1090'.'
         ImageIndex = 1
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         object cxGrid2: TcxGrid
           Left = 0
           Top = 0
