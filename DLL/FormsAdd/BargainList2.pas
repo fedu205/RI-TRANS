@@ -3360,7 +3360,8 @@ var
   num_rec                    : integer;
   ClientDS, ClientDS2 : TClientDataSet;
   set_ready : boolean;
-  cnt_router, cnt_rate : integer;
+  cnt_router, cnt_rate, distance : integer;
+
 begin
   cxGrid3DBBandedTableView1.Controller.SelectAll;
 
@@ -3369,10 +3370,9 @@ begin
   ClientDS2.Data := ClientDS_Fact.Data;
 
   ClientDS := TClientDataSet.Create(nil);
-  ClientDS.FieldDefs.Add('node_begin_id', ftInteger);
-  ClientDS.FieldDefs.Add('node_end_id'  , ftInteger);
   ClientDS.FieldDefs.Add('type_kontener', ftInteger);
   ClientDS.FieldDefs.Add('attr_self'    , ftInteger);
+  ClientDS.FieldDefs.Add('distance'     , ftInteger);
   ClientDS.CreateDataSet;
   ClientDS.LogChanges := False;
 
@@ -3381,12 +3381,11 @@ begin
 
   ClientDS2.First;
   while not ClientDS2.Eof do begin
-    if not ClientDS.Locate('node_begin_id;node_end_id', VarArrayOf([ClientDS2['node_begin_id'], ClientDS2['node_end_id']]), []) then begin
+    if not ClientDS.Locate('distance', VarArrayOf([ClientDS2['distance']]), []) then begin
       cnt_router := cnt_router + 1;
 
       ClientDS.Append;
-      ClientDS['node_begin_id'] := ClientDS2['node_begin_id'];
-      ClientDS['node_end_id']   := ClientDS2['node_end_id'];
+      ClientDS['distance']      := ClientDS2['distance'];
       ClientDS.Post;
     end;
     ClientDS2.Next;
@@ -3420,7 +3419,7 @@ begin
     ClientDS2.First;
     while not ClientDS2.Eof do begin
 
-      if ClientDS.Locate('node_begin_id;node_end_id', VarArrayOf([ClientDS2['node_begin_id'], ClientDS2['node_end_id']]), []) then begin
+      if ClientDS.Locate('distance', VarArrayOf([ClientDS2['distance']]), []) then begin
 
         if (ClientDS['type_kontener'] <> ClientDS2['type_kontener']) or (ClientDS['attr_self'] <> ClientDS2['attr_self']) then
           set_ready := False;
@@ -3428,26 +3427,11 @@ begin
 
       end else begin
         ClientDS.Append;
-        ClientDS['node_begin_id'] := ClientDS2['node_begin_id'];
-        ClientDS['node_end_id']   := ClientDS2['node_end_id'];
         ClientDS['type_kontener'] := ClientDS2['type_kontener'];
         ClientDS['attr_self']     := ClientDS2['attr_self'];
+        ClientDS['distance']      := ClientDS2['distance'];
         ClientDS.Post;
       end;
-
-  //    if not ClientDS.Locate('node_begin_id;node_end_id;type_kontener;attr_self', VarArrayOf([ClientDS2['node_begin_id'], ClientDS2['node_end_id'], ClientDS2['type_kontener'], ClientDS2['attr_self']]), []) then begin
-  //
-  //      ClientDS.Append;
-  //      ClientDS['node_begin_id'] := ClientDS2['node_begin_id'];
-  //      ClientDS['node_end_id']   := ClientDS2['node_end_id'];
-  //      ClientDS['type_kontener'] := ClientDS2['type_kontener'];
-  //      ClientDS['attr_self']     := ClientDS2['attr_self'];
-  //      ClientDS.Post;
-  //
-  //    end else begin
-  //      set_ready := True;
-  //    end;
-
 
       ClientDS2.Next;
     end;
@@ -3466,6 +3450,7 @@ begin
   Client_Node := TClientDataSet.Create(nil);
   Client_Node.FieldDefs.Add('node_begin_id', ftInteger);
   Client_Node.FieldDefs.Add('node_end_id'  , ftInteger);
+  Client_Node.FieldDefs.Add('distance'  , ftInteger);
   Client_Node.FieldDefs.Add('type_sps_id'  , ftInteger);
   Client_Node.FieldDefs.Add('type_kontener', ftInteger);
   Client_Node.FieldDefs.Add('attr_self'    , ftInteger);
@@ -3504,10 +3489,9 @@ begin
   for num_rec := 0 to cxGrid3DBBandedTableView1.Controller.SelectedRecordCount - 1 do
     if ClientDS_Fact.Locate('fact_id', cxGrid3DBBandedTableView1.Controller.SelectedRows[num_rec].Values[cxGrid3DBBandedTableView1fact_id.Index], []) then begin
 
-      node_begin_id := ClientDS_Fact.FieldByName('node_begin_id').AsInteger;
-      node_end_id := ClientDS_Fact.FieldByName('node_end_id').AsInteger;
+      distance := ClientDS_Fact.FieldByName('distance').AsInteger;
 
-      if not Client_Node.Locate('node_begin_id;node_end_id', VarArrayOf([node_begin_id,node_end_id]), []) then begin
+      if not Client_Node.Locate('distance', VarArrayOf([distance]), []) then begin
         // Пропустим уже занятые пары
         while ClientDS_ListRate.Locate('attr_self;type_tools_id', VarArrayOf([Q.FieldByName('attr_self').Value, Q.FieldByName('type_kontener').Value]), []) do
           Q.Next;
@@ -3515,6 +3499,7 @@ begin
         Client_Node.Append;
         Client_Node.FieldByName('node_begin_id'     ).Value := node_begin_id;
         Client_Node.FieldByName('node_end_id'       ).Value := node_end_id;
+        Client_Node.FieldByName('distance'          ).Value := distance;
         Client_Node.FieldByName('type_kontener'     ).Value := Q.FieldByName('type_kontener'     ).Value;
         Client_Node.FieldByName('attr_self'         ).Value := Q.FieldByName('attr_self'         ).Value;
         Client_Node.FieldByName('type_kontener_name').Value := Q.FieldByName('type_kontener_name').Value;
@@ -5942,30 +5927,8 @@ begin
       rate_id := cxGrid1DBBandedTableView1global_id.DataBinding.Field.AsInteger;
 
       ClientDS := TClientDataSet.Create(nil);
-//      ClientDS.Close;
-//      ClientDS.Fields.Clear;
-//      ClientDS.FieldDefs.Clear;
-
-//      for num_field:= 0 to ClientDS_Fact.FieldDefs.Count - 1 do begin
-//        ClientDS.FieldDefs.Add(ClientDS_Fact.FieldDefs[num_field].Name,
-//                               ClientDS_Fact.FieldDefs[num_field].DataType,
-//                               ClientDS_Fact.FieldDefs[num_field].Size,
-//                               ClientDS_Fact.FieldDefs[num_field].Required);
-//      end;
-
       ClientDS.Data := ClientDS_Fact.Data;
-//      ClientDS.CreateDataSet;
       ClientDS.LogChanges := False;
-
-
-
-//      for num_rec := 0 to cxGrid3DBBandedTableView1.Controller.SelectedRecordCount - 1 do
-//        if ClientDS_Fact.Locate('fact_id', cxGrid3DBBandedTableView1.Controller.SelectedRows[num_rec].Values[cxGrid3DBBandedTableView1fact_id.Index], []) then begin
-//          ClientDS.Insert;
-//          for num_field := 0 to ClientDS_Fact.FieldCount - 1 do
-//            ClientDS.Fields[num_field].Value := ClientDS_Fact.Fields[num_field].Value;
-//          ClientDS.Post;
-//        end;
 
       // удаляем из ClientDS невыделенные строки
       cxGrid3DBBandedTableView1.Controller.SelectAll;
@@ -6042,45 +6005,6 @@ begin
 
   Screen.Cursor := crHourglass;
 
-  if (not set_fact_len) and (not set_prev_len) then begin
-    ShowTextMessage('Поиск ставки для перевозки ...', False);
-    // Получаем расстояние - проверка расстояния
-    Q.SQL.Clear;
-    Q.SQL.Add('SELECT node_begin_cod, node_end_cod FROM view_bargain v (NOLOCK) WHERE bargain_id = ' + IntToStr(Fbargain_id));
-    Q.Open;
-    node_begin := Q.FieldByName('node_begin_cod').AsString;
-    node_end   := Q.FieldByName('node_end_cod').AsString;
-    Q.Close;
-
-    dist := null;
-    dist := GetCalcDistance(node_begin, node_end, -9, ''); //Fast(node_begin, node_end);//
-
-    if dist = null then begin
-      ShowTextMessage;
-      Screen.Cursor := crDefault;
-      Application.MessageBox('Не определено расстояние между станциями перевозки', 'Ставки ПГК', MB_OK + MB_ICONWARNING);
-      exit;
-    end;
-
-    // Находим ставку (для перевозки)
-    rows := 2;
-    rate_val := 0;
-    while True do begin
-      if TVarData(exWks.Cells[rows, 1].Value).VType = varEmpty then break;
-
-      if (exWks.Range['A'+IntToStr(rows)].Value <= dist)  and (dist <= exWks.Range['B'+IntToStr(rows)].Value)then begin
-
-        rate_val := exWks.Range['C'+IntToStr(rows)].Value;
-        rate_val := RoundCurr(rate_val, -2);
-        if set_nds then
-          rate_val := RoundCurr(rate_val * 1.18, -2);
-
-        break;
-      end;
-      rows := rows + 1;
-    end;
-  end;
-
   // Удаляем лишнии ставки
   //ClearListRate(rate_id, type_tools_id, attr_self_id);
   ClientDS_ListRate.DisableControls;
@@ -6097,7 +6021,7 @@ begin
   if set_fact_len then begin
     ClientDS.First;
     while not ClientDS.Eof do begin
-      if not ClientDS_tmp.Locate('type_kontener;attr_self;node_begin_cod;node_end_cod', VarArrayOf([ClientDS.FieldByName('type_kontener').Value, ClientDS.FieldByName('attr_self').Value, ClientDS.FieldByName('node_begin_cod').Value, ClientDS.FieldByName('node_end_cod').Value]), []) then begin
+      if not ClientDS_tmp.Locate('type_kontener;attr_self;node_begin_cod;node_end_cod;distance', VarArrayOf([ClientDS.FieldByName('type_kontener').Value, ClientDS.FieldByName('attr_self').Value, ClientDS.FieldByName('node_begin_cod').Value, ClientDS.FieldByName('node_end_cod').Value, ClientDS.FieldByName('distance').Value]), []) then begin
         ClientDS_tmp.Append;
         ClientDS_tmp.FieldByName('type_kontener'  ).Value := ClientDS.FieldByName('type_kontener').Value;
         ClientDS_tmp.FieldByName('attr_self'      ).Value := ClientDS.FieldByName('attr_self').Value;
@@ -6109,40 +6033,8 @@ begin
 
       ClientDS.Next;
     end;
-  end
-  else
-    if set_prev_len then begin
+  end;
 
-//    Q.SQL.Add('CREATE TABLE #tmp (fact_id int, type_kontener int, attr_self int, node_begin_cod varchar(50), node_end_cod varchar(50))');
-//    Q.SQL.Add('');
-//    Q.SQL.Add('INSERT INTO #tmp');
-//    Q.SQL.Add('EXEC [dbo].[sp_TypeRateFromPrevTrip_calc] @bargain_id = ' + IntToStr(Fbargain_id) + ', @type_calc = 1'); // для получения RS испольхуем тип = 1
-//    Q.SQL.Add('');
-//    Q.SQL.Add('SELECT type_kontener, attr_self, node_end_cod as node_begin_cod, node_begin_cod as node_end_cod'); // для расчета расстояния "переворачиваем" маршрут
-//    Q.SQL.Add('FROM #tmp');
-//    Q.SQL.Add('WHERE 1 = 1');
-//    if (type_tools_id <> -9) and (attr_self_id <> -9) then begin
-//      Q.SQL.Add('AND type_kontener = ' + IntToStr(type_tools_id));
-//      Q.SQL.Add('AND attr_self     = ' + IntToStr(attr_self_id));
-//    end;
-//    Q.SQL.Add('GROUP BY type_kontener, attr_self, node_begin_cod, node_end_cod');
-//    Q.SQL.Add('');
-//    Q.SQL.Add('DROP TABLE #tmp');
-
-    end
-      else begin
-        ClientDS.First;
-        while not ClientDS.Eof do begin
-          if not ClientDS_tmp.Locate('type_kontener;attr_self', VarArrayOf([ClientDS.FieldByName('type_kontener').Value, ClientDS.FieldByName('attr_self').Value]), []) then begin
-            ClientDS_tmp.Append;
-            ClientDS_tmp.FieldByName('type_kontener'  ).Value := ClientDS.FieldByName('type_kontener').Value;
-            ClientDS_tmp.FieldByName('attr_self'      ).Value := ClientDS.FieldByName('attr_self').Value;
-            ClientDS_tmp.Post;
-          end;
-
-          ClientDS.Next;
-        end;
-      end;
 
   if ClientDS_tmp.RecordCount = 0 then begin
 
@@ -6167,19 +6059,13 @@ begin
     ClientDS_tmp.First;
     while not ClientDS_tmp.Eof do begin
       ShowTextMessage('Загрузка ставок ' + IntToStr(ClientDS_tmp.RecNo) + ' из ' + IntToStr(ClientDS_tmp.RecordCount) + ' ...', False);
+
       // Расстояние из факта - посчитаем для каждорй записи свою ставку
       if set_fact_len or set_prev_len then begin
         // Получаем расстояние - проверка расстояния
         node_begin := ClientDS_tmp.FieldByName('node_begin_cod').AsString;
         node_end   := ClientDS_tmp.FieldByName('node_end_cod').AsString;
-
-//        dist := null;
-//        dist := GetCalcDistance(node_begin, node_end, -9, ''); // Fast(node_begin, node_end);
-//        ClientDS_tmp.Edit;
-//        ClientDS_tmp.FieldByName('distance').Value := dist;
-//        ClientDS_tmp.Post;
-
-        dist := ClientDS_tmp.FieldByName('distance').AsInteger;
+        dist       := ClientDS_tmp.FieldByName('distance').AsInteger;
 
         rate_val := 0;
         if dist <> null then begin
@@ -6202,7 +6088,6 @@ begin
             rows := rows + 1;
           end;
         end;
-
       end;
 
       if ClientDS_ListRate.Locate('set_one;rate_id;type_tools_id;attr_self', VarArrayOf([True, rate_id, ClientDS_tmp.FieldByName('type_kontener').Value, ClientDS_tmp.FieldByName('attr_self').Value]), []) then
@@ -6229,17 +6114,17 @@ begin
   end;
 
 
-  ClientDS_Fact.DisableControls;
-  for i:=0 to cxGrid3DBBandedTableView1.Controller.SelectedRecordCount - 1 do begin
-    if ClientDS_Fact.FindKey([cxGrid3DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid3DBBandedTableView1fact_id.Index]]) then begin
-      if ClientDS_tmp.Locate('node_begin_cod;node_end_cod', VarArrayOf([ClientDS_Fact.FieldByName('node_begin_cod').AsString, ClientDS_Fact.FieldByName('node_end_cod').AsString]), []) then begin
-        ClientDS_Fact.Edit;
-        ClientDS_Fact.FieldByName('distance').Value := ClientDS_tmp.FieldByName('distance').Value;
-        ClientDS_Fact.Post;
-      end;
-    end;
-  end;
-  ClientDS_Fact.EnableControls;
+//  ClientDS_Fact.DisableControls;
+//  for i:=0 to cxGrid3DBBandedTableView1.Controller.SelectedRecordCount - 1 do begin
+//    if ClientDS_Fact.FindKey([cxGrid3DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid3DBBandedTableView1fact_id.Index]]) then begin
+//      if ClientDS_tmp.Locate('node_begin_cod;node_end_cod', VarArrayOf([ClientDS_Fact.FieldByName('node_begin_cod').AsString, ClientDS_Fact.FieldByName('node_end_cod').AsString]), []) then begin
+//        ClientDS_Fact.Edit;
+//        ClientDS_Fact.FieldByName('distance').Value := ClientDS_tmp.FieldByName('distance').Value;
+//        ClientDS_Fact.Post;
+//      end;
+//    end;
+//  end;
+//  ClientDS_Fact.EnableControls;
 
 
 
