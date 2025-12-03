@@ -263,6 +263,10 @@ type
     ClientDataSet1els_cod: TStringField;
     cxButton1: TcxButton;
     cxButton3: TcxButton;
+    Label14: TLabel;
+    cxTextEdit_brief_distance: TcxTextEdit;
+    cxCheckBox3: TcxCheckBox;
+    ClientDataSet1brief_distance: TIntegerField;
     procedure cxCheckBox_is_date_deliveryClick(Sender: TObject);
     procedure cxCheckBox_calc_weight_checkClick(Sender: TObject);
     procedure cxCheckBox_is_date_readyClick(Sender: TObject);
@@ -742,6 +746,10 @@ begin
             100: begin
                    str_update := str_update + ' quantity=' + iif(ClientDataSet1.FieldByName('quantity'  ).IsNull , 'null', FloatToStr(ClientDataSet1.FieldByName('quantity').AsFloat))+',';
                    str_update_etran := str_update_etran + ' quantity=' + iif(ClientDataSet1.FieldByName('quantity'  ).IsNull , 'null', FloatToStr(ClientDataSet1.FieldByName('quantity').AsFloat))+',';
+                 end;
+            200: begin
+                   str_update := str_update + ' brief_distance=' + iif(ClientDataSet1.FieldByName('brief_distance'  ).IsNull , 'null', FloatToStr(ClientDataSet1.FieldByName('brief_distance').AsFloat))+',';
+//                   str_update_etran := str_update_etran + ' brief_distance=' + iif(ClientDataSet1.FieldByName('brief_distance'  ).IsNull , 'null', FloatToStr(ClientDataSet1.FieldByName('brief_distance').AsFloat))+',';
                  end;
 
             33: begin

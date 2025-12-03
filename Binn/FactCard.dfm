@@ -3,7 +3,7 @@ object fmFactCard: TfmFactCard
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize, biMaximize, biHelp]
   Caption = #1050#1072#1088#1090#1086#1095#1082#1072' '#1092#1072#1082#1090#1072
-  ClientHeight = 598
+  ClientHeight = 653
   ClientWidth = 449
   Color = clBtnFace
   Constraints.MinHeight = 637
@@ -148,7 +148,7 @@ object fmFactCard: TfmFactCard
   TextHeight = 13
   object Panel2: TPanel
     Left = 0
-    Top = 561
+    Top = 616
     Width = 449
     Height = 37
     Align = alBottom
@@ -330,16 +330,16 @@ object fmFactCard: TfmFactCard
     Left = 0
     Top = 0
     Width = 449
-    Height = 561
+    Height = 616
     Align = alClient
     TabOrder = 1
-    Properties.ActivePage = cxTabSheet2
+    Properties.ActivePage = cxTabSheet1
     Properties.CustomButtons.Buttons = <>
     LookAndFeel.Kind = lfUltraFlat
     LookAndFeel.NativeStyle = False
     LookAndFeel.ScrollbarMode = sbmClassic
     LookAndFeel.SkinName = ''
-    ClientRectBottom = 561
+    ClientRectBottom = 616
     ClientRectRight = 449
     ClientRectTop = 24
     object cxTabSheet1: TcxTabSheet
@@ -349,14 +349,14 @@ object fmFactCard: TfmFactCard
         Left = 0
         Top = 0
         Width = 449
-        Height = 192
+        Height = 211
         Align = alTop
         BevelInner = bvRaised
         BevelOuter = bvLowered
         TabOrder = 0
         DesignSize = (
           449
-          192)
+          211)
         object Label3: TLabel
           Left = 5
           Top = 30
@@ -471,6 +471,13 @@ object fmFactCard: TfmFactCard
           Width = 121
           Height = 13
           Caption = #1057#1091#1090#1082#1080' '#1072#1088#1077#1085#1076#1099'.................'
+        end
+        object Label14: TLabel
+          Left = 5
+          Top = 191
+          Width = 128
+          Height = 13
+          Caption = #1056#1072#1089#1089#1090#1086#1103#1085#1080#1077', '#1082#1084'................'
         end
         object cxCheckBox_is_datpr: TcxCheckBox
           Tag = 33
@@ -1409,10 +1416,68 @@ object fmFactCard: TfmFactCard
           TabOrder = 23
           Width = 113
         end
+        object cxTextEdit_brief_distance: TcxTextEdit
+          Tag = 200
+          Left = 87
+          Top = 185
+          Style.LookAndFeel.Kind = lfOffice11
+          Style.LookAndFeel.NativeStyle = False
+          Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
+          Style.Shadow = False
+          StyleDisabled.LookAndFeel.Kind = lfOffice11
+          StyleDisabled.LookAndFeel.NativeStyle = False
+          StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+          StyleFocused.LookAndFeel.Kind = lfOffice11
+          StyleFocused.LookAndFeel.NativeStyle = False
+          StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
+          StyleHot.LookAndFeel.Kind = lfOffice11
+          StyleHot.LookAndFeel.NativeStyle = False
+          StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
+          TabOrder = 30
+          Width = 113
+        end
+        object cxCheckBox3: TcxCheckBox
+          Tag = 200
+          Left = 198
+          Top = 186
+          Properties.OnChange = cxCheckBox4PropertiesChange
+          Style.LookAndFeel.Kind = lfOffice11
+          Style.LookAndFeel.NativeStyle = False
+          Style.LookAndFeel.ScrollbarMode = sbmClassic
+          Style.LookAndFeel.SkinName = 'Coffee'
+          Style.TransparentBorder = False
+          StyleDisabled.LookAndFeel.Kind = lfOffice11
+          StyleDisabled.LookAndFeel.NativeStyle = False
+          StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+          StyleFocused.LookAndFeel.Kind = lfOffice11
+          StyleFocused.LookAndFeel.NativeStyle = False
+          StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleFocused.LookAndFeel.SkinName = 'Coffee'
+          StyleHot.LookAndFeel.Kind = lfOffice11
+          StyleHot.LookAndFeel.NativeStyle = False
+          StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfOffice11
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
+          TabOrder = 31
+          Transparent = True
+          Visible = False
+        end
       end
       object Panel5: TPanel
         Left = 0
-        Top = 192
+        Top = 211
         Width = 449
         Height = 239
         Align = alTop
@@ -3338,7 +3403,7 @@ object fmFactCard: TfmFactCard
       end
       object Panel4: TPanel
         Left = 0
-        Top = 431
+        Top = 450
         Width = 449
         Height = 56
         Align = alTop
@@ -3602,9 +3667,9 @@ object fmFactCard: TfmFactCard
       end
       object Panel13: TPanel
         Left = 0
-        Top = 487
+        Top = 506
         Width = 449
-        Height = 50
+        Height = 86
         Align = alClient
         BevelInner = bvRaised
         BevelOuter = bvLowered
@@ -4610,14 +4675,14 @@ object fmFactCard: TfmFactCard
         Left = 0
         Top = 356
         Width = 449
-        Height = 181
+        Height = 236
         Align = alClient
         BevelInner = bvRaised
         BevelOuter = bvLowered
         TabOrder = 4
         DesignSize = (
           449
-          181)
+          236)
         object Label33: TLabel
           Left = 9
           Top = 10
@@ -4654,7 +4719,7 @@ object fmFactCard: TfmFactCard
           StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
           StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
-          Height = 169
+          Height = 224
           Width = 313
         end
         object cxCheckBox20: TcxCheckBox
@@ -5303,6 +5368,9 @@ object fmFactCard: TfmFactCard
     end
     object ClientDataSet1els_cod: TStringField
       FieldName = 'els_cod'
+    end
+    object ClientDataSet1brief_distance: TIntegerField
+      FieldName = 'brief_distance'
     end
   end
   object cxPropertiesStore1: TcxPropertiesStore
