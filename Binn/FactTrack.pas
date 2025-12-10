@@ -551,6 +551,7 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     dxBarButton56: TdxBarButton;
     dxBarSubItem14: TdxBarSubItem;
     dxBarButton60: TdxBarButton;
+    dxBarButton80: TdxBarButton;
 
     procedure N4Click(Sender: TObject);
     procedure N2Click(Sender: TObject);
@@ -668,6 +669,7 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     procedure dxBarButton6Click(Sender: TObject);
     procedure dxBarButton44Click(Sender: TObject);
     procedure dxBarButton60Click(Sender: TObject);
+    procedure dxBarButton80Click(Sender: TObject);
 
 
   private
@@ -2292,6 +2294,72 @@ begin
 //
 //  sp_fact_track_query_modify.Free;
 //  ShowTextMessage;
+end;
+
+procedure TfmFactTrack.dxBarButton80Click(Sender: TObject);
+var   str_fact_track_trip_id : string;
+      Sp_Fact_Track_Stay_Get : TADOStoredProc;
+      exWks, exApp           : Variant;
+      row_insert             : integer;
+      date1,date2            : TDateTime;
+      Reg                    : TRegistry;
+begin
+  str_fact_track_trip_id := cx_GetSelectedValues(cxGrid12, 'fact_track_trip_id');
+
+  if str_fact_track_trip_id = '' then exit;
+
+  Screen.Cursor := crHourglass;
+  ShowTextMessage('Запуск Excel...', False);
+  exApp := CreateOleObject('Excel.Application');
+  exApp.Workbooks.Add(GetDocBlob(fmMain.Lis, 87));
+  exWks := exApp.ActiveWorkbook.WorkSheets[1];
+
+  row_insert := 4;
+
+  Sp_Fact_Track_Stay_Get := TADOStoredProc.Create(nil);
+  Sp_Fact_Track_Stay_Get.Connection := fmMain.Lis;
+  Sp_Fact_Track_Stay_Get.ProcedureName := 'sp_fact_track_stay_GET';
+  Sp_Fact_Track_Stay_Get.Parameters.Refresh;
+  Sp_Fact_Track_Stay_Get.Parameters.ParamByName('@type_action'           ).Value := 1;
+  Sp_Fact_Track_Stay_Get.Parameters.ParamByName('@str_fact_track_trip_id').Value := str_fact_track_trip_id;
+  Sp_Fact_Track_Stay_Get.Open;
+  Sp_Fact_Track_Stay_Get.First;
+
+  while not Sp_Fact_Track_Stay_Get.Eof do begin
+      exWks.Range['A'+IntToStr(row_insert)].Value := Sp_Fact_Track_Stay_Get.RecNo;
+      exWks.Range['B'+IntToStr(row_insert)].Value := Sp_Fact_Track_Stay_Get.FieldByName('num_vagon').AsString;
+      exWks.Range['C'+IntToStr(row_insert)].Value := Sp_Fact_Track_Stay_Get.FieldByName('doc_number').AsString;
+      exWks.Range['D'+IntToStr(row_insert)].Value := Sp_Fact_Track_Stay_Get.FieldByName('node_begin_name').AsString;
+      exWks.Range['E'+IntToStr(row_insert)].Value := Sp_Fact_Track_Stay_Get.FieldByName('node_end_name').AsString;
+      if not Sp_Fact_Track_Stay_Get.FieldByName('date_arrival').IsNull then
+        exWks.Range['F'+IntToStr(row_insert)].Value := FormatDateTime('dd.mm.yyyy', Sp_Fact_Track_Stay_Get.FieldByName('date_arrival').AsDateTime);
+      exWks.Range['G'+IntToStr(row_insert)].Value := Sp_Fact_Track_Stay_Get.FieldByName('grotpr_name').AsString;
+      exWks.Range['H'+IntToStr(row_insert)].Value := Sp_Fact_Track_Stay_Get.FieldByName('grpol_name').AsString;
+      exWks.Range['I'+IntToStr(row_insert)].Value := Sp_Fact_Track_Stay_Get.FieldByName('kargoETSNG_name').AsString;
+
+      if not Sp_Fact_Track_Stay_Get.FieldByName('date_otpr_1').IsNull then
+        exWks.Range['K'+IntToStr(row_insert)].Value := FormatDateTime('dd.mm.yyyy', Sp_Fact_Track_Stay_Get.FieldByName('date_otpr_1').AsDateTime);
+      exWks.Range['L'+IntToStr(row_insert)].Value := Sp_Fact_Track_Stay_Get.FieldByName('days_stay_end').AsString;
+
+      Sp_Fact_Track_Stay_Get.Next;
+      if not Sp_Fact_Track_Stay_Get.Eof then begin
+        xCopyRow(exApp,row_insert + 1,row_insert +1);
+        inc(row_insert);
+      end;
+      ShowTextMessage('Идет формирование отчета по простою. Обработано '+IntToStr(row_insert - 4)+' из '+IntToStr(Sp_Fact_Track_Stay_Get.RecordCount)+#13#10+ 'Подождите пожалуйста...', False);
+  end;
+
+  exApp.Rows[IntToStr(row_insert + 1) + ':' + IntToStr(row_insert + 1)].Select;
+  exApp.Selection.Delete;
+
+//  exWks.PageSetup.PrintArea := exWks.Range['A1:G'+IntToStr(row_insert)].Address;
+  exApp.Range['A1'].Select;
+  exApp.Visible := True;
+
+  Sp_Fact_Track_Stay_Get.Free;
+  exApp := Null;  exWks := Null;
+  ShowTextMessage('', True);
+  Screen.Cursor := crDefault;
 end;
 
 procedure TfmFactTrack.dxBarButton86Click(Sender: TObject);
@@ -5243,8 +5311,6 @@ begin
       s2 := ReplaceStr(s2, ' ноября '   , '.11.');
       s2 := ReplaceStr(s2, ' декабря '  , '.12.');
       s2 := Trim(s2);
-
-
 
       sp.Close;
       sp.Parameters.Refresh;
