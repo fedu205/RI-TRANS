@@ -811,17 +811,17 @@ begin
   Client_list.Free;
 
 
-//  if cnt_rate_delete > 10 then begin
-//    res := Application.MessageBox('Удалить неиспользуемые ставки?', 'Внимание', MB_ICONQUESTION or MB_YESNOCANCEL);
-//    if res = ID_CANCEL then Exit;
-//
-//    if res = ID_YES then set_rate_delete := True
-//    else set_rate_delete := False;
-//
-//  end else begin
-//    set_rate_delete := False;
-//  end;
-  set_rate_delete := False;
+  if cnt_rate_delete > 10 then begin
+    res := Application.MessageBox('Удалить неиспользуемые ставки?', 'Внимание', MB_ICONQUESTION or MB_YESNOCANCEL);
+    if res = ID_CANCEL then Exit;
+
+    if res = ID_YES then set_rate_delete := True
+    else set_rate_delete := False;
+
+  end else begin
+    set_rate_delete := False;
+  end;
+//  set_rate_delete := False;
 
 
   ModalResult := mrOk;
