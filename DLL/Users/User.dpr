@@ -33,7 +33,9 @@ uses
   FindVagonGU12Wizard in 'FindVagonGU12Wizard.pas' {fmFindVagonGU12Wizard},
   VagonArendaActs in 'VagonArendaActs.pas' {fmVagonArendaActs},
   VagonArendaActsAdd in 'VagonArendaActsAdd.pas' {fmVagonArendaActsAdd},
-  ContractNorm in 'ContractNorm.pas' {fmContractNorm};
+  ContractNorm in 'ContractNorm.pas' {fmContractNorm},
+  FactTrackTender in 'FactTrackTender.pas' {fmFactTrackTender},
+  FactTrackTenderAdd in 'FactTrackTenderAdd.pas' {fmFactTrackTenderAdd};
 
 {$R *.RES}
 
@@ -59,6 +61,7 @@ exports CreateWndVagonArendaActsAdd;
 exports CreateWndActShpBargainAdd;
 
 exports CreateWndContractNorm;
+exports CreateWndFactTrackTender;
 
 
 begin

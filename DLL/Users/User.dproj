@@ -157,6 +157,14 @@
             <Form>fmContractNorm</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="FactTrackTender.pas">
+            <Form>fmFactTrackTender</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="FactTrackTenderAdd.pas">
+            <Form>fmFactTrackTenderAdd</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
