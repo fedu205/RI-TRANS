@@ -552,6 +552,9 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     dxBarSubItem14: TdxBarSubItem;
     dxBarButton60: TdxBarButton;
     dxBarButton80: TdxBarButton;
+    dxBarButton81: TdxBarButton;
+    cxGrid12DBBandedTableView1grotpr_name: TcxGridDBBandedColumn;
+    cxGrid12DBBandedTableView1grpol_name: TcxGridDBBandedColumn;
 
     procedure N4Click(Sender: TObject);
     procedure N2Click(Sender: TObject);
@@ -670,6 +673,7 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     procedure dxBarButton44Click(Sender: TObject);
     procedure dxBarButton60Click(Sender: TObject);
     procedure dxBarButton80Click(Sender: TObject);
+    procedure dxBarButton81Click(Sender: TObject);
 
 
   private
@@ -2297,17 +2301,10 @@ begin
 end;
 
 procedure TfmFactTrack.dxBarButton80Click(Sender: TObject);
-var   str_fact_track_trip_id : string;
-      Sp_Fact_Track_Stay_Get : TADOStoredProc;
-      exWks, exApp           : Variant;
-      row_insert             : integer;
+var   exWks, exApp           : Variant;
+      row_insert, i          : integer;
       date1,date2            : TDateTime;
-      Reg                    : TRegistry;
 begin
-  str_fact_track_trip_id := cx_GetSelectedValues(cxGrid12, 'fact_track_trip_id');
-
-  if str_fact_track_trip_id = '' then exit;
-
   Screen.Cursor := crHourglass;
   ShowTextMessage('Запуск Excel...', False);
   exApp := CreateOleObject('Excel.Application');
@@ -2316,37 +2313,27 @@ begin
 
   row_insert := 4;
 
-  Sp_Fact_Track_Stay_Get := TADOStoredProc.Create(nil);
-  Sp_Fact_Track_Stay_Get.Connection := fmMain.Lis;
-  Sp_Fact_Track_Stay_Get.ProcedureName := 'sp_fact_track_stay_GET';
-  Sp_Fact_Track_Stay_Get.Parameters.Refresh;
-  Sp_Fact_Track_Stay_Get.Parameters.ParamByName('@type_action'           ).Value := 1;
-  Sp_Fact_Track_Stay_Get.Parameters.ParamByName('@str_fact_track_trip_id').Value := str_fact_track_trip_id;
-  Sp_Fact_Track_Stay_Get.Open;
-  Sp_Fact_Track_Stay_Get.First;
+  for i:=0 to cxGrid12DBBandedTableView1.Controller.SelectedRowCount - 1 do begin
+      exWks.Range['A'+IntToStr(row_insert)].Value := i + 1;
+      exWks.Range['B'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1num_vagon.Index];
+      exWks.Range['C'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1doc_number.Index];
+      exWks.Range['D'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1node_begin_name.Index];
+      exWks.Range['E'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1node_end_name.Index];
+      if cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1date_arrival.Index] <> Null then
+        exWks.Range['F'+IntToStr(row_insert)].Value := FormatDateTime('dd.mm.yyyy', cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1date_arrival.Index]);
+      exWks.Range['G'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1grotpr_name.Index];
+      exWks.Range['H'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1grpol_name.Index];
+      exWks.Range['I'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1kargoETSNG_name.Index];
 
-  while not Sp_Fact_Track_Stay_Get.Eof do begin
-      exWks.Range['A'+IntToStr(row_insert)].Value := Sp_Fact_Track_Stay_Get.RecNo;
-      exWks.Range['B'+IntToStr(row_insert)].Value := Sp_Fact_Track_Stay_Get.FieldByName('num_vagon').AsString;
-      exWks.Range['C'+IntToStr(row_insert)].Value := Sp_Fact_Track_Stay_Get.FieldByName('doc_number').AsString;
-      exWks.Range['D'+IntToStr(row_insert)].Value := Sp_Fact_Track_Stay_Get.FieldByName('node_begin_name').AsString;
-      exWks.Range['E'+IntToStr(row_insert)].Value := Sp_Fact_Track_Stay_Get.FieldByName('node_end_name').AsString;
-      if not Sp_Fact_Track_Stay_Get.FieldByName('date_arrival').IsNull then
-        exWks.Range['F'+IntToStr(row_insert)].Value := FormatDateTime('dd.mm.yyyy', Sp_Fact_Track_Stay_Get.FieldByName('date_arrival').AsDateTime);
-      exWks.Range['G'+IntToStr(row_insert)].Value := Sp_Fact_Track_Stay_Get.FieldByName('grotpr_name').AsString;
-      exWks.Range['H'+IntToStr(row_insert)].Value := Sp_Fact_Track_Stay_Get.FieldByName('grpol_name').AsString;
-      exWks.Range['I'+IntToStr(row_insert)].Value := Sp_Fact_Track_Stay_Get.FieldByName('kargoETSNG_name').AsString;
+      if cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1date_otpr_1.Index] <> Null then
+        exWks.Range['K'+IntToStr(row_insert)].Value := FormatDateTime('dd.mm.yyyy', cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1date_otpr_1.Index]);
+      exWks.Range['L'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1days_stay_end.Index];  // простой под выгрузкой
 
-      if not Sp_Fact_Track_Stay_Get.FieldByName('date_otpr_1').IsNull then
-        exWks.Range['K'+IntToStr(row_insert)].Value := FormatDateTime('dd.mm.yyyy', Sp_Fact_Track_Stay_Get.FieldByName('date_otpr_1').AsDateTime);
-      exWks.Range['L'+IntToStr(row_insert)].Value := Sp_Fact_Track_Stay_Get.FieldByName('days_stay_end').AsString;
-
-      Sp_Fact_Track_Stay_Get.Next;
-      if not Sp_Fact_Track_Stay_Get.Eof then begin
+      if (cxGrid12DBBandedTableView1.Controller.SelectedRowCount - 1 ) <> i then begin
         xCopyRow(exApp,row_insert + 1,row_insert +1);
         inc(row_insert);
       end;
-      ShowTextMessage('Идет формирование отчета по простою. Обработано '+IntToStr(row_insert - 4)+' из '+IntToStr(Sp_Fact_Track_Stay_Get.RecordCount)+#13#10+ 'Подождите пожалуйста...', False);
+      ShowTextMessage('Идет формирование отчета по простою. Обработано '+IntToStr(row_insert - 4)+' из '+IntToStr(cxGrid12DBBandedTableView1.Controller.SelectedRowCount)+#13#10+ 'Подождите пожалуйста...', False);
   end;
 
   exApp.Rows[IntToStr(row_insert + 1) + ':' + IntToStr(row_insert + 1)].Select;
@@ -2356,10 +2343,68 @@ begin
   exApp.Range['A1'].Select;
   exApp.Visible := True;
 
-  Sp_Fact_Track_Stay_Get.Free;
   exApp := Null;  exWks := Null;
   ShowTextMessage('', True);
   Screen.Cursor := crDefault;
+end;
+
+procedure TfmFactTrack.dxBarButton81Click(Sender: TObject);
+var   exWks, exApp           : Variant;
+      row_insert, i          : integer;
+      date1,date2            : TDateTime;
+begin
+  Screen.Cursor := crHourglass;
+  ShowTextMessage('Запуск Excel...', False);
+  exApp := CreateOleObject('Excel.Application');
+  exApp.Workbooks.Add(GetDocBlob(fmMain.Lis, 86));  //Расчет претензионных требований.xlsx
+  exWks := exApp.ActiveWorkbook.WorkSheets[1];
+
+  row_insert := 4;
+
+  for i:=0 to cxGrid12DBBandedTableView1.Controller.SelectedRowCount - 1 do begin
+      exWks.Range['A'+IntToStr(row_insert)].Value := i + 1;
+      exWks.Range['B'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1num_vagon.Index];
+      exWks.Range['C'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1doc_number.Index];
+      exWks.Range['D'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1node_begin_name.Index];
+      exWks.Range['E'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1node_end_name.Index];
+      if cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1date_arrival.Index] <> Null then
+        exWks.Range['F'+IntToStr(row_insert)].Value := FormatDateTime('dd.mm.yyyy', cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1date_arrival.Index]);
+      exWks.Range['G'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1grotpr_name.Index];
+      exWks.Range['H'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1grpol_name.Index];
+      exWks.Range['I'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1kargoETSNG_name.Index];
+      exWks.Range['J'+IntToStr(row_insert)].Value := 'РИ-ИНВЕСТ';
+
+      if cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1date_otpr_1.Index] <> Null then
+        exWks.Range['K'+IntToStr(row_insert)].Value := FormatDateTime('dd.mm.yyyy', cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1date_otpr_1.Index]);
+      exWks.Range['L'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1days_stay_end.Index];  // простой под выгрузкой
+      exWks.Range['M'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1days_stay_end.Index];  // норматив
+
+      exWks.Range['T'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1firm_customer_name.Index];  // контрагент
+      exWks.Range['U'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1agreement_cod.Index];      // номер сделки
+      exWks.Range['V'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1agreement_date.Index];     // дата сделки
+      exWks.Range['W'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1contract_cod.Index];       // генеральное соглашение
+      exWks.Range['X'+IntToStr(row_insert)].Value := 'Общество с ограниченной ответственностью  "Трансойл"'; // оператор
+      exWks.Range['Y'+IntToStr(row_insert)].Value := 'Общество с ограниченной ответственностью  "Трансойл"'; // собственник
+      exWks.Range['Z'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1agreement_vid_activity.Index];
+
+      if (cxGrid12DBBandedTableView1.Controller.SelectedRowCount - 1 ) <> i then begin
+        xCopyRow(exApp,row_insert + 1,row_insert +1);
+        inc(row_insert);
+      end;
+      ShowTextMessage('Идет формирование отчета по простою. Обработано '+IntToStr(row_insert - 4)+' из '+IntToStr(cxGrid12DBBandedTableView1.Controller.SelectedRowCount)+#13#10+ 'Подождите пожалуйста...', False);
+  end;
+
+  exApp.Rows[IntToStr(row_insert + 1) + ':' + IntToStr(row_insert + 1)].Select;
+  exApp.Selection.Delete;
+
+//  exWks.PageSetup.PrintArea := exWks.Range['A1:G'+IntToStr(row_insert)].Address;
+  exApp.Range['A1'].Select;
+  exApp.Visible := True;
+
+  exApp := Null;  exWks := Null;
+  ShowTextMessage('', True);
+  Screen.Cursor := crDefault;
+
 end;
 
 procedure TfmFactTrack.dxBarButton86Click(Sender: TObject);

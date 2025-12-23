@@ -266,6 +266,7 @@ type
     dxBarButton73: TdxBarButton;
     dxBarButton76: TdxBarButton;
     dxBarButton99: TdxBarButton;
+    dxBarButton100: TdxBarButton;
     procedure dxBarButton61Click(Sender: TObject);
     procedure dxBarButton58Click(Sender: TObject);
     procedure dxBarSubItem15Popup(Sender: TObject);
@@ -378,6 +379,7 @@ type
     procedure dxBarButton16Click(Sender: TObject);
     procedure dxBarButton33Click(Sender: TObject);
     procedure dxBarButton53Click(Sender: TObject);
+    procedure dxBarButton100Click(Sender: TObject);
   private
     Reg: TRegistry;
     procedure DisplayHint(Sender:TObject);
@@ -702,6 +704,20 @@ begin
   dxStatusBar1.Panels[0].Text := GetLongHint(Application.Hint);
 end;
 
+
+procedure TfmMain.dxBarButton100Click(Sender: TObject);
+type
+  TFunc = function(AppHand: THandle; str_connect: string) : variant;
+var
+ FFactTrackTender : TFunc;
+           handle : THandle;
+                v : Variant;
+begin
+  handle := LoadLibrary('user.dll');
+  @FFactTrackTender := GetProcAddress(handle, 'CreateWndFactTrackTender');
+  v := FFactTrackTender(Application.Handle, Lis.ConnectionString);
+  FreeLibrary(handle);
+end;
 
 procedure TfmMain.dxBarButton104Click(Sender: TObject);
 type

@@ -26,7 +26,7 @@ object fmFactTrackFilesAdd: TfmFactTrackFilesAdd
       34)
     object BitBtn2: TBitBtn
       Left = 346
-      Top = 6
+      Top = 4
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
@@ -231,7 +231,7 @@ object fmFactTrackFilesAdd: TfmFactTrackFilesAdd
           Glyph.SourceDPI = 96
           Glyph.Data = {
             424D460300000000000036000000280000000E0000000E000000010020000000
-            0000000000007412000074120000000000000000000000000000000000000000
+            000000000000C40E0000C40E0000000000000000000000000000000000000000
             0000000000000000000000000000000000000000000000000000000000000000
             0000000000000000000000000000000000000000000000000000866E5CCC9077
             64CC89715ECC000000CC000000CC000000CC000000E7000000FF000000FF0000
@@ -280,6 +280,9 @@ object fmFactTrackFilesAdd: TfmFactTrackFilesAdd
       StyleHot.LookAndFeel.Kind = lfUltraFlat
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Width = 352
     end
@@ -310,6 +313,9 @@ object fmFactTrackFilesAdd: TfmFactTrackFilesAdd
       StyleHot.LookAndFeel.Kind = lfUltraFlat
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 3
       Width = 146
     end
@@ -338,6 +344,9 @@ object fmFactTrackFilesAdd: TfmFactTrackFilesAdd
       StyleHot.LookAndFeel.Kind = lfUltraFlat
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
       Width = 226
     end
@@ -365,6 +374,9 @@ object fmFactTrackFilesAdd: TfmFactTrackFilesAdd
       StyleHot.LookAndFeel.Kind = lfUltraFlat
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 2
       Width = 120
     end
@@ -384,6 +396,9 @@ object fmFactTrackFilesAdd: TfmFactTrackFilesAdd
       StyleHot.LookAndFeel.Kind = lfUltraFlat
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 4
       Width = 146
     end

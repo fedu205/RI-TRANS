@@ -18,7 +18,7 @@ uses
   dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine,
   dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxSkinscxPCPainter, dxSkinsdxBarPainter, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
   dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, System.ImageList, cxImageList, registry,
-  dxSkinTheBezier, cxLabel, dxDateRanges, dxSkinOffice2019Colorful, dxScrollbarAnnotations;
+  dxSkinTheBezier, cxLabel, dxDateRanges, dxSkinOffice2019Colorful, dxScrollbarAnnotations, dxCoreGraphics;
 
 type
   TfmContractAdd = class(TForm)

@@ -12,9 +12,7 @@ object fmPretenziaAdd: TfmPretenziaAdd
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel2: TPanel
     Left = 0
@@ -228,6 +226,9 @@ object fmPretenziaAdd: TfmPretenziaAdd
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       TabOrder = 0
       Width = 223
     end
@@ -335,6 +336,9 @@ object fmPretenziaAdd: TfmPretenziaAdd
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       TabOrder = 1
       Width = 223
     end
@@ -356,6 +360,9 @@ object fmPretenziaAdd: TfmPretenziaAdd
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       TabOrder = 2
       Width = 121
     end
@@ -377,6 +384,9 @@ object fmPretenziaAdd: TfmPretenziaAdd
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       TabOrder = 3
       Width = 121
     end
@@ -406,6 +416,9 @@ object fmPretenziaAdd: TfmPretenziaAdd
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       TabOrder = 4
       Width = 144
     end
@@ -440,6 +453,9 @@ object fmPretenziaAdd: TfmPretenziaAdd
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       TabOrder = 5
       Width = 77
     end
@@ -464,6 +480,9 @@ object fmPretenziaAdd: TfmPretenziaAdd
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       TabOrder = 6
       Text = #1048#1089#1093#1086#1076#1103#1097#1072#1103
       Width = 223
@@ -490,6 +509,7 @@ object fmPretenziaAdd: TfmPretenziaAdd
         PopupMenu = dxBarPopupMenu2
         OnDblClick = dxBarButton9Click
         Navigator.Buttons.CustomButtons = <>
+        ScrollbarAnnotations.CustomAnnotations = <>
         OnCustomDrawCell = cxGridDBBandedTableView1CustomDrawCell
         DataController.DataSource = DS_Files
         DataController.Summary.DefaultGroupSummaryItems = <>
@@ -747,6 +767,9 @@ object fmPretenziaAdd: TfmPretenziaAdd
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       TabOrder = 0
       Width = 340
     end
@@ -876,6 +899,9 @@ object fmPretenziaAdd: TfmPretenziaAdd
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       TabOrder = 5
       Height = 25
       Width = 302
@@ -903,6 +929,9 @@ object fmPretenziaAdd: TfmPretenziaAdd
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       TabOrder = 6
       Width = 101
     end
@@ -936,6 +965,9 @@ object fmPretenziaAdd: TfmPretenziaAdd
       StyleHot.LookAndFeel.Kind = lfOffice11
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       TabOrder = 7
       Height = 25
       Width = 302
@@ -966,6 +998,9 @@ object fmPretenziaAdd: TfmPretenziaAdd
       StyleHot.LookAndFeel.Kind = lfUltraFlat
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       TabOrder = 0
       Height = 88
       Width = 525
@@ -1020,8 +1055,8 @@ object fmPretenziaAdd: TfmPretenziaAdd
   object dxBarManager1: TdxBarManager
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Tahoma'
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Categories.Strings = (
       'Default')

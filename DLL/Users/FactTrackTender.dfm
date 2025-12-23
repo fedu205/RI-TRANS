@@ -59,7 +59,6 @@ object fmFactTrackTender: TfmFactTrackTender
     LookAndFeel.NativeStyle = False
     LookAndFeel.ScrollbarMode = sbmClassic
     LookAndFeel.SkinName = 'Office2007Black'
-    ExplicitHeight = 415
     object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
       PopupMenu = dxBarPopup_Tender
       OnDblClick = dxBarButton2Click
@@ -70,7 +69,7 @@ object fmFactTrackTender: TfmFactTrackTender
       OnFocusedItemChanged = cxGrid1DBBandedTableView1FocusedItemChanged
       DataController.DataSource = DS_Tender
       DataController.Filter.OnChanged = cxGrid1DBBandedTableView1DataControllerFilterChanged
-      DataController.KeyFieldNames = 'contract_period_close_id'
+      DataController.KeyFieldNames = 'tender_id'
       DataController.Options = [dcoCaseInsensitive, dcoAssignGroupingValues, dcoAssignMasterDetailKeys, dcoSaveExpanding]
       DataController.Summary.DefaultGroupSummaryItems = <>
       DataController.Summary.FooterSummaryItems = <
@@ -95,6 +94,7 @@ object fmFactTrackTender: TfmFactTrackTender
       OptionsView.HeaderFilterButtonShowMode = fbmButton
       OptionsView.HeaderHeight = 35
       OptionsView.BandHeaders = False
+      Styles.Content = cxStyle_ColorWhite
       OnCustomDrawColumnHeader = cxGrid1DBBandedTableView1CustomDrawColumnHeader
       OnCustomDrawFooterCell = cxGrid1DBBandedTableView1CustomDrawColumnHeader
       Bands = <

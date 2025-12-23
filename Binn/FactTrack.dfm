@@ -2860,6 +2860,26 @@ object fmFactTrack: TfmFactTrack
             Position.ColIndex = 19
             Position.RowIndex = 0
           end
+          object cxGrid12DBBandedTableView1grotpr_name: TcxGridDBBandedColumn
+            Caption = #1043#1088#1091#1079#1086#1086#1090#1087#1088#1072#1074#1080#1090#1077#1083#1100
+            DataBinding.FieldName = 'grotpr_name'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Width = 66
+            Position.BandIndex = 0
+            Position.ColIndex = 29
+            Position.RowIndex = 0
+          end
+          object cxGrid12DBBandedTableView1grpol_name: TcxGridDBBandedColumn
+            Caption = #1043#1088#1091#1079#1086#1087#1086#1083#1091#1095#1072#1090#1077#1083#1100
+            DataBinding.FieldName = 'grpol_name'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Width = 66
+            Position.BandIndex = 0
+            Position.ColIndex = 30
+            Position.RowIndex = 0
+          end
         end
         object cxGrid12Level1: TcxGridLevel
           GridView = cxGrid12DBBandedTableView1
@@ -5168,6 +5188,11 @@ object fmFactTrack: TfmFactTrack
         end
         item
           Visible = True
+          ItemName = 'dxBarButton81'
+        end
+        item
+          BeginGroup = True
+          Visible = True
           ItemName = 'N12'
         end
         item
@@ -6332,6 +6357,14 @@ object fmFactTrack: TfmFactTrack
       Visible = ivAlways
       ImageIndex = 8
       OnClick = dxBarButton80Click
+    end
+    object dxBarButton81: TdxBarButton
+      Caption = #1056#1072#1089#1095#1077#1090' '#1087#1088#1077#1090#1077#1085#1079#1080#1086#1085#1085#1099#1093' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1081
+      Category = 0
+      Hint = #1056#1072#1089#1095#1077#1090' '#1087#1088#1077#1090#1077#1085#1079#1080#1086#1085#1085#1099#1093' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1081
+      Visible = ivAlways
+      ImageIndex = 8
+      OnClick = dxBarButton81Click
     end
     object N12: TdxBarButton
       Caption = #1054#1090#1095#1105#1090' '#1087#1086' '#1074#1072#1075#1086#1085#1072#1084' (44)'

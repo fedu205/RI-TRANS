@@ -25,7 +25,7 @@ uses
   dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
   dxSkinXmas2008Blue, Vcl.ComCtrls, dxCore, cxDateUtils, cxClasses, dxSkinBasic,
   dxSkinOffice2019Black, dxSkinOffice2019Colorful, dxSkinOffice2019DarkGray,
-  dxSkinOffice2019White, dxSkinTheBezier, dxSkinWXI;
+  dxSkinOffice2019White, dxSkinTheBezier, dxSkinWXI, dxCoreGraphics;
 
 type
   TfmFactTrackFilesAdd = class(TForm)

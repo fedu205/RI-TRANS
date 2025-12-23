@@ -25,7 +25,7 @@ uses
   dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
   dxSkinXmas2008Blue, ComCtrls, dxCore, cxDateUtils, dxSkinscxPCPainter,
   cxNavigator, dxSkinsdxBarPainter, System.ImageList, cxImageList,
-  cxDataControllerConditionalFormattingRulesManagerDialog, dxSkinTheBezier, dxDateRanges;
+  cxDataControllerConditionalFormattingRulesManagerDialog, dxSkinTheBezier, dxDateRanges, dxCoreGraphics, dxScrollbarAnnotations;
 
 type
   TfmPretenziaAdd = class(TForm)
@@ -467,7 +467,7 @@ begin
     end;
 
     try
-      fmDocBlobAdd := TfmDocBlobAdd.Create(Application, Fusr_pwd);
+      fmDocBlobAdd := TfmDocBlobAdd.Create(Application, Fconnect);
       fmDocBlobAdd._SetDocType     := '8';
       fmDocBlobAdd._SetContractID  := iif(cxLookupComboBox16.EditValue = null, -9, cxLookupComboBox16.EditValue);
       fmDocBlobAdd._SetPretenziaID := Fpretenzia_id;
