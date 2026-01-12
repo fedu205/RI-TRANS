@@ -27,7 +27,7 @@ uses
   cxButtons, cxRadioGroup, Data.DB, Datasnap.DBClient, cxClasses,
   cxPropertiesStore, Data.Win.ADODB, Raznoe, Default, Filter, Period, DateUtils, dxSkinTheBezier, StrUtils,
   dxBar, dxSkinOffice2019Colorful, dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray, dxSkinOffice2019White,
-  dxSkinWXI;
+  dxSkinWXI, dxCoreGraphics;
 
 type
   TfmShapeRateAdd2 = class(TForm)
