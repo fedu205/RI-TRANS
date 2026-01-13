@@ -267,6 +267,8 @@ type
     dxBarButton76: TdxBarButton;
     dxBarButton99: TdxBarButton;
     dxBarButton100: TdxBarButton;
+    dxBarButton102: TdxBarButton;
+    dxBarButton103: TdxBarButton;
     procedure dxBarButton61Click(Sender: TObject);
     procedure dxBarButton58Click(Sender: TObject);
     procedure dxBarSubItem15Popup(Sender: TObject);
@@ -380,6 +382,7 @@ type
     procedure dxBarButton33Click(Sender: TObject);
     procedure dxBarButton53Click(Sender: TObject);
     procedure dxBarButton100Click(Sender: TObject);
+    procedure dxBarButton102Click(Sender: TObject);
   private
     Reg: TRegistry;
     procedure DisplayHint(Sender:TObject);
@@ -404,7 +407,7 @@ var
 implementation
 
 uses Contract, Fact, Other, Raznoe, ComObj, FactInc, ClientInvoice, FirmBalance, Pay, Firm, InvoiceScore, FactTrack, Period, Filter,
-    LoadFact, Acts, OrdersAgree, FactTech, PlanClient, ZFTOScore, OrdersPay, FactSum, BargainListAdd,
+    LoadFact, Acts, OrdersAgree, FactTech, PlanClient, ZFTOScore, OrdersPay, FactSum, BargainListAdd, PretenziaShape,
     UsersActive, TariffSupportFunctions, Stat, Budget, VagonArenda, TrafficManagment,  Agree2, ClientFrahtCard2,  EffectSPS;
 
 {$R *.DFM}
@@ -717,6 +720,21 @@ begin
   @FFactTrackTender := GetProcAddress(handle, 'CreateWndFactTrackTender');
   v := FFactTrackTender(Application.Handle, Lis.ConnectionString);
   FreeLibrary(handle);
+end;
+
+procedure TfmMain.dxBarButton102Click(Sender: TObject);
+var i : integer;
+begin
+  if not LisCheck(Lis.ConnectionString) then
+    Exit;
+
+  for i:=0 to MDIChildCount-1 Do
+    if (MDIChildren[i].ClassName = 'TfmPretenziaShape') then begin
+      MDIChildren[i].Show;
+      Exit
+    end;
+  fmPretenziaShape := TfmPretenziaShape.Create(Application, 0, False);
+
 end;
 
 procedure TfmMain.dxBarButton104Click(Sender: TObject);

@@ -184,8 +184,8 @@
         <DCCReference Include="LoadFactAdd.pas">
             <Form>fmLoadFactAdd</Form>
         </DCCReference>
-        <DCCReference Include="PayAdd.pas">
-            <Form>fmPayAdd</Form>
+        <DCCReference Include="PretenziaShapeAdd.pas">
+            <Form>fmPretenziaShapeAdd</Form>
         </DCCReference>
         <DCCReference Include="FactInc.pas">
             <Form>fmFactInc</Form>
@@ -205,8 +205,8 @@
         <DCCReference Include="Filter.pas">
             <Form>fmFilter</Form>
         </DCCReference>
-        <DCCReference Include="Pay.pas">
-            <Form>fmPay</Form>
+        <DCCReference Include="PretenziaShape.pas">
+            <Form>fmPretenziaShape</Form>
         </DCCReference>
         <DCCReference Include="FirmAdd.pas">
             <Form>fmFirmAdd</Form>
@@ -357,6 +357,14 @@
         </DCCReference>
         <DCCReference Include="FactIncAdd.pas">
             <Form>fmFactIncAdd</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Pay.pas">
+            <Form>fmPay</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="PayAdd.pas">
+            <Form>fmPayAdd</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
