@@ -2757,8 +2757,9 @@ object fmFactTrack: TfmFactTrack
             Position.ColIndex = 18
             Position.RowIndex = 0
           end
-          object cxGrid12DBBandedTableView1Column1: TcxGridDBBandedColumn
+          object cxGrid12DBBandedTableView1norm_days_stay_begin: TcxGridDBBandedColumn
             Caption = #1053#1086#1088#1084'. '#1085#1072' '#1055#1086#1075#1088#1091#1079#1082#1091
+            DataBinding.FieldName = 'norm_days_stay_begin'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
@@ -2766,8 +2767,9 @@ object fmFactTrack: TfmFactTrack
             Position.ColIndex = 20
             Position.RowIndex = 0
           end
-          object cxGrid12DBBandedTableView1Column2: TcxGridDBBandedColumn
+          object cxGrid12DBBandedTableView1norm_days_stay_end: TcxGridDBBandedColumn
             Caption = #1053#1086#1088#1084'. '#1085#1072' '#1056#1072#1079#1075#1088#1091#1079#1082#1091
+            DataBinding.FieldName = 'norm_days_stay_end'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 66
@@ -2775,8 +2777,9 @@ object fmFactTrack: TfmFactTrack
             Position.ColIndex = 21
             Position.RowIndex = 0
           end
-          object cxGrid12DBBandedTableView1Column3: TcxGridDBBandedColumn
+          object cxGrid12DBBandedTableView1over_days_begin: TcxGridDBBandedColumn
             Caption = #1057#1074#1077#1088#1093'.'#1085#1086#1088#1084'. '#1085#1072' '#1087#1086#1075#1088#1091#1079#1082#1077
+            DataBinding.FieldName = 'over_days_begin'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 79
@@ -2784,8 +2787,9 @@ object fmFactTrack: TfmFactTrack
             Position.ColIndex = 22
             Position.RowIndex = 0
           end
-          object cxGrid12DBBandedTableView1Column4: TcxGridDBBandedColumn
+          object cxGrid12DBBandedTableView1over_days_end: TcxGridDBBandedColumn
             Caption = #1057#1074#1077#1088#1093'.'#1085#1086#1088#1084'. '#1085#1072' '#1074#1099#1075#1088#1091#1079#1082#1077
+            DataBinding.FieldName = 'over_days_end'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 76
@@ -2793,8 +2797,9 @@ object fmFactTrack: TfmFactTrack
             Position.ColIndex = 23
             Position.RowIndex = 0
           end
-          object cxGrid12DBBandedTableView1Column5: TcxGridDBBandedColumn
+          object cxGrid12DBBandedTableView1tarif_begin: TcxGridDBBandedColumn
             Caption = #1058#1072#1088#1080#1092' '#1085#1072' '#1087#1086#1075#1088#1091#1079#1082#1077
+            DataBinding.FieldName = 'tarif_begin'
             DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '# ##0.00'
@@ -2804,8 +2809,9 @@ object fmFactTrack: TfmFactTrack
             Position.ColIndex = 24
             Position.RowIndex = 0
           end
-          object cxGrid12DBBandedTableView1Column6: TcxGridDBBandedColumn
+          object cxGrid12DBBandedTableView1tarif_end: TcxGridDBBandedColumn
             Caption = #1058#1072#1088#1080#1092' '#1085#1072' '#1074#1099#1075#1088#1091#1079#1082#1077
+            DataBinding.FieldName = 'tarif_end'
             DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '# ##0.00'
