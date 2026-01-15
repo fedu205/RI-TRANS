@@ -273,6 +273,7 @@ implementation
 uses main, Contract;
 
 constructor TfmShapeRateAdd2.Create(AOwner: TApplication; service_type: integer);
+var i : integer;
 begin
   Screen.Cursor := crHourglass;
   inherited Create(AOwner);
@@ -294,6 +295,15 @@ begin
     Panel2.Color := RGB(198, 227, 181);
     cxLabel2.Caption := 'Агент......................................';
   end;
+
+  //------------------------------------
+  if LisCheck(fmMain.Lis.ConnectionString) then begin
+    cxComboBox4.Properties.Items.Clear;
+    for i:=2001 to YearOf(Date) + 1 do begin
+      cxComboBox4.Properties.Items.Insert(0, IntToStr(i));
+    end;
+  end;
+  // -------------------------------------
 
   Query_NDS.Open;
   cxLookupComboBox9.EditValue := Query_NDS.FieldByName('inf_obj_id').Value;
