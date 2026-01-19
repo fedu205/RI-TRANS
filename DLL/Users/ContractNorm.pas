@@ -46,8 +46,13 @@ type
     cxLookupComboBox1: TcxLookupComboBox;
     cxPropertiesStore1: TcxPropertiesStore;
     cxComboBox1: TcxComboBox;
+    cxLabel9: TcxLabel;
+    cxCurrencyEdit4: TcxCurrencyEdit;
+    cxLabel11: TcxLabel;
+    cxCurrencyEdit5: TcxCurrencyEdit;
     procedure cxButton1Click(Sender: TObject);
     procedure cxCurrencyEdit2PropertiesEditValueChanged(Sender: TObject);
+    procedure cxCurrencyEdit5PropertiesEditValueChanged(Sender: TObject);
   private
     Fconnect : TADOConnection;
     Fcontract_norm_id : integer;
@@ -56,7 +61,8 @@ type
 
     procedure SetUpdate(contract_norm_id: integer);
     procedure SetInsert(contract_id: integer);
-    function SetRateWithNDS: Variant;
+    function SetRate14WithNDS: Variant;
+    function SetRate5WithNDS: Variant;
   public
     constructor Create(AOwner: TApplication; str_connect: string);
   published
@@ -166,8 +172,11 @@ begin
   cxDateEdit1.EditValue := Q.FieldByName('date_begin').Value;
   cxDateEdit2.EditValue := Q.FieldByName('date_end').Value;
   cxCurrencyEdit1.EditValue := Q.FieldByName('norm_days').Value;
-  cxCurrencyEdit2.EditValue := Q.FieldByName('norm_sum_without_nds').Value;
-  cxCurrencyEdit3.EditValue := Q.FieldByName('norm_sum_with_nds').Value;
+
+  cxCurrencyEdit2.EditValue := Q.FieldByName('norm_14_sum_without_nds').Value;
+  cxCurrencyEdit3.EditValue := Q.FieldByName('norm_14_sum_with_nds').Value;
+  cxCurrencyEdit5.EditValue := Q.FieldByName('norm_5_sum_without_nds').Value;
+  cxCurrencyEdit4.EditValue := Q.FieldByName('norm_5_sum_with_nds').Value;
 
   cxLookupComboBox1.EditValue := Q.FieldByName('currency_id').Value;
   cxLookupComboBox2.EditValue := Q.FieldByName('nds_id').Value;
@@ -188,17 +197,19 @@ begin
   SP.ProcedureName := 'sp_contract_norm_modify';
   SP.Parameters.Refresh;
 
-  SP.Parameters.ParamByName('@type_action'         ).Value := Ftype_action;
-  SP.Parameters.ParamByName('@contract_norm_id'    ).Value := iif(Fcontract_norm_id=-9, null, Fcontract_norm_id);
-  SP.Parameters.ParamByName('@contract_id'         ).Value := iif(Fcontract_id=-9, null, Fcontract_id);
-  SP.Parameters.ParamByName('@date_begin'          ).Value := cxDateEdit1.EditValue;
-  SP.Parameters.ParamByName('@date_end'            ).Value := cxDateEdit2.EditValue;
-  SP.Parameters.ParamByName('@norm_days'           ).Value := cxCurrencyEdit1.EditValue;
-  SP.Parameters.ParamByName('@norm_sum_without_nds').Value := cxCurrencyEdit2.EditValue;
-  SP.Parameters.ParamByName('@norm_sum_with_nds'   ).Value := cxCurrencyEdit3.EditValue;
-  SP.Parameters.ParamByName('@currency_id'         ).Value := cxLookupComboBox1.EditValue;
-  SP.Parameters.ParamByName('@nds_id'              ).Value := cxLookupComboBox2.EditValue;
-  SP.Parameters.ParamByName('@norm_type'           ).Value := cxComboBox1.ItemIndex;
+  SP.Parameters.ParamByName('@type_action'      ).Value := Ftype_action;
+  SP.Parameters.ParamByName('@contract_norm_id' ).Value := iif(Fcontract_norm_id=-9, null, Fcontract_norm_id);
+  SP.Parameters.ParamByName('@contract_id'      ).Value := iif(Fcontract_id=-9, null, Fcontract_id);
+  SP.Parameters.ParamByName('@date_begin'       ).Value := cxDateEdit1.EditValue;
+  SP.Parameters.ParamByName('@date_end'         ).Value := cxDateEdit2.EditValue;
+  SP.Parameters.ParamByName('@norm_days'        ).Value := cxCurrencyEdit1.EditValue;
+  SP.Parameters.ParamByName('@norm_14_sum_without_nds').Value := cxCurrencyEdit2.EditValue;
+  SP.Parameters.ParamByName('@norm_14_sum_with_nds'   ).Value := cxCurrencyEdit3.EditValue;
+  SP.Parameters.ParamByName('@norm_5_sum_without_nds' ).Value := cxCurrencyEdit5.EditValue;
+  SP.Parameters.ParamByName('@norm_5_sum_with_nds'    ).Value := cxCurrencyEdit4.EditValue;
+  SP.Parameters.ParamByName('@currency_id'           ).Value := cxLookupComboBox1.EditValue;
+  SP.Parameters.ParamByName('@nds_id'                ).Value := cxLookupComboBox2.EditValue;
+  SP.Parameters.ParamByName('@norm_type'             ).Value := cxComboBox1.ItemIndex;
   SP.ExecProc;
 
   SP.Free;
@@ -207,13 +218,26 @@ end;
 
 procedure TfmContractNorm.cxCurrencyEdit2PropertiesEditValueChanged(Sender: TObject);
 begin
-  cxCurrencyEdit3.EditValue := SetRateWithNDS;
+  cxCurrencyEdit3.EditValue := SetRate14WithNDS;
 end;
 
-function TfmContractNorm.SetRateWithNDS: Variant;
+procedure TfmContractNorm.cxCurrencyEdit5PropertiesEditValueChanged(Sender: TObject);
+begin
+  cxCurrencyEdit4.EditValue := SetRate5WithNDS;
+end;
+
+function TfmContractNorm.SetRate14WithNDS: Variant;
 begin
   if Query_NDS.Locate('inf_obj_id', cxLookupComboBox2.EditValue, []) then
     Result := cxCurrencyEdit2.Value * (1.00 + Query_NDS.FieldByName('inf_obj_cod_int').AsInteger/100)
+  else
+    Result := 0;
+end;
+
+function TfmContractNorm.SetRate5WithNDS: Variant;
+begin
+  if Query_NDS.Locate('inf_obj_id', cxLookupComboBox2.EditValue, []) then
+    Result := cxCurrencyEdit5.Value * (1.00 + Query_NDS.FieldByName('inf_obj_cod_int').AsInteger/100)
   else
     Result := 0;
 end;

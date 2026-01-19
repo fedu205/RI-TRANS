@@ -784,7 +784,7 @@ object fmContract: TfmContract
         Height = 437
         Align = alClient
         TabOrder = 0
-        Properties.ActivePage = cxTabSheet5
+        Properties.ActivePage = cxTabSheet4
         Properties.CustomButtons.Buttons = <>
         LookAndFeel.Kind = lfUltraFlat
         LookAndFeel.NativeStyle = False
@@ -1729,12 +1729,12 @@ object fmContract: TfmContract
             item
               Format = '#,##0.00'
               Kind = skSum
-              Column = cxGrid6DBBandedTableView1norm_sum_with_nds
+              Column = cxGrid6DBBandedTableView1norm_14_sum_with_nds
             end
             item
               Format = '#,##0.00'
               Kind = skSum
-              Column = cxGrid6DBBandedTableView1norm_sum_without_nds
+              Column = cxGrid6DBBandedTableView1norm_14_sum_without_nds
             end>
           DataController.Summary.SummaryGroups = <>
           Filtering.ColumnFilteredItemsList = True
@@ -1821,14 +1821,14 @@ object fmContract: TfmContract
             DataBinding.FieldName = 'norm_days'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
-            Width = 81
+            Width = 80
             Position.BandIndex = 0
             Position.ColIndex = 4
             Position.RowIndex = 0
           end
-          object cxGrid6DBBandedTableView1norm_sum_without_nds: TcxGridDBBandedColumn
-            Caption = #1057#1090#1072#1074#1082#1072', '#1073#1077#1079' '#1053#1044#1057
-            DataBinding.FieldName = 'norm_sum_without_nds'
+          object cxGrid6DBBandedTableView1norm_14_sum_without_nds: TcxGridDBBandedColumn
+            Caption = #1057#1090#1072#1074#1082#1072' 1-4 '#1089#1091#1090', '#1073#1077#1079' '#1053#1044#1057
+            DataBinding.FieldName = 'norm_14_sum_without_nds'
             DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0.00'
@@ -1838,9 +1838,9 @@ object fmContract: TfmContract
             Position.ColIndex = 5
             Position.RowIndex = 0
           end
-          object cxGrid6DBBandedTableView1norm_sum_with_nds: TcxGridDBBandedColumn
-            Caption = #1057#1090#1072#1074#1082#1072', '#1089' '#1053#1044#1057
-            DataBinding.FieldName = 'norm_sum_with_nds'
+          object cxGrid6DBBandedTableView1norm_14_sum_with_nds: TcxGridDBBandedColumn
+            Caption = #1057#1090#1072#1074#1082#1072' 1-4 '#1089#1091#1090', '#1089' '#1053#1044#1057
+            DataBinding.FieldName = 'norm_14_sum_with_nds'
             DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
             Properties.DisplayFormat = '#,##0.00'
@@ -1857,7 +1857,7 @@ object fmContract: TfmContract
             HeaderAlignmentVert = vaTop
             Width = 70
             Position.BandIndex = 0
-            Position.ColIndex = 7
+            Position.ColIndex = 9
             Position.RowIndex = 0
           end
           object cxGrid6DBBandedTableView1norm_type_name: TcxGridDBBandedColumn
@@ -1867,7 +1867,33 @@ object fmContract: TfmContract
             HeaderAlignmentVert = vaTop
             Width = 93
             Position.BandIndex = 0
+            Position.ColIndex = 10
+            Position.RowIndex = 0
+          end
+          object cxGrid6DBBandedTableView1norm_5_sum_with_nds: TcxGridDBBandedColumn
+            Caption = #1057#1090#1072#1074#1082#1072' '#1089' 5 '#1089#1091#1090', '#1089' '#1053#1044#1057
+            DataBinding.FieldName = 'norm_5_sum_with_nds'
+            DataBinding.IsNullValueType = True
+            PropertiesClassName = 'TcxCurrencyEditProperties'
+            Properties.DisplayFormat = '#,##0.00'
+            HeaderAlignmentVert = vaTop
+            HeaderGlyphAlignmentVert = vaTop
+            Width = 79
+            Position.BandIndex = 0
             Position.ColIndex = 8
+            Position.RowIndex = 0
+          end
+          object cxGrid6DBBandedTableView1norm_5_sum_without_nds: TcxGridDBBandedColumn
+            Caption = #1057#1090#1072#1074#1082#1072' '#1089' 5 '#1089#1091#1090', '#1073#1077#1079' '#1053#1044#1057
+            DataBinding.FieldName = 'norm_5_sum_without_nds'
+            DataBinding.IsNullValueType = True
+            PropertiesClassName = 'TcxCurrencyEditProperties'
+            Properties.DisplayFormat = '#,##0.00'
+            HeaderAlignmentVert = vaTop
+            HeaderGlyphAlignmentVert = vaTop
+            Width = 77
+            Position.BandIndex = 0
+            Position.ColIndex = 7
             Position.RowIndex = 0
           end
         end

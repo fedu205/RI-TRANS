@@ -251,9 +251,9 @@ type
     cxGrid6DBBandedTableView1currency_id: TcxGridDBBandedColumn;
     cxGrid6DBBandedTableView1brief_name: TcxGridDBBandedColumn;
     cxGrid6DBBandedTableView1norm_days: TcxGridDBBandedColumn;
-    cxGrid6DBBandedTableView1norm_sum_without_nds: TcxGridDBBandedColumn;
+    cxGrid6DBBandedTableView1norm_14_sum_without_nds: TcxGridDBBandedColumn;
     cxGrid6DBBandedTableView1nds_name: TcxGridDBBandedColumn;
-    cxGrid6DBBandedTableView1norm_sum_with_nds: TcxGridDBBandedColumn;
+    cxGrid6DBBandedTableView1norm_14_sum_with_nds: TcxGridDBBandedColumn;
     cxStyleRepository1: TcxStyleRepository;
     cxStyle_Bold: TcxStyle;
     cxStyle_AgreeFactInc_Between: TcxStyle;
@@ -282,6 +282,8 @@ type
     cxStyle_BlueBold: TcxStyle;
     cxStyle_ColorWhite: TcxStyle;
     cxGrid6DBBandedTableView1norm_type_name: TcxGridDBBandedColumn;
+    cxGrid6DBBandedTableView1norm_5_sum_with_nds: TcxGridDBBandedColumn;
+    cxGrid6DBBandedTableView1norm_5_sum_without_nds: TcxGridDBBandedColumn;
     procedure FormDestroy(Sender: TObject);
     procedure dxBarButton7Click(Sender: TObject);
     procedure dxBarSubItem3Popup(Sender: TObject);
