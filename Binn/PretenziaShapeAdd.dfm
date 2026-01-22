@@ -2,10 +2,10 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
   Left = 493
   Top = 144
   Caption = #1055#1088#1077#1090#1077#1085#1079#1080#1103' ('#8470' '#1079#1072#1087#1080#1089#1080'...)'
-  ClientHeight = 511
+  ClientHeight = 303
   ClientWidth = 404
   Color = clBtnFace
-  Constraints.MinHeight = 550
+  Constraints.MinHeight = 350
   Constraints.MinWidth = 420
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -856,85 +856,28 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
     Left = 0
     Top = 56
     Width = 404
-    Height = 135
+    Height = 73
     Align = alTop
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 1
-    DesignSize = (
-      404
-      135)
     object Label1: TLabel
       Left = 4
-      Top = 84
+      Top = 35
       Width = 118
       Height = 13
       Caption = #1057#1091#1084#1084#1072'............................'
     end
-    object Label7: TLabel
-      Left = 4
-      Top = 11
-      Width = 93
-      Height = 13
-      Caption = #8470' '#1087#1083#1072#1090#1105#1078#1072'............'
-    end
-    object Label9: TLabel
-      Left = 4
-      Top = 111
-      Width = 106
-      Height = 13
-      Caption = #1057#1091#1084#1084#1072' '#1053#1044#1057'...............'
-    end
     object Label5: TLabel
       Left = 4
-      Top = 60
-      Width = 141
+      Top = 11
+      Width = 151
       Height = 13
-      Caption = #1044#1072#1090#1072' '#1087#1083#1072#1090#1077#1078#1072'.......................'
-    end
-    object Label11: TLabel
-      Left = 4
-      Top = 36
-      Width = 123
-      Height = 13
-      Caption = '1'#1057' '#8470' '#1074#1093#1086#1076'./'#1080#1089#1093'...............'
-    end
-    object cxTextEdit4: TcxTextEdit
-      Left = 95
-      Top = 6
-      Anchors = [akLeft, akTop, akRight]
-      ParentFont = False
-      Properties.Alignment.Horz = taLeftJustify
-      Style.Color = clWindow
-      Style.Font.Charset = DEFAULT_CHARSET
-      Style.Font.Color = clBlue
-      Style.Font.Height = -11
-      Style.Font.Name = 'MS Sans Serif'
-      Style.Font.Style = [fsBold]
-      Style.LookAndFeel.NativeStyle = False
-      Style.LookAndFeel.ScrollbarMode = sbmClassic
-      Style.LookAndFeel.SkinName = 'Coffee'
-      Style.Shadow = False
-      Style.IsFontAssigned = True
-      StyleDisabled.LookAndFeel.NativeStyle = False
-      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
-      StyleDisabled.TextColor = clBlack
-      StyleFocused.LookAndFeel.NativeStyle = False
-      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleFocused.LookAndFeel.SkinName = 'Coffee'
-      StyleHot.LookAndFeel.NativeStyle = False
-      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleHot.LookAndFeel.SkinName = 'Coffee'
-      StyleReadOnly.LookAndFeel.NativeStyle = False
-      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
-      TabOrder = 0
-      Width = 304
+      Caption = #1044#1072#1090#1072' '#1087#1088#1077#1090#1077#1085#1079#1080#1080'.......................'
     end
     object cxCurrencyEdit1: TcxCurrencyEdit
       Left = 95
-      Top = 80
+      Top = 31
       EditValue = 0.000000000000000000
       Properties.DisplayFormat = '#,##0.00'
       Properties.EditFormat = '0.00'
@@ -956,41 +899,12 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
       StyleReadOnly.LookAndFeel.NativeStyle = False
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
-      TabOrder = 2
-      Width = 140
-    end
-    object cxCurrencyEdit2: TcxCurrencyEdit
-      Left = 95
-      Top = 105
-      Properties.DisplayFormat = '#,##0.00'
-      Properties.EditFormat = '#,##0.00'
-      Properties.ReadOnly = True
-      Properties.ValidateOnEnter = False
-      Style.Color = clBtnFace
-      Style.LookAndFeel.NativeStyle = False
-      Style.LookAndFeel.ScrollbarMode = sbmClassic
-      Style.LookAndFeel.SkinName = 'Coffee'
-      Style.Shadow = False
-      Style.TextStyle = [fsBold]
-      StyleDisabled.LookAndFeel.NativeStyle = False
-      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
-      StyleDisabled.TextColor = clBlack
-      StyleFocused.LookAndFeel.NativeStyle = False
-      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleFocused.LookAndFeel.SkinName = 'Coffee'
-      StyleHot.LookAndFeel.NativeStyle = False
-      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleHot.LookAndFeel.SkinName = 'Coffee'
-      StyleReadOnly.LookAndFeel.NativeStyle = False
-      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
-      TabOrder = 3
+      TabOrder = 1
       Width = 140
     end
     object cxDateEdit1: TcxDateEdit
       Left = 95
-      Top = 55
+      Top = 6
       Properties.ShowTime = False
       Style.LookAndFeel.NativeStyle = False
       Style.LookAndFeel.ScrollbarMode = sbmClassic
@@ -1009,43 +923,8 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
       StyleReadOnly.LookAndFeel.NativeStyle = False
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
-      TabOrder = 1
+      TabOrder = 0
       Width = 105
-    end
-    object cxTextEdit1: TcxTextEdit
-      Left = 95
-      Top = 30
-      Anchors = [akLeft, akTop, akRight]
-      ParentFont = False
-      Properties.Alignment.Horz = taLeftJustify
-      Properties.ReadOnly = False
-      Style.Color = clWindow
-      Style.Font.Charset = DEFAULT_CHARSET
-      Style.Font.Color = clBlue
-      Style.Font.Height = -11
-      Style.Font.Name = 'MS Sans Serif'
-      Style.Font.Style = [fsBold]
-      Style.LookAndFeel.NativeStyle = False
-      Style.LookAndFeel.ScrollbarMode = sbmClassic
-      Style.LookAndFeel.SkinName = 'Coffee'
-      Style.Shadow = False
-      Style.TextColor = clBlack
-      Style.IsFontAssigned = True
-      StyleDisabled.LookAndFeel.NativeStyle = False
-      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
-      StyleDisabled.TextColor = clBlack
-      StyleFocused.LookAndFeel.NativeStyle = False
-      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleFocused.LookAndFeel.SkinName = 'Coffee'
-      StyleHot.LookAndFeel.NativeStyle = False
-      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleHot.LookAndFeel.SkinName = 'Coffee'
-      StyleReadOnly.LookAndFeel.NativeStyle = False
-      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
-      TabOrder = 4
-      Width = 304
     end
   end
   object Panel4: TPanel
@@ -1063,9 +942,9 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
     object Label2: TLabel
       Left = 4
       Top = 11
-      Width = 97
+      Width = 109
       Height = 13
-      Caption = #1055#1083#1072#1090#1077#1083#1100#1097#1080#1082'...........'
+      Caption = #1055#1086#1076#1088#1103#1076#1095#1080#1082'..................'
     end
     object cxDBButtonEdit1: TcxDBButtonEdit
       Left = 101
@@ -1153,14 +1032,14 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
   end
   object Panel1: TPanel
     Left = 0
-    Top = 474
+    Top = 266
     Width = 404
     Height = 37
     Align = alBottom
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 3
-    ExplicitTop = 486
+    ExplicitTop = 474
     DesignSize = (
       404
       37)
@@ -1178,7 +1057,7 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
+        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -1262,7 +1141,7 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
+        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -1333,14 +1212,14 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
   end
   object GroupBox1: TGroupBox
     Left = 0
-    Top = 239
+    Top = 129
     Width = 404
-    Height = 235
+    Height = 137
     Align = alClient
     Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
     TabOrder = 2
-    ExplicitTop = 287
-    ExplicitHeight = 199
+    ExplicitTop = 239
+    ExplicitHeight = 235
     object Memo2: TcxMemo
       Left = 2
       Top = 15
@@ -1361,66 +1240,9 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
-      ExplicitHeight = 182
-      Height = 218
+      ExplicitHeight = 218
+      Height = 120
       Width = 400
-    end
-  end
-  object Panel6: TPanel
-    Left = 0
-    Top = 191
-    Width = 404
-    Height = 48
-    Align = alTop
-    BevelInner = bvRaised
-    BevelOuter = bvLowered
-    TabOrder = 4
-    ExplicitTop = 239
-    DesignSize = (
-      404
-      48)
-    object Label3: TLabel
-      Left = 7
-      Top = 4
-      Width = 66
-      Height = 13
-      Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077':'
-    end
-    object cxTextEdit5: TcxTextEdit
-      Left = 8
-      Top = 20
-      Anchors = [akLeft, akTop, akRight]
-      ParentFont = False
-      ParentShowHint = False
-      Properties.HideSelection = False
-      Properties.ReadOnly = False
-      ShowHint = True
-      Style.Color = clWhite
-      Style.Font.Charset = DEFAULT_CHARSET
-      Style.Font.Color = clWindowText
-      Style.Font.Height = -11
-      Style.Font.Name = 'MS Sans Serif'
-      Style.Font.Style = []
-      Style.LookAndFeel.NativeStyle = False
-      Style.LookAndFeel.ScrollbarMode = sbmClassic
-      Style.LookAndFeel.SkinName = 'Coffee'
-      Style.Shadow = False
-      Style.TextColor = clWindowText
-      Style.IsFontAssigned = True
-      StyleDisabled.LookAndFeel.NativeStyle = False
-      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
-      StyleFocused.LookAndFeel.NativeStyle = False
-      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleFocused.LookAndFeel.SkinName = 'Coffee'
-      StyleHot.LookAndFeel.NativeStyle = False
-      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleHot.LookAndFeel.SkinName = 'Coffee'
-      StyleReadOnly.LookAndFeel.NativeStyle = False
-      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
-      TabOrder = 0
-      Width = 390
     end
   end
   object cxPropertiesStore1: TcxPropertiesStore
@@ -1479,12 +1301,12 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
       ''
       'ORDER BY firm_customer_name'
       '')
-    Left = 313
-    Top = 254
+    Left = 265
+    Top = 190
   end
   object DS_Contract: TDataSource
     DataSet = Query_Contract
-    Left = 314
-    Top = 279
+    Left = 338
+    Top = 199
   end
 end

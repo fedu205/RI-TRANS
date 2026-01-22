@@ -196,15 +196,15 @@ end;
 
 procedure TfmPretenziaShape.N1Click(Sender: TObject);
 begin
-  fmPretenziaShapeAdd := TfmPretenziaShapeAdd.Create(Application, Ftype_pay, True, False);
+  fmPretenziaShapeAdd := TfmPretenziaShapeAdd.Create(Application, Ftype_pay, True);
   fmPretenziaShapeAdd._SetInsert;
   if fmPretenziaShapeAdd.ShowModal = mrOk then
-    RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pay_id', fmPretenziaShapeAdd._GetPayId);
+    RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pay_id', fmPretenziaShapeAdd._GetPretenziaShapeId);
 end;
 
 procedure TfmPretenziaShape.N2Click(Sender: TObject);
 begin
-  fmPretenziaShapeAdd := TfmPretenziaShapeAdd.Create(Application, Ftype_pay, False, False);
+  fmPretenziaShapeAdd := TfmPretenziaShapeAdd.Create(Application, Ftype_pay, False);
   fmPretenziaShapeAdd._SetUpdate := cxGrid1DBBandedTableView1.GetColumnByFieldName('pay_id').DataBinding.Field.AsInteger;
   if fmPretenziaShapeAdd.ShowModal = mrOk then
     RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pay_id');
