@@ -2315,14 +2315,14 @@ begin
   for i:=0 to cxGrid12DBBandedTableView1.Controller.SelectedRowCount - 1 do begin
       exWks.Range['A'+IntToStr(row_insert)].Value := i + 1;
       exWks.Range['B'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1num_vagon.Index];
-      exWks.Range['C'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1doc_number.Index];
-      exWks.Range['D'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1node_begin_name.Index];
-      exWks.Range['E'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1node_end_name.Index];
+      exWks.Range['C'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1doc_number.Index]);
+      exWks.Range['D'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1node_begin_name.Index]);
+      exWks.Range['E'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1node_end_name.Index]);
       if cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1date_arrival.Index] <> Null then
         exWks.Range['F'+IntToStr(row_insert)].Value := FormatDateTime('dd.mm.yyyy', cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1date_arrival.Index]);
-      exWks.Range['G'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1grotpr_name.Index];
-      exWks.Range['H'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1grpol_name.Index];
-      exWks.Range['I'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1kargoETSNG_name.Index];
+      exWks.Range['G'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1grotpr_name.Index]);
+      exWks.Range['H'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1grpol_name.Index]);
+      exWks.Range['I'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1kargoETSNG_name.Index]);
 
       if cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1date_otpr_1.Index] <> Null then
         exWks.Range['K'+IntToStr(row_insert)].Value := FormatDateTime('dd.mm.yyyy', cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1date_otpr_1.Index]);
@@ -2363,14 +2363,14 @@ begin
   for i:=0 to cxGrid12DBBandedTableView1.Controller.SelectedRowCount - 1 do begin
       exWks.Range['A'+IntToStr(row_insert)].Value := i + 1;
       exWks.Range['B'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1num_vagon.Index];
-      exWks.Range['C'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1doc_number.Index];
-      exWks.Range['D'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1node_begin_name.Index];
-      exWks.Range['E'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1node_end_name.Index];
+      exWks.Range['C'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1doc_number.Index]);
+      exWks.Range['D'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1node_begin_name.Index]);
+      exWks.Range['E'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1node_end_name.Index]);
       if cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1date_arrival.Index] <> Null then
         exWks.Range['F'+IntToStr(row_insert)].Value := FormatDateTime('dd.mm.yyyy', cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1date_arrival.Index]);
-      exWks.Range['G'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1grotpr_name.Index];
-      exWks.Range['H'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1grpol_name.Index];
-      exWks.Range['I'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1kargoETSNG_name.Index];
+      exWks.Range['G'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1grotpr_name.Index]);
+      exWks.Range['H'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1grpol_name.Index]);
+      exWks.Range['I'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1kargoETSNG_name.Index]);
       exWks.Range['J'+IntToStr(row_insert)].Value := 'РИ-ИНВЕСТ';
 
       if cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1date_otpr_1.Index] <> Null then
@@ -2378,13 +2378,13 @@ begin
       exWks.Range['L'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1days_stay_end.Index];  // простой под выгрузкой
       exWks.Range['M'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1days_stay_end.Index];  // норматив
 
-      exWks.Range['T'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1firm_customer_name.Index];  // контрагент
-      exWks.Range['U'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1agreement_cod.Index];      // номер сделки
+      exWks.Range['T'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1firm_customer_name.Index]);  // контрагент
+      exWks.Range['U'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1agreement_cod.Index]);      // номер сделки
       exWks.Range['V'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1agreement_date.Index];     // дата сделки
-      exWks.Range['W'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1contract_cod.Index];       // генеральное соглашение
+      exWks.Range['W'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1contract_cod.Index]);       // генеральное соглашение
       exWks.Range['X'+IntToStr(row_insert)].Value := 'Общество с ограниченной ответственностью  "Трансойл"'; // оператор
       exWks.Range['Y'+IntToStr(row_insert)].Value := 'Общество с ограниченной ответственностью  "Трансойл"'; // собственник
-      exWks.Range['Z'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1agreement_vid_activity.Index];
+      exWks.Range['Z'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1agreement_vid_activity.Index]);
 
       if (cxGrid12DBBandedTableView1.Controller.SelectedRowCount - 1 ) <> i then begin
         xCopyRow(exApp,row_insert + 1,row_insert +1);
