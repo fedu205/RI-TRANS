@@ -2,8 +2,8 @@ object fmPretenziaShape: TfmPretenziaShape
   Left = 260
   Top = 129
   Caption = #1055#1088#1077#1090#1077#1085#1079#1080#1080' '#1087#1086#1076#1088#1103#1076#1095#1080#1082#1086#1074
-  ClientHeight = 546
-  ClientWidth = 989
+  ClientHeight = 631
+  ClientWidth = 1218
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -146,318 +146,21 @@ object fmPretenziaShape: TfmPretenziaShape
   OnDestroy = FormDestroy
   TextHeight = 13
   object Splitter2: TSplitter
-    Left = 0
-    Top = 395
-    Width = 989
-    Height = 5
-    Cursor = crVSplit
-    Align = alBottom
-    Beveled = True
+    Left = 824
+    Top = 26
+    Height = 605
+    Align = alRight
     Color = 8421631
     ParentColor = False
-    Visible = False
-  end
-  object GroupBox1: TGroupBox
-    Left = 0
-    Top = 400
-    Width = 989
-    Height = 146
-    Align = alBottom
-    Caption = #1042#1072#1075#1086#1085#1099' '#1087#1086' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
-    TabOrder = 5
-    Visible = False
-    object cxGrid3: TcxGrid
-      Left = 2
-      Top = 15
-      Width = 985
-      Height = 129
-      Align = alClient
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -12
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-      LookAndFeel.Kind = lfUltraFlat
-      LookAndFeel.NativeStyle = False
-      LookAndFeel.ScrollbarMode = sbmClassic
-      LookAndFeel.SkinName = 'Office2007Black'
-      object cxGrid3DBBandedTableView1: TcxGridDBBandedTableView
-        PopupMenu = Popup_Pay_Invoice
-        OnKeyPress = cxGrid1DBBandedTableView1KeyPress
-        Navigator.Buttons.CustomButtons = <>
-        ScrollbarAnnotations.CustomAnnotations = <>
-        OnFocusedItemChanged = cxGrid1DBBandedTableView1FocusedItemChanged
-        DataController.DataSource = DS_Pay_Invoice
-        DataController.KeyFieldNames = 'pay_inv_id'
-        DataController.Summary.DefaultGroupSummaryItems = <
-          item
-            Format = '#,##0.00'
-            Kind = skSum
-            Position = spFooter
-          end
-          item
-            Format = '#,##0.00'
-            Kind = skSum
-          end
-          item
-            Format = '#,##0.00'
-            Kind = skSum
-            Position = spFooter
-          end
-          item
-            Format = '#,##0.00'
-            Kind = skSum
-          end
-          item
-            Format = '#,##0.00'
-            Kind = skSum
-            Position = spFooter
-          end
-          item
-            Format = '#,##0.00'
-            Kind = skSum
-          end>
-        DataController.Summary.FooterSummaryItems = <
-          item
-            Format = '#,##0.00'
-            Kind = skSum
-          end
-          item
-            Format = '0'
-            Kind = skCount
-            Column = cxGrid3DBBandedTableView1pay_inv_id
-          end
-          item
-            Format = '#,##0.00'
-            Kind = skSum
-            Column = cxGrid3DBBandedTableView1inv_sum_pay
-          end
-          item
-            Format = '#,##0.00'
-            Kind = skSum
-          end
-          item
-            Format = '#,##0.00'
-            Kind = skSum
-          end>
-        DataController.Summary.SummaryGroups = <>
-        DataController.Summary.Options = [soMultipleSelectedRecords]
-        OptionsCustomize.ColumnsQuickCustomization = True
-        OptionsData.Deleting = False
-        OptionsData.Editing = False
-        OptionsData.Inserting = False
-        OptionsSelection.MultiSelect = True
-        OptionsSelection.HideSelection = True
-        OptionsView.Footer = True
-        OptionsView.GridLineColor = clSilver
-        OptionsView.GroupByBox = False
-        OptionsView.HeaderFilterButtonShowMode = fbmButton
-        OptionsView.HeaderHeight = 35
-        OptionsView.IndicatorWidth = 12
-        OptionsView.BandHeaders = False
-        Styles.Content = fmMain.cxStyle_ColorWhite
-        OnCustomDrawColumnHeader = cxGrid1DBBandedTableView1CustomDrawColumnHeader
-        OnCustomDrawFooterCell = cxGrid1DBBandedTableView1CustomDrawColumnHeader
-        Bands = <
-          item
-          end>
-        object cxGrid3DBBandedTableView1pay_inv_id: TcxGridDBBandedColumn
-          Caption = #8470' '#1047#1072#1087#1080#1089#1080
-          DataBinding.FieldName = 'pay_inv_id'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Width = 69
-          Position.BandIndex = 0
-          Position.ColIndex = 0
-          Position.RowIndex = 0
-        end
-        object cxGrid3DBBandedTableView1pay_id: TcxGridDBBandedColumn
-          DataBinding.FieldName = 'pay_id'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Position.BandIndex = -1
-          Position.ColIndex = -1
-          Position.RowIndex = -1
-        end
-        object cxGrid3DBBandedTableView1inv_id: TcxGridDBBandedColumn
-          DataBinding.FieldName = 'inv_id'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Position.BandIndex = -1
-          Position.ColIndex = -1
-          Position.RowIndex = -1
-        end
-        object cxGrid3DBBandedTableView1pay_inv_brief_name: TcxGridDBBandedColumn
-          Caption = #1042#1072#1083#1102#1090#1072' '#1086#1087#1083#1072#1090#1099
-          DataBinding.FieldName = 'pay_inv_brief_name'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Width = 57
-          Position.BandIndex = 0
-          Position.ColIndex = 4
-          Position.RowIndex = 0
-        end
-        object cxGrid3DBBandedTableView1inv_brief_name: TcxGridDBBandedColumn
-          Caption = #1042#1072#1083#1102#1090#1072' '#1089#1095#1077#1090#1072
-          DataBinding.FieldName = 'inv_brief_name'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Width = 75
-          Position.BandIndex = 0
-          Position.ColIndex = 5
-          Position.RowIndex = 0
-        end
-        object cxGrid3DBBandedTableView1inv_currency_id: TcxGridDBBandedColumn
-          DataBinding.FieldName = 'inv_currency_id'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Position.BandIndex = -1
-          Position.ColIndex = -1
-          Position.RowIndex = -1
-        end
-        object cxGrid3DBBandedTableView1pay_firm_self_name: TcxGridDBBandedColumn
-          DataBinding.FieldName = 'pay_firm_self_name'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Position.BandIndex = -1
-          Position.ColIndex = -1
-          Position.RowIndex = -1
-        end
-        object cxGrid3DBBandedTableView1pay_currency_id: TcxGridDBBandedColumn
-          DataBinding.FieldName = 'pay_currency_id'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Position.BandIndex = -1
-          Position.ColIndex = -1
-          Position.RowIndex = -1
-        end
-        object cxGrid3DBBandedTableView1pay_brief_name: TcxGridDBBandedColumn
-          Caption = #1042#1072#1083#1102#1090#1072' '#1087#1083#1072#1090#1077#1078#1072
-          DataBinding.FieldName = 'pay_brief_name'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Width = 66
-          Position.BandIndex = -1
-          Position.ColIndex = -1
-          Position.RowIndex = -1
-        end
-        object cxGrid3DBBandedTableView1pay_cod: TcxGridDBBandedColumn
-          Caption = #8470' '#1055#1083#1072#1090#1077#1078#1072
-          DataBinding.FieldName = 'pay_cod'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Width = 66
-          Position.BandIndex = -1
-          Position.ColIndex = -1
-          Position.RowIndex = -1
-        end
-        object cxGrid3DBBandedTableView1invoice_cod: TcxGridDBBandedColumn
-          Caption = #8470' '#1057#1095#1077#1090#1072
-          DataBinding.FieldName = 'invoice_cod'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Position.BandIndex = 0
-          Position.ColIndex = 2
-          Position.RowIndex = 0
-        end
-        object cxGrid3DBBandedTableView1invoice_date: TcxGridDBBandedColumn
-          Caption = #1044#1072#1090#1072' '#1089#1095#1077#1090#1072
-          DataBinding.FieldName = 'invoice_date'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Position.BandIndex = 0
-          Position.ColIndex = 3
-          Position.RowIndex = 0
-        end
-        object cxGrid3DBBandedTableView1inv_firm_customer_name_short: TcxGridDBBandedColumn
-          Caption = #1055#1083#1072#1090#1077#1083#1100#1097#1080#1082' '#1087#1086' '#1089#1095#1077#1090#1091
-          DataBinding.FieldName = 'inv_firm_customer_name_short'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Width = 87
-          Position.BandIndex = 0
-          Position.ColIndex = 1
-          Position.RowIndex = 0
-        end
-        object cxGrid3DBBandedTableView1pay_rest: TcxGridDBBandedColumn
-          DataBinding.FieldName = 'pay_rest'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Position.BandIndex = -1
-          Position.ColIndex = -1
-          Position.RowIndex = -1
-        end
-        object cxGrid3DBBandedTableView1pay_sum_inv: TcxGridDBBandedColumn
-          DataBinding.FieldName = 'pay_sum_inv'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Position.BandIndex = -1
-          Position.ColIndex = -1
-          Position.RowIndex = -1
-        end
-        object cxGrid3DBBandedTableView1inv_sum_pay: TcxGridDBBandedColumn
-          DataBinding.FieldName = 'inv_sum_pay'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Position.BandIndex = -1
-          Position.ColIndex = -1
-          Position.RowIndex = -1
-        end
-        object cxGrid3DBBandedTableView1pay_sum: TcxGridDBBandedColumn
-          DataBinding.FieldName = 'pay_sum'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Position.BandIndex = -1
-          Position.ColIndex = -1
-          Position.RowIndex = -1
-        end
-        object cxGrid3DBBandedTableView1pay_inv_currency_id: TcxGridDBBandedColumn
-          DataBinding.FieldName = 'pay_inv_currency_id'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Position.BandIndex = -1
-          Position.ColIndex = -1
-          Position.RowIndex = -1
-        end
-        object cxGrid3DBBandedTableView1pay_inv_date: TcxGridDBBandedColumn
-          DataBinding.FieldName = 'pay_inv_date'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Position.BandIndex = -1
-          Position.ColIndex = -1
-          Position.RowIndex = -1
-        end
-        object cxGrid3DBBandedTableView1pay_date: TcxGridDBBandedColumn
-          DataBinding.FieldName = 'pay_date'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Position.BandIndex = -1
-          Position.ColIndex = -1
-          Position.RowIndex = -1
-        end
-        object cxGrid3DBBandedTableView1pay_firm_customer_name_short: TcxGridDBBandedColumn
-          Caption = #1055#1083#1072#1090#1077#1083#1100#1097#1080#1082
-          DataBinding.FieldName = 'pay_firm_customer_name_short'
-          DataBinding.IsNullValueType = True
-          HeaderAlignmentVert = vaTop
-          Width = 90
-          Position.BandIndex = -1
-          Position.ColIndex = -1
-          Position.RowIndex = -1
-        end
-      end
-      object cxGrid3Level1: TcxGridLevel
-        GridView = cxGrid3DBBandedTableView1
-      end
-    end
+    ExplicitLeft = 621
+    ExplicitTop = -44
+    ExplicitHeight = 590
   end
   object cxGrid1: TcxGrid
     Left = 0
     Top = 26
-    Width = 989
-    Height = 369
+    Width = 824
+    Height = 605
     Hint = #1055#1083#1072#1090#1077#1078#1080' 1'#1057', '#1085#1077' '#1079#1072#1075#1088#1091#1078#1077#1085#1085#1099#1077' '#1074' '#1051#1048#1057
     Align = alClient
     Font.Charset = RUSSIAN_CHARSET
@@ -494,12 +197,12 @@ object fmPretenziaShape: TfmPretenziaShape
       ScrollbarAnnotations.CustomAnnotations = <>
       OnCustomDrawCell = cxGrid1DBBandedTableView1CustomDrawCell
       OnFocusedItemChanged = cxGrid1DBBandedTableView1FocusedItemChanged
-      OnFocusedRecordChanged = cxGrid1DBBandedTableView2FocusedRecordChanged
-      DataController.DataSource = DS_Pay
+      OnSelectionChanged = cxGrid1DBBandedTableView1SelectionChanged
+      DataController.DataSource = DS_PretenziaShape
       DataController.Filter.Options = [fcoCaseInsensitive]
       DataController.Filter.OnChanged = cxGrid1DBBandedTableView1DataControllerFilterChanged
       DataController.Filter.Active = True
-      DataController.KeyFieldNames = 'pay_id'
+      DataController.KeyFieldNames = 'pretenzia_shape_id'
       DataController.Summary.DefaultGroupSummaryItems = <
         item
           Format = '#,##0.00'
@@ -519,7 +222,7 @@ object fmPretenziaShape: TfmPretenziaShape
         item
           Format = '#,##0.00'
           Kind = skSum
-          Column = cxGrid1DBBandedTableView1pay_sum
+          Column = cxGrid1DBBandedTableView1pretenzia_sum
         end
         item
           Format = '#,##0.00'
@@ -558,10 +261,10 @@ object fmPretenziaShape: TfmPretenziaShape
       Bands = <
         item
         end>
-      object cxGrid1DBBandedTableView1pay_id: TcxGridDBBandedColumn
+      object cxGrid1DBBandedTableView1pretenzia_shape_id: TcxGridDBBandedColumn
         Tag = 76026400
         Caption = #8470' '#1079#1072#1087#1080#1089#1080
-        DataBinding.FieldName = 'pay_id'
+        DataBinding.FieldName = 'pretenzia_shape_id'
         DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 65
@@ -569,10 +272,10 @@ object fmPretenziaShape: TfmPretenziaShape
         Position.ColIndex = 0
         Position.RowIndex = 0
       end
-      object cxGrid1DBBandedTableView1pay_date: TcxGridDBBandedColumn
+      object cxGrid1DBBandedTableView1pretenzia_date: TcxGridDBBandedColumn
         Tag = 122938408
         Caption = #1044#1072#1090#1072
-        DataBinding.FieldName = 'pay_date'
+        DataBinding.FieldName = 'pretenzia_date'
         DataBinding.IsNullValueType = True
         PropertiesClassName = 'TcxDateEditProperties'
         Properties.ShowTime = False
@@ -582,15 +285,15 @@ object fmPretenziaShape: TfmPretenziaShape
         Position.ColIndex = 2
         Position.RowIndex = 0
       end
-      object cxGrid1DBBandedTableView1pay_note: TcxGridDBBandedColumn
+      object cxGrid1DBBandedTableView1comment: TcxGridDBBandedColumn
         Tag = 123000740
         Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
-        DataBinding.FieldName = 'pay_note'
+        DataBinding.FieldName = 'comment'
         DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 65
         Position.BandIndex = 0
-        Position.ColIndex = 10
+        Position.ColIndex = 8
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1contract_cod: TcxGridDBBandedColumn
@@ -601,7 +304,7 @@ object fmPretenziaShape: TfmPretenziaShape
         HeaderAlignmentVert = vaTop
         Width = 65
         Position.BandIndex = 0
-        Position.ColIndex = 8
+        Position.ColIndex = 3
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1type_contract: TcxGridDBBandedColumn
@@ -624,7 +327,7 @@ object fmPretenziaShape: TfmPretenziaShape
         SortOrder = soAscending
         Width = 109
         Position.BandIndex = 0
-        Position.ColIndex = 4
+        Position.ColIndex = 5
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1firm_customer_name: TcxGridDBBandedColumn
@@ -635,12 +338,12 @@ object fmPretenziaShape: TfmPretenziaShape
         HeaderAlignmentVert = vaTop
         Width = 96
         Position.BandIndex = 0
-        Position.ColIndex = 3
+        Position.ColIndex = 4
         Position.RowIndex = 0
       end
-      object cxGrid1DBBandedTableView1pay_sum: TcxGridDBBandedColumn
+      object cxGrid1DBBandedTableView1pretenzia_sum: TcxGridDBBandedColumn
         Caption = #1057#1091#1084#1084#1072
-        DataBinding.FieldName = 'pay_sum'
+        DataBinding.FieldName = 'pretenzia_sum'
         DataBinding.IsNullValueType = True
         PropertiesClassName = 'TcxCurrencyEditProperties'
         Properties.DisplayFormat = '#,##0.00'
@@ -648,18 +351,7 @@ object fmPretenziaShape: TfmPretenziaShape
         Styles.Content = fmMain.cxStyle_Bold
         Width = 98
         Position.BandIndex = 0
-        Position.ColIndex = 5
-        Position.RowIndex = 0
-      end
-      object cxGrid1DBBandedTableView1brief_name: TcxGridDBBandedColumn
-        Tag = 123107048
-        Caption = #1042#1072#1083#1102#1090#1072
-        DataBinding.FieldName = 'brief_name'
-        DataBinding.IsNullValueType = True
-        HeaderAlignmentVert = vaTop
-        Width = 65
-        Position.BandIndex = 0
-        Position.ColIndex = 7
+        Position.ColIndex = 6
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1pay_num: TcxGridDBBandedColumn
@@ -673,28 +365,15 @@ object fmPretenziaShape: TfmPretenziaShape
         Position.ColIndex = -1
         Position.RowIndex = -1
       end
-      object cxGrid1DBBandedTableView1pay_cod: TcxGridDBBandedColumn
+      object cxGrid1DBBandedTableView1pretenzia_cod: TcxGridDBBandedColumn
         Tag = 123084108
         Caption = #8470' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
-        DataBinding.FieldName = 'pay_cod'
+        DataBinding.FieldName = 'pretenzia_cod'
         DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 65
         Position.BandIndex = 0
         Position.ColIndex = 1
-        Position.RowIndex = 0
-      end
-      object cxGrid1DBBandedTableView1first_pay: TcxGridDBBandedColumn
-        Tag = 123159272
-        Caption = #1053#1072#1095#1072#1083#1086
-        DataBinding.FieldName = 'first_pay'
-        DataBinding.IsNullValueType = True
-        PropertiesClassName = 'TcxCheckBoxProperties'
-        Properties.NullStyle = nssUnchecked
-        HeaderAlignmentVert = vaTop
-        Width = 65
-        Position.BandIndex = 0
-        Position.ColIndex = 6
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1FIO_users: TcxGridDBBandedColumn
@@ -703,7 +382,7 @@ object fmPretenziaShape: TfmPretenziaShape
         DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Position.BandIndex = 0
-        Position.ColIndex = 9
+        Position.ColIndex = 7
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1global_color: TcxGridDBBandedColumn
@@ -732,7 +411,7 @@ object fmPretenziaShape: TfmPretenziaShape
         HeaderAlignmentVert = vaTop
         Width = 100
         Position.BandIndex = 0
-        Position.ColIndex = 11
+        Position.ColIndex = 9
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1firm_self: TcxGridDBBandedColumn
@@ -747,13 +426,321 @@ object fmPretenziaShape: TfmPretenziaShape
       GridView = cxGrid1DBBandedTableView1
     end
   end
+  object GroupBox1: TGroupBox
+    Left = 827
+    Top = 26
+    Width = 391
+    Height = 605
+    Align = alRight
+    Caption = #1060#1072#1082#1090
+    TabOrder = 5
+    object cxGrid2: TcxGrid
+      Left = 2
+      Top = 15
+      Width = 387
+      Height = 588
+      Align = alClient
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      LookAndFeel.Kind = lfUltraFlat
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.ScrollbarMode = sbmClassic
+      LookAndFeel.SkinName = 'Office2007Black'
+      object cxGrid2DBBandedTableView1: TcxGridDBBandedTableView
+        PopupMenu = dxBarPopupMenu1
+        OnKeyPress = cxGrid2DBBandedTableView1KeyPress
+        Navigator.Buttons.CustomButtons = <>
+        ScrollbarAnnotations.CustomAnnotations = <>
+        OnCustomDrawCell = cxGrid2DBBandedTableView1CustomDrawCell
+        OnFocusedItemChanged = cxGrid2DBBandedTableView1FocusedItemChanged
+        DataController.DataSource = DS_Fact
+        DataController.Filter.Options = [fcoCaseInsensitive]
+        DataController.Filter.OnChanged = cxGrid2DBBandedTableView1FilterOnChanged
+        DataController.Filter.Active = True
+        DataController.KeyFieldNames = 'pretenzia_shape_fact_id'
+        DataController.Options = [dcoCaseInsensitive, dcoAssignGroupingValues, dcoAssignMasterDetailKeys, dcoSaveExpanding]
+        DataController.Summary.DefaultGroupSummaryItems = <>
+        DataController.Summary.FooterSummaryItems = <
+          item
+            Format = '0'
+            Kind = skCount
+            Column = cxGrid2DBBandedTableView1pretenzia_shape_fact_id
+          end
+          item
+            Format = '#,##0'
+            Kind = skSum
+            Column = cxGrid2DBBandedTableView1days_count_hold
+          end
+          item
+            Format = '#,##0.00'
+            Kind = skSum
+            Column = cxGrid2DBBandedTableView1hold_sum
+          end>
+        DataController.Summary.SummaryGroups = <
+          item
+            Links = <
+              item
+              end
+              item
+              end
+              item
+              end
+              item
+              end
+              item
+              end
+              item
+              end
+              item
+              end
+              item
+              end>
+            SummaryItems = <
+              item
+                Format = #1050#1086#1083'-'#1074#1086': 0'
+                Kind = skCount
+                FieldName = 'num_vagon'
+              end
+              item
+                Format = #39#1060'.'#1074#1077#1089': '#39'#,##0.000'
+                Kind = skSum
+                FieldName = 'fact_weight'
+              end
+              item
+                Format = #39#1056'.'#1074#1077#1089': '#39'#,##0'
+                Kind = skSum
+                FieldName = 'calc_weight'
+              end
+              item
+                Format = #39#1043'/'#1087': '#39'#,##0'
+                Kind = skSum
+                FieldName = 'kargo_capacity'
+              end>
+          end>
+        DataController.Summary.Options = [soMultipleSelectedRecords]
+        Filtering.ColumnFilteredItemsList = True
+        OptionsCustomize.ColumnsQuickCustomization = True
+        OptionsData.CancelOnExit = False
+        OptionsData.Deleting = False
+        OptionsData.DeletingConfirmation = False
+        OptionsData.Editing = False
+        OptionsData.Inserting = False
+        OptionsSelection.MultiSelect = True
+        OptionsSelection.HideSelection = True
+        OptionsView.Footer = True
+        OptionsView.GridLineColor = clGray
+        OptionsView.GroupByBox = False
+        OptionsView.HeaderFilterButtonShowMode = fbmButton
+        OptionsView.HeaderHeight = 35
+        OptionsView.BandHeaders = False
+        Styles.Content = fmMain.cxStyle_ColorWhite
+        OnCustomDrawColumnHeader = cxGrid2DBBandedTableView1CustomDrawColumnHeader
+        OnCustomDrawFooterCell = cxGrid2DBBandedTableView1CustomDrawColumnHeader
+        Bands = <
+          item
+          end>
+        object cxGrid2DBBandedTableView1pretenzia_shape_fact_id: TcxGridDBBandedColumn
+          Caption = #8470' '#1079#1072#1087#1080#1089#1080
+          DataBinding.FieldName = 'pretenzia_shape_fact_id'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
+          Width = 80
+          Position.BandIndex = 0
+          Position.ColIndex = 0
+          Position.RowIndex = 0
+        end
+        object cxGrid2DBBandedTableView1fact_id: TcxGridDBBandedColumn
+          Caption = #8470' '#1079#1072#1087#1080#1089#1080' '#1092#1072#1082#1090
+          DataBinding.FieldName = 'fact_id'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
+          Width = 80
+          Position.BandIndex = 0
+          Position.ColIndex = 1
+          Position.RowIndex = 0
+        end
+        object cxGrid2DBBandedTableView1pretenzia_shape_id: TcxGridDBBandedColumn
+          DataBinding.FieldName = 'pretenzia_shape_id'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
+          Width = 80
+          Position.BandIndex = -1
+          Position.ColIndex = -1
+          Position.RowIndex = -1
+        end
+        object cxGrid2DBBandedTableView1node_begin_name: TcxGridDBBandedColumn
+          Caption = #1057#1090#1072#1085#1094#1080#1103' '#1086#1090#1087#1088#1072#1074#1083#1077#1085#1080#1103
+          DataBinding.FieldName = 'node_begin_name'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
+          Width = 80
+          Position.BandIndex = 0
+          Position.ColIndex = 2
+          Position.RowIndex = 0
+        end
+        object cxGrid2DBBandedTableView1num_document: TcxGridDBBandedColumn
+          Caption = #8470' '#1085#1072#1082#1083#1072#1076#1085#1086#1081
+          DataBinding.FieldName = 'num_document'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
+          Width = 80
+          Position.BandIndex = 0
+          Position.ColIndex = 3
+          Position.RowIndex = 0
+        end
+        object cxGrid2DBBandedTableView1date_otpr1: TcxGridDBBandedColumn
+          Caption = #1044#1072#1090#1072' '#1086#1090#1087#1088#1072#1074#1083#1077#1085#1080#1103' '#1089#1086' '#1089#1090'. '#1087#1086#1075#1088#1091#1079#1082#1080
+          DataBinding.FieldName = 'date_otpr1'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
+          Width = 80
+          Position.BandIndex = 0
+          Position.ColIndex = 4
+          Position.RowIndex = 0
+        end
+        object cxGrid2DBBandedTableView1date_pr1: TcxGridDBBandedColumn
+          Caption = #1044#1072#1090#1072' '#1087#1088#1080#1073#1099#1090#1080#1103' '#1085#1072' '#1089#1090'. '#1074#1099#1075#1088#1091#1079#1082#1080
+          DataBinding.FieldName = 'date_pr1'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
+          Width = 80
+          Position.BandIndex = 0
+          Position.ColIndex = 5
+          Position.RowIndex = 0
+        end
+        object cxGrid2DBBandedTableView1date_otpr2: TcxGridDBBandedColumn
+          Caption = #1044#1072#1090#1072' '#1086#1090#1087#1088#1072#1074#1083#1077#1085#1080#1103' '#1089#1086' '#1089#1090'. '#1074#1099#1075#1088#1091#1079#1082#1080
+          DataBinding.FieldName = 'date_otpr2'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
+          Width = 80
+          Position.BandIndex = 0
+          Position.ColIndex = 6
+          Position.RowIndex = 0
+        end
+        object cxGrid2DBBandedTableView1date_foreign_otpr: TcxGridDBBandedColumn
+          Caption = #1076#1072#1090#1072' '#1089#1076#1072#1095#1080' '#1075#1088#1091#1078#1077#1085#1086#1075#1086' '#1074#1072#1075#1086#1085#1072' '#1085#1072' '#1080#1085'. '#1076#1086#1088#1086#1075#1091
+          DataBinding.FieldName = 'date_foreign_otpr'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
+          Width = 80
+          Position.BandIndex = 0
+          Position.ColIndex = 7
+          Position.RowIndex = 0
+        end
+        object cxGrid2DBBandedTableView1date_foreign_pr: TcxGridDBBandedColumn
+          Caption = #1087#1088#1080#1077#1084' '#1087#1086#1088#1086#1078#1085#1077#1075#1086' '#1074#1072#1075#1086#1085#1072' '#1089' '#1080#1085'. '#1076#1086#1088#1086#1075#1080
+          DataBinding.FieldName = 'date_foreign_pr'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
+          Width = 80
+          Position.BandIndex = 0
+          Position.ColIndex = 8
+          Position.RowIndex = 0
+        end
+        object cxGrid2DBBandedTableView1num_document_empty: TcxGridDBBandedColumn
+          Caption = #1053#1072#1082#1083#1072#1076#1085#1072#1103' '#1085#1072' '#1087#1086#1088#1086#1078#1085#1080#1081' '#1088#1077#1081#1089
+          DataBinding.FieldName = 'num_document_empty'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
+          Width = 80
+          Position.BandIndex = 0
+          Position.ColIndex = 9
+          Position.RowIndex = 0
+        end
+        object cxGrid2DBBandedTableView1num_vagon: TcxGridDBBandedColumn
+          Caption = #1053#1086#1084#1077#1088' '#1074#1072#1075#1086#1085#1072
+          DataBinding.FieldName = 'num_vagon'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
+          Width = 80
+          Position.BandIndex = 0
+          Position.ColIndex = 10
+          Position.RowIndex = 0
+        end
+        object cxGrid2DBBandedTableView1node_end_name: TcxGridDBBandedColumn
+          Caption = #1057#1090#1072#1085#1094#1080#1103' '#1074#1099#1075#1088#1091#1079#1082#1080'('#1087#1088#1086#1089#1090#1086#1103')'
+          DataBinding.FieldName = 'node_end_name'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
+          Width = 80
+          Position.BandIndex = 0
+          Position.ColIndex = 11
+          Position.RowIndex = 0
+        end
+        object cxGrid2DBBandedTableView1num_document_load: TcxGridDBBandedColumn
+          Caption = #1053#1072#1082#1083#1072#1076#1085#1072#1103' '#1075#1088#1091#1078#1077#1085#1086#1075#1086' '#1088#1077#1081#1089#1072
+          DataBinding.FieldName = 'num_document_load'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
+          Width = 80
+          Position.BandIndex = 0
+          Position.ColIndex = 12
+          Position.RowIndex = 0
+        end
+        object cxGrid2DBBandedTableView1days_count: TcxGridDBBandedColumn
+          Caption = #1050#1086#1083#1080#1095#1077#1089#1090#1074#1086' '#1089#1091#1090#1086#1082' '#1087#1088#1086#1089#1090#1086#1103
+          DataBinding.FieldName = 'days_count'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
+          Width = 80
+          Position.BandIndex = 0
+          Position.ColIndex = 13
+          Position.RowIndex = 0
+        end
+        object cxGrid2DBBandedTableView1days_norm: TcxGridDBBandedColumn
+          Caption = #1053#1086#1088#1084#1072#1090#1080#1074' '#1089#1091#1090#1086#1082' '#1087#1088#1086#1089#1090#1086#1103
+          DataBinding.FieldName = 'days_norm'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
+          Width = 80
+          Position.BandIndex = 0
+          Position.ColIndex = 14
+          Position.RowIndex = 0
+        end
+        object cxGrid2DBBandedTableView1days_count_hold: TcxGridDBBandedColumn
+          Caption = #1050#1086#1083#1080#1095#1077#1089#1090#1074#1086' '#1089#1091#1090#1086#1082' '#1089#1074#1077#1088#1093#1085#1086#1088#1084#1072#1090#1080#1074#1085#1086#1075#1086' '#1087#1088#1086#1089#1090#1086#1103
+          DataBinding.FieldName = 'days_count_hold'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
+          Width = 80
+          Position.BandIndex = 0
+          Position.ColIndex = 15
+          Position.RowIndex = 0
+        end
+        object cxGrid2DBBandedTableView1hold_rete: TcxGridDBBandedColumn
+          Caption = #1057#1090#1086#1080#1084#1086#1089#1090#1100' '#1087#1088#1086#1089#1090#1086#1103' '#1079#1072' '#1089#1091#1090#1082#1080
+          DataBinding.FieldName = 'hold_rete'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
+          Width = 80
+          Position.BandIndex = 0
+          Position.ColIndex = 16
+          Position.RowIndex = 0
+        end
+        object cxGrid2DBBandedTableView1hold_sum: TcxGridDBBandedColumn
+          Caption = #1048#1090#1086#1075#1086' '#1089#1091#1084#1084#1072
+          DataBinding.FieldName = 'hold_sum'
+          DataBinding.IsNullValueType = True
+          HeaderAlignmentVert = vaTop
+          Width = 80
+          Position.BandIndex = 0
+          Position.ColIndex = 17
+          Position.RowIndex = 0
+        end
+      end
+      object cxGrid2Level1: TcxGridLevel
+        GridView = cxGrid2DBBandedTableView1
+      end
+    end
+  end
   object cxPropertiesStore1: TcxPropertiesStore
     Components = <
-      item
-        Component = dxBarButton7
-        Properties.Strings = (
-          'Down')
-      end
       item
         Component = Owner
         Properties.Strings = (
@@ -762,24 +749,21 @@ object fmPretenziaShape: TfmPretenziaShape
           'Top'
           'Width'
           'WindowState')
+      end
+      item
+        Component = GroupBox1
+        Properties.Strings = (
+          'Width')
       end>
     StorageName = '\Software\LIS1\PretenziaShape'
     StorageType = stRegistry
-    Left = 169
+    Left = 177
     Top = 155
   end
-  object Query_Pay: TADOQuery
+  object Query_PretenziaShape: TADOQuery
     Connection = fmMain.Lis
     CursorType = ctStatic
     Parameters = <
-      item
-        Name = 'type_pay'
-        Attributes = [paNullable]
-        DataType = ftWord
-        Precision = 3
-        Size = 1
-        Value = Null
-      end
       item
         Name = 'date1'
         DataType = ftDateTime
@@ -796,69 +780,15 @@ object fmPretenziaShape: TfmPretenziaShape
       end>
     SQL.Strings = (
       'SELECT *'
-      'FROM view_pay_rights'
-      'WHERE type_pay = :type_pay'
-      '  AND :date1 <= pay_date AND pay_date <= :date2')
+      'FROM view_pretenzia_shape'
+      'WHERE :date1 <= pretenzia_date AND pretenzia_date<= :date2')
     Left = 62
-    Top = 149
+    Top = 77
   end
-  object DS_Pay: TDataSource
-    DataSet = Query_Pay
+  object DS_PretenziaShape: TDataSource
+    DataSet = Query_PretenziaShape
     Left = 62
-    Top = 176
-  end
-  object Query_1c: TADOQuery
-    Connection = fmMain.Lis
-    CursorType = ctStatic
-    Parameters = <
-      item
-        Name = 'date1'
-        Attributes = [paNullable]
-        DataType = ftDateTime
-        NumericScale = 3
-        Precision = 23
-        Size = 16
-        Value = Null
-      end
-      item
-        Name = 'date2'
-        Attributes = [paNullable]
-        DataType = ftDateTime
-        NumericScale = 3
-        Precision = 23
-        Size = 16
-        Value = Null
-      end
-      item
-        Name = 'company_id'
-        Attributes = [paSigned]
-        DataType = ftInteger
-        Precision = 10
-        Size = 4
-        Value = Null
-      end
-      item
-        Name = 'pay_lis_type'
-        Attributes = [paSigned, paNullable]
-        DataType = ftInteger
-        Precision = 10
-        Size = 4
-        Value = Null
-      end>
-    SQL.Strings = (
-      'SELECT * FROM'
-      'Lis_1C.dbo.View_C1_Pays p'
-      'LEFT OUTER JOIN Lis_1C.dbo.C1_contracts c '
-      'ON (c.c1_contract_GUID = p.c1_contract_GUID) '
-      'AND (c.c1_company_GUID= p.c1_company_GUID)'
-      'AND (c.contract_status <> 2) '
-      'WHERE ((lis_pay_id is null) OR (lis_pay_id<0))'
-      'AND (c1_doc_date >=:date1)'
-      'AND (c1_doc_date  <= :date2)'
-      'AND (company_id =  :company_id)'
-      'AND(c1_contract_type= :pay_lis_type)')
-    Left = 938
-    Top = 546
+    Top = 136
   end
   object dxBarManager1: TdxBarManager
     Tag = 555
@@ -880,7 +810,7 @@ object fmPretenziaShape: TfmPretenziaShape
     PopupMenuLinks = <>
     Style = bmsOffice11
     UseSystemFont = True
-    Left = 201
+    Left = 249
     Top = 155
     PixelsPerInch = 96
     DockControlHeights = (
@@ -923,27 +853,7 @@ object fmPretenziaShape: TfmPretenziaShape
         item
           BeginGroup = True
           Visible = True
-          ItemName = 'dxBarButton4'
-        end
-        item
-          BeginGroup = True
-          Visible = True
           ItemName = 'dxBarSubItem4'
-        end
-        item
-          BeginGroup = True
-          Visible = True
-          ItemName = 'dxBarButton5'
-        end
-        item
-          BeginGroup = True
-          Visible = True
-          ItemName = 'dxBarButton7'
-        end
-        item
-          BeginGroup = True
-          Visible = True
-          ItemName = 'dxBarSubItem3'
         end
         item
           BeginGroup = True
@@ -1013,7 +923,6 @@ object fmPretenziaShape: TfmPretenziaShape
       Visible = ivNever
       ImageIndex = 3
       UnclickAfterDoing = False
-      OnClick = dxBarButton4Click
     end
     object dxBarButton5: TdxBarButton
       Caption = #1057#1074#1103#1079#1072#1085#1085#1099#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1099
@@ -1022,16 +931,6 @@ object fmPretenziaShape: TfmPretenziaShape
       Visible = ivNever
       ImageIndex = 67
       UnclickAfterDoing = False
-      OnClick = ToolButton12Click
-    end
-    object dxBarButton7: TdxBarButton
-      Caption = #1042#1072#1075#1086#1085#1099' '#1087#1086' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
-      Category = 0
-      Hint = #1042#1072#1075#1086#1085#1099' '#1087#1086' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
-      Visible = ivAlways
-      ButtonStyle = bsChecked
-      ImageIndex = 43
-      OnClick = dxBarButton7Click
     end
     object dxBarSubItem2: TdxBarSubItem
       Tag = 3
@@ -1063,25 +962,6 @@ object fmPretenziaShape: TfmPretenziaShape
       Down = True
       OnClick = dxBarButton_FilterRecords1Click
     end
-    object dxBarSubItem3: TdxBarSubItem
-      Caption = #1055#1077#1095#1072#1090#1100
-      Category = 0
-      Visible = ivAlways
-      ImageIndex = 6
-      ShowCaption = False
-      ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'dxBarButton11'
-        end>
-    end
-    object dxBarButton11: TdxBarButton
-      Caption = #1041#1072#1085#1082#1086#1074#1089#1082#1080#1077' '#1082#1086#1084#1080#1089#1089#1080#1080
-      Category = 0
-      Hint = #1041#1072#1085#1082#1086#1074#1089#1082#1080#1077' '#1082#1086#1084#1080#1089#1089#1080#1080
-      Visible = ivAlways
-      ImageIndex = 8
-    end
     object dxBarButton12: TdxBarButton
       Tag = 2
       Caption = 'New Button'
@@ -1110,33 +990,68 @@ object fmPretenziaShape: TfmPretenziaShape
         item
           Visible = True
           ItemName = 'dxBarButton14'
+        end
+        item
+          Visible = True
+          ItemName = 'dxBarButton6'
+        end
+        item
+          Visible = True
+          ItemName = 'dxBarButton7'
         end>
     end
     object dxBarButton14: TdxBarButton
-      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
+      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1087#1086#1075#1088#1091#1079#1082#1080')'
       Category = 0
-      Hint = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
+      Hint = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1087#1086#1075#1088#1091#1079#1082#1080')'
       Visible = ivAlways
       ImageIndex = 8
       OnClick = dxBarButton14Click
     end
+    object dxBarButton6: TdxBarButton
+      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1074#1099#1075#1088#1091#1079#1082#1080')'
+      Category = 0
+      Hint = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1074#1099#1075#1088#1091#1079#1082#1080')'
+      Visible = ivAlways
+      ImageIndex = 8
+      OnClick = dxBarButton6Click
+    end
+    object dxBarButton7: TdxBarButton
+      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080' ('#1085#1072' '#1080#1085#1086#1089#1090#1088#1072#1085#1085#1086#1081' '#1090#1077#1088#1088#1080#1090#1086#1088#1080#1080')'
+      Category = 0
+      Hint = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080' ('#1085#1072' '#1080#1085#1086#1089#1090#1088#1072#1085#1085#1086#1081' '#1090#1077#1088#1088#1080#1090#1086#1088#1080#1080')'
+      Visible = ivAlways
+      ImageIndex = 8
+      OnClick = dxBarButton7Click
+    end
+    object dxBarButton8: TdxBarButton
+      Caption = #1059#1076#1072#1083#1080#1090#1100
+      Category = 0
+      Hint = #1059#1076#1072#1083#1080#1090#1100
+      Visible = ivAlways
+      ImageIndex = 2
+      OnClick = dxBarButton8Click
+    end
     object N1: TdxBarButton
-      Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1087#1083#1072#1090#1105#1078'...'
+      Caption = #1044#1086#1073#1072#1074#1080#1090#1100'...'
       Category = 1
+      Hint = #1044#1086#1073#1072#1074#1080#1090#1100
       Visible = ivAlways
       ImageIndex = 0
       OnClick = N1Click
     end
     object N2: TdxBarButton
-      Caption = #1048#1079#1084#1077#1085#1080#1090#1100' '#1087#1083#1072#1090#1105#1078'...'
+      Caption = #1048#1079#1084#1077#1085#1080#1090#1100'...'
       Category = 1
+      Hint = #1048#1079#1084#1077#1085#1080#1090#1100
       Visible = ivAlways
       ImageIndex = 1
       OnClick = N2Click
     end
     object N3: TdxBarButton
-      Caption = #1059#1076#1072#1083#1080#1090#1100' '#1087#1083#1072#1090#1105#1078
+      Caption = #1059#1076#1072#1083#1080#1090#1100
       Category = 1
+      Hint = #1059#1076#1072#1083#1080#1090#1100
       Visible = ivAlways
       ImageIndex = 2
       OnClick = N3Click
@@ -1210,7 +1125,6 @@ object fmPretenziaShape: TfmPretenziaShape
       Visible = ivAlways
       ButtonStyle = bsChecked
       Down = True
-      OnClick = dxBarButton_FilterRecords2Click
     end
   end
   object Popup_Pay: TdxBarPopupMenu
@@ -1250,48 +1164,91 @@ object fmPretenziaShape: TfmPretenziaShape
     Top = 205
     PixelsPerInch = 96
   end
-  object DS_Pay_Invoice: TDataSource
-    DataSet = Query_Pay_Invoice
-    Left = 164
-    Top = 451
-  end
-  object Query_Pay_Invoice: TADOQuery
+  object Query_Fact: TADOQuery
     Connection = fmMain.Lis
-    CursorType = ctStatic
     Parameters = <
       item
-        Name = 'pay_id'
+        Name = 'pretenzia_shape_id'
         Size = -1
         Value = Null
       end>
     SQL.Strings = (
-      'SELECT * FROM view_pay_invoice '
-      'WHERE pay_id =:pay_id')
-    Left = 164
-    Top = 421
+      
+        'select * from view_pretenzia_shape_fact where pretenzia_shape_id' +
+        ' = :pretenzia_shape_id')
+    Left = 608
+    Top = 328
   end
-  object Popup_Pay_Invoice: TdxBarPopupMenu
-    Tag = 3
+  object DS_Fact: TDataSource
+    DataSet = Query_Fact
+    Left = 656
+    Top = 400
+  end
+  object dxBarPopupMenu1: TdxBarPopupMenu
     BarManager = dxBarManager1
     ItemLinks = <
       item
         Visible = True
-      end
-      item
-        Visible = True
-      end
-      item
-        Visible = True
-        ItemName = 'Excel2'
+        ItemName = 'dxBarButton8'
       end
       item
         BeginGroup = True
         Visible = True
-        ItemName = 'dxBarSubItem2'
+        ItemName = 'dxBarSubItem4'
+      end
+      item
+        BeginGroup = True
+        Visible = True
+        ItemName = 'dxBarButton21'
+      end
+      item
+        BeginGroup = True
+        Visible = True
+        ItemName = 'dxBarSubItem5'
       end>
     UseOwnFont = False
-    Left = 165
-    Top = 480
+    Left = 992
+    Top = 240
     PixelsPerInch = 96
+  end
+  object dxBarButton21: TdxBarButton
+    Caption = #1055#1077#1095#1072#1090#1100' '#1090#1072#1073#1083#1080#1094#1099' '#1074' Excel'
+    Category = -1
+    Hint = #1055#1077#1095#1072#1090#1100' '#1090#1072#1073#1083#1080#1094#1099' '#1074' Excel'
+    Visible = ivAlways
+    ImageIndex = 8
+    OnClick = dxBarButton21Click
+  end
+  object dxBarSubItem5: TdxBarSubItem
+    Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1080' '#1090#1072#1073#1083#1080#1094#1099
+    Category = -1
+    Visible = ivAlways
+    ImageIndex = 4
+    ItemLinks = <
+      item
+        Visible = True
+        ItemName = 'dxBarButton22'
+      end
+      item
+        BeginGroup = True
+        Visible = True
+        ItemName = 'dxBarButton23'
+      end>
+  end
+  object dxBarButton22: TdxBarButton
+    Caption = #1050#1086#1083#1086#1085#1082#1080' '#1090#1072#1073#1083#1080#1094#1099'...'
+    Category = -1
+    Hint = #1050#1086#1083#1086#1085#1082#1080' '#1090#1072#1073#1083#1080#1094#1099
+    Visible = ivAlways
+    ImageIndex = 15
+    OnClick = dxBarButton22Click
+  end
+  object dxBarButton23: TdxBarButton
+    Caption = #1055#1072#1085#1077#1083#1100' '#1075#1088#1091#1087#1087#1080#1088#1086#1074#1086#1082
+    Category = -1
+    Hint = #1055#1072#1085#1077#1083#1100' '#1075#1088#1091#1087#1087#1080#1088#1086#1074#1086#1082
+    Visible = ivAlways
+    ImageIndex = 13
+    OnClick = dxBarButton23Click
   end
 end

@@ -856,28 +856,38 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
     Left = 0
     Top = 56
     Width = 404
-    Height = 73
+    Height = 81
     Align = alTop
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 1
+    DesignSize = (
+      404
+      81)
     object Label1: TLabel
       Left = 4
-      Top = 35
+      Top = 59
       Width = 118
       Height = 13
       Caption = #1057#1091#1084#1084#1072'............................'
     end
     object Label5: TLabel
       Left = 4
-      Top = 11
+      Top = 34
       Width = 151
       Height = 13
       Caption = #1044#1072#1090#1072' '#1087#1088#1077#1090#1077#1085#1079#1080#1080'.......................'
     end
+    object Label11: TLabel
+      Left = 4
+      Top = 13
+      Width = 112
+      Height = 13
+      Caption = #1053#1086#1084#1077#1088'..........................'
+    end
     object cxCurrencyEdit1: TcxCurrencyEdit
       Left = 95
-      Top = 31
+      Top = 54
       EditValue = 0.000000000000000000
       Properties.DisplayFormat = '#,##0.00'
       Properties.EditFormat = '0.00'
@@ -904,7 +914,7 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
     end
     object cxDateEdit1: TcxDateEdit
       Left = 95
-      Top = 6
+      Top = 30
       Properties.ShowTime = False
       Style.LookAndFeel.NativeStyle = False
       Style.LookAndFeel.ScrollbarMode = sbmClassic
@@ -925,6 +935,41 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Width = 105
+    end
+    object cxTextEdit1: TcxTextEdit
+      Left = 95
+      Top = 8
+      Anchors = [akLeft, akTop, akRight]
+      ParentFont = False
+      Properties.Alignment.Horz = taLeftJustify
+      Properties.ReadOnly = False
+      Style.Color = clWindow
+      Style.Font.Charset = DEFAULT_CHARSET
+      Style.Font.Color = clBlue
+      Style.Font.Height = -11
+      Style.Font.Name = 'MS Sans Serif'
+      Style.Font.Style = [fsBold]
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.ScrollbarMode = sbmClassic
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
+      Style.TextColor = clBlack
+      Style.IsFontAssigned = True
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleDisabled.TextColor = clBlack
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
+      TabOrder = 2
+      Width = 303
     end
   end
   object Panel4: TPanel
@@ -1039,7 +1084,6 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 3
-    ExplicitTop = 474
     DesignSize = (
       404
       37)
@@ -1212,14 +1256,14 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
   end
   object GroupBox1: TGroupBox
     Left = 0
-    Top = 129
+    Top = 137
     Width = 404
-    Height = 137
+    Height = 129
     Align = alClient
     Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
     TabOrder = 2
-    ExplicitTop = 239
-    ExplicitHeight = 235
+    ExplicitTop = 129
+    ExplicitHeight = 137
     object Memo2: TcxMemo
       Left = 2
       Top = 15
@@ -1240,8 +1284,8 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
-      ExplicitHeight = 218
-      Height = 120
+      ExplicitHeight = 120
+      Height = 112
       Width = 400
     end
   end
@@ -1263,41 +1307,12 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
   object Query_Contract: TADOQuery
     Connection = fmMain.Lis
     CursorType = ctStatic
-    Parameters = <
-      item
-        Name = 'type_contract'
-        DataType = ftWord
-        Precision = 3
-        Size = 1
-        Value = 0
-      end
-      item
-        Name = 'date_current'
-        DataType = ftDateTime
-        Size = -1
-        Value = Null
-      end
-      item
-        Name = 'date_current'
-        DataType = ftDateTime
-        Size = -1
-        Value = Null
-      end>
+    Parameters = <>
     SQL.Strings = (
       
         'SELECT contract_id, firm_customer_name, contract_cod,firm_self_n' +
         'ame'
       'FROM view_contract_rights'
-      'WHERE type_contract = :type_contract'
-      ''
-      
-        'AND ((:date_current BETWEEN convert(varchar(4), YEAR(date_begin)' +
-        ')+RIGHT('#39'0'#39'+convert(varchar(2),MONTH(date_begin)), 2)+'#39'01'#39
-      
-        'AND  convert(varchar(4), YEAR(date_end))+RIGHT('#39'0'#39'+convert(varch' +
-        'ar(2),MONTH(date_end)), 2) + RIGHT(convert(varchar(2), DAY(DATEA' +
-        'DD(m,1,date_end-DAY(date_end)))), 2))'
-      'or :date_current is null)'
       ''
       'ORDER BY firm_customer_name'
       '')

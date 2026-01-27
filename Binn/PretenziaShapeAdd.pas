@@ -38,6 +38,8 @@ type
     DS_Contract: TDataSource;
     cxButton1: TcxButton;
     cxButton3: TcxButton;
+    cxTextEdit1: TcxTextEdit;
+    Label11: TLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure cxDBButtonEdit1PropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
     procedure FormCreate(Sender: TObject);
@@ -49,7 +51,7 @@ type
     Fcontract_id: integer;
     procedure SetUpdate(pretenzia_shape_id : integer);
   public
-    constructor Create(AOwner: TApplication; type_pay:byte; action: boolean);
+    constructor Create(AOwner: TApplication; action: boolean);
     property _GetPretenziaShapeId : integer read Fpretenzia_shape_id;
     property _SetUpdate : integer write SetUpdate;
     procedure _SetInsert;
@@ -62,7 +64,7 @@ implementation
       uses Main, Raznoe, Contract, ClientInvoice;
 {$R *.DFM}
 
-constructor TfmPretenziaShapeAdd.Create(AOwner: TApplication; type_pay:byte; action: boolean);
+constructor TfmPretenziaShapeAdd.Create(AOwner: TApplication; action: boolean);
 begin
   Screen.Cursor := crHourglass;
   inherited Create(AOwner);
@@ -71,7 +73,6 @@ begin
 
 
   Query_Contract.Close;
-  Query_Contract.Parameters.ParamByName('type_contract').Value := 0;
 
   Screen.Cursor := crDefault;
 end;
@@ -83,7 +84,6 @@ begin
   cxDateEdit1.Date := Date();
 
   Query_Contract.Close;
-  Query_Contract.Parameters.ParamByName('date_current').Value := Date();
   Query_Contract.Open;
   cxTextEdit2.Text := Query_Contract.FieldByName('contract_cod').AsString;
 
@@ -110,11 +110,11 @@ begin
     cxDateEdit1.Date := Q.FieldByName('pretenzia_date').AsDatetime;
 
     Query_Contract.Close;
-    Query_Contract.Parameters.ParamByName('date_current').Value := varEmpty;
     Query_Contract.Open;
     Query_Contract.Locate('contract_id', Q.FieldByName('contract_id').AsInteger, []);
 
     Fcontract_id := Q['contract_id'];
+    cxTextEdit1.Text := Q.FieldByName('pretenzia_cod').AsString;
     cxTextEdit2.Text := Q.FieldByName('contract_cod').AsString;
     cxTextEdit3.Text := Q.FieldByName('firm_self_name').AsString;
     Memo2.EditValue    := Q.FieldByName('comment').Value;
@@ -157,24 +157,24 @@ begin
 end;
 
 procedure TfmPretenziaShapeAdd.cxButton1Click(Sender: TObject);
-var SP_pay_invoice_modify : TADOStoredProc;
-    SP_PayModify          : TADOStoredProc;
+var  SP          : TADOStoredProc;
 begin
   Screen.Cursor := crHourglass;
 
-  SP_PayModify := TADOStoredProc.Create(nil);
-  SP_PayModify.Connection := fmMain.Lis;
-  SP_PayModify.ProcedureName := '';
-  SP_PayModify.Parameters.Refresh;
-  SP_PayModify.Parameters.ParamByName('@type_action'       ).Value := Ftype_action;
-  SP_PayModify.Parameters.ParamByName('@pretenzia_shape_id').Value := Fpretenzia_shape_id;
-  SP_PayModify.Parameters.ParamByName('@contract_id'       ).Value := Fcontract_id;
-  SP_PayModify.Parameters.ParamByName('@pretenzia_date'    ).Value := cxDateEdit1.Date;
-  SP_PayModify.Parameters.ParamByName('@pretenzia_sum'     ).Value := cxCurrencyEdit1.EditValue;
-  SP_PayModify.Parameters.ParamByName('@comment'           ).Value := Memo2.EditValue;
+  SP := TADOStoredProc.Create(nil);
+  SP.Connection := fmMain.Lis;
+  SP.ProcedureName := 'sp_pretenzia_shape_modify';
+  SP.Parameters.Refresh;
+  SP.Parameters.ParamByName('@type_action'       ).Value := Ftype_action;
+  SP.Parameters.ParamByName('@pretenzia_shape_id').Value := Fpretenzia_shape_id;
+  SP.Parameters.ParamByName('@contract_id'       ).Value := Fcontract_id;
+  SP.Parameters.ParamByName('@pretenzia_cod'     ).Value := cxTextEdit1.Text;
+  SP.Parameters.ParamByName('@pretenzia_date'    ).Value := cxDateEdit1.Date;
+  SP.Parameters.ParamByName('@pretenzia_sum'     ).Value := cxCurrencyEdit1.EditValue;
+  SP.Parameters.ParamByName('@comment'           ).Value := Memo2.EditValue;
 
-  SP_PayModify.ExecProc;
-  Fpretenzia_shape_id := SP_PayModify.Parameters.ParamByName('@pay_id').Value;
+  SP.ExecProc;
+  Fpretenzia_shape_id := SP.Parameters.ParamByName('@pretenzia_shape_id').Value;
 
   Screen.Cursor := crDefault;
 end;

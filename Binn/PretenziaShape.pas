@@ -22,7 +22,7 @@ uses
   dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, cxDataControllerConditionalFormattingRulesManagerDialog, dxDateRanges, dxSkinTheBezier,
   dxSkinOffice2019Colorful, dxScrollbarAnnotations, dxSkinBasic,
   dxSkinOffice2019Black, dxSkinOffice2019DarkGray, dxSkinOffice2019White,
-  dxSkinWXI;
+  dxSkinWXI, cxColorComboBox;
 
 type
   TfmPretenziaShape = class(TForm)
@@ -30,24 +30,21 @@ type
     cxGrid1: TcxGrid;
     cxGrid1DBBandedTableView1: TcxGridDBBandedTableView;
     cxPropertiesStore1: TcxPropertiesStore;
-    Query_Pay: TADOQuery;
-    DS_Pay: TDataSource;
-    cxGrid1DBBandedTableView1pay_id: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1pay_date: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1pay_note: TcxGridDBBandedColumn;
+    Query_PretenziaShape: TADOQuery;
+    DS_PretenziaShape: TDataSource;
+    cxGrid1DBBandedTableView1pretenzia_shape_id: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1pretenzia_date: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1comment: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1contract_cod: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1type_contract: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1firm_self_name: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1firm_customer_name: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1pay_sum: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1brief_name: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1pretenzia_sum: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1pay_num: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1pay_cod: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1first_pay: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1pretenzia_cod: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1FIO_users: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1global_color: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1contract_id: TcxGridDBBandedColumn;
-    Query_1c: TADOQuery;
     dxBarManager1: TdxBarManager;
     dxBarManager1Bar1: TdxBar;
     dxBarSubItem1: TdxBarSubItem;
@@ -66,50 +63,51 @@ type
     dxBarButton1: TdxBarButton;
     dxBarButton4: TdxBarButton;
     dxBarButton5: TdxBarButton;
-    GroupBox1: TGroupBox;
-    cxGrid3: TcxGrid;
-    cxGrid3DBBandedTableView1: TcxGridDBBandedTableView;
-    cxGrid3DBBandedTableView1pay_inv_id: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1pay_id: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1inv_id: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1pay_inv_brief_name: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1inv_brief_name: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1inv_currency_id: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1pay_firm_self_name: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1pay_currency_id: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1pay_brief_name: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1pay_cod: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1invoice_cod: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1invoice_date: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1inv_firm_customer_name_short: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1pay_rest: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1pay_sum_inv: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1inv_sum_pay: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1pay_sum: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1pay_inv_currency_id: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1pay_inv_date: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1pay_date: TcxGridDBBandedColumn;
-    cxGrid3DBBandedTableView1pay_firm_customer_name_short: TcxGridDBBandedColumn;
-    cxGrid3Level1: TcxGridLevel;
-    Splitter2: TSplitter;
-    dxBarButton7: TdxBarButton;
-    DS_Pay_Invoice: TDataSource;
-    Query_Pay_Invoice: TADOQuery;
-    Popup_Pay_Invoice: TdxBarPopupMenu;
     dxBarSubItem2: TdxBarSubItem;
     dxBarButton_FilterRecords1: TdxBarButton;
     dxBarButton_FilterRecords2: TdxBarButton;
-    dxBarSubItem3: TdxBarSubItem;
-    dxBarButton11: TdxBarButton;
     dxBarButton12: TdxBarButton;
     dxBarButton13: TdxBarButton;
     cxGrid1DBBandedTableView1date_enter: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1firm_self: TcxGridDBBandedColumn;
     dxBarButton14: TdxBarButton;
     dxBarSubItem4: TdxBarSubItem;
+    GroupBox1: TGroupBox;
+    Splitter2: TSplitter;
+    cxGrid2: TcxGrid;
+    cxGrid2DBBandedTableView1: TcxGridDBBandedTableView;
+    cxGrid2Level1: TcxGridLevel;
+    dxBarButton6: TdxBarButton;
+    dxBarButton7: TdxBarButton;
+    Query_Fact: TADOQuery;
+    DS_Fact: TDataSource;
+    cxGrid2DBBandedTableView1pretenzia_shape_fact_id: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1fact_id: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1pretenzia_shape_id: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1node_begin_name: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1num_document: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1date_otpr1: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1date_pr1: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1date_otpr2: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1date_foreign_otpr: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1date_foreign_pr: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1num_document_empty: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1num_vagon: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1node_end_name: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1num_document_load: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1days_count: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1days_norm: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1days_count_hold: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1hold_rete: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1hold_sum: TcxGridDBBandedColumn;
+    dxBarPopupMenu1: TdxBarPopupMenu;
+    dxBarButton21: TdxBarButton;
+    dxBarSubItem5: TdxBarSubItem;
+    dxBarButton22: TdxBarButton;
+    dxBarButton23: TdxBarButton;
+    dxBarButton8: TdxBarButton;
     procedure dxBarButton2Click(Sender: TObject);
     procedure cxGrid1DBBandedTableView1KeyPress(Sender: TObject; var Key: Char);
-    procedure ToolButton12Click(Sender: TObject);
     procedure cxGrid1DBBandedTableView1FocusedItemChanged(Sender: TcxCustomGridTableView; APrevFocusedItem, AFocusedItem: TcxCustomGridTableItem);
     procedure cxGrid1DBBandedTableView1CustomDrawColumnHeader(Sender: TcxGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridColumnHeaderViewInfo; var ADone: Boolean);
     procedure cxGrid1DBBandedTableView1DataControllerFilterChanged( Sender: TObject);
@@ -123,24 +121,35 @@ type
     procedure N11Click(Sender: TObject);
     procedure ToolButton16Click(Sender: TObject);
     procedure Excel1Click(Sender: TObject);
-    procedure dxBarButton4Click(Sender: TObject);
-    procedure dxBarButton7Click(Sender: TObject);
-    procedure cxGrid1DBBandedTableView2FocusedRecordChanged(Sender: TcxCustomGridTableView; APrevFocusedRecord, AFocusedRecord: TcxCustomGridRecord; ANewItemRecordFocusingChanged: Boolean);
     procedure dxBarButton_FilterRecords1Click(Sender: TObject);
-    procedure dxBarButton_FilterRecords2Click(Sender: TObject);
     procedure dxBarButton13Click(Sender: TObject);
     procedure dxBarButton14Click(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure dxBarButton21Click(Sender: TObject);
+    procedure dxBarButton22Click(Sender: TObject);
+    procedure dxBarButton23Click(Sender: TObject);
+    procedure cxGrid2DBBandedTableView1FilterOnChanged(Sender: TObject);
+    procedure cxGrid2DBBandedTableView1CustomDrawCell(
+      Sender: TcxCustomGridTableView; ACanvas: TcxCanvas;
+      AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
+    procedure cxGrid2DBBandedTableView1CustomDrawColumnHeader(
+      Sender: TcxGridTableView; ACanvas: TcxCanvas;
+      AViewInfo: TcxGridColumnHeaderViewInfo; var ADone: Boolean);
+    procedure cxGrid2DBBandedTableView1FocusedItemChanged(
+      Sender: TcxCustomGridTableView; APrevFocusedItem,
+      AFocusedItem: TcxCustomGridTableItem);
+    procedure cxGrid2DBBandedTableView1KeyPress(Sender: TObject; var Key: Char);
+    procedure cxGrid1DBBandedTableView1SelectionChanged(
+      Sender: TcxCustomGridTableView);
+    procedure dxBarButton8Click(Sender: TObject);
+    procedure dxBarButton6Click(Sender: TObject);
+    procedure dxBarButton7Click(Sender: TObject);
   private
     Fdate1, Fdate2 : TDateTime;
-    Fpay_id     : integer;
-    Ftype_pay   : byte;
+    Fpretenzia_shape_id     : integer;
 
   public
-    constructor Create(AOwner : Tapplication; type_pay: byte; flag: boolean);
-
-  published
-    procedure SetPeriodCreate (date1, date2: TDate);
+    constructor Create(AOwner : Tapplication; flag: boolean);
 
   end;
 
@@ -151,30 +160,32 @@ implementation
    uses Main, Period, Raznoe, PretenziaShapeAdd, Other, cxGridDBDataDefinitions, Default, Filter;
 {$R *.DFM}
 
-constructor TfmPretenziaShape.Create(AOwner: Tapplication; type_pay: byte; flag: boolean);
+
+
+
+constructor TfmPretenziaShape.Create(AOwner: Tapplication; flag: boolean);
 begin
   Screen.Cursor := crHourglass;
   inherited Create(AOwner);
-  Ftype_pay := type_pay;
 
   dxBarSubItem1.Caption := StoreRegistryDate(rgLoad, '\Software\Lis1\DateTime\PretenziaShape', Fdate1, Fdate2);
 
-  Query_Pay.Parameters.ParamByName('type_pay').Value := Ftype_pay;
-  Query_Pay.Parameters.ParamByName('date1').Value := Fdate1;
-  Query_Pay.Parameters.ParamByName('date2').Value := Fdate2;
-  Query_Pay.Open;
+  Query_PretenziaShape.Parameters.ParamByName('date1').Value := Fdate1;
+  Query_PretenziaShape.Parameters.ParamByName('date2').Value := Fdate2;
+  Query_PretenziaShape.Open;
+
+  cxGrid1DBBandedTableView1SelectionChanged(nil);
 
   if flag then begin
     FormStyle := fsNormal;
     dxBarButton4.Visible := ivAlways;
-    cxGrid1DBBandedTableView1.OnDblClick := dxBarButton4Click;
   end else begin
     FormStyle := fsMDIChild;
     WindowState := wsMaximized;
   end;
 
   StoreRegistryGrid(rgLoad,'\Software\Lis1\PretenziaShape_Grids', cxGrid1DBBandedTableView1);
-  StoreRegistryGrid(rgLoad,'\Software\Lis1\PretenziaShape_Grids', cxGrid3DBBandedTableView1);
+  StoreRegistryGrid(rgLoad,'\Software\Lis1\PretenziaShape_Grids', cxGrid2DBBandedTableView1);
 
   SetUsersModuleRights(self, fmMain.Lis);
   MonitorEventFormOpen('OPEN_FORM', self.Name, fmMain.Lis, -9);
@@ -192,49 +203,50 @@ procedure TfmPretenziaShape.FormDestroy(Sender: TObject);
 begin
   StoreRegistryDate(rgSave, '\Software\Lis1\DateTime\PretenziaShape', Fdate1, Fdate2);
   StoreRegistryGrid(rgSave, '\Software\Lis1\PretenziaShape_Grids', cxGrid1DBBandedTableView1);
+  StoreRegistryGrid(rgSave, '\Software\Lis1\PretenziaShape_Grids', cxGrid2DBBandedTableView1);
 end;
 
 procedure TfmPretenziaShape.N1Click(Sender: TObject);
 begin
-  fmPretenziaShapeAdd := TfmPretenziaShapeAdd.Create(Application, Ftype_pay, True);
+  fmPretenziaShapeAdd := TfmPretenziaShapeAdd.Create(Application, True);
   fmPretenziaShapeAdd._SetInsert;
   if fmPretenziaShapeAdd.ShowModal = mrOk then
-    RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pay_id', fmPretenziaShapeAdd._GetPretenziaShapeId);
+    RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pretenzia_shape_id', fmPretenziaShapeAdd._GetPretenziaShapeId);
 end;
 
 procedure TfmPretenziaShape.N2Click(Sender: TObject);
 begin
-  fmPretenziaShapeAdd := TfmPretenziaShapeAdd.Create(Application, Ftype_pay, False);
-  fmPretenziaShapeAdd._SetUpdate := cxGrid1DBBandedTableView1.GetColumnByFieldName('pay_id').DataBinding.Field.AsInteger;
+  fmPretenziaShapeAdd := TfmPretenziaShapeAdd.Create(Application, False);
+  fmPretenziaShapeAdd._SetUpdate := cxGrid1DBBandedTableView1.GetColumnByFieldName('pretenzia_shape_id').DataBinding.Field.AsInteger;
   if fmPretenziaShapeAdd.ShowModal = mrOk then
-    RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pay_id');
+    RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pretenzia_shape_id');
 end;
 
 procedure TfmPretenziaShape.N3Click(Sender: TObject);
 var          i : integer;
-  SP_PayDelete : TADOStoredProc;
+  SP : TADOStoredProc;
 begin
-  if Application.MessageBox('Вы уверены, что хотите удалить платёж?', 'Внимание', MB_OKCANCEL) = IDOK then begin
+  if Application.MessageBox('Вы уверены, что хотите удалить претензию?', 'Внимание', MB_OKCANCEL) = IDOK then begin
     Screen.Cursor := crHourglass;
 
-    SP_PayDelete := TADOStoredProc.Create(nil);
-    SP_PayDelete.Connection := fmMain.Lis;
-    SP_PayDelete.ProcedureName := 'sp_pay_modify;1';
-    SP_PayDelete.Parameters.Refresh;
+    SP := TADOStoredProc.Create(nil);
+    SP.Connection := fmMain.Lis;
+    SP.ProcedureName := 'sp_pretenzia_shape_modify;1';
+    SP.Parameters.Refresh;
 
     for i := 0 to cxGrid1DBBandedTableView1.Controller.SelectedRowCount - 1 do begin
-      SP_PayDelete.Close;
-      SP_PayDelete.Parameters.ParamByName('@type_action').Value := 2;
-      SP_PayDelete.Parameters.ParamByName('@pay_id').Value := cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1.GetColumnByFieldName('pay_id').Index];
+      SP.Close;
+      SP.Parameters.ParamByName('@type_action').Value := 2;
+      SP.Parameters.ParamByName('@pretenzia_shape_id').Value := cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1.GetColumnByFieldName('pretenzia_shape_id').Index];
       try
-        SP_PayDelete.ExecProc;
+        SP.ExecProc;
       except
       end;
 
       ShowTextMessage('Осталось '+IntToStr(cxGrid1DBBandedTableView1.Controller.SelectedRowCount - i)+' строк...', False);
     end;
-    RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pay_id');
-    SP_PayDelete.Free;
+    RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pretenzia_shape_id');
+    SP.Free;
 
     ShowTextMessage;
     
@@ -282,6 +294,54 @@ begin
   FilterColumnGridOnKeyPress(TcxGridDBBandedTableView(TcxGridSite(Sender).GridView), Key);
 end;
 
+procedure TfmPretenziaShape.cxGrid1DBBandedTableView1SelectionChanged( Sender: TcxCustomGridTableView);
+begin
+  Query_Fact.Close;
+  if cxGrid1DBBandedTableView1pretenzia_shape_id.DataBinding.Field <> nil then
+      if cxGrid1DBBandedTableView1pretenzia_shape_id.DataBinding.Field.Value <> null then begin
+        Query_Fact.Parameters.ParamByName('pretenzia_shape_id').Value := cxGrid1DBBandedTableView1pretenzia_shape_id.DataBinding.Field.Value;
+        Query_Fact.Open;
+      end;
+
+end;
+
+procedure TfmPretenziaShape.cxGrid2DBBandedTableView1CustomDrawCell(
+  Sender: TcxCustomGridTableView; ACanvas: TcxCanvas;
+  AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
+begin
+	if AViewInfo.GridRecord.Selected or AViewInfo.GridRecord.Focused then begin
+		ACanvas.Brush.Color := clNavy;
+		ACanvas.Font.Color := clWhite;
+		if AViewInfo.Focused then ACanvas.Brush.Color := clBlue;
+	end;
+end;
+
+procedure TfmPretenziaShape.cxGrid2DBBandedTableView1CustomDrawColumnHeader(
+  Sender: TcxGridTableView; ACanvas: TcxCanvas;
+  AViewInfo: TcxGridColumnHeaderViewInfo; var ADone: Boolean);
+begin
+  DrawcxGridColumnOnFocused(Sender, ACanvas, AViewInfo);
+end;
+
+procedure TfmPretenziaShape.cxGrid2DBBandedTableView1FilterOnChanged(
+  Sender: TObject);
+begin
+	DrawcxGridColumnOnFiltered(cxGrid2DBBandedTableView1);
+end;
+
+procedure TfmPretenziaShape.cxGrid2DBBandedTableView1FocusedItemChanged(
+  Sender: TcxCustomGridTableView; APrevFocusedItem,
+  AFocusedItem: TcxCustomGridTableItem);
+begin
+	cxGrid2DBBandedTableView1.Painter.Invalidate;
+end;
+
+procedure TfmPretenziaShape.cxGrid2DBBandedTableView1KeyPress(Sender: TObject;
+  var Key: Char);
+begin
+	FilterColumnGridOnKeyPress(cxGrid2DBBandedTableView1, Key);
+end;
+
 procedure TfmPretenziaShape.dxBarButton13Click(Sender: TObject);
 begin
   Screen.Cursor := crHourglass;
@@ -297,10 +357,10 @@ begin
 
   dxBarSubItem1.Caption := FormatDateTime('mmm yy', Fdate1) + ' - ' + FormatDateTime('mmm yy', Fdate2);
 
-  Query_Pay.Close;
-  Query_Pay.Parameters.ParamByName('date1').Value := Fdate1;
-  Query_Pay.Parameters.ParamByName('date2').Value := Fdate2;
-  Query_Pay.Open;
+  Query_PretenziaShape.Close;
+  Query_PretenziaShape.Parameters.ParamByName('date1').Value := Fdate1;
+  Query_PretenziaShape.Parameters.ParamByName('date2').Value := Fdate2;
+  Query_PretenziaShape.Open;
 
   Screen.Cursor := crDefault;
 end;
@@ -329,11 +389,54 @@ begin
 
     SP := TADOStoredProc.Create(nil);
     SP.Connection := fmMain.Lis;
-    SP.ProcedureName := '';
+    SP.ProcedureName := 'sp_pretenzia_shape_fact_modify';
     SP.Parameters.Refresh;
-    count_str := 10;
-    while not (TVarData(exWks.Cells[count_str,1].Value).VType = varEmpty) do begin
+    count_str := 9;
+    while not (TVarData(exWks.Cells[count_str,6].Value).VType = varEmpty) do begin
       ShowTextMessage('Обработано '+IntToStr(count_str - 10)+' вагонов...', False);
+
+      SP.Parameters.ParamByName('@pretenzia_shape_fact_id' ).Value := null;
+      SP.Parameters.ParamByName('@type_action'             ).Value := 0;
+      SP.Parameters.ParamByName('@pretenzia_shape_id'      ).Value := cxGrid1DBBandedTableView1pretenzia_shape_id.DataBinding.Field.AsInteger;
+      SP.Parameters.ParamByName('@fact_id'                 ).Value := null;
+      SP.Parameters.ParamByName('@node_begin_name'         ).Value := exWks.Range['A' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@num_document'            ).Value := exWks.Range['B' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@date_otpr1'              ).Value := exWks.Range['C' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@date_pr1'                ).Value := exWks.Range['D' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@date_otpr2'              ).Value := exWks.Range['E' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@date_foreign_otpr'       ).Value := null;
+      SP.Parameters.ParamByName('@date_foreign_pr'         ).Value := null;
+      SP.Parameters.ParamByName('@num_document_empty'      ).Value := exWks.Range['H' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@num_vagon'               ).Value := exWks.Range['F' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@node_end_name'           ).Value := exWks.Range['G' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@num_document_load'       ).Value := null;
+      SP.Parameters.ParamByName('@days_count'              ).Value := exWks.Range['I' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@days_norm'               ).Value := exWks.Range['J' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@days_count_hold'         ).Value := exWks.Range['K' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@hold_rete'               ).Value := exWks.Range['L' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@hold_sum'                ).Value := exWks.Range['M' + IntToStr(count_str)].Value;
+
+      try
+        SP.ExecProc;
+      except
+        on E: Exception do
+          Application.MessageBox(PChar(E.Message), 'Внимание', MB_OK);
+      end;
+
+//      Станция отправления предыдущего рейса
+//      № накладной предыдущего рейса
+//      Дата отправления порожнего рейса на станции погрузки
+//      Дата прибытия на ст. погрузки
+//      Дата отправления со ст. погрузки
+//      Номер вагона
+//      Станция погрузки
+//      Накладная груженого рейса
+//      Количество суток простоя на станции погрузки
+//      Норматив суток простоя
+//      Количество суток сверхнормативного простоя на станции погрузки
+//      Стоимость простоя за сутки , руб/ваг.
+//      Итого сумма
+
 
 
 
@@ -347,7 +450,22 @@ begin
     exWks := null;
   end;
 
-  RefreshQueryGrid(cxGrid1DBBandedTableView1, '');
+  RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pretenzia_shape_id');
+end;
+
+procedure TfmPretenziaShape.dxBarButton21Click(Sender: TObject);
+begin
+	PrintcxGrid(cxGrid2DBBandedTableView1);
+end;
+
+procedure TfmPretenziaShape.dxBarButton22Click(Sender: TObject);
+begin
+	SetdxDBGridColumns(cxGrid2DBBandedTableView1);
+end;
+
+procedure TfmPretenziaShape.dxBarButton23Click(Sender: TObject);
+begin
+	cxGrid2DBBandedTableView1.OptionsView.GroupByBox := not cxGrid2DBBandedTableView1.OptionsView.GroupByBox;
 end;
 
 procedure TfmPretenziaShape.dxBarButton2Click(Sender: TObject);
@@ -368,25 +486,224 @@ begin
          end;
     end;
 
-    Query_Pay.Close;
-    Query_Pay.Parameters.ParamByName('date1').Value := Fdate1;
-    Query_Pay.Parameters.ParamByName('date2').Value := Fdate2;
-    Query_Pay.Open;
+    Query_PretenziaShape.Close;
+    Query_PretenziaShape.Parameters.ParamByName('date1').Value := Fdate1;
+    Query_PretenziaShape.Parameters.ParamByName('date2').Value := Fdate2;
+    Query_PretenziaShape.Open;
 
     Screen.Cursor := crDefault;
   end;
 end;
 
-procedure TfmPretenziaShape.dxBarButton4Click(Sender: TObject);
+procedure TfmPretenziaShape.dxBarButton6Click(Sender: TObject);
+var exWks, exApp  : Variant;
+    count_str     : integer;
+    OpenDialog1   : TOpenDialog;
+    file_name     : string;
+    SP            : TADOStoredProc;
+    Q             : TADOQuery;
 begin
-  Fpay_id := cxGrid1DBBandedTableView1pay_id.DataBinding.Field.AsInteger;
-  ModalResult := mrOk;
+  OpenDialog1 := TOpenDialog.Create(nil);
+  OpenDialog1.Filter      := 'Excel файлы|*.xls;*.xlsx';
+  OpenDialog1.DefaultExt  := 'xls';
+  if OpenDialog1.Execute then begin
+    file_name := OpenDialog1.FileName;
+  end;
+  OpenDialog1.Free;
+
+  try
+    ShowTextMessage('Запуск Excel...', False);
+    exApp := CreateOleObject('Excel.Application');
+    exApp.Workbooks.Open(file_name);
+    exWks := exApp.ActiveWorkbook.WorkSheets[1];
+
+    SP := TADOStoredProc.Create(nil);
+    SP.Connection := fmMain.Lis;
+    SP.ProcedureName := 'sp_pretenzia_shape_fact_modify';
+    SP.Parameters.Refresh;
+    count_str := 9;
+    while not (TVarData(exWks.Cells[count_str,6].Value).VType = varEmpty) do begin
+      ShowTextMessage('Обработано '+IntToStr(count_str - 10)+' вагонов...', False);
+
+      SP.Parameters.ParamByName('@pretenzia_shape_fact_id' ).Value := null;
+      SP.Parameters.ParamByName('@type_action'             ).Value := 0;
+      SP.Parameters.ParamByName('@pretenzia_shape_id'      ).Value := cxGrid1DBBandedTableView1pretenzia_shape_id.DataBinding.Field.AsInteger;
+      SP.Parameters.ParamByName('@fact_id'                 ).Value := null;
+      SP.Parameters.ParamByName('@node_begin_name'         ).Value := exWks.Range['A' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@num_document'            ).Value := exWks.Range['B' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@date_otpr1'              ).Value := exWks.Range['C' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@date_pr1'                ).Value := exWks.Range['D' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@date_otpr2'              ).Value := exWks.Range['E' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@date_foreign_otpr'       ).Value := null;
+      SP.Parameters.ParamByName('@date_foreign_pr'         ).Value := null;
+      SP.Parameters.ParamByName('@num_document_empty'      ).Value := exWks.Range['F' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@num_vagon'               ).Value := exWks.Range['G' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@node_end_name'           ).Value := exWks.Range['H' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@num_document_load'       ).Value := null;
+      SP.Parameters.ParamByName('@days_count'              ).Value := exWks.Range['I' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@days_norm'               ).Value := exWks.Range['J' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@days_count_hold'         ).Value := exWks.Range['K' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@hold_rete'               ).Value := exWks.Range['L' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@hold_sum'                ).Value := exWks.Range['M' + IntToStr(count_str)].Value;
+
+      try
+        SP.ExecProc;
+      except
+        on E: Exception do
+          Application.MessageBox(PChar(E.Message), 'Внимание', MB_OK);
+      end;
+
+//      Станция отправления
+//      № накладной
+//      Дата отправления со ст. погрузки
+//      Дата прибытия на ст. выгрузки
+//      Дата отправления со ст. выгрузки
+//      Накладная на порожний рейс
+//      Номер вагона
+//      Станция выгрузки(простоя)
+//      Количество суток простоя на станции выгрузки
+//      Норматив суток простоя
+//      Количество суток сверхнормативного простоя на станции выгрузки
+//      Стоимость простоя за сутки , руб/ваг.
+//      Итого сумма
+
+
+
+
+      count_str := count_str + 1;
+    end;
+    ShowTextMessage;
+
+  finally
+    exApp.Quit;
+    exWks := null;
+    exWks := null;
+  end;
+
+  RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pretenzia_shape_id');
 end;
 
 procedure TfmPretenziaShape.dxBarButton7Click(Sender: TObject);
+var exWks, exApp  : Variant;
+    count_str     : integer;
+    OpenDialog1   : TOpenDialog;
+    file_name     : string;
+    SP            : TADOStoredProc;
+    Q             : TADOQuery;
 begin
-  GroupBox1.Visible := dxBarButton7.Down;
-  Splitter2.Visible := dxBarButton7.Down;
+  OpenDialog1 := TOpenDialog.Create(nil);
+  OpenDialog1.Filter      := 'Excel файлы|*.xls;*.xlsx';
+  OpenDialog1.DefaultExt  := 'xls';
+  if OpenDialog1.Execute then begin
+    file_name := OpenDialog1.FileName;
+  end;
+  OpenDialog1.Free;
+
+  try
+    ShowTextMessage('Запуск Excel...', False);
+    exApp := CreateOleObject('Excel.Application');
+    exApp.Workbooks.Open(file_name);
+    exWks := exApp.ActiveWorkbook.WorkSheets[1];
+
+    SP := TADOStoredProc.Create(nil);
+    SP.Connection := fmMain.Lis;
+    SP.ProcedureName := 'sp_pretenzia_shape_fact_modify';
+    SP.Parameters.Refresh;
+    count_str := 8;
+    while not (TVarData(exWks.Cells[count_str,8].Value).VType = varEmpty) do begin
+      ShowTextMessage('Обработано '+IntToStr(count_str - 10)+' вагонов...', False);
+
+      SP.Parameters.ParamByName('@pretenzia_shape_fact_id' ).Value := null;
+      SP.Parameters.ParamByName('@type_action'             ).Value := 0;
+      SP.Parameters.ParamByName('@pretenzia_shape_id'      ).Value := cxGrid1DBBandedTableView1pretenzia_shape_id.DataBinding.Field.AsInteger;
+      SP.Parameters.ParamByName('@fact_id'                 ).Value := null;
+      SP.Parameters.ParamByName('@node_begin_name'         ).Value := exWks.Range['A' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@num_document'            ).Value := exWks.Range['B' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@date_otpr1'              ).Value := exWks.Range['C' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@date_pr1'                ).Value := exWks.Range['E' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@date_otpr2'              ).Value := exWks.Range['F' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@date_foreign_otpr'       ).Value := exWks.Range['D' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@date_foreign_pr'         ).Value := exWks.Range['G' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@num_document_empty'      ).Value := exWks.Range['H' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@num_vagon'               ).Value := exWks.Range['I' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@node_end_name'           ).Value := exWks.Range['J' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@num_document_load'       ).Value := null;
+      SP.Parameters.ParamByName('@days_count'              ).Value := exWks.Range['K' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@days_norm'               ).Value := exWks.Range['L' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@days_count_hold'         ).Value := exWks.Range['M' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@hold_rete'               ).Value := exWks.Range['N' + IntToStr(count_str)].Value;
+      SP.Parameters.ParamByName('@hold_sum'                ).Value := exWks.Range['O' + IntToStr(count_str)].Value;
+
+      try
+        SP.ExecProc;
+      except
+        on E: Exception do
+          Application.MessageBox(PChar(E.Message), 'Внимание', MB_OK);
+      end;
+
+//      Станция отправления
+//      № накладной
+//      Дата отправления со ст. погр.
+//      дата сдачи груженого вагона на ин. дорогу
+//      Дата прибытия на ст. выгр.
+//      Дата отправления со ст. выгр.
+//      прием порожнего вагона с ин. дороги
+//      Накладная на порожний рейс
+//      Номер вагона
+//      Станция выгрузки (простоя)
+//      кол-во суток на ин.тер
+//      Норматив нахождения вагона на ин. территории,
+//      Количество суток сверхнормативного использования вагонами на ин. территории
+//      Стоимость простоя за сутки, руб/ваг.
+//      Итого сумма
+
+
+
+
+
+      count_str := count_str + 1;
+    end;
+    ShowTextMessage;
+
+  finally
+    exApp.Quit;
+    exWks := null;
+    exWks := null;
+  end;
+
+  RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pretenzia_shape_id');
+end;
+
+procedure TfmPretenziaShape.dxBarButton8Click(Sender: TObject);
+var          i : integer;
+  SP : TADOStoredProc;
+begin
+  if Application.MessageBox('Вы уверены, что хотите удалить вагоны?', 'Внимание', MB_OKCANCEL) = IDOK then begin
+    Screen.Cursor := crHourglass;
+
+    SP := TADOStoredProc.Create(nil);
+    SP.Connection := fmMain.Lis;
+    SP.ProcedureName := 'sp_pretenzia_shape_fact_modify';
+    SP.Parameters.Refresh;
+
+    for i := 0 to cxGrid2DBBandedTableView1.Controller.SelectedRowCount - 1 do begin
+      SP.Close;
+      SP.Parameters.ParamByName('@type_action').Value := 2;
+      SP.Parameters.ParamByName('@pretenzia_shape_fact_id').Value := cxGrid2DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid2DBBandedTableView1.GetColumnByFieldName('pretenzia_shape_fact_id').Index];
+      try
+        SP.ExecProc;
+      except
+      end;
+
+      ShowTextMessage('Осталось '+IntToStr(cxGrid2DBBandedTableView1.Controller.SelectedRowCount - i)+' строк...', False);
+    end;
+    RefreshQueryGrid(cxGrid2DBBandedTableView1, 'pretenzia_shape_fact_id');
+    SP.Free;
+
+    ShowTextMessage;
+
+    Screen.Cursor := crDefault;
+  end;
 end;
 
 procedure TfmPretenziaShape.dxBarButton_FilterRecords1Click(Sender: TObject);
@@ -394,113 +711,33 @@ begin
   cxGrid1DBBandedTableView1.Filtering.ColumnFilteredItemsList := not dxBarButton_FilterRecords1.Down;
 end;
 
-procedure TfmPretenziaShape.dxBarButton_FilterRecords2Click(Sender: TObject);
-begin
-  cxGrid3DBBandedTableView1.Filtering.ColumnFilteredItemsList := not dxBarButton_FilterRecords2.Down;
-end;
-
 procedure TfmPretenziaShape.N7Click(Sender: TObject);
 begin
-  SetRecordColor('pay_id', cxGrid1DBBandedTableView1, 'pay', Boolean(TMenuItem(Sender).Tag));
-  RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pay_id');
+  SetRecordColor('pretenzia_shape_id', cxGrid1DBBandedTableView1, 'pretenzia_shape_id', Boolean(TMenuItem(Sender).Tag));
+  RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pretenzia_shape_id');
 end;
 
 procedure TfmPretenziaShape.N11Click(Sender: TObject);
 begin
   case TdxBarButton(Sender).ClickItemLink.Owner.Owner.Tag of
     1 : cxGrid1DBBandedTableView1.OptionsView.GroupByBox := not cxGrid1DBBandedTableView1.OptionsView.GroupByBox;
-    3 : cxGrid3DBBandedTableView1.OptionsView.GroupByBox := not cxGrid3DBBandedTableView1.OptionsView.GroupByBox;
   end;
-end;
-
-procedure TfmPretenziaShape.ToolButton12Click(Sender: TObject);
-type
-  TFunc = function(AppHand:THandle; global_id:integer; caption: string; usr_pwd:PUser_pwd):variant;
-var
-  FShablon  : TFunc;
-  handle    : THandle;
-  v         : Variant;
-begin
-   handle := LoadLibrary('dictionary.dll');
-   @FShablon := GetProcAddress(handle,'CreateWndDocBlob');
-   v := FShablon(Application.Handle, cxGrid1DBBandedTableView1pay_id.DataBinding.Field.AsInteger, 'Документы связанные с платежом № '+cxGrid1DBBandedTableView1pay_cod.DataBinding.Field.AsString, usr_pwd);
-   FreeLibrary(handle);
 end;
 
 procedure TfmPretenziaShape.ToolButton16Click(Sender: TObject);
 begin
-  RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pay_id');
+  RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pretenzia_shape_id');
 end;
 
 procedure TfmPretenziaShape.Excel1Click(Sender: TObject);
 begin
   case TdxBarManager(TdxBarButton(Sender).GetParentComponent).Tag of
     1 : PrintcxGrid(cxGrid1DBBandedTableView1);
-    3 : PrintcxGrid(cxGrid3DBBandedTableView1);
   end;
 end;
 
-//отчет о незагруженных платежах
-procedure TfmPretenziaShape.cxGrid1DBBandedTableView2FocusedRecordChanged(Sender: TcxCustomGridTableView; APrevFocusedRecord, AFocusedRecord: TcxCustomGridRecord; ANewItemRecordFocusingChanged: Boolean);
-begin
-  try
-    if not Assigned(AFocusedRecord) then
-      TcxGridDBBandedTableView(Sender).Controller.FocusRecord(1, True)
-    else
-      if (not VarIsNull(AFocusedRecord.Values[TcxGridDBBandedTableView(Sender).GetColumnByFieldName('pay_id').Index])) AND (dxBarButton7.Down) then begin
-        Query_Pay_Invoice.Close;
-        Query_Pay_Invoice.Parameters.ParamByName('pay_id').Value := AFocusedRecord.Values[TcxGridDBBandedTableView(Sender).GetColumnByFieldName('pay_id').Index];
-        Query_Pay_Invoice.Open;
-      end;
-  except
-  end;
-end;
 
-procedure TfmPretenziaShape.SetPeriodCreate (date1, date2: TDate);
-var Q : TADOQuery;
-begin
-  Screen.Cursor := crHourglass;
 
-  Fdate1 := date1;
-  Fdate2 := date2;
-
-  Q := TADOQuery.Create(nil);
-  Q.Connection := Query_Pay.Connection;
-  Q.SQL.Add('SELECT date1 = MIN(pay_date), date2 = MAX(pay_date) ');
-  Q.SQL.Add('FROM view_pay_rights ');
-  Q.SQL.Add('WHERE type_pay = :type_pay AND :date1 <= date_enter AND date_enter < :date2 + 1');
-  Q.Parameters.ParamByName('type_pay').Value := Ftype_pay;
-  Q.Parameters.ParamByName('date1').Value := date1;
-  Q.Parameters.ParamByName('date2').Value := date2;
-  Q.Open;
-
-  if not Q.FieldByName('date1').IsNull then begin
-    Fdate1 := Q.FieldByName('date1').AsDateTime;
-    Fdate2 := Q.FieldByName('date2').AsDateTime;
-  end;
-
-  dxBarSubItem1.Caption := FormatDateTime('dd.mm.yy', Fdate1) + ' - ' + FormatDateTime('dd.mm.yy', Fdate2);
-
-  Query_Pay.Close;
-  Query_Pay.Parameters.ParamByName('date1').Value := Fdate1;
-  Query_Pay.Parameters.ParamByName('date2').Value := Fdate2;
-  Query_Pay.Open;
-
-  Q.Free;
-
-  // Наложим фильтр по дате
-  with cxGrid1DBBandedTableView1.DataController.Filter do begin
-    BeginUpdate;
-
-    Root.Clear;
-    Root.AddItem(cxGrid1DBBandedTableView1.GetColumnByFieldName('date_enter'), foBetween, VarArrayOf([date1, date2]), DateToStr(date1) + ';' + DateToStr(date2));
-    Active := True;
-
-    EndUpdate;
-  end;
-
-  Screen.Cursor := crDefault;
-end;
 
 end.
 
