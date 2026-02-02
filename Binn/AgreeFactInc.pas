@@ -649,7 +649,7 @@ begin
 
   sql_string := sql_string + ' AND (max_load_id = ' + IntToStr(Q.FieldByName('max_load_id').AsInteger)+')';
   if month > 0 then sql_string := sql_string + ' AND MONTH(dataot) = ' + IntToStr(month);
-  sql_string := sql_string + ' AND YEAR(dataot) = ' + IntToStr(year);
+//  sql_string := sql_string + ' AND YEAR(dataot) = ' + IntToStr(year);
 
   Q.Free;
 
