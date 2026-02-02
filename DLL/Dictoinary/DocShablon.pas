@@ -18,7 +18,9 @@ uses
   dxSkinSharpPlus, dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine, dxSkinVisualStudio2013Blue,
   dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxSkinscxPCPainter, dxSkinsdxBarPainter, System.ImageList, cxImageList,
   cxDataControllerConditionalFormattingRulesManagerDialog, dxDateRanges, dxCore,
-  dxSkinTheBezier, dxSkinOffice2019Colorful, dxScrollbarAnnotations;
+  dxSkinTheBezier, dxSkinOffice2019Colorful, dxScrollbarAnnotations,
+  dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray,
+  dxSkinOffice2019White, dxSkinWXI;
 
 type
   TfmDocShablon = class(TForm)
@@ -72,6 +74,8 @@ type
     dxBarButton7: TdxBarButton;
     dxBarButton8: TdxBarButton;
     dxBarButton11: TdxBarButton;
+    cxGrid1DBBandedTableView1date_begin: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1date_end: TcxGridDBBandedColumn;
     procedure ADOShablonExecuteComplete(Connection: TADOConnection; RecordsAffected: Integer; const Error: Error; var EventStatus: TEventStatus; const Command: _Command; const Recordset: _Recordset);
     procedure cxGrid1DBBandedTableView1FocusedItemChanged(Sender: TcxCustomGridTableView; APrevFocusedItem, AFocusedItem: TcxCustomGridTableItem);
     procedure cxGrid1DBBandedTableView1KeyPress(Sender: TObject; var Key: Char);

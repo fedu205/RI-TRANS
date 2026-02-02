@@ -14,7 +14,9 @@ uses
   dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus, dxSkinSilver,
   dxSkinSpringtime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters, dxSkinValentine,
   dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue,
-  dxSkinOffice2019Colorful, dxCoreGraphics;
+  dxSkinOffice2019Colorful, dxCoreGraphics, dxSkinBasic, dxSkinOffice2019Black,
+  dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI, dxCore,
+  cxDateUtils, cxDropDownEdit, cxCalendar;
 
 type
   TfmDocShablonAdd = class(TForm)
@@ -35,6 +37,10 @@ type
     cxTextEdit13: TcxTextEdit;
     cxButtonEdit15: TcxButtonEdit;
     cxCheckBox1: TcxCheckBox;
+    Label5: TLabel;
+    cxDateEdit1: TcxDateEdit;
+    Label6: TLabel;
+    cxDateEdit2: TcxDateEdit;
     procedure cxCheckBox1Click(Sender: TObject);
     procedure cxButtonEdit1PropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -87,6 +93,8 @@ begin
   cxCheckBox1.Checked := Q.FieldByName('users_group_id').IsNull;
   cxCheckBox1.Caption := 'Видимость: ' + Q.FieldByName('users_group_name').AsString;
   Caption := Caption + ' [' + IntToStr(doc_id) + ']';
+  cxDateEdit1.EditValue    := Q.FieldByName('date_begin').Value;
+  cxDateEdit2.EditValue    := Q.FieldByName('date_end').Value;
 
   Q.Free;
   Screen.Cursor := crDefault;
@@ -119,6 +127,9 @@ begin
     SP_BLOB_modify.Parameters.ParamByName('@doc_image').Value := Null;
     SP_BLOB_modify.Parameters.ParamByName('@file_name').Value := Null;
   end;
+
+  SP_BLOB_modify.Parameters.ParamByName('@date_begin').Value      := cxDateEdit1.EditValue;
+  SP_BLOB_modify.Parameters.ParamByName('@date_end'  ).Value      := cxDateEdit2.EditValue;
 
   try
     SP_BLOB_modify.ExecProc;

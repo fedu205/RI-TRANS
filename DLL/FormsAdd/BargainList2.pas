@@ -6721,7 +6721,9 @@ begin
 
   Q := TADOQuery.Create(nil);
   Q.Connection := Fconnect;
-  Q.SQL.Add('select doc_id, doc_describe, doc_cod from view_doc_shablon where doc_type_cod = ''5'' and doc_cod > 801 order by doc_cod');
+  Q.SQL.Add('select doc_id, doc_describe, doc_cod from view_doc_shablon where doc_type_cod = ''5'' and doc_cod > 801');
+  Q.SQL.Add('and (select date_period from view_bargain where bargain_id = ' + IntToStr(Fbargain_id) + ') between dateadd(MM, -1, isnull(date_begin, getdate())) and DATEADD(MM, 1, isnull(date_begin, getdate()))');
+  Q.SQL.Add('order by doc_cod');
   Q.Open;
 
   while not Q.Eof do begin

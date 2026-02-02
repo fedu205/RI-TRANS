@@ -324,6 +324,22 @@ object fmDocShablon: TfmDocShablon
             Position.ColIndex = 7
             Position.RowIndex = 0
           end
+          object cxGrid1DBBandedTableView1date_begin: TcxGridDBBandedColumn
+            Caption = #1053#1072#1095#1072#1083#1086
+            DataBinding.FieldName = 'date_begin'
+            DataBinding.IsNullValueType = True
+            Position.BandIndex = 0
+            Position.ColIndex = 8
+            Position.RowIndex = 0
+          end
+          object cxGrid1DBBandedTableView1date_end: TcxGridDBBandedColumn
+            Caption = #1054#1082#1086#1085#1095#1072#1085#1080#1077
+            DataBinding.FieldName = 'date_end'
+            DataBinding.IsNullValueType = True
+            Position.BandIndex = 0
+            Position.ColIndex = 9
+            Position.RowIndex = 0
+          end
         end
         object cxGrid1Level1: TcxGridLevel
           GridView = cxGrid1DBBandedTableView1
