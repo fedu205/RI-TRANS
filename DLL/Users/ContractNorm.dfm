@@ -555,8 +555,6 @@ object fmContractNorm: TfmContractNorm
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 0
-    ExplicitTop = 209
-    ExplicitWidth = 434
     DesignSize = (
       454
       37)
@@ -642,7 +640,6 @@ object fmContractNorm: TfmContractNorm
       OptionsImage.NumGlyphs = 2
       TabOrder = 0
       OnClick = cxButton1Click
-      ExplicitLeft = 265
     end
     object cxButton2: TcxButton
       Left = 366
@@ -725,7 +722,6 @@ object fmContractNorm: TfmContractNorm
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00}
       OptionsImage.NumGlyphs = 2
       TabOrder = 1
-      ExplicitLeft = 346
     end
   end
   object Panel7: TPanel
@@ -737,7 +733,6 @@ object fmContractNorm: TfmContractNorm
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 1
-    ExplicitWidth = 434
     object cxLabel2: TcxLabel
       Left = 8
       Top = 15
@@ -818,8 +813,6 @@ object fmContractNorm: TfmContractNorm
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 2
-    ExplicitWidth = 434
-    ExplicitHeight = 145
     object cxLabel1: TcxLabel
       Left = 8
       Top = 9
@@ -912,7 +905,7 @@ object fmContractNorm: TfmContractNorm
     object cxLabel5: TcxLabel
       Left = 8
       Top = 93
-      Caption = #1057#1090#1072#1074#1082#1072' '#1079#1072' 1-4 '#1089#1091#1090'. '#1089#1074#1077#1088#1093#1085#1086#1088#1084', '#1073#1077#1079' '#1053#1044#1057'...............'
+      Caption = #1057#1090#1072#1074#1082#1072' '#1076#1086'       '#1089#1091#1090'. '#1089#1074#1077#1088#1093#1085#1086#1088#1084', '#1073#1077#1079' '#1053#1044#1057'...............'
     end
     object cxLabel6: TcxLabel
       Left = 328
@@ -930,7 +923,7 @@ object fmContractNorm: TfmContractNorm
       Caption = #1057#1090#1072#1074#1082#1072' '#1079#1072' '#1089#1074#1077#1088#1093#1085#1086#1088#1084#1072#1090#1080#1074', '#1089' '#1053#1044#1057'............'
     end
     object cxCurrencyEdit1: TcxCurrencyEdit
-      Left = 214
+      Left = 187
       Top = 64
       EditValue = 0.000000000000000000
       ParentFont = False
@@ -1120,7 +1113,7 @@ object fmContractNorm: TfmContractNorm
       Width = 64
     end
     object cxComboBox1: TcxComboBox
-      Left = 270
+      Left = 246
       Top = 64
       Properties.Items.Strings = (
         #1087#1088#1080' '#1074#1099#1075#1088#1091#1079#1082#1077
@@ -1151,7 +1144,7 @@ object fmContractNorm: TfmContractNorm
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 14
       Text = #1087#1088#1080' '#1074#1099#1075#1088#1091#1079#1082#1077
-      Width = 171
+      Width = 195
     end
     object cxLabel9: TcxLabel
       Left = 8
@@ -1201,7 +1194,7 @@ object fmContractNorm: TfmContractNorm
     object cxLabel11: TcxLabel
       Left = 8
       Top = 138
-      Caption = #1057#1090#1072#1074#1082#1072' '#1089#1074#1099#1096#1077' 5 '#1089#1091#1090'. '#1089#1074#1077#1088#1093#1085#1086#1088#1084', '#1073#1077#1079' '#1053#1044#1057'...............'
+      Caption = #1057#1090#1072#1074#1082#1072' '#1089#1074#1099#1096#1077'      '#1089#1091#1090'. '#1089#1074#1077#1088#1093#1085#1086#1088#1084', '#1073#1077#1079' '#1053#1044#1057'...............'
     end
     object cxCurrencyEdit5: TcxCurrencyEdit
       Left = 230
@@ -1240,6 +1233,84 @@ object fmContractNorm: TfmContractNorm
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 18
       Width = 81
+    end
+    object cxCurrencyEdit6: TcxCurrencyEdit
+      Left = 64
+      Top = 89
+      EditValue = 4.000000000000000000
+      ParentFont = False
+      Properties.Alignment.Horz = taRightJustify
+      Properties.DisplayFormat = '#,##0'
+      Properties.OnEditValueChanged = cxCurrencyEdit6PropertiesEditValueChanged
+      Style.Font.Charset = RUSSIAN_CHARSET
+      Style.Font.Color = clWindowText
+      Style.Font.Height = -11
+      Style.Font.Name = 'MS Sans Serif'
+      Style.Font.Style = []
+      Style.LookAndFeel.Kind = lfOffice11
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.ScrollbarMode = sbmClassic
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
+      Style.IsFontAssigned = True
+      StyleDisabled.LookAndFeel.Kind = lfOffice11
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfOffice11
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfOffice11
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
+      TabOrder = 19
+      Width = 17
+    end
+    object cxCurrencyEdit7: TcxCurrencyEdit
+      Left = 83
+      Top = 134
+      EditValue = 4.000000000000000000
+      Enabled = False
+      ParentFont = False
+      Properties.Alignment.Horz = taRightJustify
+      Properties.DisplayFormat = '#,##0'
+      Properties.ReadOnly = False
+      Style.Font.Charset = RUSSIAN_CHARSET
+      Style.Font.Color = clWindowText
+      Style.Font.Height = -11
+      Style.Font.Name = 'MS Sans Serif'
+      Style.Font.Style = []
+      Style.LookAndFeel.Kind = lfOffice11
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.ScrollbarMode = sbmClassic
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
+      Style.IsFontAssigned = True
+      StyleDisabled.LookAndFeel.Kind = lfOffice11
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleDisabled.TextColor = clBlack
+      StyleFocused.LookAndFeel.Kind = lfOffice11
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfOffice11
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
+      TabOrder = 20
+      Width = 17
     end
   end
   object Query_Currency: TADOQuery

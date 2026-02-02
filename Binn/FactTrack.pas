@@ -2376,7 +2376,10 @@ begin
       if cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1date_otpr_1.Index] <> Null then
         exWks.Range['K'+IntToStr(row_insert)].Value := FormatDateTime('dd.mm.yyyy', cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1date_otpr_1.Index]);
       exWks.Range['L'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1days_stay_end.Index];  // простой под выгрузкой
-      exWks.Range['M'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1days_stay_end.Index];  // норматив
+      exWks.Range['M'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1norm_days_stay_end.Index];  // норматив
+
+      exWks.Range['P'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1tarif_end_1_4.Index];  // тариф 1-4 сутки
+      exWks.Range['R'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1tarif_end_5.Index];  // тариф свыше 5 суток
 
       exWks.Range['T'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1firm_customer_name.Index]);  // контрагент
       exWks.Range['U'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1agreement_cod.Index]);      // номер сделки

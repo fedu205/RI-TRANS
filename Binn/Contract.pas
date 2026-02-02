@@ -284,6 +284,7 @@ type
     cxGrid6DBBandedTableView1norm_type_name: TcxGridDBBandedColumn;
     cxGrid6DBBandedTableView1norm_5_sum_with_nds: TcxGridDBBandedColumn;
     cxGrid6DBBandedTableView1norm_5_sum_without_nds: TcxGridDBBandedColumn;
+    cxGrid6DBBandedTableView1days_for_rate: TcxGridDBBandedColumn;
     procedure FormDestroy(Sender: TObject);
     procedure dxBarButton7Click(Sender: TObject);
     procedure dxBarSubItem3Popup(Sender: TObject);
