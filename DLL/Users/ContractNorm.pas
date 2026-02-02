@@ -50,9 +50,12 @@ type
     cxCurrencyEdit4: TcxCurrencyEdit;
     cxLabel11: TcxLabel;
     cxCurrencyEdit5: TcxCurrencyEdit;
+    cxCurrencyEdit6: TcxCurrencyEdit;
+    cxCurrencyEdit7: TcxCurrencyEdit;
     procedure cxButton1Click(Sender: TObject);
     procedure cxCurrencyEdit2PropertiesEditValueChanged(Sender: TObject);
     procedure cxCurrencyEdit5PropertiesEditValueChanged(Sender: TObject);
+    procedure cxCurrencyEdit6PropertiesEditValueChanged(Sender: TObject);
   private
     Fconnect : TADOConnection;
     Fcontract_norm_id : integer;
@@ -177,6 +180,7 @@ begin
   cxCurrencyEdit3.EditValue := Q.FieldByName('norm_14_sum_with_nds').Value;
   cxCurrencyEdit5.EditValue := Q.FieldByName('norm_5_sum_without_nds').Value;
   cxCurrencyEdit4.EditValue := Q.FieldByName('norm_5_sum_with_nds').Value;
+  cxCurrencyEdit6.EditValue := Q.FieldByName('days_for_rate').Value;
 
   cxLookupComboBox1.EditValue := Q.FieldByName('currency_id').Value;
   cxLookupComboBox2.EditValue := Q.FieldByName('nds_id').Value;
@@ -207,9 +211,10 @@ begin
   SP.Parameters.ParamByName('@norm_14_sum_with_nds'   ).Value := cxCurrencyEdit3.EditValue;
   SP.Parameters.ParamByName('@norm_5_sum_without_nds' ).Value := cxCurrencyEdit5.EditValue;
   SP.Parameters.ParamByName('@norm_5_sum_with_nds'    ).Value := cxCurrencyEdit4.EditValue;
-  SP.Parameters.ParamByName('@currency_id'           ).Value := cxLookupComboBox1.EditValue;
-  SP.Parameters.ParamByName('@nds_id'                ).Value := cxLookupComboBox2.EditValue;
-  SP.Parameters.ParamByName('@norm_type'             ).Value := cxComboBox1.ItemIndex;
+  SP.Parameters.ParamByName('@currency_id'            ).Value := cxLookupComboBox1.EditValue;
+  SP.Parameters.ParamByName('@nds_id'                 ).Value := cxLookupComboBox2.EditValue;
+  SP.Parameters.ParamByName('@norm_type'              ).Value := cxComboBox1.ItemIndex;
+  SP.Parameters.ParamByName('@days_for_rate'          ).Value := cxCurrencyEdit6.EditValue;
   SP.ExecProc;
 
   SP.Free;
@@ -224,6 +229,11 @@ end;
 procedure TfmContractNorm.cxCurrencyEdit5PropertiesEditValueChanged(Sender: TObject);
 begin
   cxCurrencyEdit4.EditValue := SetRate5WithNDS;
+end;
+
+procedure TfmContractNorm.cxCurrencyEdit6PropertiesEditValueChanged(Sender: TObject);
+begin
+  cxCurrencyEdit7.Value := cxCurrencyEdit6.Value;
 end;
 
 function TfmContractNorm.SetRate14WithNDS: Variant;
