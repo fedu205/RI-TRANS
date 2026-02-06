@@ -554,6 +554,7 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1over_days_end_1_4: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1over_days_end_5: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1tarif_end: TcxGridDBBandedColumn;
+    cxGrid12DBBandedTableView1days_for_rate: TcxGridDBBandedColumn;
 
     procedure N4Click(Sender: TObject);
     procedure N2Click(Sender: TObject);

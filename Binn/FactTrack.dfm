@@ -2798,18 +2798,28 @@ object fmFactTrack: TfmFactTrack
             Position.ColIndex = 21
             Position.RowIndex = 0
           end
+          object cxGrid12DBBandedTableView1days_for_rate: TcxGridDBBandedColumn
+            Caption = #1044#1085#1077#1081' '#1084#1077#1078#1076#1091' 1 '#1080' 2 '#1087#1077#1088#1080#1086#1076#1072#1084#1080
+            DataBinding.FieldName = 'days_for_rate'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Width = 81
+            Position.BandIndex = 0
+            Position.ColIndex = 22
+            Position.RowIndex = 0
+          end
           object cxGrid12DBBandedTableView1over_days_end_1_4: TcxGridDBBandedColumn
-            Caption = #1057#1074#1077#1088#1093#1085#1086#1088#1084'. '#1087#1088#1086#1089#1090#1086#1081' '#1089' 1 '#1087#1086' 4 '#1089#1091#1090'.'
+            Caption = #1057#1074#1077#1088#1093#1085#1086#1088#1084'. '#1087#1088#1086#1089#1090#1086#1081' 1 '#1087#1077#1088#1080#1086#1076
             DataBinding.FieldName = 'over_days_end_1_4'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 90
             Position.BandIndex = 0
-            Position.ColIndex = 22
+            Position.ColIndex = 23
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1tarif_end_1_4: TcxGridDBBandedColumn
-            Caption = #1058#1072#1088#1080#1092' '#1085#1072' '#1074#1099#1075#1088#1091#1079#1082#1077' c 1 '#1087#1086' 4 '#1089#1091#1090'.'
+            Caption = #1058#1072#1088#1080#1092' '#1085#1072' '#1074#1099#1075#1088#1091#1079#1082#1077' 1 '#1087#1077#1088#1080#1086#1076
             DataBinding.FieldName = 'tarif_end_1_4'
             DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
@@ -2817,21 +2827,21 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 100
             Position.BandIndex = 0
-            Position.ColIndex = 23
+            Position.ColIndex = 24
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1over_days_end_5: TcxGridDBBandedColumn
-            Caption = #1057#1074#1077#1088#1093#1085#1086#1088#1084'. '#1087#1088#1086#1089#1090#1086#1081' '#1089' 5 '#1089#1091#1090'.'
+            Caption = #1057#1074#1077#1088#1093#1085#1086#1088#1084'. '#1087#1088#1086#1089#1090#1086#1081' 2 '#1087#1077#1088#1080#1086#1076'.'
             DataBinding.FieldName = 'over_days_end_5'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 90
             Position.BandIndex = 0
-            Position.ColIndex = 24
+            Position.ColIndex = 25
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1tarif_end_5: TcxGridDBBandedColumn
-            Caption = #1058#1072#1088#1080#1092' '#1085#1072' '#1074#1099#1075#1088#1091#1079#1082#1077' c 5 '#1089#1091#1090'.'
+            Caption = #1058#1072#1088#1080#1092' '#1085#1072' '#1074#1099#1075#1088#1091#1079#1082#1077' 2 '#1087#1077#1088#1080#1086#1076
             DataBinding.FieldName = 'tarif_end_5'
             DataBinding.IsNullValueType = True
             PropertiesClassName = 'TcxCurrencyEditProperties'
@@ -2839,7 +2849,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 98
             Position.BandIndex = 0
-            Position.ColIndex = 25
+            Position.ColIndex = 26
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1set_archive: TcxGridDBBandedColumn
@@ -2851,7 +2861,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 40
             Position.BandIndex = 0
-            Position.ColIndex = 27
+            Position.ColIndex = 28
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1agreement_vid_activity: TcxGridDBBandedColumn
@@ -2872,7 +2882,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
-            Position.ColIndex = 28
+            Position.ColIndex = 29
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1grpol_name: TcxGridDBBandedColumn
@@ -2882,7 +2892,7 @@ object fmFactTrack: TfmFactTrack
             HeaderAlignmentVert = vaTop
             Width = 66
             Position.BandIndex = 0
-            Position.ColIndex = 29
+            Position.ColIndex = 30
             Position.RowIndex = 0
           end
           object cxGrid12DBBandedTableView1tarif_end: TcxGridDBBandedColumn
@@ -2893,9 +2903,9 @@ object fmFactTrack: TfmFactTrack
             Properties.DisplayFormat = '# ##0.00'
             HeaderAlignmentVert = vaTop
             Styles.Content = fmMain.cxStyle_AgreeFactInc_Sum
-            Width = 77
+            Width = 89
             Position.BandIndex = 0
-            Position.ColIndex = 26
+            Position.ColIndex = 27
             Position.RowIndex = 0
           end
         end
