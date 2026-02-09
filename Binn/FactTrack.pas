@@ -555,6 +555,7 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1over_days_end_5: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1tarif_end: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1days_for_rate: TcxGridDBBandedColumn;
+    dxBarButton82: TdxBarButton;
 
     procedure N4Click(Sender: TObject);
     procedure N2Click(Sender: TObject);
@@ -2356,7 +2357,7 @@ begin
   Screen.Cursor := crHourglass;
   ShowTextMessage('Запуск Excel...', False);
   exApp := CreateOleObject('Excel.Application');
-  exApp.Workbooks.Add(GetDocBlob(fmMain.Lis, 86));  //Расчет претензионных требований.xlsx
+  exApp.Workbooks.Add(GetDocBlob(fmMain.Lis, TControl(Sender).Tag));  //Расчет претензионных требований.xlsx
   exWks := exApp.ActiveWorkbook.WorkSheets[1];
 
   row_insert := 4;
