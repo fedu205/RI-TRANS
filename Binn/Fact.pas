@@ -16,7 +16,9 @@ uses
   dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringtime, dxSkinStardust,
   dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters, dxSkinValentine, dxSkinVisualStudio2013Blue,
   dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxBarBuiltInMenu,
-  cxLookAndFeels, dxDateRanges, cxColorComboBox, cxSplitter, cxPC, XMLDoc, XMLIntf, XSBuiltIns, cxNavigator, dxScrollbarAnnotations;
+  cxLookAndFeels, dxDateRanges, cxColorComboBox, cxSplitter, cxPC, XMLDoc, XMLIntf, XSBuiltIns, cxNavigator, dxScrollbarAnnotations,
+  dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019Colorful,
+  dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI;
 
 type
   TfmFact = class(TForm)

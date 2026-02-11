@@ -1253,7 +1253,7 @@ object fmFact: TfmFact
             Position.RowIndex = 0
           end
           object cxGrid1DBBandedTableView1distance: TcxGridDBBandedColumn
-            Caption = #1056#1072#1089#1089#1090#1086#1103#1085#1080#1077', '#1082#1084
+            Caption = #1056#1072#1089#1089#1090#1086#1103#1085#1080#1077' '#1086#1073#1097#1077#1077', '#1082#1084
             DataBinding.FieldName = 'distance'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
@@ -1920,6 +1920,9 @@ object fmFact: TfmFact
     object cxTabSheet3: TcxTabSheet
       Caption = #1054#1073#1086#1088#1086#1090' '#1074#1072#1075#1086#1085#1072
       ImageIndex = 91
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid3: TcxGrid
         Left = 0
         Top = 0
@@ -4300,6 +4303,9 @@ object fmFact: TfmFact
     object cxTabSheet5: TcxTabSheet
       Caption = #1055#1086#1082#1072#1079#1072#1090#1077#1083#1080' '#1088#1072#1073#1086#1090#1099' '#1087#1072#1088#1082#1072
       ImageIndex = 157
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Splitter2: TSplitter
         Left = 499
         Top = 0

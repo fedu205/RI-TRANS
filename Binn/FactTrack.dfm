@@ -166,7 +166,7 @@ object fmFactTrack: TfmFactTrack
     Height = 416
     Align = alClient
     TabOrder = 0
-    Properties.ActivePage = cxTabSheet5
+    Properties.ActivePage = cxTabSheet1
     Properties.CustomButtons.Buttons = <>
     LookAndFeel.Kind = lfUltraFlat
     LookAndFeel.NativeStyle = False
@@ -1890,6 +1890,9 @@ object fmFactTrack: TfmFactTrack
     object cxTabSheet2: TcxTabSheet
       Caption = #1056#1077#1081#1089#1099' '#1074#1072#1075#1086#1085#1072
       ImageIndex = 1
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid3: TcxGrid
         Left = 0
         Top = 0
@@ -2924,7 +2927,7 @@ object fmFactTrack: TfmFactTrack
     Constraints.MinHeight = 200
     TabOrder = 5
     Visible = False
-    Properties.ActivePage = cxTabSheet6
+    Properties.ActivePage = cxTabSheet3
     Properties.CustomButtons.Buttons = <>
     Properties.Images = fmMain.cxImageList1
     LookAndFeel.Kind = lfUltraFlat
@@ -4275,10 +4278,22 @@ object fmFactTrack: TfmFactTrack
             Position.ColIndex = 112
             Position.RowIndex = 0
           end
-          object cxGrid2DBBandedTableView1Column1: TcxGridDBBandedColumn
+          object cxGrid2DBBandedTableView1distance_node_begin: TcxGridDBBandedColumn
+            Caption = #1056#1072#1089#1089#1090#1086#1103#1085#1080#1077' '#1087#1088#1086#1081#1076#1077#1085#1085#1086#1077' ('#1082#1084')'
+            DataBinding.FieldName = 'distance_node_begin'
             DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
             Position.BandIndex = 0
             Position.ColIndex = 113
+            Position.RowIndex = 0
+          end
+          object cxGrid2DBBandedTableView1distance: TcxGridDBBandedColumn
+            Caption = #1056#1072#1089#1089#1090#1086#1103#1085#1080#1077' '#1086#1073#1097#1077#1077' ('#1082#1084')'
+            DataBinding.FieldName = 'distance'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Position.BandIndex = 0
+            Position.ColIndex = 114
             Position.RowIndex = 0
           end
         end

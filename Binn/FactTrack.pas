@@ -503,7 +503,7 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1tarif_end_5: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1comment6: TcxGridDBBandedColumn;
     cxGrid2DBBandedTableView1file_load_name: TcxGridDBBandedColumn;
-    cxGrid2DBBandedTableView1Column1: TcxGridDBBandedColumn;
+    cxGrid2DBBandedTableView1distance_node_begin: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1node_end_name_1: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1firm_customer_name: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1contract_cod: TcxGridDBBandedColumn;
@@ -556,6 +556,7 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1tarif_end: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1days_for_rate: TcxGridDBBandedColumn;
     dxBarButton82: TdxBarButton;
+    cxGrid2DBBandedTableView1distance: TcxGridDBBandedColumn;
 
     procedure N4Click(Sender: TObject);
     procedure N2Click(Sender: TObject);
