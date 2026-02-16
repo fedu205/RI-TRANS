@@ -557,6 +557,9 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1days_for_rate: TcxGridDBBandedColumn;
     dxBarButton82: TdxBarButton;
     cxGrid2DBBandedTableView1distance: TcxGridDBBandedColumn;
+    cxGrid12DBBandedTableView1agent_firm_customer_name: TcxGridDBBandedColumn;
+    cxGrid12DBBandedTableView1etran_owner_name: TcxGridDBBandedColumn;
+    cxGrid12DBBandedTableView1payer_name: TcxGridDBBandedColumn;
 
     procedure N4Click(Sender: TObject);
     procedure N2Click(Sender: TObject);
@@ -2331,8 +2334,12 @@ begin
         exWks.Range['K'+IntToStr(row_insert)].Value := FormatDateTime('dd.mm.yyyy', cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1date_otpr_1.Index]);
       exWks.Range['L'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1days_stay_end.Index];  // простой под выгрузкой
 
+      exWks.Range['J'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1payer_name.Index]);             //  плательщик
+      exWks.Range['O'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1etran_owner_name.Index]);        //  собственник
+      exWks.Range['N'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1agent_firm_customer_name.Index]); //  оператор
+
       if (cxGrid12DBBandedTableView1.Controller.SelectedRowCount - 1 ) <> i then begin
-        xCopyRow(exApp,row_insert + 1,row_insert +1);
+        xCopyRow(exApp, row_insert + 1, row_insert +1);
         inc(row_insert);
       end;
       ShowTextMessage('Идет формирование отчета по простою. Обработано '+IntToStr(row_insert - 4)+' из '+IntToStr(cxGrid12DBBandedTableView1.Controller.SelectedRowCount)+#13#10+ 'Подождите пожалуйста...', False);
@@ -2388,9 +2395,10 @@ begin
       exWks.Range['U'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1agreement_cod.Index]);      // номер сделки
       exWks.Range['V'+IntToStr(row_insert)].Value := cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1agreement_date.Index];     // дата сделки
       exWks.Range['W'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1contract_cod.Index]);       // генеральное соглашение
-      exWks.Range['X'+IntToStr(row_insert)].Value := 'Общество с ограниченной ответственностью  "Трансойл"'; // оператор
-      exWks.Range['Y'+IntToStr(row_insert)].Value := 'Общество с ограниченной ответственностью  "Трансойл"'; // собственник
-      exWks.Range['Z'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1agreement_vid_activity.Index]);
+      exWks.Range['X'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1agent_firm_customer_name.Index]);       // оператор
+      exWks.Range['Y'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1etran_owner_name.Index]);       //  собственник
+      exWks.Range['Z'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1payer_name.Index]);       //  плательщик
+      exWks.Range['AA'+IntToStr(row_insert)].Value := VarToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1agreement_vid_activity.Index]);
 
       if (cxGrid12DBBandedTableView1.Controller.SelectedRowCount - 1 ) <> i then begin
         xCopyRow(exApp,row_insert + 1,row_insert +1);

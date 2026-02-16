@@ -166,7 +166,7 @@ object fmFactTrack: TfmFactTrack
     Height = 416
     Align = alClient
     TabOrder = 0
-    Properties.ActivePage = cxTabSheet1
+    Properties.ActivePage = cxTabSheet5
     Properties.CustomButtons.Buttons = <>
     LookAndFeel.Kind = lfUltraFlat
     LookAndFeel.NativeStyle = False
@@ -1890,9 +1890,6 @@ object fmFactTrack: TfmFactTrack
     object cxTabSheet2: TcxTabSheet
       Caption = #1056#1077#1081#1089#1099' '#1074#1072#1075#1086#1085#1072
       ImageIndex = 1
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object cxGrid3: TcxGrid
         Left = 0
         Top = 0
@@ -2909,6 +2906,36 @@ object fmFactTrack: TfmFactTrack
             Width = 89
             Position.BandIndex = 0
             Position.ColIndex = 27
+            Position.RowIndex = 0
+          end
+          object cxGrid12DBBandedTableView1agent_firm_customer_name: TcxGridDBBandedColumn
+            Caption = #1060'. '#1055#1086#1083#1080#1075#1086#1085' ('#1055#1086#1076#1088#1103#1076#1095#1080#1082')'
+            DataBinding.FieldName = 'agent_firm_customer_name'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Width = 90
+            Position.BandIndex = 0
+            Position.ColIndex = 31
+            Position.RowIndex = 0
+          end
+          object cxGrid12DBBandedTableView1etran_owner_name: TcxGridDBBandedColumn
+            Caption = #1060'. '#1057#1086#1073#1089#1090#1074#1077#1085#1085#1080#1082' ('#1069#1058#1056#1040#1053')'
+            DataBinding.FieldName = 'etran_owner_name'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Width = 90
+            Position.BandIndex = 0
+            Position.ColIndex = 32
+            Position.RowIndex = 0
+          end
+          object cxGrid12DBBandedTableView1payer_name: TcxGridDBBandedColumn
+            Caption = #1060'. '#1055#1083#1072#1090#1077#1083#1100#1097#1080#1082' ('#1048#1084#1103')'
+            DataBinding.FieldName = 'payer_name'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Width = 90
+            Position.BandIndex = 0
+            Position.ColIndex = 33
             Position.RowIndex = 0
           end
         end
