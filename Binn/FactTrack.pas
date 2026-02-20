@@ -18,7 +18,7 @@ interface
   dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinsDefaultPainters,
   dxSkinValentine, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxSkinscxPCPainter, dxBarBuiltInMenu, cxNavigator, dxCore, cxDateUtils,
   dxSkinsdxBarPainter, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
-  dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark, Winapi.ShellAPI,
   dxSkinVisualStudio2013Light, strutils, Clipbrd, dxColorEdit, cxLabel, cxMemo,
   cxButtonEdit, cxDataControllerConditionalFormattingRulesManagerDialog, dxSkinTheBezier, dxDateRanges, dxSkinOffice2019Colorful, cxImageComboBox,
   dxScrollbarAnnotations, dxSkinWXI, dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019DarkGray, dxSkinOffice2019White;
@@ -560,6 +560,7 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1agent_firm_customer_name: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1etran_owner_name: TcxGridDBBandedColumn;
     cxGrid12DBBandedTableView1payer_name: TcxGridDBBandedColumn;
+    dxBarButton83: TdxBarButton;
 
     procedure N4Click(Sender: TObject);
     procedure N2Click(Sender: TObject);
@@ -679,6 +680,7 @@ cxGrid1DBBandedTableView1set_sanctions_vagon: TcxGridDBBandedColumn;
     procedure dxBarButton60Click(Sender: TObject);
     procedure dxBarButton80Click(Sender: TObject);
     procedure dxBarButton81Click(Sender: TObject);
+    procedure dxBarButton83Click(Sender: TObject);
 
 
   private
@@ -2418,6 +2420,143 @@ begin
   ShowTextMessage('', True);
   Screen.Cursor := crDefault;
 
+end;
+
+procedure TfmFactTrack.dxBarButton83Click(Sender: TObject);
+var folder, str_id, str2_id: string;
+    i : integer;
+    Q1, Q2 : TADOQuery;
+    sp : TADOStoredProc;
+    exWks, exApp : Variant;
+    row_insert : integer;
+begin
+  folder := BrowseDialog('Выбор каталога:');
+  if folder <> '' then begin
+    Screen.Cursor := crHourglass;
+
+    ForceDirectories(folder + '\Биржевые сделки');
+    ForceDirectories(folder + '\Небиржевые сделки');
+
+    str_id := '';
+    for i:=0 to cxGrid12DBBandedTableView1.Controller.SelectedRowCount - 1 do
+      str_id := str_id + ', ' + IntToStr(cxGrid12DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid12DBBandedTableView1fact_track_trip_id.Index]);
+    Delete(str_id, 1, 2);
+
+    Q2 := TADOQuery.Create(nil);
+    Q2.Connection := fmMain.Lis;
+
+    Q1 := TADOQuery.Create(nil);
+    Q1.Connection := fmMain.Lis;
+    Q1.SQl.Add('select	firm_customer_name, agreement_vid_activity');
+    Q1.SQl.Add('from	fact_track_trip t');
+    Q1.SQl.Add('left join view_contract c on c.contract_id = t.contract_id');
+    Q1.SQl.Add('left join contract_agreement a on a.agreement_id = t.agreement_id');
+    Q1.SQl.Add('where	t.fact_track_trip_id in (' + str_id + ')');
+    Q1.SQl.Add('group by firm_customer_name, agreement_vid_activity');
+    Q1.Open;
+
+    while not Q1.Eof do begin
+
+
+      Q2.SQL.Clear;
+      Q2.SQl.Add('select	t.fact_track_trip_id');
+      Q2.SQl.Add('from	fact_track_trip t');
+      Q2.SQl.Add('left join view_contract c on c.contract_id = t.contract_id');
+      Q2.SQl.Add('left join contract_agreement a on a.agreement_id = t.agreement_id');
+      Q2.SQl.Add('where	t.fact_track_trip_id in (' + str_id + ')');
+      Q2.SQl.Add('and firm_customer_name = ''' + Q1.FieldByName('firm_customer_name').AsString + '''');
+      Q2.SQl.Add('and agreement_vid_activity = ''' + Q1.FieldByName('agreement_vid_activity').AsString + '''');
+      Q2.Open;
+
+
+      str2_id := '';
+      while not Q2.Eof do begin
+        str2_id := str2_id + ', ' + Q2.FieldByName('fact_track_trip_id').AsString;
+        Q2.Next;
+      end;
+      Delete(str2_id, 1, 2);
+
+
+      sp := TADOStoredProc.Create(nil);
+      sp.Connection := fmMain.Lis;
+      sp.ProcedureName := 'sp_fact_track_stay_GET';
+      sp.Parameters.Refresh;
+      sp.Parameters.ParamByName('@str_fact_track_trip_id').Value := str2_id;
+      sp.Open;
+
+
+      ShowTextMessage('Запуск Excel...', False);
+      exApp := CreateOleObject('Excel.Application');
+      exApp.Workbooks.Add(GetDocBlob(fmMain.Lis, 86));  //Расчет претензионных требований.xlsx
+      exWks := exApp.ActiveWorkbook.WorkSheets[1];
+
+      row_insert := 4;
+
+      while not sp.Eof do begin
+
+          exWks.Range['A'+IntToStr(row_insert)].Value := i + 1;
+          exWks.Range['B'+IntToStr(row_insert)].Value := sp.FieldByName('num_vagon').AsString;
+          exWks.Range['C'+IntToStr(row_insert)].Value := sp.FieldByName('doc_number').AsString;
+          exWks.Range['D'+IntToStr(row_insert)].Value := sp.FieldByName('node_begin_name').AsString;
+          exWks.Range['E'+IntToStr(row_insert)].Value := sp.FieldByName('node_end_name').AsString;
+          if sp.FieldByName('date_arrival').Value <> Null then
+            exWks.Range['F'+IntToStr(row_insert)].Value := FormatDateTime('dd.mm.yyyy', sp.FieldByName('date_arrival').AsDateTime);
+          exWks.Range['G'+IntToStr(row_insert)].Value := sp.FieldByName('grotpr_name').AsString;
+          exWks.Range['H'+IntToStr(row_insert)].Value := sp.FieldByName('grpol_name').AsString;
+          exWks.Range['I'+IntToStr(row_insert)].Value := sp.FieldByName('kargoETSNG_name').AsString;
+          exWks.Range['J'+IntToStr(row_insert)].Value := 'РИ-ИНВЕСТ';
+
+          if sp.FieldByName('date_otpr_1').Value <> Null then
+            exWks.Range['K'+IntToStr(row_insert)].Value := FormatDateTime('dd.mm.yyyy', sp.FieldByName('date_otpr_1').AsDatetime);
+          exWks.Range['L'+IntToStr(row_insert)].Value := sp.FieldByName('days_stay_end').AsString;
+          exWks.Range['M'+IntToStr(row_insert)].Value := sp.FieldByName('norm_days_stay_end').AsString;
+
+          exWks.Range['P'+IntToStr(row_insert)].Value := sp.FieldByName('tarif_end_1_4').AsString;
+          exWks.Range['R'+IntToStr(row_insert)].Value := sp.FieldByName('tarif_end_5').AsString;
+
+          exWks.Range['T'+IntToStr(row_insert)].Value := sp.FieldByName('firm_customer_name').AsString;
+          exWks.Range['U'+IntToStr(row_insert)].Value := sp.FieldByName('agreement_cod').AsString;
+          exWks.Range['V'+IntToStr(row_insert)].Value := sp.FieldByName('agreement_date').AsDateTime;
+          exWks.Range['W'+IntToStr(row_insert)].Value := sp.FieldByName('contract_cod').AsString;
+          exWks.Range['X'+IntToStr(row_insert)].Value := sp.FieldByName('agent_firm_customer_name').AsString;
+          exWks.Range['Y'+IntToStr(row_insert)].Value := sp.FieldByName('etran_owner_name').AsString;
+          exWks.Range['Z'+IntToStr(row_insert)].Value := sp.FieldByName('payer_name').AsString;
+          exWks.Range['AA'+IntToStr(row_insert)].Value := sp.FieldByName('agreement_vid_activity').AsString;
+
+          if (sp.RecordCount - 1 ) <> i then begin
+            xCopyRow(exApp,row_insert + 1,row_insert +1);
+            inc(row_insert);
+          end;
+          ShowTextMessage('Идет формирование отчета по простою. Обработано '+IntToStr(row_insert - 4)+' из '+IntToStr(sp.RecordCount)+#13#10+ 'Подождите пожалуйста...', False);
+
+          sp.Next;
+      end;
+
+      exApp.Rows[IntToStr(row_insert + 1) + ':' + IntToStr(row_insert + 1)].Select;
+      exApp.Selection.Delete;
+
+    //  exWks.PageSetup.PrintArea := exWks.Range['A1:G'+IntToStr(row_insert)].Address;
+      exApp.Range['A1'].Select;
+
+      exApp.ActiveWorkbook.SaveAs(folder + '\' + Q1.FieldByName('agreement_vid_activity').AsString + '\' + Q1.FieldByName('firm_customer_name').AsString + '.xlsx');
+      exApp.Quit;
+
+      exApp := Null;  exWks := Null;
+
+
+
+
+      sp.Free;
+      Q1.Next;
+    end;
+    Q1.Free;
+    Q2.Free;
+
+    ShowTextMessage('', True);
+    Screen.Cursor := crDefault;
+
+    ShellExecute(Application.Handle, 'open', PChar(folder), nil, nil, SW_SHOWNORMAL);
+  end;
 end;
 
 procedure TfmFactTrack.dxBarButton86Click(Sender: TObject);

@@ -5267,6 +5267,11 @@ object fmFactTrack: TfmFactTrack
         item
           BeginGroup = True
           Visible = True
+          ItemName = 'dxBarButton83'
+        end
+        item
+          BeginGroup = True
+          Visible = True
           ItemName = 'N12'
         end
         item
@@ -6449,6 +6454,13 @@ object fmFactTrack: TfmFactTrack
       Visible = ivAlways
       ImageIndex = 8
       OnClick = dxBarButton81Click
+    end
+    object dxBarButton83: TdxBarButton
+      Caption = #1057#1086#1093#1088#1072#1085#1077#1085#1080#1077' '#1086#1090#1095#1105#1090#1086#1074
+      Category = 0
+      Hint = #1057#1086#1093#1088#1072#1085#1077#1085#1080#1077' '#1086#1090#1095#1105#1090#1086#1074
+      Visible = ivAlways
+      OnClick = dxBarButton83Click
     end
     object N12: TdxBarButton
       Caption = #1054#1090#1095#1105#1090' '#1087#1086' '#1074#1072#1075#1086#1085#1072#1084' (44)'
