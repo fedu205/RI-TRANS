@@ -6460,6 +6460,7 @@ object fmFactTrack: TfmFactTrack
       Category = 0
       Hint = #1057#1086#1093#1088#1072#1085#1077#1085#1080#1077' '#1086#1090#1095#1105#1090#1086#1074
       Visible = ivAlways
+      ImageIndex = 56
       OnClick = dxBarButton83Click
     end
     object N12: TdxBarButton
