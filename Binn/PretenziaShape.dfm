@@ -998,6 +998,19 @@ object fmPretenziaShape: TfmPretenziaShape
         item
           Visible = True
           ItemName = 'dxBarButton7'
+        end
+        item
+          BeginGroup = True
+          Visible = True
+          ItemName = 'dxBarButton11'
+        end
+        item
+          Visible = True
+          ItemName = 'dxBarButton9'
+        end
+        item
+          Visible = True
+          ItemName = 'dxBarButton10'
         end>
     end
     object dxBarButton14: TdxBarButton
@@ -1031,6 +1044,30 @@ object fmPretenziaShape: TfmPretenziaShape
       Visible = ivAlways
       ImageIndex = 2
       OnClick = dxBarButton8Click
+    end
+    object dxBarButton9: TdxBarButton
+      Caption = #1056#1077#1080#774#1083#1075#1086' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1074#1099#1075#1088#1091#1079#1082#1080')'
+      Category = 0
+      Hint = #1056#1077#1080#774#1083#1075#1086' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1074#1099#1075#1088#1091#1079#1082#1080')'
+      Visible = ivAlways
+      ImageIndex = 8
+      OnClick = dxBarButton9Click
+    end
+    object dxBarButton10: TdxBarButton
+      Caption = #1056#1077#1080#774#1083#1075#1086' ('#1085#1072' '#1080#1085#1086#1089#1090#1088#1072#1085#1085#1086#1081' '#1090#1077#1088#1088#1080#1090#1086#1088#1080#1080')'
+      Category = 0
+      Hint = #1056#1077#1080#774#1083#1075#1086' ('#1085#1072' '#1080#1085#1086#1089#1090#1088#1072#1085#1085#1086#1081' '#1090#1077#1088#1088#1080#1090#1086#1088#1080#1080')'
+      Visible = ivAlways
+      ImageIndex = 8
+      OnClick = dxBarButton10Click
+    end
+    object dxBarButton11: TdxBarButton
+      Caption = #1056#1077#1080#774#1083#1075#1086' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1087#1086#1075#1088#1091#1079#1082#1080')'
+      Category = 0
+      Hint = #1056#1077#1080#774#1083#1075#1086' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1087#1086#1075#1088#1091#1079#1082#1080')'
+      Visible = ivAlways
+      ImageIndex = 8
+      OnClick = dxBarButton11Click
     end
     object N1: TdxBarButton
       Caption = #1044#1086#1073#1072#1074#1080#1090#1100'...'
