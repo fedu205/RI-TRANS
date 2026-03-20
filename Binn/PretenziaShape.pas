@@ -42,7 +42,7 @@ type
     cxGrid1DBBandedTableView1pretenzia_sum: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1pay_num: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1pretenzia_cod: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1FIO_users: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1FIO_users_owner: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1global_color: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1contract_id: TcxGridDBBandedColumn;
     dxBarManager1: TdxBarManager;
@@ -109,6 +109,11 @@ type
     dxBarButton9: TdxBarButton;
     dxBarButton10: TdxBarButton;
     dxBarButton11: TdxBarButton;
+    cxGrid1DBBandedTableView1pretenzia_our_cod: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1pretenzia_our_date: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1stay_date_begin: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1stay_date_end: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1stay_type_name: TcxGridDBBandedColumn;
     procedure dxBarButton2Click(Sender: TObject);
     procedure cxGrid1DBBandedTableView1KeyPress(Sender: TObject; var Key: Char);
     procedure cxGrid1DBBandedTableView1FocusedItemChanged(Sender: TcxCustomGridTableView; APrevFocusedItem, AFocusedItem: TcxCustomGridTableItem);

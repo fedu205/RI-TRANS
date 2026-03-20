@@ -376,9 +376,9 @@ object fmPretenziaShape: TfmPretenziaShape
         Position.ColIndex = 1
         Position.RowIndex = 0
       end
-      object cxGrid1DBBandedTableView1FIO_users: TcxGridDBBandedColumn
+      object cxGrid1DBBandedTableView1FIO_users_owner: TcxGridDBBandedColumn
         Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100
-        DataBinding.FieldName = 'FIO_users'
+        DataBinding.FieldName = 'FIO_users_owner'
         DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Position.BandIndex = 0
@@ -420,6 +420,61 @@ object fmPretenziaShape: TfmPretenziaShape
         Position.BandIndex = -1
         Position.ColIndex = -1
         Position.RowIndex = -1
+      end
+      object cxGrid1DBBandedTableView1pretenzia_our_cod: TcxGridDBBandedColumn
+        Caption = #1042#1093#1086#1076#1103#1097#1080#1081' '#1085#1086#1084#1077#1088' ('#1085#1072#1096')'
+        DataBinding.FieldName = 'pretenzia_our_cod'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Styles.Content = fmMain.cxStyle_ClientFrahtCard_Profitt
+        Width = 66
+        Position.BandIndex = 0
+        Position.ColIndex = 10
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1pretenzia_our_date: TcxGridDBBandedColumn
+        Caption = #1044#1072#1090#1072' '#1088#1077#1075#1080#1089#1090#1088#1072#1094#1080#1080' ('#1085#1072#1096#1072')'
+        DataBinding.FieldName = 'pretenzia_our_date'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Styles.Content = fmMain.cxStyle_ClientFrahtCard_Profitt
+        Width = 66
+        Position.BandIndex = 0
+        Position.ColIndex = 11
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1stay_date_begin: TcxGridDBBandedColumn
+        Caption = #1053#1072#1095#1072#1083#1086' '#1087#1077#1088#1080#1086#1076' '#1087#1088#1086#1089#1090#1086#1103
+        DataBinding.FieldName = 'stay_date_begin'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Styles.Content = fmMain.cxStyle_ClientFrahtCard_Profitt
+        Width = 66
+        Position.BandIndex = 0
+        Position.ColIndex = 12
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1stay_date_end: TcxGridDBBandedColumn
+        Caption = #1050#1086#1085#1077#1094' '#1087#1077#1088#1080#1086#1076#1072' '#1087#1088#1086#1089#1090#1086#1103
+        DataBinding.FieldName = 'stay_date_end'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Styles.Content = fmMain.cxStyle_ClientFrahtCard_Profitt
+        Width = 66
+        Position.BandIndex = 0
+        Position.ColIndex = 13
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1stay_type_name: TcxGridDBBandedColumn
+        Caption = #1052#1077#1089#1090#1086' '#1087#1088#1086#1089#1090#1086#1103
+        DataBinding.FieldName = 'stay_type_name'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Styles.Content = fmMain.cxStyle_ClientFrahtCard_Profitt
+        Width = 66
+        Position.BandIndex = 0
+        Position.ColIndex = 14
+        Position.RowIndex = 0
       end
     end
     object cxGrid1Level1: TcxGridLevel

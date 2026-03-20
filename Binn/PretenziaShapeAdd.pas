@@ -16,7 +16,7 @@ uses
   dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinValentine, dxSkinVisualStudio2013Blue,
   dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxSkinTheBezier, cxButtons,
   dxSkinOffice2019Colorful, dxSkinBasic, dxSkinOffice2019Black,
-  dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI, dxCoreGraphics;
+  dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI, dxCoreGraphics, cxLabel;
 
 type
   TfmPretenziaShapeAdd = class(TForm)
@@ -40,6 +40,17 @@ type
     cxButton3: TcxButton;
     cxTextEdit1: TcxTextEdit;
     Label11: TLabel;
+    Panel3: TPanel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label6: TLabel;
+    cxDateEdit2: TcxDateEdit;
+    cxTextEdit4: TcxTextEdit;
+    Label7: TLabel;
+    cxDateEdit3: TcxDateEdit;
+    cxLabel7: TcxLabel;
+    cxDateEdit4: TcxDateEdit;
+    cxComboBox1: TcxComboBox;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure cxDBButtonEdit1PropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
     procedure FormCreate(Sender: TObject);
@@ -73,6 +84,10 @@ begin
 
 
   Query_Contract.Close;
+
+  cxDateEdit2.EditValue := Date;
+  cxDateEdit3.EditValue := Date;
+  cxDateEdit4.EditValue := Date;
 
   Screen.Cursor := crDefault;
 end;
@@ -120,6 +135,11 @@ begin
     Memo2.EditValue    := Q.FieldByName('comment').Value;
     cxCurrencyEdit1.EditValue := Q.FieldByName('pretenzia_sum').Value;
 
+    cxTextEdit4.EditValue := Q.FieldByName('pretenzia_our_cod').AsString;
+    cxDateEdit2.EditValue := Q.FieldByName('pretenzia_our_date').Value;
+    cxDateEdit3.EditValue := Q.FieldByName('stay_date_begin').Value;
+    cxDateEdit4.EditValue := Q.FieldByName('stay_date_end').Value;
+    cxComboBox1.ItemIndex := Q.FieldByName('stay_type').AsInteger;
 
   finally
     Q.Free;
@@ -172,6 +192,12 @@ begin
   SP.Parameters.ParamByName('@pretenzia_date'    ).Value := cxDateEdit1.Date;
   SP.Parameters.ParamByName('@pretenzia_sum'     ).Value := cxCurrencyEdit1.EditValue;
   SP.Parameters.ParamByName('@comment'           ).Value := Memo2.EditValue;
+
+  SP.Parameters.ParamByName('@pretenzia_our_cod' ).Value := cxTextEdit4.Text;
+  SP.Parameters.ParamByName('@pretenzia_our_date').Value := cxDateEdit2.EditValue;
+  SP.Parameters.ParamByName('@stay_date_begin'   ).Value := cxDateEdit3.EditValue;
+  SP.Parameters.ParamByName('@stay_date_end'     ).Value := cxDateEdit4.EditVAlue;
+  SP.Parameters.ParamByName('@stay_type'         ).Value := cxComboBox1.ItemIndex;
 
   SP.ExecProc;
   Fpretenzia_shape_id := SP.Parameters.ParamByName('@pretenzia_shape_id').Value;

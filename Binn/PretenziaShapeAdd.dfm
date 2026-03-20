@@ -2,10 +2,10 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
   Left = 493
   Top = 144
   Caption = #1055#1088#1077#1090#1077#1085#1079#1080#1103' ('#8470' '#1079#1072#1087#1080#1089#1080'...)'
-  ClientHeight = 303
+  ClientHeight = 361
   ClientWidth = 404
   Color = clBtnFace
-  Constraints.MinHeight = 350
+  Constraints.MinHeight = 400
   Constraints.MinWidth = 420
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -1077,7 +1077,7 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
   end
   object Panel1: TPanel
     Left = 0
-    Top = 266
+    Top = 324
     Width = 404
     Height = 37
     Align = alBottom
@@ -1101,7 +1101,7 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
+        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -1185,7 +1185,7 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
+        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -1256,14 +1256,12 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
   end
   object GroupBox1: TGroupBox
     Left = 0
-    Top = 137
+    Top = 247
     Width = 404
-    Height = 129
+    Height = 77
     Align = alClient
     Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
     TabOrder = 2
-    ExplicitTop = 129
-    ExplicitHeight = 137
     object Memo2: TcxMemo
       Left = 2
       Top = 15
@@ -1284,9 +1282,237 @@ object fmPretenziaShapeAdd: TfmPretenziaShapeAdd
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
-      ExplicitHeight = 120
-      Height = 112
+      Height = 60
       Width = 400
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 137
+    Width = 404
+    Height = 110
+    Align = alTop
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    TabOrder = 4
+    DesignSize = (
+      404
+      110)
+    object Label3: TLabel
+      Left = 4
+      Top = 59
+      Width = 151
+      Height = 13
+      Caption = #1055#1077#1088#1080#1086#1076' '#1087#1088#1086#1089#1090#1086#1103'.......................'
+    end
+    object Label4: TLabel
+      Left = 3
+      Top = 34
+      Width = 188
+      Height = 13
+      Caption = #1044#1072#1090#1072' '#1088#1077#1075#1080#1089#1090#1088#1072#1094#1080#1080' '#1085#1072#1096#1072'......................'
+    end
+    object Label6: TLabel
+      Left = 4
+      Top = 13
+      Width = 184
+      Height = 13
+      Caption = #1042#1093#1086#1076#1103#1097#1080#1081' '#1085#1086#1084#1077#1088' '#1085#1072#1096'.........................'
+    end
+    object Label7: TLabel
+      Left = 4
+      Top = 81
+      Width = 145
+      Height = 13
+      Caption = #1052#1077#1089#1090#1086' '#1087#1088#1086#1089#1090#1086#1103'.......................'
+    end
+    object cxLabel7: TcxLabel
+      Left = 187
+      Top = 57
+      Caption = '.........'#1055#1054'..........'
+      Style.LookAndFeel.Kind = lfUltraFlat
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.ScrollbarMode = sbmClassic
+      Style.LookAndFeel.ScrollMode = scmClassic
+      Style.LookAndFeel.SkinName = 'Coffee'
+      StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleDisabled.LookAndFeel.ScrollMode = scmClassic
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfUltraFlat
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleFocused.LookAndFeel.ScrollMode = scmClassic
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfUltraFlat
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleHot.LookAndFeel.ScrollMode = scmClassic
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+    end
+    object cxDateEdit2: TcxDateEdit
+      Left = 130
+      Top = 30
+      Properties.ShowTime = False
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.ScrollbarMode = sbmClassic
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleDisabled.TextColor = clBlack
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
+      TabOrder = 0
+      Width = 105
+    end
+    object cxTextEdit4: TcxTextEdit
+      Left = 130
+      Top = 8
+      Anchors = [akLeft, akTop, akRight]
+      ParentFont = False
+      Properties.Alignment.Horz = taLeftJustify
+      Properties.ReadOnly = False
+      Style.Color = clWindow
+      Style.Font.Charset = DEFAULT_CHARSET
+      Style.Font.Color = clBlue
+      Style.Font.Height = -11
+      Style.Font.Name = 'MS Sans Serif'
+      Style.Font.Style = [fsBold]
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.ScrollbarMode = sbmClassic
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
+      Style.TextColor = clBlack
+      Style.IsFontAssigned = True
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleDisabled.TextColor = clBlack
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
+      TabOrder = 1
+      Width = 268
+    end
+    object cxDateEdit3: TcxDateEdit
+      Left = 130
+      Top = 52
+      EditValue = 37361d
+      Properties.SaveTime = False
+      Properties.ShowTime = False
+      Style.LookAndFeel.Kind = lfOffice11
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.ScrollbarMode = sbmClassic
+      Style.LookAndFeel.ScrollMode = scmClassic
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
+      StyleDisabled.LookAndFeel.Kind = lfOffice11
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleDisabled.LookAndFeel.ScrollMode = scmClassic
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfOffice11
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleFocused.LookAndFeel.ScrollMode = scmClassic
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfOffice11
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleHot.LookAndFeel.ScrollMode = scmClassic
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
+      TabOrder = 2
+      Width = 81
+    end
+    object cxDateEdit4: TcxDateEdit
+      Left = 239
+      Top = 52
+      EditValue = 37361d
+      Properties.SaveTime = False
+      Properties.ShowTime = False
+      Style.LookAndFeel.Kind = lfOffice11
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.ScrollbarMode = sbmClassic
+      Style.LookAndFeel.ScrollMode = scmClassic
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
+      StyleDisabled.LookAndFeel.Kind = lfOffice11
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleDisabled.LookAndFeel.ScrollMode = scmClassic
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfOffice11
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleFocused.LookAndFeel.ScrollMode = scmClassic
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfOffice11
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleHot.LookAndFeel.ScrollMode = scmClassic
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
+      TabOrder = 4
+      Width = 81
+    end
+    object cxComboBox1: TcxComboBox
+      Left = 130
+      Top = 75
+      Properties.Items.Strings = (
+        #1087#1088#1080' '#1074#1099#1075#1088#1091#1079#1082#1077
+        #1087#1088#1080' '#1087#1086#1075#1088#1091#1079#1082#1077
+        #1080#1085#1086#1089#1090#1088'.'#1090#1077#1088#1088#1080#1090#1086#1088#1080#1103)
+      Style.HotTrack = False
+      Style.LookAndFeel.Kind = lfUltraFlat
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.ScrollbarMode = sbmClassic
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.ReadOnly = True
+      Style.Shadow = False
+      StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleFocused.LookAndFeel.Kind = lfUltraFlat
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.Kind = lfUltraFlat
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
+      TabOrder = 5
+      Text = #1087#1088#1080' '#1074#1099#1075#1088#1091#1079#1082#1077
+      Width = 190
     end
   end
   object cxPropertiesStore1: TcxPropertiesStore
