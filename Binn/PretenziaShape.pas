@@ -3,7 +3,7 @@
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, ShellAPI,
   StdCtrls, ExtCtrls, ComCtrls, ToolWin, Db, ADODB, Variants, DateUtils,
   cxPropertiesStore, cxClasses, cxControls, cxGridCustomView,
   cxGridCustomTableView, cxGridTableView, cxGridBandedTableView,
@@ -114,6 +114,13 @@ type
     cxGrid1DBBandedTableView1stay_date_begin: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1stay_date_end: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1stay_type_name: TcxGridDBBandedColumn;
+    dxBarSubItem3: TdxBarSubItem;
+    dxBarButton15: TdxBarButton;
+    dxBarButton16: TdxBarButton;
+    dxBarButton17: TdxBarButton;
+    dxBarButton18: TdxBarButton;
+    dxBarButton19: TdxBarButton;
+    dxBarButton20: TdxBarButton;
     procedure dxBarButton2Click(Sender: TObject);
     procedure cxGrid1DBBandedTableView1KeyPress(Sender: TObject; var Key: Char);
     procedure cxGrid1DBBandedTableView1FocusedItemChanged(Sender: TcxCustomGridTableView; APrevFocusedItem, AFocusedItem: TcxCustomGridTableItem);
@@ -155,6 +162,7 @@ type
     procedure dxBarButton9Click(Sender: TObject);
     procedure dxBarButton10Click(Sender: TObject);
     procedure dxBarButton11Click(Sender: TObject);
+    procedure dxBarButton15Click(Sender: TObject);
   private
     Fdate1, Fdate2 : TDateTime;
     Fpretenzia_shape_id     : integer;
@@ -641,6 +649,15 @@ begin
   end;
 
   RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pretenzia_shape_id');
+end;
+
+procedure TfmPretenziaShape.dxBarButton15Click(Sender: TObject);
+var file_name, spam_dir: string;
+begin
+//  GetDocBlobView(TdxBarButton(Sender).Tag, nil, '', fmMain.Lis);
+  file_name := GetDocBlob(fmMain.Lis, TdxBarButton(Sender).Tag);
+  spam_dir := ExtractFilePath(ParamStr(0)) + 'Temp\';
+  ShellExecute(HWND(nil), 'open', PChar(file_name), nil, PChar(spam_dir), SW_SHOWNORMAL);
 end;
 
 procedure TfmPretenziaShape.dxBarButton21Click(Sender: TObject);
