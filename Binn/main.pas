@@ -640,9 +640,9 @@ begin
   dxBarButton64.Visible  := iif(set_close_fin_month, ivAlways, ivNever);
 
 // Проверка и загрузка курсов валют
-  if u[9] = True then begin
-    GetAllExchange();
-  end;
+//  if u[9] = True then begin
+//    GetAllExchange();
+//  end;
 
   usr_pwd_docs.users_id := -9;
 
