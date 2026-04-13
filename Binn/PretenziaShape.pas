@@ -170,6 +170,7 @@ type
     procedure dxBarButton11Click(Sender: TObject);
     procedure dxBarButton15Click(Sender: TObject);
     procedure cxPageControl1Change(Sender: TObject);
+    procedure dxBarButton24Click(Sender: TObject);
   private
     Fdate1, Fdate2 : TDateTime;
     Fpretenzia_shape_id     : integer;
@@ -184,7 +185,8 @@ var
   fmPretenziaShape: TfmPretenziaShape;
 
 implementation
-   uses Main, Period, Raznoe, PretenziaShapeAdd, Other, cxGridDBDataDefinitions, Default, Filter;
+   uses Main, Period, Raznoe, PretenziaShapeAdd, Other, cxGridDBDataDefinitions, Default, Filter,
+  PretenziaShapeDirectum;
 {$R *.DFM}
 
 
@@ -717,6 +719,14 @@ end;
 procedure TfmPretenziaShape.dxBarButton23Click(Sender: TObject);
 begin
 	cxGrid2DBBandedTableView1.OptionsView.GroupByBox := not cxGrid2DBBandedTableView1.OptionsView.GroupByBox;
+end;
+
+procedure TfmPretenziaShape.dxBarButton24Click(Sender: TObject);
+begin
+  fmPretenziaShapeDirectum := TfmPretenziaShapeDirectum.Create(Application, Fpretenzia_type);
+  fmPretenziaShapeDirectum.ShowModal;
+//  if fmPretenziaShapeDirectum.ShowModal = mrOk then
+//    RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pretenzia_shape_id', fmPretenziaShapeAdd._GetPretenziaShapeId);
 end;
 
 procedure TfmPretenziaShape.dxBarButton2Click(Sender: TObject);

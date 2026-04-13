@@ -74,10 +74,12 @@ type
       Sender: TcxCustomGridTableView; APrevFocusedItem,
       AFocusedItem: TcxCustomGridTableItem);
     procedure cxGrid1DBBandedTableView1KeyPress(Sender: TObject; var Key: Char);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure cxButton1Click(Sender: TObject);
   private
     { Private declarations }
   public
-    { Public declarations }
+    constructor Create(AOwner: TApplication; pretenzia_type: integer);
   end;
 
 var
@@ -86,6 +88,23 @@ var
 implementation
 
 {$R *.dfm}
+
+constructor TfmPretenziaShapeDirectum.Create(AOwner: TApplication; pretenzia_type: integer);
+begin
+  Screen.Cursor := crHourglass;
+  inherited Create(AOwner);
+
+  ClientDS_Pr.CreateDataSet;
+  ClientDS_Pr.LogChanges := False;
+
+  Screen.Cursor := crDefault;
+end;
+
+
+procedure TfmPretenziaShapeDirectum.cxButton1Click(Sender: TObject);
+begin
+  Close;
+end;
 
 procedure TfmPretenziaShapeDirectum.cxGrid1DBBandedTableView1CustomDrawCell(
   Sender: TcxCustomGridTableView; ACanvas: TcxCanvas;
@@ -125,6 +144,12 @@ procedure TfmPretenziaShapeDirectum.cxGrid1DBBandedTableView1KeyPress(
   Sender: TObject; var Key: Char);
 begin
 	FilterColumnGridOnKeyPress(cxGrid1DBBandedTableView1, Key);
+end;
+
+procedure TfmPretenziaShapeDirectum.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  Action := caFree;
 end;
 
 end.

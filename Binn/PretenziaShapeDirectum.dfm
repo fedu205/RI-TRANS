@@ -10,6 +10,7 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnClose = FormClose
   TextHeight = 15
   object Panel1: TPanel
     Left = 0
@@ -70,6 +71,7 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
         0000000000031213232D40437D935D61B5D07378DFFC7378DFFC5D61B5D04043
         7D951212223000000004000000010000000000000000}
       TabOrder = 0
+      OnClick = cxButton1Click
       ExplicitLeft = 970
     end
     object cxButton2: TcxButton
@@ -127,6 +129,9 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
     Height = 653
     Align = alClient
     TabOrder = 1
+    LookAndFeel.Kind = lfUltraFlat
+    LookAndFeel.NativeStyle = False
+    LookAndFeel.SkinName = 'Office2007Black'
     ExplicitLeft = 336
     ExplicitTop = 232
     ExplicitWidth = 250

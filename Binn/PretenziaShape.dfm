@@ -174,8 +174,6 @@ object fmPretenziaShape: TfmPretenziaShape
     LookAndFeel.NativeStyle = False
     LookAndFeel.ScrollbarMode = sbmClassic
     LookAndFeel.SkinName = 'Office2007Black'
-    ExplicitTop = 26
-    ExplicitHeight = 605
     object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
       PopupMenu = Popup_Pay
       OnDblClick = N2Click
@@ -510,8 +508,6 @@ object fmPretenziaShape: TfmPretenziaShape
     Align = alRight
     Caption = #1060#1072#1082#1090
     TabOrder = 4
-    ExplicitTop = 26
-    ExplicitHeight = 605
     object cxGrid2: TcxGrid
       Left = 2
       Top = 15
@@ -529,7 +525,6 @@ object fmPretenziaShape: TfmPretenziaShape
       LookAndFeel.NativeStyle = False
       LookAndFeel.ScrollbarMode = sbmClassic
       LookAndFeel.SkinName = 'Office2007Black'
-      ExplicitHeight = 588
       object cxGrid2DBBandedTableView1: TcxGridDBBandedTableView
         PopupMenu = dxBarPopupMenu1
         OnKeyPress = cxGrid2DBBandedTableView1KeyPress
@@ -839,21 +834,16 @@ object fmPretenziaShape: TfmPretenziaShape
     LookAndFeel.ScrollbarMode = sbmClassic
     LookAndFeel.SkinName = ''
     OnChange = cxPageControl1Change
-    ExplicitTop = 20
     ClientRectBottom = 25
     ClientRectRight = 1218
     ClientRectTop = 25
     object cxTabSheet1: TcxTabSheet
       Caption = #1042#1093#1086#1076#1103#1097#1080#1077' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
       ImageIndex = 0
-      ExplicitTop = 0
-      ExplicitWidth = 961
     end
     object cxTabSheet2: TcxTabSheet
       Caption = #1048#1089#1093#1086#1076#1103#1097#1080#1077' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
       ImageIndex = 1
-      ExplicitTop = 0
-      ExplicitWidth = 0
     end
   end
   object cxPropertiesStore1: TcxPropertiesStore
@@ -1281,6 +1271,7 @@ object fmPretenziaShape: TfmPretenziaShape
       Category = 0
       Hint = #1044#1086#1073#1072#1074#1080#1090#1100' '#1080#1079' '#1044#1080#1088#1077#1082#1090#1091#1084#1072
       Visible = ivAlways
+      OnClick = dxBarButton24Click
     end
     object N1: TdxBarButton
       Caption = #1044#1086#1073#1072#1074#1080#1090#1100'...'
