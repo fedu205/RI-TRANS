@@ -147,8 +147,8 @@ object fmPretenziaShape: TfmPretenziaShape
   TextHeight = 13
   object Splitter2: TSplitter
     Left = 824
-    Top = 26
-    Height = 605
+    Top = 49
+    Height = 582
     Align = alRight
     Color = 8421631
     ParentColor = False
@@ -158,9 +158,9 @@ object fmPretenziaShape: TfmPretenziaShape
   end
   object cxGrid1: TcxGrid
     Left = 0
-    Top = 26
+    Top = 49
     Width = 824
-    Height = 605
+    Height = 582
     Hint = #1055#1083#1072#1090#1077#1078#1080' 1'#1057', '#1085#1077' '#1079#1072#1075#1088#1091#1078#1077#1085#1085#1099#1077' '#1074' '#1051#1048#1057
     Align = alClient
     Font.Charset = RUSSIAN_CHARSET
@@ -174,6 +174,8 @@ object fmPretenziaShape: TfmPretenziaShape
     LookAndFeel.NativeStyle = False
     LookAndFeel.ScrollbarMode = sbmClassic
     LookAndFeel.SkinName = 'Office2007Black'
+    ExplicitTop = 26
+    ExplicitHeight = 605
     object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
       PopupMenu = Popup_Pay
       OnDblClick = N2Click
@@ -476,6 +478,25 @@ object fmPretenziaShape: TfmPretenziaShape
         Position.ColIndex = 14
         Position.RowIndex = 0
       end
+      object cxGrid1DBBandedTableView1pretenzia_type: TcxGridDBBandedColumn
+        DataBinding.FieldName = 'pretenzia_type'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Width = 80
+        Position.BandIndex = 0
+        Position.ColIndex = 15
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1directum_id: TcxGridDBBandedColumn
+        Caption = #1044#1080#1088#1077#1082#1090#1091#1084' ID'
+        DataBinding.FieldName = 'directum_id'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Width = 80
+        Position.BandIndex = 0
+        Position.ColIndex = 16
+        Position.RowIndex = 0
+      end
     end
     object cxGrid1Level1: TcxGridLevel
       GridView = cxGrid1DBBandedTableView1
@@ -483,17 +504,19 @@ object fmPretenziaShape: TfmPretenziaShape
   end
   object GroupBox1: TGroupBox
     Left = 827
-    Top = 26
+    Top = 49
     Width = 391
-    Height = 605
+    Height = 582
     Align = alRight
     Caption = #1060#1072#1082#1090
-    TabOrder = 5
+    TabOrder = 4
+    ExplicitTop = 26
+    ExplicitHeight = 605
     object cxGrid2: TcxGrid
       Left = 2
       Top = 15
       Width = 387
-      Height = 588
+      Height = 565
       Align = alClient
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clWindowText
@@ -506,6 +529,7 @@ object fmPretenziaShape: TfmPretenziaShape
       LookAndFeel.NativeStyle = False
       LookAndFeel.ScrollbarMode = sbmClassic
       LookAndFeel.SkinName = 'Office2007Black'
+      ExplicitHeight = 588
       object cxGrid2DBBandedTableView1: TcxGridDBBandedTableView
         PopupMenu = dxBarPopupMenu1
         OnKeyPress = cxGrid2DBBandedTableView1KeyPress
@@ -794,6 +818,44 @@ object fmPretenziaShape: TfmPretenziaShape
       end
     end
   end
+  object cxPageControl1: TcxPageControl
+    Left = 0
+    Top = 26
+    Width = 1218
+    Height = 23
+    Align = alTop
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 6
+    Properties.ActivePage = cxTabSheet1
+    Properties.CustomButtons.Buttons = <>
+    Properties.Style = 2
+    LookAndFeel.Kind = lfUltraFlat
+    LookAndFeel.NativeStyle = False
+    LookAndFeel.ScrollbarMode = sbmClassic
+    LookAndFeel.SkinName = ''
+    OnChange = cxPageControl1Change
+    ExplicitTop = 20
+    ClientRectBottom = 25
+    ClientRectRight = 1218
+    ClientRectTop = 25
+    object cxTabSheet1: TcxTabSheet
+      Caption = #1042#1093#1086#1076#1103#1097#1080#1077' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
+      ImageIndex = 0
+      ExplicitTop = 0
+      ExplicitWidth = 961
+    end
+    object cxTabSheet2: TcxTabSheet
+      Caption = #1048#1089#1093#1086#1076#1103#1097#1080#1077' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
+      ImageIndex = 1
+      ExplicitTop = 0
+      ExplicitWidth = 0
+    end
+  end
   object cxPropertiesStore1: TcxPropertiesStore
     Components = <
       item
@@ -832,11 +894,17 @@ object fmPretenziaShape: TfmPretenziaShape
         Precision = 16
         Size = 16
         Value = Null
+      end
+      item
+        Name = 'pretenzia_type'
+        Size = -1
+        Value = Null
       end>
     SQL.Strings = (
       'SELECT *'
       'FROM view_pretenzia_shape'
-      'WHERE :date1 <= pretenzia_date AND pretenzia_date<= :date2')
+      'WHERE :date1 <= pretenzia_date AND pretenzia_date<= :date2'
+      'and pretenzia_type = :pretenzia_type')
     Left = 62
     Top = 77
   end
@@ -1208,6 +1276,12 @@ object fmPretenziaShape: TfmPretenziaShape
       Visible = ivAlways
       OnClick = dxBarButton15Click
     end
+    object dxBarButton24: TdxBarButton
+      Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1080#1079' '#1044#1080#1088#1077#1082#1090#1091#1084#1072'...'
+      Category = 0
+      Hint = #1044#1086#1073#1072#1074#1080#1090#1100' '#1080#1079' '#1044#1080#1088#1077#1082#1090#1091#1084#1072
+      Visible = ivAlways
+    end
     object N1: TdxBarButton
       Caption = #1044#1086#1073#1072#1074#1080#1090#1100'...'
       Category = 1
@@ -1310,6 +1384,10 @@ object fmPretenziaShape: TfmPretenziaShape
       item
         Visible = True
         ItemName = 'N1'
+      end
+      item
+        Visible = True
+        ItemName = 'dxBarButton24'
       end
       item
         Visible = True

@@ -57,12 +57,13 @@ type
     procedure cxButton1Click(Sender: TObject);
   private
     Fpretenzia_shape_id : integer;
+    Fpretenzia_type : integer;
     Faction : boolean;
     Ftype_action : Integer;
     Fcontract_id: integer;
     procedure SetUpdate(pretenzia_shape_id : integer);
   public
-    constructor Create(AOwner: TApplication; action: boolean);
+    constructor Create(AOwner: TApplication; action: boolean; pretenzia_type: integer);
     property _GetPretenziaShapeId : integer read Fpretenzia_shape_id;
     property _SetUpdate : integer write SetUpdate;
     procedure _SetInsert;
@@ -75,12 +76,13 @@ implementation
       uses Main, Raznoe, Contract, ClientInvoice;
 {$R *.DFM}
 
-constructor TfmPretenziaShapeAdd.Create(AOwner: TApplication; action: boolean);
+constructor TfmPretenziaShapeAdd.Create(AOwner: TApplication; action: boolean; pretenzia_type: integer);
 begin
   Screen.Cursor := crHourglass;
   inherited Create(AOwner);
   Faction    := action;
   Ftype_action := 0;
+  Fpretenzia_type := pretenzia_type;
 
 
   Query_Contract.Close;
@@ -122,6 +124,7 @@ begin
     Q.SQL.Add('SELECT * FROM view_pretenzia_shape WHERE pretenzia_shape_id='+IntToStr(Fpretenzia_shape_id));
     Q.Open;
 
+    Fpretenzia_type := Q.FieldByName('pretenzia_type').AsInteger;
     cxDateEdit1.Date := Q.FieldByName('pretenzia_date').AsDatetime;
 
     Query_Contract.Close;
@@ -186,6 +189,7 @@ begin
   SP.ProcedureName := 'sp_pretenzia_shape_modify';
   SP.Parameters.Refresh;
   SP.Parameters.ParamByName('@type_action'       ).Value := Ftype_action;
+  SP.Parameters.ParamByName('@pretenzia_type'    ).Value := Fpretenzia_type;
   SP.Parameters.ParamByName('@pretenzia_shape_id').Value := Fpretenzia_shape_id;
   SP.Parameters.ParamByName('@contract_id'       ).Value := Fcontract_id;
   SP.Parameters.ParamByName('@pretenzia_cod'     ).Value := cxTextEdit1.Text;

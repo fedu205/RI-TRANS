@@ -22,7 +22,7 @@ uses
   dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, cxDataControllerConditionalFormattingRulesManagerDialog, dxDateRanges, dxSkinTheBezier,
   dxSkinOffice2019Colorful, dxScrollbarAnnotations, dxSkinBasic,
   dxSkinOffice2019Black, dxSkinOffice2019DarkGray, dxSkinOffice2019White,
-  dxSkinWXI, cxColorComboBox;
+  dxSkinWXI, cxColorComboBox, dxBarBuiltInMenu;
 
 type
   TfmPretenziaShape = class(TForm)
@@ -121,6 +121,12 @@ type
     dxBarButton18: TdxBarButton;
     dxBarButton19: TdxBarButton;
     dxBarButton20: TdxBarButton;
+    cxPageControl1: TcxPageControl;
+    cxTabSheet1: TcxTabSheet;
+    cxTabSheet2: TcxTabSheet;
+    cxGrid1DBBandedTableView1pretenzia_type: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1directum_id: TcxGridDBBandedColumn;
+    dxBarButton24: TdxBarButton;
     procedure dxBarButton2Click(Sender: TObject);
     procedure cxGrid1DBBandedTableView1KeyPress(Sender: TObject; var Key: Char);
     procedure cxGrid1DBBandedTableView1FocusedItemChanged(Sender: TcxCustomGridTableView; APrevFocusedItem, AFocusedItem: TcxCustomGridTableItem);
@@ -163,12 +169,14 @@ type
     procedure dxBarButton10Click(Sender: TObject);
     procedure dxBarButton11Click(Sender: TObject);
     procedure dxBarButton15Click(Sender: TObject);
+    procedure cxPageControl1Change(Sender: TObject);
   private
     Fdate1, Fdate2 : TDateTime;
     Fpretenzia_shape_id     : integer;
+    Fpretenzia_type : integer;
 
   public
-    constructor Create(AOwner : Tapplication; flag: boolean);
+    constructor Create(AOwner : Tapplication; flag: boolean; pretenzia_type: integer);
 
   end;
 
@@ -182,16 +190,27 @@ implementation
 
 
 
-constructor TfmPretenziaShape.Create(AOwner: Tapplication; flag: boolean);
+constructor TfmPretenziaShape.Create(AOwner: Tapplication; flag: boolean; pretenzia_type: integer);
 begin
   Screen.Cursor := crHourglass;
   inherited Create(AOwner);
 
+  Fpretenzia_type := pretenzia_type;
   dxBarSubItem1.Caption := StoreRegistryDate(rgLoad, '\Software\Lis1\DateTime\PretenziaShape', Fdate1, Fdate2);
 
   Query_PretenziaShape.Parameters.ParamByName('date1').Value := Fdate1;
   Query_PretenziaShape.Parameters.ParamByName('date2').Value := Fdate2;
+  Query_PretenziaShape.Parameters.ParamByName('pretenzia_type').Value := Fpretenzia_type;
   Query_PretenziaShape.Open;
+
+  case Fpretenzia_type of
+    0 : begin
+        Caption := 'Входящие претензии';
+        end;
+    1 : begin
+        Caption := 'Исходящие претензии';
+        end;
+  end;
 
   cxGrid1DBBandedTableView1SelectionChanged(nil);
 
@@ -227,7 +246,7 @@ end;
 
 procedure TfmPretenziaShape.N1Click(Sender: TObject);
 begin
-  fmPretenziaShapeAdd := TfmPretenziaShapeAdd.Create(Application, True);
+  fmPretenziaShapeAdd := TfmPretenziaShapeAdd.Create(Application, True, Fpretenzia_type);
   fmPretenziaShapeAdd._SetInsert;
   if fmPretenziaShapeAdd.ShowModal = mrOk then
     RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pretenzia_shape_id', fmPretenziaShapeAdd._GetPretenziaShapeId);
@@ -235,7 +254,7 @@ end;
 
 procedure TfmPretenziaShape.N2Click(Sender: TObject);
 begin
-  fmPretenziaShapeAdd := TfmPretenziaShapeAdd.Create(Application, False);
+  fmPretenziaShapeAdd := TfmPretenziaShapeAdd.Create(Application, False, Fpretenzia_type);
   fmPretenziaShapeAdd._SetUpdate := cxGrid1DBBandedTableView1.GetColumnByFieldName('pretenzia_shape_id').DataBinding.Field.AsInteger;
   if fmPretenziaShapeAdd.ShowModal = mrOk then
     RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pretenzia_shape_id');
@@ -359,6 +378,30 @@ procedure TfmPretenziaShape.cxGrid2DBBandedTableView1KeyPress(Sender: TObject;
   var Key: Char);
 begin
 	FilterColumnGridOnKeyPress(cxGrid2DBBandedTableView1, Key);
+end;
+
+procedure TfmPretenziaShape.cxPageControl1Change(Sender: TObject);
+begin
+  Fpretenzia_type := cxPageControl1.ActivePageIndex;
+
+  case Fpretenzia_type of
+    0 : begin
+//        cxGrid1DBBandedTableView1firm_customer_name.Caption :='Клиент';
+//        cxGrid1DBBandedTableView1firm_customer_name_full.Caption :='Полное наименование Клиента';
+        Caption := 'Входящие претензии';
+        end;
+    1 : begin
+//        cxGrid1DBBandedTableView1firm_customer_name.Caption :='Субподрядчик';
+//        cxGrid1DBBandedTableView1firm_customer_name_full.Caption :='Полное наименование Подрядчика';
+        Caption := 'Исходящие претензии';
+        end;
+  end;
+
+  Query_PretenziaShape.Close;
+  Query_PretenziaShape.Parameters.ParamByName('date1').Value := Fdate1;
+  Query_PretenziaShape.Parameters.ParamByName('date2').Value := Fdate2;
+  Query_PretenziaShape.Parameters.ParamByName('pretenzia_type').Value := Fpretenzia_type;
+  Query_PretenziaShape.Open;
 end;
 
 procedure TfmPretenziaShape.dxBarButton10Click(Sender: TObject);
@@ -558,6 +601,7 @@ begin
   Query_PretenziaShape.Close;
   Query_PretenziaShape.Parameters.ParamByName('date1').Value := Fdate1;
   Query_PretenziaShape.Parameters.ParamByName('date2').Value := Fdate2;
+  Query_PretenziaShape.Parameters.ParamByName('pretenzia_type').Value := Fpretenzia_type;
   Query_PretenziaShape.Open;
 
   Screen.Cursor := crDefault;
@@ -696,6 +740,7 @@ begin
     Query_PretenziaShape.Close;
     Query_PretenziaShape.Parameters.ParamByName('date1').Value := Fdate1;
     Query_PretenziaShape.Parameters.ParamByName('date2').Value := Fdate2;
+    Query_PretenziaShape.Parameters.ParamByName('pretenzia_type').Value := Fpretenzia_type;
     Query_PretenziaShape.Open;
 
     Screen.Cursor := crDefault;

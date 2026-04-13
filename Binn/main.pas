@@ -269,6 +269,7 @@ type
     dxBarButton100: TdxBarButton;
     dxBarButton102: TdxBarButton;
     dxBarButton103: TdxBarButton;
+    dxBarButton122: TdxBarButton;
     procedure dxBarButton61Click(Sender: TObject);
     procedure dxBarButton58Click(Sender: TObject);
     procedure dxBarSubItem15Popup(Sender: TObject);
@@ -733,7 +734,7 @@ begin
       MDIChildren[i].Show;
       Exit
     end;
-  fmPretenziaShape := TfmPretenziaShape.Create(Application, False);
+  fmPretenziaShape := TfmPretenziaShape.Create(Application, False, 0);
 
 end;
 

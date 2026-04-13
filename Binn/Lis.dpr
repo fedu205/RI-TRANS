@@ -85,7 +85,8 @@ uses
   EffectSPSAdd in 'EffectSPSAdd.pas' {fmEffectSPSAdd},
   FactIncAdd in 'FactIncAdd.pas' {fmFactIncAdd},
   Pay in 'Pay.pas' {fmPay},
-  PayAdd in 'PayAdd.pas' {fmPayAdd};
+  PayAdd in 'PayAdd.pas' {fmPayAdd},
+  PretenziaShapeDirectum in 'PretenziaShapeDirectum.pas' {fmPretenziaShapeDirectum};
 
 {fmFactTrack}
 
@@ -170,8 +171,6 @@ begin
         Application.Title := 'Logistics Information System';
         Application.CreateForm(TfmMain, fmMain);
   Application.CreateForm(TfmOther, fmOther);
-  Application.CreateForm(TfmPay, fmPay);
-  Application.CreateForm(TfmPayAdd, fmPayAdd);
   fmMain.SetPar(v);
         if global_id <> -9 then
           fmMain.SetGlobalId(global_id);
