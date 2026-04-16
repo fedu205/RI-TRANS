@@ -507,7 +507,7 @@ object fmPretenziaShape: TfmPretenziaShape
     Height = 582
     Align = alRight
     Caption = #1060#1072#1082#1090
-    TabOrder = 4
+    TabOrder = 3
     object cxGrid2: TcxGrid
       Left = 2
       Top = 15
@@ -840,10 +840,14 @@ object fmPretenziaShape: TfmPretenziaShape
     object cxTabSheet1: TcxTabSheet
       Caption = #1042#1093#1086#1076#1103#1097#1080#1077' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
       ImageIndex = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
     end
     object cxTabSheet2: TcxTabSheet
       Caption = #1048#1089#1093#1086#1076#1103#1097#1080#1077' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
       ImageIndex = 1
+      ExplicitTop = 0
+      ExplicitWidth = 0
     end
   end
   object cxPropertiesStore1: TcxPropertiesStore

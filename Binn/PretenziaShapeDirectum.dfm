@@ -11,6 +11,7 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnClose = FormClose
+  OnDestroy = FormDestroy
   TextHeight = 15
   object Panel1: TPanel
     Left = 0
@@ -21,8 +22,6 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 0
-    ExplicitTop = 558
-    ExplicitWidth = 1064
     DesignSize = (
       1141
       41)
@@ -72,7 +71,6 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
         7D951212223000000004000000010000000000000000}
       TabOrder = 0
       OnClick = cxButton1Click
-      ExplicitLeft = 970
     end
     object cxButton2: TcxButton
       Left = 902
@@ -119,7 +117,7 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
         0003000000040000000400000004000000040000000500000005000000050000
         00050000000500000006000000060000000400000001}
       TabOrder = 1
-      ExplicitLeft = 825
+      OnClick = cxButton2Click
     end
   end
   object cxGrid1: TcxGrid
@@ -132,10 +130,6 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
     LookAndFeel.Kind = lfUltraFlat
     LookAndFeel.NativeStyle = False
     LookAndFeel.SkinName = 'Office2007Black'
-    ExplicitLeft = 336
-    ExplicitTop = 232
-    ExplicitWidth = 250
-    ExplicitHeight = 200
     object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
       OnKeyPress = cxGrid1DBBandedTableView1KeyPress
       Navigator.Buttons.CustomButtons = <>
@@ -176,7 +170,7 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1pretenzia_cod: TcxGridDBBandedColumn
-        Caption = #1085#1086#1084#1077#1088' '#1080#1089#1093#1086#1076#1103#1097#1080#1081
+        Caption = #1053#1086#1084#1077#1088' '#1080#1089#1093#1086#1076#1103#1097#1080#1081
         DataBinding.FieldName = 'pretenzia_cod'
         HeaderAlignmentVert = vaTop
         Position.BandIndex = 0
@@ -184,7 +178,7 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1pretenzia_date: TcxGridDBBandedColumn
-        Caption = #1076#1072#1090#1072' '#1080#1089#1093#1086#1076#1103#1097#1077#1075#1086' '#1085#1086#1084#1077#1088#1072
+        Caption = #1044#1072#1090#1072' '#1080#1089#1093#1086#1076#1103#1097#1077#1075#1086' '#1085#1086#1084#1077#1088#1072
         DataBinding.FieldName = 'pretenzia_date'
         HeaderAlignmentVert = vaTop
         Position.BandIndex = 0
@@ -192,7 +186,7 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1pretenzia_our_cod: TcxGridDBBandedColumn
-        Caption = #1074#1093'. '#8470
+        Caption = #1042#1093'. '#8470
         DataBinding.FieldName = 'pretenzia_our_cod'
         HeaderAlignmentVert = vaTop
         Position.BandIndex = 0
@@ -200,7 +194,7 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1pretenzia_our_date: TcxGridDBBandedColumn
-        Caption = #1076#1072#1090#1072' '#1074#1093'. '#8470
+        Caption = #1044#1072#1090#1072' '#1074#1093'. '#8470
         DataBinding.FieldName = 'pretenzia_our_date'
         HeaderAlignmentVert = vaTop
         Position.BandIndex = 0
@@ -208,7 +202,7 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1firm_self_name: TcxGridDBBandedColumn
-        Caption = #1082#1086#1088#1088#1077#1089#1087#1086#1085#1076#1077#1085#1090
+        Caption = #1050#1086#1088#1088#1077#1089#1087#1086#1085#1076#1077#1085#1090
         DataBinding.FieldName = 'firm_self_name'
         HeaderAlignmentVert = vaTop
         Position.BandIndex = 0
@@ -216,7 +210,7 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1firm_customer_name: TcxGridDBBandedColumn
-        Caption = #1072#1076#1088#1077#1089#1072#1090
+        Caption = #1040#1076#1088#1077#1089#1072#1090
         DataBinding.FieldName = 'firm_customer_name'
         HeaderAlignmentVert = vaTop
         Position.BandIndex = 0
@@ -224,7 +218,7 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1pretenzia_scan: TcxGridDBBandedColumn
-        Caption = #1089#1082#1072#1085' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
+        Caption = #1057#1082#1072#1085' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
         DataBinding.FieldName = 'pretenzia_scan'
         HeaderAlignmentVert = vaTop
         Position.BandIndex = 0
@@ -232,7 +226,7 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1pretenzia_sum: TcxGridDBBandedColumn
-        Caption = #1089#1091#1084#1084#1072' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
+        Caption = #1057#1091#1084#1084#1072' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
         DataBinding.FieldName = 'pretenzia_sum'
         HeaderAlignmentVert = vaTop
         Position.BandIndex = 0
@@ -240,7 +234,7 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1stay_date_begin: TcxGridDBBandedColumn
-        Caption = #1085#1072#1095#1072#1083#1086' '#1087#1077#1088#1080#1086#1076#1072
+        Caption = #1053#1072#1095#1072#1083#1086' '#1087#1077#1088#1080#1086#1076#1072
         DataBinding.FieldName = 'stay_date_begin'
         HeaderAlignmentVert = vaTop
         Position.BandIndex = 0
@@ -248,7 +242,7 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1stay_date_end: TcxGridDBBandedColumn
-        Caption = #1082#1086#1085#1077#1094' '#1087#1077#1088#1080#1086#1076#1072
+        Caption = #1050#1086#1085#1077#1094' '#1087#1077#1088#1080#1086#1076#1072
         DataBinding.FieldName = 'stay_date_end'
         HeaderAlignmentVert = vaTop
         Position.BandIndex = 0
@@ -256,7 +250,7 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1stay_type_name: TcxGridDBBandedColumn
-        Caption = #1084#1077#1089#1090#1086' '#1087#1088#1086#1089#1090#1086#1103
+        Caption = #1052#1077#1089#1090#1086' '#1087#1088#1086#1089#1090#1086#1103
         DataBinding.FieldName = 'stay_type_name'
         HeaderAlignmentVert = vaTop
         Position.BandIndex = 0
@@ -264,11 +258,20 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1contract_cod: TcxGridDBBandedColumn
-        Caption = #1085#1086#1084#1077#1088' '#1076#1086#1075#1086#1074#1086#1088#1072
+        Caption = #1053#1086#1084#1077#1088' '#1076#1086#1075#1086#1074#1086#1088#1072
         DataBinding.FieldName = 'contract_cod'
         HeaderAlignmentVert = vaTop
         Position.BandIndex = 0
         Position.ColIndex = 12
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1comment: TcxGridDBBandedColumn
+        Caption = #1050#1086#1084#1077#1085#1090#1072#1088#1080#1081
+        DataBinding.FieldName = 'comment'
+        HeaderAlignmentVert = vaTop
+        Width = 60
+        Position.BandIndex = 0
+        Position.ColIndex = 13
         Position.RowIndex = 0
       end
     end
@@ -320,10 +323,31 @@ object fmPretenziaShapeDirectum: TfmPretenziaShapeDirectum
     object ClientDS_Prcontract_cod: TStringField
       FieldName = 'contract_cod'
     end
+    object ClientDS_Prcomment: TStringField
+      FieldName = 'comment'
+    end
+    object ClientDS_Prcontract_id: TIntegerField
+      FieldName = 'contract_id'
+    end
   end
   object DS_Pr: TDataSource
     DataSet = ClientDS_Pr
     Left = 528
     Top = 360
+  end
+  object cxPropertiesStore1: TcxPropertiesStore
+    Components = <
+      item
+        Component = Owner
+        Properties.Strings = (
+          'Height'
+          'Left'
+          'Top'
+          'Width')
+      end>
+    StorageName = '\Software\Lis1\PretenziaShapeDirectum'
+    StorageType = stRegistry
+    Left = 307
+    Top = 103
   end
 end
