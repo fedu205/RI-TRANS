@@ -725,8 +725,7 @@ procedure TfmPretenziaShape.dxBarButton24Click(Sender: TObject);
 begin
   fmPretenziaShapeDirectum := TfmPretenziaShapeDirectum.Create(Application, Fpretenzia_type);
   fmPretenziaShapeDirectum.ShowModal;
-//  if fmPretenziaShapeDirectum.ShowModal = mrOk then
-//    RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pretenzia_shape_id', fmPretenziaShapeAdd._GetPretenziaShapeId);
+  RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pretenzia_shape_id');
 end;
 
 procedure TfmPretenziaShape.dxBarButton2Click(Sender: TObject);
