@@ -135,52 +135,66 @@ begin
   else
     response := http.Get('https://directum-rx.k-sc.ru/Integration/odata/IOutgoingPretensions', nil, headers);
 
+
+
   MessageResult := TStringStream.Create;
   MessageResult.LoadFromStream(response.ContentStream);
   if MessageResult.DataString <> '' then begin
+    Q := TADOQuery.Create(nil);
+    Q.Connection := fmMain.lis;
+
     s := UTF8ToString(MessageResult.DataString);
     json_obj := TJSONObject.ParseJSONValue(s) as TJSONObject;
     json_arr := json_obj.GetValue('value') as TJSONArray;
     for k := 0 to json_arr.Count-1 do begin
         json_element := json_arr.Items[k] as TJSONObject;
 
-        ClientDS_Pr.Append;
-        ClientDS_Pr.FieldByName('id'                 ).Value := json_element.GetValue('Id').Value;
-        ClientDS_Pr.FieldByName('pretenzia_cod'      ).Value := json_element.GetValue('RegistrationNumber').Value;
-        s := json_element.GetValue('DocumentDate').Value;
-        ClientDS_Pr.FieldByName('pretenzia_date'     ).Value := EncodeDate(StrToInt(MidStr(s, 1, 4)), StrToInt(MidStr(s, 6, 2)), StrToInt(MidStr(s, 9, 2)));
-  //      ClientDS_Pr.FieldByName('pretenzia_our_cod'  ).Value := json_element.GetValue('').Value;
-  //      ClientDS_Pr.FieldByName('pretenzia_our_date' ).Value := json_element.GetValue('').Value;
-  //      ClientDS_Pr.FieldByName('pretenzia_scan'     ).Value := json_element.GetValue('').Value;
-        ClientDS_Pr.FieldByName('pretenzia_sum'      ).Value := StrToFloat(ReplaceStr(json_element.GetValue('Amount').Value, '.', ','));
-        s := json_element.GetValue('PeriodStart').Value;
-        ClientDS_Pr.FieldByName('stay_date_begin'    ).Value := EncodeDate(StrToInt(MidStr(s, 1, 4)), StrToInt(MidStr(s, 6, 2)), StrToInt(MidStr(s, 9, 2)));
-        s := json_element.GetValue('PeriodEnd').Value;
-        ClientDS_Pr.FieldByName('stay_date_end'      ).Value := EncodeDate(StrToInt(MidStr(s, 1, 4)), StrToInt(MidStr(s, 6, 2)), StrToInt(MidStr(s, 9, 2)));
-        ClientDS_Pr.FieldByName('stay_type_name'     ).Value := json_element.GetValue('DowntimePlace').Value;
-        s := json_element.GetValue('ContractNumber').Value;
-        s := LeftStr(s, Length(s)-13);
-        s := ReplaceStr(s, '№', '');
-        ClientDS_Pr.FieldByName('contract_cod'       ).Value := s;
-
-        Q := TADOQuery.Create(nil);
-        Q.Connection := fmMain.lis;
-        Q.SQL.Add('select * from view_contract where contract_cod = ''' + s + '''');
+        Q.SQL.Clear;
+        Q.SQL.Add('select * from pretenzia_shape where directum_id = ' + json_element.GetValue('Id').Value);
         Q.Open;
 
         if Q.RecordCount = 0 then begin
-          ClientDS_Pr.FieldByName('comment'       ).Value := 'Договор не найден';
-        end else begin
-          ClientDS_Pr.FieldByName('contract_id'        ).Value := Q.FieldByName('contract_id').Value;
-          ClientDS_Pr.FieldByName('firm_self_name'     ).Value := Q.FieldByName('firm_self_name').Value;
-          ClientDS_Pr.FieldByName('firm_customer_name' ).Value := Q.FieldByName('firm_customer_name').Value;
+
+          ClientDS_Pr.Append;
+          ClientDS_Pr.FieldByName('id'                 ).Value := json_element.GetValue('Id').Value;
+//          ClientDS_Pr.FieldByName('pretenzia_cod'      ).Value := ;
+          s := json_element.GetValue('DocumentDate').Value;
+          ClientDS_Pr.FieldByName('pretenzia_date'     ).Value := EncodeDate(StrToInt(MidStr(s, 1, 4)), StrToInt(MidStr(s, 6, 2)), StrToInt(MidStr(s, 9, 2)));
+          ClientDS_Pr.FieldByName('pretenzia_our_cod'  ).Value := json_element.GetValue('RegistrationNumber').Value;
+    //      ClientDS_Pr.FieldByName('pretenzia_our_date' ).Value := json_element.GetValue('').Value;
+    //      ClientDS_Pr.FieldByName('pretenzia_scan'     ).Value := json_element.GetValue('').Value;
+          ClientDS_Pr.FieldByName('pretenzia_sum'      ).Value := StrToFloat(ReplaceStr(json_element.GetValue('Amount').Value, '.', ','));
+          s := json_element.GetValue('PeriodStart').Value;
+          ClientDS_Pr.FieldByName('stay_date_begin'    ).Value := EncodeDate(StrToInt(MidStr(s, 1, 4)), StrToInt(MidStr(s, 6, 2)), StrToInt(MidStr(s, 9, 2)));
+          s := json_element.GetValue('PeriodEnd').Value;
+          ClientDS_Pr.FieldByName('stay_date_end'      ).Value := EncodeDate(StrToInt(MidStr(s, 1, 4)), StrToInt(MidStr(s, 6, 2)), StrToInt(MidStr(s, 9, 2)));
+          ClientDS_Pr.FieldByName('stay_type_name'     ).Value := json_element.GetValue('DowntimePlace').Value;
+          s := json_element.GetValue('ContractNumber').Value;
+          s := LeftStr(s, Length(s)-13);
+          s := ReplaceStr(s, '№', '');
+          s := Trim(s);
+          ClientDS_Pr.FieldByName('contract_cod'       ).Value := s;
+
+
+          Q.SQL.Clear;
+          Q.SQL.Add('select * from view_contract where contract_cod = ''' + s + '''');
+          Q.Open;
+
+          if Q.RecordCount = 0 then begin
+            ClientDS_Pr.FieldByName('comment'       ).Value := 'Договор не найден';
+          end else begin
+            ClientDS_Pr.FieldByName('contract_id'        ).Value := Q.FieldByName('contract_id').Value;
+            ClientDS_Pr.FieldByName('firm_self_name'     ).Value := Q.FieldByName('firm_self_name').Value;
+            ClientDS_Pr.FieldByName('firm_customer_name' ).Value := Q.FieldByName('firm_customer_name').Value;
+          end;
+
+
+
+
+          ClientDS_Pr.Post;
         end;
-
-        Q.Free;
-
-
-        ClientDS_Pr.Post;
     end;
+    Q.Free;
 
 
   end else
@@ -198,7 +212,7 @@ begin
   Screen.Cursor := crHourglass;
   inherited Create(AOwner);
 
-  Fpretenzia_type := Fpretenzia_type;
+  Fpretenzia_type := pretenzia_type;
 
   ClientDS_Pr.CreateDataSet;
   ClientDS_Pr.LogChanges := False;
@@ -241,6 +255,8 @@ begin
     SP.Parameters.ParamByName('@stay_date_begin'   ).Value := ClientDS_Pr.FieldByName('stay_date_begin').Value;
     SP.Parameters.ParamByName('@stay_date_end'     ).Value := ClientDS_Pr.FieldByName('stay_date_end').Value;
     SP.Parameters.ParamByName('@stay_type'         ).Value := null;
+    SP.Parameters.ParamByName('@directum_id'       ).Value := ClientDS_Pr.FieldByName('id').Value;
+
 
     SP.ExecProc;
 
