@@ -208,11 +208,14 @@ begin
   case Fpretenzia_type of
     0 : begin
         Caption := 'Входящие претензии';
+
         end;
     1 : begin
         Caption := 'Исходящие претензии';
         end;
   end;
+  cxPageControl1.ActivePageIndex := Fpretenzia_type;
+  cxPageControl1Change(nil);
 
   cxGrid1DBBandedTableView1SelectionChanged(nil);
 

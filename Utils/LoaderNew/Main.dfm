@@ -366,6 +366,10 @@ object fmMain: TfmMain
       Align = alClient
       TabOrder = 0
       Text = 'cxTextEdit1'
+      ExplicitLeft = 3
+      ExplicitTop = 3
+      ExplicitWidth = 1283
+      ExplicitHeight = 22
       Width = 1285
     end
   end

@@ -166,7 +166,7 @@ object fmPretenziaShape: TfmPretenziaShape
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
-    Font.Name = 'Segoe UI'
+    Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
     TabOrder = 0
@@ -507,7 +507,7 @@ object fmPretenziaShape: TfmPretenziaShape
     Height = 582
     Align = alRight
     Caption = #1060#1072#1082#1090
-    TabOrder = 2
+    TabOrder = 1
     object cxGrid2: TcxGrid
       Left = 2
       Top = 15
@@ -517,7 +517,7 @@ object fmPretenziaShape: TfmPretenziaShape
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Tahoma'
+      Font.Name = 'MS Sans Serif'
       Font.Style = []
       ParentFont = False
       TabOrder = 0
