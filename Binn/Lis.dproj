@@ -371,6 +371,10 @@
             <Form>fmPretenziaShapeDirectum</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="PayPretenziaAdd.pas">
+            <Form>fmPayPretenziaAdd</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

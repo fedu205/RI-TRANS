@@ -148,7 +148,7 @@ object fmPretenziaShape: TfmPretenziaShape
   object Splitter2: TSplitter
     Left = 824
     Top = 49
-    Height = 582
+    Height = 361
     Align = alRight
     Color = 8421631
     ParentColor = False
@@ -160,13 +160,13 @@ object fmPretenziaShape: TfmPretenziaShape
     Left = 0
     Top = 49
     Width = 824
-    Height = 582
+    Height = 361
     Hint = #1055#1083#1072#1090#1077#1078#1080' 1'#1057', '#1085#1077' '#1079#1072#1075#1088#1091#1078#1077#1085#1085#1099#1077' '#1074' '#1051#1048#1057
     Align = alClient
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 0
@@ -174,6 +174,7 @@ object fmPretenziaShape: TfmPretenziaShape
     LookAndFeel.NativeStyle = False
     LookAndFeel.ScrollbarMode = sbmClassic
     LookAndFeel.SkinName = 'Office2007Black'
+    ExplicitHeight = 582
     object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
       PopupMenu = Popup_Pay
       OnDblClick = N2Click
@@ -504,20 +505,21 @@ object fmPretenziaShape: TfmPretenziaShape
     Left = 827
     Top = 49
     Width = 391
-    Height = 582
+    Height = 361
     Align = alRight
     Caption = #1060#1072#1082#1090
     TabOrder = 1
+    ExplicitHeight = 582
     object cxGrid2: TcxGrid
       Left = 2
       Top = 15
       Width = 387
-      Height = 565
+      Height = 344
       Align = alClient
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
       TabOrder = 0
@@ -525,6 +527,7 @@ object fmPretenziaShape: TfmPretenziaShape
       LookAndFeel.NativeStyle = False
       LookAndFeel.ScrollbarMode = sbmClassic
       LookAndFeel.SkinName = 'Office2007Black'
+      ExplicitHeight = 565
       object cxGrid2DBBandedTableView1: TcxGridDBBandedTableView
         PopupMenu = dxBarPopupMenu1
         OnKeyPress = cxGrid2DBBandedTableView1KeyPress
@@ -825,7 +828,7 @@ object fmPretenziaShape: TfmPretenziaShape
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
-    TabOrder = 6
+    TabOrder = 5
     Properties.ActivePage = cxTabSheet1
     Properties.CustomButtons.Buttons = <>
     Properties.Style = 2
@@ -840,10 +843,394 @@ object fmPretenziaShape: TfmPretenziaShape
     object cxTabSheet1: TcxTabSheet
       Caption = #1042#1093#1086#1076#1103#1097#1080#1077' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
       ImageIndex = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
     end
     object cxTabSheet2: TcxTabSheet
       Caption = #1048#1089#1093#1086#1076#1103#1097#1080#1077' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
       ImageIndex = 1
+      ExplicitTop = 0
+      ExplicitWidth = 0
+    end
+  end
+  object cxPageControl2: TcxPageControl
+    Left = 0
+    Top = 410
+    Width = 1218
+    Height = 221
+    Align = alBottom
+    TabOrder = 7
+    Properties.ActivePage = cxTabSheet4
+    Properties.CustomButtons.Buttons = <>
+    Properties.Images = fmMain.cxImageList1
+    LookAndFeel.Kind = lfUltraFlat
+    OnChange = cxPageControl1Change
+    ExplicitTop = 378
+    ExplicitWidth = 1023
+    ClientRectBottom = 221
+    ClientRectRight = 1218
+    ClientRectTop = 25
+    object cxTabSheet4: TcxTabSheet
+      Caption = #1054#1087#1083#1072#1090#1099' '#1089#1095#1105#1090#1072
+      ImageIndex = 34
+      ExplicitTop = 0
+      ExplicitWidth = 1023
+      ExplicitHeight = 0
+      object cxGrid3: TcxGrid
+        Left = 0
+        Top = 0
+        Width = 1218
+        Height = 196
+        Align = alClient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        LookAndFeel.Kind = lfUltraFlat
+        LookAndFeel.NativeStyle = False
+        LookAndFeel.ScrollbarMode = sbmClassic
+        LookAndFeel.SkinName = 'Office2007Black'
+        ExplicitWidth = 1023
+        object cxGrid3DBBandedTableView1: TcxGridDBBandedTableView
+          PopupMenu = dxBarPopupMenu2
+          OnKeyPress = cxGrid1DBBandedTableView1KeyPress
+          Navigator.Buttons.CustomButtons = <>
+          ScrollbarAnnotations.CustomAnnotations = <>
+          OnFocusedItemChanged = cxGrid1DBBandedTableView1FocusedItemChanged
+          DataController.DataSource = DS_Pay
+          DataController.Filter.OnChanged = cxGrid1DBBandedTableView1DataControllerFilterChanged
+          DataController.KeyFieldNames = 'pay_pr_id'
+          DataController.Summary.DefaultGroupSummaryItems = <
+            item
+              Format = '#,##0.00'
+              Kind = skSum
+              Position = spFooter
+            end
+            item
+              Format = '#,##0.00'
+              Kind = skSum
+            end
+            item
+              Format = '#,##0.00'
+              Kind = skSum
+              Position = spFooter
+            end
+            item
+              Format = '#,##0.00'
+              Kind = skSum
+            end
+            item
+              Format = '#,##0.00'
+              Kind = skSum
+              Position = spFooter
+              Column = cxGrid3DBBandedTableView1pay_pr_sum
+            end
+            item
+              Format = '#,##0.00'
+              Kind = skSum
+              Column = cxGrid3DBBandedTableView1pay_pr_sum
+            end>
+          DataController.Summary.FooterSummaryItems = <
+            item
+              Format = '#,##0.00'
+              Kind = skSum
+              FieldName = 'pay_sum'
+            end
+            item
+              Format = '0'
+              Kind = skCount
+              FieldName = 'pay_id'
+            end
+            item
+              Format = '#,##0.00'
+              Kind = skSum
+            end
+            item
+              Format = '#,##0.00'
+              Kind = skSum
+            end
+            item
+              Format = '#,##0.00'
+              Kind = skSum
+              Column = cxGrid3DBBandedTableView1pay_pr_sum
+            end>
+          DataController.Summary.SummaryGroups = <>
+          DataController.Summary.Options = [soMultipleSelectedRecords]
+          OptionsCustomize.ColumnsQuickCustomization = True
+          OptionsData.Deleting = False
+          OptionsData.Editing = False
+          OptionsData.Inserting = False
+          OptionsSelection.MultiSelect = True
+          OptionsSelection.HideSelection = True
+          OptionsView.Footer = True
+          OptionsView.GridLineColor = clGray
+          OptionsView.GroupByBox = False
+          OptionsView.HeaderFilterButtonShowMode = fbmButton
+          OptionsView.HeaderHeight = 35
+          OptionsView.BandHeaders = False
+          Styles.Content = fmMain.cxStyle_ColorWhite
+          OnCustomDrawColumnHeader = cxGrid1DBBandedTableView1CustomDrawColumnHeader
+          OnCustomDrawFooterCell = cxGrid1DBBandedTableView1CustomDrawColumnHeader
+          Bands = <
+            item
+            end>
+          object cxGrid3DBBandedTableView1pay_pr_id: TcxGridDBBandedColumn
+            Caption = #8470' '#1047#1072#1087#1080#1089#1080
+            DataBinding.FieldName = 'pay_pr_id'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Width = 69
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid3DBBandedTableView1pay_id: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'pay_id'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid3DBBandedTableView1inv_id: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'inv_id'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid3DBBandedTableView1pay_pr_sum: TcxGridDBBandedColumn
+            Caption = #1057#1091#1084#1084#1072' '#1086#1087#1083#1072#1090#1099
+            DataBinding.FieldName = 'pay_pr_sum'
+            DataBinding.IsNullValueType = True
+            PropertiesClassName = 'TcxCurrencyEditProperties'
+            Properties.DisplayFormat = '#,##0.00'
+            HeaderAlignmentVert = vaTop
+            Width = 63
+            Position.BandIndex = 0
+            Position.ColIndex = 1
+            Position.RowIndex = 0
+          end
+          object cxGrid3DBBandedTableView1inv_currency_id: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'inv_currency_id'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid3DBBandedTableView1pay_firm_self_name: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'pay_firm_self_name'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid3DBBandedTableView1pay_currency_id: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'pay_currency_id'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid3DBBandedTableView1pay_brief_name: TcxGridDBBandedColumn
+            Caption = #1042#1072#1083#1102#1090#1072' '#1087#1083#1072#1090#1077#1078#1072
+            DataBinding.FieldName = 'pay_brief_name'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Width = 66
+            Position.BandIndex = 0
+            Position.ColIndex = 2
+            Position.RowIndex = 0
+          end
+          object cxGrid3DBBandedTableView1pay_cod: TcxGridDBBandedColumn
+            Caption = #8470' '#1055#1083#1072#1090#1077#1078#1072
+            DataBinding.FieldName = 'pay_cod'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Width = 66
+            Position.BandIndex = 0
+            Position.ColIndex = 3
+            Position.RowIndex = 0
+          end
+          object cxGrid3DBBandedTableView1invoice_cod: TcxGridDBBandedColumn
+            Caption = #8470' '#1057#1095#1077#1090#1072
+            DataBinding.FieldName = 'invoice_cod'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid3DBBandedTableView1invoice_date: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'invoice_date'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid3DBBandedTableView1invoice_sum: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'invoice_sum'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid3DBBandedTableView1exchange_USD_val: TcxGridDBBandedColumn
+            Caption = #1050#1091#1088#1089' USD'
+            DataBinding.FieldName = 'exchange_USD_val'
+            DataBinding.IsNullValueType = True
+            PropertiesClassName = 'TcxCurrencyEditProperties'
+            Properties.DisplayFormat = '#,##0.00'
+            HeaderAlignmentVert = vaTop
+            Width = 50
+            Position.BandIndex = 0
+            Position.ColIndex = 4
+            Position.RowIndex = 0
+          end
+          object cxGrid3DBBandedTableView1exchange_EUR_val: TcxGridDBBandedColumn
+            Caption = #1050#1091#1088#1089' EUR'
+            DataBinding.FieldName = 'exchange_EUR_val'
+            DataBinding.IsNullValueType = True
+            PropertiesClassName = 'TcxCurrencyEditProperties'
+            Properties.DisplayFormat = '#,##0.00'
+            HeaderAlignmentVert = vaTop
+            Width = 50
+            Position.BandIndex = 0
+            Position.ColIndex = 5
+            Position.RowIndex = 0
+          end
+          object cxGrid3DBBandedTableView1exchange_CHF_val: TcxGridDBBandedColumn
+            Caption = #1050#1091#1088'c CHF'
+            DataBinding.FieldName = 'exchange_CHF_val'
+            DataBinding.IsNullValueType = True
+            PropertiesClassName = 'TcxCurrencyEditProperties'
+            Properties.DisplayFormat = '#,##0.00'
+            HeaderAlignmentVert = vaTop
+            Width = 50
+            Position.BandIndex = 0
+            Position.ColIndex = 6
+            Position.RowIndex = 0
+          end
+          object cxGrid3DBBandedTableView1pr_sum_income: TcxGridDBBandedColumn
+            Caption = #1054#1087#1083#1072#1095#1077#1085#1086
+            DataBinding.FieldName = 'pr_sum_income'
+            DataBinding.IsNullValueType = True
+            PropertiesClassName = 'TcxCurrencyEditProperties'
+            Properties.DisplayFormat = '#,##0.00'
+            HeaderAlignmentVert = vaTop
+            Width = 98
+            Position.BandIndex = 0
+            Position.ColIndex = 7
+            Position.RowIndex = 0
+          end
+          object cxGrid3DBBandedTableView1pay_sum_income: TcxGridDBBandedColumn
+            Caption = #1054#1087#1083#1072#1095#1077#1085#1086' '#1087#1083#1072#1090#1077#1078#1086#1084
+            DataBinding.FieldName = 'pay_sum_income'
+            DataBinding.IsNullValueType = True
+            PropertiesClassName = 'TcxCurrencyEditProperties'
+            Properties.DisplayFormat = '#,##0.00'
+            HeaderAlignmentVert = vaTop
+            Width = 97
+            Position.BandIndex = 0
+            Position.ColIndex = 8
+            Position.RowIndex = 0
+          end
+          object cxGrid3DBBandedTableView1inv_firm_customer_name_short: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'inv_firm_customer_name_short'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid3DBBandedTableView1rest_invoice_sum: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'rest_invoice_sum'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid3DBBandedTableView1pay_rest: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'pay_rest'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid3DBBandedTableView1pay_sum_inv: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'pay_sum_inv'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid3DBBandedTableView1inv_sum_pay: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'inv_sum_pay'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid3DBBandedTableView1pay_sum: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'pay_sum'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid3DBBandedTableView1pay_inv_currency_id: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'pay_inv_currency_id'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid3DBBandedTableView1pay_inv_date: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'pay_inv_date'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid3DBBandedTableView1pay_date: TcxGridDBBandedColumn
+            DataBinding.FieldName = 'pay_date'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Position.BandIndex = -1
+            Position.ColIndex = -1
+            Position.RowIndex = -1
+          end
+          object cxGrid3DBBandedTableView1pay_firm_customer_name_short: TcxGridDBBandedColumn
+            Caption = #1055#1083#1072#1090#1077#1083#1100#1097#1080#1082
+            DataBinding.FieldName = 'pay_firm_customer_name_short'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Width = 90
+            Position.BandIndex = 0
+            Position.ColIndex = 0
+            Position.RowIndex = 0
+          end
+        end
+        object cxGrid3Level1: TcxGridLevel
+          GridView = cxGrid3DBBandedTableView1
+        end
+      end
     end
   end
   object cxPropertiesStore1: TcxPropertiesStore
@@ -1273,6 +1660,30 @@ object fmPretenziaShape: TfmPretenziaShape
       Visible = ivAlways
       OnClick = dxBarButton24Click
     end
+    object dxBarButton25: TdxBarButton
+      Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1086#1087#1083#1072#1090#1091
+      Category = 0
+      Hint = #1044#1086#1073#1072#1074#1080#1090#1100' '#1086#1087#1083#1072#1090#1091
+      Visible = ivAlways
+      ImageIndex = 0
+      OnClick = dxBarButton25Click
+    end
+    object dxBarButton26: TdxBarButton
+      Caption = #1048#1079#1084#1077#1085#1080#1090#1100' '#1089#1091#1084#1084#1091' '#1086#1087#1083#1072#1090#1099
+      Category = 0
+      Hint = #1048#1079#1084#1077#1085#1080#1090#1100' '#1089#1091#1084#1084#1091' '#1086#1087#1083#1072#1090#1099
+      Visible = ivAlways
+      ImageIndex = 1
+      OnClick = dxBarButton26Click
+    end
+    object dxBarButton27: TdxBarButton
+      Caption = #1059#1076#1072#1083#1080#1090#1100
+      Category = 0
+      Hint = #1059#1076#1072#1083#1080#1090#1100
+      Visible = ivAlways
+      ImageIndex = 2
+      OnClick = dxBarButton27Click
+    end
     object N1: TdxBarButton
       Caption = #1044#1086#1073#1072#1074#1080#1090#1100'...'
       Category = 1
@@ -1495,5 +1906,46 @@ object fmPretenziaShape: TfmPretenziaShape
     Visible = ivAlways
     ImageIndex = 13
     OnClick = dxBarButton23Click
+  end
+  object Query_Pay: TADOQuery
+    Connection = fmMain.Lis
+    CursorType = ctStatic
+    Parameters = <
+      item
+        Name = 'pretenzia_shape_id'
+        Size = -1
+        Value = Null
+      end>
+    SQL.Strings = (
+      'SELECT * FROM view_pay_pretenzia'
+      'WHERE pr_id =:pretenzia_shape_id')
+    Left = 129
+    Top = 517
+  end
+  object DS_Pay: TDataSource
+    DataSet = Query_Pay
+    Left = 207
+    Top = 523
+  end
+  object dxBarPopupMenu2: TdxBarPopupMenu
+    BarManager = dxBarManager1
+    ItemLinks = <
+      item
+        Visible = True
+        ItemName = 'dxBarButton25'
+      end
+      item
+        Visible = True
+        ItemName = 'dxBarButton26'
+      end
+      item
+        BeginGroup = True
+        Visible = True
+        ItemName = 'dxBarButton27'
+      end>
+    UseOwnFont = False
+    Left = 377
+    Top = 537
+    PixelsPerInch = 96
   end
 end

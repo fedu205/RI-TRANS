@@ -127,6 +127,44 @@ type
     cxGrid1DBBandedTableView1pretenzia_type: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1directum_id: TcxGridDBBandedColumn;
     dxBarButton24: TdxBarButton;
+    Query_Pay: TADOQuery;
+    DS_Pay: TDataSource;
+    cxPageControl2: TcxPageControl;
+    cxTabSheet4: TcxTabSheet;
+    cxGrid3: TcxGrid;
+    cxGrid3DBBandedTableView1: TcxGridDBBandedTableView;
+    cxGrid3DBBandedTableView1pay_pr_id: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1pay_id: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1inv_id: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1pay_pr_sum: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1inv_currency_id: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1pay_firm_self_name: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1pay_currency_id: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1pay_brief_name: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1pay_cod: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1invoice_cod: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1invoice_date: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1invoice_sum: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1exchange_USD_val: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1exchange_EUR_val: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1exchange_CHF_val: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1pr_sum_income: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1pay_sum_income: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1inv_firm_customer_name_short: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1rest_invoice_sum: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1pay_rest: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1pay_sum_inv: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1inv_sum_pay: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1pay_sum: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1pay_inv_currency_id: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1pay_inv_date: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1pay_date: TcxGridDBBandedColumn;
+    cxGrid3DBBandedTableView1pay_firm_customer_name_short: TcxGridDBBandedColumn;
+    cxGrid3Level1: TcxGridLevel;
+    dxBarPopupMenu2: TdxBarPopupMenu;
+    dxBarButton25: TdxBarButton;
+    dxBarButton26: TdxBarButton;
+    dxBarButton27: TdxBarButton;
     procedure dxBarButton2Click(Sender: TObject);
     procedure cxGrid1DBBandedTableView1KeyPress(Sender: TObject; var Key: Char);
     procedure cxGrid1DBBandedTableView1FocusedItemChanged(Sender: TcxCustomGridTableView; APrevFocusedItem, AFocusedItem: TcxCustomGridTableItem);
@@ -171,6 +209,9 @@ type
     procedure dxBarButton15Click(Sender: TObject);
     procedure cxPageControl1Change(Sender: TObject);
     procedure dxBarButton24Click(Sender: TObject);
+    procedure dxBarButton25Click(Sender: TObject);
+    procedure dxBarButton26Click(Sender: TObject);
+    procedure dxBarButton27Click(Sender: TObject);
   private
     Fdate1, Fdate2 : TDateTime;
     Fpretenzia_shape_id     : integer;
@@ -186,7 +227,7 @@ var
 
 implementation
    uses Main, Period, Raznoe, PretenziaShapeAdd, Other, cxGridDBDataDefinitions, Default, Filter,
-  PretenziaShapeDirectum;
+  PretenziaShapeDirectum, PayPretenziaAdd;
 {$R *.DFM}
 
 
@@ -208,12 +249,12 @@ begin
   case Fpretenzia_type of
     0 : begin
         Caption := 'Входящие претензии';
-
         end;
     1 : begin
         Caption := 'Исходящие претензии';
         end;
   end;
+
   cxPageControl1.ActivePageIndex := Fpretenzia_type;
   cxPageControl1Change(nil);
 
@@ -340,10 +381,14 @@ end;
 procedure TfmPretenziaShape.cxGrid1DBBandedTableView1SelectionChanged( Sender: TcxCustomGridTableView);
 begin
   Query_Fact.Close;
+  Query_Pay.Close;
   if cxGrid1DBBandedTableView1pretenzia_shape_id.DataBinding.Field <> nil then
       if cxGrid1DBBandedTableView1pretenzia_shape_id.DataBinding.Field.Value <> null then begin
         Query_Fact.Parameters.ParamByName('pretenzia_shape_id').Value := cxGrid1DBBandedTableView1pretenzia_shape_id.DataBinding.Field.Value;
         Query_Fact.Open;
+
+        Query_Pay.Parameters.ParamByName('pretenzia_shape_id').Value := cxGrid1DBBandedTableView1pretenzia_shape_id.DataBinding.Field.Value;
+        Query_Pay.Open;
       end;
 
 end;
@@ -729,6 +774,53 @@ begin
   fmPretenziaShapeDirectum := TfmPretenziaShapeDirectum.Create(Application, Fpretenzia_type);
   fmPretenziaShapeDirectum.ShowModal;
   RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pretenzia_shape_id');
+end;
+
+procedure TfmPretenziaShape.dxBarButton25Click(Sender: TObject);
+begin
+  if VarIsNull(cxGrid1DBBandedTableView1pretenzia_shape_id.DataBinding.Field.Value) then begin
+    Application.MessageBox('Не выбрана претензия.','Ошибка',MB_OK);
+    exit;
+  end;
+
+  fmPayPretenziaAdd := TfmPayPretenziaAdd.Create(Application, Fpretenzia_type);
+  fmPayPretenziaAdd._SetInsert := cxGrid1DBBandedTableView1pretenzia_shape_id.DataBinding.Field.AsInteger;
+  if fmPayPretenziaAdd.ShowModal = mrOk then
+    RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pretenzia_shape_id', cxGrid1DBBandedTableView1pretenzia_shape_id.DataBinding.Field.AsInteger);
+
+end;
+
+procedure TfmPretenziaShape.dxBarButton26Click(Sender: TObject);
+begin
+  if VarIsNull(cxGrid1DBBandedTableView1pretenzia_shape_id.DataBinding.Field.Value) then begin
+    exit;
+  end;
+
+  fmPayPretenziaAdd := TfmPayPretenziaAdd.Create(Application, Fpretenzia_type);
+  fmPayPretenziaAdd._SetUpdate := cxGrid3DBBandedTableView1pay_pr_id.DataBinding.Field.AsInteger;
+  if fmPayPretenziaAdd.ShowModal = mrOk then
+    RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pretenzia_shape_id', cxGrid1DBBandedTableView1pretenzia_shape_id.DataBinding.Field.AsInteger);
+
+end;
+
+procedure TfmPretenziaShape.dxBarButton27Click(Sender: TObject);
+var SP :  TADOStoredProc;
+begin
+  Screen.Cursor := crHourglass;
+
+  SP := TADOStoredProc.Create(nil);
+  SP.Connection := fmMain.Lis;
+  SP.ProcedureName := 'sp_pay_pr_modify;1';
+  SP.Parameters.Refresh;
+
+  SP.Parameters.ParamByName('@pay_pr_id'  ).Value := cxGrid3DBBandedTableView1pay_pr_id.DataBinding.Field.Value;
+  SP.Parameters.ParamByName('@type_action' ).Value := 2;
+  SP.ExecProc;
+  SP.Free;
+
+  RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pretenzia_shape_id', cxGrid1DBBandedTableView1pretenzia_shape_id.DataBinding.Field.AsInteger);
+  Screen.Cursor := crDefault;
+
 end;
 
 procedure TfmPretenziaShape.dxBarButton2Click(Sender: TObject);

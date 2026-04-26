@@ -86,7 +86,8 @@ uses
   FactIncAdd in 'FactIncAdd.pas' {fmFactIncAdd},
   Pay in 'Pay.pas' {fmPay},
   PayAdd in 'PayAdd.pas' {fmPayAdd},
-  PretenziaShapeDirectum in 'PretenziaShapeDirectum.pas' {fmPretenziaShapeDirectum};
+  PretenziaShapeDirectum in 'PretenziaShapeDirectum.pas' {fmPretenziaShapeDirectum},
+  PayPretenziaAdd in 'PayPretenziaAdd.pas' {fmPayPretenziaAdd};
 
 {fmFactTrack}
 
