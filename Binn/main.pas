@@ -734,7 +734,7 @@ begin
       MDIChildren[i].Show;
       Exit
     end;
-  fmPretenziaShape := TfmPretenziaShape.Create(Application, False, 0);
+  fmPretenziaShape := TfmPretenziaShape.Create(Application, False, TControl(Sender).Tag);
 
 end;
 
