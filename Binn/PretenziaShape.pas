@@ -165,6 +165,8 @@ type
     dxBarButton25: TdxBarButton;
     dxBarButton26: TdxBarButton;
     dxBarButton27: TdxBarButton;
+    cxGrid1DBBandedTableView1pr_sum_pay: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1rest_pr_sum: TcxGridDBBandedColumn;
     procedure dxBarButton2Click(Sender: TObject);
     procedure cxGrid1DBBandedTableView1KeyPress(Sender: TObject; var Key: Char);
     procedure cxGrid1DBBandedTableView1FocusedItemChanged(Sender: TcxCustomGridTableView; APrevFocusedItem, AFocusedItem: TcxCustomGridTableItem);

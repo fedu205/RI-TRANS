@@ -216,8 +216,8 @@ begin
 
     cxButtonEdit2.Text :=  Q.FieldByName('pay_cod').Value;
     cxDateEdit2.EditValue := Q.FieldByName('pay_date').Value;
-    cxTextEdit2.Text := Q.FieldByName('firm_customer_name_short').Value;
-    cxTextEdit4.Text := Q.FieldByName('brief_name').Value;
+    cxTextEdit2.Text := Q.FieldByName('firm_customer_name').AsString;
+    cxTextEdit4.Text := Q.FieldByName('brief_name').AsString;
     cxCurrencyEdit3.EditValue := Q.FieldByName('pay_sum').AsCurrency;
     cxCurrencyEdit5.EditValue := Q.FieldByName('pay_sum_inv').AsCurrency;
     cxCurrencyEdit6.EditValue := Q.FieldByName('pay_rest').AsCurrency;
@@ -294,7 +294,7 @@ begin
 
 
   cxButtonEdit1.Text := Q.FieldByName('pretenzia_cod').AsString;
-  cxTextEdit1.Text := Q.FieldByName('inv_firm_customer_name_short').AsString;
+  cxTextEdit1.Text := Q.FieldByName('inv_firm_customer_name').AsString;
   cxCurrencyEdit1.EditValue := Q.FieldByName('pretenzia_sum').AsCurrency;
 //  cxTextEdit3.Text := Q.FieldByName('inv_brief_name').AsString;
   cxCurrencyEdit2.Value := Q.FieldByName('pretenzia_sum').AsCurrency;
@@ -303,7 +303,7 @@ begin
 
   cxButtonEdit2.Text :=  Q.FieldByName('pay_cod').Value;
   cxDateEdit2.EditValue := Q.FieldByName('pay_date').Value;
-  cxTextEdit2.Text := Q.FieldByName('pay_firm_customer_name_short').Value;
+  cxTextEdit2.Text := Q.FieldByName('pay_firm_customer_name').Value;
   cxTextEdit4.Text := Q.FieldByName('pay_brief_name').Value;
   cxCurrencyEdit3.EditValue := Q.FieldByName('pay_sum').AsCurrency;
   cxCurrencyEdit5.EditValue := Q.FieldByName('pay_sum_inv').AsCurrency;

@@ -174,7 +174,6 @@ object fmPretenziaShape: TfmPretenziaShape
     LookAndFeel.NativeStyle = False
     LookAndFeel.ScrollbarMode = sbmClassic
     LookAndFeel.SkinName = 'Office2007Black'
-    ExplicitHeight = 582
     object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
       PopupMenu = Popup_Pay
       OnDblClick = N2Click
@@ -236,6 +235,16 @@ object fmPretenziaShape: TfmPretenziaShape
         item
           Format = '#,##0.00'
           Kind = skSum
+        end
+        item
+          Format = '#,##0.00'
+          Kind = skSum
+          Column = cxGrid1DBBandedTableView1pr_sum_pay
+        end
+        item
+          Format = '#,##0.00'
+          Kind = skSum
+          Column = cxGrid1DBBandedTableView1rest_pr_sum
         end>
       DataController.Summary.SummaryGroups = <>
       DataController.Summary.Options = [soMultipleSelectedRecords]
@@ -496,6 +505,30 @@ object fmPretenziaShape: TfmPretenziaShape
         Position.ColIndex = 15
         Position.RowIndex = 0
       end
+      object cxGrid1DBBandedTableView1pr_sum_pay: TcxGridDBBandedColumn
+        Caption = #1054#1087#1083#1072#1095#1077#1085#1086
+        DataBinding.FieldName = 'pr_sum_pay'
+        DataBinding.IsNullValueType = True
+        PropertiesClassName = 'TcxCurrencyEditProperties'
+        Properties.DisplayFormat = '#,##0.00'
+        HeaderAlignmentVert = vaTop
+        Width = 120
+        Position.BandIndex = 0
+        Position.ColIndex = 16
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1rest_pr_sum: TcxGridDBBandedColumn
+        Caption = #1054#1089#1090#1072#1083#1086#1089#1100' '#1086#1087#1083#1072#1090#1080#1090#1100
+        DataBinding.FieldName = 'rest_pr_sum'
+        DataBinding.IsNullValueType = True
+        PropertiesClassName = 'TcxCurrencyEditProperties'
+        Properties.DisplayFormat = '#,##0.00'
+        HeaderAlignmentVert = vaTop
+        Width = 120
+        Position.BandIndex = 0
+        Position.ColIndex = 17
+        Position.RowIndex = 0
+      end
     end
     object cxGrid1Level1: TcxGridLevel
       GridView = cxGrid1DBBandedTableView1
@@ -509,7 +542,6 @@ object fmPretenziaShape: TfmPretenziaShape
     Align = alRight
     Caption = #1060#1072#1082#1090
     TabOrder = 1
-    ExplicitHeight = 582
     object cxGrid2: TcxGrid
       Left = 2
       Top = 15
@@ -527,7 +559,6 @@ object fmPretenziaShape: TfmPretenziaShape
       LookAndFeel.NativeStyle = False
       LookAndFeel.ScrollbarMode = sbmClassic
       LookAndFeel.SkinName = 'Office2007Black'
-      ExplicitHeight = 565
       object cxGrid2DBBandedTableView1: TcxGridDBBandedTableView
         PopupMenu = dxBarPopupMenu1
         OnKeyPress = cxGrid2DBBandedTableView1KeyPress
@@ -828,7 +859,7 @@ object fmPretenziaShape: TfmPretenziaShape
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
-    TabOrder = 5
+    TabOrder = 4
     Properties.ActivePage = cxTabSheet1
     Properties.CustomButtons.Buttons = <>
     Properties.Style = 2
@@ -843,14 +874,10 @@ object fmPretenziaShape: TfmPretenziaShape
     object cxTabSheet1: TcxTabSheet
       Caption = #1042#1093#1086#1076#1103#1097#1080#1077' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
       ImageIndex = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
     end
     object cxTabSheet2: TcxTabSheet
       Caption = #1048#1089#1093#1086#1076#1103#1097#1080#1077' '#1087#1088#1077#1090#1077#1085#1079#1080#1080
       ImageIndex = 1
-      ExplicitTop = 0
-      ExplicitWidth = 0
     end
   end
   object cxPageControl2: TcxPageControl
@@ -865,17 +892,12 @@ object fmPretenziaShape: TfmPretenziaShape
     Properties.Images = fmMain.cxImageList1
     LookAndFeel.Kind = lfUltraFlat
     OnChange = cxPageControl1Change
-    ExplicitTop = 378
-    ExplicitWidth = 1023
     ClientRectBottom = 221
     ClientRectRight = 1218
     ClientRectTop = 25
     object cxTabSheet4: TcxTabSheet
       Caption = #1054#1087#1083#1072#1090#1099' '#1089#1095#1105#1090#1072
       ImageIndex = 34
-      ExplicitTop = 0
-      ExplicitWidth = 1023
-      ExplicitHeight = 0
       object cxGrid3: TcxGrid
         Left = 0
         Top = 0
@@ -893,7 +915,6 @@ object fmPretenziaShape: TfmPretenziaShape
         LookAndFeel.NativeStyle = False
         LookAndFeel.ScrollbarMode = sbmClassic
         LookAndFeel.SkinName = 'Office2007Black'
-        ExplicitWidth = 1023
         object cxGrid3DBBandedTableView1: TcxGridDBBandedTableView
           PopupMenu = dxBarPopupMenu2
           OnKeyPress = cxGrid1DBBandedTableView1KeyPress
@@ -1218,7 +1239,7 @@ object fmPretenziaShape: TfmPretenziaShape
           end
           object cxGrid3DBBandedTableView1pay_firm_customer_name_short: TcxGridDBBandedColumn
             Caption = #1055#1083#1072#1090#1077#1083#1100#1097#1080#1082
-            DataBinding.FieldName = 'pay_firm_customer_name_short'
+            DataBinding.FieldName = 'pay_firm_customer_name'
             DataBinding.IsNullValueType = True
             HeaderAlignmentVert = vaTop
             Width = 90
