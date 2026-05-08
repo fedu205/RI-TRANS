@@ -22,7 +22,7 @@ uses
   dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, cxDataControllerConditionalFormattingRulesManagerDialog, dxDateRanges, dxSkinTheBezier,
   dxSkinOffice2019Colorful, dxScrollbarAnnotations, dxSkinBasic,
   dxSkinOffice2019Black, dxSkinOffice2019DarkGray, dxSkinOffice2019White,
-  dxSkinWXI;
+  dxSkinWXI, dxBarBuiltInMenu;
 
 type
   TfmPay = class(TForm)
@@ -132,6 +132,9 @@ type
     dxBarButton14: TdxBarButton;
     dxBarSubItem4: TdxBarSubItem;
     dxBarButton15: TdxBarButton;
+    cxPageControl1: TcxPageControl;
+    cxTabSheet1: TcxTabSheet;
+    cxTabSheet2: TcxTabSheet;
     procedure dxBarButton2Click(Sender: TObject);
     procedure ToolButton18Click(Sender: TObject);
     procedure cxGrid1DBBandedTableView1KeyPress(Sender: TObject; var Key: Char);
@@ -160,6 +163,7 @@ type
     procedure dxBarButton14Click(Sender: TObject);
     procedure dxBarButton15Click(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure cxPageControl1Change(Sender: TObject);
   private
     Fdate1, Fdate2 : TDateTime;
     Fpay_id     : integer;
@@ -205,6 +209,14 @@ begin
     2 : Caption := 'Накладные расходы клиентов';
     3 : Caption := 'Платежи администрации';
   end;
+
+  case Ftype_pay of
+    0 : cxPageControl1.ActivePageIndex := 0;
+    1 : cxPageControl1.ActivePageIndex := 1;
+    2 : cxPageControl1.ActivePageIndex := 1;
+    3 : cxPageControl1.ActivePageIndex := 1;
+  end;
+
 
   Query_Pay.Parameters.ParamByName('type_pay').Value := Ftype_pay;
   Query_Pay.Parameters.ParamByName('date1').Value := Fdate1;
@@ -865,6 +877,34 @@ begin
       end;
   except
   end;
+end;
+
+procedure TfmPay.cxPageControl1Change(Sender: TObject);
+begin
+  Screen.Cursor := crHourglass;
+  Ftype_pay := cxPageControl1.ActivePageIndex;
+
+  case Ftype_pay of
+    0 : begin
+//        cxGrid1DBBandedTableView1firm_customer_name.Caption :='Клиент';
+//        cxGrid1DBBandedTableView1firm_customer_name_full.Caption :='Полное наименование Клиента';
+        Caption := 'Платежи клиентов';
+        end;
+    1 : begin
+//        cxGrid1DBBandedTableView1firm_customer_name.Caption :='Субподрядчик';
+//        cxGrid1DBBandedTableView1firm_customer_name_full.Caption :='Полное наименование Подрядчика';
+        Caption := 'Платежи подрядчиков';
+        end;
+  end;
+
+  Query_Pay.Close;
+  Query_Pay.Parameters.ParamByName('type_pay').Value := Ftype_pay;
+  Query_Pay.Parameters.ParamByName('date1').Value := Fdate1;
+  Query_Pay.Parameters.ParamByName('date2').Value := Fdate2;
+  Query_Pay.Open;
+
+
+  Screen.Cursor := crDefault;
 end;
 
 procedure TfmPay.SetPeriodCreate (date1, date2: TDate);

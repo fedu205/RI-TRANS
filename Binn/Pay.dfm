@@ -873,9 +873,9 @@ object fmPay: TfmPay
     Visible = False
     object cxGrid3: TcxGrid
       Left = 2
-      Top = 14
+      Top = 15
       Width = 985
-      Height = 131
+      Height = 129
       Align = alClient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -1259,9 +1259,9 @@ object fmPay: TfmPay
   end
   object cxGrid1: TcxGrid
     Left = 0
-    Top = 26
+    Top = 49
     Width = 989
-    Height = 369
+    Height = 346
     Hint = #1055#1083#1072#1090#1077#1078#1080' 1'#1057', '#1085#1077' '#1079#1072#1075#1088#1091#1078#1077#1085#1085#1099#1077' '#1074' '#1051#1048#1057
     Align = alClient
     Font.Charset = RUSSIAN_CHARSET
@@ -1275,6 +1275,8 @@ object fmPay: TfmPay
     LookAndFeel.NativeStyle = False
     LookAndFeel.ScrollbarMode = sbmClassic
     LookAndFeel.SkinName = 'Office2007Black'
+    ExplicitTop = 26
+    ExplicitHeight = 369
     object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
       PopupMenu = Popup_Pay
       OnDblClick = N2Click
@@ -1708,6 +1710,43 @@ object fmPay: TfmPay
     end
     object cxGrid1Level1: TcxGridLevel
       GridView = cxGrid1DBBandedTableView1
+    end
+  end
+  object cxPageControl1: TcxPageControl
+    Left = 0
+    Top = 26
+    Width = 989
+    Height = 23
+    Align = alTop
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 6
+    Properties.ActivePage = cxTabSheet1
+    Properties.CustomButtons.Buttons = <>
+    Properties.Style = 2
+    LookAndFeel.Kind = lfUltraFlat
+    LookAndFeel.NativeStyle = False
+    LookAndFeel.ScrollbarMode = sbmClassic
+    LookAndFeel.SkinName = ''
+    OnChange = cxPageControl1Change
+    ExplicitLeft = 2
+    ExplicitTop = 2
+    ExplicitWidth = 961
+    ClientRectBottom = 25
+    ClientRectRight = 989
+    ClientRectTop = 25
+    object cxTabSheet1: TcxTabSheet
+      Caption = #1055#1083#1072#1090#1077#1078#1080' '#1082#1083#1080#1077#1085#1090#1086#1074
+      ImageIndex = 0
+      ExplicitWidth = 961
+    end
+    object cxTabSheet2: TcxTabSheet
+      Caption = #1055#1083#1072#1090#1077#1078#1080' '#1087#1086#1076#1088#1103#1076#1095#1080#1082#1086#1074
+      ImageIndex = 1
     end
   end
   object cxPropertiesStore1: TcxPropertiesStore
