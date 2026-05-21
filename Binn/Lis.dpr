@@ -25,14 +25,14 @@ uses
   Period in 'Period.pas' {fmPeriod},
   LoadFact in 'LoadFact.pas' {fmLoadFact},
   LoadFactAdd in 'LoadFactAdd.pas' {fmLoadFactAdd},
-  PretenziaShapeAdd in 'PretenziaShapeAdd.pas' {fmPretenziaShapeAdd},
+  LowClaimAdd in 'LowClaimAdd.pas' {fmLowClaimAdd},
   FactInc in 'FactInc.pas' {fmFactInc},
   AgreeFactInc in 'AgreeFactInc.pas' {fmAgreeFactInc},
   ClientInvoice in 'ClientInvoice.pas' {fmClientInvoice},
   ClientInvoiceAdd in 'ClientInvoiceAdd.pas' {fmClientInvoiceAdd},
   FactIncCard in 'FactIncCard.pas' {fmFactIncCard},
   Filter in 'Filter.pas' {fmFilter},
-  PretenziaShape in 'PretenziaShape.pas' {fmPretenziaShape},
+  LowClaim in 'LowClaim.pas' {fmLowClaim},
   FirmAdd in 'FirmAdd.pas' {fmFirmAdd},
   Firm in 'Firm.pas' {fmFirm},
   FactTrack in 'FactTrack.pas' {fmFactTrack},
@@ -86,7 +86,8 @@ uses
   FactIncAdd in 'FactIncAdd.pas' {fmFactIncAdd},
   Pay in 'Pay.pas' {fmPay},
   PayAdd in 'PayAdd.pas' {fmPayAdd},
-  PretenziaShapeDirectum in 'PretenziaShapeDirectum.pas' {fmPretenziaShapeDirectum};
+  PretenziaShapeDirectum in 'PretenziaShapeDirectum.pas' {fmPretenziaShapeDirectum},
+  PretenziaShape in 'PretenziaShape.pas' {fmPretenziaShape};
 
 {fmFactTrack}
 
@@ -171,6 +172,7 @@ begin
         Application.Title := 'Logistics Information System';
         Application.CreateForm(TfmMain, fmMain);
   Application.CreateForm(TfmOther, fmOther);
+  Application.CreateForm(TfmPretenziaShape, fmPretenziaShape);
   fmMain.SetPar(v);
         if global_id <> -9 then
           fmMain.SetGlobalId(global_id);

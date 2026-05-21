@@ -270,6 +270,7 @@ type
     dxBarButton102: TdxBarButton;
     dxBarButton103: TdxBarButton;
     dxBarButton122: TdxBarButton;
+    dxBarButton126: TdxBarButton;
     procedure dxBarButton61Click(Sender: TObject);
     procedure dxBarButton58Click(Sender: TObject);
     procedure dxBarSubItem15Popup(Sender: TObject);
@@ -384,6 +385,7 @@ type
     procedure dxBarButton53Click(Sender: TObject);
     procedure dxBarButton100Click(Sender: TObject);
     procedure dxBarButton102Click(Sender: TObject);
+    procedure dxBarButton126Click(Sender: TObject);
   private
     Reg: TRegistry;
     procedure DisplayHint(Sender:TObject);
@@ -409,7 +411,7 @@ implementation
 
 uses Contract, Fact, Other, Raznoe, ComObj, FactInc, ClientInvoice, FirmBalance, Pay, Firm, InvoiceScore, FactTrack, Period, Filter,
     LoadFact, Acts, OrdersAgree, FactTech, PlanClient, ZFTOScore, OrdersPay, FactSum, BargainListAdd, PretenziaShape,
-    UsersActive, TariffSupportFunctions, Stat, Budget, VagonArenda, TrafficManagment,  Agree2, ClientFrahtCard2,  EffectSPS;
+    UsersActive, TariffSupportFunctions, Stat, Budget, VagonArenda, TrafficManagment,  Agree2, ClientFrahtCard2,  EffectSPS, LowClaim;
 
 {$R *.DFM}
 
@@ -999,6 +1001,20 @@ begin
     end;
   fmFactTech := TfmFactTech.Create(Application, True);
   fmFactTech._SetActivePageIdex := TComponent(Sender).Tag;
+end;
+
+procedure TfmMain.dxBarButton126Click(Sender: TObject);
+var i : integer;
+begin
+  if not LisCheck(Lis.ConnectionString) then
+    Exit;
+
+  for i:=0 to MDIChildCount-1 Do
+    if (MDIChildren[i].ClassName = 'TfmLowClaim') then begin
+      MDIChildren[i].Show;
+      Exit
+    end;
+  fmLowClaim := TfmLowClaim.Create(Application, False, TControl(Sender).Tag);
 end;
 
 procedure TfmMain.dxBarButton127Click(Sender: TObject);
