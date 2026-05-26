@@ -40,21 +40,43 @@ type
     cxButton3: TcxButton;
     cxTextEdit1: TcxTextEdit;
     Label11: TLabel;
+    cxCurrencyEdit2: TcxCurrencyEdit;
+    Label8: TLabel;
+    Label9: TLabel;
+    cxTextEdit5: TcxTextEdit;
+    cxTextEdit6: TcxTextEdit;
+    Label10: TLabel;
+    Label12: TLabel;
+    cxComboBox2: TcxComboBox;
+    cxDateEdit5: TcxDateEdit;
+    Label13: TLabel;
+    cxTextEdit7: TcxTextEdit;
+    Label14: TLabel;
+    Label15: TLabel;
+    cxTextEdit8: TcxTextEdit;
     Panel3: TPanel;
-    Label3: TLabel;
+    cxCurrencyEdit3: TcxCurrencyEdit;
+    Label16: TLabel;
+    Label17: TLabel;
+    cxCurrencyEdit4: TcxCurrencyEdit;
+    cxCurrencyEdit5: TcxCurrencyEdit;
+    Label18: TLabel;
     Label4: TLabel;
-    Label6: TLabel;
-    cxDateEdit2: TcxDateEdit;
     cxTextEdit4: TcxTextEdit;
-    Label7: TLabel;
-    cxDateEdit3: TcxDateEdit;
-    cxLabel7: TcxLabel;
-    cxDateEdit4: TcxDateEdit;
-    cxComboBox1: TcxComboBox;
+    cxCurrencyEdit6: TcxCurrencyEdit;
+    Label19: TLabel;
+    Label20: TLabel;
+    cxCurrencyEdit7: TcxCurrencyEdit;
+    cxCurrencyEdit8: TcxCurrencyEdit;
+    Label21: TLabel;
+    Label3: TLabel;
+    cxCurrencyEdit9: TcxCurrencyEdit;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure cxDBButtonEdit1PropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
     procedure FormCreate(Sender: TObject);
     procedure cxButton1Click(Sender: TObject);
+    procedure cxCurrencyEdit3PropertiesChange(Sender: TObject);
+    procedure cxCurrencyEdit6PropertiesChange(Sender: TObject);
   private
     Fpretenzia_shape_id : integer;
     Fpretenzia_type : integer;
@@ -87,9 +109,8 @@ begin
 
   Query_Contract.Close;
 
-  cxDateEdit2.EditValue := Date;
-  cxDateEdit3.EditValue := Date;
-  cxDateEdit4.EditValue := Date;
+  cxDateEdit1.EditValue := Date;
+  cxDateEdit5.EditValue := Date;
 
   Screen.Cursor := crDefault;
 end;
@@ -138,11 +159,11 @@ begin
     Memo2.EditValue    := Q.FieldByName('comment').Value;
     cxCurrencyEdit1.EditValue := Q.FieldByName('pretenzia_sum').Value;
 
-    cxTextEdit4.EditValue := Q.FieldByName('pretenzia_our_cod').AsString;
-    cxDateEdit2.EditValue := Q.FieldByName('pretenzia_our_date').Value;
-    cxDateEdit3.EditValue := Q.FieldByName('stay_date_begin').Value;
-    cxDateEdit4.EditValue := Q.FieldByName('stay_date_end').Value;
-    cxComboBox1.ItemIndex := Q.FieldByName('stay_type').AsInteger;
+//    cxTextEdit4.EditValue := Q.FieldByName('pretenzia_our_cod').AsString;
+//    cxDateEdit2.EditValue := Q.FieldByName('pretenzia_our_date').Value;
+//    cxDateEdit3.EditValue := Q.FieldByName('stay_date_begin').Value;
+//    cxDateEdit4.EditValue := Q.FieldByName('stay_date_end').Value;
+//    cxComboBox1.ItemIndex := Q.FieldByName('stay_type').AsInteger;
 
   finally
     Q.Free;
@@ -186,30 +207,52 @@ begin
 
   SP := TADOStoredProc.Create(nil);
   SP.Connection := fmMain.Lis;
-  SP.ProcedureName := 'sp_pretenzia_shape_modify';
+  SP.ProcedureName := 'sp_lowclaim_modify';
   SP.Parameters.Refresh;
-  SP.Parameters.ParamByName('@type_action'       ).Value := Ftype_action;
-  SP.Parameters.ParamByName('@pretenzia_type'    ).Value := Fpretenzia_type;
-  SP.Parameters.ParamByName('@pretenzia_shape_id').Value := Fpretenzia_shape_id;
-  SP.Parameters.ParamByName('@contract_id'       ).Value := Fcontract_id;
-  SP.Parameters.ParamByName('@pretenzia_cod'     ).Value := cxTextEdit1.Text;
-  SP.Parameters.ParamByName('@pretenzia_date'    ).Value := cxDateEdit1.Date;
-  SP.Parameters.ParamByName('@pretenzia_sum'     ).Value := cxCurrencyEdit1.EditValue;
-  SP.Parameters.ParamByName('@comment'           ).Value := Memo2.EditValue;
 
-  SP.Parameters.ParamByName('@pretenzia_our_cod' ).Value := cxTextEdit4.Text;
-  SP.Parameters.ParamByName('@pretenzia_our_date').Value := cxDateEdit2.EditValue;
-  SP.Parameters.ParamByName('@stay_date_begin'   ).Value := cxDateEdit3.EditValue;
-  SP.Parameters.ParamByName('@stay_date_end'     ).Value := cxDateEdit4.EditVAlue;
-  SP.Parameters.ParamByName('@stay_type'         ).Value := cxComboBox1.ItemIndex;
+  SP.Parameters.ParamByName('@lowclaim_id'   ).Value := Flowclaim_id;
+  SP.Parameters.ParamByName('@type_action'   ).Value := Ftype_action;
+  SP.Parameters.ParamByName('@lowclaim_type').Value := Flowclaim_type;
+  SP.Parameters.ParamByName('@contract_id'   ).Value := Fcontract_id;
+  SP.Parameters.ParamByName('@lowclaim_cod'  ).Value := cxTextEdit5.Text;
+  SP.Parameters.ParamByName('@lowclaim_date' ).Value := cxDateEdit1.Date;
+  SP.Parameters.ParamByName('@court_name'    ).Value := cxTextEdit1.Date;
+  SP.Parameters.ParamByName('@claim_sum'     ).Value := cxCurrencyEdit1.EditValue;
+  SP.Parameters.ParamByName('@gos_fee_sum'   ).Value := cxCurrencyEdit2.EditValue;
+  SP.Parameters.ParamByName('@court_num'     ).Value := cxtextEdit6.EditValue
+  SP.Parameters.ParamByName('@court_status'  ).Value := cxComboBox2.ItemIndex;
 
+  SP.Parameters.ParamByName('@prepare_documents').Value := cxTextEdit7.EditValue;;
+  SP.Parameters.ParamByName('@court_data'       ).Value := cxTextEdit8.EditValue;;
+
+  SP.Parameters.ParamByName('@sum_1').Value := cxCurrencyEdit3.EditValue;
+  SP.Parameters.ParamByName('@sum_2').Value := cxCurrencyEdit4.EditValue;
+  SP.Parameters.ParamByName('@sum_3').Value := cxCurrencyEdit5.EditValue;
+  SP.Parameters.ParamByName('@access_code').Value := cxTextEdit4.EditValue;
+  SP.Parameters.ParamByName('@sum_4').Value := cxCurrencyEdit6.EditValue;
+  SP.Parameters.ParamByName('@sum_5').Value := cxCurrencyEdit7.EditValue;
+  SP.Parameters.ParamByName('@sum_6').Value := cxCurrencyEdit8.EditValue;
+  SP.Parameters.ParamByName('@sum_7').Value := cxCurrencyEdit9.EditValue;
+
+  SP.Parameters.ParamByName('@comment').Value := Memo2.EditValue;
+end;
   SP.ExecProc;
-  Fpretenzia_shape_id := SP.Parameters.ParamByName('@pretenzia_shape_id').Value;
+  Fpretenzia_shape_id := SP.Parameters.ParamByName('@lowclaim_id').Value;
 
   Screen.Cursor := crDefault;
 end;
 
-end.
+eprocedure TfmLowClaimAdd.cxCurrencyEdit3PropertiesChange(Sender: TObject);
+begin
+
+eprocedure TfmLowClaimAdd.cxCurrencyEdit6PropertiesChange(Sender: TObject);
+begin
+
+end;
+
+nd;
+
+nd.
 
 
 

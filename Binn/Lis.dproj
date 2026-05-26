@@ -375,6 +375,10 @@
             <Form>fmPretenziaShape</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="PretenziaShapeAdd.pas">
+            <Form>fmPretenziaShapeAdd</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

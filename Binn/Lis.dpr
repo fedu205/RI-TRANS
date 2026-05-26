@@ -87,7 +87,8 @@ uses
   Pay in 'Pay.pas' {fmPay},
   PayAdd in 'PayAdd.pas' {fmPayAdd},
   PretenziaShapeDirectum in 'PretenziaShapeDirectum.pas' {fmPretenziaShapeDirectum},
-  PretenziaShape in 'PretenziaShape.pas' {fmPretenziaShape};
+  PretenziaShape in 'PretenziaShape.pas' {fmPretenziaShape},
+  PretenziaShapeAdd in 'PretenziaShapeAdd.pas' {fmPretenziaShapeAdd};
 
 {fmFactTrack}
 
@@ -173,6 +174,7 @@ begin
         Application.CreateForm(TfmMain, fmMain);
   Application.CreateForm(TfmOther, fmOther);
   Application.CreateForm(TfmPretenziaShape, fmPretenziaShape);
+  Application.CreateForm(TfmPretenziaShapeAdd, fmPretenziaShapeAdd);
   fmMain.SetPar(v);
         if global_id <> -9 then
           fmMain.SetGlobalId(global_id);
