@@ -16,7 +16,9 @@ uses
   dxSkinOffice2010Blue, dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White, dxSkinOffice2016Colorful,
   dxSkinOffice2016Dark, dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringTime, dxSkinStardust,
   dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters, dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
-  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, cxButtons;
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, cxButtons,
+  dxSkinBasic, dxSkinOffice2019Black, dxSkinOffice2019Colorful,
+  dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI, dxCoreGraphics;
 
 type
   TfmVagonAdd = class(TForm)
@@ -81,6 +83,9 @@ type
     cxCheckBox7: TcxCheckBox;
     cxButton1: TcxButton;
     cxButton3: TcxButton;
+    Label14: TLabel;
+    cxCheckBox8: TcxCheckBox;
+    cxCheckBox9: TcxCheckBox;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure cxLookupComboBox4PropertiesEditValueChanged(Sender: TObject);
     procedure cxButtonEdit2PropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
@@ -92,6 +97,7 @@ type
     procedure Panel4Click(Sender: TObject);
     procedure cxCheckBox7PropertiesEditValueChanged(Sender: TObject);
     procedure cxButton1Click(Sender: TObject);
+    procedure cxCheckBox8PropertiesEditValueChanged(Sender: TObject);
   private
     Fvagon_id       : integer;
     Fvagon_owner_id : integer;
@@ -166,6 +172,7 @@ begin
   cxCheckBox5.Checked := True;
   cxCheckBox6.Checked := True;
   cxCheckBox7.Checked := True;
+  cxCheckBox8.Checked := True;
 
   cxCheckBox1.Visible := False;
   cxCheckBox3.Visible := False;
@@ -173,6 +180,7 @@ begin
   cxCheckBox5.Visible := False;
   cxCheckBox6.Visible := False;
   cxCheckBox7.Visible := False;
+  cxCheckBox8.Visible := False;
 
   if str_num_vagon <> '' then begin
     str_num_vagon := StringReplace(str_num_vagon, ',', #13#10, [rfReplaceAll]);
@@ -189,6 +197,7 @@ begin
   cxCheckBox5.Checked := True;
   cxCheckBox6.Checked := True;
   cxCheckBox7.Checked := True;
+  cxCheckBox8.Checked := True;
 
   cxCheckBox1.Visible := False;
   cxCheckBox3.Visible := False;
@@ -196,6 +205,7 @@ begin
   cxCheckBox5.Visible := False;
   cxCheckBox6.Visible := False;
   cxCheckBox7.Visible := False;
+  cxCheckBox8.Visible := False;
 
   Screen.Cursor := crHourglass;
   Ftype_action := 1;
@@ -222,6 +232,8 @@ begin
   cxDateEdit3.EditValue       := Q.FieldByName('next_date_repair').Value;
   cxMemo1.EditValue           := Q.FieldByName('comments').Value;
   cxCheckBox2.EditValue       := Q.FieldByName('set_sanctions').Value;
+  cxCheckBox9.EditValue       := Q.FieldByName('set_removed_tracking').Value;
+
 
   // -------------- владельцы -------------------
   Q.Close;
@@ -255,6 +267,7 @@ begin
   cxCheckBox5.Checked := False;
   cxCheckBox6.Checked := False;
   cxCheckBox7.Checked := False;
+  cxCheckBox8.Checked := False;
 
   cxCheckBox1.Visible := True;
   cxCheckBox3.Visible := True;
@@ -262,6 +275,7 @@ begin
   cxCheckBox5.Visible := True;
   cxCheckBox6.Visible := True;
   cxCheckBox7.Visible := True;
+  cxCheckBox8.Visible := True;
 
   Screen.Cursor := crHourglass;
 
@@ -346,6 +360,7 @@ begin
     SP.Parameters.ParamByName('@node_registration_id' ).Value := iif(Fnode_registration_id = -9, NULL, Fnode_registration_id);
     SP.Parameters.ParamByName('@comments'             ).Value := iif(cxMemo1.EditValue='', null, cxMemo1.EditValue);
     SP.Parameters.ParamByName('@set_sanctions'        ).Value := cxCheckBox2.EditValue;
+    SP.Parameters.ParamByName('@set_removed_tracking' ).Value := cxCheckBox9.EditValue;
     // Владелец (только при добавлении - в других ветках ХП е используется)
     // При изменении выводится только информационно
     SP.Parameters.ParamByName('@owner_contract_id').Value := Fowner_contract_id;
@@ -389,6 +404,7 @@ begin
     SP.Parameters.ParamByName('@node_registration_id' ).Value := iif(Fnode_registration_id = -9, NULL, Fnode_registration_id);
     SP.Parameters.ParamByName('@comments'             ).Value := iif(cxMemo1.EditValue='', null, cxMemo1.EditValue);
     SP.Parameters.ParamByName('@set_sanctions'        ).Value := cxCheckBox2.EditValue;
+    SP.Parameters.ParamByName('@set_removed_tracking' ).Value := cxCheckBox9.EditValue;
 
     SP.Parameters.ParamByName('@set_update_vagon_model_id'   ).Value := cxCheckBox3.Checked;
     SP.Parameters.ParamByName('@set_update_date_build'       ).Value := cxCheckBox5.Checked;
@@ -396,6 +412,7 @@ begin
     SP.Parameters.ParamByName('@set_update_node_registration').Value := cxCheckBox6.Checked;
     SP.Parameters.ParamByName('@set_update_comments'         ).Value := cxCheckBox1.Checked;
     SP.Parameters.ParamByName('@set_update_set_sanctions'    ).Value := cxCheckBox7.checked;
+    SP.Parameters.ParamByName('@set_update_set_removed_tracking').Value := cxCheckBox8.checked;
 
     SP.ExecProc;
   end;
@@ -458,6 +475,11 @@ end;
 procedure TfmVagonAdd.cxCheckBox7PropertiesEditValueChanged(Sender: TObject);
 begin
   cxCheckBox2.Enabled := TcxCheckBox(Sender).Checked;
+end;
+
+procedure TfmVagonAdd.cxCheckBox8PropertiesEditValueChanged(Sender: TObject);
+begin
+  cxCheckBox9.Enabled := TcxCheckBox(Sender).Checked;
 end;
 
 procedure TfmVagonAdd.cxLookupComboBox4PropertiesEditValueChanged(Sender: TObject);

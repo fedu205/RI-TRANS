@@ -17,7 +17,9 @@ uses
   dxSkinValentine, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxSkinsdxStatusBarPainter, dxSkinscxPCPainter, cxNavigator,
   dxBarBuiltInMenu, dxSkinsdxBarPainter, dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinVisualStudio2013Blue,
   dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, System.ImageList, Clipbrd, cxBarEditItem, cxImageList,
-  dxSkinTheBezier, dxDateRanges, dxScrollbarAnnotations;
+  dxSkinTheBezier, dxDateRanges, dxScrollbarAnnotations, dxSkinBasic,
+  dxSkinOffice2019Black, dxSkinOffice2019Colorful, dxSkinOffice2019DarkGray,
+  dxSkinOffice2019White, dxSkinWXI;
 
 type
   TfmVagon = class(TForm)
@@ -247,6 +249,7 @@ type
     dxBarButton57: TdxBarButton;
     cxGrid2DBBandedTableView1firm_self_name: TcxGridDBBandedColumn;
     cxStyle_ColorWhite: TcxStyle;
+    cxGrid1DBBandedTableView1set_removed_tracking: TcxGridDBBandedColumn;
     procedure dxBarButton1Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure dxBarButton2Click(Sender: TObject);

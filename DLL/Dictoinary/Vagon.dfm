@@ -577,6 +577,16 @@ object fmVagon: TfmVagon
             Position.ColIndex = 30
             Position.RowIndex = 0
           end
+          object cxGrid1DBBandedTableView1set_removed_tracking: TcxGridDBBandedColumn
+            Caption = #1057#1085#1103#1090' '#1089#1086' '#1089#1083#1077#1078#1077#1085#1080#1103
+            DataBinding.FieldName = 'set_removed_tracking'
+            DataBinding.IsNullValueType = True
+            HeaderAlignmentVert = vaTop
+            Width = 80
+            Position.BandIndex = 0
+            Position.ColIndex = 31
+            Position.RowIndex = 0
+          end
         end
         object cxGrid1Level1: TcxGridLevel
           GridView = cxGrid1DBBandedTableView1
@@ -1869,7 +1879,7 @@ object fmVagon: TfmVagon
       Glyph.SourceDPI = 96
       Glyph.Data = {
         424D360400000000000036000000280000001000000010000000010020000000
-        000000000000C40E0000C40E00000000000000000000FF00FF00FF00FF00FF00
+        00000000000074120000741200000000000000000000FF00FF00FF00FF00FF00
         FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
         FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
         FF00FF00FF00000000FF000000FF000000FF000000FF000000FF000000FF0000

@@ -76,7 +76,7 @@ object fmVagonAdd: TfmVagonAdd
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
+        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -160,7 +160,7 @@ object fmVagonAdd: TfmVagonAdd
       OptionsImage.Glyph.SourceDPI = 96
       OptionsImage.Glyph.Data = {
         424D360800000000000036000000280000002000000010000000010020000000
-        000000000000C40E0000C40E00000000000000000000D8E9EC00D8E9EC00D8E9
+        00000000000074120000741200000000000000000000D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9
@@ -265,6 +265,10 @@ object fmVagonAdd: TfmVagonAdd
       StyleHot.LookAndFeel.NativeStyle = False
       StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
       StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.Kind = lfOffice11
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
       Height = 428
       Width = 199
@@ -280,7 +284,7 @@ object fmVagonAdd: TfmVagonAdd
     TabOrder = 2
     object Panel4: TPanel
       Left = 1
-      Top = 84
+      Top = 100
       Width = 454
       Height = 109
       Align = alTop
@@ -288,6 +292,7 @@ object fmVagonAdd: TfmVagonAdd
       BevelOuter = bvLowered
       TabOrder = 0
       OnClick = Panel4Click
+      ExplicitTop = 84
       object Label3: TLabel
         Left = 10
         Top = 11
@@ -359,6 +364,9 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.Kind = lfOffice11
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.SkinName = ''
+        StyleReadOnly.LookAndFeel.Kind = lfOffice11
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.SkinName = ''
         TabOrder = 0
         OnClick = Panel4Click
         Width = 111
@@ -390,6 +398,11 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 1
         OnClick = Panel4Click
         Width = 312
@@ -421,6 +434,11 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 2
         OnClick = Panel4Click
         Width = 151
@@ -452,6 +470,11 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 3
         OnClick = Panel4Click
         Width = 312
@@ -486,6 +509,11 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 4
         OnClick = Panel4Click
         Width = 111
@@ -520,6 +548,11 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 5
         OnClick = Panel4Click
         Width = 111
@@ -527,12 +560,13 @@ object fmVagonAdd: TfmVagonAdd
     end
     object GroupBox3: TGroupBox
       Left = 1
-      Top = 193
+      Top = 209
       Width = 454
       Height = 90
       Align = alTop
       Caption = #1052#1086#1076#1077#1083#1100
       TabOrder = 1
+      ExplicitTop = 193
       object Label6: TLabel
         Left = 10
         Top = 16
@@ -645,6 +679,11 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 0
         Width = 111
       end
@@ -681,6 +720,11 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 1
         Width = 115
       end
@@ -717,6 +761,11 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 2
         Width = 111
       end
@@ -753,6 +802,11 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 3
         Width = 115
       end
@@ -781,6 +835,11 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 4
       end
       object cxTextEdit4: TcxTextEdit
@@ -816,6 +875,11 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 5
         Width = 111
       end
@@ -852,18 +916,25 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 6
         Width = 115
       end
     end
     object GroupBox1: TGroupBox
       Left = 1
-      Top = 283
+      Top = 299
       Width = 454
-      Height = 161
+      Height = 145
       Align = alClient
       Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
       TabOrder = 2
+      ExplicitTop = 283
+      ExplicitHeight = 161
       object cxMemo1: TcxMemo
         Tag = 114
         Left = 2
@@ -887,25 +958,31 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.NativeStyle = False
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 0
-        Height = 144
+        ExplicitHeight = 144
+        Height = 128
         Width = 427
       end
       object Panel8: TPanel
         Left = 429
         Top = 15
         Width = 23
-        Height = 144
+        Height = 128
         Align = alRight
         BevelOuter = bvNone
         TabOrder = 1
+        ExplicitHeight = 144
         DesignSize = (
           23
-          144)
+          128)
         object cxCheckBox1: TcxCheckBox
           Tag = 201
           Left = 1
-          Top = 14
+          Top = 11
           Anchors = []
           Properties.OnChange = cxCheckBox1PropertiesChange
           Style.LookAndFeel.Kind = lfUltraFlat
@@ -928,7 +1005,13 @@ object fmVagonAdd: TfmVagonAdd
           StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
           StyleHot.LookAndFeel.ScrollMode = scmClassic
           StyleHot.LookAndFeel.SkinName = 'Coffee'
+          StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+          StyleReadOnly.LookAndFeel.NativeStyle = False
+          StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+          StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+          StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
           TabOrder = 0
+          ExplicitTop = 14
         end
       end
     end
@@ -936,7 +1019,7 @@ object fmVagonAdd: TfmVagonAdd
       Left = 1
       Top = 1
       Width = 454
-      Height = 83
+      Height = 99
       Align = alTop
       BevelInner = bvRaised
       BevelOuter = bvLowered
@@ -976,6 +1059,13 @@ object fmVagonAdd: TfmVagonAdd
         Height = 13
         Caption = #1057#1072#1085#1082#1094#1080#1080'...................'
       end
+      object Label14: TLabel
+        Left = 303
+        Top = 79
+        Width = 111
+        Height = 13
+        Caption = #1057#1085#1103#1090' '#1089#1086' '#1089#1083#1077#1078#1077#1085#1080#1103'.....'
+      end
       object cxDateEdit1: TcxDateEdit
         Tag = 103
         Left = 118
@@ -1004,6 +1094,11 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 0
         Width = 111
       end
@@ -1035,6 +1130,11 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 1
         Width = 112
       end
@@ -1054,7 +1154,7 @@ object fmVagonAdd: TfmVagonAdd
             Glyph.SourceDPI = 96
             Glyph.Data = {
               424D360400000000000036000000280000001000000010000000010020000000
-              000000000000C40E0000C40E00000000000000000000C0C0C000C0C0C000C0C0
+              00000000000074120000741200000000000000000000C0C0C000C0C0C000C0C0
               C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
               C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
               C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
@@ -1113,6 +1213,11 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 2
         Width = 312
       end
@@ -1141,6 +1246,11 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 3
       end
       object cxCheckBox6: TcxCheckBox
@@ -1168,6 +1278,11 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 4
       end
       object cxDateEdit3: TcxDateEdit
@@ -1198,6 +1313,11 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 5
         Width = 111
       end
@@ -1226,6 +1346,11 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 6
       end
       object cxCheckBox2: TcxCheckBox
@@ -1260,7 +1385,53 @@ object fmVagonAdd: TfmVagonAdd
         StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
         StyleHot.LookAndFeel.ScrollMode = scmClassic
         StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
         TabOrder = 8
+      end
+      object cxCheckBox8: TcxCheckBox
+        Tag = 201
+        Left = 432
+        Top = 77
+        Properties.OnEditValueChanged = cxCheckBox8PropertiesEditValueChanged
+        Style.LookAndFeel.Kind = lfUltraFlat
+        Style.LookAndFeel.NativeStyle = False
+        Style.LookAndFeel.ScrollbarMode = sbmClassic
+        Style.LookAndFeel.ScrollMode = scmClassic
+        Style.LookAndFeel.SkinName = 'Coffee'
+        Style.TransparentBorder = False
+        StyleDisabled.LookAndFeel.Kind = lfUltraFlat
+        StyleDisabled.LookAndFeel.NativeStyle = False
+        StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleDisabled.LookAndFeel.ScrollMode = scmClassic
+        StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+        StyleFocused.LookAndFeel.Kind = lfUltraFlat
+        StyleFocused.LookAndFeel.NativeStyle = False
+        StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleFocused.LookAndFeel.ScrollMode = scmClassic
+        StyleFocused.LookAndFeel.SkinName = 'Coffee'
+        StyleHot.LookAndFeel.Kind = lfUltraFlat
+        StyleHot.LookAndFeel.NativeStyle = False
+        StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleHot.LookAndFeel.ScrollMode = scmClassic
+        StyleHot.LookAndFeel.SkinName = 'Coffee'
+        StyleReadOnly.LookAndFeel.Kind = lfUltraFlat
+        StyleReadOnly.LookAndFeel.NativeStyle = False
+        StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+        StyleReadOnly.LookAndFeel.ScrollMode = scmClassic
+        StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
+        TabOrder = 9
+      end
+      object cxCheckBox9: TcxCheckBox
+        Left = 410
+        Top = 77
+        Enabled = False
+        Properties.NullStyle = nssUnchecked
+        Style.TransparentBorder = False
+        TabOrder = 10
       end
     end
   end
