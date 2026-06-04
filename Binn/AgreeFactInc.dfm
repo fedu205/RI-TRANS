@@ -931,6 +931,11 @@ object fmAgreeFactInc: TfmAgreeFactInc
         item
           Kind = skSum
           Column = cxGrid1DBBandedTableView1Column2
+        end
+        item
+          Format = '#,##0'
+          Kind = skSum
+          Column = cxGrid1DBBandedTableView1distance
         end>
       DataController.Summary.SummaryGroups = <>
       DataController.Summary.Options = [soMultipleSelectedRecords]
@@ -961,7 +966,7 @@ object fmAgreeFactInc: TfmAgreeFactInc
           Visible = False
         end
         item
-          Width = 240
+          Width = 300
         end>
       object cxGrid1DBBandedTableView1fact_id: TcxGridDBBandedColumn
         Tag = 35241992
@@ -1346,6 +1351,35 @@ object fmAgreeFactInc: TfmAgreeFactInc
         Width = 100
         Position.BandIndex = 2
         Position.ColIndex = 12
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1node_begin_name: TcxGridDBBandedColumn
+        Caption = #1057#1090'. '#1086#1090#1087#1088'.'
+        DataBinding.FieldName = 'node_begin_name'
+        DataBinding.IsNullValueType = True
+        Width = 80
+        Position.BandIndex = 4
+        Position.ColIndex = 4
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1node_end_name: TcxGridDBBandedColumn
+        Caption = #1057#1090'. '#1085#1072#1079#1085'.'
+        DataBinding.FieldName = 'node_end_name'
+        DataBinding.IsNullValueType = True
+        Width = 80
+        Position.BandIndex = 4
+        Position.ColIndex = 5
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1distance: TcxGridDBBandedColumn
+        Caption = #1056#1072#1089#1089#1090#1086#1103#1085#1080#1077
+        DataBinding.FieldName = 'distance'
+        DataBinding.IsNullValueType = True
+        PropertiesClassName = 'TcxCurrencyEditProperties'
+        Properties.DisplayFormat = '#,##0'
+        Width = 80
+        Position.BandIndex = 4
+        Position.ColIndex = 6
         Position.RowIndex = 0
       end
     end

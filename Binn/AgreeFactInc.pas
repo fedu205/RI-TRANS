@@ -100,6 +100,9 @@ type
     dxBarButton3: TdxBarButton;
     cxGrid1DBBandedTableView1Column1: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1date_prib_F: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1node_begin_name: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1node_end_name: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1distance: TcxGridDBBandedColumn;
     procedure Excel1Click(Sender: TObject);
     procedure cxGrid1DBBandedTableView1KeyPress(Sender: TObject; var Key: Char);
     procedure cxGrid1DBBandedTableView1FocusedItemChanged(Sender: TcxCustomGridTableView; APrevFocusedItem,  AFocusedItem: TcxCustomGridTableItem);
