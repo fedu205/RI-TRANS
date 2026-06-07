@@ -155,7 +155,7 @@ object fmLowClaim: TfmLowClaim
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
-    Font.Name = 'Segoe UI'
+    Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
     TabOrder = 0
@@ -186,11 +186,11 @@ object fmLowClaim: TfmLowClaim
       ScrollbarAnnotations.CustomAnnotations = <>
       OnCustomDrawCell = cxGrid1DBBandedTableView1CustomDrawCell
       OnFocusedItemChanged = cxGrid1DBBandedTableView1FocusedItemChanged
-      DataController.DataSource = DS_PretenziaShape
+      DataController.DataSource = DS_LowClaim
       DataController.Filter.Options = [fcoCaseInsensitive]
       DataController.Filter.OnChanged = cxGrid1DBBandedTableView1DataControllerFilterChanged
       DataController.Filter.Active = True
-      DataController.KeyFieldNames = 'pretenzia_shape_id'
+      DataController.KeyFieldNames = 'low_claim_id'
       DataController.Summary.DefaultGroupSummaryItems = <
         item
           Format = '#,##0.00'
@@ -256,10 +256,10 @@ object fmLowClaim: TfmLowClaim
       Bands = <
         item
         end>
-      object cxGrid1DBBandedTableView1pretenzia_shape_id: TcxGridDBBandedColumn
+      object cxGrid1DBBandedTableView1low_claim_id: TcxGridDBBandedColumn
         Tag = 76026400
         Caption = #8470' '#1079#1072#1087#1080#1089#1080
-        DataBinding.FieldName = 'pretenzia_shape_id'
+        DataBinding.FieldName = 'low_claim_id'
         DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
         Width = 65
@@ -269,7 +269,7 @@ object fmLowClaim: TfmLowClaim
       end
       object cxGrid1DBBandedTableView1low_claim_date: TcxGridDBBandedColumn
         Tag = 122938408
-        Caption = #1044#1072#1090#1072
+        Caption = #1044#1072#1090#1072' '#1079#1072#1103#1074#1083#1077#1085#1080#1103
         DataBinding.FieldName = 'low_claim_date'
         DataBinding.IsNullValueType = True
         PropertiesClassName = 'TcxDateEditProperties'
@@ -286,9 +286,9 @@ object fmLowClaim: TfmLowClaim
         DataBinding.FieldName = 'comment'
         DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 65
+        Width = 73
         Position.BandIndex = 0
-        Position.ColIndex = 6
+        Position.ColIndex = 21
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1contract_cod: TcxGridDBBandedColumn
@@ -336,24 +336,6 @@ object fmLowClaim: TfmLowClaim
         Position.ColIndex = 3
         Position.RowIndex = 0
       end
-      object cxGrid1DBBandedTableView1FIO_users_owner: TcxGridDBBandedColumn
-        Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100
-        DataBinding.FieldName = 'FIO_users_owner'
-        DataBinding.IsNullValueType = True
-        HeaderAlignmentVert = vaTop
-        Position.BandIndex = 0
-        Position.ColIndex = 5
-        Position.RowIndex = 0
-      end
-      object cxGrid1DBBandedTableView1global_color: TcxGridDBBandedColumn
-        DataBinding.FieldName = 'global_color'
-        DataBinding.IsNullValueType = True
-        Visible = False
-        HeaderAlignmentVert = vaTop
-        Position.BandIndex = -1
-        Position.ColIndex = -1
-        Position.RowIndex = -1
-      end
       object cxGrid1DBBandedTableView1contract_id: TcxGridDBBandedColumn
         Caption = #8470' '#1079#1072#1087#1080#1089#1080' '#1076#1086#1075#1086#1074#1086#1088#1072
         DataBinding.FieldName = 'contract_id'
@@ -364,6 +346,192 @@ object fmLowClaim: TfmLowClaim
         Position.ColIndex = -1
         Position.RowIndex = -1
       end
+      object cxGrid1DBBandedTableView1firm_self: TcxGridDBBandedColumn
+        DataBinding.FieldName = 'firm_self'
+        DataBinding.IsNullValueType = True
+        Position.BandIndex = -1
+        Position.ColIndex = -1
+        Position.RowIndex = -1
+      end
+      object cxGrid1DBBandedTableView1low_claim_cod: TcxGridDBBandedColumn
+        Caption = #8470' '#1080#1089#1082#1086#1074#1086#1075#1086' '#1079#1072#1103#1074#1083#1077#1085#1080#1103
+        DataBinding.FieldName = 'low_claim_cod'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Width = 70
+        Position.BandIndex = 0
+        Position.ColIndex = 5
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1court_name: TcxGridDBBandedColumn
+        Caption = #1053#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1089#1091#1076#1072
+        DataBinding.FieldName = 'court_name'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Width = 70
+        Position.BandIndex = 0
+        Position.ColIndex = 6
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1claim_sum: TcxGridDBBandedColumn
+        Caption = #1057#1091#1084#1084#1072' '#1080#1089#1082#1072
+        DataBinding.FieldName = 'claim_sum'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Width = 70
+        Position.BandIndex = 0
+        Position.ColIndex = 7
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1gos_fee_sum: TcxGridDBBandedColumn
+        Caption = #1043#1086#1089#1087#1086#1096#1083#1080#1085#1072
+        DataBinding.FieldName = 'gos_fee_sum'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Width = 70
+        Position.BandIndex = 0
+        Position.ColIndex = 8
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1court_num: TcxGridDBBandedColumn
+        Caption = #8470' '#1076#1077#1083#1072
+        DataBinding.FieldName = 'court_num'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Width = 70
+        Position.BandIndex = 0
+        Position.ColIndex = 9
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1court_status: TcxGridDBBandedColumn
+        Caption = #1057#1090#1072#1090#1091#1089' '#1076#1077#1083#1072
+        DataBinding.FieldName = 'court_status'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Width = 70
+        Position.BandIndex = 0
+        Position.ColIndex = 10
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1prepare_documents: TcxGridDBBandedColumn
+        Caption = #1055#1086#1076#1075#1086#1090#1086#1074#1082#1072' '#1076#1086#1082#1091#1084#1077#1085#1090#1086#1074
+        DataBinding.FieldName = 'prepare_documents'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Width = 70
+        Position.BandIndex = 0
+        Position.ColIndex = 11
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1court_data: TcxGridDBBandedColumn
+        Caption = #1044#1072#1085#1085#1099#1077' '#1086' '#1089#1091#1076#1077#1073#1085#1086#1084' '#1072#1082#1090#1077
+        DataBinding.FieldName = 'court_data'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Width = 70
+        Position.BandIndex = 0
+        Position.ColIndex = 12
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1sum_1: TcxGridDBBandedColumn
+        Caption = #1042#1079#1099#1089#1082#1072#1085#1086' '#1087#1086' '#1088#1077#1096#1077#1085#1080#1102' ('#1096#1090#1088#1072#1092')'
+        DataBinding.FieldName = 'sum_1'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Width = 70
+        Position.BandIndex = 0
+        Position.ColIndex = 13
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1sum_2: TcxGridDBBandedColumn
+        Caption = #1042#1079#1099#1089#1082#1072#1085#1086' '#1087#1086' '#1088#1077#1096#1077#1085#1080#1102' ('#1075#1086#1089#1087#1086#1096#1083#1080#1085#1072')'
+        DataBinding.FieldName = 'sum_2'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Width = 70
+        Position.BandIndex = 0
+        Position.ColIndex = 14
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1sum_3: TcxGridDBBandedColumn
+        Caption = #1056#1072#1079#1084#1077#1088' '#1075'/'#1087' '#1076#1083#1103' '#1074#1086#1079#1074#1088#1072#1090#1072' '#1080#1079' '#1060#1041' '#1056#1060
+        DataBinding.FieldName = 'sum_3'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Width = 70
+        Position.BandIndex = 0
+        Position.ColIndex = 15
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1access_code: TcxGridDBBandedColumn
+        Caption = #1050#1086#1076' '#1076#1086#1089#1090#1091#1087#1072
+        DataBinding.FieldName = 'access_code'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Width = 70
+        Position.BandIndex = 0
+        Position.ColIndex = 16
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1sum_4: TcxGridDBBandedColumn
+        Caption = #8470' '#1087'/'#1087' '#1086' '#1074#1079#1099#1089#1082#1072#1085#1080#1080'/'#1076#1086#1073#1088#1086#1074#1086#1083#1100#1085#1086#1081' '#1086#1087#1083#1072#1090#1077
+        DataBinding.FieldName = 'sum_4'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Width = 70
+        Position.BandIndex = 0
+        Position.ColIndex = 17
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1sum_5: TcxGridDBBandedColumn
+        Caption = #1057#1091#1084#1084#1072' '#1086#1087#1083#1072#1090#1099'/ '#1074#1079#1099#1089#1082#1072#1085#1080#1103
+        DataBinding.FieldName = 'sum_5'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Width = 70
+        Position.BandIndex = 0
+        Position.ColIndex = 18
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1sum_6: TcxGridDBBandedColumn
+        Caption = #1042#1079#1099#1089#1082#1072#1085#1086
+        DataBinding.FieldName = 'sum_6'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Width = 70
+        Position.BandIndex = 0
+        Position.ColIndex = 19
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1sum_7: TcxGridDBBandedColumn
+        Caption = #1057#1082#1086#1088#1088#1077#1082#1090#1080#1088#1086#1074#1072#1085#1086'/'#1086#1090#1082#1072#1079#1072#1085#1086
+        DataBinding.FieldName = 'sum_7'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Width = 70
+        Position.BandIndex = 0
+        Position.ColIndex = 20
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1FIO_users_owner: TcxGridDBBandedColumn
+        Caption = #1055#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1100
+        DataBinding.FieldName = 'FIO_users_owner'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        Position.BandIndex = 0
+        Position.ColIndex = 22
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1global_color: TcxGridDBBandedColumn
+        Caption = #1062#1074#1077#1090' '#1079#1072#1087#1080#1089#1080
+        DataBinding.FieldName = 'global_color'
+        DataBinding.IsNullValueType = True
+        Visible = False
+        HeaderAlignmentVert = vaTop
+        Position.BandIndex = 0
+        Position.ColIndex = 23
+        Position.RowIndex = 0
+      end
       object cxGrid1DBBandedTableView1date_enter: TcxGridDBBandedColumn
         Caption = #1044#1072#1090#1072' '#1089#1086#1079#1076#1072#1085#1080#1103
         DataBinding.FieldName = 'date_enter'
@@ -371,15 +539,8 @@ object fmLowClaim: TfmLowClaim
         HeaderAlignmentVert = vaTop
         Width = 100
         Position.BandIndex = 0
-        Position.ColIndex = 7
+        Position.ColIndex = 24
         Position.RowIndex = 0
-      end
-      object cxGrid1DBBandedTableView1firm_self: TcxGridDBBandedColumn
-        DataBinding.FieldName = 'firm_self'
-        DataBinding.IsNullValueType = True
-        Position.BandIndex = -1
-        Position.ColIndex = -1
-        Position.RowIndex = -1
       end
     end
     object cxGrid1Level1: TcxGridLevel
@@ -446,7 +607,7 @@ object fmLowClaim: TfmLowClaim
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
-        Font.Name = 'Segoe UI'
+        Font.Name = 'MS Sans Serif'
         Font.Style = []
         ParentFont = False
         TabOrder = 0
@@ -804,41 +965,40 @@ object fmLowClaim: TfmLowClaim
           'Width'
           'WindowState')
       end>
-    StorageName = '\Software\LIS1\PretenziaShape'
+    StorageName = '\Software\LIS1\LowClaim'
     StorageType = stRegistry
     Left = 177
     Top = 155
   end
-  object Query_PretenziaShape: TADOQuery
+  object Query_LowClaim: TADOQuery
     Connection = fmMain.Lis
     CursorType = ctStatic
     Parameters = <
       item
         Name = 'date1'
-        DataType = ftDateTime
-        Precision = 16
-        Size = 16
+        Size = -1
         Value = Null
       end
       item
         Name = 'date2'
-        DataType = ftDateTime
-        Precision = 16
-        Size = 16
+        Size = -1
         Value = Null
       end
       item
-        Name = 'pretenzia_type'
+        Name = 'low_claim_type'
         Size = -1
         Value = Null
       end>
     SQL.Strings = (
-      'SELECT 1')
+      'SELECT * FROM view_low_claim'
+      'WHERE low_claim_date >= :date1'
+      'AND low_claim_date <= :date2'
+      'AND low_claim_type = :low_claim_type')
     Left = 62
     Top = 107
   end
-  object DS_PretenziaShape: TDataSource
-    DataSet = Query_PretenziaShape
+  object DS_LowClaim: TDataSource
+    DataSet = Query_LowClaim
     Left = 62
     Top = 136
   end
@@ -1038,171 +1198,7 @@ object fmLowClaim: TfmLowClaim
       Visible = ivAlways
       ImageIndex = 56
       ShowCaption = False
-      ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'dxBarSubItem3'
-        end
-        item
-          BeginGroup = True
-          Visible = True
-          ItemName = 'dxBarButton14'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton6'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton7'
-        end
-        item
-          BeginGroup = True
-          Visible = True
-          ItemName = 'dxBarButton11'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton9'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton10'
-        end>
-    end
-    object dxBarButton14: TdxBarButton
-      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1087#1086#1075#1088#1091#1079#1082#1080')'
-      Category = 0
-      Hint = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1087#1086#1075#1088#1091#1079#1082#1080')'
-      Visible = ivAlways
-      ImageIndex = 8
-      OnClick = dxBarButton14Click
-    end
-    object dxBarButton6: TdxBarButton
-      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1074#1099#1075#1088#1091#1079#1082#1080')'
-      Category = 0
-      Hint = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1074#1099#1075#1088#1091#1079#1082#1080')'
-      Visible = ivAlways
-      ImageIndex = 8
-      OnClick = dxBarButton6Click
-    end
-    object dxBarButton7: TdxBarButton
-      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080' ('#1085#1072' '#1080#1085#1086#1089#1090#1088#1072#1085#1085#1086#1081' '#1090#1077#1088#1088#1080#1090#1086#1088#1080#1080')'
-      Category = 0
-      Hint = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080' ('#1085#1072' '#1080#1085#1086#1089#1090#1088#1072#1085#1085#1086#1081' '#1090#1077#1088#1088#1080#1090#1086#1088#1080#1080')'
-      Visible = ivAlways
-      ImageIndex = 8
-      OnClick = dxBarButton7Click
-    end
-    object dxBarButton9: TdxBarButton
-      Caption = #1056#1077#1080#774#1083#1075#1086' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1074#1099#1075#1088#1091#1079#1082#1080')'
-      Category = 0
-      Hint = #1056#1077#1080#774#1083#1075#1086' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1074#1099#1075#1088#1091#1079#1082#1080')'
-      Visible = ivAlways
-      ImageIndex = 8
-      OnClick = dxBarButton9Click
-    end
-    object dxBarButton10: TdxBarButton
-      Caption = #1056#1077#1080#774#1083#1075#1086' ('#1085#1072' '#1080#1085#1086#1089#1090#1088#1072#1085#1085#1086#1081' '#1090#1077#1088#1088#1080#1090#1086#1088#1080#1080')'
-      Category = 0
-      Hint = #1056#1077#1080#774#1083#1075#1086' ('#1085#1072' '#1080#1085#1086#1089#1090#1088#1072#1085#1085#1086#1081' '#1090#1077#1088#1088#1080#1090#1086#1088#1080#1080')'
-      Visible = ivAlways
-      ImageIndex = 8
-      OnClick = dxBarButton10Click
-    end
-    object dxBarButton11: TdxBarButton
-      Caption = #1056#1077#1080#774#1083#1075#1086' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1087#1086#1075#1088#1091#1079#1082#1080')'
-      Category = 0
-      Hint = #1056#1077#1080#774#1083#1075#1086' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1087#1086#1075#1088#1091#1079#1082#1080')'
-      Visible = ivAlways
-      ImageIndex = 8
-      OnClick = dxBarButton11Click
-    end
-    object dxBarSubItem3: TdxBarSubItem
-      Caption = #1055#1088#1080#1084#1077#1088#1099' '#1092#1072#1081#1083#1086#1074
-      Category = 0
-      Visible = ivAlways
-      ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'dxBarButton15'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton16'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton17'
-        end
-        item
-          BeginGroup = True
-          Visible = True
-          ItemName = 'dxBarButton18'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton19'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton20'
-        end>
-    end
-    object dxBarButton15: TdxBarButton
-      Tag = 700
-      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1087#1086#1075#1088#1091#1079#1082#1080')'
-      Category = 0
-      Hint = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1087#1086#1075#1088#1091#1079#1082#1080')'
-      Visible = ivAlways
-      OnClick = dxBarButton15Click
-    end
-    object dxBarButton16: TdxBarButton
-      Tag = 701
-      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1074#1099#1075#1088#1091#1079#1082#1080')'
-      Category = 0
-      Hint = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1074#1099#1075#1088#1091#1079#1082#1080')'
-      Visible = ivAlways
-      OnClick = dxBarButton15Click
-    end
-    object dxBarButton17: TdxBarButton
-      Tag = 702
-      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080' ('#1085#1072' '#1080#1085#1086#1089#1090#1088#1072#1085#1085#1086#1081' '#1090#1077#1088#1088#1080#1090#1086#1088#1080#1080')'
-      Category = 0
-      Hint = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074#1072#1075#1086#1085#1099' '#1087#1088#1077#1090#1077#1085#1079#1080#1080' ('#1085#1072' '#1080#1085#1086#1089#1090#1088#1072#1085#1085#1086#1081' '#1090#1077#1088#1088#1080#1090#1086#1088#1080#1080')'
-      Visible = ivAlways
-      OnClick = dxBarButton15Click
-    end
-    object dxBarButton18: TdxBarButton
-      Tag = 703
-      Caption = #1056#1077#1080#774#1083#1075#1086' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1087#1086#1075#1088#1091#1079#1082#1080')'
-      Category = 0
-      Hint = #1056#1077#1080#774#1083#1075#1086' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1087#1086#1075#1088#1091#1079#1082#1080')'
-      Visible = ivAlways
-      OnClick = dxBarButton15Click
-    end
-    object dxBarButton19: TdxBarButton
-      Tag = 704
-      Caption = #1056#1077#1080#774#1083#1075#1086' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1074#1099#1075#1088#1091#1079#1082#1080')'
-      Category = 0
-      Hint = #1056#1077#1080#774#1083#1075#1086' ('#1085#1072' '#1089#1090#1072#1085#1094#1080#1103#1093' '#1074#1099#1075#1088#1091#1079#1082#1080')'
-      Visible = ivAlways
-      OnClick = dxBarButton15Click
-    end
-    object dxBarButton20: TdxBarButton
-      Tag = 705
-      Caption = #1056#1077#1080#774#1083#1075#1086' ('#1085#1072' '#1080#1085#1086#1089#1090#1088#1072#1085#1085#1086#1081' '#1090#1077#1088#1088#1080#1090#1086#1088#1080#1080')'
-      Category = 0
-      Hint = #1056#1077#1080#774#1083#1075#1086' ('#1085#1072' '#1080#1085#1086#1089#1090#1088#1072#1085#1085#1086#1081' '#1090#1077#1088#1088#1080#1090#1086#1088#1080#1080')'
-      Visible = ivAlways
-      OnClick = dxBarButton15Click
-    end
-    object dxBarButton24: TdxBarButton
-      Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1080#1079' '#1044#1080#1088#1077#1082#1090#1091#1084#1072'...'
-      Category = 0
-      Hint = #1044#1086#1073#1072#1074#1080#1090#1100' '#1080#1079' '#1044#1080#1088#1077#1082#1090#1091#1084#1072
-      Visible = ivAlways
-      OnClick = dxBarButton24Click
+      ItemLinks = <>
     end
     object dxBarButton25: TdxBarButton
       Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1086#1087#1083#1072#1090#1091
@@ -1268,6 +1264,10 @@ object fmLowClaim: TfmLowClaim
       ItemLinks = <
         item
           Visible = True
+          ItemName = 'N7'
+        end
+        item
+          Visible = True
           ItemName = 'N8'
         end
         item
@@ -1330,10 +1330,6 @@ object fmLowClaim: TfmLowClaim
       item
         Visible = True
         ItemName = 'N1'
-      end
-      item
-        Visible = True
-        ItemName = 'dxBarButton24'
       end
       item
         Visible = True

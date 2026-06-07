@@ -166,7 +166,7 @@ object fmPretenziaShape: TfmPretenziaShape
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
-    Font.Name = 'Segoe UI'
+    Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
     TabOrder = 0
@@ -396,13 +396,15 @@ object fmPretenziaShape: TfmPretenziaShape
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1global_color: TcxGridDBBandedColumn
+        Caption = #1062#1074#1077#1090
         DataBinding.FieldName = 'global_color'
         DataBinding.IsNullValueType = True
         Visible = False
         HeaderAlignmentVert = vaTop
-        Position.BandIndex = -1
-        Position.ColIndex = -1
-        Position.RowIndex = -1
+        Width = 66
+        Position.BandIndex = 0
+        Position.ColIndex = 18
+        Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1contract_id: TcxGridDBBandedColumn
         Caption = #8470' '#1079#1072#1087#1080#1089#1080' '#1076#1086#1075#1086#1074#1086#1088#1072
@@ -551,7 +553,7 @@ object fmPretenziaShape: TfmPretenziaShape
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Tahoma'
+      Font.Name = 'MS Sans Serif'
       Font.Style = []
       ParentFont = False
       TabOrder = 0
@@ -559,6 +561,8 @@ object fmPretenziaShape: TfmPretenziaShape
       LookAndFeel.NativeStyle = False
       LookAndFeel.ScrollbarMode = sbmClassic
       LookAndFeel.SkinName = 'Office2007Black'
+      ExplicitLeft = 3
+      ExplicitTop = 14
       object cxGrid2DBBandedTableView1: TcxGridDBBandedTableView
         PopupMenu = dxBarPopupMenu1
         OnKeyPress = cxGrid2DBBandedTableView1KeyPress
@@ -859,7 +863,7 @@ object fmPretenziaShape: TfmPretenziaShape
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
-    TabOrder = 3
+    TabOrder = 2
     Properties.ActivePage = cxTabSheet1
     Properties.CustomButtons.Buttons = <>
     Properties.Style = 2
@@ -907,7 +911,7 @@ object fmPretenziaShape: TfmPretenziaShape
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
-        Font.Name = 'Segoe UI'
+        Font.Name = 'MS Sans Serif'
         Font.Style = []
         ParentFont = False
         TabOrder = 0
@@ -1743,6 +1747,10 @@ object fmPretenziaShape: TfmPretenziaShape
       Visible = ivAlways
       ImageIndex = 4
       ItemLinks = <
+        item
+          Visible = True
+          ItemName = 'N7'
+        end
         item
           Visible = True
           ItemName = 'N8'

@@ -190,18 +190,11 @@ type
     procedure dxBarButton22Click(Sender: TObject);
     procedure dxBarButton23Click(Sender: TObject);
     procedure cxGrid2DBBandedTableView1FilterOnChanged(Sender: TObject);
-    procedure cxGrid2DBBandedTableView1CustomDrawCell(
-      Sender: TcxCustomGridTableView; ACanvas: TcxCanvas;
-      AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
-    procedure cxGrid2DBBandedTableView1CustomDrawColumnHeader(
-      Sender: TcxGridTableView; ACanvas: TcxCanvas;
-      AViewInfo: TcxGridColumnHeaderViewInfo; var ADone: Boolean);
-    procedure cxGrid2DBBandedTableView1FocusedItemChanged(
-      Sender: TcxCustomGridTableView; APrevFocusedItem,
-      AFocusedItem: TcxCustomGridTableItem);
+    procedure cxGrid2DBBandedTableView1CustomDrawCell(Sender: TcxCustomGridTableView; ACanvas: TcxCanvas;  AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
+    procedure cxGrid2DBBandedTableView1CustomDrawColumnHeader(Sender: TcxGridTableView; ACanvas: TcxCanvas; AViewInfo: TcxGridColumnHeaderViewInfo; var ADone: Boolean);
+    procedure cxGrid2DBBandedTableView1FocusedItemChanged(Sender: TcxCustomGridTableView; APrevFocusedItem, AFocusedItem: TcxCustomGridTableItem);
     procedure cxGrid2DBBandedTableView1KeyPress(Sender: TObject; var Key: Char);
-    procedure cxGrid1DBBandedTableView1SelectionChanged(
-      Sender: TcxCustomGridTableView);
+    procedure cxGrid1DBBandedTableView1SelectionChanged(Sender: TcxCustomGridTableView);
     procedure dxBarButton8Click(Sender: TObject);
     procedure dxBarButton6Click(Sender: TObject);
     procedure dxBarButton7Click(Sender: TObject);
@@ -288,6 +281,7 @@ end;
 procedure TfmPretenziaShape.FormDestroy(Sender: TObject);
 begin
   StoreRegistryDate(rgSave, '\Software\Lis1\DateTime\PretenziaShape', Fdate1, Fdate2);
+
   StoreRegistryGrid(rgSave, '\Software\Lis1\PretenziaShape_Grids', cxGrid1DBBandedTableView1);
   StoreRegistryGrid(rgSave, '\Software\Lis1\PretenziaShape_Grids', cxGrid2DBBandedTableView1);
 end;
@@ -1164,7 +1158,7 @@ end;
 
 procedure TfmPretenziaShape.N7Click(Sender: TObject);
 begin
-  SetRecordColor('pretenzia_shape_id', cxGrid1DBBandedTableView1, 'pretenzia_shape_id', Boolean(TMenuItem(Sender).Tag));
+  SetRecordColor('pretenzia_shape_id', cxGrid1DBBandedTableView1, 'PRETENZIA_SHAPE', Boolean(TMenuItem(Sender).Tag));
   RefreshQueryGrid(cxGrid1DBBandedTableView1, 'pretenzia_shape_id');
 end;
 

@@ -25,7 +25,6 @@ type
     Panel4: TPanel;
     Label2: TLabel;
     cxPropertiesStore1: TcxPropertiesStore;
-    cxDBButtonEdit1: TcxDBButtonEdit;
     Panel1: TPanel;
     GroupBox1: TGroupBox;
     cxCurrencyEdit1: TcxCurrencyEdit;
@@ -51,10 +50,11 @@ type
     cxLabel7: TcxLabel;
     cxDateEdit4: TcxDateEdit;
     cxComboBox1: TcxComboBox;
+    cxButtonEdit2: TcxButtonEdit;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure cxDBButtonEdit1PropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
     procedure FormCreate(Sender: TObject);
     procedure cxButton1Click(Sender: TObject);
+    procedure cxButtonEdit2PropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
   private
     Fpretenzia_shape_id : integer;
     Fpretenzia_type : integer;
@@ -127,15 +127,14 @@ begin
     Fpretenzia_type := Q.FieldByName('pretenzia_type').AsInteger;
     cxDateEdit1.Date := Q.FieldByName('pretenzia_date').AsDatetime;
 
-    Query_Contract.Close;
-    Query_Contract.Open;
-    Query_Contract.Locate('contract_id', Q.FieldByName('contract_id').AsInteger, []);
-
     Fcontract_id := Q['contract_id'];
-    cxTextEdit1.Text := Q.FieldByName('pretenzia_cod').AsString;
-    cxTextEdit2.Text := Q.FieldByName('contract_cod').AsString;
-    cxTextEdit3.Text := Q.FieldByName('firm_self_name').AsString;
+    cxButtonEdit2.EditValue := Q.FieldByName('firm_customer_name').AsString;
+    cxTextEdit2.EditValue := Q.FieldByName('contract_cod').AsString;
+    cxTextEdit3.EditValue := Q.FieldByName('firm_self_name').AsString;
+
     Memo2.EditValue    := Q.FieldByName('comment').Value;
+
+    cxTextEdit1.EditValue := Q.FieldByName('pretenzia_cod').AsString;
     cxCurrencyEdit1.EditValue := Q.FieldByName('pretenzia_sum').Value;
 
     cxTextEdit4.EditValue := Q.FieldByName('pretenzia_our_cod').AsString;
@@ -160,23 +159,6 @@ end;
 procedure TfmPretenziaShapeAdd.FormCreate(Sender: TObject);
 begin
   Fcontract_id := -1;
-end;
-
-procedure TfmPretenziaShapeAdd.cxDBButtonEdit1PropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
-begin
-  fmContract := TfmContract.Create(Application, True, 0);
-  fmContract.cxTabSheet2.Visible := False;
-  fmContract.Visible := False;
-  fmContract.Query_Contract.Locate('contract_id', Fcontract_id, [loCaseInsensitive]);
-  if fmContract.ShowModal=mrOk then begin
-    Query_Contract.Close;
-    Query_Contract.Open;
-    Fcontract_id := fmContract.Query_Contract.FieldByName('contract_id').AsInteger;
-    cxTextEdit2.Text := fmContract.Query_Contract.FieldByName('contract_cod').AsString;
-    cxTextEdit3.Text := fmContract.Query_Contract.FieldByName('firm_self_name').AsString;
-    Query_Contract.Locate('contract_id', Fcontract_id, [loCaseInsensitive]);
-    cxButton1.Enabled := True;
-  end;
 end;
 
 procedure TfmPretenziaShapeAdd.cxButton1Click(Sender: TObject);
@@ -207,6 +189,18 @@ begin
   Fpretenzia_shape_id := SP.Parameters.ParamByName('@pretenzia_shape_id').Value;
 
   Screen.Cursor := crDefault;
+end;
+
+procedure TfmPretenziaShapeAdd.cxButtonEdit2PropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
+begin
+  fmContract := TfmContract.Create(Application, True, 0);
+  fmContract.Visible := False;
+  fmContract.Query_Contract.Locate('contract_id', Fcontract_id, [loCaseInsensitive]);
+  if fmContract.ShowModal=mrOk then begin
+    Fcontract_id := fmContract.Query_Contract.FieldByName('contract_id').AsInteger;
+    cxTextEdit2.Text := fmContract.Query_Contract.FieldByName('contract_cod').AsString;
+    cxTextEdit3.Text := fmContract.Query_Contract.FieldByName('firm_self_name').AsString;
+  end;
 end;
 
 end.

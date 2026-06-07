@@ -25,7 +25,6 @@ type
     Panel4: TPanel;
     Label2: TLabel;
     cxPropertiesStore1: TcxPropertiesStore;
-    cxDBButtonEdit1: TcxDBButtonEdit;
     Panel1: TPanel;
     GroupBox1: TGroupBox;
     cxCurrencyEdit1: TcxCurrencyEdit;
@@ -48,7 +47,6 @@ type
     Label10: TLabel;
     Label12: TLabel;
     cxComboBox2: TcxComboBox;
-    cxDateEdit5: TcxDateEdit;
     Label13: TLabel;
     cxTextEdit7: TcxTextEdit;
     Label14: TLabel;
@@ -71,22 +69,23 @@ type
     Label21: TLabel;
     Label3: TLabel;
     cxCurrencyEdit9: TcxCurrencyEdit;
+    cxDateEdit5: TcxDateEdit;
+    cxButtonEdit2: TcxButtonEdit;
+    cxTextEdit9: TcxTextEdit;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure cxDBButtonEdit1PropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
     procedure FormCreate(Sender: TObject);
     procedure cxButton1Click(Sender: TObject);
-    procedure cxCurrencyEdit3PropertiesChange(Sender: TObject);
-    procedure cxCurrencyEdit6PropertiesChange(Sender: TObject);
+    procedure cxButtonEdit2PropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
   private
-    Fpretenzia_shape_id : integer;
-    Fpretenzia_type : integer;
+    Flow_claim_id : integer;
+    Flow_claim_type : integer;
     Faction : boolean;
     Ftype_action : Integer;
     Fcontract_id: integer;
-    procedure SetUpdate(pretenzia_shape_id : integer);
+    procedure SetUpdate(low_claim_id : integer);
   public
-    constructor Create(AOwner: TApplication; action: boolean; pretenzia_type: integer);
-    property _GetPretenziaShapeId : integer read Fpretenzia_shape_id;
+    constructor Create(AOwner: TApplication; action: boolean; low_claim_type: integer);
+    property _GetLowClaimId : integer read Flow_claim_id;
     property _SetUpdate : integer write SetUpdate;
     procedure _SetInsert;
   end;
@@ -98,13 +97,13 @@ implementation
       uses Main, Raznoe, Contract, ClientInvoice;
 {$R *.DFM}
 
-constructor TfmLowClaimAdd.Create(AOwner: TApplication; action: boolean; pretenzia_type: integer);
+constructor TfmLowClaimAdd.Create(AOwner: TApplication; action: boolean; low_claim_type: integer);
 begin
   Screen.Cursor := crHourglass;
   inherited Create(AOwner);
   Faction    := action;
   Ftype_action := 0;
-  Fpretenzia_type := pretenzia_type;
+  Flow_claim_type := low_claim_type;
 
 
   Query_Contract.Close;
@@ -131,45 +130,50 @@ begin
   Screen.Cursor := crDefault;
 end;
 
-procedure TfmLowClaimAdd.SetUpdate(pretenzia_shape_id : integer);
+procedure TfmLowClaimAdd.SetUpdate(low_claim_id : integer);
 var Q : TADOQuery;
 begin
   Screen.Cursor := crHourglass;
   Ftype_action := 1;
-  Fpretenzia_shape_id := pretenzia_shape_id;
-  Caption := Caption + ' (' + IntToStr(Fpretenzia_shape_id) + ')';
+  Flow_claim_id := low_claim_id;
+  Caption := Caption + ' (' + IntToStr(Flow_claim_id) + ')';
 
-  try
-    Q := TADOQuery.Create(nil);
-    Q.Connection := fmMain.Lis;
-    Q.SQL.Add('SELECT * FROM view_pretenzia_shape WHERE pretenzia_shape_id='+IntToStr(Fpretenzia_shape_id));
-    Q.Open;
+  Q := TADOQuery.Create(nil);
+  Q.Connection := fmMain.Lis;
+  Q.SQL.Add('SELECT * FROM view_low_claim WHERE low_claim_id='+IntToStr(Flow_claim_id));
+  Q.Open;
 
-    Fpretenzia_type := Q.FieldByName('pretenzia_type').AsInteger;
-    cxDateEdit1.Date := Q.FieldByName('pretenzia_date').AsDatetime;
+  Fcontract_id := Q.FieldByName('contract_id').AsInteger;
+  cxButtonEdit2.EditValue := Q.FieldByName('firm_customer_name').AsString;
+  cxTextEdit3.Text := Q.FieldByName('contract_cod').AsString;
+  cxTextEdit2.Text := Q.FieldByName('contract_date_begin').AsString;
+  cxTextEdit9.Text := Q.FieldByName('firm_self_name').AsString;
 
-    Query_Contract.Close;
-    Query_Contract.Open;
-    Query_Contract.Locate('contract_id', Q.FieldByName('contract_id').AsInteger, []);
+  cxDateEdit1.Date := Q.FieldByName('low_claim_date').AsDatetime;
+  cxTextEdit5.Text := Q.FieldByName('low_claim_cod').AsString;
 
-    Fcontract_id := Q['contract_id'];
-    cxTextEdit1.Text := Q.FieldByName('pretenzia_cod').AsString;
-    cxTextEdit2.Text := Q.FieldByName('contract_cod').AsString;
-    cxTextEdit3.Text := Q.FieldByName('firm_self_name').AsString;
-    Memo2.EditValue    := Q.FieldByName('comment').Value;
-    cxCurrencyEdit1.EditValue := Q.FieldByName('pretenzia_sum').Value;
+  cxTextEdit1.EditValue := Q.FieldByName('court_name'    ).Value;
+  cxCurrencyEdit1.EditValue := Q.FieldByName('claim_sum'     ).Value;
+  cxCurrencyEdit2.EditValue := Q.FieldByName('gos_fee_sum'   ).Value;
+  cxtextEdit6.EditValue := Q.FieldByName('court_num'     ).Value;
+  cxComboBox2.ItemIndex := Q.FieldByName('court_status'  ).Value;
 
-//    cxTextEdit4.EditValue := Q.FieldByName('pretenzia_our_cod').AsString;
-//    cxDateEdit2.EditValue := Q.FieldByName('pretenzia_our_date').Value;
-//    cxDateEdit3.EditValue := Q.FieldByName('stay_date_begin').Value;
-//    cxDateEdit4.EditValue := Q.FieldByName('stay_date_end').Value;
-//    cxComboBox1.ItemIndex := Q.FieldByName('stay_type').AsInteger;
+  cxTextEdit7.EditValue := Q.FieldByName('prepare_documents').Value;
+  cxTextEdit8.EditValue := Q.FieldByName('court_data'       ).Value;
 
-  finally
-    Q.Free;
-  end;
+  cxCurrencyEdit3.EditValue := Q.FieldByName('sum_1').Value;
+  cxCurrencyEdit4.EditValue := Q.FieldByName('sum_2').Value;
+  cxCurrencyEdit5.EditValue := Q.FieldByName('sum_3').Value;
+  cxTextEdit4.EditValue := Q.FieldByName('access_code').Value;
+  cxCurrencyEdit6.EditValue := Q.FieldByName('sum_4').Value;
+  cxCurrencyEdit7.EditValue := Q.FieldByName('sum_5').Value;
+  cxCurrencyEdit8.EditValue := Q.FieldByName('sum_6').Value;
+  cxCurrencyEdit9.EditValue := Q.FieldByName('sum_7').Value;
 
-  MonitorEventFormOpen('UPDATE_FORM', self.Name, fmMain.Lis, Fpretenzia_shape_id);
+  Memo2.EditValue := Q.FieldByName('comment').Value;
+  Q.Free;
+
+  MonitorEventFormOpen('UPDATE_FORM', self.Name, fmMain.Lis, Flow_claim_id);
   Screen.Cursor := crDefault;
 end;
 
@@ -183,23 +187,6 @@ begin
   Fcontract_id := -1;
 end;
 
-procedure TfmLowClaimAdd.cxDBButtonEdit1PropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
-begin
-  fmContract := TfmContract.Create(Application, True, 0);
-  fmContract.cxTabSheet2.Visible := False;
-  fmContract.Visible := False;
-  fmContract.Query_Contract.Locate('contract_id', Fcontract_id, [loCaseInsensitive]);
-  if fmContract.ShowModal=mrOk then begin
-    Query_Contract.Close;
-    Query_Contract.Open;
-    Fcontract_id := fmContract.Query_Contract.FieldByName('contract_id').AsInteger;
-    cxTextEdit2.Text := fmContract.Query_Contract.FieldByName('contract_cod').AsString;
-    cxTextEdit3.Text := fmContract.Query_Contract.FieldByName('firm_self_name').AsString;
-    Query_Contract.Locate('contract_id', Fcontract_id, [loCaseInsensitive]);
-    cxButton1.Enabled := True;
-  end;
-end;
-
 procedure TfmLowClaimAdd.cxButton1Click(Sender: TObject);
 var  SP          : TADOStoredProc;
 begin
@@ -207,19 +194,19 @@ begin
 
   SP := TADOStoredProc.Create(nil);
   SP.Connection := fmMain.Lis;
-  SP.ProcedureName := 'sp_lowclaim_modify';
+  SP.ProcedureName := 'sp_low_claim_modify';
   SP.Parameters.Refresh;
 
-  SP.Parameters.ParamByName('@lowclaim_id'   ).Value := Flowclaim_id;
+  SP.Parameters.ParamByName('@low_claim_id'   ).Value := Flow_claim_id;
   SP.Parameters.ParamByName('@type_action'   ).Value := Ftype_action;
-  SP.Parameters.ParamByName('@lowclaim_type').Value := Flowclaim_type;
+  SP.Parameters.ParamByName('@low_claim_type').Value := Flow_claim_type;
   SP.Parameters.ParamByName('@contract_id'   ).Value := Fcontract_id;
-  SP.Parameters.ParamByName('@lowclaim_cod'  ).Value := cxTextEdit5.Text;
-  SP.Parameters.ParamByName('@lowclaim_date' ).Value := cxDateEdit1.Date;
-  SP.Parameters.ParamByName('@court_name'    ).Value := cxTextEdit1.Date;
+  SP.Parameters.ParamByName('@low_claim_cod'  ).Value := cxTextEdit5.EditValue;
+  SP.Parameters.ParamByName('@low_claim_date' ).Value := cxDateEdit1.Date;
+  SP.Parameters.ParamByName('@court_name'    ).Value := cxTextEdit1.EditValue;
   SP.Parameters.ParamByName('@claim_sum'     ).Value := cxCurrencyEdit1.EditValue;
   SP.Parameters.ParamByName('@gos_fee_sum'   ).Value := cxCurrencyEdit2.EditValue;
-  SP.Parameters.ParamByName('@court_num'     ).Value := cxtextEdit6.EditValue
+  SP.Parameters.ParamByName('@court_num'     ).Value := cxtextEdit6.EditValue;
   SP.Parameters.ParamByName('@court_status'  ).Value := cxComboBox2.ItemIndex;
 
   SP.Parameters.ParamByName('@prepare_documents').Value := cxTextEdit7.EditValue;;
@@ -235,24 +222,29 @@ begin
   SP.Parameters.ParamByName('@sum_7').Value := cxCurrencyEdit9.EditValue;
 
   SP.Parameters.ParamByName('@comment').Value := Memo2.EditValue;
-end;
+
   SP.ExecProc;
-  Fpretenzia_shape_id := SP.Parameters.ParamByName('@lowclaim_id').Value;
+  Flow_claim_id := SP.Parameters.ParamByName('@low_claim_id').Value;
 
   Screen.Cursor := crDefault;
 end;
 
-eprocedure TfmLowClaimAdd.cxCurrencyEdit3PropertiesChange(Sender: TObject);
-begin
 
-eprocedure TfmLowClaimAdd.cxCurrencyEdit6PropertiesChange(Sender: TObject);
+procedure TfmLowClaimAdd.cxButtonEdit2PropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
 begin
-
+  fmContract := TfmContract.Create(Application, True, 0);
+  fmContract.Visible := False;
+  fmContract.Query_Contract.Locate('contract_id', Fcontract_id, [loCaseInsensitive]);
+  if fmContract.ShowModal=mrOk then begin
+    Fcontract_id := fmContract._GetContractID;
+    cxButtonEdit2.EditValue := fmContract._GetFirmCustomerName;
+    cxTextEdit3.Text := fmContract.Query_Contract.FieldByName('contract_cod').AsString;
+    cxTextEdit2.Text := fmContract.Query_Contract.FieldByName('date_begin').AsString;
+    cxTextEdit9.Text := fmContract.Query_Contract.FieldByName('firm_self_name').AsString;
+  end;
 end;
 
-nd;
-
-nd.
+end.
 
 
 
