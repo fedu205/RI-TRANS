@@ -205,31 +205,47 @@ object fmLowClaim: TfmLowClaim
         item
           Format = '0'
           Kind = skCount
-          Column = cxGrid1DBBandedTableView1firm_customer_name
+          Column = cxGrid1DBBandedTableView1low_claim_cod
         end
         item
           Format = '#,##0.00'
           Kind = skSum
+          Column = cxGrid1DBBandedTableView1sum_1
         end
         item
           Format = '#,##0.00'
           Kind = skSum
+          Column = cxGrid1DBBandedTableView1sum_2
         end
         item
           Format = '#,##0.00'
           Kind = skSum
+          Column = cxGrid1DBBandedTableView1sum_3
         end
         item
           Format = '#,##0.00'
           Kind = skSum
+          Column = cxGrid1DBBandedTableView1sum_5
         end
         item
           Format = '#,##0.00'
           Kind = skSum
+          Column = cxGrid1DBBandedTableView1sum_6
         end
         item
           Format = '#,##0.00'
           Kind = skSum
+          Column = cxGrid1DBBandedTableView1sum_7
+        end
+        item
+          Format = '#,##0.00'
+          Kind = skSum
+          Column = cxGrid1DBBandedTableView1claim_sum
+        end
+        item
+          Format = '#,##0.00'
+          Kind = skSum
+          Column = cxGrid1DBBandedTableView1gos_fee_sum
         end>
       DataController.Summary.SummaryGroups = <>
       DataController.Summary.Options = [soMultipleSelectedRecords]
@@ -286,9 +302,9 @@ object fmLowClaim: TfmLowClaim
         DataBinding.FieldName = 'comment'
         DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 73
+        Width = 103
         Position.BandIndex = 0
-        Position.ColIndex = 21
+        Position.ColIndex = 25
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1contract_cod: TcxGridDBBandedColumn
@@ -377,8 +393,11 @@ object fmLowClaim: TfmLowClaim
         Caption = #1057#1091#1084#1084#1072' '#1080#1089#1082#1072
         DataBinding.FieldName = 'claim_sum'
         DataBinding.IsNullValueType = True
+        PropertiesClassName = 'TcxCurrencyEditProperties'
+        Properties.DisplayFormat = '#,##0.00'
         HeaderAlignmentVert = vaTop
-        Width = 70
+        Styles.Content = fmMain.cxStyle_AgreeFactInc_Sum
+        Width = 85
         Position.BandIndex = 0
         Position.ColIndex = 7
         Position.RowIndex = 0
@@ -387,6 +406,8 @@ object fmLowClaim: TfmLowClaim
         Caption = #1043#1086#1089#1087#1086#1096#1083#1080#1085#1072
         DataBinding.FieldName = 'gos_fee_sum'
         DataBinding.IsNullValueType = True
+        PropertiesClassName = 'TcxCurrencyEditProperties'
+        Properties.DisplayFormat = '#,##0.00'
         HeaderAlignmentVert = vaTop
         Width = 70
         Position.BandIndex = 0
@@ -413,6 +434,17 @@ object fmLowClaim: TfmLowClaim
         Position.ColIndex = 10
         Position.RowIndex = 0
       end
+      object cxGrid1DBBandedTableView1date_sz: TcxGridDBBandedColumn
+        Caption = #1044#1072#1090#1072' '#1057#1047
+        DataBinding.FieldName = 'date_sz'
+        DataBinding.IsNullValueType = True
+        HeaderAlignmentVert = vaTop
+        HeaderGlyphAlignmentVert = vaTop
+        Width = 64
+        Position.BandIndex = 0
+        Position.ColIndex = 11
+        Position.RowIndex = 0
+      end
       object cxGrid1DBBandedTableView1prepare_documents: TcxGridDBBandedColumn
         Caption = #1055#1086#1076#1075#1086#1090#1086#1074#1082#1072' '#1076#1086#1082#1091#1084#1077#1085#1090#1086#1074
         DataBinding.FieldName = 'prepare_documents'
@@ -420,7 +452,7 @@ object fmLowClaim: TfmLowClaim
         HeaderAlignmentVert = vaTop
         Width = 70
         Position.BandIndex = 0
-        Position.ColIndex = 11
+        Position.ColIndex = 12
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1court_data: TcxGridDBBandedColumn
@@ -430,37 +462,43 @@ object fmLowClaim: TfmLowClaim
         HeaderAlignmentVert = vaTop
         Width = 70
         Position.BandIndex = 0
-        Position.ColIndex = 12
+        Position.ColIndex = 13
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1sum_1: TcxGridDBBandedColumn
         Caption = #1042#1079#1099#1089#1082#1072#1085#1086' '#1087#1086' '#1088#1077#1096#1077#1085#1080#1102' ('#1096#1090#1088#1072#1092')'
         DataBinding.FieldName = 'sum_1'
         DataBinding.IsNullValueType = True
-        HeaderAlignmentVert = vaTop
-        Width = 70
-        Position.BandIndex = 0
-        Position.ColIndex = 13
-        Position.RowIndex = 0
-      end
-      object cxGrid1DBBandedTableView1sum_2: TcxGridDBBandedColumn
-        Caption = #1042#1079#1099#1089#1082#1072#1085#1086' '#1087#1086' '#1088#1077#1096#1077#1085#1080#1102' ('#1075#1086#1089#1087#1086#1096#1083#1080#1085#1072')'
-        DataBinding.FieldName = 'sum_2'
-        DataBinding.IsNullValueType = True
+        PropertiesClassName = 'TcxCurrencyEditProperties'
+        Properties.DisplayFormat = '#,##0.00'
         HeaderAlignmentVert = vaTop
         Width = 70
         Position.BandIndex = 0
         Position.ColIndex = 14
         Position.RowIndex = 0
       end
-      object cxGrid1DBBandedTableView1sum_3: TcxGridDBBandedColumn
-        Caption = #1056#1072#1079#1084#1077#1088' '#1075'/'#1087' '#1076#1083#1103' '#1074#1086#1079#1074#1088#1072#1090#1072' '#1080#1079' '#1060#1041' '#1056#1060
-        DataBinding.FieldName = 'sum_3'
+      object cxGrid1DBBandedTableView1sum_2: TcxGridDBBandedColumn
+        Caption = #1042#1079#1099#1089#1082#1072#1085#1086' '#1087#1086' '#1088#1077#1096#1077#1085#1080#1102' ('#1075#1086#1089#1087#1086#1096#1083#1080#1085#1072')'
+        DataBinding.FieldName = 'sum_2'
         DataBinding.IsNullValueType = True
+        PropertiesClassName = 'TcxCurrencyEditProperties'
+        Properties.DisplayFormat = '#,##0.00'
         HeaderAlignmentVert = vaTop
         Width = 70
         Position.BandIndex = 0
         Position.ColIndex = 15
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1sum_3: TcxGridDBBandedColumn
+        Caption = #1056#1072#1079#1084#1077#1088' '#1075'/'#1087' '#1076#1083#1103' '#1074#1086#1079#1074#1088#1072#1090#1072' '#1080#1079' '#1060#1041' '#1056#1060
+        DataBinding.FieldName = 'sum_3'
+        DataBinding.IsNullValueType = True
+        PropertiesClassName = 'TcxCurrencyEditProperties'
+        Properties.DisplayFormat = '#,##0.00'
+        HeaderAlignmentVert = vaTop
+        Width = 70
+        Position.BandIndex = 0
+        Position.ColIndex = 16
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1access_code: TcxGridDBBandedColumn
@@ -470,47 +508,53 @@ object fmLowClaim: TfmLowClaim
         HeaderAlignmentVert = vaTop
         Width = 70
         Position.BandIndex = 0
-        Position.ColIndex = 16
+        Position.ColIndex = 17
         Position.RowIndex = 0
       end
-      object cxGrid1DBBandedTableView1sum_4: TcxGridDBBandedColumn
+      object cxGrid1DBBandedTableView1penalty_num: TcxGridDBBandedColumn
         Caption = #8470' '#1087'/'#1087' '#1086' '#1074#1079#1099#1089#1082#1072#1085#1080#1080'/'#1076#1086#1073#1088#1086#1074#1086#1083#1100#1085#1086#1081' '#1086#1087#1083#1072#1090#1077
-        DataBinding.FieldName = 'sum_4'
+        DataBinding.FieldName = 'penalty_num'
         DataBinding.IsNullValueType = True
         HeaderAlignmentVert = vaTop
-        Width = 70
+        Width = 108
         Position.BandIndex = 0
-        Position.ColIndex = 17
+        Position.ColIndex = 18
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1sum_5: TcxGridDBBandedColumn
         Caption = #1057#1091#1084#1084#1072' '#1086#1087#1083#1072#1090#1099'/ '#1074#1079#1099#1089#1082#1072#1085#1080#1103
         DataBinding.FieldName = 'sum_5'
         DataBinding.IsNullValueType = True
-        HeaderAlignmentVert = vaTop
-        Width = 70
-        Position.BandIndex = 0
-        Position.ColIndex = 18
-        Position.RowIndex = 0
-      end
-      object cxGrid1DBBandedTableView1sum_6: TcxGridDBBandedColumn
-        Caption = #1042#1079#1099#1089#1082#1072#1085#1086
-        DataBinding.FieldName = 'sum_6'
-        DataBinding.IsNullValueType = True
+        PropertiesClassName = 'TcxCurrencyEditProperties'
+        Properties.DisplayFormat = '#,##0.00'
         HeaderAlignmentVert = vaTop
         Width = 70
         Position.BandIndex = 0
         Position.ColIndex = 19
         Position.RowIndex = 0
       end
-      object cxGrid1DBBandedTableView1sum_7: TcxGridDBBandedColumn
-        Caption = #1057#1082#1086#1088#1088#1077#1082#1090#1080#1088#1086#1074#1072#1085#1086'/'#1086#1090#1082#1072#1079#1072#1085#1086
-        DataBinding.FieldName = 'sum_7'
+      object cxGrid1DBBandedTableView1sum_6: TcxGridDBBandedColumn
+        Caption = #1042#1079#1099#1089#1082#1072#1085#1086
+        DataBinding.FieldName = 'sum_6'
         DataBinding.IsNullValueType = True
+        PropertiesClassName = 'TcxCurrencyEditProperties'
+        Properties.DisplayFormat = '#,##0.00'
         HeaderAlignmentVert = vaTop
         Width = 70
         Position.BandIndex = 0
         Position.ColIndex = 20
+        Position.RowIndex = 0
+      end
+      object cxGrid1DBBandedTableView1sum_7: TcxGridDBBandedColumn
+        Caption = #1057#1082#1086#1088#1088#1077#1082#1090#1080#1088#1086#1074#1072#1085#1086'/'#1086#1090#1082#1072#1079#1072#1085#1086
+        DataBinding.FieldName = 'sum_7'
+        DataBinding.IsNullValueType = True
+        PropertiesClassName = 'TcxCurrencyEditProperties'
+        Properties.DisplayFormat = '#,##0.00'
+        HeaderAlignmentVert = vaTop
+        Width = 70
+        Position.BandIndex = 0
+        Position.ColIndex = 21
         Position.RowIndex = 0
       end
       object cxGrid1DBBandedTableView1FIO_users_owner: TcxGridDBBandedColumn

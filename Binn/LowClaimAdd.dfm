@@ -3,7 +3,7 @@ object fmLowClaimAdd: TfmLowClaimAdd
   Top = 144
   Caption = #1048#1089#1082#1086#1074#1086#1077' '#1079#1072#1103#1074#1083#1077#1085#1080#1077' ('#8470' '#1079#1072#1087#1080#1089#1080'...)'
   ClientHeight = 541
-  ClientWidth = 450
+  ClientWidth = 439
   Color = clBtnFace
   Constraints.MinHeight = 580
   Constraints.MinWidth = 420
@@ -150,15 +150,14 @@ object fmLowClaimAdd: TfmLowClaimAdd
   object Panel2: TPanel
     Left = 0
     Top = 56
-    Width = 450
+    Width = 439
     Height = 183
     Align = alTop
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 1
-    ExplicitWidth = 448
     DesignSize = (
-      450
+      439
       183)
     object Label1: TLabel
       Left = 4
@@ -320,7 +319,7 @@ object fmLowClaimAdd: TfmLowClaimAdd
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 2
-      Width = 311
+      Width = 300
     end
     object cxCurrencyEdit2: TcxCurrencyEdit
       Left = 334
@@ -416,8 +415,7 @@ object fmLowClaimAdd: TfmLowClaimAdd
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 5
-      ExplicitWidth = 114
-      Width = 116
+      Width = 105
     end
     object cxComboBox2: TcxComboBox
       Left = 288
@@ -487,7 +485,7 @@ object fmLowClaimAdd: TfmLowClaimAdd
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 7
-      Width = 303
+      Width = 292
     end
     object cxTextEdit8: TcxTextEdit
       Left = 141
@@ -522,7 +520,7 @@ object fmLowClaimAdd: TfmLowClaimAdd
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 8
-      Width = 303
+      Width = 292
     end
     object cxDateEdit5: TcxDateEdit
       Left = 91
@@ -562,15 +560,14 @@ object fmLowClaimAdd: TfmLowClaimAdd
   object Panel4: TPanel
     Left = 0
     Top = 0
-    Width = 450
+    Width = 439
     Height = 56
     Align = alTop
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 0
-    ExplicitWidth = 404
     DesignSize = (
-      450
+      439
       56)
     object Label2: TLabel
       Left = 4
@@ -580,7 +577,7 @@ object fmLowClaimAdd: TfmLowClaimAdd
       Caption = #1050#1086#1085#1090#1088#1072#1075#1077#1085#1090'..................'
     end
     object cxTextEdit2: TcxTextEdit
-      Left = 372
+      Left = 361
       Top = 28
       Anchors = [akTop, akRight]
       Properties.ReadOnly = True
@@ -627,7 +624,7 @@ object fmLowClaimAdd: TfmLowClaimAdd
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 1
-      Width = 143
+      Width = 132
     end
     object cxButtonEdit2: TcxButtonEdit
       Tag = 1001
@@ -664,7 +661,7 @@ object fmLowClaimAdd: TfmLowClaimAdd
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 2
-      Width = 351
+      Width = 340
     end
     object cxTextEdit9: TcxTextEdit
       Left = 7
@@ -689,25 +686,23 @@ object fmLowClaimAdd: TfmLowClaimAdd
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 3
-      Width = 214
+      Width = 203
     end
   end
   object Panel1: TPanel
     Left = 0
     Top = 504
-    Width = 450
+    Width = 439
     Height = 37
     Align = alBottom
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 3
-    ExplicitTop = 324
-    ExplicitWidth = 404
     DesignSize = (
-      450
+      439
       37)
     object cxButton1: TcxButton
-      Left = 284
+      Left = 273
       Top = 6
       Width = 76
       Height = 25
@@ -788,10 +783,9 @@ object fmLowClaimAdd: TfmLowClaimAdd
       OptionsImage.NumGlyphs = 2
       TabOrder = 0
       OnClick = cxButton1Click
-      ExplicitLeft = 238
     end
     object cxButton3: TcxButton
-      Left = 368
+      Left = 357
       Top = 6
       Width = 76
       Height = 25
@@ -872,20 +866,16 @@ object fmLowClaimAdd: TfmLowClaimAdd
         EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00D8E9EC00}
       OptionsImage.NumGlyphs = 2
       TabOrder = 1
-      ExplicitLeft = 322
     end
   end
   object GroupBox1: TGroupBox
     Left = 0
     Top = 445
-    Width = 450
+    Width = 439
     Height = 59
     Align = alClient
     Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
     TabOrder = 2
-    ExplicitTop = 536
-    ExplicitWidth = 489
-    ExplicitHeight = 206
     object Memo2: TcxMemo
       Left = 2
       Top = 15
@@ -906,22 +896,22 @@ object fmLowClaimAdd: TfmLowClaimAdd
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
       TabOrder = 0
-      ExplicitWidth = 400
-      ExplicitHeight = 60
       Height = 42
-      Width = 446
+      Width = 435
     end
   end
   object Panel3: TPanel
     Left = 0
     Top = 239
-    Width = 450
+    Width = 439
     Height = 206
     Align = alTop
     BevelInner = bvRaised
     BevelOuter = bvLowered
     TabOrder = 4
-    ExplicitWidth = 448
+    DesignSize = (
+      439
+      206)
     object Label16: TLabel
       Left = 48
       Top = 13
@@ -1093,33 +1083,6 @@ object fmLowClaimAdd: TfmLowClaimAdd
       TabOrder = 3
       Width = 140
     end
-    object cxCurrencyEdit6: TcxCurrencyEdit
-      Left = 249
-      Top = 105
-      EditValue = 0.000000000000000000
-      Properties.DisplayFormat = '#,##0.00'
-      Properties.EditFormat = '0.00'
-      Style.LookAndFeel.NativeStyle = False
-      Style.LookAndFeel.ScrollbarMode = sbmClassic
-      Style.LookAndFeel.SkinName = 'Coffee'
-      Style.Shadow = False
-      Style.TextStyle = [fsBold]
-      StyleDisabled.LookAndFeel.NativeStyle = False
-      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
-      StyleDisabled.TextColor = clBlack
-      StyleFocused.LookAndFeel.NativeStyle = False
-      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleFocused.LookAndFeel.SkinName = 'Coffee'
-      StyleHot.LookAndFeel.NativeStyle = False
-      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleHot.LookAndFeel.SkinName = 'Coffee'
-      StyleReadOnly.LookAndFeel.NativeStyle = False
-      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
-      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
-      TabOrder = 4
-      Width = 140
-    end
     object cxCurrencyEdit7: TcxCurrencyEdit
       Left = 249
       Top = 129
@@ -1144,7 +1107,7 @@ object fmLowClaimAdd: TfmLowClaimAdd
       StyleReadOnly.LookAndFeel.NativeStyle = False
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
-      TabOrder = 5
+      TabOrder = 4
       Width = 140
     end
     object cxCurrencyEdit8: TcxCurrencyEdit
@@ -1171,7 +1134,7 @@ object fmLowClaimAdd: TfmLowClaimAdd
       StyleReadOnly.LookAndFeel.NativeStyle = False
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
-      TabOrder = 6
+      TabOrder = 5
       Width = 140
     end
     object cxCurrencyEdit9: TcxCurrencyEdit
@@ -1198,8 +1161,43 @@ object fmLowClaimAdd: TfmLowClaimAdd
       StyleReadOnly.LookAndFeel.NativeStyle = False
       StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
       StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
-      TabOrder = 7
+      TabOrder = 6
       Width = 140
+    end
+    object cxTextEdit10: TcxTextEdit
+      Left = 249
+      Top = 105
+      Anchors = [akLeft, akTop, akRight]
+      ParentFont = False
+      Properties.Alignment.Horz = taLeftJustify
+      Properties.ReadOnly = False
+      Style.Color = clWindow
+      Style.Font.Charset = DEFAULT_CHARSET
+      Style.Font.Color = clBlue
+      Style.Font.Height = -11
+      Style.Font.Name = 'MS Sans Serif'
+      Style.Font.Style = [fsBold]
+      Style.LookAndFeel.NativeStyle = False
+      Style.LookAndFeel.ScrollbarMode = sbmClassic
+      Style.LookAndFeel.SkinName = 'Coffee'
+      Style.Shadow = False
+      Style.TextColor = clBlack
+      Style.IsFontAssigned = True
+      StyleDisabled.LookAndFeel.NativeStyle = False
+      StyleDisabled.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleDisabled.LookAndFeel.SkinName = 'Coffee'
+      StyleDisabled.TextColor = clBlack
+      StyleFocused.LookAndFeel.NativeStyle = False
+      StyleFocused.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleFocused.LookAndFeel.SkinName = 'Coffee'
+      StyleHot.LookAndFeel.NativeStyle = False
+      StyleHot.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleHot.LookAndFeel.SkinName = 'Coffee'
+      StyleReadOnly.LookAndFeel.NativeStyle = False
+      StyleReadOnly.LookAndFeel.ScrollbarMode = sbmClassic
+      StyleReadOnly.LookAndFeel.SkinName = 'Coffee'
+      TabOrder = 7
+      Width = 184
     end
   end
   object cxPropertiesStore1: TcxPropertiesStore

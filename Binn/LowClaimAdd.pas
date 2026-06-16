@@ -1,7 +1,5 @@
 ﻿unit LowClaimAdd;
-
 interface
-
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ComCtrls, StdCtrls, ExtCtrls, Db, ADODB, Variants, Menus,
@@ -17,7 +15,6 @@ uses
   dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxSkinTheBezier, cxButtons,
   dxSkinOffice2019Colorful, dxSkinBasic, dxSkinOffice2019Black,
   dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxSkinWXI, dxCoreGraphics, cxLabel;
-
 type
   TfmLowClaimAdd = class(TForm)
     Panel2: TPanel;
@@ -61,7 +58,6 @@ type
     Label18: TLabel;
     Label4: TLabel;
     cxTextEdit4: TcxTextEdit;
-    cxCurrencyEdit6: TcxCurrencyEdit;
     Label19: TLabel;
     Label20: TLabel;
     cxCurrencyEdit7: TcxCurrencyEdit;
@@ -72,6 +68,7 @@ type
     cxDateEdit5: TcxDateEdit;
     cxButtonEdit2: TcxButtonEdit;
     cxTextEdit9: TcxTextEdit;
+    cxTextEdit10: TcxTextEdit;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure cxButton1Click(Sender: TObject);
@@ -89,14 +86,11 @@ type
     property _SetUpdate : integer write SetUpdate;
     procedure _SetInsert;
   end;
-
 var
   fmLowClaimAdd: TfmLowClaimAdd;
-
 implementation
       uses Main, Raznoe, Contract, ClientInvoice;
 {$R *.DFM}
-
 constructor TfmLowClaimAdd.Create(AOwner: TApplication; action: boolean; low_claim_type: integer);
 begin
   Screen.Cursor := crHourglass;
@@ -105,31 +99,22 @@ begin
   Ftype_action := 0;
   Flow_claim_type := low_claim_type;
 
-
   Query_Contract.Close;
-
   cxDateEdit1.EditValue := Date;
   cxDateEdit5.EditValue := Date;
-
   Screen.Cursor := crDefault;
 end;
-
 procedure TfmLowClaimAdd._SetInsert;
 begin
   Screen.Cursor := crHourglass;
-
   cxDateEdit1.Date := Date();
-
   Query_Contract.Close;
   Query_Contract.Open;
   cxTextEdit2.Text := Query_Contract.FieldByName('contract_cod').AsString;
 
-
   MonitorEventFormOpen('NEW_FORM', self.Name, fmMain.Lis, -9);
-
   Screen.Cursor := crDefault;
 end;
-
 procedure TfmLowClaimAdd.SetUpdate(low_claim_id : integer);
 var Q : TADOQuery;
 begin
@@ -137,66 +122,55 @@ begin
   Ftype_action := 1;
   Flow_claim_id := low_claim_id;
   Caption := Caption + ' (' + IntToStr(Flow_claim_id) + ')';
-
   Q := TADOQuery.Create(nil);
   Q.Connection := fmMain.Lis;
   Q.SQL.Add('SELECT * FROM view_low_claim WHERE low_claim_id='+IntToStr(Flow_claim_id));
   Q.Open;
-
   Fcontract_id := Q.FieldByName('contract_id').AsInteger;
   cxButtonEdit2.EditValue := Q.FieldByName('firm_customer_name').AsString;
   cxTextEdit3.Text := Q.FieldByName('contract_cod').AsString;
   cxTextEdit2.Text := Q.FieldByName('contract_date_begin').AsString;
   cxTextEdit9.Text := Q.FieldByName('firm_self_name').AsString;
-
   cxDateEdit1.Date := Q.FieldByName('low_claim_date').AsDatetime;
   cxTextEdit5.Text := Q.FieldByName('low_claim_cod').AsString;
-
   cxTextEdit1.EditValue := Q.FieldByName('court_name'    ).Value;
   cxCurrencyEdit1.EditValue := Q.FieldByName('claim_sum'     ).Value;
   cxCurrencyEdit2.EditValue := Q.FieldByName('gos_fee_sum'   ).Value;
+  cxDateEdit5.EditValue := Q.FieldByName('date_sz'     ).Value;
   cxtextEdit6.EditValue := Q.FieldByName('court_num'     ).Value;
   cxComboBox2.ItemIndex := Q.FieldByName('court_status'  ).Value;
-
   cxTextEdit7.EditValue := Q.FieldByName('prepare_documents').Value;
   cxTextEdit8.EditValue := Q.FieldByName('court_data'       ).Value;
-
   cxCurrencyEdit3.EditValue := Q.FieldByName('sum_1').Value;
   cxCurrencyEdit4.EditValue := Q.FieldByName('sum_2').Value;
   cxCurrencyEdit5.EditValue := Q.FieldByName('sum_3').Value;
   cxTextEdit4.EditValue := Q.FieldByName('access_code').Value;
-  cxCurrencyEdit6.EditValue := Q.FieldByName('sum_4').Value;
+  cxTextEdit10.EditValue := Q.FieldByName('penalty_num').Value;
+//  cxCurrencyEdit6.EditValue := Q.FieldByName('sum_4').Value;
   cxCurrencyEdit7.EditValue := Q.FieldByName('sum_5').Value;
   cxCurrencyEdit8.EditValue := Q.FieldByName('sum_6').Value;
   cxCurrencyEdit9.EditValue := Q.FieldByName('sum_7').Value;
-
   Memo2.EditValue := Q.FieldByName('comment').Value;
   Q.Free;
-
   MonitorEventFormOpen('UPDATE_FORM', self.Name, fmMain.Lis, Flow_claim_id);
   Screen.Cursor := crDefault;
 end;
-
 procedure TfmLowClaimAdd.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   Action := caFree;
 end;
-
 procedure TfmLowClaimAdd.FormCreate(Sender: TObject);
 begin
   Fcontract_id := -1;
 end;
-
 procedure TfmLowClaimAdd.cxButton1Click(Sender: TObject);
 var  SP          : TADOStoredProc;
 begin
   Screen.Cursor := crHourglass;
-
   SP := TADOStoredProc.Create(nil);
   SP.Connection := fmMain.Lis;
   SP.ProcedureName := 'sp_low_claim_modify';
   SP.Parameters.Refresh;
-
   SP.Parameters.ParamByName('@low_claim_id'   ).Value := Flow_claim_id;
   SP.Parameters.ParamByName('@type_action'   ).Value := Ftype_action;
   SP.Parameters.ParamByName('@low_claim_type').Value := Flow_claim_type;
@@ -208,27 +182,22 @@ begin
   SP.Parameters.ParamByName('@gos_fee_sum'   ).Value := cxCurrencyEdit2.EditValue;
   SP.Parameters.ParamByName('@court_num'     ).Value := cxtextEdit6.EditValue;
   SP.Parameters.ParamByName('@court_status'  ).Value := cxComboBox2.ItemIndex;
-
   SP.Parameters.ParamByName('@prepare_documents').Value := cxTextEdit7.EditValue;;
   SP.Parameters.ParamByName('@court_data'       ).Value := cxTextEdit8.EditValue;;
-
   SP.Parameters.ParamByName('@sum_1').Value := cxCurrencyEdit3.EditValue;
   SP.Parameters.ParamByName('@sum_2').Value := cxCurrencyEdit4.EditValue;
   SP.Parameters.ParamByName('@sum_3').Value := cxCurrencyEdit5.EditValue;
   SP.Parameters.ParamByName('@access_code').Value := cxTextEdit4.EditValue;
-  SP.Parameters.ParamByName('@sum_4').Value := cxCurrencyEdit6.EditValue;
+  SP.Parameters.ParamByName('@penalty_num').Value := cxTextEdit10.EditValue;
+//  SP.Parameters.ParamByName('@sum_4').Value := cxCurrencyEdit6.EditValue;
   SP.Parameters.ParamByName('@sum_5').Value := cxCurrencyEdit7.EditValue;
   SP.Parameters.ParamByName('@sum_6').Value := cxCurrencyEdit8.EditValue;
   SP.Parameters.ParamByName('@sum_7').Value := cxCurrencyEdit9.EditValue;
-
   SP.Parameters.ParamByName('@comment').Value := Memo2.EditValue;
-
   SP.ExecProc;
   Flow_claim_id := SP.Parameters.ParamByName('@low_claim_id').Value;
-
   Screen.Cursor := crDefault;
 end;
-
 
 procedure TfmLowClaimAdd.cxButtonEdit2PropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
 begin
@@ -245,11 +214,6 @@ begin
 end;
 
 end.
-
-
-
-
-
 
 
 

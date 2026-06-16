@@ -123,10 +123,11 @@ type
     cxGrid1DBBandedTableView1sum_2: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1sum_3: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1access_code: TcxGridDBBandedColumn;
-    cxGrid1DBBandedTableView1sum_4: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1penalty_num: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1sum_5: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1sum_6: TcxGridDBBandedColumn;
     cxGrid1DBBandedTableView1sum_7: TcxGridDBBandedColumn;
+    cxGrid1DBBandedTableView1date_sz: TcxGridDBBandedColumn;
     procedure dxBarButton2Click(Sender: TObject);
     procedure cxGrid1DBBandedTableView1KeyPress(Sender: TObject; var Key: Char);
     procedure cxGrid1DBBandedTableView1FocusedItemChanged(Sender: TcxCustomGridTableView; APrevFocusedItem, AFocusedItem: TcxCustomGridTableItem);
