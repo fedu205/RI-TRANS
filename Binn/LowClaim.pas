@@ -244,7 +244,7 @@ procedure TfmLowClaim.N3Click(Sender: TObject);
 var          i : integer;
   SP : TADOStoredProc;
 begin
-  if Application.MessageBox('Вы уверены, что хотите удалить претензию?', 'Внимание', MB_OKCANCEL) = IDOK then begin
+  if Application.MessageBox('Вы уверены, что хотите удалить судебный иск?', 'Внимание', MB_OKCANCEL) = IDOK then begin
     Screen.Cursor := crHourglass;
 
     SP := TADOStoredProc.Create(nil);

@@ -618,10 +618,14 @@ object fmLowClaim: TfmLowClaim
     object cxTabSheet1: TcxTabSheet
       Caption = #1042#1093#1086#1076#1103#1097#1080#1077' '#1080#1089#1082#1080
       ImageIndex = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
     end
     object cxTabSheet2: TcxTabSheet
       Caption = #1048#1089#1093#1086#1076#1103#1097#1080#1077' '#1080#1089#1082#1080
       ImageIndex = 1
+      ExplicitTop = 0
+      ExplicitWidth = 0
     end
   end
   object cxPageControl2: TcxPageControl
@@ -642,6 +646,9 @@ object fmLowClaim: TfmLowClaim
     object cxTabSheet4: TcxTabSheet
       Caption = #1054#1087#1083#1072#1090#1099' '#1087#1086' '#1080#1089#1082#1091
       ImageIndex = 34
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid3: TcxGrid
         Left = 0
         Top = 0
