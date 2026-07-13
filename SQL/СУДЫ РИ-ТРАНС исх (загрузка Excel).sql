@@ -10,47 +10,61 @@
 --select getdate()
 --select convert(datetime, '21.01.2026 11:45', 104)
 --delete __in_RITRANS where [Номер и дата письма / претензии (исх#)]	 is null
-select * from [dbo].[__СУДЫ исх РИ-ИНВЕСТ]
+select * from [dbo].[__СУДЫ РИ-ТРАНС исх]
 
 drop table if exists #x
 ;with cte as
 (
-select trim(replace(ltrim([Номер Генерального соглашения и дата]), '№', '')) as contract_cod, 
-	trim(replace([Исх № искового заявления], '№', '')) as low_claim_cod, 
- 	convert(datetime, right(trim(replace([Исх № искового заявления], ' г.', '')), 10), 104) as [low_claim_date], 
+select --trim(replace(ltrim([Договор]), '№', '')) as contract_cod, 
+trim(left(trim(replace(ltrim([Договор]), '№', '')), 12)) as contract_cod,
+	trim([Исх № искового заявления]) as low_claim_cod, 
+ 	getdate() as [low_claim_date], 
 	[Наименование суда] as [court_name], 
 	[Сумма иска, руб#] as [claim_sum], 
-	[Госпошлина, руб# ] as [gos_fee_sum], 
-	 [Номера претензий]	as pretinzia_cod,
-	 [Период простоя] as stay_period,
+	[Размер госпошлины] as [gos_fee_sum], 
+	--[Номера претензий]	as pretinzia_cod,
+	[Предмет требований] as stay_period,
 	[Номер дела] as [court_num], 
-	[Упрощенный порядок/ Общий порядок / рассмотрено / оплачено] as [court_status], 
-	convert(datetime, trim(replace(replace(REPLACE([Дата СЗ], '(МСК)',''), 'СЗ', ''), ',', '')), 104) as date_sz,
-	[Подготовка документов] as [prepare_documents], 
-	[ Данные о судебном акте] as [court_data], 
-	[Взыскано по Решению / Постановлению (штраф), руб# ] as [sum_1], 	
-	[Взыскано по Решению (госпошлина), руб# ]as [sum_2], 
-	[размер г/п для возврата из ФБ РФ, руб#] as [sum_3], 
-	[Код доступа] as access_code, 
-	[№ п/п о взыскании/добровольной оплате] as [penalty_num], 
+	[Порядок рассмотрения] as [court_status], 
+	convert(datetime, trim(replace(replace(REPLACE([Дата СЗ / код доступа], '(МСК)',''), 'СЗ', ''), ',', '')), 104) as date_sz,
+	[Необходимые действия ] as [prepare_documents], 
+	[Комментарии / Судебный акт] as [court_data], 
+	--[Взыскано по Решению / Постановлению (штраф), руб# ] as [sum_1], 	
+	--[Взыскано по Решению (госпошлина), руб# ]as [sum_2], 
+	--[размер г/п для возврата из ФБ РФ, руб#] as [sum_3], 
+	--[Код доступа] as access_code, 
+	--[№ п/п о взыскании/добровольной оплате] as [penalty_num], 
+	--null as [sum_4],
+	[Сумма взыскания, руб#] as [sum_5], 
+	--[Взыскано, руб#] as [sum_6], 
+	--[Скорректировано/отказано] as [sum_7],
+
+	null	as pretinzia_cod,
+	
+	null as [sum_1], 	
+	null as [sum_2], 
+	null as [sum_3], 
+	null as access_code, 
+	null as [penalty_num], 
 	null as [sum_4],
-	[Сумма оплаты/ взыскания, руб#] as [sum_5], 
-	[Взыскано, руб#] as [sum_6], 
-	[Скорректировано/отказано] as [sum_7],
+	null as [sum_6], 
+	null as [sum_7],
+
+
 	case
-		when [Упрощенный порядок/ Общий порядок / рассмотрено / оплачено] = 'Общий' then 0
-		when [Упрощенный порядок/ Общий порядок / рассмотрено / оплачено] = 'упрощенный' then 1
-		when [Упрощенный порядок/ Общий порядок / рассмотрено / оплачено] = 'АЖ' then 2
-		when [Упрощенный порядок/ Общий порядок / рассмотрено / оплачено] = 'КЖ' then 3
-		when [Упрощенный порядок/ Общий порядок / рассмотрено / оплачено] = 'Оплачено' then 4
-		when [Упрощенный порядок/ Общий порядок / рассмотрено / оплачено] = 'Оплачено, ГП' then 5
-		when [Упрощенный порядок/ Общий порядок / рассмотрено / оплачено] = 'Рассмотрено, ГП' then 6
-		when [Упрощенный порядок/ Общий порядок / рассмотрено / оплачено] = 'Рассмотрено, ИЛ' then 7
+		when [Порядок рассмотрения] = 'Общий' then 0
+		when [Порядок рассмотрения] = 'упрощенный' then 1
+		when [Порядок рассмотрения] = 'АЖ' then 2
+		when [Порядок рассмотрения] = 'КЖ' then 3
+		when [Порядок рассмотрения] = 'Оплачено' then 4
+		when [Порядок рассмотрения] = 'Оплачено, ГП' then 5
+		when [Порядок рассмотрения] = 'Рассмотрено, ГП' then 6
+		when [Порядок рассмотрения] = 'Рассмотрено, ИЛ' then 7
 
 	end as court_status_type,
-	[Сроки, комментарии] as comment
+	[Необходимые действия ] as comment
 
-	from [dbo].[__СУДЫ исх РИ-ИНВЕСТ]
+	from [dbo].[__СУДЫ РИ-ТРАНС исх]
 )
 select c.contract_id, c.firm_customer_name, pr.* 
 into #x
@@ -62,7 +76,7 @@ select * from #x
 
 declare @id int,
 		@contract_id int, 
-	@low_claim_type		int = 0,
+	@low_claim_type		int,
 	@low_claim_cod		varchar(100) = NULL,
 	@low_claim_date		datetime = NULL,
 	@court_name			varchar(100) = NULL,
@@ -123,4 +137,5 @@ end
 close cur
 deallocate cur
 
-select * from view_low_claim
+select * from low_claim
+
