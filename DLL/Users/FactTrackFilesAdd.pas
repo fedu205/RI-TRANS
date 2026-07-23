@@ -184,6 +184,8 @@ begin
             cxDateEdit1.EditValue := null;
             Ffile_name := OpenDialog.FileName;
 
+            cxButtonEdit6.EditValue := ExtractFileName(Ffile_name);
+
             exApp := CreateOleObject('Excel.Application');
             exApp.Workbooks.Open(Ffile_name);
             exWks := exApp.ActiveWorkbook.WorkSheets[1];
