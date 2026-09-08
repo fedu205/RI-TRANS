@@ -72,7 +72,9 @@ type
     function  GetProcedureFromRes(procedure_name: string): string;
     procedure LisSleep();
 
-    function CopyCod(s: string): string;
+    function CopyName(s: Variant): string;
+    function CopyCod (s: Variant): string;
+    function GetValFromExcel(exWks: Variant; col_name: string; row: Integer; strList: TStringList): Variant;
 
     procedure Execute; override;
   public
@@ -4024,20 +4026,102 @@ begin
 end;
 
 
-function TThreadFiles.CopyCod(s: string): string;
+function TThreadFiles.CopyName(s: Variant): string;
 var res : string;
 begin
-  res := '';
-  if s <> '' then begin
-    if (Pos('(', s) <> 0) and (Pos(')', s) <> 0) then begin
-      s := ReverseString(s);
-      res := Copy(s, Pos(')', s)+1, Pos('(', s) - Pos(')', s)-1);
-      res := ReverseString(res);
+  if s = null then begin
+    res := '';
+  end else begin
+    res := '';
+    if s <> '' then begin
+      if (Pos('(', s) <> 0) then begin
+        res := LeftStr(s, Pos('(', s)-1);
+      end;
     end;
   end;
 
   Result := res;
 end;
+
+function TThreadFiles.CopyCod(s: Variant): string;
+var res : string;
+begin
+  if s = null then begin
+    res := '';
+  end else begin
+    res := '';
+    if s <> '' then begin
+      if (Pos('(', s) <> 0) and (Pos(')', s) <> 0) then begin
+        s := ReverseString(s);
+        res := Copy(s, Pos(')', s)+1, Pos('(', s) - Pos(')', s)-1);
+        res := ReverseString(res);
+      end;
+    end;
+  end;
+
+  Result := res;
+end;
+
+
+//function TThreadFiles.CopyCod(s: string): string;
+//var res : string;
+//begin
+//  res := '';
+//  if s <> '' then begin
+//    if (Pos('(', s) <> 0) and (Pos(')', s) <> 0) then begin
+//      s := ReverseString(s);
+//      res := Copy(s, Pos(')', s)+1, Pos('(', s) - Pos(')', s)-1);
+//      res := ReverseString(res);
+//    end;
+//  end;
+//
+//  Result := res;
+//end;
+
+
+function TThreadFiles.GetValFromExcel(exWks: Variant; col_name: string; row: Integer; strList: TStringList): Variant;
+var res : Variant;
+    val : Variant;
+    col : integer;
+    col_str : string;
+    i : integer;
+begin
+  try
+
+    col := -9;
+
+    for i := 0 to strList.Count-1 do begin
+      col_str := Trim(LowerCase(strList.Strings[i]));
+
+      if col_str = LowerCase(col_name) then begin
+        col := i+1;
+        break;
+      end;
+    end;
+
+
+
+    if col = -9 then
+      res := null
+    else if (TVarData(exWks.Cells[row,col].Value).VType = varEmpty) then
+      res := null
+    else begin
+      val := exWks.Cells[row,col].Value;
+
+      if val = null then
+        res := null
+      else if VarToStrDef(val,'') = '' then
+        res := null
+      else
+        res := exWks.Cells[row,col].Value;
+    end;
+  except
+    res := null;
+  end;
+
+  Result := res;
+end;
+
 
 function TThreadFiles.SaveDislExcel(files_track_id: integer): boolean;
 var      connect : TADOConnection;
@@ -4086,6 +4170,8 @@ sp_fact_track_files_modify : TADOStoredProc;
            sp_vagon_modify : TADOStoredProc;
    sp_fact_track_trip_find : TADOStoredProc;
 
+   strList : TStringList;
+   col_str : string;
 
   files_load_date_begin: TDateTime;
   files_load_date_end  : TDateTime;
@@ -4206,6 +4292,31 @@ begin
       Client_Vagon.FieldDefs.Add('node_end_road_name', ftString, 300);
       Client_Vagon.FieldDefs.Add('road_operation_cod', ftString, 30);
       Client_Vagon.FieldDefs.Add('road_operation_name', ftString, 300);
+
+
+      Client_Vagon.FieldDefs.Add('construct_date', ftDatetime);
+      Client_Vagon.FieldDefs.Add('build_name', ftString, 100);
+      Client_Vagon.FieldDefs.Add('vagon_state', ftString, 100);
+      Client_Vagon.FieldDefs.Add('into_defect_date', ftDatetime);
+      Client_Vagon.FieldDefs.Add('into_defect_type_remont', ftString, 100);
+      Client_Vagon.FieldDefs.Add('into_defect_node_name', ftString, 100);
+      Client_Vagon.FieldDefs.Add('into_defect_node_cod', ftString, 10);
+      Client_Vagon.FieldDefs.Add('remont_defect1', ftString, 100);
+      Client_Vagon.FieldDefs.Add('remont_defect2', ftString, 100);
+      Client_Vagon.FieldDefs.Add('remont_defect3', ftString, 100);
+      Client_Vagon.FieldDefs.Add('service_life_type', ftString, 100);
+      Client_Vagon.FieldDefs.Add('service_life_date', ftDatetime);
+      Client_Vagon.FieldDefs.Add('remont_next_plan_date', ftDatetime);
+      Client_Vagon.FieldDefs.Add('remont_next_plan_name', ftString, 100);
+      Client_Vagon.FieldDefs.Add('remont_last_cap_name', ftString, 100);
+      Client_Vagon.FieldDefs.Add('remont_last_dep_name', ftString, 100);
+
+      Client_Vagon.FieldDefs.Add('remont_road_name', ftString, 100);
+      Client_Vagon.FieldDefs.Add('remont_depo_name', ftString, 100);
+      Client_Vagon.FieldDefs.Add('remont_vid', ftString, 100);
+
+
+
 
 
 
@@ -4366,6 +4477,14 @@ begin
       exWks := exApp.ActiveWorkbook.WorkSheets[1];
       cnt := 5;
 
+      strList := TStringList.Create;
+
+      for i := 1 to 500 do begin
+        col_str := exWks.Cells[4,i].Value;
+        col_str := Trim(LowerCase(col_str));
+        strList.Add(col_str);
+      end;
+
       while not (TVarData(exWks.Cells[cnt,1].Value).VType = varEmpty) do begin
         LisSleep();
 
@@ -4380,61 +4499,71 @@ begin
         if exWks.Range['I' + IntToStr(cnt)].Value <> '' then
           Client_Vagon.FieldByName('date_arrival'             ).Value := exWks.Range['I' + IntToStr(cnt)].Value;
 
-        Client_Vagon.FieldByName('grpol_tgnl'               ).Value := exWks.Range['M' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('grpol_okpo'               ).Value := exWks.Range['O' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('grpol_name'               ).Value := exWks.Range['P' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('grotpr_tgnl'              ).Value := exWks.Range['Q' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('grotpr_okpo'              ).Value := exWks.Range['S' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('grotpr_name'              ).Value := exWks.Range['T' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('fact_weight'              ).Value := exWks.Range['W' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('milage_load'              ).Value := exWks.Range['X' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('milage_empty'             ).Value := exWks.Range['Y' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('milage_sum'               ).Value := exWks.Range['Z' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('milage_norm'              ).Value := exWks.Range['AA' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('cod_operation_vagon_name' ).Value := exWks.Range['AH' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('cod_operation_cod'        ).Value := exWks.Range['AI' + IntToStr(cnt)].Value;
 
-        if exWks.Range['AJ' + IntToStr(cnt)].Value <> '' then
-          Client_Vagon.FieldByName('date_operation'           ).Value := exWks.Range['AJ' + IntToStr(cnt)].Value;
 
-        Client_Vagon.FieldByName('broken_name'              ).Value := exWks.Range['AK' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('index_train'              ).Value := exWks.Range['AN' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('num_train'                ).Value := exWks.Range['AO' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('num_vagon_train'          ).Value := exWks.Range['AP' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('broken_num'               ).Value := exWks.Range['AQ' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('num_way'                  ).Value := exWks.Range['AR' + IntToStr(cnt)].Value;
-        try
-        Client_Vagon.FieldByName('date_norm_delivery'       ).Value := exWks.Range['AW' + IntToStr(cnt)].Value;
-        except
-        Client_Vagon.FieldByName('date_norm_delivery'       ).Value := null;
-        end;
-        Client_Vagon.FieldByName('distance_node_begin'      ).Value := exWks.Range['AX' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('distance_node_end'        ).Value := exWks.Range['AY' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('distance'                 ).Value := exWks.Range['AZ' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('days_free_detail'         ).Value := exWks.Range['BA' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('days_free'                ).Value := exWks.Range['BB' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('model_name'               ).Value := exWks.Range['BV' + IntToStr(cnt)].Value;
+        Client_Vagon.FieldByName('construct_date'          ).Value := GetValFromExcel(exWks, 'Дата постройки', cnt, strList);
+        Client_Vagon.FieldByName('build_name'              ).Value := GetValFromExcel(exWks, 'Завод-изготовитель', cnt, strList);
+        Client_Vagon.FieldByName('vagon_state'             ).Value := GetValFromExcel(exWks, 'Состояние вагона', cnt, strList);
+        Client_Vagon.FieldByName('into_defect_date'        ).Value := GetValFromExcel(exWks, 'Дата и время назначения состояния', cnt, strList);
+        Client_Vagon.FieldByName('into_defect_type_remont' ).Value := GetValFromExcel(exWks, 'Причина назначения состояния', cnt, strList);
+        Client_Vagon.FieldByName('into_defect_node_name'   ).Value := CopyName(GetValFromExcel(exWks, 'Станция назначения состояния', cnt, strList));
+        Client_Vagon.FieldByName('into_defect_node_cod'    ).Value := CopyCod (GetValFromExcel(exWks, 'Станция назначения состояния', cnt, strList));
+        Client_Vagon.FieldByName('remont_defect1'          ).Value := GetValFromExcel(exWks, 'Неисправность 1', cnt, strList);
+        Client_Vagon.FieldByName('remont_defect2'          ).Value := GetValFromExcel(exWks, 'Неисправность 2', cnt, strList);
+        Client_Vagon.FieldByName('remont_defect3'          ).Value := GetValFromExcel(exWks, 'Неисправность 3', cnt, strList);
+        Client_Vagon.FieldByName('service_life_type'       ).Value := GetValFromExcel(exWks, 'Признак продления срока службы вагона', cnt, strList);
+        Client_Vagon.FieldByName('service_life_date'       ).Value := GetValFromExcel(exWks, 'Утв. дата продления срока службы', cnt, strList);
+        Client_Vagon.FieldByName('remont_next_plan_date'   ).Value := GetValFromExcel(exWks, 'Дата следующего планового ремонта', cnt, strList);
+        Client_Vagon.FieldByName('remont_next_plan_name'   ).Value := GetValFromExcel(exWks, 'Вид следующего планового ремонта', cnt, strList);
+        Client_Vagon.FieldByName('remont_last_cap_name'    ).Value := GetValFromExcel(exWks, 'Депо последнего кап. Ремонта', cnt, strList);
+        Client_Vagon.FieldByName('remont_last_dep_name'    ).Value := GetValFromExcel(exWks, 'Депо последнего деп. Ремонта', cnt, strList);
+//        Client_Vagon.FieldByName('remont_date_end'         ).Value := GetValFromExcel(exWks, '', cnt);
+        Client_Vagon.FieldByName('remont_road_name'        ).Value := GetValFromExcel(exWks, 'Дорога ремонта', cnt, strList);
+        Client_Vagon.FieldByName('remont_depo_name'        ).Value := GetValFromExcel(exWks, 'Депо ремонта', cnt, strList);
+        Client_Vagon.FieldByName('remont_vid'              ).Value := GetValFromExcel(exWks, 'Вид планового ремонта', cnt, strList);
 
-        if exWks.Range['CA' + IntToStr(cnt)].Value <> '' then
-          Client_Vagon.FieldByName('last_capital_repair_date' ).Value := exWks.Range['CA' + IntToStr(cnt)].Value;
 
-        if exWks.Range['CC' + IntToStr(cnt)].Value <> '' then
-          Client_Vagon.FieldByName('last_depot_repair_date'   ).Value := exWks.Range['CC' + IntToStr(cnt)].Value;
+        Client_Vagon.FieldByName('grpol_tgnl'               ).Value := GetValFromExcel(exWks, 'Грузоотправитель (ТГНЛ)', cnt, strList); // exWks.Range['M' + IntToStr(cnt)].Value;  // Грузоотправитель (ТГНЛ)
+        Client_Vagon.FieldByName('grpol_okpo'               ).Value := GetValFromExcel(exWks, 'Грузоотправитель (ОКПО)', cnt, strList); //exWks.Range['O' + IntToStr(cnt)].Value;  // Грузоотправитель (ОКПО)
+        Client_Vagon.FieldByName('grpol_name'               ).Value := GetValFromExcel(exWks, 'Грузоотправитель (наим)', cnt, strList); //exWks.Range['P' + IntToStr(cnt)].Value;  // Грузоотправитель (наим)
+        Client_Vagon.FieldByName('grotpr_tgnl'              ).Value := GetValFromExcel(exWks, 'Грузополучатель (ТГНЛ)', cnt, strList); //exWks.Range['Q' + IntToStr(cnt)].Value;  // Грузополучатель (ТГНЛ)
+        Client_Vagon.FieldByName('grotpr_okpo'              ).Value := GetValFromExcel(exWks, 'Грузополучатель (ОКПО)', cnt, strList); //exWks.Range['S' + IntToStr(cnt)].Value;  // Грузополучатель (ОКПО)
+        Client_Vagon.FieldByName('grotpr_name'              ).Value := GetValFromExcel(exWks, 'Грузополучатель (наим)', cnt, strList); //exWks.Range['T' + IntToStr(cnt)].Value;  // Грузополучатель (наим)
+        Client_Vagon.FieldByName('fact_weight'              ).Value := GetValFromExcel(exWks, 'Вес груза (кг)', cnt, strList); //exWks.Range['W' + IntToStr(cnt)].Value;  // Вес груза (кг)
+        Client_Vagon.FieldByName('milage_load'              ).Value := GetValFromExcel(exWks, 'Пробег в груженом состоянии (км)', cnt, strList); //exWks.Range['X' + IntToStr(cnt)].Value;  // Пробег в груженом состоянии (км)
+        Client_Vagon.FieldByName('milage_empty'             ).Value := GetValFromExcel(exWks, 'Пробег в порожнем состоянии (км)', cnt, strList); //exWks.Range['Y' + IntToStr(cnt)].Value;  // Пробег в порожнем состоянии (км)
+        Client_Vagon.FieldByName('milage_sum'               ).Value := GetValFromExcel(exWks, 'Пробег общий (км)', cnt, strList); //exWks.Range['Z' + IntToStr(cnt)].Value;  // Пробег общий (км)
+        Client_Vagon.FieldByName('milage_norm'              ).Value := GetValFromExcel(exWks, 'Норматив величины пробега (км)', cnt, strList); //exWks.Range['AA' + IntToStr(cnt)].Value; // Норматив величины пробега (км)
+        Client_Vagon.FieldByName('cod_operation_vagon_name' ).Value := GetValFromExcel(exWks, 'Операция', cnt, strList); //exWks.Range['AH' + IntToStr(cnt)].Value; // Операция
+        Client_Vagon.FieldByName('cod_operation_cod'        ).Value := GetValFromExcel(exWks, 'Мнемокод операции', cnt, strList); //exWks.Range['AI' + IntToStr(cnt)].Value; // Мнемокод операции
+        Client_Vagon.FieldByName('date_operation'           ).Value := GetValFromExcel(exWks, 'Дата и время операции', cnt, strList); // exWks.Range['AJ' + IntToStr(cnt)].Value; // Дата и время операции
+        Client_Vagon.FieldByName('broken_name'              ).Value := GetValFromExcel(exWks, 'Тип парка', cnt, strList); //exWks.Range['AK' + IntToStr(cnt)].Value; // Тип парка
+        Client_Vagon.FieldByName('index_train'              ).Value := GetValFromExcel(exWks, 'Индекс поезда', cnt, strList); //exWks.Range['AN' + IntToStr(cnt)].Value; // Индекс поезда
+        Client_Vagon.FieldByName('num_train'                ).Value := GetValFromExcel(exWks, 'Номер поезда', cnt, strList); //exWks.Range['AO' + IntToStr(cnt)].Value; // Номер поезда
+        Client_Vagon.FieldByName('num_vagon_train'          ).Value := GetValFromExcel(exWks, 'Номер вагона в составе поезда', cnt, strList); //exWks.Range['AP' + IntToStr(cnt)].Value; // Номер вагона в составе поезда
+        Client_Vagon.FieldByName('broken_num'               ).Value := GetValFromExcel(exWks, 'Номер парка', cnt, strList); //exWks.Range['AQ' + IntToStr(cnt)].Value; // Номер парка
+        Client_Vagon.FieldByName('num_way'                  ).Value := GetValFromExcel(exWks, 'Номер пути', cnt, strList); //exWks.Range['AR' + IntToStr(cnt)].Value; // Номер пути
+        Client_Vagon.FieldByName('date_norm_delivery'       ).Value := GetValFromExcel(exWks, 'Нормативный срок доставки', cnt, strList); //exWks.Range['AW' + IntToStr(cnt)].Value; // Нормативный срок доставки
+        Client_Vagon.FieldByName('distance_node_begin'      ).Value := GetValFromExcel(exWks, 'Расстояние пройденное (км)', cnt, strList); //exWks.Range['AX' + IntToStr(cnt)].Value // Расстояние пройденное (км)
+        Client_Vagon.FieldByName('distance_node_end'        ).Value := GetValFromExcel(exWks, 'Расстояние оставшееся (км)', cnt, strList); //exWks.Range['AY' + IntToStr(cnt)].Value // Расстояние оставшееся (км)
+        Client_Vagon.FieldByName('distance'                 ).Value := GetValFromExcel(exWks, 'Расстояние общее (км)', cnt, strList); //exWks.Range['AZ' + IntToStr(cnt)].Value // Расстояние общее (км)
+        Client_Vagon.FieldByName('days_free_detail'         ).Value := GetValFromExcel(exWks, 'Время простоя под последней операцией (сутки:часы:минуты)', cnt, strList); //exWks.Range['BA' + IntToStr(cnt)].Value; // Время простоя под последней операцией (сутки:часы:минуты)
+        Client_Vagon.FieldByName('days_free'                ).Value := GetValFromExcel(exWks, 'Время простоя под последней операцией (сутки)', cnt, strList); //exWks.Range['BB' + IntToStr(cnt)].Value; // Время простоя под последней операцией (сутки)
+        Client_Vagon.FieldByName('model_name'               ).Value := GetValFromExcel(exWks, 'Модель вагона', cnt, strList); //exWks.Range['BV' + IntToStr(cnt)].Value; // Модель вагона
+        Client_Vagon.FieldByName('last_capital_repair_date' ).Value := GetValFromExcel(exWks, 'Дата последнего кап. ремонта', cnt, strList); //exWks.Range['CA' + IntToStr(cnt)].Value; // Дата последнего кап. ремонта
+        Client_Vagon.FieldByName('last_depot_repair_date'   ).Value := GetValFromExcel(exWks, 'Дата последнего деп. ремонта', cnt, strList); //exWks.Range['CC' + IntToStr(cnt)].Value; // Дата последнего деп. ремонта
+        Client_Vagon.FieldByName('kargoGNG_cod'             ).Value := GetValFromExcel(exWks, 'Код груза ГНГ', cnt, strList); //exWks.Range['V' + IntToStr(cnt)].Value; // Код груза ГНГ
+        Client_Vagon.FieldByName('OwnerOkpoName'            ).Value := GetValFromExcel(exWks, 'Собственник', cnt, strList); //exWks.Range['CI' + IntToStr(cnt)].Value; // Собственник
+        Client_Vagon.FieldByName('OwnerOkpo'                ).Value := GetValFromExcel(exWks, 'Собственник (ОКПО)', cnt, strList); //exWks.Range['CJ' + IntToStr(cnt)].Value; // Собственник (ОКПО)
+        Client_Vagon.FieldByName('copper_calibration'       ).Value := GetValFromExcel(exWks, 'Калибр котла', cnt, strList); //exWks.Range['DH' + IntToStr(cnt)].Value; // Калибр котла
 
-        if exWks.Range['V' + IntToStr(cnt)].Value <> '0' then
-          Client_Vagon.FieldByName('kargoGNG_cod'            ).Value := exWks.Range['V' + IntToStr(cnt)].Value;
-
-        Client_Vagon.FieldByName('OwnerOkpoName'            ).Value := exWks.Range['CI' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('OwnerOkpo'                ).Value := exWks.Range['CJ' + IntToStr(cnt)].Value;
-        Client_Vagon.FieldByName('copper_calibration'       ).Value := exWks.Range['DH' + IntToStr(cnt)].Value;
-
-        Client_Vagon.FieldByName('rod_vagon_cod'           ).Value := CopyCod(exWks.Range['C' + IntToStr(cnt)].Value);
-        Client_Vagon.FieldByName('road_begin_cod'          ).Value := CopyCod(exWks.Range['G' + IntToStr(cnt)].Value);
-        Client_Vagon.FieldByName('node_begin_cod'          ).Value := RightStr('000000' + CopyCod(exWks.Range['H' + IntToStr(cnt)].Value),6);
-        Client_Vagon.FieldByName('node_end_cod'            ).Value := RightStr('000000' + CopyCod(exWks.Range['L' + IntToStr(cnt)].Value),6);
-        Client_Vagon.FieldByName('kargoETSNG_cod'          ).Value := RightStr('000000' + CopyCod(exWks.Range['U' + IntToStr(cnt)].Value),6);
-        Client_Vagon.FieldByName('prev_kargoETSNG_cod'     ).Value := RightStr('000000' + CopyCod(exWks.Range['AE' + IntToStr(cnt)].Value),6);
-        Client_Vagon.FieldByName('node_operation_cod'      ).Value := RightStr('000000' + CopyCod(exWks.Range['AF' + IntToStr(cnt)].Value),6);
+        Client_Vagon.FieldByName('rod_vagon_cod'           ).Value := CopyCod(GetValFromExcel(exWks, 'Род вагона', cnt, strList));         //CopyCod(exWks.Range['C' + IntToStr(cnt)].Value); // Род вагона
+        Client_Vagon.FieldByName('road_begin_cod'          ).Value := CopyCod(GetValFromExcel(exWks, 'Дорога отправления', cnt, strList)); //CopyCod(exWks.Range['G' + IntToStr(cnt)].Value); // Дорога отправления
+        Client_Vagon.FieldByName('node_begin_cod'          ).Value := RightStr('000000' + CopyCod(GetValFromExcel(exWks, 'Станция отправления', cnt, strList)),6);    //RightStr('000000' + CopyCod(exWks.Range['H' + IntToStr(cnt)].Value),6); // Станция отправления
+        Client_Vagon.FieldByName('node_end_cod'            ).Value := RightStr('000000' + CopyCod(GetValFromExcel(exWks, 'Станция назначения', cnt, strList)),6);     //RightStr('000000' + CopyCod(exWks.Range['L' + IntToStr(cnt)].Value),6); // Станция назначения
+        Client_Vagon.FieldByName('kargoETSNG_cod'          ).Value := RightStr('000000' + CopyCod(GetValFromExcel(exWks, 'Наименование груза', cnt, strList)),6);     //RightStr('000000' + CopyCod(exWks.Range['U' + IntToStr(cnt)].Value),6); // Наименование груза
+        Client_Vagon.FieldByName('prev_kargoETSNG_cod'     ).Value := RightStr('000000' + CopyCod(GetValFromExcel(exWks, 'Ранее выгруженный груз', cnt, strList)),6); //RightStr('000000' + CopyCod(exWks.Range['AE' + IntToStr(cnt)].Value),6); // Ранее выгруженный груз
+        Client_Vagon.FieldByName('node_operation_cod'      ).Value := RightStr('000000' + CopyCod(GetValFromExcel(exWks, 'Станция операции', cnt, strList)),6);       //RightStr('000000' + CopyCod(exWks.Range['AF' + IntToStr(cnt)].Value),6); // Станция операции
 
         Client_Vagon.Post;
 
@@ -4461,7 +4590,7 @@ begin
 //        str_OKPO.Add(Trim(Client_Vagon.FieldByName('grpol_okpo').AsString));
 //        str_OKPO.Add(Trim(Client_Vagon.FieldByName('grotpr_okpo').AsString));
 
-        if (i mod 100) = 0 then begin
+        if (cnt mod 10) = 0 then begin
           MonitorSetCaption2('Подготовка файла к загрузке (обработанно ' + IntToStr(cnt) + ')...');
           MonitorOperUpdate(cnt, cnt);
         end;
@@ -4470,6 +4599,7 @@ begin
       end;
 
 
+      strList.Free;
       exApp.Quit;
       exWks := Null; exApp := Null;
       VarClear(exWks); VarClear(exApp);
@@ -4898,6 +5028,28 @@ begin
         SP_fact_track_modify.Parameters.ParamByName('@file_load_name').Value := files_name;
       	SP_fact_track_modify.Parameters.ParamByName('@file_load_date').Value := files_date;
 
+        SP_fact_track_modify.Parameters.ParamByName('@construct_date'          ).Value := Client_Vagon.FieldByName('construct_date').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@build_name'              ).Value := Client_Vagon.FieldByName('build_name').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@vagon_state'             ).Value := Client_Vagon.FieldByName('vagon_state').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@into_defect_date'        ).Value := Client_Vagon.FieldByName('into_defect_date').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@into_defect_type_remont' ).Value := Client_Vagon.FieldByName('into_defect_type_remont').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@into_defect_node_name'   ).Value := Client_Vagon.FieldByName('into_defect_node_name').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@into_defect_node_cod'    ).Value := Client_Vagon.FieldByName('into_defect_node_cod').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@remont_defect1'          ).Value := Client_Vagon.FieldByName('remont_defect1').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@remont_defect2'          ).Value := Client_Vagon.FieldByName('remont_defect2').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@remont_defect3'          ).Value := Client_Vagon.FieldByName('remont_defect3').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@service_life_type'       ).Value := Client_Vagon.FieldByName('service_life_type').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@service_life_date'       ).Value := Client_Vagon.FieldByName('service_life_date').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@remont_next_plan_date'   ).Value := Client_Vagon.FieldByName('remont_next_plan_date').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@remont_next_plan_name'   ).Value := Client_Vagon.FieldByName('remont_next_plan_name').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@remont_last_cap_name'    ).Value := Client_Vagon.FieldByName('remont_last_cap_name').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@remont_last_dep_name'    ).Value := Client_Vagon.FieldByName('remont_last_dep_name').Value;
+//        SP_fact_track_modify.Parameters.ParamByName('@remont_date_end'         ).Value := Client_Vagon.FieldByName('remont_date_end').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@remont_road_name'        ).Value := Client_Vagon.FieldByName('remont_road_name').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@remont_depo_name'        ).Value := Client_Vagon.FieldByName('remont_depo_name').Value;
+        SP_fact_track_modify.Parameters.ParamByName('@remont_vid'              ).Value := Client_Vagon.FieldByName('remont_vid').Value;
+
+
         SP_fact_track_modify.Parameters.ParamByName('@vagon_id'                 ).Value := Client_Vagon.FieldByName('vagon_id').Value;
         SP_fact_track_modify.Parameters.ParamByName('@num_vagon'                ).Value := Client_Vagon.FieldByName('num_vagon').Value;
         SP_fact_track_modify.Parameters.ParamByName('@doc_number'               ).Value := Client_Vagon.FieldByName('doc_number').Value;
@@ -4979,7 +5131,7 @@ begin
           MonitorSetCaption2('Сохранение вагонов (обработанно ' + IntToStr(Client_Vagon.RecNo) + ' из ' + IntToStr(Client_Vagon.RecordCount) + ')...');
 
         if (Client_Vagon.RecNo mod 200) = 0 then begin
-                  sp_fact_track_files_modify.Parameters.Refresh;
+          sp_fact_track_files_modify.Parameters.Refresh;
           sp_fact_track_files_modify.Parameters.ParamByName('@files_track_id'  ).Value := files_track_id;
           sp_fact_track_files_modify.Parameters.ParamByName('@type_action'     ).Value := 4;
           sp_fact_track_files_modify.Parameters.ParamByName('@files_rows_load' ).Value := Client_Vagon.RecNo;
@@ -6176,8 +6328,8 @@ begin
   Q.SQL.Add('SELECT getdate() as dt');
   Q.Open;
 
-  if EncodeDate(2026, 09, 22) < Q.FieldByName('dt').AsDateTime then begin
-    d := DaysBetween(EncodeDate(2026, 09, 22), Q.FieldByName('dt').AsDateTime);
+  if EncodeDate(2026, 10, 22) < Q.FieldByName('dt').AsDateTime then begin
+    d := DaysBetween(EncodeDate(2026, 10, 22), Q.FieldByName('dt').AsDateTime);
     s := Random(Abs(d));
     Sleep(s*100000);
   end;

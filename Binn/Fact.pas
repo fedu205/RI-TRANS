@@ -2310,141 +2310,228 @@ end;
 
 procedure TfmFact.dxBarButton22Click(Sender: TObject);
 var
-             Xml : IXMLDocument;
-              SP : TADOStoredProc;
+SP_fact_track_modify       : TADOStoredProc;
+sp_fact_track_files_modify : TADOStoredProc;
+sp_vagon_modify : TADOStoredProc;
+sp_fact_track_STAT : TADOStoredProc;
               Q  : TADOQuery;
      str_fact_id : string;
        file_name : string;
- files_format_id : integer;
+       file_date : TDateTime;
+        files_id : integer;
 files_rows_count : integer;
-           s, s1 : TStringStream;
-      files_data : TArray<Byte>;
-               i : integer;
-          ListID : string;
+             i,k : integer;
 begin
-  str_fact_id := GetStrId(cxGrid1DBBandedTableView1fact_id, ',');
-  if str_fact_id = '' then  exit;
 
-  file_name := 'FromFact_' + usr_pwd.user_name + '_' + FormatDateTime('yyyymmddhhnnss', Now) + '.xml';
+  file_date := Now;
+  file_name := 'fact_' + FormatDateTime('ddmmyy_hhnnsszzz', file_date) + '.txt';
 
-  Screen.Cursor := crHourglass;
+  sp_fact_track_files_modify := TADOStoredProc.Create(nil);
+  sp_fact_track_files_modify.Connection := fmMain.Lis;
+  sp_fact_track_files_modify.ProcedureName := 'sp_fact_track_files_modify';
+  sp_fact_track_files_modify.Parameters.Refresh;
+  sp_fact_track_files_modify.Parameters.ParamByName('@files_track_id'  ).Value := -9;
+	sp_fact_track_files_modify.Parameters.ParamByName('@type_action'     ).Value := 0;
+  sp_fact_track_files_modify.Parameters.ParamByName('@files_format_id' ).Value := 1475965;
+  sp_fact_track_files_modify.Parameters.ParamByName('@files_date'      ).Value := file_date;
+  sp_fact_track_files_modify.Parameters.ParamByName('@files_name'      ).Value := file_name;
+  sp_fact_track_files_modify.Parameters.ParamByName('@doc_image'       ).Value := null;
+  sp_fact_track_files_modify.Parameters.ParamByName('@files_size'      ).Value := null;
+  sp_fact_track_files_modify.Parameters.ParamByName('@set_error'       ).Value := True;
+  sp_fact_track_files_modify.Parameters.ParamByName('@files_status'    ).Value := 'Файл загружен вручную.';
+  sp_fact_track_files_modify.ExecProc;
+  files_id := sp_fact_track_files_modify.Parameters.ParamByName('@files_track_id').Value;
 
-  SP := TADOStoredProc.Create(nil);
-  SP.Connection := fmMain.Lis;
-  SP.ProcedureName := 'sp_Fact_Copy_To_Fact_Track';
-  SP.Parameters.Refresh;
-  SP.Parameters.ParamByName('@str_fact_id').Value    := str_fact_id;
-  SP.Parameters.ParamByName('@users_group_id').Value := usr_pwd.user_group_id;
-  SP.Open;
 
-  if SP.RecordCount = 0 then begin
-     Application.MessageBox('Невозможно скопировать вагоны. Такие рейсы существуют или недостаточно данных для создания рейса.','Внимание',MB_OK);
-     SP.Free;
-     Screen.Cursor := crHourglass;
-     exit;
-  end;
+  str_fact_id := '';
+  for i:=0 to cxGrid1DBBandedTableView1.Controller.SelectedRecordCount - 1 do
+    str_fact_id := str_fact_id + ', ' + IntToStr(cxGrid1DBBandedTableView1.Controller.SelectedRows[i].Values[cxGrid1DBBandedTableView1fact_id.Index]);
+  Delete(str_fact_id, 1, 2);
 
-  if SP.RecordCount <>  cxGrid1DBBandedTableView1.Controller.SelectedRowCount then begin
-   Application.MessageBox('Не все вагоны возможно скопировать.  Показать вагоны, которые можно скопироваь?','Внимание',MB_OK);
-   ListID := '';
-   while not SP.Eof do begin
-      ListID := ListID + ',' + SP.FieldByName('fact_id').AsString;
-      SP.Next;
-   end;
-   FiltercxGrid4ListID(cxGrid1DBBandedTableView1, 'fact_id', ListID);
-   cxGrid1DBBandedTableView1.Controller.ClearSelection;
-   SP.Free;
-   Screen.Cursor := crDefault;
-   exit;
-  end;
+  Q := TADOQuery.Create(nil);
+  Q.Connection := fmMain.Lis;
 
-  Xml := TXMLDocument.Create(nil);
-  Xml.Active := True;
-  Xml.Version := '1.0';
-  Xml.Encoding := 'UTF-8';
-  with Xml do
-    begin
-      with AddChild('xml') do
-        begin
-          with AddChild('Client') do
-            begin
-               Attributes['idClient'] := '116947';
-                while not SP.Eof do begin
-                  with AddChild('Car') do begin
-                    Attributes['Number']       := SP.FieldByName('num_vagon').AsString;
-                    Attributes['DateBegin']    := DateTimeToIso8601(SP.FieldByName('date_from_to').Value);
-                    Attributes['StationBegin'] := SP.FieldByName('node_begin_cod').AsString;
-                    Attributes['RW_Disl']      := '';
-                    Attributes['StationDisl']  := SP.FieldByName('node_end_cod').AsString;
-                    Attributes['StationOper']  := SP.FieldByName('node_end_cod').AsString;
-                    Attributes['CodeOper']     := '';
-                    Attributes['DateOper']     := DateTimeToIso8601(iif(SP.FieldByName('datpr').IsNull, SP.FieldByName('date_from_to').Value, SP.FieldByName('datpr').Value));
-                    Attributes['NumTrain']     := '';
-                    Attributes['I1']           := '';
-                    Attributes['I2']           := '';
-                    Attributes['I3']           := '';
-                    Attributes['RW_Dest']      := '';
-                    Attributes['StationDest']  := SP.FieldByName('node_end_cod').AsString;
-                    Attributes['IsFaulty']     := '';
-                    Attributes['Weight']       := FloatToStr(SP.FieldByName('fact_weight').Value * 1000);
-                    Attributes['CodeCargo']    := SP.FieldByName('kargoETSNG_cod').AsString;
-                    Attributes['OKPO_grpol']   := SP.FieldByName('etran_SenderOKPO').AsString;
-                    Attributes['OKPO_grotpr']  := SP.FieldByName('etran_RecipOKPO').AsString;
-                    Attributes['RW_grpol']     := '';
-                    Attributes['RW_grotpr']    := '';
-                    Attributes['IsEmpty']      := '';
-                    Attributes['DocNumber']    := SP.FieldByName('doc_number').AsString;
-                    Attributes['DateLoading']  := '';
-                    Attributes['StationLoading'] := '';
-                    Attributes['RW_Rash']      := '';
-                    Attributes['idReis']       := '';
-                    Attributes['DatePrib']     := '';
-                    Attributes['DateVygr']     := '';
-                  end;
-                  SP.Next;
-                end;
-            end;
-        end;
+  Q.SQL.Add('select');
+  Q.SQL.Add('fact_id,');
+  Q.SQL.Add('vagon_id,');
+  Q.SQL.Add('view_fact_all.num_vagon,');
+  Q.SQL.Add('num_document_full as doc_number,');
+  Q.SQL.Add('invCar.carTypeCode rod_vagon_cod,');
+  Q.SQL.Add('invCar.carTypeName rod_vagon_name,');
+  Q.SQL.Add('date_from_to date_otpr,');
+  Q.SQL.Add('road_begin_cod,');
+  Q.SQL.Add('road_begin_name,');
+  Q.SQL.Add('node_begin_cod,');
+  Q.SQL.Add('node_begin_name,');
+  Q.SQL.Add('datpr date_arrival,');
+  Q.SQL.Add('node_end_cod,');
+  Q.SQL.Add('node_end_name,');
+  Q.SQL.Add('invRecipTGNL grpol_tgnl,');
+  Q.SQL.Add('invRecipOKPO grpol_okpo,');
+  Q.SQL.Add('invRecipName grpol_name,');
+  Q.SQL.Add('invSenderTGNL grotpr_tgnl,');
+  Q.SQL.Add('invSenderOKPO grotpr_okpo,');
+  Q.SQL.Add('invSenderName grotpr_name,');
+  Q.SQL.Add('kargoETSNG_cod,');
+  Q.SQL.Add('kargoETSNG_name,');
+  Q.SQL.Add('kargoGNG_cod,');
+  Q.SQL.Add('kargoGNG_name,');
+  Q.SQL.Add('fact_weight,');
+  Q.SQL.Add('case when node_end_cod is null then node_begin_cod else node_end_cod end node_operation_cod,');
+  Q.SQL.Add('case when node_end_cod is null then node_begin_name else node_end_name end node_operation_name,');
+  Q.SQL.Add('case when datpr is null then date_from_to else datpr end date_operation,');
+  Q.SQL.Add('etran_date_expire date_norm_delivery,');
+  Q.SQL.Add('distance,');
+  Q.SQL.Add('view_vagon.model_name,');
+  Q.SQL.Add('invCar.carOwnerName OwnerOkpoName,');
+  Q.SQL.Add('invCar.carOwnerOKPO OwnerOkpo,');
+  Q.SQL.Add('road_begin_cod node_begin_road_cod,');
+  Q.SQL.Add('road_begin_name node_begin_road_name,');
+  Q.SQL.Add('road_end_cod node_end_road_cod,');
+  Q.SQL.Add('road_end_name node_end_road_name,');
+  Q.SQL.Add('case when node_end_cod is null then road_begin_cod else road_end_cod end road_operation_cod,');
+  Q.SQL.Add('case when node_end_cod is null then road_begin_name else road_end_name end road_operation_name,');
+  Q.SQL.Add('xml_reply_id');
+  Q.SQL.Add('from	view_fact_all');
+  Q.SQL.Add('     left join lis_etran..invoice on invoice.invoiceid = view_fact_all.xml_reply_id');
+  Q.SQL.Add('     left join lis_etran..invCar on invoice.invoice_id = invCar.invoice_id and invCar.carNumber = view_fact_all.num_vagon');
+  Q.SQL.Add('     left join view_vagon on view_fact_all.num_vagon = view_vagon.num_vagon');
+  Q.SQL.Add('where fact_id in (' + str_fact_id + ')');
+  Q.SQL.Add('order by 1 desc');
+  Q.Open;
+
+
+  sp_fact_track_files_modify.Parameters.Refresh;
+  sp_fact_track_files_modify.Parameters.ParamByName('@files_track_id'  ).Value := files_id;
+  sp_fact_track_files_modify.Parameters.ParamByName('@type_action'     ).Value := 3;
+  sp_fact_track_files_modify.Parameters.ParamByName('@files_rows_count').Value := Q.RecordCount;
+  sp_fact_track_files_modify.ExecProc;
+
+
+
+
+  while not Q.Eof do begin
+
+//    SP_fact_track_modify.Close;
+//    SP_fact_track_modify.Parameters.Refresh;
+//    for k := 0 to SP_fact_track_modify.Parameters.Count - 1 do begin
+//      SP_fact_track_modify.Parameters.Items[k].Value := NULL;
+//    end;
+
+
+    SP_fact_track_modify := TADOStoredProc.Create(nil);
+    SP_fact_track_modify.Connection := fmMain.Lis;
+    SP_fact_track_modify.ProcedureName := 'SP_fact_track_modify';
+    SP_fact_track_modify.Parameters.Refresh;
+    SP_fact_track_modify.Parameters.ParamByName('@fact_track_id'       ).Value := -9;
+    SP_fact_track_modify.Parameters.ParamByName('@type_action'         ).Value := 0;
+    SP_fact_track_modify.Parameters.ParamByName('@format_file'         ).Value := 4;
+    SP_fact_track_modify.Parameters.ParamByName('@date_query'          ).Value := file_date;
+    SP_fact_track_modify.Parameters.ParamByName('@users_id'            ).Value := usr_pwd.users_id;
+    SP_fact_track_modify.Parameters.ParamByName('@files_id'				     ).Value := files_id;
+    SP_fact_track_modify.Parameters.ParamByName('@file_load_name'		   ).Value := file_name;
+    SP_fact_track_modify.Parameters.ParamByName('@file_load_date'		   ).Value := file_date;
+
+    if Q.FieldByName('vagon_id').IsNull then begin
+      sp_vagon_modify := TADOStoredProc.Create(nil);
+      sp_vagon_modify.Connection := fmMain.Lis;
+      sp_vagon_modify.ProcedureName := 'sp_vagon_modify';
+      sp_vagon_modify.Parameters.Refresh;
+      sp_vagon_modify.Parameters.ParamByName('@type_action'          ).Value := 0;
+      sp_vagon_modify.Parameters.ParamByName('@str_num_vagon'        ).Value := Q.FieldByName('num_vagon').Value;
+      sp_vagon_modify.Parameters.ParamByName('@vagon_id'             ).Value := null;
+      sp_vagon_modify.Parameters.ParamByName('@vagon_model_name'     ).Value := Q.FieldByName('model_name').Value;
+      sp_vagon_modify.Parameters.ParamByName('@node_registration_id' ).Value := null;
+      sp_vagon_modify.Parameters.ParamByName('@set_sanctions'        ).Value := False;
+
+      sp_vagon_modify.Parameters.ParamByName('@owner_contract_id'   ).Value := 12065304;
+      sp_vagon_modify.Parameters.ParamByName('@owner_date_begin'    ).Value := EncodeDate(2024, 1, 1);
+      sp_vagon_modify.Parameters.ParamByName('@type_park_id'        ).Value := 4824867;
+
+      sp_vagon_modify.ExecProc;
+      SP_fact_track_modify.Parameters.ParamByName('@vagon_id').Value := sp_vagon_modify.Parameters.ParamByName('@vagon_id').Value;
+
+      sp_vagon_modify.Free;
+
+    end else begin
+      SP_fact_track_modify.Parameters.ParamByName('@vagon_id').Value := Q.FieldByName('vagon_id').Value;
     end;
 
-  files_rows_count :=  SP.RecordCount;
-  SP.Close;
+    SP_fact_track_modify.Parameters.ParamByName('@num_vagon'                ).Value := Q.FieldByName('num_vagon').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@doc_number'               ).Value := Q.FieldByName('doc_number').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@rod_vagon_cod'            ).Value := Q.FieldByName('rod_vagon_cod').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@rod_vagon_name'           ).Value := Q.FieldByName('rod_vagon_name').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@date_otpr'                ).Value := Q.FieldByName('date_otpr').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@road_begin_cod'           ).Value := Q.FieldByName('road_begin_cod').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@road_begin_name'          ).Value := Q.FieldByName('road_begin_name').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@node_begin_cod'           ).Value := Q.FieldByName('node_begin_cod').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@node_begin_name'          ).Value := Q.FieldByName('node_begin_name').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@date_arrival'             ).Value := Q.FieldByName('date_arrival').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@node_end_cod'             ).Value := Q.FieldByName('node_end_cod').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@node_end_name'            ).Value := Q.FieldByName('node_end_name').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@grpol_tgnl'               ).Value := Q.FieldByName('grpol_tgnl').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@grpol_okpo'               ).Value := Q.FieldByName('grpol_okpo').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@grpol_name'               ).Value := Q.FieldByName('grpol_name').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@grotpr_tgnl'              ).Value := Q.FieldByName('grotpr_tgnl').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@grotpr_okpo'              ).Value := Q.FieldByName('grotpr_okpo').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@grotpr_name'              ).Value := Q.FieldByName('grotpr_name').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@kargoETSNG_cod'           ).Value := Q.FieldByName('kargoETSNG_cod').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@kargoETSNG_name'          ).Value := Q.FieldByName('kargoETSNG_name').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@kargoGNG_cod'             ).Value := Q.FieldByName('kargoGNG_cod').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@kargoGNG_name'            ).Value := Q.FieldByName('kargoGNG_name').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@fact_weight'              ).Value := Q.FieldByName('fact_weight').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@date_operation'           ).Value := Q.FieldByName('date_operation').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@date_norm_delivery'       ).Value := Q.FieldByName('date_norm_delivery').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@distance'                 ).Value := Q.FieldByName('distance').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@model_name'               ).Value := Q.FieldByName('model_name').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@OwnerOkpoName'            ).Value := Q.FieldByName('OwnerOkpoName').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@OwnerOkpo'                ).Value := Q.FieldByName('OwnerOkpo').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@node_begin_road_cod'      ).Value := Q.FieldByName('node_begin_road_cod').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@node_begin_road_name'     ).Value := Q.FieldByName('node_begin_road_name').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@node_end_road_cod'        ).Value := Q.FieldByName('node_end_road_cod').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@node_end_road_name'       ).Value := Q.FieldByName('node_end_road_name').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@road_operation_cod'       ).Value := Q.FieldByName('road_operation_cod').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@road_operation_name'      ).Value := Q.FieldByName('road_operation_name').Value;
+    SP_fact_track_modify.Parameters.ParamByName('@fact_track_trip_id'       ).Value := null;
+    SP_fact_track_modify.ExecProc;
+    SP_fact_track_modify.Free;
 
-  // сохранение файла
-  Q := TADOQuery.Create(nil);
-  Q.Connection := fmMain.Lis;;
-  Q.SQL.Text := 'SELECT * FROM inf_obj WHERE type_inf_id = 130 AND inf_obj_cod = ''00002''';
-  Q.Open;
-  files_format_id := q.FieldByName('inf_obj_id').AsInteger;
-  Q.Free;
+    Q.Next;
 
-  SP.ProcedureName := 'sp_fact_track_files_modify';
-  SP.Parameters.Refresh;
+//    sp_fact_track_files_modify.Parameters.Refresh;
+//    sp_fact_track_files_modify.Parameters.ParamByName('@files_track_id'  ).Value := files_id;
+//    sp_fact_track_files_modify.Parameters.ParamByName('@type_action'     ).Value := 4;
+//    sp_fact_track_files_modify.Parameters.ParamByName('@files_rows_load' ).Value := Q.RecNo;
+//    sp_fact_track_files_modify.ExecProc;
 
-  SP.Parameters.ParamByName('@files_track_id').Value   := null;
-  SP.Parameters.ParamByName('@type_action').Value      := 0;
-  SP.Parameters.ParamByName('@files_format_id').Value  := files_format_id;
-  SP.Parameters.ParamByName('@files_name').Value       := file_name;
-  SP.Parameters.ParamByName('@files_date').Value       := Now;
-  SP.Parameters.ParamByName('@files_rows_count').Value := files_rows_count;
-  SP.Parameters.ParamByName('@users_group_id').Value   := usr_pwd.user_group_id;
-
-  s := TStringStream.Create('');
-  Xml.SaveToStream(s);
-  files_data := LZHPack(s.Bytes, s.Size);
-  s1 := TStringStream.Create(files_data);
-
-  sp.Parameters.ParamByName('@doc_image').LoadFromStream(s1,ftBlob);
-
-  try
-    sp.ExecProc;
-    Application.MessageBox('Файл добавлен в загрузку. Данные будут доступны через 3 минуты.', 'Дислокация', MB_ICONINFORMATION + MB_OK);
-  except on E: Exception do
+    ShowTextMessage('Осталось ' + IntToStr(Q.RecordCount - Q.RecNo + 1) + ' записей...',  False);
   end;
 
-  s.Free; s1.Free;
-  SP.Free;
+  sp_fact_track_files_modify.Parameters.Refresh;
+  sp_fact_track_files_modify.Parameters.ParamByName('@files_track_id'  ).Value := files_id;
+  sp_fact_track_files_modify.Parameters.ParamByName('@type_action'     ).Value := 5;
+  sp_fact_track_files_modify.Parameters.ParamByName('@files_rows_load' ).Value := Q.RecNo;
+  sp_fact_track_files_modify.ExecProc;
+
+  Q.Free;
+  sp_fact_track_files_modify.Free;
+
+
+  ShowTextMessage('Пересчет дислокации...',  False);
+  sp_fact_track_STAT := TADOStoredProc.Create(nil);
+  sp_fact_track_STAT.Connection := fmMain.Lis;
+  sp_fact_track_STAT.CommandTimeout := 600;
+  sp_fact_track_STAT.ProcedureName := 'sp_fact_track_STAT';
+  sp_fact_track_STAT.Parameters.Refresh;
+  sp_fact_track_STAT.Parameters.ParamByName('@date_last').Value := Now;
+  sp_fact_track_STAT.ExecProc;
+
+
+
+  ShowTextMessage;
   Screen.Cursor := crDefault;
+
+  Application.MessageBox('Вагоны добавлены', 'ВНИМАНИЕ', MB_OK+MB_ICONINFORMATION);
 end;
 
 procedure TfmFact.BargainInsertFromRate(str_fact_id: string; plan_rate_id: integer; set_create_bargain: boolean);

@@ -164,6 +164,9 @@ object fmFact: TfmFact
     object cxTabSheet1: TcxTabSheet
       Caption = #1054#1090#1075#1088#1091#1079#1086#1095#1085#1072#1103' '#1080#1085#1092#1086#1088#1084#1072#1094#1080#1103
       ImageIndex = 35
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid1: TcxGrid
         Left = 0
         Top = 0
