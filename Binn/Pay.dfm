@@ -869,7 +869,7 @@ object fmPay: TfmPay
     Height = 146
     Align = alBottom
     Caption = #1054#1087#1083#1072#1090#1072' '#1089#1095#1077#1090#1072
-    TabOrder = 5
+    TabOrder = 4
     Visible = False
     object cxGrid3: TcxGrid
       Left = 2
@@ -1275,8 +1275,7 @@ object fmPay: TfmPay
     LookAndFeel.NativeStyle = False
     LookAndFeel.ScrollbarMode = sbmClassic
     LookAndFeel.SkinName = 'Office2007Black'
-    ExplicitTop = 26
-    ExplicitHeight = 369
+    ExplicitTop = 48
     object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
       PopupMenu = Popup_Pay
       OnDblClick = N2Click
@@ -1733,16 +1732,12 @@ object fmPay: TfmPay
     LookAndFeel.ScrollbarMode = sbmClassic
     LookAndFeel.SkinName = ''
     OnChange = cxPageControl1Change
-    ExplicitLeft = 2
-    ExplicitTop = 2
-    ExplicitWidth = 961
     ClientRectBottom = 25
     ClientRectRight = 989
     ClientRectTop = 25
     object cxTabSheet1: TcxTabSheet
       Caption = #1055#1083#1072#1090#1077#1078#1080' '#1082#1083#1080#1077#1085#1090#1086#1074
       ImageIndex = 0
-      ExplicitWidth = 961
     end
     object cxTabSheet2: TcxTabSheet
       Caption = #1055#1083#1072#1090#1077#1078#1080' '#1087#1086#1076#1088#1103#1076#1095#1080#1082#1086#1074
@@ -2191,6 +2186,10 @@ object fmPay: TfmPay
       Visible = ivAlways
       ImageIndex = 4
       ItemLinks = <
+        item
+          Visible = True
+          ItemName = 'N7'
+        end
         item
           Visible = True
           ItemName = 'N8'
