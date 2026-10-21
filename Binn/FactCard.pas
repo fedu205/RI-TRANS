@@ -654,11 +654,17 @@ var i: integer;
 begin
   for i := 0 to ComponentCount-1 do
     if (Components[i].InheritsFrom(TControl)) and (Sender<>Components[i]) then begin
-      if (TControl(Components[i]).Tag = TControl(Sender).Tag) then TControl(Components[i]).Enabled := TcxCheckBox(Sender).Checked;
-      if (TControl(Components[i]).Tag = TControl(Sender).Tag) and (TControl(Components[i]).Tag =  33) then TcxCheckBox(Components[i]).Checked := False;
-      if (TControl(Components[i]).Tag = TControl(Sender).Tag) and (TControl(Components[i]).Tag =  38) then TcxCheckBox(Components[i]).Checked := False;
-      if (TControl(Components[i]).Tag = TControl(Sender).Tag) and (TControl(Components[i]).Tag =  15) then TcxCheckBox(Components[i]).Checked := False;
-      if (TControl(Components[i]).Tag = TControl(Sender).Tag) and (TControl(Components[i]).Tag = 101) then TcxCheckBox(Components[i]).Checked := False;
+      if (TControl(Components[i]).Tag = TControl(Sender).Tag) then
+        TControl(Components[i]).Enabled := TcxCheckBox(Sender).Checked;
+
+      if (TControl(Components[i]).Tag = TControl(Sender).Tag) and (TControl(Components[i]).Tag =  33) and (Components[i] is TcxCheckBox) then
+        TcxCheckBox(Components[i]).Checked := False;
+      if (TControl(Components[i]).Tag = TControl(Sender).Tag) and (TControl(Components[i]).Tag =  38) and (Components[i] is TcxCheckBox) then
+        TcxCheckBox(Components[i]).Checked := False;
+      if (TControl(Components[i]).Tag = TControl(Sender).Tag) and (TControl(Components[i]).Tag =  15) and (Components[i] is TcxCheckBox) then
+        TcxCheckBox(Components[i]).Checked := False;
+      if (TControl(Components[i]).Tag = TControl(Sender).Tag) and (TControl(Components[i]).Tag = 101) and (Components[i] is TcxCheckBox) then
+        TcxCheckBox(Components[i]).Checked := False;
     end;
 end;
 
